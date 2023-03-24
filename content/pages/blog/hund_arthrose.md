@@ -12,8 +12,7 @@ In diesem Artikel wird das Thema Arthritis bei Hunden ausführlich behandelt. Es
 
 <h1> Arthritis bei Hunden – Ein Vorläufer von Arthrose </h1>
 
-
-<img src="https://justazes.github.io/JessICan/img/blog/hund_arthrose_1.png" />
+<img src="https://justazes.github.io/JessICan/img/blog/hund_arthrose_1.png" width= 100%/>
 
 Arthritis ist eine häufige akute entzündliche Erkrankung des Gelenks, die zu Schmerzen, Steifheit und Schäden an den Gelenken führt. Arthritis ist häufig durch Infektionen bedingt - Keime gelangen in den Gelenkinnenraum. Es kann durch Erkrankungen wie Infektionen, Entzündungen und Stoffwechselstörungen verursacht werden.
 
