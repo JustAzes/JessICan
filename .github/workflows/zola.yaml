@@ -1,3 +1,4 @@
+# usage: https://www.getzola.org/documentation/deployment/github-pages/#github-actions
 # On every push this script is executed
 on: push
 name: Build and deploy GH Pages
