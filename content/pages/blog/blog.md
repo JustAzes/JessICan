@@ -1,6 +1,6 @@
 +++
 title = "Blog"
-path = "blog"
+path = "blog/newblog"
 template = "blog.html"
 +++
 
