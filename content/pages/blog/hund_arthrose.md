@@ -13,6 +13,7 @@ In diesem Artikel wird das Thema Arthritis bei Hunden ausführlich behandelt. Es
 
 <img src="/JessICan/img/blog/hund_arthrose_1.png" style="max-width: 100%"/>
 
+
 Arthritis ist eine häufige akute entzündliche Erkrankung des Gelenks, die zu Schmerzen, Steifheit und Schäden an den Gelenken führt. Arthritis ist häufig durch Infektionen bedingt - Keime gelangen in den Gelenkinnenraum. Es kann durch Erkrankungen wie Infektionen, Entzündungen und Stoffwechselstörungen verursacht werden.
 
 Wird eine Arthritis nicht ordentlich behandelt oder es kommt zur chronischen Gelenkentzündung, kann sich Arthrose bilden.
@@ -47,6 +48,7 @@ Die Zellen im Knorpel sind nicht in der Lage sich selbst zu reinigen und so komm
 
 <h2>Symptome Arthrose</h2>
 <img src="/JessICan/img/blog/hund_arthrose_2.png" style="max-width: 100%; max-height: 100%;"/>
+
 
 Die Symptome dieser Krankheit können von Hund zu Hund unterschiedlich sein und können von mild bis schwerwiegend reichen. Hier sind einige der häufigsten Symptome von Arthrose:
 
