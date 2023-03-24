@@ -76,25 +76,7 @@
   <div class="container">
     <div class="row">
       <div class="col-lg-8 col-md-10 mx-auto">
-        <div class="posts">
-          {% for page in paginator.pages %}
-          <div class="post-preview">
-            {{ post_macros::page_title(page=page) }}
-            <p class="post-summary">{{ page.summary | safe }}</p>
-          </div>
-          {% endfor %}
-        </div>
-
-        <!-- Paginator -->
-        <div class="clearfix">
-          {% if paginator.previous %}
-          <a class="btn btn-primary float-left" href="{{ paginator.previous }}"> &larr; Newer Posts</a>
-          {% endif %}
-          {% if paginator.next %}
-          <a class="btn btn-primary float-right" href="{{ paginator.next }}">Older Posts &rarr;</a>
-          {% endif %}
-        </div>
-
+        {{ page.content | safe }}
       </div>
     </div>
   </div>
