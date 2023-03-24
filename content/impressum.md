@@ -1,5 +1,6 @@
 +++
 title = "Impressum"
+template = "impressum.html"
 +++
 
 Impressum
