@@ -1,16 +1,25 @@
 # The URL the site will be built for
-base_url = "https://example.com"
-
-# Whether to automatically compile all Sass files in the sass directory
+base_url = "https://zola-clean-blog.netlify.com"
+generate_rss = true
 compile_sass = true
 
-# Whether to build a search index to be used later on by a JavaScript library
-build_search_index = true
-
-[markdown]
-# Whether to do syntax highlighting
-# Theme can be customised by setting the `highlight_theme` variable to a theme supported by Zola
+title = "Start Bootstrap"
+description = "A blog theme by Start Bootstrap"
 highlight_code = true
 
+taxonomies = [
+    {name = "categories", rss = true, paginate_by=5},
+    {name = "tags", rss = true, paginate_by=5},
+]
+
 [extra]
-# Put all your custom variables here
+author = "Dave"
+clean_blog_menu = [
+    {url = "$BASE_URL", name = "Home"},
+    {url = "$BASE_URL/about", name = "About"},
+    {url = "$BASE_URL/contact", name = "Contact"}
+]
+clean_blog_social = [
+    {url = "https://twitter.com", icon="fab fa-twitter"},
+    {url = "$BASE_URL/rss.xml", icon="fas fa-rss"}
+]
