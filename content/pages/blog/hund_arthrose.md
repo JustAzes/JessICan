@@ -47,7 +47,7 @@ Die Zellen im Knorpel sind nicht in der Lage sich selbst zu reinigen und so komm
 - genetische Disposition
 
 <h2>Symptome Arthrose</h2>
-<img src="/img/blog/hund_arthrose_2.png" style="max-width: 100%; max-height: 100%;"/>
+<img src="static/img/blog/hund_arthrose_2.png" style="max-width: 100%; max-height: 100%;"/>
 
 Die Symptome dieser Krankheit können von Hund zu Hund unterschiedlich sein und können von mild bis schwerwiegend reichen. Hier sind einige der häufigsten Symptome von Arthrose:
 
@@ -67,7 +67,7 @@ Es ist wichtig zu beachten, dass nicht alle Hunde mit Arthrose alle diese Sympto
 Es ist wichtig zu beachten, dass die Diagnose von Arthrose bei Hunden eine sorgfältige Überprüfung erfordert. Eine genaue Diagnose kann helfen, die beste Behandlung für Ihren Hund zu bestimmen und dessen Schmerzen zu lindern.
 
 <h2>Eigene Behandlungsmöglichkeiten von Arthrose bei Hunden</h2>
-<img style="float: right; margin-right: 10px; max-width: 100%" src="/img/blog/hund_arthrose_4.png" /> 
+<img style="float: right; margin-right: 10px; max-width: 100%" src="img/blog/hund_arthrose_4.png" /> 
 Maßnahmen bei einer Arthrose-Erkrankung sollten dafür sorgen, die Reinigung und Reparatur der Zellen zu erleichtern, zu stärken und zu schützen. Eine zusätzliche Gelenkentzündung (was durch den zunehmenden Abrieb vorkommt) sollte auf jeden Fall vermieden werden. Dies treibt den Abbauprozess sonst schneller voran. 
 
 <h3>Lebensstiländerung - Übergewicht meiden</h3>
