@@ -17,7 +17,7 @@ author = "Jessi"
 clean_blog_menu = [
     {url = "$BASE_URL", name = "Start"},
     {url = "$BASE_URL/categories", name = "Categories"},
-    {url = "$BASE_URL/blog", name = "Blog"},
+    {url = "$BASE_URL/pages/blog", name = "Blog"},
     {url = "$BASE_URL/about", name = "About"},
     {url = "$BASE_URL/contact", name = "Contact"}
 ]
