@@ -1,5 +1,3 @@
 +++
-title = "Start"
+title = "Startseite"
 +++
-
-Startseite YEEEYY 
