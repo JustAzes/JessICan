@@ -3,7 +3,7 @@
 on: push
 name: Build and deploy GH Pages
 jobs:
-  build:
+  build: 
     runs-on: ubuntu-latest
     if: github.ref == 'refs/heads/main'
     steps:
