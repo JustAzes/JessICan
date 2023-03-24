@@ -2,14 +2,13 @@
 title = "Dein Hund lahmt, hat Schmerzen beim Bewegen und wirkt steif? - Arthrose bei Hunden"
 date = 2023-02-17
 [taxonomies]
-categories = ["Hunde"]
-tags = ["Hunde", "Arthrose", "Naturheilkunde", "Aromatherapie", "Phytotherapie"]
+categories = ["Hunde", "Arthrose", "Naturheilkunde", "Aromatherapie", "Phytotherapie"]
+tags = []
 +++
 
 In diesem Artikel wird das Thema Arthritis bei Hunden ausführlich behandelt. Es wird aufgezeigt, welche Symptome auftreten und wie eine Diagnose erfolgt. Anschließend werden verschiedene Behandlungsoptionen erklärt und die Vorbeugung von Arthritis wird besprochen. Zusammenfassend betont der Artikel die Bedeutung einer frühzeitigen Diagnose und Behandlung, um das Wohlbefinden des Hundes zu verbessern.
 
 <!-- more -->
-#responsive-image {  width: 100%;  height: auto; } 
 <h2> Arthritis bei Hunden – Ein Vorläufer von Arthrose </h2>
 
 <img src="/JessICan/img/blog/hund_arthrose_1.png" style="max-width: 100%"/>
