@@ -1,33 +1,54 @@
 +++
 title = "Impressum"
 template = "impressum.html"
+render = false
 +++
 
-Impressum
+## Impressum
 
-Angaben gemäß § 5 TMG
+### Verantwortlich für den Inhalt dieser Webseite gemäß § 5 TMG:
 
-NAME
-ADRESSE
+MEIN NAME  
+MEINEADRESSE  
+Telefon: 012345678  
+E-Mail: [hier Ihre E-Mail-Adresse angeben]  
+Umsatzsteuer-Identifikationsnummer gemäß § 27a UStG: 123123123  
 
-Kontakt
-Telefon: 012345678
-E-Mail: [Bitte ergänze hier deine E-Mail-Adresse]
+### Haftungshinweis:
 
-Aufsichtsbehörde
-Gesundheitsamt Dresden
-[Bitte ergänze hier die genaue Adresse der Aufsichtsbehörde]
+Trotz sorgfältiger inhaltlicher Kontrolle übernehmen wir keine Haftung für die Inhalte externer Links. Für den Inhalt der verlinkten Seiten sind ausschließlich deren Betreiber verantwortlich.
 
-Umsatzsteuer-Identifikationsnummer gemäß §27 a Umsatzsteuergesetz
-UStID: 123123123
+### Haftungsausschluss:
 
-Berufsbezeichnung und berufsrechtliche Regelungen
-Berufsbezeichnung: Tierheilpraktikerin
-Zuständige Kammer: [Bitte ergänze hier die zuständige Kammer]
-Verliehen in: Deutschland
-Es gelten folgende berufsrechtliche Regelungen: [Bitte ergänze hier die einschlägigen Regelungen, z.B. das Heilpraktikergesetz und die Berufsordnung für Heilpraktiker]
-Regelungen einsehbar unter: [Bitte ergänze hier den Link zu den berufsrechtlichen Regelungen]
+Die Informationen auf dieser Webseite wurden sorgfältig geprüft und werden regelmäßig aktualisiert. Dennoch kann keine Haftung oder Garantie für die Aktualität, Richtigkeit und Vollständigkeit der zur Verfügung gestellten Informationen übernommen werden.
 
-Angaben zur Berufshaftpflichtversicherung
-Name und Sitz des Versicherers:
-Yolo123
+### Urheberrecht:
+
+Die Inhalte und Werke auf dieser Webseite unterliegen dem deutschen Urheberrecht. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der Grenzen des Urheberrechts bedürfen der schriftlichen Zustimmung des jeweiligen Autors bzw. Erstellers.
+
+### Datenschutz:
+
+Die Nutzung dieser Webseite ist in der Regel ohne Angabe personenbezogener Daten möglich. Soweit auf dieser Webseite personenbezogene Daten (z.B. Name, E-Mail-Adresse) erhoben werden, erfolgt dies stets auf freiwilliger Basis. Diese Daten werden ohne Ihre ausdrückliche Zustimmung nicht an Dritte weitergegeben. Wir weisen darauf hin, dass die Datenübertragung im Internet (z.B. bei der Kommunikation per E-Mail) Sicherheitslücken aufweisen kann. Ein lückenloser Schutz der Daten vor dem Zugriff durch Dritte ist nicht möglich.
+
+### Berufshaftpflichtversicherung:
+
+Name und Anschrift des Versicherers:  
+Versicherer XY  
+Musterstraße 1  
+12345 Musterstadt  
+Geltungsbereich: Deutschland
+
+### Zuständige Aufsichtsbehörde:
+
+Veterinäramt Landkreis Bautzen: Amtsleiterin DVM Ulrike Kutschke  
+Lebensmittelüberwachungs- und Veterinäramt  
+Bahnhofstraße 7  
+02625 Bautzen  
+Postanschrift:  
+Landratsamt Bautzen  
+Lebensmittelüberwachungs- und Veterinäramt  
+Bahnhofstraße 9  
+02625 Bautzen  
+Telefon: (03591) 5 25 13 90 00  
+E-Mail: lueva@lra-bautzen.de  
+Website: www.landkreis-bautzen.de
