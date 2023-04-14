@@ -8,8 +8,8 @@
     <div class="row">
       <div class="col-lg-8 col-md-10 mx-auto">
         <div class="page-heading">
-          <h1>Contact Me</h1>
-          <span class="subheading">Have questions? I have answers.</span>
+          <h1>Kontakt</h1>
+          <span class="subheading"></span>
         </div>
       </div>
     </div>
@@ -22,39 +22,56 @@
 <div class="container">
   <div class="row">
     <div class="col-lg-8 col-md-10 mx-auto">
-      <p>Want to get in touch? Fill out the form below to send me a message and I will get back to you as soon as
-        possible!</p>
-      <form name="contact" method="POST" {%if config.extra.netlify_forms %}data-netlify="true" {%endif%}>
+      <h2>Kontakt</h2>
+      <p>Ich freue mich, von Ihnen zu hören! Nutzen Sie eine der folgenden Kontaktmöglichkeiten, um mich zu erreichen:</p>
+      <h3>Telefon / Mobil</h3>
+      <p><strong>Mobil: <a href="tel:+491737890040">+49 (0) 173 789 0040</a></strong></p>
+      <h3>Kontaktformular</h3>
+      <p>Verwenden Sie das Kontaktformular auf dieser Seite, um mir eine Nachricht zu senden.</p>
+      <form name="contact"  action="https://formspree.io/f/mgebpdwg" method="POST" {%if config.extra.netlify_forms %}data-netlify="true" {%endif%}>
         <div class="control-group">
           <div class="form-group floating-label-form-group controls">
             <label>Name</label>
-            <input type="text" class="form-control" placeholder="Name" id="name" required
-              data-validation-required-message="Please enter your name.">
+            <input type="text" class="form-control" placeholder="Name" id="name" name="name" required
+              data-validation-required-message="Bitte tragen Sie Ihren Namen ein.">
             <p class="help-block text-danger"></p>
           </div>
         </div>
         <div class="control-group">
           <div class="form-group floating-label-form-group controls">
             <label>Email Address</label>
-            <input type="email" class="form-control" placeholder="Email Address" id="email" required
-              data-validation-required-message="Please enter your email address.">
+            <input type="email" class="form-control" placeholder="E-Mail Adresse" id="email" name="email" required
+              data-validation-required-message="Bitte tragen Sie Ihre E-Mail-Adresse ein.">
             <p class="help-block text-danger"></p>
           </div>
+        </div>
+        <div class="form-group floating-label-form-group controls">
+          <label>Betreff</label>
+          <input type="text" class="form-control" placeholder="Betreff" id="betreff" name="betreff">
+          <p class="help-block text-danger"></p>
         </div>
         <div class="control-group">
           <div class="form-group floating-label-form-group controls">
             <label>Message</label>
-            <textarea rows="5" class="form-control" placeholder="Message" id="message" required
-              data-validation-required-message="Please enter a message."></textarea>
+            <textarea rows="5" class="form-control" placeholder="Nachricht" id="message" name="message" required
+              data-validation-required-message="Bitte tragen Sie Ihre Nachricht ein."></textarea>
             <p class="help-block text-danger"></p>
           </div>
         </div>
         <br>
         <div id="success"></div>
         <div class="form-group">
-          <button type="submit" class="btn btn-primary" id="sendMessageButton">Send</button>
+          <button type="submit" class="btn btn-primary" id="sendMessageButton">Absenden</button>
         </div>
       </form>
+      <h3>E-Mail</h3>
+      <p>Schreiben Sie mir eine E-Mail: <strong><a href="mailto:info@tierheilpraxis-jessican.de">info@tierheilpraxis-jessican.de</a></strong></p>
+      <p>Bis bald, Ihre Jessi</p>
+      
+
+
+<p>Bitte beachten Sie, dass ich während meiner Arbeit mit den Tieren nicht immer sofort erreichbar bin. Hinterlassen Sie mir in diesem Fall bitte eine Nachricht auf der Mailbox oder nutzen Sie das Kontaktformular, und ich rufe Sie so bald wie möglich zurück.</p>
+<p>Ich freue mich darauf, Ihnen und Ihren vierbeinigen Freunden zu helfen und wünsche Ihnen bis dahin alles Gute!</p>
     </div>
   </div>
 </div>
