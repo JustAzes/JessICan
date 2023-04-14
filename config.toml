@@ -3,8 +3,8 @@ base_url = "https://justazes.github.io/JessICan/"
 generate_rss = true
 compile_sass = true
 
-title = "JessICan - natürlich!"
-description = "Willkommen auf JessICan - natürlich!"
+title = ""
+description = ""
 highlight_code = true
 
 taxonomies = [
