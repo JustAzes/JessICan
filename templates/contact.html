@@ -2,7 +2,7 @@
 
 {% block header %}
 <!-- Page Header -->
-<header class="masthead" style="background-image: url('{{ get_url(path="/img/contact-bg.jpg")}}')">
+<header class="masthead" style="background-image: url('{{ get_url(path="/img/contact-bg-1.jpg")}}');background-size:100%;">
   <div class="overlay"></div>
   <div class="container">
     <div class="row">
@@ -22,10 +22,9 @@
 <div class="container">
   <div class="row">
     <div class="col-lg-8 col-md-10 mx-auto">
-      <h2>Kontakt</h2>
       <p>Ich freue mich, von Ihnen zu hören! Nutzen Sie eine der folgenden Kontaktmöglichkeiten, um mich zu erreichen:</p>
       <h3>Telefon / Mobil</h3>
-      <p><strong>Mobil: <a href="tel:+491737890040">+49 (0) 173 789 0040</a></strong></p>
+      <p><strong>Mobil: +49 (0) 173 789 0040</strong></p>
       <h3>Kontaktformular</h3>
       <p>Verwenden Sie das Kontaktformular auf dieser Seite, um mir eine Nachricht zu senden.</p>
       <form name="contact"  action="https://formspree.io/f/mgebpdwg" method="POST" {%if config.extra.netlify_forms %}data-netlify="true" {%endif%}>
