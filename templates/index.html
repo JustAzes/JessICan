@@ -34,57 +34,6 @@
 
 {% block content %}
   <!-- Main Content -->
-  <section class="container py-5">
-    <div class="row">
-      <div class="col-lg-6">
-        <h1>Herzlich willkommen!</h1>
-        <p>
-          Mein Name ist Jessi, und ich bin eine leidenschaftliche Tierheilpraktikerin. Mit meinem ganzheitlichen Ansatz unterstütze ich Menschen und ihre Tiere dabei, gemeinsam gesundheitliche Herausforderungen zu bewältigen und ein harmonisches Zusammenleben zu fördern.
-        </p>
-        <a href="about" class="btn btn-primary">Mehr über mich</a>
-      </div>
-      <div class="col-lg-6">
-        <img src="img/welcome.jpg" alt="Jessi mit ihrem Pferd Gino" class="img-fluid" />
-      </div>
-    </div>
-  </section>
-
-  <section class="container py-5 bg-light">
-    <div class="row">
-      <div class="col-12 text-center">
-        <h2>Leistungsübersicht</h2>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-md-6 col-lg-3 text-center py-3">
-        <img src="img/naturheilkunde.jpg" alt="Naturheilkunde" class="img-fluid" />
-        <h3>Naturheilkunde</h3>
-        <p>Ganzheitliche Behandlungsmethoden für das Wohlbefinden von Mensch und Tier.</p>
-      </div>
-      <div class="col-md-6 col-lg-3 text-center py-3">
-        <img src="img/phytotherapie.jpg" alt="Phytotherapie" class="img-fluid" />
-        <h3>Phytotherapie</h3>
-        <p>Heilung und Linderung durch die Kraft der Pflanzen.</p>
-      </div>
-      <div class="col-md-6 col-lg-3 text-center py-3">
-        <img src="img/aromatherapie.jpg" alt="Aromatherapie" class="img-fluid" />
-        <h3>Aromatherapie</h3>
-        <p>Wohltuende Düfte und ätherische Öle zur Unterstützung der Gesundheit.</p>
-      </div>
-      <div class="col-md-6 col-lg-3 text-center py-3">
-        <img src="img/alternative-methoden.jpg" alt="Alternative Methoden" class="img-fluid" />
-        <h3>Alternative Methoden</h3>
-        <p>Individuelle Therapieansätze für die besonderen Bedürfnisse Ihrer Tiere.</p>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-12 text-center">
-        <a href="behandlung" class="btn btn-primary">Mehr über meine Leistungen</a>
-      </div>
-    </div>
-  </section>
-
-
   <div class="container">
     <div class="row">
       <div class="col-lg-8 col-md-10 mx-auto">
@@ -96,35 +45,48 @@
             <a href="about" class="btn btn-primary mb-5">Mehr über mich</a>
           </div>
         </section>
-        <section class="bg-light mt-5 p-4 rounded">
+        </div>
+        <div class="col-lg-12 col-md-12 mx-auto">
+        <section id="gallery">
           <div class="row">
             <div class="col-12 text-center">
               <h2>Leistungsübersicht</h2>
             </div>
           </div>
-          <div class="row mt-3">
-            <div class="col-sm-6">
-              <h3>Naturheilkunde</h3>
-              <p>Ganzheitliche Behandlungsmethoden für das Wohlbefinden von Mensch und Tier.</p>
+          <div class="container">
+            <div class="row">
+            <div class="col-lg-4 mb-4">
+            <div class="card">
+              <img src="https://images.unsplash.com/photo-1477862096227-3a1bb3b08330?ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=60" alt="" class="card-img-top">
+              <div class="card-body">
+                <h5 class="card-title">Naturheilkunde</h5>
+                <p class="card-text">Ganzheitliche Behandlungsmethoden für das Wohlbefinden von Mensch und Tier.</p>
+              </div>
             </div>
-            <div class="col-sm-6">
-              <h3>Phytotherapie</h3>
-              <p>Heilung und Linderung durch die Kraft der Pflanzen.</p>
+            </div>
+          <div class="col-lg-4 mb-4">
+          <div class="card">
+              <img src="https://images.unsplash.com/photo-1516214104703-d870798883c5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=700&q=60" alt="" class="card-img-top">
+              <div class="card-body">
+                <h5 class="card-title">Akupunktur / Lasertherapie</h5>
+                <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ut eum similique repellat a laborum, rerum voluptates ipsam eos quo tempore iusto dolore modi dolorum in pariatur. Incidunt repellendus praesentium quae!</p>
+              </div>
+              </div>
+            </div>
+            <div class="col-lg-4 mb-4">
+            <div class="card">
+              <img src="https://images.unsplash.com/photo-1477862096227-3a1bb3b08330?ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=60" alt="" class="card-img-top">
+              <div class="card-body">
+                <h5 class="card-title">Manuelle Therapie</h5>
+                <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ut eum similique repellat a laborum, rerum voluptates ipsam eos quo tempore iusto dolore modi dolorum in pariatur. Incidunt repellendus praesentium quae!</p>
+              </div>
+            </div>
             </div>
           </div>
-          <div class="row mt-3">
-            <div class="col-sm-6">
-              <h3>Aromatherapie</h3>
-              <p>Wohltuende Düfte und ätherische Öle zur Unterstützung der Gesundheit.</p>
-            </div>
-            <div class="col-sm-6">
-              <h3>Alternative Methoden</h3>
-              <p>Individuelle Therapieansätze für die besonderen Bedürfnisse Ihrer Tiere.</p>
-            </div>
-          </div>
-          <div class="text-center mt-3">
-            <a href="behandlung" class="btn btn-primary">Mehr über meine Leistungen</a>
-          </div>
+        </div>
+        <div class="text-center mt-3">
+          <a href="behandlung" class="btn btn-primary">Mehr über meine Leistungen</a>
+        </div>
         </section>
 
         <section class="mt-5 p-4 rounded">
