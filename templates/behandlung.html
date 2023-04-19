@@ -20,6 +20,24 @@
 {% endblock header %}
 
 {% block content %}
+<!-- TOC-->
+<div class="container">
+  <div class="row">
+    <div class="col-lg-8 col-md-10 mx-auto">
+      <h1>Inhalt dieser Seite</h1>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-lg-8 col-md-10 mx-auto">
+      <ul class="list-group">
+        <li class="list-group-item"><a href="{{ get_url(path="behandlung/#vorgehensweise") }}">Vorgehensweise</a></li>
+        <li class="list-group-item"><a href="{{ get_url(path="behandlung/#terminvereinbarung") }}">Terminvereinbarung</a></li>
+        <li class="list-group-item"><a href="{{ get_url(path="behandlung/#uberblick-der-behandlungsmethoden") }}">Überblick der Behandlungsmethoden</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+<br>
 <!-- Main Content -->
 <div class="container">
   <div class="row">
@@ -28,11 +46,10 @@
     </div>
   </div>
 </div>
-
 <div class="container">
   <div class="row">
     <div class="col-lg-8 col-md-10 mx-auto">
-      hier gehts mit HTML weiter :-D 
+        <h1 id="uberblick-der-behandlungsmethoden">Überblick der Behandlungsmethoden</h1>
     </div>
   </div>
 </div>
