@@ -107,7 +107,12 @@
             </li>
             {% endfor %}
           </ul> 
-          <div style="text-align: center;" ><a href="/impressum">Impressum</a> <a href="/datenschutz">Datenschutz</a></div>
+          <div style="text-align: center;" >
+            <p>
+              <a href="contact" class="btn btn-secondary">Kontakt</a>
+            </p>
+          </div>
+          <div style="text-align: center;" ><a href="{{ get_url(path="/impressum") }}">Impressum</a> <a href="{{ get_url(path="/datenschutz") }}">Datenschutz</a></div>
           <p class="copyright text-muted">{% block copyright %}Copyright &copy; JessICan
             2023{% endblock copyright %}</p>
         </div>

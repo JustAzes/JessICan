@@ -1,9 +1,11 @@
 +++
-title = "Post Template"
+title = ""
 date = 2019-01-05
 
+draft = true
+
 [taxonomies]
-categories = ["Allgemein"]
+categories = []
 tags = []
 +++
 
