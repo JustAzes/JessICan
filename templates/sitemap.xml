@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+
+<url>
+  <loc>https://justazes.github.io/JessICan/</loc>
+  <lastmod>2023-04-19T13:47:31+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://justazes.github.io/JessICan/about/</loc>
+  <lastmod>2023-04-19T13:47:31+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://justazes.github.io/JessICan/behandlung/</loc>
+  <lastmod>2023-04-19T13:47:31+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://justazes.github.io/JessICan/dokumente/</loc>
+  <lastmod>2023-04-19T13:47:31+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://justazes.github.io/JessICan/contact/</loc>
+  <lastmod>2023-04-19T13:47:31+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://justazes.github.io/JessICan/documents/Behandlungsvertrag_JessICan.docx</loc>
+  <lastmod>2023-04-19T13:47:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://justazes.github.io/JessICan/documents/Behandlungsvertrag_JessICan.pdf</loc>
+  <lastmod>2023-04-19T13:47:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://justazes.github.io/JessICan/documents/Anamnesefragebogen_Pferd.docx</loc>
+  <lastmod>2023-04-19T13:47:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://justazes.github.io/JessICan/documents/Anamnesefragebogen_Pferd.pdf</loc>
+  <lastmod>2023-04-19T13:47:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://justazes.github.io/JessICan/documents/Anamnesefragebogen_Hund.docx</loc>
+  <lastmod>2023-04-19T13:47:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://justazes.github.io/JessICan/documents/Anamnesefragebogen_Hund.pdf</loc>
+  <lastmod>2023-04-19T13:47:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+
+
+</urlset>
