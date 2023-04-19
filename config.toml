@@ -22,5 +22,5 @@ clean_blog_menu = [
     {url = "$BASE_URL/contact", name = "Kontakt"}
 ]
 clean_blog_social = [
-    {url = "https://twitter.com", icon="fab fa-instagram"}
+    {url = "https://www.instagram.com/jess.i.can_natuerlich/", icon="fab fa-instagram"}
 ]
