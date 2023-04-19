@@ -1,0 +1,93 @@
+{% extends "template.html" %}
+
+{% block header %}
+<!-- Page Header -->
+<header class="masthead" style="background-image: url('{{ get_url(path="/img/about-bg.jpg")}}')">
+  <div class="overlay">
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+        <div class="page-heading">
+          <h1>Das bin ich!</h1>
+          <span class="subheading">Und das ist was ich mache.</span>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+{% endblock header %}
+
+{% block content %}
+<!-- Main Content -->
+<div class="container">
+  <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+        <p class="text-center mb-4 display-4">Dokumente</p>
+
+        <h3 class="text-center mb-4">Allgemeine Unterlagen</h3>
+        <div class="row">
+          <div class="col-lg-6 col-md-6 text-center mb-3">
+            <div class="dropdown">
+              <button class="btn btn-primary dropdown-toggle" type="button" id="behandlungsvDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Behandlungsvertrag
+              </button>
+              <div class="dropdown-menu" aria-labelledby="behandlungsvDropdown">
+                <a class="dropdown-item" href="{{ get_url(path="documents/Behandlungsvertrag_JessICan.docx") }}">Als Word Dokument</a>
+                <a class="dropdown-item" download = "Behandlungsvertrag_JessICan.pdf" href="{{ get_url(path="documents/Behandlungsvertrag_JessICan.pdf") }}">Als PDF Dokument</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6 col-md-6 text-center mb-3">
+            <div class="dropdown">
+              <button class="btn btn-primary dropdown-toggle" type="button" id="aufklaerungsdvDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Aufklärungsdokument
+              </button>
+              <div class="dropdown-menu" aria-labelledby="aufklaerungsdvDropdown">
+                <a class="dropdown-item" href="#">Als Word Dokument</a>
+                <a class="dropdown-item" download = "Aufklaerungsdokument_JessICan.pdf" href="#">Als PDF Dokument</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <hr>
+        
+        <h3 class="text-center mb-4">Unterlagen für die Pferdebehandlung</h3>
+        <div class="row">
+          <div class="col-lg-6 col-md-6 text-center mb-3">
+            <div class="dropdown">
+              <button class="btn btn-primary dropdown-toggle" type="button" id="behandlungsvDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Anamnesefragebogen
+              </button>
+              <div class="dropdown-menu" aria-labelledby="behandlungsvDropdown">
+                <a class="dropdown-item" href="{{ get_url(path="documents/Anamnesefragebogen_Pferd.docx") }}">Als Word Dokument</a>
+                <a class="dropdown-item" download = "Anamnesefragebogen_Pferd.pdf" href="{{ get_url(path="documents/Anamnesefragebogen_Pferd.pdf") }}">Als PDF Dokument</a>
+              </div>
+            </div>
+          </div>
+        </div>
+          
+        <hr>
+
+        <h3 class="text-center mb-4">Unterlagen für die Hundebehandlung</h3>
+        <div class="row">
+          <div class="col-lg-6 col-md-6 text-center mb-3">
+            <div class="dropdown">
+              <button class="btn btn-primary dropdown-toggle" type="button" id="behandlungsvDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Anamnesefragebogen
+              </button>
+              <div class="dropdown-menu" aria-labelledby="behandlungsvDropdown">
+                <a class="dropdown-item" href="{{ get_url(path="documents/Anamnesefragebogen_Hund.docx") }}">Als Word Dokument</a>
+                <a class="dropdown-item" download = "Anamnesefragebogen_Hund.pdf" href="{{ get_url(path="documents/Anamnesefragebogen_Hund.pdf") }}">Als PDF Dokument</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  </div>
+</div>
+
+
+{% endblock content %}
