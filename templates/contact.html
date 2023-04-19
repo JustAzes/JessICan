@@ -27,7 +27,7 @@
       <p><strong>Mobil: +49 (0) 173 789 0040</strong></p>
       <h3>Kontaktformular</h3>
       <p>Verwenden Sie das Kontaktformular auf dieser Seite, um mir eine Nachricht zu senden.</p>
-      <form name="contact"  action="https://formspree.io/f/mgebpdwg" method="POST" {%if config.extra.netlify_forms %}data-netlify="true" {%endif%}>
+      <form name="contact"  action="https://formspree.io/f/mgebpdwg" method="POST" enctype="multipart/form-data" {%if config.extra.netlify_forms %}data-netlify="true" {%endif%}>
         <div class="control-group">
           <div class="form-group floating-label-form-group controls">
             <label>Name</label>
@@ -62,12 +62,22 @@
             <p class="help-block text-danger"></p>
           </div>
         </div>
+        <!-- Dateiupload hinzufügen -->
+        <div class="control-group">
+          <div class="form-group floating-label-form-group controls">
+            <label>Dateiupload</label>
+            <input type="file" class="form-control" id="datei" name="datei">
+            <p class="help-block text-danger"></p>
+          </div>
+        </div>
+        <!-- Ende Dateiupload -->
         <br>
         <div id="success"></div>
         <div class="form-group">
           <button type="submit" class="btn btn-primary" id="sendMessageButton">Absenden</button>
         </div>
       </form>
+
       <p>Bitte beachten Sie, dass ich während meiner Arbeit mit den Tieren nicht immer sofort erreichbar bin. Hinterlassen Sie mir in diesem Fall bitte eine Nachricht auf der Mailbox oder nutzen Sie das Kontaktformular, und ich rufe Sie so bald wie möglich zurück.</p>
       <p>Ich freue mich darauf, Ihnen und Ihren vierbeinigen Freunden zu helfen und wünsche Ihnen bis dahin alles Gute!</p>
       <p>Bis bald, Ihre Jessi</p>
