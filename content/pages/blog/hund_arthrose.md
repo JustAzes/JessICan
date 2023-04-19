@@ -11,7 +11,7 @@ In diesem Artikel wird das Thema Arthritis bei Hunden ausführlich behandelt. Es
 <!-- more -->
 <h2> Arthritis bei Hunden – Ein Vorläufer von Arthrose </h2>
 
-<img src="/JessICan/img/blog/hund_arthrose_1.png" style="max-width: 100%"/>
+<img src="/JessICan/img/blog/hund_arthrose_1.png" alt="Bild von einem Hund mit Arthrose" style="max-width: 100%"/>
 
 
 Arthritis ist eine häufige akute entzündliche Erkrankung des Gelenks, die zu Schmerzen, Steifheit und Schäden an den Gelenken führt. Arthritis ist häufig durch Infektionen bedingt - Keime gelangen in den Gelenkinnenraum. Es kann durch Erkrankungen wie Infektionen, Entzündungen und Stoffwechselstörungen verursacht werden.
@@ -47,7 +47,7 @@ Die Zellen im Knorpel sind nicht in der Lage sich selbst zu reinigen und so komm
 - genetische Disposition
 
 <h2>Symptome Arthrose</h2>
-<img src="/JessICan/img/blog/hund_arthrose_2.png" style="max-width: 100%; max-height: 100%;"/>
+<img src="/JessICan/img/blog/hund_arthrose_2.png" alt="Bild von einem Hund mit Arthrose" style="max-width: 100%; max-height: 100%;"/>
 
 
 Die Symptome dieser Krankheit können von Hund zu Hund unterschiedlich sein und können von mild bis schwerwiegend reichen. Hier sind einige der häufigsten Symptome von Arthrose:
@@ -59,7 +59,7 @@ Die Symptome dieser Krankheit können von Hund zu Hund unterschiedlich sein und 
 Es ist wichtig zu beachten, dass nicht alle Hunde mit Arthrose alle diese Symptome aufweisen müssen. Einige Hunde können mildere Symptome haben, während andere schwerwiegendere haben können.
 
 <h2>Diagnostizieren von Arthrose bei Hunden</h2>
-<img style="float: left; margin-right: 50px; max-width: 100%" src="/JessICan/img/blog/hund_arthrose_3.png" />Wenn Sie vermuten, dass Ihr Hund an Arthrose leidet, ist es wichtig, eine Diagnose zu erhalten. Dies kann durch eine Kombination aus körperlichen Untersuchungen, Röntgen und Blutuntersuchungen erfolgen.
+<img style="float: left; margin-right: 50px; max-width: 100%" alt="Bild von einem Hund mit Arthrose" src="/JessICan/img/blog/hund_arthrose_3.png" />Wenn Sie vermuten, dass Ihr Hund an Arthrose leidet, ist es wichtig, eine Diagnose zu erhalten. Dies kann durch eine Kombination aus körperlichen Untersuchungen, Röntgen und Blutuntersuchungen erfolgen.
 
  - **Körperliche Untersuchung**: Ein fachkundiger Arzt wird Ihren Hund genau untersuchen, um Anzeichen für Arthrose zu erkennen. Dazu gehören Schmerzen, Steifheit und Veränderungen im Gangmuster.
  - **Röntgen**: Röntgenaufnahmen oder andere bildgebende Tests können helfen, Veränderungen im Gelenk zu identifizieren, die auf Arthrose hindeuten.
@@ -68,7 +68,7 @@ Es ist wichtig zu beachten, dass nicht alle Hunde mit Arthrose alle diese Sympto
 Es ist wichtig zu beachten, dass die Diagnose von Arthrose bei Hunden eine sorgfältige Überprüfung erfordert. Eine genaue Diagnose kann helfen, die beste Behandlung für Ihren Hund zu bestimmen und dessen Schmerzen zu lindern.
 
 <h2>Eigene Behandlungsmöglichkeiten von Arthrose bei Hunden</h2>
-<img style="float: right; margin-right: 10px; max-width: 100%" src="/JessICan/img/blog/hund_arthrose_4.png" /> 
+<img style="float: right; margin-right: 10px; max-width: 100%" alt="Bild von einem Hund mit Arthrose" src="/JessICan/img/blog/hund_arthrose_4.png" /> 
 Maßnahmen bei einer Arthrose-Erkrankung sollten dafür sorgen, die Reinigung und Reparatur der Zellen zu erleichtern, zu stärken und zu schützen. Eine zusätzliche Gelenkentzündung (was durch den zunehmenden Abrieb vorkommt) sollte auf jeden Fall vermieden werden. Dies treibt den Abbauprozess sonst schneller voran. 
 
 <h3>Lebensstiländerung - Übergewicht meiden</h3>
