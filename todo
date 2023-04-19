@@ -1,14 +1,20 @@
-- Blogbeiträge übertragen
-- Blog Hinweis
-- Seitenbilder
-- Überblick Behandlugnsmethoden
-- Formspree --> https://formspark.io/ ?
+Bis zum Start:
+- Index-Seite Behandlungsmethoden grob
+- Seitenbilder (Hintergrundbilder)
+- Überblick Behandlungsmethoden
+- baseurl-Fehler bei Github Pages
+- Datenschutzerklärung -goatcounter
+- Impressum
 
+- SEO
 - Sitemap aktualisieren
 - robot.txt
 - 404 errorpage https://www.getzola.org/documentation/templates/404/
-
-- SEO
 - Google Maps Eintrag
 - Domäne
 - Brancheneintrag (optional)
+
+Danach:
+- Formspree --> https://formspark.io/ ?
+- Blogbeiträge übertragen
+- Blog Hinweis
