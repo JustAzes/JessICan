@@ -4,33 +4,19 @@ template = "impressum.html"
 render = false
 +++
 
-## Impressum
+# Impressum
 
-### Verantwortlich für den Inhalt dieser Webseite gemäß § 5 TMG:
+## Verantwortlich für den Inhalt dieser Webseite gemäß § 5 TMG:
 
-MEIN NAME  
-MEINEADRESSE  
-Telefon: 012345678  
-E-Mail: [hier Ihre E-Mail-Adresse angeben]  
-Umsatzsteuer-Identifikationsnummer gemäß § 27a UStG: 123123123  
+Jessica Gebler
+Tierheilpraxis JessICan -natürlich gesund! (Einzelunternehmen)
+Wachauer Str.6
+01896 Lichtenberg, DE
+Telefon: +49 (0) 173 789 0040
+E-Mail: jessica.gebler22[at]gmail.com
+Umsatzsteuer-Identifikationsnummer gemäß § 27a UStG: <TODO> 123123123  
 
-### Haftungshinweis:
-
-Trotz sorgfältiger inhaltlicher Kontrolle übernehmen wir keine Haftung für die Inhalte externer Links. Für den Inhalt der verlinkten Seiten sind ausschließlich deren Betreiber verantwortlich.
-
-### Haftungsausschluss:
-
-Die Informationen auf dieser Webseite wurden sorgfältig geprüft und werden regelmäßig aktualisiert. Dennoch kann keine Haftung oder Garantie für die Aktualität, Richtigkeit und Vollständigkeit der zur Verfügung gestellten Informationen übernommen werden.
-
-### Urheberrecht:
-
-Die Inhalte und Werke auf dieser Webseite unterliegen dem deutschen Urheberrecht. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der Grenzen des Urheberrechts bedürfen der schriftlichen Zustimmung des jeweiligen Autors bzw. Erstellers.
-
-### Datenschutz:
-
-Die Nutzung dieser Webseite ist in der Regel ohne Angabe personenbezogener Daten möglich. Soweit auf dieser Webseite personenbezogene Daten (z.B. Name, E-Mail-Adresse) erhoben werden, erfolgt dies stets auf freiwilliger Basis. Diese Daten werden ohne Ihre ausdrückliche Zustimmung nicht an Dritte weitergegeben. Wir weisen darauf hin, dass die Datenübertragung im Internet (z.B. bei der Kommunikation per E-Mail) Sicherheitslücken aufweisen kann. Ein lückenloser Schutz der Daten vor dem Zugriff durch Dritte ist nicht möglich.
-
-### Berufshaftpflichtversicherung:
+## Berufshaftpflichtversicherung:
 
 Name und Anschrift des Versicherers:  
 Versicherer XY  
@@ -38,7 +24,11 @@ Musterstraße 1
 12345 Musterstadt  
 Geltungsbereich: Deutschland
 
-### Zuständige Aufsichtsbehörde:
+## Verbraucherstreitbeilegung/Universalschlichtungsstelle
+Wir sind nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor einer
+Verbraucherschlichtungsstelle teilzunehmen.
+
+## Zuständige Aufsichtsbehörde:
 
 Veterinäramt Landkreis Bautzen: Amtsleiterin DVM Ulrike Kutschke  
 Lebensmittelüberwachungs- und Veterinäramt  
