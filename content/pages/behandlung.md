@@ -42,4 +42,4 @@ Eine erfolgreiche Behandlung setzt eine angemessene Nachsorge voraus. Um die lan
 
 # Terminvereinbarung
 
-Sie möchten einen Termin vereinbaren oder haben Fragen zu meiner Arbeit als Tierheilpraktikerin? Dann kontaktieren Sie mich gerne telefonisch oder per Kontaktformular unter dem Tab [Kontakt](/contact). Ich freue mich darauf, Ihnen und Ihrem Tier zu helfen!
+Sie möchten einen Termin vereinbaren oder haben Fragen zu meiner Arbeit als Tierheilpraktikerin? Dann kontaktieren Sie mich gerne telefonisch oder per Kontaktformular unter dem Tab [Kontakt](../contact). Ich freue mich darauf, Ihnen und Ihrem Tier zu helfen!
