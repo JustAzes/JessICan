@@ -40,24 +40,35 @@ Wir hosten die Inhalte unserer Website bei folgendem Anbieter:
 
 ### Externes Hosting
 
-Diese Website wird extern gehostet. Die personenbezogenen Daten, die auf dieser Website erfasst werden, werden auf den Servern des Hosters / der Hoster gespeichert. Hierbei kann es sich v. a. um IP-Adressen, Kontaktanfragen, Meta- und Kommunikationsdaten, Vertragsdaten, Kontaktdaten, Namen, Websitezugriffe und sonstige Daten, die über eine Website generiert werden, handeln.
+Unser Hosting-Anbieter erhebt in sogenannten Logfiles die folgenden Daten, die von Ihrem Browser übermittelt werden:
 
-Das externe Hosting erfolgt zum Zwecke der Vertragserfüllung gegenüber unseren potenziellen und
-bestehenden Kunden (Art. 6 Abs. 1 lit. b DSGVO) und im Interesse einer sicheren, schnellen und effizienten
-Bereitstellung unseres Online-Angebots durch einen professionellen Anbieter (Art. 6 Abs. 1 lit. f DSGVO).
-Sofern eine entsprechende Einwilligung abgefragt wurde, erfolgt die Verarbeitung ausschließlich auf
-Grundlage von Art. 6 Abs. 1 lit. a DSGVO und § 25 Abs. 1 TTDSG, soweit die Einwilligung die Speicherung
-von Cookies oder den Zugriff auf Informationen im Endgerät des Nutzers (z. B. Device-Fingerprinting) im
-Sinne des TTDSG umfasst. Die Einwilligung ist jederzeit widerrufbar.
+IP-Adresse, die Adresse der zuvor besuchten Website (Referer-Anfrageheader), Datum und Uhrzeit der Anfrage, Zeitzonendifferenz zur Greenwich Mean Time (GMT), Inhalt der Anforderung, HTTP-Statuscode, übertragene Datenmenge, Website, von der die Anforderung stammt, sowie Informationen zu Browser und Betriebssystem.
 
+Die Erhebung dieser Daten ist notwendig, um unsere Website darzustellen und deren Stabilität und Sicherheit zu gewährleisten. Dies entspricht unserem berechtigten Interesse gemäß Art. 6 Abs. 1 S. 1 lit. f DSGVO.
 
-Unser(e) Hoster wird bzw. werden Ihre Daten nur insoweit verarbeiten, wie dies zur Erfüllung seiner
-Leistungspflichten erforderlich ist und unsere Weisungen in Bezug auf diese Daten befolgen.
+Es findet kein Tracking statt, und wir haben keinen direkten Zugriff auf diese Daten. Stattdessen erhalten wir lediglich eine anonymisierte, statistische Zusammenfassung, welche die Adresse der zuvor besuchten Seite, die Häufigkeit der jeweils aufgerufenen Seiten und die Anzahl der eindeutigen Besucher enthält. Diese Daten werden nicht mit anderen Daten zusammengeführt.
 
-Wir setzen folgende(n) Hoster ein:
-Musterhosting AG
-Musterweg 100
-90210 Musterstadt
+Für die Bereitstellung unserer Website nutzen wir den folgenden Hosting-Anbieter:
+
+GitHub Inc.
+88 Colin P Kelly Jr St
+San Francisco, CA 94107
+United States
+
+GitHub ist Empfänger Ihrer personenbezogenen Daten. Unser berechtigtes Interesse gemäß Art. 6 Abs. 1 S. 1 lit. f DSGVO besteht darin, selbst keinen Server in unseren Räumlichkeiten betreiben zu müssen. Der Serverstandort befindet sich in den USA.
+
+Weitere Informationen zu Widerspruchs- und Beseitigungsmöglichkeiten gegenüber GitHub finden Sie hier: https://docs.github.com/en/free-pro-team@latest/github/site-policy/github-privacy-statement#github-pages
+
+Sie haben das Recht, der Verarbeitung Ihrer Daten zu widersprechen. Ob der Widerspruch erfolgreich ist, hängt von einer Interessenabwägung ab.
+
+Die Daten werden gelöscht, sobald der Zweck der Verarbeitung entfällt.
+
+Die Verarbeitung der in diesem Abschnitt genannten Daten ist weder gesetzlich noch vertraglich vorgeschrieben. Ohne diese Verarbeitung kann die Funktionsfähigkeit der Website jedoch nicht garantiert werden.
+
+GitHub hat Compliance-Maßnahmen für internationale Datenübermittlungen implementiert. Diese gelten für alle weltweiten Aktivitäten von GitHub, bei denen personenbezogene Daten von natürlichen Personen aus der EU verarbeitet werden. Diese Maßnahmen basieren auf den EU-Standardvertragsklauseln (SCCs). Weitere Informationen finden Sie hier: https://docs.github.com/en/free-pro-team@latest/github/site-policy/github-data-protection-addendum#attachment-1–the-standard-contractual-clauses-processors
+
+### Rechtliche Hinweise zum Hosting:
+Grundsätzlich ist ein Auftragsverarbeitungsvertrag mit dem Hosting-Anbieter abzuschließen. Das Bayerische Landesamt für Datenschutzaufsicht hat jedoch eine Ausnahme für das Hosting rein statischer Websites gemacht. Wenn die Website der Selbstdarstellung dient, z. B. von Vereinen oder Kleinunternehmen, keine personenbezogenen Daten an den Betreiber übermittelt werden und kein Tracking stattfindet, liegt keine Auftragsverarbeitung vor. Weiter heißt es: „Die Tatsache, dass auch beim Hosting von statischen Webseiten zwangsläufig IP-Adressen, d. h. personenbezogene Daten, verarbeitet werden müssen, führt nicht zur Annahme einer Auftragsverarbeitung. Das wäre nicht sachgerecht. Die (kurzfristige) IP-Adressenspeicherung ist vielmehr noch der TK-Zugangsvermittlung des Website-Hosters nach dem TKG zuzurechnen und dient in erster Linie Sicherheitszwecken des Hosters.“ (https://www.lda.bayern.de/media/veroeffentlichungen/FAQ_Hosting_keine_Auftragsverarbeitung.pdf) Wir gehen davon aus, dass diese Ausnahme auf GitHub Pages anwendbar ist.
 
 ## 3. Allgemeine Hinweise und Pflichtinformationen
 ### Datenschutz
