@@ -11,7 +11,7 @@ Als Tierheilpraktikerin ist es meine Leidenschaft, Tieren auf ganzheitliche Weis
 
 
 ## 1. Anamnesebogen ausfüllen
-Bevor wir uns persönlich treffen, bitte ich Sie den Anamnesebogen auszufüllen, [welcher hier zu finden ist: Link.](/dokumente)
+Bevor wir uns persönlich treffen, bitte ich Sie den Anamnesebogen auszufüllen, [welcher hier zu finden ist: Link.](dokumente)
 
 Dies gibt mir die Möglichkeit, Ihre Tier und dessen Gesundheitsgeschichte kennenzulernen und mich auf unser Gespräch vorzubereiten. So können Sie mir in Ruhe alles berichten, ohne etwas wichtiges zu vergessen. Manchmal sind die kleinen Dinge von großer Bedeutung.
 
