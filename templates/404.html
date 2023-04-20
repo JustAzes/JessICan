@@ -1,0 +1,35 @@
+{% extends "template.html" %}
+
+{% block header %}
+<!-- Page Header -->
+<header class="masthead" style="background-image: url('{{ get_url(path="/img/post-bg.jpg")}}')">
+  <div class="overlay">
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+        <div class="page-heading">
+          <h1>404 - Seite nicht gefunden</h1>
+          <span class="subheading">Hoppla, was ist denn da passiert?</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+{% endblock header %}
+
+{% block content %}
+<!-- Main Content -->
+<div class="container">
+  <div class="row">
+    <div class="col-lg-8 col-md-10 mx-auto">
+      <body>
+        <h1>404 - Seite nicht gefunden</h1>
+        <p>Huch! Diese Seite ist schneller verschwunden als ein Leckerli 🍖 vor einem hungrigen Hund! 🐶</p>
+        <p>Während wir die verschwundene Seite suchen, besuchen Sie doch unsere Homepage oder informieren Sie sich über unsere Behandlungsmethoden für Ihre tierischen Lieblinge.</p>
+        <p><a href="/">Zurück zur Startseite</a></p>
+    </body>
+    </div>
+  </div>
+</div>
+{% endblock content %}
