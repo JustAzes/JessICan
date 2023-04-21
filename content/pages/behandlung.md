@@ -11,7 +11,7 @@ Als Tierheilpraktikerin ist es meine Leidenschaft, Tieren auf ganzheitliche Weis
 
 
 ## 1. Anamnesebogen ausfüllen
-Bevor wir uns persönlich treffen, bitte ich Sie den Anamnesebogen auszufüllen, [welcher hier zu finden ist: Link.](../dokumente)
+Bevor wir uns persönlich treffen, bitte ich Sie den Anamnesebogen auszufüllen, [welcher hier zu finden ist: Link.](https://www.tierheilpraxis-jessican.de/dokumente)
 
 Dies gibt mir die Möglichkeit, Ihre Tier und dessen Gesundheitsgeschichte kennenzulernen und mich auf unser Gespräch vorzubereiten. So können Sie mir in Ruhe alles berichten, ohne etwas wichtiges zu vergessen. Manchmal sind die kleinen Dinge von großer Bedeutung.
 
@@ -42,4 +42,4 @@ Eine erfolgreiche Behandlung setzt eine angemessene Nachsorge voraus. Um die lan
 
 # Terminvereinbarung
 
-Sie möchten einen Termin vereinbaren oder haben Fragen zu meiner Arbeit als Tierheilpraktikerin? Dann kontaktieren Sie mich gerne telefonisch oder per Kontaktformular unter dem Tab [Kontakt](../contact). Ich freue mich darauf, Ihnen und Ihrem Tier zu helfen!
+Sie möchten einen Termin vereinbaren oder haben Fragen zu meiner Arbeit als Tierheilpraktikerin? Dann kontaktieren Sie mich gerne telefonisch oder per Kontaktformular unter dem Tab [Kontakt](https://www.tierheilpraxis-jessican.de/contact). Ich freue mich darauf, Ihnen und Ihrem Tier zu helfen!
