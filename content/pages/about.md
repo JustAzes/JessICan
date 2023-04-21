@@ -10,7 +10,7 @@ Mein Name ist Jessi und mein Ziel ist es, Menschen und Tieren dabei zu helfen, g
 
 Ich bin selbst mit Tieren aufgewachsen - Hund, Katze, (Wüstenrenn-)Maus und viele andere waren stets an meiner Seite. Seit meinem 6. Lebensjahr sitze ich auf dem Pferd und seit 2012 ist mein Lewitzer Pony Gino mein seelischer Ausgleich.
 
-<img src="img/ich_und_gino.jpg" alt="Ich und mein Pferd Gino" style="max-width: 100%;max-height: 80%;">
+<img src="{{ get_url(path="img/ich_und_gino.jpg") }}" alt="Ich und mein Pferd Gino" style="max-width: 100%;max-height: 80%;">
 
 Ich habe einen Bachelorabschluss als staatlich anerkannte Sozialarbeiterin. Die Sozialarbeit hat mir gelehrt, dass eine Familie wie ein Ökosystem funktioniert und jedes Mitglied seine Funktionen und Aufgaben darin einnimmt. Gerät dies durch Veränderungen in ein Ungleichgewicht und schafft es nicht, sich selbst wieder auszubalancieren, so hat das Auswirkungen auf jeden Einzelnen.
 
@@ -24,7 +24,7 @@ Auf der Suche nach alternativen Lösungsmöglichkeiten bin ich in die Tierheilku
 
 ---
 
-<img src="img/tali.jpg" alt="Ich und mein Hund Tali" style="max-width: 100%;max-height: 80%;">
+<img src="{{ get_url(path="img/tali.jpg") }}" alt="Ich und mein Hund Tali" style="max-width: 100%;max-height: 80%;">
 
 
 Es ist wichtig, sich ständig weiterzuentwickeln und neues Wissen anzueignen. Nur so können wir die Herausforderungen für uns und unsere Liebsten meistern.
