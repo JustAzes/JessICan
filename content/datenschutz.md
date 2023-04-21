@@ -227,5 +227,9 @@ Die Inhalte dieser Webseite wurden sorgfältig erstellt und geprüft. Der Anbiet
 
 Die Verantwortlichkeit für "fremde Inhalte", die beispielsweise durch direkte oder indirekte Verknüpfungen (z. B. sogenannte "Links") zu anderen Anbietern bereitgehalten werden, setzt unter anderem positive Kenntnis des rechtswidrigen bzw. strafbaren Inhaltes voraus. "Fremde Inhalte" sind in geeigneter Weise gekennzeichnet. Der Anbieter hat auf "fremde Inhalte" keinerlei Einfluss und macht sich diese Inhalte auch nicht zu Eigen. Der Anbieter hat keine positive Kenntnis über rechtswidrige oder anstößige Inhalte auf den verknüpften Seiten fremder Anbieter. Sollten auf den verknüpften Seiten fremder Anbieter dennoch rechtswidrige oder anstößige Inhalte enthalten sein, so distanziert sich der Anbieter von diesen Inhalten ausdrücklich.
 
+## 6. Urheberrecht
+
+Die Inhalte und Werke auf dieser Webseite unterliegen dem deutschen Urheberrecht. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der Grenzen des Urheberrechts bedürfen der schriftlichen Zustimmung des jeweiligen Autors bzw. Erstellers.
+
 Diese Datenschutzerklärung wurde mithilfe folgendes Anbieters erstellt:
 https://www.e-recht24.de
