@@ -113,8 +113,15 @@
             </p>
           </div>
           <div style="text-align: center;" ><a href="{{ get_url(path="/impressum") }}">Impressum</a> <a href="{{ get_url(path="/datenschutz") }}">Datenschutz</a></div>
-          <p class="copyright text-muted">{% block copyright %}Copyright &copy; JessICan
-            2023{% endblock copyright %}</p>
+          <p class="copyright text-muted">
+            {% block copyright %}
+              Copyright &copy; JessICan
+              <span id="currentYear"></span>
+            {% endblock copyright %}
+          </p>
+          <script>
+            document.getElementById('currentYear').innerHTML = new Date().getFullYear();
+          </script>
         </div>
       </div>
     </div>
