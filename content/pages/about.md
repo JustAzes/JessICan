@@ -33,12 +33,6 @@ Ich möchte auch andere dabei unterstützen, dass Mensch und Tier in Einklang mi
 
 > "Alles, was gegen die Natur ist, hat auf Dauer keinen Bestand." - Charles Darwin
 
-Aktuell strebe ich einen Abschluss zur staatlich geprüften Heilpraktikerin des Gesundheitsamtes an. Auch hierbei lerne ich nicht nur die komplexen Zusammenhänge des menschlichen Körpers mit der Umwelt kennen, sondern ziehe Rückschlüsse zum Ökosystem Mensch und Tier durch Kombination mit dem Wissen der bisherigen Studien und weiteren Recherchen.
-
 Fortschritte und Erfolge können Sie gern in meinem [Blog](../pages/blog) verfolgen!
 
-Aktuell bin ich auf der Suche nach neuen Fällen zur Sammlung von praktischer Erfahrung. Füllen Sie dazu bitte unter dem Tab "Leistungen" den passenden Anamnesebogen aus und treten Sie mit mir in Kontakt.
-
 Eure Jessi
-
----
