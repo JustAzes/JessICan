@@ -1,36 +1,5 @@
 {% extends "template.html" %}
 
-<head>
-  {% block analytics %}
-  <script data-goatcounter="https://jessican.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
-  {% endblock analytics %}
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="">
-  <meta name="author" content="">
-
-  <title>{% block title %}{{ config.title }}{% endblock title %}</title>
-
-  <!-- Bootstrap core CSS -->
-  <link rel="stylesheet" href="{{ get_url(path="css/bootstrap.min.css") }}">
-  <!-- Custom fonts for this template -->
-  <link href=" {{ get_url(path="css/all.min.css") }}" rel=" stylesheet" type="text/css">
-  
-
-  <link rel="stylesheet" href="{{ get_url(path="css/local-fonts.css") }}" type="text/css">
-  <!-- Custom styles for this template -->
-  <link rel="stylesheet" href="{{ get_url(path="clean-blog.css", trailing_slash=false) }}">
-  <style>
-    .navbar-light .navbar-nav .nav-link {
-      color: #000; /* Ändern Sie die Farbe hier, z.B. auf Schwarz */
-    }
-  
-    .navbar-light .navbar-nav .nav-link:hover {
-      color: #333; /* Ändern Sie die Farbe für den Hover-Effekt, z.B. auf ein dunkleres Grau */
-    }
-  </style>
-  
-</head>
 
 {% block content %}
   <!-- Main Content -->
@@ -56,7 +25,7 @@
             <div class="row">
             <div class="col-lg-4 mb-4">
             <div class="card">
-              <img src="https://images.unsplash.com/photo-1477862096227-3a1bb3b08330?ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=60" alt="" class="card-img-top">
+              <img src="href="{{ get_url(path="img/naturheilkunde_tmb.jpeg") }}" alt="Bild Naturheilkunde" class="card-img-top">
               <div class="card-body">
                 <h5 class="card-title">Naturheilkunde</h5>
                 <p class="card-text">Entdecken Sie die Kraft der Heilung durch natürliche Therapieansätze, die Körper und Geist Ihres Pferdes oder Hundes in Einklang bringen.</p>
@@ -65,8 +34,8 @@
             </div>
           <div class="col-lg-4 mb-4">
           <div class="card">
-              <img src="https://images.unsplash.com/photo-1516214104703-d870798883c5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=700&q=60" alt="" class="card-img-top">
-              <div class="card-body">
+            <img src="href="{{ get_url(path="manuelle_therapie_tmb.jpeg") }}" alt="Bild Manuelle Therapie" class="card-img-top">
+            <div class="card-body">
                 <h5 class="card-title">Manuelle Therapie</h5>
                 <p class="card-text">Erfahren Sie die wohltuende Wirkung gezielter Handgriffe, die Verspannungen lösen und die Beweglichkeit fördern.</p>
               </div>
