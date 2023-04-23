@@ -13,7 +13,7 @@ taxonomies = [
 ]
 
 [extra]
-author = "Jessi"
+author = "Jessi von JessICan"
 clean_blog_menu = [
     {url = "$BASE_URL", name = "Start"},
     #{url = "$BASE_URL/behandlung", name = "Behandlung"},
