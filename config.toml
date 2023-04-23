@@ -24,5 +24,5 @@ clean_blog_menu = [
 ]
 
 clean_blog_social = [
-    {url = "https://www.instagram.com/jess.i.can_natuerlich/", icon="fab fa-instagram"}
+    #{url = "https://www.instagram.com/jess.i.can_natuerlich/", icon="fab fa-instagram"}
 ]
