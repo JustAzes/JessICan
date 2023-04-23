@@ -48,16 +48,36 @@
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
           {% for item in config.extra.clean_blog_menu %}
-          <li class="nav-item">
-            <a class="nav-link"
-              href="{{ item.url | replace(from="$BASE_URL", to=config.base_url) }}">{{ item.name }}</a>
-          </li>
+            {% if item.submenu %}
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle"
+                  href="{{ item.url | replace(from="$BASE_URL", to=config.base_url) }}"
+                  id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
+                  aria-expanded="false">
+                  {{ item.name }}
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  {% for submenu_item in item.submenu %}
+                    <a class="dropdown-item"
+                      href="{{ submenu_item.url | replace(from="$BASE_URL", to=config.base_url) }}">
+                      {{ submenu_item.name }}
+                    </a>
+                  {% endfor %}
+                </div>
+              </li>
+            {% else %}
+              <li class="nav-item">
+                <a class="nav-link"
+                  href="{{ item.url | replace(from="$BASE_URL", to=config.base_url) }}">{{ item.name }}</a>
+              </li>
+            {% endif %}
           {% endfor %}
         </ul>
       </div>
     </div>
   </nav>
-  {% endblock navigation %}
+{% endblock navigation %}
+
 
   <!-- Page Header -->
   {% block header %}
