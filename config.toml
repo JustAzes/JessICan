@@ -16,8 +16,8 @@ taxonomies = [
 author = "Jessi"
 clean_blog_menu = [
     {url = "$BASE_URL", name = "Start"},
-    {url = "$BASE_URL/behandlung", name = "Behandlung"},
-    #{url = "$BASE_URL/behandlung", name = "Behandlung", submenu = [{url = "$BASE_URL/behandlung/vorgehen", name = "Vorgehen"},{url = "$BASE_URL/behandlung/behandlungsmethoden", name = "Behandlungsmethoden"}]},
+    #{url = "$BASE_URL/behandlung", name = "Behandlung"},
+    {url = "", name = "Behandlung", submenu = [{url = "$BASE_URL/behandlung/vorgehen", name = "Meine Vorgehensweise"},{url = "$BASE_URL/behandlung/behandlungsmethoden", name = "Behandlungsmethoden"},{url = "$BASE_URL/behandlung/preise", name = "Preisübersicht"}]},
     {url = "$BASE_URL/pages/blog", name = "Blog"},
     {url = "$BASE_URL/about", name = "Über mich"},   
     {url = "$BASE_URL/contact", name = "Kontakt"}
