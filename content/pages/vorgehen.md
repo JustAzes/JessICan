@@ -7,7 +7,7 @@ template = "behandlung.html"
 
 # Meine Vorgehensweise
 
-Als Tierheilpraktikerin ist es meine Leidenschaft, Tieren auf ganzheitliche Weise zu helfen und ihre Gesundheit zu fördern. In meiner Praxis biete ich eine Vielzahl von Behandlungsmethoden an, um das Wohlbefinden Ihrer geliebten Vierbeiner zu verbessern. 
+Als Tierheilpraktiker ist es meine Leidenschaft, Tieren auf ganzheitliche Weise zu helfen und ihre Gesundheit zu fördern. In meiner Praxis biete ich eine Vielzahl von Behandlungsmethoden an, um das Wohlbefinden Ihrer geliebten Vierbeiner zu verbessern. 
 
 
 ## 1. Anamnesebogen ausfüllen

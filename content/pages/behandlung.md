@@ -7,7 +7,7 @@ template = "behandlung.html"
 
 # Vorgehensweise
 
-Als Tierheilpraktikerin ist es meine Leidenschaft, Tieren auf ganzheitliche Weise zu helfen und ihre Gesundheit zu fördern. In meiner Praxis biete ich eine Vielzahl von Behandlungsmethoden an, um das Wohlbefinden Ihrer geliebten Vierbeiner zu verbessern. 
+Als Tierheilpraktiker ist es meine Leidenschaft, Tieren auf ganzheitliche Weise zu helfen und ihre Gesundheit zu fördern. In meiner Praxis biete ich eine Vielzahl von Behandlungsmethoden an, um das Wohlbefinden Ihrer geliebten Vierbeiner zu verbessern. 
 
 
 ## 1. Anamnesebogen ausfüllen
@@ -42,4 +42,4 @@ Eine erfolgreiche Behandlung setzt eine angemessene Nachsorge voraus. Um die lan
 
 # Terminvereinbarung
 
-Sie möchten einen Termin vereinbaren oder haben Fragen zu meiner Arbeit als Tierheilpraktikerin? Dann kontaktieren Sie mich gerne telefonisch oder per Kontaktformular unter dem Tab [Kontakt](https://www.tierheilpraxis-jessican.de/contact). Ich freue mich darauf, Ihnen und Ihrem Tier zu helfen!
+Sie möchten einen Termin vereinbaren oder haben Fragen zu meiner Arbeit als Tierheilpraktiker? Dann kontaktieren Sie mich gerne telefonisch oder per Kontaktformular unter dem Tab [Kontakt](https://www.tierheilpraxis-jessican.de/contact). Ich freue mich darauf, Ihnen und Ihrem Tier zu helfen!

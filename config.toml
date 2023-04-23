@@ -4,7 +4,7 @@ generate_rss = true
 compile_sass = true
 
 title = "Tierheilpraxis JessICan - natürlich gesund!"
-description = "Entdecken Sie bei Tierheilpraktikerin JessICan spezialisierte Therapieverfahren für Hunde und Pferde, einschließlich Akupunktur, Homöopathie, Phytotherapie, Manuelle Therapie, Arbeit mit ätherischen Ölen und Ernährungsberatung. Fördern Sie das Wohlbefinden Ihrer geliebten Vierbeiner und stärken Sie Ihre harmonische Beziehung."
+description = "Entdecken Sie bei Tierheilpraktiker JessICan spezialisierte Therapieverfahren für Hunde und Pferde, einschließlich Akupunktur, Homöopathie, Phytotherapie, Manuelle Therapie, Arbeit mit ätherischen Ölen und Ernährungsberatung. Fördern Sie das Wohlbefinden Ihrer geliebten Vierbeiner und stärken Sie Ihre harmonische Beziehung."
 highlight_code = false
 
 taxonomies = [
