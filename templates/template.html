@@ -7,13 +7,12 @@
   {% block analytics %}
   <script data-goatcounter="https://jessican.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
   {% endblock analytics %}
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="Tierheilpraktiker JessICan: Akupunktur, Homöopathie, Phytotherapie, Manuelle Therapie, ätherische Öle & Ernährungsberatung für Hunde & Pferde">
   <meta name="author" content="Jessi von JessICan">
   <meta charset="utf-8">
   <meta name="handheldfriendly" content="true">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!--<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> -->
   <meta name="handheldfriendly" content="true">
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="google-site-verification" content="YX7kAks4UBGTJOeaJJAGj9WQ2CWRTOo3pQWF79swXco" />
@@ -22,13 +21,14 @@
 
   <title>{% block title %}{{ config.title }}{% endblock title %}</title>
 
-  <!-- Bootstrap core CSS -->
-  <link rel="stylesheet" href="{{ get_url(path="css/bootstrap.min.css") }}">
-  <!-- Custom fonts for this template -->
+  <!-- Bootstrap core CSS 
   <link href=" {{ get_url(path="css/all.min.css") }}" rel=" stylesheet" type="text/css">
-  
-
+  <link rel="stylesheet" href="{{ get_url(path="css/bootstrap.min.css") }}">
   <link rel="stylesheet" href="{{ get_url(path="css/local-fonts.css") }}" type="text/css">
+  -->
+  <link rel="stylesheet" href="{{ get_url(path="css/combined_styles.css") }}" type="text/css">
+
+
   <!-- Custom styles for this template -->
   <link rel="stylesheet" href="{{ get_url(path="clean-blog.css", trailing_slash=false) }}">
 
