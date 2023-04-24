@@ -11,7 +11,7 @@ Pferde, die sich täglich frei und ungehindert bewegen können, legen große Str
 
 <!-- more -->
 
-<img src="https://www.tierheilpraxis-jessican.de/img/blog/perfe_gesunderhaltend_bewegen_1.png" alt="Bild von Pferd in Bewegung" style="max-width: 100%"/>
+<img src="https://www.tierheilpraxis-jessican.de/img/blog/pferde_gesunderhaltend_bewegen_1.png" alt="Bild von Pferd in Bewegung" style="max-width: 100%"/>
 
 Doch was bedeutet das genau?
 
@@ -36,7 +36,7 @@ Faszien sind eine dünne Haut, welche die  <span style="color:red">dorsalen</spa
 Durch beispielsweise einseitige oder überstrapazierte Bewegungen können Verfilzungen an einer oder mehreren Stellen entstehen. Da die Muskulatur ein Zusammenspiel vieler Komponenten ist, können gestörte Faszien den gesamten Bewegungsablauf des Pferdes beeinträchtigen, auch an Stellen, an denen die Faszien nicht verfilzt sind.
 
 
-<img src="https://www.tierheilpraxis-jessican.de/img/blog/perfe_gesunderhaltend_bewegen_2.png" alt="Bild von Pferd in Bewegung mit eingezeichneten dorsalen und ventralen Muskelketten" style="max-width: 100%"/>
+<img src="https://www.tierheilpraxis-jessican.de/img/blog/pferde_gesunderhaltend_bewegen_2.png" alt="Bild von Pferd in Bewegung mit eingezeichneten dorsalen und ventralen Muskelketten" style="max-width: 100%"/>
 
 # Equikinetic® nach Michael Geitner
 Um die Faszien zu entfilzen, die Sehnen zu stärken und den Muskelaufbau langsam, aber effizient zu gestalten, eignet sich die Equikinetic® nach Michael Geitner. Bei dieser Methode läuft das Pferd in einer kontinuierlichen Innenstellung und Biegung sowie in einem gleichmäßigen Takt. Die Rahmenbedingungen dafür sind eine 8 Meter große Quadratvolte und das geführte Longieren. Durch die Außen- und Innengassen gewinnen das Pferd und der Reiter an Sicherheit und sorgen dafür, dass das Pferd in der Spur bleibt.
@@ -45,10 +45,10 @@ Equikinetic ist ein Intervalltraining, das das Pferd gleichmäßig und gleichsei
 
 Dieser Bewegungsablauf unterstützt dabei, das Pferd gerade zu richten. Jedes Pferd hat eine bevorzugte Seite, die sogenannte hohle Seite. Um herauszufinden, welche Seite das bei Ihrem Pferd ist, lassen Sie es einfach am langen Strick geradeaus laufen. Der Kopf schaut meist leicht zu einer Seite – das ist die Lieblingsseite Ihres Pferdes. Erst wenn diese natürliche Schiefe überwunden ist, kann das Pferd gerade gerichtet laufen.
 
-<img src="https://www.tierheilpraxis-jessican.de/img/blog/perfe_gesunderhaltend_bewegen_3.png" alt="Bild von Pferd mit Zubehör für die Equikinetic® " style="max-width: 100%"/>Ich selbst praktiziere Equikinetic® seit rund vier Jahren mit meinem Pferd. Sobald ich es in die Gassen führe, hat es seine volle Aufmerksamkeit auf mich gerichtet. Umgekehrt verlässt es sich auch darauf, dass ich die Pausensequenzen einhalte und das Training mit der letzten Arbeitsrunde tatsächlich beende.
+<img src="https://www.tierheilpraxis-jessican.de/img/blog/pferde_gesunderhaltend_bewegen_3.png" alt="Bild von Pferd mit Zubehör für die Equikinetic® " style="max-width: 100%"/>Ich selbst praktiziere Equikinetic® seit rund vier Jahren mit meinem Pferd. Sobald ich es in die Gassen führe, hat es seine volle Aufmerksamkeit auf mich gerichtet. Umgekehrt verlässt es sich auch darauf, dass ich die Pausensequenzen einhalte und das Training mit der letzten Arbeitsrunde tatsächlich beende.
 
 Equikinetic ist nicht nur ein hervorragendes Muskeltraining, sondern dient auch dem Aufbau und Erhalt der Beziehung zwischen Pferd und Reiter. Stellen Sie sich beim Führen Ihres Pferdes folgende Fragen: Wer bewegt wen? Wer führt wen? Vertraut mir das Pferd – auch in heiklen Situationen?
 
-Im vergangenen Dezember gab ich einen sehr schönen Workshop zum Thema Muskeln, Sehnen und Faszien. Dabei haben wir gemeinsam einige Grundlagen des geführten Longierens geübt. Vielen Dank nochmals für die Gelegenheit!<img src="https://www.tierheilpraxis-jessican.de/img/blog/perfe_gesunderhaltend_bewegen_4.png" alt="Bild von Pferd in Bewegung mit eingezeichneten dorsalen und ventralen Muskelketten" style="max-width: 100%"/>
+Im vergangenen Dezember gab ich einen sehr schönen Workshop zum Thema Muskeln, Sehnen und Faszien. Dabei haben wir gemeinsam einige Grundlagen des geführten Longierens geübt. Vielen Dank nochmals für die Gelegenheit!<img src="https://www.tierheilpraxis-jessican.de/img/blog/pferde_gesunderhaltend_bewegen_4.png" alt="Bild von Pferd in Bewegung mit eingezeichneten dorsalen und ventralen Muskelketten" style="max-width: 100%"/>
 
 Wenn Sie an der Durchführung der Equikinetic interessiert sind oder beim Lesen weitere Fragen aufgetaucht sind, können Sie mir gerne schreiben. Zur Vertiefung empfehle ich das Buch "Equikinetic Pferde effektiv longieren" von Michael Geitner und Alexandra Schmid.
