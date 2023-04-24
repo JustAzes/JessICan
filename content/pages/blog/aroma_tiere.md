@@ -89,7 +89,7 @@ Je nach Wirkungswunsch und Einsatzbereich sollten maximal 6 ätherische Öle fü
 
 **Beim Pferd**: Es werden die geöffneten Fläschchen dem Tier hingehalten. Je nach Reaktion des Tieres erfolgt die Auswahl.
 
-<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/khzLoZJXa-A?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<a href="https://www.youtube.com/watch?v=khzLoZJXa-A">Klicken Sie hier</a>, um ein Video des Auswahlverfahrens eines Hundes anzusehen.
 
 ## Anwendung
 
