@@ -10,6 +10,7 @@ Weihrauch ist ein Harz, das aus bestimmten Bäumen der Gattung Boswellia gewonne
 <!-- more -->
 
 <img src="https://www.tierheilpraxis-jessican.de/img/blog/weihrauch_1.png" alt="Bild von Weihrauch" style="max-width: 100%"/>
+
 Das Harz wird aus den Stämmen und Zweigen der Bäume gewonnen, indem man kleine Schnitte in die Rinde macht. Es tritt dann aus den Schnitten aus und wird von Hand gesammelt, wenn es getrocknet ist. Das Harz kann dann in seiner natürlichen Form oder nach der Verarbeitung in Ölform verwendet werden.
 
 # Verwendung von Weihrauch in der traditionellen Medizin und Religion
