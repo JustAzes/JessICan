@@ -13,13 +13,14 @@ Als Tierheilpraktiker ist es meine Leidenschaft, Tieren auf ganzheitliche Weise 
 ## 1. Anamnesebogen ausfüllen
 Bevor wir uns persönlich treffen, bitte ich Sie den Anamnesebogen auszufüllen, [welcher hier zu finden ist: Link.](https://www.tierheilpraxis-jessican.de/dokumente)
 
-Dies gibt mir die Möglichkeit, Ihre Tier und dessen Gesundheitsgeschichte kennenzulernen und mich auf unser Gespräch vorzubereiten. So können Sie mir in Ruhe alles berichten, ohne etwas wichtiges zu vergessen. Manchmal sind die kleinen Dinge von großer Bedeutung.
+Dies gibt mir die Möglichkeit, Ihr Tier und dessen Gesundheitsgeschichte kennenzulernen und mich auf unser Treffen vorzubereiten. Sie können mir in Ruhe alles aufschreiben, ohne etwas Wichtiges zu vergessen. Manchmal sind die kleinen Dinge von großer Bedeutung.
+
+Tipp: Blutuntersuchungen, Röntgenbilder oder andere tierärztliche Befunde können mir zusätzliche wertvolle Informationen liefern!
 
 ## 2. Untersuchung vor Ort
 
 Gemeinsam vereinbaren wir einen Termin, bei dem ich Sie und Ihr Tier in seiner gewohnten Umgebung kennenlernen kann. Während dieses Besuchs werde ich mir Ihr Tier genau ansehen und gegebenenfalls Rückfragen zu Ihrem Tier und Ihnen stellen. Zudem werde ich wichtige Aspekte vor Ort begutachten, wie zum Beispiel den Auslauf, das Futter und ähnliches. All diese Informationen helfen mir dabei, ein umfassendes Bild der Situation zu erhalten.
 
-Tipp: Blutuntersuchungen, Röntgenbilder oder andere tierärztliche Befunde können mir zusätzliche wertvolle Informationen liefern!
 
 ## 3. Behandlung
 

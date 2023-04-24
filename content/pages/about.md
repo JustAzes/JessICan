@@ -4,7 +4,7 @@ path = "about"
 template = "about.html"
 +++
 
-Mein Name ist Jessi und mein Ziel ist es, Menschen und Tieren dabei zu helfen, gemeinsam gesundheitliche Herausforderungen zu bewältigen.
+Mein Name ist Jessica und mein Ziel ist es, Menschen und Tieren dabei zu helfen, gemeinsam gesundheitliche Herausforderungen zu bewältigen.
 
 **Mensch und Tier?** Gemeinsamkeit ist meine Philosophie!
 
@@ -35,4 +35,4 @@ Ich möchte auch andere dabei unterstützen, dass Mensch und Tier in Einklang mi
 
 Fortschritte und Erfolge können Sie gern in meinem [Blog](../pages/blog) verfolgen!
 
-Eure Jessi
+Eure Jessica 

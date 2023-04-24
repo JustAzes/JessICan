@@ -11,9 +11,10 @@ template = "behandlung.html"
 
 Die Akupunktur und Laserakupunktur sind traditionelle Heilmethoden aus der TCM, die das körpereigene Energiesystem stimulieren und das Wohlbefinden fördern. Durch gezieltes Setzen von Nadeln oder Laserlicht an bestimmten Akupunkturpunkten werden Energieblockaden gelöst und die Selbstheilungskräfte aktiviert.
 
-## Homöopathie durch Repertorium
+## Homöopathie
 
 Die Homöopathie basiert auf dem Prinzip "Ähnliches heilt Ähnliches". Durch die sorgfältige Auswahl von individuell passenden homöopathischen Mitteln aus dem Repertorium wird der Organismus angeregt, sich selbst zu heilen und das Gleichgewicht wiederherzustellen.
+Die Auswahl des passenden Mittels ist abgestimmt auf die vorliegende Symptomatik Ihres Tieres. 
 
 ## Phytotherapie
 
