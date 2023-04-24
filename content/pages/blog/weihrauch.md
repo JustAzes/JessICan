@@ -72,9 +72,8 @@ Es ist jedoch wichtig, die richtige Dosierung und Anwendungsform für die jeweil
 Zusammenfassend ist Weihrauch eine vielversprechende Alternative in der Naturmedizin und Tierheilkunde, insbesondere bei der Behandlung von Schmerzen und Entzündungen. Es enthält viele nützliche Inhaltsstoffe, die entzündungshemmend und schmerzlindernd wirken können. Es gibt viele Möglichkeiten, Weihrauch zu verwenden, einschließlich oraler Einnahme, topischer Anwendung, Inhalation und Aromatherapie. Insgesamt ist Weihrauch eine vielversprechende Ergänzung in der Naturmedizin und Tierheilkunde, aber es ist wichtig, sicher zu verwenden und alle möglichen Risiken zu berücksichtigen.
 
 # Kurzer Erfahrungsbericht
-Atemwegserkrankungen liegen oft entzündliche Prozesse in den Bronchien zugrunde. Diese sorgen für eine Verengung der Bronchien und dann zur typischen Atemnot  
+Atemwegserkrankungen liegen oft entzündliche Prozesse in den Bronchien zugrunde. Diese sorgen für eine Verengung der Bronchien und dann zur typischen Atemnot.
 
 Unter dem Einsatz von Weihrauch konnte mein atemwegserkranktes Pferd, nach einem akuten Schub, wieder freier Atmen! Er zeigt nun seitdem keinerlei Atemnot mehr - lediglich ein Huster beim Antraben ist zum jetzigen Zeitpunkt bestehen geblieben. 
-
 
 Mir ist bewusst, dass dies nicht für jedes erkrante Tier eine Universallösung ist. Dennoch war es für uns ein absolut richtiger Therapieansatz! 
