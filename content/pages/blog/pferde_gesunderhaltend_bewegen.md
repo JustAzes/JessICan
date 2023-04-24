@@ -1,6 +1,6 @@
 +++
 title = "Pferde gesunderhaltend Bewegen"
-date = 2023-02-10
+date = 2023-04-01
 [taxonomies]
 categories = ["Pferde", "Equikinetic®"]
 tags = []
@@ -49,6 +49,6 @@ Dieser Bewegungsablauf unterstützt dabei, das Pferd gerade zu richten. Jedes Pf
 
 Equikinetic ist nicht nur ein hervorragendes Muskeltraining, sondern dient auch dem Aufbau und Erhalt der Beziehung zwischen Pferd und Reiter. Stellen Sie sich beim Führen Ihres Pferdes folgende Fragen: Wer bewegt wen? Wer führt wen? Vertraut mir das Pferd – auch in heiklen Situationen?
 
-Letzte Woche gab ich einen sehr schönen Workshop zum Thema Muskeln, Sehnen und Faszien. Dabei haben wir gemeinsam einige Grundlagen des geführten Longierens geübt. Vielen Dank nochmals für die Gelegenheit!<img src="https://www.tierheilpraxis-jessican.de/img/blog/perfe_gesunderhaltend_bewegen_4.png" alt="Bild von Pferd in Bewegung mit eingezeichneten dorsalen und ventralen Muskelketten" style="max-width: 100%"/>
+Im vergangenen Dezember gab ich einen sehr schönen Workshop zum Thema Muskeln, Sehnen und Faszien. Dabei haben wir gemeinsam einige Grundlagen des geführten Longierens geübt. Vielen Dank nochmals für die Gelegenheit!<img src="https://www.tierheilpraxis-jessican.de/img/blog/perfe_gesunderhaltend_bewegen_4.png" alt="Bild von Pferd in Bewegung mit eingezeichneten dorsalen und ventralen Muskelketten" style="max-width: 100%"/>
 
 Wenn Sie an der Durchführung der Equikinetic interessiert sind oder beim Lesen weitere Fragen aufgetaucht sind, können Sie mir gerne schreiben. Zur Vertiefung empfehle ich das Buch "Equikinetic Pferde effektiv longieren" von Michael Geitner und Alexandra Schmid.
