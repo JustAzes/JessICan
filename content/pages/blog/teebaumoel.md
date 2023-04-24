@@ -10,7 +10,6 @@ Teebaumöl ist ein ätherisches Öl, das aus den Blättern des Teebaums (Melaleu
 <!-- more -->
 
 <img src="https://www.tierheilpraxis-jessican.de/img/blog/teebaumoel_1.png" alt="Bild von Teebaumöl" style="max-width: 100%"/>
-![Teebaumöl](img/blog/teebaumoel_1.png")
 
 Das Teebaumöl kann auf verschiedene Arten angewendet werden, um Deinem Hund oder Pferd (Wichtig: nicht zur Anwendung bei Katzen geeignet!!!) zu helfen. Hier sind einige Beispiele:
 
@@ -21,7 +20,7 @@ Das Teebaumöl kann auf verschiedene Arten angewendet werden, um Deinem Hund ode
 
 In der Naturmedizin ist Teebaumöl ein vielseitiger und wertvoller Helfer für Deinen Hund oder Dein Pferd. Probiere es aus und beobachte die positive Wirkung!
 
-## Wirkstoffe und ihre Wirkungsweise
+# Wirkstoffe und ihre Wirkungsweise
 <img src="https://www.tierheilpraxis-jessican.de/img/blog/teebaumoel_2.png" alt="Bild von Teebaumöl" style="max-width: 100%"/>
 
 Teebaumöl enthält eine Vielzahl von Wirkstoffen, die für seine heilenden Eigenschaften verantwortlich sind. Hier sind einige der wichtigsten Inhaltsstoffe:
@@ -38,3 +37,4 @@ Die Wirkstoffe im Teebaum öl arbeiten zusammen, um eine Vielzahl von Haut- und 
 Es ist wichtig zu beachten, dass die Wirksamkeit des Teebaumöls von der Qualität und Reinheit des Öls abhängt. Es ist ratsam, ein hochwertiges, 100% natürliches Teebaumöl auszusuchen, um die besten Ergebnisse zu erzielen.
 
 Wie du am besten vorgehst, um zu schauen ob Teebaumöl bei DEINEM Tier das richtige Öl der Wahl ist, liest du auf meinem anderen Blog-Beitrag:
+<a href="https://tierheilpraxis-jessican.de/pages/blog/aromatherapie_tiere/" class="btn btn-success">Aromatherapie bei Tieren</a>
