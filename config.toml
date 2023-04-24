@@ -2,10 +2,11 @@
 base_url = "https://tierheilpraxis-jessican.de/"
 generate_rss = true
 compile_sass = true
+default_language = "de"
+minify_html = true
 
 title = "Tierheilpraxis JessICan - natürlich gesund!"
 description = "Tierheilpraktiker JessICan bietet Hunden und Pferden Therapieverfahren wie Akupunktur, Homöopathie, Phytotherapie, Manuelle Therapie, ätherische Öle und Ernährungsberatung."
-highlight_code = false
 
 taxonomies = [
     {name = "categories", rss = true, paginate_by=5},

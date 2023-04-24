@@ -40,6 +40,29 @@
   <link rel="mask-icon" href="{{ get_url(path="favicons/safari-pinned-tab.svg") }}" color="#5bbad5">
   <meta name="msapplication-TileColor" content="#da532c">
   <meta name="theme-color" content="#ffffff">
+
+  <!--Schema für das Business-->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ProfessionalService",
+      "name": "Tierheilpraxis JessICan -natürlich gesund!",
+      "image": "{{ get_url(path="favicons/android-chrome-192x192.png") }}",
+      "url": "{{ get_url(path="/") }}",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Wachauer Str. 6",
+        "addressLocality": "Lichtenberg",
+        "addressRegion": "SN",
+        "postalCode": "01896",
+        "addressCountry": "DE"
+      },
+      "email": "tierheilpraxis-jessican@gmx.de",
+      "telephone": "+49 173 789 0040",
+      "areaServed": "Lichtenberg und Umgebung",
+      "serviceType": "Mobile Tierheilpraxis für Hunde und Pferde"
+    }
+    </script>
 </head>
 
 <body>
