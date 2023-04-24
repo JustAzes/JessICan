@@ -35,8 +35,8 @@ Faszien sind eine dünne Haut, welche die  <span style="color:red">dorsalen</spa
 
 Durch beispielsweise einseitige oder überstrapazierte Bewegungen können Verfilzungen an einer oder mehreren Stellen entstehen. Da die Muskulatur ein Zusammenspiel vieler Komponenten ist, können gestörte Faszien den gesamten Bewegungsablauf des Pferdes beeinträchtigen, auch an Stellen, an denen die Faszien nicht verfilzt sind.
 
-
 <img src="https://www.tierheilpraxis-jessican.de/img/blog/pferde_gesunderhaltend_bewegen_2.jpg" alt="Bild von Pferd in Bewegung mit eingezeichneten dorsalen und ventralen Muskelketten" style="max-width: 100%"/>
+
 
 # Equikinetic® nach Michael Geitner
 Um die Faszien zu entfilzen, die Sehnen zu stärken und den Muskelaufbau langsam, aber effizient zu gestalten, eignet sich die Equikinetic® nach Michael Geitner. Bei dieser Methode läuft das Pferd in einer kontinuierlichen Innenstellung und Biegung sowie in einem gleichmäßigen Takt. Die Rahmenbedingungen dafür sind eine 8 Meter große Quadratvolte und das geführte Longieren. Durch die Außen- und Innengassen gewinnen das Pferd und der Reiter an Sicherheit und sorgen dafür, dass das Pferd in der Spur bleibt.
