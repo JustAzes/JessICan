@@ -6,8 +6,7 @@ default_language = "de"
 minify_html = true
 
 title = "Tierheilpraxis JessICan - natürlich gesund!"
-description = "Tierheilpraktiker JessICan bietet Hunden und Pferden Therapieverfahren wie Akupunktur, Homöopathie, Phytotherapie, Manuelle Therapie, ätherische Öle und Ernährungsberatung."
-
+description = "Tierheilpraktiker JessICan: Akupunktur, Homöopathie, Phytotherapie, Manuelle Therapie, ätherische Öle & Ernährungsberatung für Hunde & Pferde"
 taxonomies = [
     {name = "categories", rss = true, paginate_by=5},
     {name = "tags", rss = true, paginate_by=5},
