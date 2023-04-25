@@ -29,7 +29,7 @@ An dieser Stelle ist anzumerken, dass eine Arthritis über mehrere Tage immer vo
 
 - erste 48h: ruhig stellen und kühlen
 - nach den 48h: Gelenk wärmen (um Gelenksteifheit zu vermeiden)
-- Kräuter: kalte/warme Umschläge aus Beinwell oder Arnika
+- Kräuter: kalte / warme Umschläge aus Beinwell oder Arnika
 - ätherische Öle: Zeder, Ysop, Wacholderbeere
 
 <h2>Arthrose - Was es ist und wodurch es passiert</h2>

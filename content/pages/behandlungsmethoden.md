@@ -7,7 +7,7 @@ template = "behandlung.html"
 
 # Meine Behandlungsmethoden
 
-## Akupunktur/Laserakupunktur
+## Akupunktur / Laserakupunktur
 
 Die Akupunktur und Laserakupunktur sind traditionelle Heilmethoden aus der TCM, die das körpereigene Energiesystem stimulieren und das Wohlbefinden fördern. Durch gezieltes Setzen von Nadeln oder Laserlicht an bestimmten Akupunkturpunkten werden Energieblockaden gelöst und die Selbstheilungskräfte aktiviert.
 
