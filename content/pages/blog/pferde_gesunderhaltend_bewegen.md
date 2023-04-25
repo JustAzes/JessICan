@@ -17,19 +17,19 @@ Doch was bedeutet das genau?
 
 Vereinfacht ausgedrückt sind die Muskeln über Sehnen mit den Knochen verbunden. Bei Anstrengung übertragen die Sehnen die Kraft der Muskeln auf die Knochen, wodurch das Gelenk und das Pferd sich bewegen können. Diese Bewegungsmuster und unsere Organe sind von Faszien umhüllt. Das bedeutet, dass eine Störung in einem beliebigen Bereich den gesamten Bewegungsablauf des Pferdes beeinträchtigen kann. Daher sind die Ursachen einiger Lahmheiten oft schwer zu ermitteln.
 
-# Muskeln
+## Muskeln
 
 Die Skelettmuskeln sind die Muskeln, die wir bei unserem Pferd beeinflussen können, und sie ermöglichen die Bewegung des Pferdes. Muskeln verbrauchen viel Energie, und Pferde bevorzugen es, Energie zu sparen - sie aktivieren alle Muskelketten meist nur im Fluchtmodus. Daher liegt es an uns, das Pferd zu motivieren, die Muskeln effizienter und länger einzusetzen, um Muskelwachstum zu fördern. Nur entspannte Muskeln können ordnungsgemäß arbeiten, da sie dann ausreichend durchblutet sind und der Stoffwechsel der Muskeln vollständig funktioniert. Überlastete Muskeln durch zu intensives oder einseitiges Training führen zur Überforderung und zum gegenteiligen Effekt: der Muskel regeneriert sich nicht und baut ab, statt zu wachsen. Deshalb ist es wichtig, nach jedem Muskeltraining eine Pause einzulegen, in der die Reize zum Muskelwachstum verarbeitet werden und das Wachstum beginnt. Solch ein Reiz entsteht vor allem dann, wenn der Muskel über seine eigentliche Leistung beansprucht wurde. Bestimmte Stoffwechselprozesse ermöglichen die Regeneration und das Wachstum des Muskels.
 
 Die Regenerationspause sollte mindestens 48 Stunden betragen! Sehr intensive Trainingseinheiten oder Turniertage können längere Pausen erfordern.
 
-# Sehnen
+## Sehnen
 
 Sehnen sind direkt mit dem Muskel verbunden und übertragen die Kraft des Muskels auf den Knochen. Um reibungslos zu funktionieren, müssen sie gestärkt und elastisch sein. Sie müssen stark genug sein, um die Kräfte der Muskelkontraktionen aufzunehmen und gleichzeitig elastisch genug, um die Bewegung zu ermöglichen.
 
 Allerdings wachsen Sehnen langsamer als Muskeln. Bei zu schnellem Muskelwachstum ziehen die Muskeln an den Sehnen und Bändern, was zu Sehnenschäden oder sogar Sehnenrissen führen kann. Deshalb ist es wichtig, den Muskelaufbau langsam, aber effizient voranzutreiben.
 
-# Faszien
+## Faszien
 
 Faszien sind eine dünne Haut, welche die  <span style="color:red">dorsalen</span> und  <span style="color:blue">ventralen</span> Muskelketten miteinander verbindet (s. Abb.). Um eine reibungslose Bewegung zu ermöglichen, müssen sie elastisch, dehnungsfähig und nicht verfilzt sein.
 
@@ -38,7 +38,7 @@ Durch beispielsweise einseitige oder überstrapazierte Bewegungen können Verfil
 <img src="https://www.tierheilpraxis-jessican.de/img/blog/pferde_gesunderhaltend_bewegen_2.jpg" alt="Bild von Pferd in Bewegung mit eingezeichneten dorsalen und ventralen Muskelketten" style="max-width: 100%"/>
 
 
-# Equikinetic® nach Michael Geitner
+## Equikinetic® nach Michael Geitner
 Um die Faszien zu entfilzen, die Sehnen zu stärken und den Muskelaufbau langsam, aber effizient zu gestalten, eignet sich die Equikinetic® nach Michael Geitner. Bei dieser Methode läuft das Pferd in einer kontinuierlichen Innenstellung und Biegung sowie in einem gleichmäßigen Takt. Die Rahmenbedingungen dafür sind eine 8 Meter große Quadratvolte und das geführte Longieren. Durch die Außen- und Innengassen gewinnen das Pferd und der Reiter an Sicherheit und sorgen dafür, dass das Pferd in der Spur bleibt.
 
 Equikinetic ist ein Intervalltraining, das das Pferd gleichmäßig und gleichseitig trainiert. Dies geschieht durch eine korrekte Stellung und Biegung sowie das Achten auf einen gleichmäßigen Takt. Die 8 Meter Volte zwingt das Pferd dazu, die Gelenke des inneren Beines stärker zu beugen und Last aufzunehmen. Bei einer größeren Volte könnte das Pferd die Hüfte eher abkippen oder die Gelenke weniger beugen, was es ihm ermöglichen würde, sich der Hilfe leichter zu entziehen.

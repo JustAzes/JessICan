@@ -23,7 +23,7 @@ Also, wenn du dich fit und gesund fühlen willst, gib Echinacea eine Chance und 
 
 Wichtig jedoch zu beachten wäre, dass Echinacea nicht dauerhaft eingenommen werden sollte! Eine Kur von wenigen Tagen reicht meistens aus. Am besten beim Anzeichen der ersten Krankheitssymptome.
 
-# Wirkstoffe und ihre Wirkungsweise
+## Wirkstoffe und ihre Wirkungsweise
 
 <img src="https://www.tierheilpraxis-jessican.de/img/blog/echinacea_2.png" alt="Bild von Echinacea" style="max-width: 100%"/>
 

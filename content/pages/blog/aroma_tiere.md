@@ -26,7 +26,7 @@ Aromatherapie ist ein Teil der Pflanzenheilkunde und nutzt die natürlichen Komp
 
 Geschichtlich betrachtet ist die Wirkung der ätherischen Öle schon sehr lange bekannt. In Ritualen oder sogar bei heilenden Zwecken wurden sie unter anderen von den Ägyptern, Griechen, Chinesen und Indern eingesetzt. Meist waren unsere Tiere dabei der Vorreiter - durch Beobachtungen der Essgewohnheiten der Tierwelt fand die Menschheit heraus, welche Pflanzen Heilwirkungen haben. Umso verständlicher ist es natürlich, sie auch heute noch bei Tieren anwenden zu können/ dürfen und sollten.
 
-# Der wissenschaftliche Aspekt
+## Der wissenschaftliche Aspekt
 Ätherische Öle sind in jeder Pflanze enthalten. Sie helfen der Pflanze bei ihrem natürlichen Überleben. Dabei erfüllen sie zum Beispiel den Zweck Insekten anzulocken oder Feinde abzuwehren.
 
 Ein ätherisches Öl enthält verschiedene Moleküle aus mehreren funktionellen Gruppen. Jede funktionelle Gruppe hat spezifische Eigenschaften. Deshalb hat ein ätherisches Öl mehrere Wirkungen und auch andere ätherische Öle haben genau diese Wirkung auch. Hier Beispiele der vorkommenden funktionelle Gruppen:
@@ -60,18 +60,18 @@ Ein ätherisches Öl enthält verschiedene Moleküle aus mehreren funktionellen 
   - beruhigende, entspannende, lindernde und ausgleichende Wirkung, Reduziert Hautunreinheiten
   - z.B. Römische Kamille, Lavendel, Jasmine, Muskatellersalbei
 
-# Wirkung des Duftes
+## Wirkung des Duftes
 Der Geruchsbereich eines jeden Lebewesens sitzt im limbischen System in unserem Gehirn. Dieses System ist für unsere Instinkte, Stimmungen, Emotionen und sogar Erinnerungen zuständig. Riechen unsere Tiere nun einen Duft, so werden Neurotransmitter im limbischen System freigesetzt.
 
 Neurotransmitter sind chemische Botenstoffe, welche für die Informationsübertragung der Nervenzellen im Gehirn und dem gesamten Körper zuständig sind. Sie haben somit einen Einfluss auf die Muskeln, die Blutgefäße und sogar die Hormonbildung. Doch nicht nur auf körperlicher Ebene wirken sie, sondern sie beeinflussen auch die Schmerzverarbeitung, den Erregungszustand, den Schlaf und die emotionalen Bereiche.
 
 Das heißt, bildlich gesprochen, können ätherische Öle dafür sorgen, dass unser Tier weniger Schmerzen hat, beruhigter ist und/oder einen besseren Blutfluss hat.  
 
-# Wirkung äußerliche Anwendung
+## Wirkung äußerliche Anwendung
 Ätherische Öle sind flüchtig - das bedeutet, die aromatischen Verbindungen können sich sehr schnell durch die Luft bewegen. Beim Atmen werden diese Moleküle von der Nasenschleimhaut aufgenommen. Von dort gelangen sie sehr schnell ins Blut und ins Gehirn - welches mit dem Nervensystem verbunden ist und es so beeinflussen kann (s.o.). Bei der äußerlichen Anwendung über die Haut dringen die Moleküle so in den Blutkreislauf ein. Je nach Art der Anwendung wirken sie an der Stelle bereits schon lokal.
 
-# Anwendung beim Tier
-## Vorab
+## Anwendung beim Tier
+### Vorab
 
 Erst einmal ist zu Erwähnen, dass ätherische Öle bei der äußeren Anwendung am besten immer **verdünnt** werden sollten. Gute Trägeröle sind zum Beispiel:
 
@@ -81,7 +81,7 @@ Erst einmal ist zu Erwähnen, dass ätherische Öle bei der äußeren Anwendung 
 
 Es gibt auch einige ätherische Öle, die unverdünnt benutzt werden können - doch davon ist bei einem unzureichenden Kenntnisstand abzuraten. 
 
-## Das Auswahlverfahren
+### Das Auswahlverfahren
 
 Je nach Wirkungswunsch und Einsatzbereich sollten maximal 6 ätherische Öle für das Tier ausgewählt werden. Nicht mehr, dass überfordert das Tier schnell!
 
@@ -91,7 +91,7 @@ Je nach Wirkungswunsch und Einsatzbereich sollten maximal 6 ätherische Öle fü
 
 <a href="https://www.youtube.com/watch?v=khzLoZJXa-A">Klicken Sie hier</a>, um ein Video des Auswahlverfahrens eines Hundes anzusehen.
 
-## Anwendung
+### Anwendung
 
 Ätherische Öle können nun verschieden bei unseren Tieren zur Anwendung kommen. 
 
@@ -99,11 +99,11 @@ Diffusion: Das ätherische Öl (2-3 Tropfen) wird in einem Diffuser mit Wasser i
 
 äußerliche Anwendung: Erst erfolgt die Verdünnung des ausgewählten ätherischen Öls mit einem Trägeröl. Je nach Anwendungsgrund und Tier erfolgt hier eine Verdünnung zwischen 1-5 Tropfen. Danach gibt man das Öl auf seine Handflächen und bietet es dem Tier erneut an. Dabei kann das Tier gestreichelt werden oder aber das Tier will das Öl direkt aus der Hand schlecken. 
 
-## Dauer
+### Dauer
 
 Ein ätherisches Öl sollte irgendwann an Interesse für das Tier verlieren. Nämlich genau dann, wenn die Wirkweise des Öls erschöpft ist. Man sollte ein ätherisches Öl also nur solange anbieten, wie es das Tier dieses noch benötigt. Dafür können wir unser Tier täglich 1-2x entscheiden lassen, ob noch ein Einsatz nötig ist. 
 
-# Hausmittel
+## Hausmittel
 
 Der Einsatz kann vielfältig sein. Nicht nur bei emotionalen Unausgeglichenheiten, sondern auch bei körperlichen Beschwerden. Dabei kann man Salben, Gele, Shampoos oder Sprays erstellen. Hier einige Situationen, wo ätherische Öle im Alltag mit unseren Vierbeinern Abhilfe schaffen können:
 
