@@ -6,6 +6,7 @@ header.masthead {
   background-color: white;
   background-attachment: scroll;
   background-size: contain;
+  background-repeat: no-repeat;
   position: relative;
   @include background-cover;
   .overlay {
