@@ -2,14 +2,14 @@
 title = "Dein Hund lahmt, hat Schmerzen beim Bewegen und wirkt steif? - Arthrose bei Hunden"
 date = 2023-02-17
 [taxonomies]
-categories = ["Hunde", "Arthrose", "Naturheilkunde", "Aromatherapie", "Phytotherapie"]
+categories = ["Hunde", "Arthrose", "Naturheilkunde", "Aromatherapie", "Phytotherapie", "Pflanzenheilkunde"]
 tags = []
 +++
 
 In diesem Artikel wird das Thema Arthritis bei Hunden ausführlich behandelt. Es wird aufgezeigt, welche Symptome auftreten und wie eine Diagnose erfolgt. Anschließend werden verschiedene Behandlungsoptionen erklärt und die Vorbeugung von Arthritis wird besprochen. Zusammenfassend betont der Artikel die Bedeutung einer frühzeitigen Diagnose und Behandlung, um das Wohlbefinden des Hundes zu verbessern.
 
 <!-- more -->
-<h2> Arthritis bei Hunden – Ein Vorläufer von Arthrose </h2>
+##  Arthritis bei Hunden – Ein Vorläufer von Arthrose 
 
 <img src="https://www.tierheilpraxis-jessican.de/img/blog/hund_arthrose_1.png" alt="Bild von einem Hund mit Arthrose" style="max-width: 100%"/>
 
@@ -32,7 +32,7 @@ An dieser Stelle ist anzumerken, dass eine Arthritis über mehrere Tage immer vo
 - Kräuter: kalte / warme Umschläge aus Beinwell oder Arnika
 - ätherische Öle: Zeder, Ysop, Wacholderbeere
 
-<h2>Arthrose - Was es ist und wodurch es passiert</h2>
+## Arthrose - Was es ist und wodurch es passiert
 Arthrose ist eine degenerative Gelenkerkrankung. Der Gelenkknorpel wird dünner, bis er schließlich völlig abgerieben ist. Das darunterliegende Knochengewebe verhärtet sich und bildet Zysten. Die Gelenkränder weisen Knochenwucherungen auf und auch Kapselveränderungen sind möglich. 
 
 Die Zellen im Knorpel sind nicht in der Lage sich selbst zu reinigen und so kommt es zu verlangsamten Reparaturprozessen im Gelenk. 
@@ -46,7 +46,7 @@ Die Zellen im Knorpel sind nicht in der Lage sich selbst zu reinigen und so komm
 - Alter
 - genetische Disposition
 
-<h2>Symptome Arthrose</h2>
+## Symptome Arthrose
 <img src="https://www.tierheilpraxis-jessican.de/img/blog/hund_arthrose_2.png" alt="Bild von einem Hund mit Arthrose" style="max-width: 100%; max-height: 100%;"/>
 
 
@@ -58,7 +58,7 @@ Die Symptome dieser Krankheit können von Hund zu Hund unterschiedlich sein und 
 - **Verminderte Aktivität**: Arthrose kann dazu führen, dass Ihr Hund weniger läuft, springt oder spielt als früher.
 Es ist wichtig zu beachten, dass nicht alle Hunde mit Arthrose alle diese Symptome aufweisen müssen. Einige Hunde können mildere Symptome haben, während andere schwerwiegendere haben können.
 
-<h2>Diagnostizieren von Arthrose bei Hunden</h2>
+## Diagnostizieren von Arthrose bei Hunden
 <img style="float: left; margin-right: 50px; max-width: 100%" alt="Bild von einem Hund mit Arthrose" src="https://www.tierheilpraxis-jessican.de/img/blog/hund_arthrose_3.png" />Wenn Sie vermuten, dass Ihr Hund an Arthrose leidet, ist es wichtig, eine Diagnose zu erhalten. Dies kann durch eine Kombination aus körperlichen Untersuchungen, Röntgen und Blutuntersuchungen erfolgen.
 
  - **Körperliche Untersuchung**: Ein fachkundiger Arzt wird Ihren Hund genau untersuchen, um Anzeichen für Arthrose zu erkennen. Dazu gehören Schmerzen, Steifheit und Veränderungen im Gangmuster.
@@ -67,11 +67,11 @@ Es ist wichtig zu beachten, dass nicht alle Hunde mit Arthrose alle diese Sympto
 
 Es ist wichtig zu beachten, dass die Diagnose von Arthrose bei Hunden eine sorgfältige Überprüfung erfordert. Eine genaue Diagnose kann helfen, die beste Behandlung für Ihren Hund zu bestimmen und dessen Schmerzen zu lindern.
 
-<h2>Eigene Behandlungsmöglichkeiten von Arthrose bei Hunden</h2>
+## Eigene Behandlungsmöglichkeiten von Arthrose bei Hunden
 <img style="float: right; margin-right: 10px; max-width: 100%" alt="Bild von einem Hund mit Arthrose" src="https://www.tierheilpraxis-jessican.de/img/blog/hund_arthrose_4.png" /> 
 Maßnahmen bei einer Arthrose-Erkrankung sollten dafür sorgen, die Reinigung und Reparatur der Zellen zu erleichtern, zu stärken und zu schützen. Eine zusätzliche Gelenkentzündung (was durch den zunehmenden Abrieb vorkommt) sollte auf jeden Fall vermieden werden. Dies treibt den Abbauprozess sonst schneller voran. 
 
-<h3>Lebensstiländerung - Übergewicht meiden</h3>
+### Lebensstiländerung - Übergewicht meiden
 
 Gewichtsmanagement und kontrollierte Bewegung können helfen, die Symptome zu lindern.
 Zu achten ist auf ein (Fertig-)Futtermittel, welches reich an Fleisch/ Innereien und Obst und Gemüse ist und wenig bis kein Getreide enthält. Tipp: beim barfen kann man selbst auf das richtige Verhältnis achten. Wichtig ist es, den Fettkonsum deutlich zu reduzieren (z.B. Käse, Leber, Wurst). Fischöl hingegen ist sehr reich an Omega-3-Fettsäuren und hat sogar eine entzündungshemmende Wirkung! (Leinöl hat sich ebenso als sehr wirkungsvoll erwiesen.)
@@ -80,7 +80,7 @@ Bewegung sollte täglich erfolgen - es ist wichtig, dass sich die Muskeln im Ber
 
 Übergewicht sorgt nicht nur für eine stärkere Belastung für das Gelenk, sondern sorgt Fettgewebe im allgemeinen dafür, dass entzündliche Prozesse gefördert werden.
 
-<h3>Nahrungsergänzung</h3>
+### Nahrungsergänzung
 Eine Vielzahl an Zusätzen können helfen, den betroffenen Bereich zu reaktivieren,  die Durchblutung zu fördern, Schmerzen zu lindern oder Entzündungen entgegenzuwirken. Anbei einige der wichtigsten:
 
 - **Weihrauch** (siehe Blog-Beitrag Weihrauch)
@@ -95,14 +95,14 @@ Eine Vielzahl an Zusätzen können helfen, den betroffenen Bereich zu reaktivier
 - **Knoblauch** kann die Durchblutung anregen und verbessern und wirkt gleichzeitig immunstimulierend. Eine Anwendung sollte hier nicht täglich erfolgen - sondern wöchentlich. Dosis: 1 Knoblauchzehe pro Woche. 
 Ebenso kann eine Durchspülungstherapie dafür sorgen, hängengebliebene Schlacken zu entfernen. Dafür kann eine Brennnessel Kur gemacht werden (am Besten im Frühjahr und Herbst, um auch den Fellwechsel zu unterstützen). Anwendung als Tee: 2TL mit 150ml siedendem Wasser übergießen und 15min ziehen lassen. Anschließend für 10 Tage zum Futter mischen.
 
-<h3>Ätherische Öle</h3> 
+### Ätherische Öle 
 
 - Rosmarin
 - Pfefferminze
 - Eukalyptus
 - Kiefernadel
 
-<h3>Weitere Behandlungsmöglichkeiten</h3>
+### Weitere Behandlungsmöglichkeiten
 Hier sind einige weitere Behandlungsmöglichkeiten, die ein Therapeut oder Tierarzt durchführen kann. 
 - Akupunktur
 - Massage
@@ -112,7 +112,7 @@ Hier sind einige weitere Behandlungsmöglichkeiten, die ein Therapeut oder Tiera
 
 Es ist wichtig zu beachten, dass keine dieser Behandlungsoptionen für alle Hunde gleichermaßen geeignet ist. Es ist wichtig die beste Behandlung für Ihren Hund zu bestimmen, basierend auf seiner individuellen Bedürfnisse und Zustand. Ebenso ist davon abzusehen, alle Kräuter zu geben. 
 
-<h2> Vorbeugung von Arthrose bei Hunden</h2>
+##  Vorbeugung von Arthrose bei Hunden
 
 Arthrose ist eine häufige und schmerzhafte Erkrankung bei Hunden, aber es gibt Schritte, die Besitzer unternehmen können, um ihre Hunde vor dieser Bedingung zu schützen. Hier sind einige Tipps, die helfen können, das Risiko von Arthrose zu reduzieren:
 
@@ -125,7 +125,7 @@ Arthrose ist eine häufige und schmerzhafte Erkrankung bei Hunden, aber es gibt 
 - **Verwendung von orthopädischen Hilfsmitteln**: Orthopädische Hilfsmittel wie Kissen und Matratzen können helfen, den Druck auf Gelenke zu reduzieren und dadurch Arthrose vorzubeugen.
 - **Frühzeitige Behandlung von Schmerzen und Steifheit**: Wenn Sie Anzeichen von Schmerzen und Steifheit bei Ihrem Hund bemerken, sollten Sie so schnell wie möglich eine Behandlung in Erwägung ziehen, um das unkontrollierte Fortschreiten der Krankheit zu verhindern.
 
-<h2>Fazit</h2>
+## Fazit
 Arthritis ist eine häufige Erkrankung bei Hunden und kann zu Arthrose führen. Symptome sind Schmerzen, Steifheit und verminderte Aktivität. Es ist wichtig, frühzeitig auf mögliche Anzeichen zu achten und den Hund untersuchen zu lassen, um eine genaue Diagnose zu erhalten. Die Behandlung kann aus einer Kombination von Schmerzmedikamenten, ergänzenden Therapien und Änderungen des Lebensstils bestehen.
 
 Vorbeugung ist ebenso wichtig und kann durch angemessene Bewegung, ausgewogene Ernährung und Vermeidung von Überlastung erreicht werden. Es ist wichtig, dass Hundehalter die Bedeutung einer frühzeitigen Diagnose und Behandlung von Arthritis und Arthrose verstehen, um Schmerzen zu lindern und das Wohlbefinden ihrer Tiere zu verbessern.

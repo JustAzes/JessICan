@@ -1,12 +1,12 @@
 # The URL the site will be built for
 base_url = "https://tierheilpraxis-jessican.de/"
-generate_rss = true
+generate_rss = false
 compile_sass = true
+default_language = "de"
+minify_html = true
 
 title = "Tierheilpraxis JessICan"
-description = "Entdecken Sie bei Tierheilpraktiker JessICan spezialisierte Therapieverfahren für Hunde und Pferde, einschließlich Akupunktur, Homöopathie, Phytotherapie, Manuelle Therapie, Arbeit mit ätherischen Ölen und Ernährungsberatung. Fördern Sie das Wohlbefinden Ihrer geliebten Vierbeiner und stärken Sie Ihre harmonische Beziehung."
-highlight_code = false
-
+description = "Tierheilpraktiker JessICan: Akupunktur, Homöopathie, Phytotherapie, Manuelle Therapie, ätherische Öle & Ernährungsberatung für Hunde & Pferde"
 taxonomies = [
     {name = "categories", rss = true, paginate_by=5},
     {name = "tags", rss = true, paginate_by=5},

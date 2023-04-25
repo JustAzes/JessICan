@@ -5,7 +5,7 @@ template = "behandlung.html"
 +++
 
 
-# Preisübersicht
+## Preisübersicht
 
 Gemäß Dienstvertragsrecht können Patienten ohne zusätzliche Informationen oder Vereinbarungen von einer üblichen Abrechnung ausgehen. Die Vergütung orientiert sich an der Richtwerttabelle des Verbands Deutscher Tierheilpraktiker e.V.
 
