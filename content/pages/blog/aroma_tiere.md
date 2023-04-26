@@ -12,11 +12,11 @@ Aromatherapie ist ein Teil der Pflanzenheilkunde und nutzt die natürlichen Komp
 <!-- more -->
 Meine Hündin Talia hatte vor kurzem eine starke allergische Reaktion - ausgelöst wahrscheinlich durch ein Stück Butter, was sie sich unbedingt mopsen musste. Sie hat gebrochen, hatte Durchfall und am ganzen Körper entwickelten sich beulenartige Erhebungen. Vor allem ihr Kopf war stark betroffen. Nachdem sie alles erbrochen und sich etwas ausgeruht hatte, wirkte ihr Allgemeinzustand erstmal wieder fit - sie wollte spielen und war bester Laune. Bis auf die Quaddeln am Körper. 
 
-Also bot ich ihr eine **Aromatherapie** an - sie stürzte sich förmlich auf ihr auserwähltes Öl. Ein Öl, welches ich vielleicht nicht als erste Wahl im Kopf hatte, aber mir dann dennoch mehr Aufschluss über ihr Wohlbefinden gab.
+Also bot ich ihr eine Aromatherapie an - sie stürzte sich förmlich auf ihr auserwähltes Öl. Ein Öl, welches ich vielleicht nicht als erste Wahl im Kopf hatte, aber mir dann dennoch mehr Aufschluss über ihr Wohlbefinden gab.
 
 Welches Öl es war? Das könnt ihr weiter unten lesen.
 <hr style="border-color: green">
-<img src="https://www.tierheilpraxis-jessican.de/img/blog/aroma_tiere.jpg" alt="Hund Talia vor der Aromatherapie" style="max-width: 100%"/>
+<img src="https://tierheilpraxis-jessican.de/img/blog/aroma_tiere.jpg" alt="Hund Talia vor der Aromatherapie" style="max-width: 100%"/>
 
 
 Körper, Seele und Geist. Im Idealfall ein harmonisches Miteinander. Aber mindestens einer tanzt gerne aus der Reihe.
@@ -73,7 +73,7 @@ Das heißt, bildlich gesprochen, können ätherische Öle dafür sorgen, dass un
 ## Anwendung beim Tier
 ### Vorab
 
-Erst einmal ist zu Erwähnen, dass ätherische Öle bei der äußeren Anwendung am besten immer **verdünnt** werden sollten. Gute Trägeröle sind zum Beispiel:
+Erst einmal ist zu Erwähnen, dass ätherische Öle bei der äußeren Anwendung am besten immer verdünnt werden sollten. Gute Trägeröle sind zum Beispiel:
 
 - Jojobaöl
 - kaltgepresstes Sonnenblumenöl

@@ -4,9 +4,7 @@ template = "impressum.html"
 render = false
 +++
 
-## Impressum
-
-### Verantwortlich für den Inhalt dieser Webseite gemäß § 5 TMG:
+## Verantwortlich für den Inhalt dieser Webseite gemäß § 5 TMG:
 
 Jessica Gebler
 Tierheilpraxis JessICan -natürlich gesund! (Einzelunternehmen)
@@ -16,7 +14,7 @@ Telefon: +49 (0) 173 789 0040
 E-Mail: tierheilpraxis-jessican[at]gmx.de
 Umsatzsteuer-Identifikationsnummer gemäß § 27a UStG: <TODO> 123123123  
 
-### Berufshaftpflichtversicherung:
+## Berufshaftpflichtversicherung:
 
 Name und Anschrift des Versicherers:  
 Versicherer XY  
@@ -24,11 +22,11 @@ Musterstraße 1
 12345 Musterstadt  
 Geltungsbereich: Deutschland
 
-### Verbraucherstreitbeilegung / Universalschlichtungsstelle
+## Verbraucherstreitbeilegung / Universalschlichtungsstelle
 Wir sind nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor einer
 Verbraucherschlichtungsstelle teilzunehmen.
 
-### Zuständige Aufsichtsbehörde:
+## Zuständige Aufsichtsbehörde:
 
 Veterinäramt Landkreis Bautzen: Amtsleiterin DVM Ulrike Kutschke  
 Lebensmittelüberwachungs- und Veterinäramt  

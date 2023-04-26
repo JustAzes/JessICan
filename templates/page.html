@@ -1,5 +1,7 @@
 {% extends "template.html" %}
 
+{% block title %}{{ post_macros::page_up_title(page=page) }}{% endblock title %}
+
 {% block header %}
 <!-- Page Header -->
 <header class="masthead" style="background-image: url('{{ get_url(path="/img/post-bg.jpg")}}')">
