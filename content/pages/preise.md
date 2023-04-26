@@ -1,7 +1,7 @@
 +++
 title = "Preisübersicht"
 path = "behandlung/preise"
-template = "behandlung.html"
+template = "preise.html"
 +++
 
 

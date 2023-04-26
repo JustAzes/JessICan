@@ -9,7 +9,7 @@ tags = []
 Weihrauch ist ein Harz, das aus bestimmten Bäumen der Gattung Boswellia gewonnen wird. Diese Bäume wachsen hauptsächlich in den Trockengebieten des Nahen Ostens und Nordost-Afrikas. Die am häufigsten verwendeten Arten für die Weihrauchgewinnung sind Boswellia sacra, Boswellia carterii und Boswellia serrata.
 <!-- more -->
 
-<img src="https://www.tierheilpraxis-jessican.de/img/blog/weihrauch_1.png" alt="Bild von Weihrauch" style="max-width: 100%"/>
+<img src="https://www.tierheilpraxis-jessican.de/img/blog/weihrauch_1.png" alt="Bild von Weihrauch in der Pflanzenheilkunde" style="max-width: 100%"/>
 
 Das Harz wird aus den Stämmen und Zweigen der Bäume gewonnen, indem man kleine Schnitte in die Rinde macht. Es tritt dann aus den Schnitten aus und wird von Hand gesammelt, wenn es getrocknet ist. Das Harz kann dann in seiner natürlichen Form oder nach der Verarbeitung in Ölform verwendet werden.
 
@@ -25,7 +25,7 @@ Obwohl Weihrauch in der traditionellen Medizin und Religion seit Jahrhunderten g
 
 ## Inhaltsstoffe und ihre Besonderheiten
 
-<img src="https://www.tierheilpraxis-jessican.de/img/blog/weihrauch_2.png" alt="Bild von Weihrauch" style="max-width: 100%"/>
+<img src="https://www.tierheilpraxis-jessican.de/img/blog/weihrauch_2.png" alt="Bild von Weihrauch in der Phytotherapie" style="max-width: 100%"/>
 
 Weihrauch enthält eine Vielzahl von Wirkstoffen, die für seine gesundheitlichen Vorteile verantwortlich sind. Hier sind einige der wichtigsten Inhaltsstoffe von Weihrauch und ihre Besonderheiten:
 - **Boswelliasäure:** Boswelliasäure ist einer der wichtigsten Inhaltsstoffe von Weihrauch. Es hat entzündungshemmende Eigenschaften und kann helfen, die Symptome von Erkrankungen wie rheumatoider Arthritis und Asthma zu verbessern. Es kann auch helfen, Schmerzen und Entzündungen zu lindern. Wie Boswelliasäure dies schafft? Es sorgt dafür, dass unser entzündungsförderndes Enzym 5-Lipoxygenase im Körper umprogrammiert wird. So wirkt es nun entzündungshemmend.
@@ -51,7 +51,7 @@ Weihrauch kann auf verschiedene Weise verwendet werden, abhängig von der Art de
 - **Oral:** Weihrauch kann oral eingenommen werden, entweder in Form von Kapseln, Tabletten oder als Extrakt. Dies ist die am häufigsten verwendete Form der Anwendung und wird hauptsächlich zur Behandlung von entzündlichen Erkrankungen wie Arthritis und Asthma verwendet.
 - **Topisch:** Weihrauch kann auch topisch auf die Haut aufgetragen werden, entweder in Form von Salben, Ölen oder Cremes. Dies ist besonders nützlich bei der Behandlung von Schmerzen und Entzündungen in Gelenken und Muskeln.
 - **Inhalation:** Weihrauch kann auch inhaliert werden, entweder durch das Verbrennen von Weihrauchharz oder durch den Einsatz von Inhalationsgeräten. Dies ist besonders nützlich bei der Behandlung von Atemwegserkrankungen wie Asthma und Bronchitis.
-- **Aromatherapie:** Weihrauch kann auch in der Aromatherapie verwendet werden. Durch das Einatmen des Duftes von Weihrauch kann es helfen, Stress und Angstzustände zu reduzieren und das Wohlbefinden zu verbessern. Mehr zum Thema Aromatherapie finden Sie hier. Hier ist anzumerken, dass im ätherischen Öl nicht Boswelliasäure vorhanden ist.
+- **Aromatherapie**: Weihrauch kann auch in der Aromatherapie verwendet werden. Durch das Einatmen des Duftes von Weihrauch kann es helfen, Stress und Angstzustände zu reduzieren und das Wohlbefinden zu verbessern. Mehr zum Thema Aromatherapie finden Sie hier. Hier ist anzumerken, dass im ätherischen Öl nicht Boswelliasäure vorhanden ist.
 
 Es gibt verschiedene Arten von Weihrauchpräparaten, die verfügbar sind, um die verschiedenen Anwendungsformen abzudecken. Hier sind einige der häufigsten:
 - **Weihrauchpulver:** Weihrauchpulver ist eine der häufigsten Formen von Weihrauch und wird hauptsächlich oral eingenommen. Es kann in Kapseln oder Tabletten gefunden werden, die in der Regel aus reinem Weihrauchpulver bestehen.

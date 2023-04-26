@@ -6,10 +6,10 @@ categories = ["Hunde", "Pferde", "Aromatherapie", "Fellpflege", "Atemwege", "Ver
 tags = []
 +++
 
-Teebaumöl ist ein ätherisches Öl, das aus den Blättern des Teebaums (Melaleuca alternifolia) gewonnen wird. Es wird bereits seit Jahrhunderten in der Naturmedizin verwendet und ist bekannt für seine antimikrobiellen, antiseptischen und entzündungshemmenden Eigenschaften.
+Teebaumöl ist ein *ätherisches Öl*, das aus den Blättern des Teebaums (Melaleuca alternifolia) gewonnen wird. Es wird bereits seit Jahrhunderten in der Naturmedizin verwendet und ist bekannt für seine antimikrobiellen, antiseptischen und entzündungshemmenden Eigenschaften.
 <!-- more -->
 
-<img src="https://www.tierheilpraxis-jessican.de/img/blog/teebaumoel_1.png" alt="Bild von Teebaumöl" style="max-width: 100%"/>
+<img src="https://www.tierheilpraxis-jessican.de/img/blog/teebaumoel_1.png" alt="Bild von Teebaumöl in der Aromatherapie" style="max-width: 100%"/>
 
 Das Teebaumöl kann auf verschiedene Arten angewendet werden, um Deinem Hund oder Pferd (Wichtig: nicht zur Anwendung bei Katzen geeignet!!!) zu helfen. Hier sind einige Beispiele:
 
@@ -32,7 +32,7 @@ Teebaumöl enthält eine Vielzahl von Wirkstoffen, die für seine heilenden Eige
 
 Die Wirkstoffe im Teebaum öl arbeiten zusammen, um eine Vielzahl von Haut- und Gesundheitsproblemen zu behandeln. Die antibakterielle und antiseptische Wirkung hilft bei der Behandlung von Hautinfektionen und Entzündungen, während die entzündungshemmende Wirkung Schmerzen und Schwellungen lindert. Die beruhigende und krampflösende Wirkung kann helfen, Stress und Angstzustände zu reduzieren.
 
-<img src="https://www.tierheilpraxis-jessican.de/img/blog/teebaumoel_3.png" alt="Bild von Teebaumöl" style="max-width: 100%"/>
+<img src="https://www.tierheilpraxis-jessican.de/img/blog/teebaumoel_3.png" alt="Bild von Teebaumöl in der Aromatherapie" style="max-width: 100%"/>
 
 Es ist wichtig zu beachten, dass die Wirksamkeit des Teebaumöls von der Qualität und Reinheit des Öls abhängt. Es ist ratsam, ein hochwertiges, 100% natürliches Teebaumöl auszusuchen, um die besten Ergebnisse zu erzielen.
 

@@ -12,17 +12,17 @@ Aromatherapie ist ein Teil der Pflanzenheilkunde und nutzt die natürlichen Komp
 <!-- more -->
 Meine Hündin Talia hatte vor kurzem eine starke allergische Reaktion - ausgelöst wahrscheinlich durch ein Stück Butter, was sie sich unbedingt mopsen musste. Sie hat gebrochen, hatte Durchfall und am ganzen Körper entwickelten sich beulenartige Erhebungen. Vor allem ihr Kopf war stark betroffen. Nachdem sie alles erbrochen und sich etwas ausgeruht hatte, wirkte ihr Allgemeinzustand erstmal wieder fit - sie wollte spielen und war bester Laune. Bis auf die Quaddeln am Körper. 
 
-Also bot ich ihr eine Aromatherapie an - sie stürzte sich förmlich auf ihr auserwähltes Öl. Ein Öl, welches ich vielleicht nicht als erste Wahl im Kopf hatte, aber mir dann dennoch mehr Aufschluss über ihr Wohlbefinden gab.
+Also bot ich ihr eine **Aromatherapie** an - sie stürzte sich förmlich auf ihr auserwähltes Öl. Ein Öl, welches ich vielleicht nicht als erste Wahl im Kopf hatte, aber mir dann dennoch mehr Aufschluss über ihr Wohlbefinden gab.
 
 Welches Öl es war? Das könnt ihr weiter unten lesen.
 <hr style="border-color: green">
-<img src="https://www.tierheilpraxis-jessican.de/img/blog/aroma_tiere.jpg" alt="Bild Hund Talia" style="max-width: 100%"/>
+<img src="https://www.tierheilpraxis-jessican.de/img/blog/aroma_tiere.jpg" alt="Hund Talia vor der Aromatherapie" style="max-width: 100%"/>
 
 
 Körper, Seele und Geist. Im Idealfall ein harmonisches Miteinander. Aber mindestens einer tanzt gerne aus der Reihe.
 Klaus Seibold 
 
-Aromatherapie ist ein Teil der Pflanzenheilkunde und nutzt die natürlichen Komponenten von Pflanzen. Daraus entstehen die naturreinen und qualitativ hochwertigen ätherischen Öle (bitte beim Kauf unbedingt darauf achten!) 
+**Aromatherapie** ist ein Teil der Pflanzenheilkunde und nutzt die natürlichen Komponenten von Pflanzen. Daraus entstehen die naturreinen und qualitativ hochwertigen ätherischen Öle (bitte beim Kauf unbedingt darauf achten!) 
 
 Geschichtlich betrachtet ist die Wirkung der ätherischen Öle schon sehr lange bekannt. In Ritualen oder sogar bei heilenden Zwecken wurden sie unter anderen von den Ägyptern, Griechen, Chinesen und Indern eingesetzt. Meist waren unsere Tiere dabei der Vorreiter - durch Beobachtungen der Essgewohnheiten der Tierwelt fand die Menschheit heraus, welche Pflanzen Heilwirkungen haben. Umso verständlicher ist es natürlich, sie auch heute noch bei Tieren anwenden zu können/ dürfen und sollten.
 
@@ -85,9 +85,9 @@ Es gibt auch einige ätherische Öle, die unverdünnt benutzt werden können - d
 
 Je nach Wirkungswunsch und Einsatzbereich sollten maximal 6 ätherische Öle für das Tier ausgewählt werden. Nicht mehr, dass überfordert das Tier schnell!
 
-**Beim Hund**: Es werden die verschlossenen Fläschchen dem Tier hingehalten. Je nach Reaktion des Tieres erfolgt die Auswahl.
+**Hund**: Es werden die verschlossenen Fläschchen dem Tier hingehalten. Je nach Reaktion des Tieres erfolgt die Auswahl.
 
-**Beim Pferd**: Es werden die geöffneten Fläschchen dem Tier hingehalten. Je nach Reaktion des Tieres erfolgt die Auswahl.
+**Pferd**: Es werden die geöffneten Fläschchen dem Tier hingehalten. Je nach Reaktion des Tieres erfolgt die Auswahl.
 
 <a href="https://www.youtube.com/watch?v=khzLoZJXa-A">Klicken Sie hier</a>, um ein Video des Auswahlverfahrens eines Hundes anzusehen.
 
@@ -125,6 +125,3 @@ Kurz: Seit in unserem Familienleben Kinder den Alltag beherrschen, hat sich doch
 Wir versuchen sehr viel auf die einzugehen, sie überall mit einzubinden und ihr nötigen Raum zu lassen - dennoch gibt es Momente, wo es einfach nicht möglich ist.
 
 Gut das uns ätherische Öle helfen können, diese Sorgen ebenfalls etwas zu lindern und den Tieren es dadurch leichter zu machen!
-
-
-

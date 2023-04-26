@@ -10,9 +10,9 @@ Als Sozialarbeiterin ist es natürlich mein Wunsch, meine beiden Leidenschaften 
 
 <!-- more -->
 
-<img src="https://www.tierheilpraxis-jessican.de/img/blog/soziale_arbeit_naturheilkunde.jpg" alt="Bild von mir mit Hund" style="max-width: 100%; text-align:center;"/>
+<img src="https://www.tierheilpraxis-jessican.de/img/blog/soziale_arbeit_naturheilkunde.jpg" alt="Bild von Tierheilpraktiker mit Hund" style="max-width: 100%; text-align:center;"/>
 
-Während die Naturheilkunde den Körper dazu befähigen soll, sich selbst zu heilen, befähigt die soziale Arbeit die Menschen, ihr Leben selbst zu bestimmen, Verantwortung für ihr Tun und Handeln zu übernehmen, gestärkt aus Situationen herauszukommen und an den vorhandenen Sozialsystemen teilzunehmen. Dadurch werden die Ressourcen und Leistungen des Einzelnen gefördert, um zur Besserung der Lebenssituation beizutragen.
+Während die *Naturheilkunde* den Körper dazu befähigen soll, sich selbst zu heilen, befähigt die soziale Arbeit die Menschen, ihr Leben selbst zu bestimmen, Verantwortung für ihr Tun und Handeln zu übernehmen, gestärkt aus Situationen herauszukommen und an den vorhandenen Sozialsystemen teilzunehmen. Dadurch werden die Ressourcen und Leistungen des Einzelnen gefördert, um zur Besserung der Lebenssituation beizutragen.
 
 An erster Stelle steht immer eine ausführliche Anamnese. Dies geschieht über umfangreiche Gespräche und gezielte Fragestellungen. Dabei wird die eigene Situation und das darauf einwirkende Umfeld erfasst. Anschließend wird das damit verbundene Problem und die Zusammenhänge analysiert:
 
@@ -46,5 +46,5 @@ Vor allem die systemische Beratung betrachtet dabei das Problem als Ganzes. Es g
 
 Dabei werden verschiedene Methoden angewandt, welche beratender, pädagogischer und therapeutischer Herkunft sein können.
 
-Wie man sieht, gibt es sehr viele Überschneidungspunkte mit der Naturheilkunde. Deshalb ist es meine Vision, diese beiden Berufszweige irgendwann miteinander kombinierbar zu machen.
+Wie man sieht, gibt es sehr viele Überschneidungspunkte mit der *Naturheilkunde*. Deshalb ist es meine Vision, diese beiden Berufszweige irgendwann miteinander kombinierbar zu machen.
 

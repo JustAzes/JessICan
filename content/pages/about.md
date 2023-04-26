@@ -10,7 +10,7 @@ Mein Name ist Jessica und mein Ziel ist es, Menschen und Tieren dabei zu helfen,
 
 Ich bin selbst mit Tieren aufgewachsen - Hund, Katze, (Wüstenrenn-)Maus und viele andere waren stets an meiner Seite. Seit meinem 6. Lebensjahr sitze ich auf dem Pferd und seit 2012 ist mein Lewitzer Pony Gino mein seelischer Ausgleich.
 
-<img src="https://www.tierheilpraxis-jessican.de/img/ich_und_gino.jpg" alt="Ich und mein Pferd Gino" style="max-width: 100%;max-height: 80%;">
+<img src="https://www.tierheilpraxis-jessican.de/img/ich_und_gino.jpg" alt="Tierheilpraktiker JessICan und ihr Pferd Gino" style="max-width: 100%;max-height: 80%;">
 
 Ich habe einen Bachelorabschluss als staatlich anerkannte Sozialarbeiterin. Die Sozialarbeit hat mir gelehrt, dass eine Familie wie ein Ökosystem funktioniert und jedes Mitglied seine Funktionen und Aufgaben darin einnimmt. Gerät dies durch Veränderungen in ein Ungleichgewicht und schafft es nicht, sich selbst wieder auszubalancieren, so hat das Auswirkungen auf jeden Einzelnen.
 
@@ -24,12 +24,12 @@ Auf der Suche nach alternativen Lösungsmöglichkeiten bin ich in die Tierheilku
 
 ---
 
-<img src="https://www.tierheilpraxis-jessican.de/img/tali.jpg" alt="Ich und mein Hund Tali" style="max-width: 100%;max-height: 80%;">
+<img src="https://www.tierheilpraxis-jessican.de/img/tali.jpg" alt="Tierheilpraktiker JessICan und ihr Hund Tali" style="max-width: 100%;max-height: 80%;">
 
 
 Es ist wichtig, sich ständig weiterzuentwickeln und neues Wissen anzueignen. Nur so können wir die Herausforderungen für uns und unsere Liebsten meistern.
 
-Ich möchte auch andere dabei unterstützen, dass Mensch und Tier in Einklang mit der Natur leben können. Deshalb studiere ich die Zusammenhänge des "Ökosystems Mensch und Tier" und ergänze dies durch Wissen aus verschiedenen Fachbereichen, wie etwa der Sozialwissenschaften und der Komplementärmedizin, welche Naturheilkunde, Phytotherapie - die Pflanzenheilkunde, Aromatherapie und viele weitere Verfahren beinhaltet. Dieses Wissen wird durch Abschlüsse fundiert. So besitze ich neben dem Bachelorabschluss in der Sozialarbeit auch Zertifikate im Bereich der Kindheitspsychologie, Tierheilkunde sowie Aromatherapie.
+Ich möchte auch andere dabei unterstützen, dass Mensch und Tier in Einklang mit der Natur leben können. Deshalb studiere ich die Zusammenhänge des "Ökosystems Mensch und Tier" und ergänze dies durch Wissen aus verschiedenen Fachbereichen, wie etwa der Sozialwissenschaften und der Komplementärmedizin, welche **Naturheilkunde**, **Phytotherapie** - die Pflanzenheilkunde, **Aromatherapie** und viele weitere Verfahren beinhaltet. Dieses Wissen wird durch Abschlüsse fundiert. So besitze ich neben dem Bachelorabschluss in der Sozialarbeit auch Zertifikate im Bereich der Kindheitspsychologie, Tierheilkunde sowie Aromatherapie.
 
 > "Alles, was gegen die Natur ist, hat auf Dauer keinen Bestand." - Charles Darwin
 

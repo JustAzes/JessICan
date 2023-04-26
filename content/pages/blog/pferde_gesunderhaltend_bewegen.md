@@ -45,12 +45,12 @@ Equikinetic ist ein Intervalltraining, das das Pferd gleichmäßig und gleichsei
 
 Dieser Bewegungsablauf unterstützt dabei, das Pferd gerade zu richten. Jedes Pferd hat eine bevorzugte Seite, die sogenannte hohle Seite. Um herauszufinden, welche Seite das bei Ihrem Pferd ist, lassen Sie es einfach am langen Strick geradeaus laufen. Der Kopf schaut meist leicht zu einer Seite – das ist die Lieblingsseite Ihres Pferdes. Erst wenn diese natürliche Schiefe überwunden ist, kann das Pferd gerade gerichtet laufen.
 
-<img src="https://www.tierheilpraxis-jessican.de/img/blog/pferde_gesunderhaltend_bewegen_3.jpg" alt="Bild von Pferd mit Zubehör für die Equikinetic® " style="max-width: 100%"/>
+<img src="https://www.tierheilpraxis-jessican.de/img/blog/pferde_gesunderhaltend_bewegen_3.jpg" alt="Bild von Pferd mit Zubehör für die Equikinetic®" style="max-width: 100%"/>
 Ich selbst praktiziere Equikinetic® seit rund vier Jahren mit meinem Pferd. Sobald ich es in die Gassen führe, hat es seine volle Aufmerksamkeit auf mich gerichtet. Umgekehrt verlässt es sich auch darauf, dass ich die Pausensequenzen einhalte und das Training mit der letzten Arbeitsrunde tatsächlich beende.
 
 Equikinetic ist nicht nur ein hervorragendes Muskeltraining, sondern dient auch dem Aufbau und Erhalt der Beziehung zwischen Pferd und Reiter. Stellen Sie sich beim Führen Ihres Pferdes folgende Fragen: Wer bewegt wen? Wer führt wen? Vertraut mir das Pferd – auch in heiklen Situationen?
 
 Im vergangenen Dezember gab ich einen sehr schönen Workshop zum Thema Muskeln, Sehnen und Faszien. Dabei haben wir gemeinsam einige Grundlagen des geführten Longierens geübt. Vielen Dank nochmals für die Gelegenheit!
-<img src="https://www.tierheilpraxis-jessican.de/img/blog/pferde_gesunderhaltend_bewegen_4.jpg" alt="Bild von Pferd in Bewegung mit eingezeichneten dorsalen und ventralen Muskelketten" style="max-width: 100%"/>
+<img src="https://www.tierheilpraxis-jessican.de/img/blog/pferde_gesunderhaltend_bewegen_4.jpg" alt="Bild vor der Equikinetic®" style="max-width: 100%"/>
 
 Wenn Sie an der Durchführung der Equikinetic interessiert sind oder beim Lesen weitere Fragen aufgetaucht sind, können Sie mir gerne schreiben. Zur Vertiefung empfehle ich das Buch "Equikinetic Pferde effektiv longieren" von Michael Geitner und Alexandra Schmid.
