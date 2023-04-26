@@ -33,6 +33,6 @@ Ich möchte auch andere dabei unterstützen, dass Mensch und Tier in Einklang mi
 
 > "Alles, was gegen die Natur ist, hat auf Dauer keinen Bestand." - Charles Darwin
 
-Fortschritte und Erfolge können Sie gern in meinem [Blog](../pages/blog) verfolgen!
+Fortschritte und Erfolge können Sie gern in meinem [Blog](../pages/blog/) verfolgen!
 
 Eure Jessica 
