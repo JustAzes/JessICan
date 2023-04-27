@@ -1,7 +1,7 @@
 {% extends "template.html" %}
 {% block headextras %}
-<link rel="stylesheet" type="text/css" href="{{ get_url(path="/shariff-3.2.1/shariff.min.css")}}">
-<script type="text/javascript" src="{{ get_url(path="/shariff-3.2.1/shariff.min.js")}}"></script>
+<link rel="stylesheet" type="text/css" href="{{ get_url(path="/shariff-3.2.1/shariff.complete.css")}}">
+<script type="text/javascript" src="{{ get_url(path="/shariff-3.2.1/shariff.complete.js")}}"></script>
 {% endblock headextras %}
 {% block title %}{{ post_macros::page_up_title(page=page) }}{% endblock title %}
 
@@ -33,6 +33,8 @@
         <strong>“Auch ein langer Weg beginnt mit dem ersten Schritt.”</strong>
         <br>
         Eure Jessi von JessICan-natürlich!      
+
+        <div class="shariff" data-services='["facebook", "twitter", "linkedin"]'></div>
         {% if page.taxonomies.tags %}
         <div class="post-tags">
           <p>Tags:
@@ -42,7 +44,6 @@
           </p>
         </div>
         {% endif %}
-        <div class="shariff" data-services='["facebook", "twitter", "linkedin"]'></div>
       </div>
     </div>
   </div>
