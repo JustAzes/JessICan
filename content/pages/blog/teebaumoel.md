@@ -37,4 +37,4 @@ Die Wirkstoffe im Teebaum öl arbeiten zusammen, um eine Vielzahl von Haut- und 
 Es ist wichtig zu beachten, dass die Wirksamkeit des Teebaumöls von der Qualität und Reinheit des Öls abhängt. Es ist ratsam, ein hochwertiges, 100% natürliches Teebaumöl auszusuchen, um die besten Ergebnisse zu erzielen.
 
 Wie du am besten vorgehst, um zu schauen ob Teebaumöl bei DEINEM Tier das richtige Öl der Wahl ist, liest du auf meinem anderen Blog-Beitrag:
-<a href="https://tierheilpraxis-jessican.de/pages/blog/aroma-tiere/" class="btn btn-success">Aromatherapie bei Tieren</a>
+<a href="https://tierheilpraxis-jessican.de/pages/blog/aroma-tiere/">Aromatherapie bei Tieren</a>
