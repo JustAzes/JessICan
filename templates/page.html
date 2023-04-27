@@ -1,12 +1,10 @@
 {% extends "template.html" %}
 {% block headextras %}
-<link rel="stylesheet" type="text/css" href="shariff-3.2.1/shariff.min.css">
-<script type="text/javascript" src="shariff-3.2.1/shariff.min.js"></script>
+<link rel="stylesheet" type="text/css" href="{{ get_url(path="/shariff-3.2.1/shariff.min.css")}}">
+<script type="text/javascript" src="{{ get_url(path="/shariff-3.2.1/shariff.min.js")}}"></script>
 {% endblock headextras %}
 {% block title %}{{ post_macros::page_up_title(page=page) }}{% endblock title %}
 
-<link rel="stylesheet" type="text/css" href="Pfad/zum/shariff.min.css">
-<script type="text/javascript" src="Pfad/zum/shariff.min.js"></script>
 
 {% block header %}
 <!-- Page Header -->
