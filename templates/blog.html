@@ -1,5 +1,9 @@
 {% extends "template.html" %}
 {% block title %}Blog - {{ config.title }}{% endblock title %}
+{% block headextras %}
+<link rel="stylesheet" type="text/css" href="shariff-3.2.1/shariff.min.css">
+<script type="text/javascript" src="shariff-3.2.1/shariff.min.js"></script>
+{% endblock headextras %}
 <!-- Page Header -->
 {% block header %}
   <header class="masthead" style="background-image: url('{{ get_url(path="/img/home-bg.png")}}');background-size:100%;">
@@ -48,6 +52,7 @@
           <a class="btn btn-primary float-right" href="{{ paginator.next }}">Ältere Beiträge &rarr;</a>
           {% endif %}
         </div>
+        <div class="shariff" data-services='["facebook", "twitter", "linkedin"]'></div>
 
       </div>
     </div>
