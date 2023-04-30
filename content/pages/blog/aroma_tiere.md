@@ -2,7 +2,7 @@
 title = "Aromatherapie bei Tieren"
 date = 2022-12-14
 [taxonomies]
-categories = ["Hunde", "Pferde", "Aromatherapie"]
+categories = ["Hunde", "Pferde", "Therapieformen"]
 tags = []
 +++
 

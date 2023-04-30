@@ -2,7 +2,7 @@
 title = "Weihrauch in der Tierheilkunde: Der natürliche Weg zur Linderung von Schmerzen und Entzündungen"
 date = 2023-02-03
 [taxonomies]
-categories = ["Phytotherapie", "Pflanzenheilkunde", "Aromatherapie"]
+categories = ["Naturheilkunde", "Therapieformen"]
 tags = []
 +++
 

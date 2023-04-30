@@ -2,7 +2,7 @@
 title = "Pferde gesunderhaltend Bewegen"
 date = 2023-04-01
 [taxonomies]
-categories = ["Pferde", "Equikinetic®"]
+categories = ["Pferde", "Therapieformen"]
 tags = []
 +++
 

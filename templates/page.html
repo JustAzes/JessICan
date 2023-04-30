@@ -1,4 +1,7 @@
 {% extends "template.html" %}
+{% block description %}
+    <meta name="description" content="Blogartikel '+{{ post_macros::page_up_title(page=page) }}+' von Tierheilpraktiker JessICan: Akupunktur, Homöopathie, Phytotherapie, Manuelle Therapie, ätherische Öle & Ernährungsberatung für Hunde & Pferde">
+{% endblock description %}
 {% block headextras %}
 <link rel="stylesheet" type="text/css" href="{{ get_url(path="/shariff-3.2.1/shariff.min.css")}}">
 <script type="text/javascript" src="{{ get_url(path="/shariff-3.2.1/shariff.complete.js")}}"></script>

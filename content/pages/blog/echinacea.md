@@ -2,7 +2,7 @@
 title = "Echinacea - Das Superkraut für ein starkes Immunsystem"
 date = 2023-02-03
 [taxonomies]
-categories = ["Phytotherapie", "Pflanzenheilkunde"]
+categories = ["Naturheilkunde"]
 tags = []
 +++
 

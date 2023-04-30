@@ -2,7 +2,7 @@
 title = "Dein Hund lahmt, hat Schmerzen beim Bewegen und wirkt steif? - Arthrose bei Hunden"
 date = 2023-02-17
 [taxonomies]
-categories = ["Hunde", "Arthrose", "Naturheilkunde", "Aromatherapie", "Phytotherapie", "Pflanzenheilkunde", "Manuelle Therapie"]
+categories = ["Hunde", "Tiergesundheit", "Naturheilkunde", "Therapieformen"]
 tags = []
 +++
 

@@ -1,7 +1,7 @@
 +++
 title = "Über mich"
 path = "behandlung/vorgehen"
-template = "behandlung.html"
+template = "vorgehen.html"
 +++
 
 
