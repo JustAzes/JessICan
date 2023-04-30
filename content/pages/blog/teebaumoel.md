@@ -1,5 +1,5 @@
 +++
-title = "Teebaumöl - Der natürliche Allrounder für Pferde- und Hundepflege"
+title = "Teebaumöl: Natur-Allrounder für Pferde & Hunde"
 date = 2023-02-10
 [taxonomies]
 categories = ["Hunde", "Pferde", "Therapieformen", "Tiergesundheit"]

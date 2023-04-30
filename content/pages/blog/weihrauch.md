@@ -1,5 +1,5 @@
 +++
-title = "Weihrauch in der Tierheilkunde: Der natürliche Weg zur Linderung von Schmerzen und Entzündungen"
+title = "Weihrauch: Natürliche Linderung für Schmerzen"
 date = 2023-02-03
 [taxonomies]
 categories = ["Naturheilkunde", "Therapieformen"]

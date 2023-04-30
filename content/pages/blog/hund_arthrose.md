@@ -1,5 +1,5 @@
 +++
-title = "Dein Hund lahmt, hat Schmerzen beim Bewegen und wirkt steif? - Arthrose bei Hunden"
+title = "Bewegungsschmerzen und Steifheit bei Hunden - Arthrose"
 date = 2023-02-17
 [taxonomies]
 categories = ["Hunde", "Tiergesundheit", "Naturheilkunde", "Therapieformen"]
