@@ -19,7 +19,7 @@ Wir müssen uns nicht ständig auf unsere Umgebung konzentrieren. Es genügt, da
 
 Symptome sind ein wichtiges Anzeichen dafür, dass der Körper aus dem Gleichgewicht geraten ist. Sie leiten uns an und helfen uns, die eigentliche Ursache der Beschwerden zu ermitteln. Nur wenn wir das Problem an der Wurzel packen, können wir einen Durchbruch erzielen – unabhängig davon, ob die Symptome physisch oder psychisch sind. Entscheidend ist, dass im Körper ein Gleichgewicht herrscht – sowohl seelisch als auch körperlich.
 
-Hier kommt die Naturheilkunde ins Spiel. Sie kann als Ergänzung zur Schulmedizin eingesetzt werden oder sogar völlig unabhängig von ihr. Doch welche Methoden umfasst die Naturheilkunde eigentlich?
+Hier kommt die Naturheilkunde ins Spiel. Sie kann als Ergänzung zur Schulmedizin eingesetzt werden oder sogar völlig unabhängig von ihr. Doch welche Methoden umfasst die Naturheilkunde eigentlich? Hier eine kurze Einführung.
 
 Viele Menschen denken sofort an Globuli, Schüssler-Salze und andere kleine Helfer. Diese Verfahren sind durchaus berechtigt und können unterstützend wirken. Der Ansatz sollte jedoch dort liegen, wo Körper und Geist ständig beeinflusst werden: bei Ernährung, Bewegung und emotionalem Ausgleich – sowohl bei uns selbst als auch in unserer Familie mit unseren Tieren.
 

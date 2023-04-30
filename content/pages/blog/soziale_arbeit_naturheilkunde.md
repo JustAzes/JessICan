@@ -46,5 +46,5 @@ Vor allem die systemische Beratung betrachtet dabei das Problem als Ganzes. Es g
 
 Dabei werden verschiedene Methoden angewandt, welche beratender, pädagogischer und therapeutischer Herkunft sein können.
 
-Wie man sieht, gibt es sehr viele Überschneidungspunkte mit der *Naturheilkunde*. Deshalb ist es meine Vision, diese beiden Berufszweige irgendwann miteinander kombinierbar zu machen.
+Wie man sieht, steht die Sozialarbeit in vielen Punkten im Einklang mit der *Naturheilkunde*. Deshalb ist es meine Vision, diese beiden Berufszweige irgendwann miteinander kombinierbar zu machen.
 
