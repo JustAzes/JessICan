@@ -2,7 +2,7 @@
 title = "Teebaumöl - Der natürliche Allrounder für Pferde- und Hundepflege"
 date = 2023-02-10
 [taxonomies]
-categories = ["Hunde", "Pferde", "Aromatherapie", "Fellpflege", "Atemwege", "Verdauung", "Stress"]
+categories = ["Hunde", "Pferde", "Therapieformen", "Tiergesundheit"]
 tags = []
 +++
 
