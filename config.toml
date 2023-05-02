@@ -1,5 +1,5 @@
 # The URL the site will be built for
-base_url = "https://tierheilpraxis-jessican.de/"
+base_url = "https://tierheilpraxis-jessican.de"
 generate_rss = false
 compile_sass = true
 default_language = "de"
