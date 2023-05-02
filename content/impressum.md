@@ -38,5 +38,5 @@ Lebensmittelüberwachungs- und Veterinäramt
 Bahnhofstraße 9  
 02625 Bautzen  
 Telefon: (03591) 5 25 13 90 00  
-E-Mail: lueva@lra-bautzen.de  
+E-Mail: lueva[at]lra-bautzen.de  
 Website: www.landkreis-bautzen.de
