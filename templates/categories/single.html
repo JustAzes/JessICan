@@ -1,3 +1,20 @@
 {% extends "blog.html" %}
 
 {% block title %}{{ config.title }} - Artikel Kategorie: {{ term.name }}{% endblock %}
+
+{% block header %}
+  <header class="masthead" style="background-image: url('{{ get_url(path="/img/home-bg.png")}}');background-size:100%;">
+    <div class="overlay">
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-10 col-md-10 mx-auto">
+          <div class="site-heading">
+            <h1>Spannendes aus meinem Blog zum Thema {{ term.name }}</h1>
+            <span class="subheading">Lesen Sie Artikel zu den aktuellsten Themen!</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+{% endblock header %}
