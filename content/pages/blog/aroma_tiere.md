@@ -16,7 +16,7 @@ Also bot ich ihr eine Aromatherapie an - sie stürzte sich förmlich auf ihr aus
 
 Welches Öl es war? Das könnt ihr weiter unten lesen.
 <hr style="border-color: green">
-<img src="https://tierheilpraxis-jessican.de/img/blog/aroma_tiere.jpg" alt="Hund Talia vor der Aromatherapie" style="max-width: 100%"/>
+<img src="https://tierheilpraxis-jessican.de/img/blog/aroma_tiere.jpg" alt="Hund Talia vor der Aromatherapie" style="max-width: 100%" loading="lazy"/>
 
 
 Körper, Seele und Geist. Im Idealfall ein harmonisches Miteinander. Aber mindestens einer tanzt gerne aus der Reihe.
