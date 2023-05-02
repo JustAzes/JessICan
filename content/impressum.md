@@ -17,10 +17,10 @@ Umsatzsteuer-Identifikationsnummer gemäß § 27a UStG: <TODO> 123123123
 ## Berufshaftpflichtversicherung:
 
 Name und Anschrift des Versicherers:  
-Versicherer XY  
-Musterstraße 1  
-12345 Musterstadt  
-Geltungsbereich: Deutschland
+Versicherungsträger:
+Continentale Sachversicherung A.G.
+Ruhrallee 94
+44139 Dortmund
 
 ## Verbraucherstreitbeilegung / Universalschlichtungsstelle
 Wir sind nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor einer
