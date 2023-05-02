@@ -66,7 +66,7 @@ Die folgende Tabelle zeigt den Einfluss von körperlicher Bewegung auf viele wic
 | Gehirndurchblutung                    | verbessert sich         | verschlechtert sich      |
 | Neubildung von Nervenzellen           | wird gefördert          | wird nicht gefördert     |
 | Psyche                                | antidepressive Wirkung  | keine antidepressive Wirkung |
-<a href="https://www.gesundheit.gv.at/leben/bewegung/koerper/nutzen-vorteile.html">(Quelle)</a>
+<a href="https://www.gesundheit.gv.at/leben/bewegung/koerper/nutzen-vorteile.html" title="Quelle">(Quelle)</a>
 
 > "Der Weg zur Gesundheit führt durch die Küche." - Sebastian Kneipp
 
@@ -89,4 +89,4 @@ Zusätzlich zu diesen drei Säulen können weitere Methoden aus der Naturheilkun
 - Bioresonanztherapie
 - Diagnostische und therapeutischen Maßnahmen der Schulmedizin
 
-*Zytokine sind Botenstoffe, die bei einer Reaktion des Immunsystems gebildet werden. Durch Zytokine können bestimmte Abwehrzellen aktiviert werden. Zytokine haben Effekte auf Entzündungsprozesse, Bakterienvermehrung und die Entstehung von Krebs. <a href="https://www.gesundheit.gv.at/lexikon/Z/lexikon-zytokine.html">(Quelle)</a>
+*Zytokine sind Botenstoffe, die bei einer Reaktion des Immunsystems gebildet werden. Durch Zytokine können bestimmte Abwehrzellen aktiviert werden. Zytokine haben Effekte auf Entzündungsprozesse, Bakterienvermehrung und die Entstehung von Krebs. <a href="https://www.gesundheit.gv.at/lexikon/Z/lexikon-zytokine.html" title="Quelle">(Quelle)</a>
