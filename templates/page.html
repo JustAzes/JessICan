@@ -42,7 +42,7 @@
         <div class="post-tags">
           <p>Tags:
             {% for tag in page.taxonomies.tags %}
-            <a href="{{ get_taxonomy_url(kind="tags", name=tag) }}">#{{ tag }}</a>
+            <a href="{{ get_taxonomy_url(kind="tags", name=tag) }}" title="Tag">#{{ tag }}</a>
             {% endfor %}
           </p>
         </div>
