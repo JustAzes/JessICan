@@ -13,7 +13,7 @@ Pferde, die sich täglich frei und ungehindert bewegen können, legen große Str
 
 <img src="https://tierheilpraxis-jessican.de/img/blog/pferde_gesunderhaltend_bewegen_1.jpg" alt="Bild von Pferd in Bewegung" style="max-width: 100%" loading="lazy"/>
 
-Doch was bedeutet das genau?
+Doch was bedeutet gesunderhaltend Bewegen genau?
 
 Vereinfacht ausgedrückt sind die Muskeln über Sehnen mit den Knochen verbunden. Bei Anstrengung übertragen die Sehnen die Kraft der Muskeln auf die Knochen, wodurch das Gelenk und das Pferd sich bewegen können. Diese Bewegungsmuster und unsere Organe sind von Faszien umhüllt. Das bedeutet, dass eine Störung in einem beliebigen Bereich den gesamten Bewegungsablauf des Pferdes beeinträchtigen kann. Daher sind die Ursachen einiger Lahmheiten oft schwer zu ermitteln.
 
