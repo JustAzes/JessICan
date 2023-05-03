@@ -12,7 +12,7 @@ Die folgenden Hinweise geben einen einfachen Überblick darüber, was mit Ihren 
 
 ### Datenerfassung auf dieser Website
 
-**Wer ist verantwortlich für die Datenerfassung auf dieser Website?**
+**Wer ist verantwortlich für die Datenerfassung und deren Umgang auf dieser Website?**
 
 Die Datenverarbeitung auf dieser Website erfolgt durch den Websitebetreiber. Dessen Kontaktdaten können Sie dem Abschnitt „Hinweis zur Verantwortlichen Stelle“ in dieser Datenschutzerklärung entnehmen.
 

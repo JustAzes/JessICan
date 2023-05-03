@@ -49,10 +49,9 @@ Die Zellen im Knorpel sind nicht in der Lage sich selbst zu reinigen und so komm
 ## Symptome Arthrose
 <img src="https://tierheilpraxis-jessican.de/img/blog/hund_arthrose_2.png" alt="Bild von einem Hund mit Arthrose" style="max-width: 100%; max-height: 100%;" loading="lazy"/>
 
-
 Die Symptome dieser Krankheit können von Hund zu Hund unterschiedlich sein und können von mild bis schwerwiegend reichen. Hier sind einige der häufigsten Symptome von Arthrose:
 
-- **Schmerzen**: Arthrose verursacht oft Schmerzen in den betroffenen Gelenken. Dies kann zu einer Veränderung des Verhaltens Ihres Hundes führen, wie z.B. einem Vermeiden von Aktivitäten, die den Schmerz verstärken können.
+- **Bewegungsschmerzen**: Arthrose verursacht oft Schmerzen in den betroffenen Gelenken. Dies kann zu einer Veränderung des Verhaltens Ihres Hundes führen, wie z.B. einem Vermeiden von Aktivitäten, die den Schmerz verstärken können.
 - **Steifheit**: Steifheit tritt insbesondere am Morgen oder nach längerer Ruhe auf. Dies kann dazu führen, dass Ihr Hund Schwierigkeiten hat, aufzustehen oder sich vermehrt ausruhen will.
 - **Veränderungen des Gangmusters**: Arthrose kann sich als unsicherer oder schwankender Gang oder als Vermeiden bestimmter Bewegungen äußern.
 - **Verminderte Aktivität**: Arthrose kann dazu führen, dass Ihr Hund weniger läuft, springt oder spielt als früher.

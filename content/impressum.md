@@ -14,7 +14,7 @@ Telefon: +49 (0) 173 789 0040
 E-Mail: tierheilpraxis-jessican[at]gmx.de
 Umsatzsteuer-Identifikationsnummer gemäß § 27a UStG: <TODO> 123123123  
 
-## Berufshaftpflichtversicherung:
+## Rechtliche Angaben zur Berufshaftpflichtversicherung:
 
 Name und Anschrift des Versicherers:  
 Versicherungsträger:

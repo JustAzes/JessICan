@@ -18,7 +18,7 @@ Das Teebaumöl kann auf verschiedene Arten angewendet werden, um Deinem Hund ode
 - Verdauung: Teebaumöl kann bei Verdauungsproblemen wie Durchfall oder Verstopfung angewendet werden. Dabei das Öl in ein Trägerol (zB. Mandelöl) einrühren und auf den Bauch des Tieres auftragen und bei belieben des Tieres massieren.
 - Stressreduktion: Teebaumöl kann auch bei Stress oder Angstzuständen angewendet werden. Hier hilft es im Diffuser oder in direkter Anwendung (verdünnt).
 
-In der Naturmedizin ist Teebaumöl ein vielseitiger und wertvoller Allrounder für Deinen Hund oder Dein Pferd. Probiere es aus und beobachte die positive Wirkung!
+In der Naturmedizin ist Teebaumöl ein vielseitiger und wertvoller Natur-Allrounder für Deinen Hund oder Dein Pferd. Probiere es aus und beobachte die positive Wirkung!
 
 ## Wirkstoffe und ihre Wirkungsweise
 <img src="https://tierheilpraxis-jessican.de/img/blog/teebaumoel_2.png" alt="Bild von Teebaumöl" style="max-width: 100%" loading="lazy"/>
