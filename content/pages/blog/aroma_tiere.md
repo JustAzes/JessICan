@@ -1,5 +1,5 @@
 +++
-title = "Aromatherapie bei Tieren"
+title = "Aromatherapie bei Hund und Pferd - Ätherische Öle"
 date = 2022-12-14
 [taxonomies]
 categories = ["Hunde", "Pferde", "Therapieformen"]
