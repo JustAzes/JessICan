@@ -8,15 +8,6 @@
     {% block description %}
     <meta name="description" content="Tierheilpraktiker JessICan: Akupunktur, Homöopathie, Phytotherapie, Manuelle Therapie, Aromatherapie & Ernährungsberatung für Hund & Pferd">
     {% endblock description %}
-    {% block metatags %}
-    <meta property="og:title" content="Tierheilpraktiker JessICan - natürlich gesund! Hund & Pferd">
-    <meta property="og:description" content="Tierheilpraktiker JessICan: Akupunktur, Homöopathie, Phytotherapie, Manuelle Therapie, Aromatherapie & Ernährungsberatung für Hund & Pferd">
-    <meta property="og:image" content="https://tierheilpraxis-jessican.de/img/home-bg.png">
-    <meta property="og:url" content="https://tierheilpraxis-jessican.de">
-    <meta property="og:type" content="website">
-    <meta property="og:locale" content="de_DE">
-    <meta property="og:site_name" content="Tierheilpraxis JessICan">
-    {% endblock metatags %}
     <meta name="keywords" content="Tierheilpraktiker, Tierheilpraxis, Hund, Pferd, Akupunktur, Laserakupunktur, Traditionell Chinesische Medizin, Homöopathie, Phytotherapie, Manuelle Therapie, Aromatherapie, Ernährungsberatung">
     <meta name="author" content="Jessi von JessICan">
     
@@ -33,14 +24,11 @@
     <title>{% block title %}{{ config.title }}{% endblock title %}</title>
     <link href="{{ get_url(path='css/all.min.css') }}" rel="stylesheet" media="print" onload="this.media='all';">
     <link rel="stylesheet" href="{{ get_url(path='css/bootstrap.min.css') }}" media="print" onload="this.media='all';">
-    <!--<link rel="stylesheet" href="{{ get_url(path='css/local-fonts.css') }}" media="print" onload="this.media='all';">-->
-
     <link href="{{ get_url(path='css/local-fonts.css') }}" rel="preload" as="style" onload="this.rel='stylesheet'">
     <noscript><link rel="stylesheet" href="{{ get_url(path='css/local-fonts.css') }}"></noscript>
-
-
-    <!-- Custom styles for this template -->
     <link rel="stylesheet" href="{{ get_url(path="clean-blog.css", trailing_slash=false) }}">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
 
     <link rel="apple-touch-icon" sizes="180x180" href="{{ get_url(path="favicons/apple-touch-icon.png") }}">
     <link rel="apple-touch-startup-image" href="{{ get_url(path="favicons/apple-touch-icon.png") }}">
@@ -48,11 +36,18 @@
     <link rel="icon" type="image/png" sizes="16x16" href="{{ get_url(path="favicons/favicon-16x16.png") }}">
     <link rel="manifest" href="{{ get_url(path="favicons/site.webmanifest") }}">
     <link rel="mask-icon" href="{{ get_url(path="favicons/safari-pinned-tab.svg") }}" color="#5bbad5">
-    <meta name="msapplication-TileColor" content="#da532c">
-    <meta name="theme-color" content="#ffffff">
     {% block analytics %}
     <script data-goatcounter="https://jessican.goatcounter.com/count" async src="//gc.zgo.at/count.js" defer></script>
     {% endblock analytics %}
+    {% block metatags %}
+    <meta property="og:title" content="Tierheilpraktiker JessICan - natürlich gesund! Hund & Pferd">
+    <meta property="og:description" content="Tierheilpraktiker JessICan: Akupunktur, Homöopathie, Phytotherapie, Manuelle Therapie, Aromatherapie & Ernährungsberatung für Hund & Pferd">
+    <meta property="og:image" content="https://tierheilpraxis-jessican.de/img/home-bg.png">
+    <meta property="og:url" content="https://tierheilpraxis-jessican.de">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="de_DE">
+    <meta property="og:site_name" content="Tierheilpraxis JessICan">
+    {% endblock metatags %}
     {% block headextras %}
     {% endblock headextras %}
      <!--Schema für das Business-->
