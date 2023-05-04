@@ -51,7 +51,7 @@ Vor allem krankhaft verändertes Gewebe profitiert hiervon. Zur Regeneration bra
 
 Der Energieschub in den Nervenzellen sorgt auch für eine Hyperpolarisation, also einer Abblockung von Reizen. Somit ist gleichzeitig eine Schmerzreduktion möglich.
 
-*Quelle: kontrollierte Laser-Akupunktur für Hunde und Pferde, Uwe Petermann*
+<a href="https://amzn.to/3VzTguk" title="Kontrollierte Laser-Akupunktur für Hunde und Pferde, Uwe Petermann">Quelle: Kontrollierte Laser-Akupunktur für Hunde und Pferde, Uwe Petermann* </a>
 
 ## Einsatzbereiche der *Lasertherapie* bei Tieren
 
@@ -72,3 +72,5 @@ Folgende Einsatzbereiche gibt es (Liste nicht vollständig):
 - Chronische Erkrankungen
 
 Es ist jedoch wichtig zu beachten, dass die Lasertherapie nur eine ergänzende Therapieform ist und bei schweren Erkrankungen alleine nicht ausreicht. Die genaue Anwendung und Dauer der Behandlung sollte immer von einer Fachkraft festgelegt werden.
+
+*Affiliate-Link: Wenn Sie diesen Artikel über den Link kaufen, unterstützen Sie mich ohne zusätzliche Kosten für Sie.

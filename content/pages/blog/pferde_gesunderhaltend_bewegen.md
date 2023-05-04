@@ -55,4 +55,7 @@ Im vergangenen Dezember gab ich einen sehr schönen Workshop zum Thema Muskeln, 
 
 <img src="https://tierheilpraxis-jessican.de/img/blog/pferde_gesunderhaltend_bewegen_4.jpg" alt="Bild vor der Equikinetic®" style="max-width: 100%" loading="lazy"/>
 
-Wenn Sie an der Durchführung der Equikinetic interessiert sind oder beim Lesen weitere Fragen aufgetaucht sind, können Sie mir gerne schreiben. Zur Vertiefung empfehle ich das Buch "Equikinetic Pferde effektiv longieren" von Michael Geitner und Alexandra Schmid.
+Wenn Sie an der Durchführung der Equikinetic interessiert sind oder beim Lesen weitere Fragen aufgetaucht sind, können Sie mir gerne schreiben. Zur Vertiefung empfehle ich folgendes Buch: <a href="https://amzn.to/3VtUtTP " title="Equikinetic®: Pferde effektiv longieren">Equikinetic®: Pferde effektiv longieren* von Michael Geitner und Alexandra Schmid*</a>.
+
+
+*Affiliate-Link: Wenn Sie diesen Artikel über den Link kaufen, unterstützen Sie mich ohne zusätzliche Kosten für Sie.
