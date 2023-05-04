@@ -1,7 +1,7 @@
 +++
-title = "Tierheilkunde im Licht der *Lasertherapie*: Schmerzfrei, schonend & effektiv!"
+title = "Tierheilkunde im Licht der Lasertherapie: Schmerzfrei, schonend & effektiv!"
 date = 2023-05-04
-draft = false
+draft = true
 [taxonomies]
 categories = ["Therapieformen"]
 tags = ["Laserakupunktur", "Akupunktur"]
