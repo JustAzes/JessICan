@@ -14,6 +14,8 @@ Als Sozialarbeiterin ist es natürlich mein Wunsch, meine beiden Leidenschaften 
 
 Während die *Naturheilkunde* den Körper dazu befähigen soll, sich selbst zu heilen, befähigt die soziale Arbeit die Menschen, ihr Leben selbst zu bestimmen, Verantwortung für ihr Tun und Handeln zu übernehmen, gestärkt aus Situationen herauszukommen und an den vorhandenen Sozialsystemen teilzunehmen. Dadurch werden die Ressourcen und Leistungen des Einzelnen gefördert, um zur Besserung der Lebenssituation beizutragen.
 
+## Die ausführliche Anamnese
+
 An erster Stelle steht immer eine ausführliche Anamnese. Dies geschieht über umfangreiche Gespräche und gezielte Fragestellungen. Dabei wird die eigene Situation und das darauf einwirkende Umfeld erfasst. Anschließend wird das damit verbundene Problem und die Zusammenhänge analysiert:
 
 - Was ist das Problem?
@@ -25,6 +27,8 @@ An erster Stelle steht immer eine ausführliche Anamnese. Dies geschieht über u
 Erst dann können gemeinsam Lösungsansätze aufgeschlüsselt werden. Kommt das irgendwie bekannt vor? ;-)
 
 > "Bewusstheit ist der stärkste Katalysator des Wandels." – Regina Brand
+
+## Herangehensweisen als Sozialarbeiterin
 
 Verschiedene Herangehensweisen helfen dann dem Sozialarbeiter dabei. So zum Beispiel:
 
@@ -47,4 +51,3 @@ Vor allem die systemische Beratung betrachtet dabei das Problem als Ganzes. Es g
 Dabei werden verschiedene Methoden angewandt, welche beratender, pädagogischer und therapeutischer Herkunft sein können.
 
 Wie man sieht, steht die Sozialarbeit in vielen Punkten im Einklang mit der *Naturheilkunde*. Deshalb ist es meine Vision, diese beiden Berufszweige irgendwann miteinander kombinierbar zu machen.
-

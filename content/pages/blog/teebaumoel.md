@@ -20,7 +20,7 @@ Das Teebaumöl kann auf verschiedene Arten angewendet werden, um Deinem Hund ode
 
 In der Naturmedizin ist Teebaumöl ein vielseitiger und wertvoller Natur-Allrounder für Deinen Hund oder Dein Pferd. Probiere es aus und beobachte die positive Wirkung!
 
-## Wirkstoffe und ihre Wirkungsweise
+## Wirkstoffe und ihre Wirkungsweise von Teebaumöl
 <img src="https://tierheilpraxis-jessican.de/img/blog/teebaumoel_2.png" alt="Bild von Teebaumöl" style="max-width: 100%" loading="lazy"/>
 
 Teebaumöl enthält eine Vielzahl von Wirkstoffen, die für seine heilenden Eigenschaften verantwortlich sind. Hier sind einige der wichtigsten Inhaltsstoffe:

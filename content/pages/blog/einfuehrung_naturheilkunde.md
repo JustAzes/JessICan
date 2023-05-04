@@ -23,6 +23,8 @@ Hier kommt die Naturheilkunde ins Spiel. Sie kann als Ergänzung zur Schulmedizi
 
 Viele Menschen denken sofort an Globuli, Schüssler-Salze und andere kleine Helfer. Diese Verfahren sind durchaus berechtigt und können unterstützend wirken. Der Ansatz sollte jedoch dort liegen, wo Körper und Geist ständig beeinflusst werden: bei Ernährung, Bewegung und emotionalem Ausgleich – sowohl bei uns selbst als auch in unserer Familie mit unseren Tieren.
 
+## Emotionaler Ausgleich gegen Stress
+
 > "Krankheit ist eine Art von Festigung der geistigen Haltung, man braucht nur den Geist eines Patienten zu behandeln, und die Krankheit verschwindet." - Edward Bach, englischer Arzt, Begründer der Bachblüten-Therapie
 
 Was einfach klingt, ist in Wirklichkeit ein komplexes Thema – sowohl für uns Menschen als auch für unsere Tiere.
@@ -34,6 +36,8 @@ Er schwächt unser Immunsystem und macht uns anfälliger für Krankheiten. Stres
 Chronischer Stress erhöht nachweislich auch das Risiko für Herzkrankheiten. Es werden kontinuierlich Adrenalin, Noradrenalin und Cortisol ausgeschüttet, was zu einer erhöhten Herzfrequenz und verstärkten Herzmuskelkontraktionen führt. Dadurch wird mehr Blut durch den Körper gepumpt, was zu erhöhtem Blutdruck führt.
 
 Also müssen wir einfach nur den Stressfaktor finden und ausschalten, oder? Leichter gesagt als getan.
+
+## Bewegung in Richtung Gesundheit
 
 > "Jede Bewegung hat eine Richtung." - Redewendung
 
@@ -70,9 +74,13 @@ Die folgende Tabelle zeigt den Einfluss von körperlicher Bewegung auf viele wic
 
 > "Der Weg zur Gesundheit führt durch die Küche." - Sebastian Kneipp
 
+## Die richtige Ernährung
+
 Der letzte und zugleich umfangreichste Punkt ist die Ernährung.
 
 Eine gezielte, gesundheitsfördernde Ernährung hat viele verschiedene, teils individuelle Einflussfaktoren. Deshalb möchte ich an dieser Stelle noch nicht näher darauf eingehen. In Zukunft wird es interessante und aufschlussreiche Beiträge geben, die sich speziell mit der Ernährung von Pferden, Hunden und Menschen befassen.
+
+## Weitere Methoden der Behandlung
 
 Zusätzlich zu diesen drei Säulen können weitere Methoden aus der Naturheilkunde, Komplementärmedizin, Alternativmedizin oder auch der Schulmedizin angewendet werden, wie beispielsweise:
 - Phytotherapie

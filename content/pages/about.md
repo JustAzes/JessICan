@@ -6,7 +6,7 @@ template = "about.html"
 
 Mein Name ist Jessica und mein Ziel ist es, Menschen und Tieren dabei zu helfen, gemeinsam gesundheitliche Herausforderungen zu bewältigen.
 
-**Mensch und Tier?** Gemeinsamkeit ist meine Philosophie!
+## Mensch und Tier? Gemeinsamkeit ist meine Philosophie!
 
 Ich bin selbst mit Tieren aufgewachsen - Hund, Katze, (Wüstenrenn-)Maus und viele andere waren stets an meiner Seite. Seit meinem 6. Lebensjahr sitze ich auf dem Pferd und seit 2012 ist mein Lewitzer Pony Gino mein seelischer Ausgleich.
 
