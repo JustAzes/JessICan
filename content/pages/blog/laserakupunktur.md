@@ -3,11 +3,13 @@ title = "Tierheilkunde im Licht der *Lasertherapie*: Schmerzfrei, schonend & eff
 date = 2023-05-04
 [taxonomies]
 categories = ["Therapieformen"]
-tags = []
-draft = true
+tags = [Tiergesundheit, Lasertherapie, schmerzfrei]
+draft = false
 +++
 
 Entdecken Sie die faszinierende Welt der [Lasertherapie] in der **Tierheilkunde**! Diese schmerzfreie und schonende Alternative zur herkömmlichen **Akupunktur** bietet vielfältige Anwendungsmöglichkeiten und fördert die Selbstheilungskräfte unserer geliebten Vierbeiner. Durch gezielte Bestrahlung können Schmerzen gelindert, Entzündungen gehemmt und der Heilungsprozess unterstützt werden. Erfahren Sie mehr über diese revolutionäre Methode und ihre Einsatzbereiche in unserem ausführlichen Artikel. 
+
+
 <!-- more -->
 
 
@@ -56,7 +58,7 @@ Der Energieschub in den Nervenzellen sorgt auch für eine Hyperpolarisation, als
 
 ## Einleitung
 
-Die *[Lasertherapie]* ist eine schonende und schmerzfreie Alternative zur herkömmlichen Akupunktur und bietet vielfältige Anwendungsmöglichkeiten in der Tierheilkunde. Durch die gezielte Bestrahlung von Akupunkturpunkten und erkranktem Gewebe kann diese Methode Schmerzen lindern, Entzündungen hemmen und den Heilungsprozess unterstützen. Die *[Lasertherapie]* kann als eigenständige Behandlung oder in Kombination mit anderen Therapieformen angewendet werden. In diesem Artikel werden die verschiedenen Einsatzbereiche und die wissenschaftliche Erklärung der *[Lasertherapie]* vorgestellt.
+Die *[Lasertherapie]* ist eine schonende und schmerzfreie Alternative zur herkömmlichen Akupunktur und bietet vielfältige Anwendungsmöglichkeiten in der Tierheilkunde. Durch die gezielte Bestrahlung von Akupunkturpunkten und erkranktem Gewebe kann diese Methode Schmerzen lindern, Entzündungen hemmen und den Heilungsprozess unterstützen. Die *[Lasertherapie]* kann als eigenständige Behandlung oder in Kombination mit anderen Therapieformen angewendet werden. In diesem Artikel werden die verschiedenen Einsatzbereiche und die wissenschaftliche Erklärung der *[Lasertherapie]* vorgestellt.  
 
 ## Einsatzbereiche der *[Lasertherapie]* bei Tieren
 
@@ -76,4 +78,4 @@ Folgende Einsatzbereiche gibt es (Liste nicht vollständig):
 - (unspezifische) Lahmheiten
 - Chronische Erkrankungen
 
-
+Es ist jedoch wichtig zu beachten, dass die Lasertherapie nur eine ergänzende Therapieform ist und bei schweren Erkrankungen alleine nicht ausreicht. Die genaue Anwendung und Dauer der Behandlung sollte immer von einer Fachkraft festgelegt werden.
