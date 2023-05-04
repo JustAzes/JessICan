@@ -68,7 +68,19 @@
         },
         "email": "tierheilpraxis-jessican[at]gmx.de",
         "telephone": "+49 173 789 0040",
-        "areaServed": "Lichtenberg und Umgebung",
+        "priceRange" : "$",
+        "areaServed": { 
+          "@type": "GeoCircle", 
+          address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Wachauer Str. 6",
+            "addressLocality": "Lichtenberg",
+            "addressRegion": "SN",
+            "postalCode": "01896",
+            "addressCountry": "DE"
+          },
+          "geoRadius": "100000" 
+        },
         "serviceType": "Mobile Tierheilpraxis für Hunde und Pferde"
       }
     </script>
@@ -79,7 +91,7 @@
   <!-- Navigation -->
   <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
     <div class="container">
-      <a class="navbar-brand" href="{{ config.base_url }}">{{config.title}}</a>
+      <a class="navbar-brand" href="{{ config.base_url }}" title = "{{config.title}}">{{config.title}}</a>
       <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
         data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
         aria-label="Toggle navigation">
@@ -94,13 +106,13 @@
                 <a class="nav-link dropdown-toggle"
                   href="{{ item.url | replace(from="$BASE_URL", to=config.base_url) }}"
                   id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
-                  aria-expanded="false">
+                  aria-expanded="false" title="{{ item.name }}">
                   {{ item.name }}
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                   {% for submenu_item in item.submenu %}
                     <a class="dropdown-item"
-                      href="{{ submenu_item.url | replace(from="$BASE_URL", to=config.base_url) }}">
+                      href="{{ submenu_item.url | replace(from="$BASE_URL", to=config.base_url) }}" title="{{ submenu_item.name }}">
                       {{ submenu_item.name }}
                     </a>
                   {% endfor %}
@@ -109,7 +121,7 @@
             {% else %}
               <li class="nav-item">
                 <a class="nav-link"
-                  href="{{ item.url | replace(from="$BASE_URL", to=config.base_url) }}">{{ item.name }}</a>
+                  href="{{ item.url | replace(from="$BASE_URL", to=config.base_url) }}" title="{{ item.name }}">{{ item.name }}</a>
               </li>
             {% endif %}
           {% endfor %}
