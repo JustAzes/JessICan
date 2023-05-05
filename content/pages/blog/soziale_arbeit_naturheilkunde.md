@@ -10,7 +10,22 @@ Als Sozialarbeiterin ist es natürlich mein Wunsch, meine beiden Leidenschaften 
 
 <!-- more -->
 
-<img src="https://tierheilpraxis-jessican.de/img/blog/soziale_arbeit_naturheilkunde.jpg" alt="Bild von Tierheilpraktiker mit Hund" style="max-width: 100%; text-align:center;" loading="lazy"/>
+<picture>
+  <source srcset="https://tierheilpraxis-jessican.de/img/blog/soziale_arbeit_naturheilkunde_small.avif" type="image/avif" media="(max-width: 319px)">
+  <source srcset="https://tierheilpraxis-jessican.de/img/blog/soziale_arbeit_naturheilkunde_small.webp" type="image/webp" media="(max-width: 319px)">
+  <source srcset="https://tierheilpraxis-jessican.de/img/blog/soziale_arbeit_naturheilkunde_small.jpeg" type="image/jpeg" media="(max-width: 319px)">
+
+  <source srcset="https://tierheilpraxis-jessican.de/img/blog/soziale_arbeit_naturheilkunde_medium.avif" type="image/avif" media="(min-width: 320px) and (max-width: 767px)">
+  <source srcset="https://tierheilpraxis-jessican.de/img/blog/soziale_arbeit_naturheilkunde_medium.webp" type="image/webp" media="(min-width: 320px) and (max-width: 767px)">
+  <source srcset="https://tierheilpraxis-jessican.de/img/blog/soziale_arbeit_naturheilkunde_medium.jpeg" type="image/jpeg" media="(min-width: 320px) and (max-width: 767px)">
+
+  <source srcset="https://tierheilpraxis-jessican.de/img/blog/soziale_arbeit_naturheilkunde_large.avif" type="image/avif" media="(min-width: 768px)">
+  <source srcset="https://tierheilpraxis-jessican.de/img/blog/soziale_arbeit_naturheilkunde_large.webp" type="image/webp" media="(min-width: 768px)">
+  <source srcset="https://tierheilpraxis-jessican.de/img/blog/soziale_arbeit_naturheilkunde_large.jpeg" type="image/jpeg" media="(min-width: 768px)">
+
+  <img src="https://tierheilpraxis-jessican.de/img/blog/soziale_arbeit_naturheilkunde_large.png" alt="Bild von Tierheilpraktiker mit Hund" style="max-width: 100%; text-align:center;" loading="lazy">
+</picture>
+
 
 Während die *Naturheilkunde* den Körper dazu befähigen soll, sich selbst zu heilen, befähigt die soziale Arbeit die Menschen, ihr Leben selbst zu bestimmen, Verantwortung für ihr Tun und Handeln zu übernehmen, gestärkt aus Situationen herauszukommen und an den vorhandenen Sozialsystemen teilzunehmen. Dadurch werden die Ressourcen und Leistungen des Einzelnen gefördert, um zur Besserung der Lebenssituation beizutragen.
 

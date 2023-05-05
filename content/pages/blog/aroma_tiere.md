@@ -16,8 +16,22 @@ Also bot ich ihr eine Aromatherapie an - sie stürzte sich förmlich auf ihr aus
 
 Welches Öl es war? Das könnt ihr weiter unten lesen.
 <hr style="border-color: green">
-<img src="https://tierheilpraxis-jessican.de/img/blog/aroma_tiere.jpg" alt="Hund Talia vor der Aromatherapie" style="max-width: 100%" loading="lazy"/>
 
+<picture>
+  <source srcset="https://tierheilpraxis-jessican.de/img/blog/aroma_tiere_small.avif" type="image/avif" media="(max-width: 319px)">
+  <source srcset="https://tierheilpraxis-jessican.de/img/blog/aroma_tiere_small.webp" type="image/webp" media="(max-width: 319px)">
+  <source srcset="https://tierheilpraxis-jessican.de/img/blog/aroma_tiere_small.jpeg" type="image/jpeg" media="(max-width: 319px)">
+
+  <source srcset="https://tierheilpraxis-jessican.de/img/blog/aroma_tiere_medium.avif" type="image/avif" media="(min-width: 320px) and (max-width: 767px)">
+  <source srcset="https://tierheilpraxis-jessican.de/img/blog/aroma_tiere_medium.webp" type="image/webp" media="(min-width: 320px) and (max-width: 767px)">
+  <source srcset="https://tierheilpraxis-jessican.de/img/blog/aroma_tiere_medium.jpeg" type="image/jpeg" media="(min-width: 320px) and (max-width: 767px)">
+
+  <source srcset="https://tierheilpraxis-jessican.de/img/blog/aroma_tiere_large.avif" type="image/avif" media="(min-width: 768px)">
+  <source srcset="https://tierheilpraxis-jessican.de/img/blog/aroma_tiere_large.webp" type="image/webp" media="(min-width: 768px)">
+  <source srcset="https://tierheilpraxis-jessican.de/img/blog/aroma_tiere_large.jpeg" type="image/jpeg" media="(min-width: 768px)">
+
+  <img src="https://tierheilpraxis-jessican.de/img/blog/aroma_tiere_large.png" alt="Hund Talia vor der Aromatherapie" style="max-width: 100%" loading="lazy">
+</picture>
 
 Körper, Seele und Geist. Im Idealfall ein harmonisches Miteinander. Aber mindestens einer tanzt gerne aus der Reihe.
 Klaus Seibold 

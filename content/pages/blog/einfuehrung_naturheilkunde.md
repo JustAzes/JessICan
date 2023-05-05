@@ -9,7 +9,21 @@ tags = []
 Lesen Sie hier über die Eckpfeiler der Naturheilkunde!
 <!-- more -->
 
-<img src="https://tierheilpraxis-jessican.de/img/blog/einfuehrung_naturheilkunde.jpg" alt="Bild von Hund in Natur, sybomlisch für die Naturheilkunde" style="max-width: 100%;" loading="lazy"/>
+<picture>
+  <source srcset="https://tierheilpraxis-jessican.de/img/blog/einfuehrung_naturheilkunde_small.avif" type="image/avif" media="(max-width: 319px)">
+  <source srcset="https://tierheilpraxis-jessican.de/img/blog/einfuehrung_naturheilkunde_small.webp" type="image/webp" media="(max-width: 319px)">
+  <source srcset="https://tierheilpraxis-jessican.de/img/blog/einfuehrung_naturheilkunde_small.jpeg" type="image/jpeg" media="(max-width: 319px)">
+
+  <source srcset="https://tierheilpraxis-jessican.de/img/blog/einfuehrung_naturheilkunde_medium.avif" type="image/avif" media="(min-width: 320px) and (max-width: 767px)">
+  <source srcset="https://tierheilpraxis-jessican.de/img/blog/einfuehrung_naturheilkunde_medium.webp" type="image/webp" media="(min-width: 320px) and (max-width: 767px)">
+  <source srcset="https://tierheilpraxis-jessican.de/img/blog/einfuehrung_naturheilkunde_medium.jpeg" type="image/jpeg" media="(min-width: 320px) and (max-width: 767px)">
+
+  <source srcset="https://tierheilpraxis-jessican.de/img/blog/einfuehrung_naturheilkunde_large.avif" type="image/avif" media="(min-width: 768px)">
+  <source srcset="https://tierheilpraxis-jessican.de/img/blog/einfuehrung_naturheilkunde_large.webp" type="image/webp" media="(min-width: 768px)">
+  <source srcset="https://tierheilpraxis-jessican.de/img/blog/einfuehrung_naturheilkunde_large.jpeg" type="image/jpeg" media="(min-width: 768px)">
+
+  <img src="https://tierheilpraxis-jessican.de/img/blog/einfuehrung_naturheilkunde_large.png" alt="Bild von Hund in Natur, sybomlisch für die Naturheilkunde" style="max-width: 100%;" loading="lazy">
+</picture>
 
 Tagtäglich sind wir von Wiesen, Bächen, Blumen und Bäumen umgeben. Doch nehmen wir die Vielfalt der Natur und ihre Wirkung auf uns wirklich wahr?
 
