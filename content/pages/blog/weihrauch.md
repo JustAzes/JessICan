@@ -13,18 +13,19 @@ Weihrauch ist ein Harz, das aus bestimmten Bäumen der Gattung Boswellia gewonne
   <!-- Für kleine Bildschirme -->
   <source srcset="https://tierheilpraxis-jessican.de/img/blog/weihrauch_1_small.avif" type="image/avif" media="(max-width: 319px)">
   <source srcset="https://tierheilpraxis-jessican.de/img/blog/weihrauch_1_small.webp" type="image/webp" media="(max-width: 319px)">
-  <img src="https://tierheilpraxis-jessican.de/img/blog/weihrauch_1_small.jpeg" alt="Bild von Weihrauch in der Pflanzenheilkunde" style="max-width: 100%;" loading="lazy" media="(max-width: 319px)" sizes="(max-width: 319px) 100vw">
+  <img src="https://tierheilpraxis-jessican.de/img/blog/weihrauch_1_small.jpeg" alt="Bild von Weihrauch in der Pflanzenheilkunde" style="max-width: 100%;" loading="lazy" media="(max-width: 319px)">
 
   <!-- Für mittlere Bildschirme -->
   <source srcset="https://tierheilpraxis-jessican.de/img/blog/weihrauch_1_medium.avif" type="image/avif" media="(min-width: 320px) and (max-width: 767px)">
   <source srcset="https://tierheilpraxis-jessican.de/img/blog/weihrauch_1_medium.webp" type="image/webp" media="(min-width: 320px) and (max-width: 767px)">
-  <img src="https://tierheilpraxis-jessican.de/img/blog/weihrauch_1_medium.jpeg" alt="Bild von Weihrauch in der Pflanzenheilkunde" style="max-width: 100%;" loading="lazy" media="(min-width: 320px) and (max-width: 767px)" sizes="(min-width: 320px) and (max-width: 767px) 50vw">
+  <img src="https://tierheilpraxis-jessican.de/img/blog/weihrauch_1_medium.jpeg" alt="Bild von Weihrauch in der Pflanzenheilkunde" style="max-width: 100%;" loading="lazy" media="(min-width: 320px) and (max-width: 767px)">
 
   <!-- Für große Bildschirme -->
   <source srcset="https://tierheilpraxis-jessican.de/img/blog/weihrauch_1_large.avif" type="image/avif" media="(min-width: 768px)">
   <source srcset="https://tierheilpraxis-jessican.de/img/blog/weihrauch_1_large.webp" type="image/webp" media="(min-width: 768px)">
-  <img src="https://tierheilpraxis-jessican.de/img/blog/weihrauch_1_large.jpeg" alt="Bild von Weihrauch in der Pflanzenheilkunde" style="max-width: 100%;" loading="lazy" media="(min-width: 768px)" sizes="(min-width: 768px) 33.3vw">
+  <img src="https://tierheilpraxis-jessican.de/img/blog/weihrauch_1_large.jpeg" alt="Bild von Weihrauch in der Pflanzenheilkunde" style="max-width: 100%;" loading="lazy" media="(min-width: 768px)">
 </picture>
+
 
 
 Das Harz wird aus den Stämmen und Zweigen der Bäume gewonnen, indem man kleine Schnitte in die Rinde macht. Es tritt dann aus den Schnitten aus und wird von Hand gesammelt, wenn es getrocknet ist. Das Harz kann dann in seiner natürlichen Form oder nach der Verarbeitung in Ölform verwendet werden.
