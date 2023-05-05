@@ -24,7 +24,6 @@ clean_blog_menu = [
 
 clean_blog_social = [
     {url = "https://www.instagram.com/jessican_natuerlich/", icon="fab fa-instagram"},
-    {url = "https://facebook.com/tierheilpraxisjessican", icon="fab fa-facebook",
-    url = "https://twitter.com/thp_jessican", icon="fab fa-twitter"
-    }
+    {url = "https://facebook.com/tierheilpraxisjessican", icon="fab fa-facebook"},
+    {url = "https://twitter.com/thp_jessican", icon="fab fa-twitter"}
 ]
