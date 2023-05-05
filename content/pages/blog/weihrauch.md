@@ -9,7 +9,23 @@ tags = []
 Weihrauch ist ein Harz, das aus bestimmten Bäumen der Gattung Boswellia gewonnen wird. Diese Bäume wachsen hauptsächlich in den Trockengebieten des Nahen Ostens und Nordost-Afrikas. Die am häufigsten verwendeten Arten für die Weihrauchgewinnung sind Boswellia sacra, Boswellia carterii und Boswellia serrata.
 <!-- more -->
 
-<img src="https://tierheilpraxis-jessican.de/img/blog/weihrauch_1.png" alt="Bild von Weihrauch in der Pflanzenheilkunde" style="max-width: 100%" loading="lazy"/>
+<picture>
+  <!-- Für kleine Bildschirme -->
+  <source srcset="https://tierheilpraxis-jessican.de/img/blog/weihrauch_1_small.avif" type="image/avif" media="(max-width: 319px)">
+  <source srcset="https://tierheilpraxis-jessican.de/img/blog/weihrauch_1_small.webp" type="image/webp" media="(max-width: 319px)">
+  <img src="https://tierheilpraxis-jessican.de/img/blog/weihrauch_1_small.jpeg" alt="Bild von Weihrauch in der Pflanzenheilkunde" style="max-width: 100%;" loading="lazy" media="(max-width: 319px)" sizes="(max-width: 319px) 100vw">
+
+  <!-- Für mittlere Bildschirme -->
+  <source srcset="https://tierheilpraxis-jessican.de/img/blog/weihrauch_1_medium.avif" type="image/avif" media="(min-width: 320px) and (max-width: 767px)">
+  <source srcset="https://tierheilpraxis-jessican.de/img/blog/weihrauch_1_medium.webp" type="image/webp" media="(min-width: 320px) and (max-width: 767px)">
+  <img src="https://tierheilpraxis-jessican.de/img/blog/weihrauch_1_medium.jpeg" alt="Bild von Weihrauch in der Pflanzenheilkunde" style="max-width: 100%;" loading="lazy" media="(min-width: 320px) and (max-width: 767px)" sizes="(min-width: 320px) and (max-width: 767px) 50vw">
+
+  <!-- Für große Bildschirme -->
+  <source srcset="https://tierheilpraxis-jessican.de/img/blog/weihrauch_1_large.avif" type="image/avif" media="(min-width: 768px)">
+  <source srcset="https://tierheilpraxis-jessican.de/img/blog/weihrauch_1_large.webp" type="image/webp" media="(min-width: 768px)">
+  <img src="https://tierheilpraxis-jessican.de/img/blog/weihrauch_1_large.jpeg" alt="Bild von Weihrauch in der Pflanzenheilkunde" style="max-width: 100%;" loading="lazy" media="(min-width: 768px)" sizes="(min-width: 768px) 33.3vw">
+</picture>
+
 
 Das Harz wird aus den Stämmen und Zweigen der Bäume gewonnen, indem man kleine Schnitte in die Rinde macht. Es tritt dann aus den Schnitten aus und wird von Hand gesammelt, wenn es getrocknet ist. Das Harz kann dann in seiner natürlichen Form oder nach der Verarbeitung in Ölform verwendet werden.
 
@@ -25,22 +41,7 @@ Obwohl Weihrauch in der traditionellen Medizin und Religion seit Jahrhunderten g
 
 ## Inhaltsstoffe und ihre Besonderheiten
 
-<picture>
-  <!-- Für kleine Bildschirme -->
-  <source srcset="https://tierheilpraxis-jessican.de/img/blog/weihrauch_1_small.avif" type="image/avif" media="(max-width: 319px)">
-  <source srcset="https://tierheilpraxis-jessican.de/img/blog/weihrauch_1_small.webp" type="image/webp" media="(max-width: 319px)">
-  <img src="https://tierheilpraxis-jessican.de/img/blog/weihrauch_1_small.jpeg" alt="Bild von Weihrauch in der Pflanzenheilkunde" style="max-width: 100%;" loading="lazy" media="(max-width: 319px)">
-
-  <!-- Für mittlere Bildschirme -->
-  <source srcset="https://tierheilpraxis-jessican.de/img/blog/weihrauch_1_medium.avif" type="image/avif" media="(min-width: 320px) and (max-width: 767px)">
-  <source srcset="https://tierheilpraxis-jessican.de/img/blog/weihrauch_1_medium.webp" type="image/webp" media="(min-width: 320px) and (max-width: 767px)">
-  <img src="https://tierheilpraxis-jessican.de/img/blog/weihrauch_1_medium.jpeg" alt="Bild von Weihrauch in der Pflanzenheilkunde" style="max-width: 100%;" loading="lazy" media="(min-width: 320px) and (max-width: 767px)">
-
-  <!-- Für große Bildschirme -->
-  <source srcset="https://tierheilpraxis-jessican.de/img/blog/weihrauch_1_large.avif" type="image/avif" media="(min-width: 768px)">
-  <source srcset="https://tierheilpraxis-jessican.de/img/blog/weihrauch_1_large.webp" type="image/webp" media="(min-width: 768px)">
-  <img src="https://tierheilpraxis-jessican.de/img/blog/weihrauch_1_large.jpeg" alt="Bild von Weihrauch in der Pflanzenheilkunde" style="max-width: 100%;" loading="lazy" media="(min-width: 768px)">
-</picture>
+<img src="https://tierheilpraxis-jessican.de/img/blog/weihrauch_2.png" alt="Bild von Weihrauch in der Phytotherapie" style="max-width: 100%" loading="lazy"/>
 
 Weihrauch enthält eine Vielzahl von Wirkstoffen, die für seine gesundheitlichen Vorteile verantwortlich sind. Hier sind einige der wichtigsten Inhaltsstoffe von Weihrauch und ihre Besonderheiten:
 - **Boswelliasäure:** Boswelliasäure ist einer der wichtigsten Inhaltsstoffe von Weihrauch. Es hat entzündungshemmende Eigenschaften und kann helfen, die Symptome von Erkrankungen wie rheumatoider Arthritis und Asthma zu verbessern. Es kann auch helfen, Schmerzen und Entzündungen zu lindern. Wie Boswelliasäure dies schafft? Es sorgt dafür, dass unser entzündungsförderndes Enzym 5-Lipoxygenase im Körper umprogrammiert wird. So wirkt es nun entzündungshemmend.
