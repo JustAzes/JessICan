@@ -11,7 +11,21 @@ Pferde, die sich täglich frei und ungehindert bewegen können, legen große Str
 
 <!-- more -->
 
-<img src="https://tierheilpraxis-jessican.de/img/blog/pferde_gesunderhaltend_bewegen_1.jpg" alt="Bild von Pferd in Bewegung" style="max-width: 100%" loading="lazy"/>
+<picture>
+  <source srcset="https://tierheilpraxis-jessican.de/img/blog/pferde_gesunderhaltend_bewegen_1_small.avif" type="image/avif" media="(max-width: 319px)">
+  <source srcset="https://tierheilpraxis-jessican.de/img/blog/pferde_gesunderhaltend_bewegen_1_small.webp" type="image/webp" media="(max-width: 319px)">
+  <source srcset="https://tierheilpraxis-jessican.de/img/blog/pferde_gesunderhaltend_bewegen_1_small.jpeg" type="image/jpeg" media="(max-width: 319px)">
+
+  <source srcset="https://tierheilpraxis-jessican.de/img/blog/pferde_gesunderhaltend_bewegen_1_medium.avif" type="image/avif" media="(min-width: 320px) and (max-width: 767px)">
+  <source srcset="https://tierheilpraxis-jessican.de/img/blog/pferde_gesunderhaltend_bewegen_1_medium.webp" type="image/webp" media="(min-width: 320px) and (max-width: 767px)">
+  <source srcset="https://tierheilpraxis-jessican.de/img/blog/pferde_gesunderhaltend_bewegen_1_medium.jpeg" type="image/jpeg" media="(min-width: 320px) and (max-width: 767px)">
+
+  <source srcset="https://tierheilpraxis-jessican.de/img/blog/pferde_gesunderhaltend_bewegen_1_large.avif" type="image/avif" media="(min-width: 768px)">
+  <source srcset="https://tierheilpraxis-jessican.de/img/blog/pferde_gesunderhaltend_bewegen_1_large.webp" type="image/webp" media="(min-width: 768px)">
+  <source srcset="https://tierheilpraxis-jessican.de/img/blog/pferde_gesunderhaltend_bewegen_1_large.jpeg" type="image/jpeg" media="(min-width: 768px)">
+
+  <img src="https://tierheilpraxis-jessican.de/img/blog/pferde_gesunderhaltend_bewegen_1_large.png" alt="Bild von Pferd in Bewegung" style="max-width: 100%" loading="lazy">
+</picture>
 
 Doch was bedeutet gesunderhaltend Bewegen genau?
 
@@ -35,7 +49,21 @@ Faszien sind eine dünne Haut, welche die  <span style="color:red">dorsalen</spa
 
 Durch beispielsweise einseitige oder überstrapazierte Bewegungen können Verfilzungen an einer oder mehreren Stellen entstehen. Da die Muskulatur ein Zusammenspiel vieler Komponenten ist, können gestörte Faszien den gesamten Bewegungsablauf des Pferdes beeinträchtigen, auch an Stellen, an denen die Faszien nicht verfilzt sind.
 
-<img src="https://tierheilpraxis-jessican.de/img/blog/pferde_gesunderhaltend_bewegen_2.jpg" alt="Bild von Pferd in Bewegung mit eingezeichneten dorsalen und ventralen Muskelketten" style="max-width: 100%" loading="lazy"/>
+<picture>
+  <source srcset="https://tierheilpraxis-jessican.de/img/blog/pferde_gesunderhaltend_bewegen_2_small.avif" type="image/avif" media="(max-width: 319px)">
+  <source srcset="https://tierheilpraxis-jessican.de/img/blog/pferde_gesunderhaltend_bewegen_2_small.webp" type="image/webp" media="(max-width: 319px)">
+  <source srcset="https://tierheilpraxis-jessican.de/img/blog/pferde_gesunderhaltend_bewegen_2_small.jpeg" type="image/jpeg" media="(max-width: 319px)">
+
+  <source srcset="https://tierheilpraxis-jessican.de/img/blog/pferde_gesunderhaltend_bewegen_2_medium.avif" type="image/avif" media="(min-width: 320px) and (max-width: 767px)">
+  <source srcset="https://tierheilpraxis-jessican.de/img/blog/pferde_gesunderhaltend_bewegen_2_medium.webp" type="image/webp" media="(min-width: 320px) and (max-width: 767px)">
+  <source srcset="https://tierheilpraxis-jessican.de/img/blog/pferde_gesunderhaltend_bewegen_2_medium.jpeg" type="image/jpeg" media="(min-width: 320px) and (max-width: 767px)">
+
+  <source srcset="https://tierheilpraxis-jessican.de/img/blog/pferde_gesunderhaltend_bewegen_2_large.avif" type="image/avif" media="(min-width: 768px)">
+  <source srcset="https://tierheilpraxis-jessican.de/img/blog/pferde_gesunderhaltend_bewegen_2_large.webp" type="image/webp" media="(min-width: 768px)">
+  <source srcset="https://tierheilpraxis-jessican.de/img/blog/pferde_gesunderhaltend_bewegen_2_large.jpeg" type="image/jpeg" media="(min-width: 768px)">
+
+  <img src="https://tierheilpraxis-jessican.de/img/blog/pferde_gesunderhaltend_bewegen_2_large.png" alt="Bild von Pferd in Bewegung mit eingezeichneten dorsalen und ventralen Muskelketten" style="max-width: 100%" loading="lazy">
+</picture>
 
 
 ## Equikinetic® nach Michael Geitner
@@ -45,7 +73,22 @@ Equikinetic ist ein Intervalltraining, das das Pferd gleichmäßig und gleichsei
 
 Dieser Bewegungsablauf unterstützt dabei, das Pferd gerade zu richten. Jedes Pferd hat eine bevorzugte Seite, die sogenannte hohle Seite. Um herauszufinden, welche Seite das bei Ihrem Pferd ist, lassen Sie es einfach am langen Strick geradeaus laufen. Der Kopf schaut meist leicht zu einer Seite – das ist die Lieblingsseite Ihres Pferdes. Erst wenn diese natürliche Schiefe überwunden ist, kann das Pferd gerade gerichtet laufen.
 
-<img src="https://tierheilpraxis-jessican.de/img/blog/pferde_gesunderhaltend_bewegen_3.jpg" alt="Bild von Pferd mit Zubehör für die Equikinetic®" style="max-width: 100%" loading="lazy"/>
+<picture>
+  <source srcset="https://tierheilpraxis-jessican.de/img/blog/pferde_gesunderhaltend_bewegen_3_small.avif" type="image/avif" media="(max-width: 319px)">
+  <source srcset="https://tierheilpraxis-jessican.de/img/blog/pferde_gesunderhaltend_bewegen_3_small.webp" type="image/webp" media="(max-width: 319px)">
+  <source srcset="https://tierheilpraxis-jessican.de/img/blog/pferde_gesunderhaltend_bewegen_3_small.jpeg" type="image/jpeg" media="(max-width: 319px)">
+
+  <source srcset="https://tierheilpraxis-jessican.de/img/blog/pferde_gesunderhaltend_bewegen_3_medium.avif" type="image/avif" media="(min-width: 320px) and (max-width: 767px)">
+  <source srcset="https://tierheilpraxis-jessican.de/img/blog/pferde_gesunderhaltend_bewegen_3_medium.webp" type="image/webp" media="(min-width: 320px) and (max-width: 767px)">
+  <source srcset="https://tierheilpraxis-jessican.de/img/blog/pferde_gesunderhaltend_bewegen_3_medium.jpeg" type="image/jpeg" media="(min-width: 320px) and (max-width: 767px)">
+
+  <source srcset="https://tierheilpraxis-jessican.de/img/blog/pferde_gesunderhaltend_bewegen_3_large.avif" type="image/avif" media="(min-width: 768px)">
+  <source srcset="https://tierheilpraxis-jessican.de/img/blog/pferde_gesunderhaltend_bewegen_3_large.webp" type="image/webp" media="(min-width: 768px)">
+  <source srcset="https://tierheilpraxis-jessican.de/img/blog/pferde_gesunderhaltend_bewegen_3_large.jpeg" type="image/jpeg" media="(min-width: 768px)">
+
+  <img src="https://tierheilpraxis-jessican.de/img/blog/pferde_gesunderhaltend_bewegen_3_large.png" alt="Bild von Pferd mit Zubehör für die Equikinetic®" style="max-width: 100%" loading="lazy">
+</picture>
+
 
 Ich selbst praktiziere Equikinetic® seit rund vier Jahren mit meinem Pferd. Sobald ich es in die Gassen führe, hat es seine volle Aufmerksamkeit auf mich gerichtet. Umgekehrt verlässt es sich auch darauf, dass ich die Pausensequenzen einhalte und das Training mit der letzten Arbeitsrunde tatsächlich beende.
 
@@ -53,7 +96,21 @@ Equikinetic ist nicht nur ein hervorragendes Muskeltraining, sondern dient auch 
 
 Im vergangenen Dezember gab ich einen sehr schönen Workshop zum Thema Muskeln, Sehnen und Faszien. Dabei haben wir gemeinsam einige Grundlagen des geführten Longierens geübt. Vielen Dank nochmals für die Gelegenheit!
 
-<img src="https://tierheilpraxis-jessican.de/img/blog/pferde_gesunderhaltend_bewegen_4.jpg" alt="Bild vor der Equikinetic®" style="max-width: 100%" loading="lazy"/>
+<picture>
+  <source srcset="https://tierheilpraxis-jessican.de/img/blog/pferde_gesunderhaltend_bewegen_4_small.avif" type="image/avif" media="(max-width: 319px)">
+  <source srcset="https://tierheilpraxis-jessican.de/img/blog/pferde_gesunderhaltend_bewegen_4_small.webp" type="image/webp" media="(max-width: 319px)">
+  <source srcset="https://tierheilpraxis-jessican.de/img/blog/pferde_gesunderhaltend_bewegen_4_small.jpeg" type="image/jpeg" media="(max-width: 319px)">
+
+  <source srcset="https://tierheilpraxis-jessican.de/img/blog/pferde_gesunderhaltend_bewegen_4_medium.avif" type="image/avif" media="(min-width: 320px) and (max-width: 767px)">
+  <source srcset="https://tierheilpraxis-jessican.de/img/blog/pferde_gesunderhaltend_bewegen_4_medium.webp" type="image/webp" media="(min-width: 320px) and (max-width: 767px)">
+  <source srcset="https://tierheilpraxis-jessican.de/img/blog/pferde_gesunderhaltend_bewegen_4_medium.jpeg" type="image/jpeg" media="(min-width: 320px) and (max-width: 767px)">
+
+  <source srcset="https://tierheilpraxis-jessican.de/img/blog/pferde_gesunderhaltend_bewegen_4_large.avif" type="image/avif" media="(min-width: 768px)">
+  <source srcset="https://tierheilpraxis-jessican.de/img/blog/pferde_gesunderhaltend_bewegen_4_large.webp" type="image/webp" media="(min-width: 768px)">
+  <source srcset="https://tierheilpraxis-jessican.de/img/blog/pferde_gesunderhaltend_bewegen_4_large.jpeg" type="image/jpeg" media="(min-width: 768px)">
+
+  <img src="https://tierheilpraxis-jessican.de/img/blog/pferde_gesunderhaltend_bewegen_4_large.png" alt="Bild vor der Equikinetic®" style="max-width: 100%" loading="lazy">
+</picture>
 
 Wenn Sie an der Durchführung der Equikinetic interessiert sind oder beim Lesen weitere Fragen aufgetaucht sind, können Sie mir gerne schreiben. Zur Vertiefung empfehle ich folgendes Buch: <a href="https://amzn.to/3VtUtTP " title="Equikinetic®: Pferde effektiv longieren">Equikinetic®: Pferde effektiv longieren* von Michael Geitner und Alexandra Schmid*</a>.
 
