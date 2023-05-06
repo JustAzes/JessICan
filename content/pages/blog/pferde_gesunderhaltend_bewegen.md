@@ -24,7 +24,7 @@ Pferde, die sich täglich frei und ungehindert bewegen können, legen große Str
   <source srcset="https://tierheilpraxis-jessican.de/img/blog/pferde_gesunderhaltend_bewegen_1_large.webp" type="image/webp" media="(min-width: 768px)">
   <source srcset="https://tierheilpraxis-jessican.de/img/blog/pferde_gesunderhaltend_bewegen_1_large.jpeg" type="image/jpeg" media="(min-width: 768px)">
 
-  <img src="https://tierheilpraxis-jessican.de/img/blog/pferde_gesunderhaltend_bewegen_1_large.png" alt="Bild von Pferd in Bewegung" style="max-width: 100%" loading="lazy">
+  <img src="https://tierheilpraxis-jessican.de/img/blog/pferde_gesunderhaltend_bewegen_1_large.jpeg" alt="Bild von Pferd in Bewegung" style="max-width: 100%" loading="lazy">
 </picture>
 
 Doch was bedeutet gesunderhaltend Bewegen genau?
@@ -62,7 +62,7 @@ Durch beispielsweise einseitige oder überstrapazierte Bewegungen können Verfil
   <source srcset="https://tierheilpraxis-jessican.de/img/blog/pferde_gesunderhaltend_bewegen_2_large.webp" type="image/webp" media="(min-width: 768px)">
   <source srcset="https://tierheilpraxis-jessican.de/img/blog/pferde_gesunderhaltend_bewegen_2_large.jpeg" type="image/jpeg" media="(min-width: 768px)">
 
-  <img src="https://tierheilpraxis-jessican.de/img/blog/pferde_gesunderhaltend_bewegen_2_large.png" alt="Bild von Pferd in Bewegung mit eingezeichneten dorsalen und ventralen Muskelketten" style="max-width: 100%" loading="lazy">
+  <img src="https://tierheilpraxis-jessican.de/img/blog/pferde_gesunderhaltend_bewegen_2_large.jpeg" alt="Bild von Pferd in Bewegung mit eingezeichneten dorsalen und ventralen Muskelketten" style="max-width: 100%" loading="lazy">
 </picture>
 
 
@@ -86,7 +86,7 @@ Dieser Bewegungsablauf unterstützt dabei, das Pferd gerade zu richten. Jedes Pf
   <source srcset="https://tierheilpraxis-jessican.de/img/blog/pferde_gesunderhaltend_bewegen_3_large.webp" type="image/webp" media="(min-width: 768px)">
   <source srcset="https://tierheilpraxis-jessican.de/img/blog/pferde_gesunderhaltend_bewegen_3_large.jpeg" type="image/jpeg" media="(min-width: 768px)">
 
-  <img src="https://tierheilpraxis-jessican.de/img/blog/pferde_gesunderhaltend_bewegen_3_large.png" alt="Bild von Pferd mit Zubehör für die Equikinetic®" style="max-width: 100%" loading="lazy">
+  <img src="https://tierheilpraxis-jessican.de/img/blog/pferde_gesunderhaltend_bewegen_3_large.jpeg" alt="Bild von Pferd mit Zubehör für die Equikinetic®" style="max-width: 100%" loading="lazy">
 </picture>
 
 
@@ -109,7 +109,7 @@ Im vergangenen Dezember gab ich einen sehr schönen Workshop zum Thema Muskeln, 
   <source srcset="https://tierheilpraxis-jessican.de/img/blog/pferde_gesunderhaltend_bewegen_4_large.webp" type="image/webp" media="(min-width: 768px)">
   <source srcset="https://tierheilpraxis-jessican.de/img/blog/pferde_gesunderhaltend_bewegen_4_large.jpeg" type="image/jpeg" media="(min-width: 768px)">
 
-  <img src="https://tierheilpraxis-jessican.de/img/blog/pferde_gesunderhaltend_bewegen_4_large.png" alt="Bild vor der Equikinetic®" style="max-width: 100%" loading="lazy">
+  <img src="https://tierheilpraxis-jessican.de/img/blog/pferde_gesunderhaltend_bewegen_4_large.jpeg" alt="Bild vor der Equikinetic®" style="max-width: 100%" loading="lazy">
 </picture>
 
 Wenn Sie an der Durchführung der Equikinetic interessiert sind oder beim Lesen weitere Fragen aufgetaucht sind, können Sie mir gerne schreiben. Zur Vertiefung empfehle ich folgendes Buch: <a href="https://amzn.to/3VtUtTP " title="Equikinetic®: Pferde effektiv longieren">Equikinetic®: Pferde effektiv longieren* von Michael Geitner und Alexandra Schmid*</a>.

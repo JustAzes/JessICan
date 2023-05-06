@@ -26,7 +26,7 @@ Weihrauch ist ein Harz, das aus bestimmten Bäumen der Gattung Boswellia gewonne
   <source srcset="https://tierheilpraxis-jessican.de/img/blog/weihrauch_1_large.jpeg" type="image/jpeg" media="(min-width: 768px)">
 
   <!-- Fallback-Bild -->
-  <img src="https://tierheilpraxis-jessican.de/img/blog/weihrauch_1_large.png" alt="Bild von Weihrauch in der Pflanzenheilkunde" style="max-width: 100%" loading="lazy"/>
+  <img src="https://tierheilpraxis-jessican.de/img/blog/weihrauch_1_large.jpeg" alt="Bild von Weihrauch in der Pflanzenheilkunde" style="max-width: 100%" loading="lazy"/>
 </picture>
 
 Das Harz wird aus den Stämmen und Zweigen der Bäume gewonnen, indem man kleine Schnitte in die Rinde macht. Es tritt dann aus den Schnitten aus und wird von Hand gesammelt, wenn es getrocknet ist. Das Harz kann dann in seiner natürlichen Form oder nach der Verarbeitung in Ölform verwendet werden.
@@ -60,7 +60,7 @@ Obwohl Weihrauch in der traditionellen Medizin und Religion seit Jahrhunderten g
   <source srcset="https://tierheilpraxis-jessican.de/img/blog/weihrauch_2_large.jpeg" type="image/jpeg" media="(min-width: 768px)">
 
   <!-- Fallback-Bild -->
-  <img src="https://tierheilpraxis-jessican.de/img/blog/weihrauch_2_large.png" alt="Bild von Weihrauch in der Phytotherapie" style="max-width: 100%" loading="lazy"/>
+  <img src="https://tierheilpraxis-jessican.de/img/blog/weihrauch_2_large.jpeg" alt="Bild von Weihrauch in der Phytotherapie" style="max-width: 100%" loading="lazy"/>
 </picture>
 
 

@@ -23,7 +23,7 @@ Ich bin selbst mit Tieren aufgewachsen - Hund, Katze, (Wüstenrenn-)Maus und vie
   <source srcset="https://tierheilpraxis-jessican.de/img/ich_und_gino_large.webp" type="image/webp" media="(min-width: 768px)">
   <source srcset="https://tierheilpraxis-jessican.de/img/ich_und_gino_large.jpeg" type="image/jpeg" media="(min-width: 768px)">
 
-  <img src="https://tierheilpraxis-jessican.de/img/ich_und_gino_large.png" alt="Tierheilpraktiker JessICan und ihr Pferd Gino" style="max-width: 100%;max-height: 80%;" loading="lazy">
+  <img src="https://tierheilpraxis-jessican.de/img/ich_und_gino_large.jpeg" alt="Tierheilpraktiker JessICan und ihr Pferd Gino" style="max-width: 100%;max-height: 80%;" loading="lazy">
 </picture>
 
 
@@ -52,7 +52,7 @@ Auf der Suche nach alternativen Lösungsmöglichkeiten bin ich in die Tierheilku
   <source srcset="https://tierheilpraxis-jessican.de/img/tali_large.webp" type="image/webp" media="(min-width: 768px)">
   <source srcset="https://tierheilpraxis-jessican.de/img/tali_large.jpeg" type="image/jpeg" media="(min-width: 768px)">
 
-  <img src="https://tierheilpraxis-jessican.de/img/tali_large.png" alt="Tierheilpraktiker JessICan und ihr Hund Tali" style="max-width: 100%;max-height: 80%;" loading="lazy">
+  <img src="https://tierheilpraxis-jessican.de/img/tali_large.jpeg" alt="Tierheilpraktiker JessICan und ihr Hund Tali" style="max-width: 100%;max-height: 80%;" loading="lazy">
 </picture>
 
 

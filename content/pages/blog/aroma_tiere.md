@@ -30,7 +30,7 @@ Welches Öl es war? Das könnt ihr weiter unten lesen.
   <source srcset="https://tierheilpraxis-jessican.de/img/blog/aroma_tiere_large.webp" type="image/webp" media="(min-width: 768px)">
   <source srcset="https://tierheilpraxis-jessican.de/img/blog/aroma_tiere_large.jpeg" type="image/jpeg" media="(min-width: 768px)">
 
-  <img src="https://tierheilpraxis-jessican.de/img/blog/aroma_tiere_large.png" alt="Hund Talia vor der Aromatherapie" style="max-width: 100%" loading="lazy">
+  <img src="https://tierheilpraxis-jessican.de/img/blog/aroma_tiere_large.jpeg" alt="Hund Talia vor der Aromatherapie" style="max-width: 100%" loading="lazy">
 </picture>
 
 Körper, Seele und Geist. Im Idealfall ein harmonisches Miteinander. Aber mindestens einer tanzt gerne aus der Reihe.

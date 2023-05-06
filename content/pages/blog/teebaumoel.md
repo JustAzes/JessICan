@@ -22,7 +22,7 @@ Teebaumöl ist ein *ätherisches Öl*, das aus den Blättern des Teebaums (Melal
   <source srcset="https://tierheilpraxis-jessican.de/img/blog/teebaumoel_1_large.webp" type="image/webp" media="(min-width: 768px)">
   <source srcset="https://tierheilpraxis-jessican.de/img/blog/teebaumoel_1_large.jpeg" type="image/jpeg" media="(min-width: 768px)">
 
-  <img src="https://tierheilpraxis-jessican.de/img/blog/teebaumoel_1_large.png" alt="Bild von Teebaumöl in der Aromatherapie" style="max-width: 100%" loading="lazy">
+  <img src="https://tierheilpraxis-jessican.de/img/blog/teebaumoel_1_large.jpeg" alt="Bild von Teebaumöl in der Aromatherapie" style="max-width: 100%" loading="lazy">
 </picture>
 
 Das Teebaumöl kann auf verschiedene Arten angewendet werden, um Deinem Hund oder Pferd (Wichtig: nicht zur Anwendung bei Katzen geeignet!!!) zu helfen. Hier sind einige Beispiele:
@@ -48,7 +48,7 @@ In der Naturmedizin ist Teebaumöl ein vielseitiger und wertvoller Natur-Allroun
   <source srcset="https://tierheilpraxis-jessican.de/img/blog/teebaumoel_2_large.webp" type="image/webp" media="(min-width: 768px)">
   <source srcset="https://tierheilpraxis-jessican.de/img/blog/teebaumoel_2_large.jpeg" type="image/jpeg" media="(min-width: 768px)">
 
-  <img src="https://tierheilpraxis-jessican.de/img/blog/teebaumoel_2_large.png" alt="Bild von Teebaumöl" style="max-width: 100%" loading="lazy">
+  <img src="https://tierheilpraxis-jessican.de/img/blog/teebaumoel_2_large.jpeg" alt="Bild von Teebaumöl" style="max-width: 100%" loading="lazy">
 </picture>
 
 Teebaumöl enthält eine Vielzahl von Wirkstoffen, die für seine heilenden Eigenschaften verantwortlich sind. Hier sind einige der wichtigsten Inhaltsstoffe:
@@ -73,7 +73,7 @@ Die Wirkstoffe im Teebaum öl arbeiten zusammen, um eine Vielzahl von Haut- und 
   <source srcset="https://tierheilpraxis-jessican.de/img/blog/teebaumoel_3_large.webp" type="image/webp" media="(min-width: 768px)">
   <source srcset="https://tierheilpraxis-jessican.de/img/blog/teebaumoel_3_large.jpeg" type="image/jpeg" media="(min-width: 768px)">
 
-  <img src="https://tierheilpraxis-jessican.de/img/blog/teebaumoel_3_large.png" alt="Bild von Teebaumöl in der Aromatherapie" style="max-width: 100%" loading="lazy">
+  <img src="https://tierheilpraxis-jessican.de/img/blog/teebaumoel_3_large.jpeg" alt="Bild von Teebaumöl in der Aromatherapie" style="max-width: 100%" loading="lazy">
 </picture>
 
 

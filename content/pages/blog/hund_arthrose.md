@@ -24,7 +24,7 @@ In diesem Artikel wird das Thema Arthritis bei Hunden ausführlich behandelt. Es
   <source srcset="https://tierheilpraxis-jessican.de/img/blog/hund_arthrose_1_large.webp" type="image/webp" media="(min-width: 768px)">
   <source srcset="https://tierheilpraxis-jessican.de/img/blog/hund_arthrose_1_large.jpeg" type="image/jpeg" media="(min-width: 768px)">
 
-  <img src="https://tierheilpraxis-jessican.de/img/blog/hund_arthrose_1_large.png" alt="Bild von einem Hund mit Arthrose" style="max-width: 100%" loading="lazy">
+  <img src="https://tierheilpraxis-jessican.de/img/blog/hund_arthrose_1_large.jpeg" alt="Bild von einem Hund mit Arthrose" style="max-width: 100%" loading="lazy">
 </picture>
 
 Arthritis ist eine häufige akute entzündliche Erkrankung des Gelenks, die zu Schmerzen, Steifheit und Schäden an den Gelenken führt. Arthritis ist häufig durch Infektionen bedingt - Keime gelangen in den Gelenkinnenraum. Es kann durch Erkrankungen wie Infektionen, Entzündungen und Stoffwechselstörungen verursacht werden.
@@ -73,7 +73,7 @@ Die Zellen im Knorpel sind nicht in der Lage sich selbst zu reinigen und so komm
   <source srcset="https://tierheilpraxis-jessican.de/img/blog/hund_arthrose_2_large.webp" type="image/webp" media="(min-width: 768px)">
   <source srcset="https://tierheilpraxis-jessican.de/img/blog/hund_arthrose_2_large.jpeg" type="image/jpeg" media="(min-width: 768px)">
 
-  <img src="https://tierheilpraxis-jessican.de/img/blog/hund_arthrose_2_large.png" alt="Bild von einem Hund mit Arthrose" style="max-width: 100%; max-height: 100%;" loading="lazy">
+  <img src="https://tierheilpraxis-jessican.de/img/blog/hund_arthrose_2_large.jpeg" alt="Bild von einem Hund mit Arthrose" style="max-width: 100%; max-height: 100%;" loading="lazy">
 </picture>
 
 Die Symptome dieser Krankheit können von Hund zu Hund unterschiedlich sein und können von mild bis schwerwiegend reichen. Hier sind einige der häufigsten Symptome von Arthrose:
@@ -98,7 +98,7 @@ Es ist wichtig zu beachten, dass nicht alle Hunde mit Arthrose alle diese Sympto
   <source srcset="https://tierheilpraxis-jessican.de/img/blog/hund_arthrose_3_large.webp" type="image/webp" media="(min-width: 768px)">
   <source srcset="https://tierheilpraxis-jessican.de/img/blog/hund_arthrose_3_large.jpeg" type="image/jpeg" media="(min-width: 768px)">
 
-  <img src="https://tierheilpraxis-jessican.de/img/blog/hund_arthrose_3_large.png" alt="Bild von einem Hund mit Arthrose" style="max-width: 100%" loading="lazy">
+  <img src="https://tierheilpraxis-jessican.de/img/blog/hund_arthrose_3_large.jpeg" alt="Bild von einem Hund mit Arthrose" style="max-width: 100%" loading="lazy">
 </picture>
 
 Wenn Sie vermuten, dass Ihr Hund an Arthrose leidet, ist es wichtig, eine Diagnose zu erhalten. Dies kann durch eine Kombination aus körperlichen Untersuchungen, Röntgen und Blutuntersuchungen erfolgen.
@@ -123,7 +123,7 @@ Es ist wichtig zu beachten, dass die Diagnose von Arthrose bei Hunden eine sorgf
   <source srcset="https://tierheilpraxis-jessican.de/img/blog/hund_arthrose_4_large.webp" type="image/webp" media="(min-width: 768px)">
   <source srcset="https://tierheilpraxis-jessican.de/img/blog/hund_arthrose_4_large.jpeg" type="image/jpeg" media="(min-width: 768px)">
 
-  <img src="https://tierheilpraxis-jessican.de/img/blog/hund_arthrose_4_large.png" alt="Bild von einem Hund mit Arthrose" style="max-width: 100%" loading="lazy">
+  <img src="https://tierheilpraxis-jessican.de/img/blog/hund_arthrose_4_large.jpeg" alt="Bild von einem Hund mit Arthrose" style="max-width: 100%" loading="lazy">
 </picture>
 
 Maßnahmen bei einer Arthrose-Erkrankung sollten dafür sorgen, die Reinigung und Reparatur der Zellen zu erleichtern, zu stärken und zu schützen. Eine zusätzliche Gelenkentzündung (was durch den zunehmenden Abrieb vorkommt) sollte auf jeden Fall vermieden werden. Dies treibt den Abbauprozess sonst schneller voran. 

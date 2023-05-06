@@ -22,7 +22,7 @@ Lesen Sie hier über die Eckpfeiler der Naturheilkunde!
   <source srcset="https://tierheilpraxis-jessican.de/img/blog/einfuehrung_naturheilkunde_large.webp" type="image/webp" media="(min-width: 768px)">
   <source srcset="https://tierheilpraxis-jessican.de/img/blog/einfuehrung_naturheilkunde_large.jpeg" type="image/jpeg" media="(min-width: 768px)">
 
-  <img src="https://tierheilpraxis-jessican.de/img/blog/einfuehrung_naturheilkunde_large.png" alt="Bild von Hund in Natur, sybomlisch für die Naturheilkunde" style="max-width: 100%;" loading="lazy">
+  <img src="https://tierheilpraxis-jessican.de/img/blog/einfuehrung_naturheilkunde_large.jpeg" alt="Bild von Hund in Natur, sybomlisch für die Naturheilkunde" style="max-width: 100%;" loading="lazy">
 </picture>
 
 Tagtäglich sind wir von Wiesen, Bächen, Blumen und Bäumen umgeben. Doch nehmen wir die Vielfalt der Natur und ihre Wirkung auf uns wirklich wahr?

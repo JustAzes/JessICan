@@ -23,7 +23,7 @@ Als Sozialarbeiterin ist es natürlich mein Wunsch, meine beiden Leidenschaften 
   <source srcset="https://tierheilpraxis-jessican.de/img/blog/soziale_arbeit_naturheilkunde_large.webp" type="image/webp" media="(min-width: 768px)">
   <source srcset="https://tierheilpraxis-jessican.de/img/blog/soziale_arbeit_naturheilkunde_large.jpeg" type="image/jpeg" media="(min-width: 768px)">
 
-  <img src="https://tierheilpraxis-jessican.de/img/blog/soziale_arbeit_naturheilkunde_large.png" alt="Bild von Tierheilpraktiker mit Hund" style="max-width: 100%; text-align:center;" loading="lazy">
+  <img src="https://tierheilpraxis-jessican.de/img/blog/soziale_arbeit_naturheilkunde_large.jpeg" alt="Bild von Tierheilpraktiker mit Hund" style="max-width: 100%; text-align:center;" loading="lazy">
 </picture>
 
 

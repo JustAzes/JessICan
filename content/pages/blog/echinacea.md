@@ -22,7 +22,7 @@ Kennst du das Gefühl, wenn du selbst oder dein Tier krank ist und der Körper s
   <source srcset="https://tierheilpraxis-jessican.de/img/blog/echinacea_1_large.webp" type="image/webp" media="(min-width: 768px)">
   <source srcset="https://tierheilpraxis-jessican.de/img/blog/echinacea_1_large.jpeg" type="image/jpeg" media="(min-width: 768px)">
 
-  <img src="https://tierheilpraxis-jessican.de/img/blog/echinacea_1_large.png" loading="lazy" alt="Echinacea in der Naturheilkunde" style="max-width: 100%">
+  <img src="https://tierheilpraxis-jessican.de/img/blog/echinacea_1_large.jpeg" loading="lazy" alt="Echinacea in der Naturheilkunde" style="max-width: 100%">
 </picture>
 
 Echinacea, auch bekannt als Purpursonnenhut, ist eine Pflanze, die in der **Naturheilkunde** seit Jahrhunderten verwendet wird, um das Immunsystem zu stärken und Krankheiten vorzubeugen. Es ist ein echtes Superkraut, denn es hilft nicht nur bei Erkältungen und Grippe, sondern auch bei Hautproblemen, Pilzinfektionen und sogar bei bestimmten Krebsarten.
@@ -52,7 +52,7 @@ Wichtig jedoch zu beachten wäre, dass Echinacea nicht dauerhaft eingenommen wer
   <source srcset="https://tierheilpraxis-jessican.de/img/blog/echinacea_2_large.webp" type="image/webp" media="(min-width: 768px)">
   <source srcset="https://tierheilpraxis-jessican.de/img/blog/echinacea_2_large.jpeg" type="image/jpeg" media="(min-width: 768px)">
 
-  <img src="https://tierheilpraxis-jessican.de/img/blog/echinacea_2_large.png" loading="lazy" alt="Echinacea in der Tierheilkunde" style="max-width: 100%">
+  <img src="https://tierheilpraxis-jessican.de/img/blog/echinacea_2_large.jpeg" loading="lazy" alt="Echinacea in der Tierheilkunde" style="max-width: 100%">
 </picture>
 
 Echinacea enthält eine Vielzahl von Wirkstoffen, die ein starkes Immunsystem fördern. Dazu gehören:
