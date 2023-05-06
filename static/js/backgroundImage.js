@@ -22,18 +22,16 @@ function setBackgroundImage() {
     for (var i = 0; i < formats.length; i++) {
       var format = formats[i];
       if (document.createElement("img").canPlayType(format.mimeType)) {
-        header.style.backgroundImage = `url('https://tierheilpraxis-jessican.de/img/${baseName}-${size}.${format.ext}')`;
+        header.style.background = `url('https://tierheilpraxis-jessican.de/img/${baseName}-${size}.${format.ext}') no-repeat center center`;
         header.style.backgroundSize = "100%";
-        header.style.backgroundRepeat = "no-repeat";
         foundSupportedFormat = true;
         break;
       }
     }
   
     if (!foundSupportedFormat) {
-      header.style.backgroundImage = `url('https://tierheilpraxis-jessican.de/img/${baseName}-large.jpg')`;
+      header.style.background = `url('https://tierheilpraxis-jessican.de/img/${baseName}-large.jpg') no-repeat center center`;
       header.style.backgroundSize = "100%";
-      header.style.backgroundRepeat = "no-repeat";
     }
   }
   
