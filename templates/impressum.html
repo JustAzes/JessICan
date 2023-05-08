@@ -3,7 +3,6 @@
 {% block description %}
     <meta name="description" content="Impressum von Tierheilpraktiker JessICan: Akupunktur, Homöopathie, Phytotherapie, Manuelle Therapie, Aromatherapie & Ernährungsberatung Hund & Pferd">
 {% endblock description %}
-
 {% block metatags %}
 <meta property="og:url" content="https://tierheilpraxis-jessican.de/impressum/">
 <meta property="og:type" content="website">
@@ -11,10 +10,13 @@
 <meta property="og:description" content="Impressum von Tierheilpraktiker JessICan: Akupunktur, Homöopathie, Phytotherapie, Manuelle Therapie, Aromatherapie, Ernährungsberatung Hund & Pferd">
 <meta property="og:image" content="https://tierheilpraxis-jessican.de/favicons/android-chrome-192x192.png">
 {% endblock metatags %}
+{% block headextras %}
+  <meta name="robots" content="noindex, follow">
+{% endblock headextras %}
 
 {% block header %}
 <!-- Page Header -->
-<header class="masthead" style="background-image: url('{{ get_url(path="/img/about-bg-large.jepg")}}')">
+<header class="masthead" style="background-image: url('{{ get_url(path="/img/about-bg_large.jepg")}}')">
   <div class="overlay">
   </div>
   <div class="container">

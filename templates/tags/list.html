@@ -1,5 +1,7 @@
 {% extends "template.html" %}
-
+{% block headextras %}
+  <meta name="robots" content="noindex, nofollow">
+{% endblock headextras %}
 {% block title %}Tags - {{ config.title }}{% endblock %}
 
 {% block content %}
