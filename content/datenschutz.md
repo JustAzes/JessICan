@@ -1,7 +1,6 @@
 +++
 title = "Datenschutz"
 template = "datenschutzerklaerung.html"
-render = false
 +++
 
 ## 1. Datenschutz auf einen Blick
