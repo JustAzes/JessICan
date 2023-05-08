@@ -3,7 +3,7 @@ title = "Teebaumöl: Natur-Allrounder für Pferd & Hund"
 date = 2023-02-10
 [taxonomies]
 categories = ["Hunde", "Pferde", "Therapieformen", "Tiergesundheit"]
-tags = ["Teebaumöl", "ätherische Öle", "Aromatherapie", "Tierheilpraktiker", "Hautprobleme", "Stressreduktion"]
+tags = []
 
 +++
 

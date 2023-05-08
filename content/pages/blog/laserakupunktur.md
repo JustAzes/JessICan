@@ -4,7 +4,7 @@ date = 2023-05-04
 draft = true
 [taxonomies]
 categories = ["Therapieformen"]
-tags = ["Laserakupunktur", "Akupunktur"]
+tags = []
 
 +++
 
