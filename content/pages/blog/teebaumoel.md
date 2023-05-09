@@ -53,10 +53,10 @@ Teebaumöl kann auf verschiedene Arten angewendet werden, um Deinem **Hund** ode
 
 Teebaumöl enthält eine Vielzahl von Wirkstoffen, die für seine heilenden Eigenschaften verantwortlich sind. Hier sind einige der wichtigsten Inhaltsstoffe:
 
-- **Terpinen-4-ol**: Ein wichtiger Bestandteil des Öls, der antibakterielle, antivirale und antifungale Eigenschaften hat.
-- **Cineol**: Ein Bestandteil des Öls, der die Durchblutung und den Sauerstofftransport im Körper fördert und entzündungshemmend wirkt.
-- **Alpha-Terpinen**: Ein Bestandteil des Öls, der antiseptisch, beruhigend und krampflösend wirkt.
-- **Gamma-Terpinen**: Ein Bestandteil des Öls, der entzündungshemmend und schmerzlindernd wirkt.
+- Terpinen-4-ol: Ein wichtiger Bestandteil des Öls, der antibakterielle, antivirale und antifungale Eigenschaften hat.
+- Cineol: Ein Bestandteil des Öls, der die Durchblutung und den Sauerstofftransport im Körper fördert und entzündungshemmend wirkt.
+- Alpha-Terpinen: Ein Bestandteil des Öls, der antiseptisch, beruhigend und krampflösend wirkt.
+- Gamma-Terpinen: Ein Bestandteil des Öls, der entzündungshemmend und schmerzlindernd wirkt.
 
 Die Wirkstoffe im Teebaumöl arbeiten zusammen, um eine Vielzahl von Haut- und Gesundheitsproblemen zu behandeln. Die antibakterielle und antiseptische Wirkung hilft bei der Behandlung von Hautinfektionen und Entzündungen, während die entzündungshemmende Wirkung Schmerzen und Schwellungen lindert. Die beruhigende und krampflösende Wirkung kann helfen, Stress und Angstzustände zu reduzieren.
 
