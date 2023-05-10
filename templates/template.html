@@ -34,7 +34,7 @@
     <noscript><link rel="stylesheet" href="{{ get_url(path='css/local-fonts.css') }}"></noscript> 
     -->
 
-    <link rel="stylesheet" href="{{ get_url(path="clean-blog.css") }}">
+    <link rel="stylesheet" href="{{ get_url(path="clean-blog.css", trailing_slash=false) }}">
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
 
@@ -172,11 +172,11 @@
   <footer>
     <div class="container">
       <div class="row">
-        <div class="col-lg-8 col-md-10 mx-auto">
+        <div class="col-lg-10 col-md-10 mx-auto">
           <ul class="list-inline text-center">
             {% for item in config.extra.clean_blog_social %}
             <li class="list-inline-item">
-              <a href="{{ item.url | replace(from="$BASE_URL", to=config.base_url) }}">
+              <a href="{{ item.url | replace(from="$BASE_URL", to=config.base_url) }}" title="Start">
                 <span class="fa-stack fa-lg">
                   <i class="fas fa-circle fa-stack-2x"></i>
                   <i class="{{ item.icon }} fa-stack-1x fa-inverse"></i>
@@ -184,9 +184,27 @@
               </a>
             </li>
             {% endfor %}
-          </ul>
-          <p class="copyright text-muted">{% block copyright %}Copyright &copy; Your Website
-            2019{% endblock copyright %}</p>
+          </ul> 
+          <div style="text-align: center;" >
+            <p>
+              <a href="{{ get_url(path="contact/", trailing_slash=true) }}" class="btn btn-info" title="Kontakt">Kontakt</a>
+            </p>
+            <p>
+              Bei lebensbedrohlichen Notfällen wenden Sie sich bitte umgehend an einen Tierarzt oder eine Tierklinik.
+            </p>
+          </div>
+          <div style="text-align: center;" >
+            <a href="{{ get_url(path="/impressum/", trailing_slash=true) }}" title="Impressum">Impressum</a>
+            <a href="{{ get_url(path="/datenschutz/", trailing_slash=true) }}" title="Datenschutz">Datenschutz</a></div>
+          <p class="copyright text-muted">
+            {% block copyright %}
+              Copyright &copy; JessICan
+              <span id="currentYear"></span>
+            {% endblock copyright %}
+          </p>
+          <script>
+            document.getElementById('currentYear').innerHTML = new Date().getFullYear();
+          </script>
         </div>
       </div>
     </div>
