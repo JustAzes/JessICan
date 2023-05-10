@@ -1,24 +1,24 @@
 // Bootstrap overrides for this template
-/*
 .btn {
   font-size: 14px;
   font-weight: 800;
   padding: 15px 25px;
   letter-spacing: 1px;
   text-transform: uppercase;
-  border-radius: 0;
+  border-radius: 4px; // Ändern Sie den Wert für abgerundete Ecken
   @include sans-serif-font;
 }
 
 .btn-primary {
   background-color: $primary;
   border-color: $primary;
+  color: $white; // Hinzufügen der Textfarbe für besseren Kontrast
   &:hover,
   &:focus,
   &:active {
     color: $white;
-    background-color: darken($primary, 7.5) !important;
-    border-color: darken($primary, 7.5) !important;
+    background-color: darken($primary, 15) !important; // Erhöhen Sie den Wert für ein dunkleres Hover
+    border-color: darken($primary, 15) !important;
   }
 }
 
@@ -26,4 +26,3 @@
   font-size: 16px;
   padding: 25px 35px;
 }
-*/
