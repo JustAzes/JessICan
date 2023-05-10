@@ -6,19 +6,7 @@
 {% endblock description %}
 <!-- Page Header -->
 {% block header %}
-
-<header class="masthead">
-  <picture>
-    <source type="image/avif" srcset="{{ get_url(path='/img/home-bg_small.avif') }}" media="(max-width: 480px)">
-    <source type="image/avif" srcset="{{ get_url(path='/img/home-bg_medium.avif') }}" media="(max-width: 768px)">
-    <source type="image/avif" srcset="{{ get_url(path='/img/home-bg_large.avif') }}">
-    <source type="image/webp" srcset="{{ get_url(path='/img/home-bg_small.webp') }}" media="(max-width: 480px)">
-    <source type="image/webp" srcset="{{ get_url(path='/img/home-bg_medium.webp') }}" media="(max-width: 768px)">
-    <source type="image/webp" srcset="{{ get_url(path='/img/home-bg_large.webp') }}">
-    <source type="image/jpeg" srcset="{{ get_url(path='/img/home-bg_small.jpeg') }}" media="(max-width: 480px)" >
-    <source type="image/jpeg" srcset="{{ get_url(path='/img/home-bg_medium.jpeg') }}" media="(max-width: 768px)" >
-    <img src="{{ get_url(path='/img/home-bg_large.jpeg') }}" alt="Background image" class="background-image">
-  </picture> 
+<header class="masthead" style="background-image: url('{{ get_url(path="/img/home-bg_large.jpeg")}}');background-size:100%;background-repeat:no-repeat;">
   <div class="overlay">
   </div>
   <div class="container">
@@ -30,8 +18,8 @@
         </div>
       </div>
     </div>
-  </div
-</header> 
+  </div>
+</header>
 {% endblock header %}
 {% block content %}
   <!-- Main Content -->
