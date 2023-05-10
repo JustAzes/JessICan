@@ -11,7 +11,7 @@
     <div class="row">
       <div class="col-lg-10 col-md-10 mx-auto">
         <div class="page-heading">
-          <h1>Ihre Kontaktmöglichkeiten</h1>
+          <h1>Kontakt/h1>
           <span class="subheading">So erreichen Sie mich.</span>
         </div>
       </div>
@@ -33,7 +33,7 @@
       <form name="contact"  action="https://formspree.io/f/mnqylged" method="POST" enctype="multipart/form-data" {%if config.extra.netlify_forms %}data-netlify="true" {%endif%}>
         <div class="control-group">
           <div class="form-group floating-label-form-group controls">
-            <label>Name</label>
+            <label for="name">Name</label>
             <input type="text" class="form-control" placeholder="Name" id="name" name="name" required
               data-validation-required-message="Bitte tragen Sie Ihren Namen ein.">
             <p class="help-block text-danger"></p>
@@ -41,25 +41,25 @@
         </div>
         <div class="control-group">
           <div class="form-group floating-label-form-group controls">
-            <label>Email Address</label>
+            <label for="email">Email Address</label>
             <input type="email" class="form-control" placeholder="E-Mail Adresse" id="email" name="email" required
               data-validation-required-message="Bitte tragen Sie Ihre E-Mail-Adresse ein.">
             <p class="help-block text-danger"></p>
           </div>
         </div>
         <div class="form-group floating-label-form-group controls">
-          <label>Telefonnummer</label>
-          <input type="text" class="form-control" placeholder="Bitte geben Sie eine gültige deutsche Telefonnummer ein (mit Vorwahl)" id="telefonnummer" name="telefonnummer" pattern="^(?:\+49|0(?!0))\d{8,}$"title="Bitte geben Sie eine gültige deutsche Telefonnummer ein (mit Vorwahl), beginnend mit 0 oder +49">
+          <label for="telefonnummer">Telefonnummer</label>
+          <input type="text" class="form-control" placeholder="Telefonnummer" id="telefonnummer" name="telefonnummer" pattern="^(?:\+49|0(?!0))\d{8,}$"title="Bitte geben Sie eine gültige deutsche Telefonnummer ein (mit Vorwahl), beginnend mit 0 oder +49">
           <p class="help-block text-danger"></p>
         </div>
         <div class="form-group floating-label-form-group controls">
-          <label>Betreff</label>
+          <label for="betreff">Betreff</label>
           <input type="text" class="form-control" placeholder="Betreff" id="betreff" name="betreff">
           <p class="help-block text-danger"></p>
         </div>
         <div class="control-group">
           <div class="form-group floating-label-form-group controls">
-            <label>Message</label>
+            <label for="message">Message</label>
             <textarea rows="5" class="form-control" placeholder="Nachricht" id="message" name="message" required
               data-validation-required-message="Bitte tragen Sie Ihre Nachricht ein."></textarea>
             <p class="help-block text-danger"></p>
@@ -68,7 +68,7 @@
         <!-- Dateiupload hinzufügen -->
         <div class="control-group">
           <div class="form-group floating-label-form-group controls">
-            <label>Dateiupload</label>
+            <label for="datei">Dateiupload</label>
             <input type="file" class="form-control" id="datei" name="datei">
             <p class="help-block text-danger"></p>
           </div>
