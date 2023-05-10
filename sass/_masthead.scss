@@ -1,11 +1,11 @@
 // Styling for the masthead
 header.masthead {
   // TIP: Background images are set within the HTML using inline CSS!
-  margin-bottom: 50px;
+  margin-bottom: 0px;
   background: no-repeat center center;
   background-color: white;
   background-attachment: scroll;
-  background-size: cover;
+  //background-size: contain;
   position: relative;
   @include background-cover;
   .overlay {
@@ -14,14 +14,14 @@ header.masthead {
     left: 0;
     width: 100%;
     height: auto;
-    object-fit: cover;
+    //object-fit: cover;
     background-color: white;
     opacity: 0.05;
   }
   .page-heading,
   .post-heading,
   .site-heading {
-    padding: 200px 0 150px;
+    padding: 200px 0 80px;
     color: white;
     @media only screen and (min-width: 768px) {
       padding: 200px 0;
