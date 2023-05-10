@@ -22,12 +22,12 @@
     {% endblock canonical %}
 
     <title>{% block title %}{{ config.title }}{% endblock title %}</title>
-    
-    <link href="{{ get_url(path='css/local-fonts.css') }}" rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="{{ get_url(path='css/local-fonts.css') }}"></noscript>
 
     <link href="{{ get_url(path='css/bootstrap.min.css') }}" rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript><link rel="stylesheet" href="{{ get_url(path='css/bootstrap.min.css') }}"></noscript>
+
+    <link href="{{ get_url(path='css/local-fonts.css') }}" rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="{{ get_url(path='css/local-fonts.css') }}"></noscript>
 
     <link href="{{ get_url(path='css/all.min.css') }}" rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript><link rel="stylesheet" href="{{ get_url(path='css/all.min.css') }}"></noscript>
