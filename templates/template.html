@@ -22,17 +22,18 @@
     {% endblock canonical %}
 
     <title>{% block title %}{{ config.title }}{% endblock title %}</title>
-    <link href="{{ get_url(path='css/bootstrap.min.css') }}" rel="preload" as="style" onload="this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="{{ get_url(path='css/bootstrap.min.css') }}"></noscript>
-
-    <link href="{{ get_url(path='css/all.min.css') }}" rel="preload" as="style" onload="this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="{{ get_url(path='css/all.min.css') }}"></noscript>
-    <link href="{{ get_url(path='css/local-fonts.css') }}" rel="preload" as="style" onload="this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="{{ get_url(path='css/local-fonts.css') }}"></noscript> 
     
-    <link href="{{ get_url(path='clean-blog.css', trailing_slash=false) }}" rel="stylesheet" as="style" media="print" onload="this.media='all'">
-    <noscript><link rel="stylesheet" href="{{ get_url(path='clean-blog.css', trailing_slash=false) }}"></noscript>
+    <link href="{{ get_url(path='css/bootstrap.min.css') }}" rel="preload" as="style" onload="this.rel='stylesheet'" media="screen" defer>
+    <noscript><link rel="stylesheet" href="{{ get_url(path='css/bootstrap.min.css') }}" media="screen"></noscript>
 
+    <link href="{{ get_url(path='css/all.min.css') }}" rel="preload" as="style" onload="this.rel='stylesheet'" media="screen" defer>
+    <noscript><link rel="stylesheet" href="{{ get_url(path='css/all.min.css') }}" media="screen"></noscript>
+
+    <link href="{{ get_url(path='css/local-fonts.css') }}" rel="preload" as="style" onload="this.rel='stylesheet'" media="screen" defer>
+    <noscript><link rel="stylesheet" href="{{ get_url(path='css/local-fonts.css') }}" media="screen"></noscript>
+
+    
+    <link rel="stylesheet" href="{{ get_url(path="clean-blog.css", trailing_slash=false) }}">
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
 
