@@ -5,7 +5,7 @@ header.masthead {
   background: no-repeat center center;
   background-color: white;
   background-attachment: scroll;
-  background-size: contain;
+  background-size: cover;
   position: relative;
   @include background-cover;
   .overlay {
@@ -14,9 +14,9 @@ header.masthead {
     left: 0;
     width: 100%;
     height: auto;
-    object-fit: contain;
+    object-fit: cover;
     background-color: white;
-    opacity: 0.40;
+    opacity: 0.05;
   }
   .page-heading,
   .post-heading,
