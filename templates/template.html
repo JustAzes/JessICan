@@ -30,9 +30,8 @@
     <link href="{{ get_url(path='css/local-fonts.css') }}" rel="preload" as="style" onload="this.rel='stylesheet'">
     <noscript><link rel="stylesheet" href="{{ get_url(path='css/local-fonts.css') }}"></noscript> 
     
-    <link href="{{ get_url(path='clean-blog.css', trailing_slash=false) }}" rel="preload" as="style" onload="this.rel='stylesheet'">
+    <link href="{{ get_url(path='clean-blog.css', trailing_slash=false) }}" rel="stylesheet" as="style" media="print" onload="this.media='all'">
     <noscript><link rel="stylesheet" href="{{ get_url(path='clean-blog.css', trailing_slash=false) }}"></noscript>
-
 
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
