@@ -1,211 +1,220 @@
 {% extends "template.html" %}
 {% block title %}Tierheilpraktiker JessICan - natürlich gesund! Hund & Pferd{% endblock title %}
 {% block description %}
-<meta name="description" content="Tierheilpraktiker JessICan: Akupunktur, Homöopathie, Phytotherapie, Manuelle Therapie, Aromatherapie & Ernährungsberatung für Hund & Pferd">
-<link rel="preload" href="{{ get_url(path="/img/home-bg_large.jpeg") }}" as="image">
+    <meta name="description" content="Tierheilpraktiker JessICan: Akupunktur, Homöopathie, Phytotherapie, Manuelle Therapie, Aromatherapie & Ernährungsberatung für Hund & Pferd">
+    <link rel="preload" href="{{ get_url(path="/img/home-bg_large.jpeg") }}" as="image">
 {% endblock description %}
 <!-- Page Header -->
 {% block header %}
 <header class="masthead" style="background-image: url('{{ get_url(path="/img/home-bg_large.jpeg")}}');background-size:100%;background-repeat:no-repeat;">
-<div class="overlay">
-</div>
-<div class="container">
-   <div class="row">
+  <div class="overlay">
+  </div>
+  <div class="container">
+    <div class="row">
       <div class="col-lg-10 col-md-10 mx-auto">
-         <div class="site-heading">
-            <h1>{{config.title}}</h1>
-            <span class="subheading">natürlich gesund!</span>
-         </div>
+        <div class="site-heading">
+          <h1>{{config.title}}</h1>
+          <span class="subheading">natürlich gesund!</span>
+        </div>
       </div>
-   </div>
-</div>
+    </div>
+  </div>
 </header>
 {% endblock header %}
 {% block content %}
 <!-- Main Content -->
 <div class="container">
-   <div class="row">
-      <div class="col-md-12 text-center">
-         <section class="p-4 rounded">
-            <h2>Ihr Tierheilpraktiker für Pferd und Hund!</h2>
-            <p >
-               Hallo, mein Name ist Jessica und ich bin eine leidenschaftliche Tierheilpraktikerin für <em>Hunde</em> und <em>Pferde</em>. Mit meinem ganzheitlichen Ansatz unterstütze ich Sie dabei, gemeinsam mit Ihren Tieren gesundheitliche Herausforderungen zu bewältigen und ein harmonisches Zusammenleben zu fördern. Als engagierte Tierheilpraktikerin biete ich individuelle Behandlungskonzepte, die auf die Bedürfnisse jedes einzelnen Tieres abgestimmt sind. Entdecken Sie die Möglichkeiten einer natürlichen und ganzheitlichen Tierheilkunde für Ihre vierbeinigen Freunde. Profitieren Sie von meiner umfassenden Fachkenntnis in der Tierheilkunde.
+  <div class="row">
+    <div class="col-md-12 text-center">
+      <section class="p-4 rounded">
+        <h2>Ihr Tierheilpraktiker für Pferd und Hund!</h2>
+        <p >
+          Hallo, mein Name ist Jessica und ich bin eine leidenschaftliche Tierheilpraktikerin für <em>Hunde</em> und <em>Pferde</em>. Mit meinem ganzheitlichen Ansatz unterstütze ich Sie dabei, gemeinsam mit Ihren Tieren gesundheitliche Herausforderungen zu bewältigen und ein harmonisches Zusammenleben zu fördern. Als engagierte Tierheilpraktikerin biete ich individuelle Behandlungskonzepte, die auf die Bedürfnisse jedes einzelnen Tieres abgestimmt sind. Entdecken Sie die Möglichkeiten einer natürlichen und ganzheitlichen Tierheilkunde für Ihre vierbeinigen Freunde. Profitieren Sie von meiner umfassenden Fachkenntnis in der Tierheilkunde.
+        </p>
+        <div class="mt-3">
+          <a href="about/" class="btn btn-primary mb-5" title="Über mich ">
+            Mehr über mich
+          </a>
+        </div>
+      </section>
+    </div>
+  </div>
+  <div class="row">  
+    <div class="col-md-12 mx-auto">
+      <section id="gallery">
+        <div class="row">
+          <div class="col-12 text-center">
+            <h2>Leistungsübersicht</h2>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-4 mb-4">
+            <div class="card h-100">
+              <picture>
+                <source media="(max-width: 319px)" srcset="https://tierheilpraxis-jessican.de/img/naturheilkunde_tmb_320.avif" width="320" type="image/avif" sizes="95vw">
+                <source media="(max-width: 319px)" srcset="https://tierheilpraxis-jessican.de/img/naturheilkunde_tmb_320.webp" width="320" type="image/webp" sizes="95vw">
+                <source media="(max-width: 319px)" srcset="https://tierheilpraxis-jessican.de/img/naturheilkunde_tmb_320.jpeg" width="320" type="image/jpeg" sizes="95vw">
+                <source media="(min-width: 320px) and (max-width: 574px)" srcset="https://tierheilpraxis-jessican.de/img/naturheilkunde_tmb_640.avif" width="478" type="image/avif" sizes="95vw">
+                <source media="(min-width: 320px) and (max-width: 574px)" srcset="https://tierheilpraxis-jessican.de/img/naturheilkunde_tmb_640.webp" width="478" type="image/webp" sizes="95vw">
+                <source media="(min-width: 320px) and (max-width: 574px)" srcset="https://tierheilpraxis-jessican.de/img/naturheilkunde_tmb_640.jpeg" width="478" type="image/jpeg" sizes="95vw">
+                <source media="(min-width: 575px) and (max-width: 767px)" srcset="https://tierheilpraxis-jessican.de/img/naturheilkunde_tmb_768.avif" width="478" height="478" type="image/avif" sizes="95vw">
+                <source media="(min-width: 575px) and (max-width: 767px)" srcset="https://tierheilpraxis-jessican.de/img/naturheilkunde_tmb_768.webp" width="478" height="478" type="image/webp" sizes="95vw">
+                <source media="(min-width: 575px) and (max-width: 767px)" srcset="https://tierheilpraxis-jessican.de/img/naturheilkunde_tmb_768.jpeg" width="478" height="478" type="image/jpeg" sizes="95vw">
+                
+                <source media="(min-width: 768px) and (max-width: 991px)" srcset="https://tierheilpraxis-jessican.de/img/naturheilkunde_tmb_320.avif" width="658" height="658" type="image/avif" sizes="17vw">
+                <source media="(min-width: 768px) and (max-width: 991px)" srcset="https://tierheilpraxis-jessican.de/img/naturheilkunde_tmb_320.webp" width="658" height="658" type="image/webp" sizes="17vw">
+                <source media="(min-width: 768px) and (max-width: 991px)" srcset="https://tierheilpraxis-jessican.de/img/naturheilkunde_tmb_320.jpeg" width="658" height="658" type="image/jpeg" sizes="17vw">
+                <source media="(min-width: 992px) and (max-width: 1199px)" srcset="https://tierheilpraxis-jessican.de/img/naturheilkunde_tmb_320.avif" width="278" height="278" type="image/avif" sizes="17vw">
+                <source media="(min-width: 992px) and (max-width: 1199px)" srcset="https://tierheilpraxis-jessican.de/img/naturheilkunde_tmb_320.webp" width="278" height="278" type="image/webp" sizes="17vw">
+                <source media="(min-width: 992px) and (max-width: 1199px)" srcset="https://tierheilpraxis-jessican.de/img/naturheilkunde_tmb_320.jpeg" width="278" height="278" type="image/jpeg" sizes="17vw">
+                <source media="(min-width: 1200px)" srcset="https://tierheilpraxis-jessican.de/img/naturheilkunde_tmb_320.avif" width="338" height="338" type="image/avif" sizes="17vw">
+                <source media="(min-width: 1200px)" srcset="https://tierheilpraxis-jessican.de/img/naturheilkunde_tmb_320.webp" width="338" height="338" type="image/webp" sizes="17vw">
+                <source media="(min-width: 1200px)" srcset="https://tierheilpraxis-jessican.de/img/naturheilkunde_tmb_320.jpeg" width="338" height="338" type="image/jpeg" sizes="17vw">
+            
+                <img src="https://tierheilpraxis-jessican.de/img/naturheilkunde_tmb_768.jpeg" width="768" height="768" alt="Naturheilkunde am Pferd" title="Naturheilkunde am Pferd" loading="lazy" sizes="100vw" class="card-img-top">
+              </picture>
+            <div class="card-body">
+              <h3 class="card-title">Naturheilkunde</h3>
+              <p class="card-text">
+                Entdecken Sie die Kraft der Heilung durch natürliche Therapieansätze, die Körper und Geist Ihres <em>Pferdes</em> oder <em>Hundes</em> in Einklang bringen. Ich biete individuell angepasste <strong>Ernährungsberatung</strong> und -pläne sowie <strong>Pflanzenheilkunde</strong>, um die Gesundheit Ihres Tieres ganzheitlich zu unterstützen und das Wohlbefinden nachhaltig zu fördern.
+              </p>
+            </div>
+          </div>
+          </div>
+        <div class="col-lg-4 mb-4">
+          <div class="card h-100">
+            <picture>
+              <source media="(max-width: 319px)" srcset="https://tierheilpraxis-jessican.de/img/manuelle_therapie_tmb_320.avif" width="320" type="image/avif" sizes="95vw">
+              <source media="(max-width: 319px)" srcset="https://tierheilpraxis-jessican.de/img/manuelle_therapie_tmb_320.webp" width="320" type="image/webp" sizes="95vw">
+              <source media="(max-width: 319px)" srcset="https://tierheilpraxis-jessican.de/img/manuelle_therapie_tmb_320.jpeg" width="320" type="image/jpeg" sizes="95vw">
+              <source media="(min-width: 320px) and (max-width: 574px)" srcset="https://tierheilpraxis-jessican.de/img/manuelle_therapie_tmb_640.avif" width="478" type="image/avif" sizes="95vw">
+              <source media="(min-width: 320px) and (max-width: 574px)" srcset="https://tierheilpraxis-jessican.de/img/manuelle_therapie_tmb_640.webp" width="478" type="image/webp" sizes="95vw">
+              <source media="(min-width: 320px) and (max-width: 574px)" srcset="https://tierheilpraxis-jessican.de/img/manuelle_therapie_tmb_640.jpeg" width="478" type="image/jpeg" sizes="95vw">
+              <source media="(min-width: 575px) and (max-width: 767px)" srcset="https://tierheilpraxis-jessican.de/img/manuelle_therapie_tmb_768.avif" width="478" height="478" type="image/avif" sizes="95vw">
+              <source media="(min-width: 575px) and (max-width: 767px)" srcset="https://tierheilpraxis-jessican.de/img/manuelle_therapie_tmb_768.webp" width="478" height="478" type="image/webp" sizes="95vw">
+              <source media="(min-width: 575px) and (max-width: 767px)" srcset="https://tierheilpraxis-jessican.de/img/manuelle_therapie_tmb_768.jpeg" width="478" height="478" type="image/jpeg" sizes="95vw">
+              
+              <source media="(min-width: 768px) and (max-width: 991px)" srcset="https://tierheilpraxis-jessican.de/img/manuelle_therapie_tmb_320.avif" width="658" height="658" type="image/avif" sizes="17vw">
+              <source media="(min-width: 768px) and (max-width: 991px)" srcset="https://tierheilpraxis-jessican.de/img/manuelle_therapie_tmb_320.webp" width="658" height="658" type="image/webp" sizes="17vw">
+              <source media="(min-width: 768px) and (max-width: 991px)" srcset="https://tierheilpraxis-jessican.de/img/manuelle_therapie_tmb_320.jpeg" width="658" height="658" type="image/jpeg" sizes="17vw">
+              <source media="(min-width: 992px) and (max-width: 1199px)" srcset="https://tierheilpraxis-jessican.de/img/manuelle_therapie_tmb_320.avif" width="278" height="278" type="image/avif" sizes="17vw">
+              <source media="(min-width: 992px) and (max-width: 1199px)" srcset="https://tierheilpraxis-jessican.de/img/manuelle_therapie_tmb_320.webp" width="278" height="278" type="image/webp" sizes="17vw">
+              <source media="(min-width: 992px) and (max-width: 1199px)" srcset="https://tierheilpraxis-jessican.de/img/manuelle_therapie_tmb_320.jpeg" width="278" height="278" type="image/jpeg" sizes="17vw">
+              <source media="(min-width: 1200px)" srcset="https://tierheilpraxis-jessican.de/img/manuelle_therapie_tmb_320.avif" width="338" height="338" type="image/avif" sizes="17vw">
+              <source media="(min-width: 1200px)" srcset="https://tierheilpraxis-jessican.de/img/manuelle_therapie_tmb_320.webp" width="338" height="338" type="image/webp" sizes="17vw">
+              <source media="(min-width: 1200px)" srcset="https://tierheilpraxis-jessican.de/img/manuelle_therapie_tmb_320.jpeg" width="338" height="338" type="image/jpeg" sizes="17vw">
+          
+              <img src="https://tierheilpraxis-jessican.de/img/manuelle_therapie_tmb_768.jpeg" width="768" height="768" alt="Manuelle Therapie am Hund" title="Manuelle Therapie am Hund" loading="lazy" sizes="100vw" class="card-img-top">
+            </picture>
+            <div class="card-body">
+              <h3 class="card-title">Manuelle Therapie</h3>
+              <p class="card-text">
+                Erfahren Sie die wohltuende Wirkung gezielter Handgriffe, die Verspannungen lösen und die Beweglichkeit fördern. Die <strong>Manuelle Therapie</strong> hilft Ihrem Tier, Schmerzen zu lindern, die Gelenkfunktion zu verbessern und die Muskulatur zu entspannen, um eine optimale Leistung und Lebensqualität zu erreichen.
+              </p>
+            </div>
+          </div>
+        </div>
+          <div class="col-lg-4 mb-4">
+          <div class="card h-100">
+            <picture>
+              <source media="(max-width: 319px)" srcset="https://tierheilpraxis-jessican.de/img/akupunktur_tmb_320.avif" width="320" type="image/avif" sizes="95vw">
+              <source media="(max-width: 319px)" srcset="https://tierheilpraxis-jessican.de/img/akupunktur_tmb_320.webp" width="320" type="image/webp" sizes="95vw">
+              <source media="(max-width: 319px)" srcset="https://tierheilpraxis-jessican.de/img/akupunktur_tmb_320.jpeg" width="320" type="image/jpeg" sizes="95vw">
+              <source media="(min-width: 320px) and (max-width: 574px)" srcset="https://tierheilpraxis-jessican.de/img/akupunktur_tmb_640.avif" width="478" type="image/avif" sizes="95vw">
+              <source media="(min-width: 320px) and (max-width: 574px)" srcset="https://tierheilpraxis-jessican.de/img/akupunktur_tmb_640.webp" width="478" type="image/webp" sizes="95vw">
+              <source media="(min-width: 320px) and (max-width: 574px)" srcset="https://tierheilpraxis-jessican.de/img/akupunktur_tmb_640.jpeg" width="478" type="image/jpeg" sizes="95vw">
+              <source media="(min-width: 575px) and (max-width: 767px)" srcset="https://tierheilpraxis-jessican.de/img/akupunktur_tmb_768.avif" width="478" height="478" type="image/avif" sizes="95vw">
+              <source media="(min-width: 575px) and (max-width: 767px)" srcset="https://tierheilpraxis-jessican.de/img/akupunktur_tmb_768.webp" width="478" height="478" type="image/webp" sizes="95vw">
+              <source media="(min-width: 575px) and (max-width: 767px)" srcset="https://tierheilpraxis-jessican.de/img/akupunktur_tmb_768.jpeg" width="478" height="478" type="image/jpeg" sizes="95vw">
+              
+              <source media="(min-width: 768px) and (max-width: 991px)" srcset="https://tierheilpraxis-jessican.de/img/akupunktur_tmb_320.avif" width="658" height="658" type="image/avif" sizes="17vw">
+              <source media="(min-width: 768px) and (max-width: 991px)" srcset="https://tierheilpraxis-jessican.de/img/akupunktur_tmb_320.webp" width="658" height="658" type="image/webp" sizes="17vw">
+              <source media="(min-width: 768px) and (max-width: 991px)" srcset="https://tierheilpraxis-jessican.de/img/akupunktur_tmb_320.jpeg" width="658" height="658" type="image/jpeg" sizes="17vw">
+              <source media="(min-width: 992px) and (max-width: 1199px)" srcset="https://tierheilpraxis-jessican.de/img/akupunktur_tmb_320.avif" width="278" height="278" type="image/avif" sizes="17vw">
+              <source media="(min-width: 992px) and (max-width: 1199px)" srcset="https://tierheilpraxis-jessican.de/img/akupunktur_tmb_320.webp" width="278" height="278" type="image/webp" sizes="17vw">
+              <source media="(min-width: 992px) and (max-width: 1199px)" srcset="https://tierheilpraxis-jessican.de/img/akupunktur_tmb_320.jpeg" width="278" height="278" type="image/jpeg" sizes="17vw">
+              <source media="(min-width: 1200px)" srcset="https://tierheilpraxis-jessican.de/img/akupunktur_tmb_320.avif" width="338" height="338" type="image/avif" sizes="17vw">
+              <source media="(min-width: 1200px)" srcset="https://tierheilpraxis-jessican.de/img/akupunktur_tmb_320.webp" width="338" height="338" type="image/webp" sizes="17vw">
+              <source media="(min-width: 1200px)" srcset="https://tierheilpraxis-jessican.de/img/akupunktur_tmb_320.jpeg" width="338" height="338" type="image/jpeg" sizes="17vw">
+          
+              <img src="https://tierheilpraxis-jessican.de/img/akupunktur_tmb_768.jpeg" width="768" height="768" alt="Tierheilpraktiker bei der Akupunktur am Hund" title="Akupunktur am Hund" loading="lazy" sizes="100vw" class="card-img-top">
+            </picture>
+            <div class="card-body">
+              <h3 class="card-title">Traditionell Chinesische Veterinärmedizin</h3>
+              <p class="card-text">
+                Die heilende Kraft der TCVM verbindet traditionelle und moderne Ansätze. Die klassische <strong>Akupunktur</strong> löst Energieblockaden und harmonisiert den Energiefluss im Körper, während die moderne <strong>Laserakupunktur</strong> eine schonende Alternative bietet. Beide Methoden unterstützen die natürliche Selbstheilungskraft Ihres Tieres.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="text-center mt-3">
+        <a href="behandlung/behandlungsmethoden/" class="btn btn-primary" title="Behandlungsmethoden">Übersicht all meiner Behandlungsmethoden</a>
+      </div>
+      </section>
+      <section class="mt-5 p-4 bg-light">
+        <div class="row">
+          <div class="col-12 text-center">
+            <h2>Interesse geweckt?</h2>
+            <p>
+              Lassen Sie uns gemeinsam daran arbeiten, das Wohlbefinden von Mensch und Tier im Einklang mit der Natur zu fördern. Füllen Sie den passenden <a href="dokumente/" title="Dokumente">Anamnesebogen aus (link)</a> aus und treten Sie mit mir in Kontakt!
             </p>
-            <div class="mt-3">
-               <a href="about/" class="btn btn-primary mb-5" title="Über mich ">
-               Mehr über mich
-               </a>
+            <div class="d-flex justify-content-center align-items-center flex-column flex-sm-row">
+              <a href="behandlung/vorgehen/" class="btn btn-primary mb-2 mb-sm-0 mr-sm-2" title="Meine Vorgehensweise">Meine Vorgehensweise</a>
+              <a href="contact/" class="btn btn-success" title="Kontakt aufnehmen">Kontakt aufnehmen</a>
             </div>
-         </section>
-      </div>
-   </div>
-   <div class="row">
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+  <div class="row">
       <div class="col-md-12 mx-auto">
-         <section id="gallery">
-            <div class="row">
-               <div class="col-12 text-center">
-                  <h2>Leistungsübersicht</h2>
-               </div>
+      <section class="mt-5 p-4 rounded" >
+        <div class="row">
+          <div class="col-12 text-center">
+            <h2>Mein Tierheilpraktiker Blog für Naturheilkunde, Hund und Pferd</h2>
+            <p>Entdecken Sie interessante Artikel und Neuigkeiten rund um die <em>Tierheilkunde</em>, <em>Therapieverfahren</em>, meinen Erfahrungen als <em>Tierheilpraktiker</em> und Tipps für ein gesundes Zusammenleben mit Ihren vierbeinigen Freunden in meinem Blog. Klicken Sie unten, um alle Beiträge anzuzeigen.</p>
+          </div>
+        </div>
+        
+        <div class="row mt-4 justify-content-center">
+          <div class="col-md-8">
+            <div class="card">
+              <picture>
+                <source media="(max-width: 319px)" srcset="https://tierheilpraxis-jessican.de/img/home-bg-2_320.avif 320w" type="image/avif" sizes="80vw">
+                <source media="(max-width: 319px)" srcset="https://tierheilpraxis-jessican.de/img/home-bg-2_320.webp 320w" type="image/webp" sizes="80vw">
+                <source media="(max-width: 319px)" srcset="https://tierheilpraxis-jessican.de/img/home-bg-2_320.jpeg 320w" type="image/jpeg" sizes="80vw">
+                <source media="(min-width: 320px) and (max-width: 574px)" srcset="https://tierheilpraxis-jessican.de/img/home-bg-2_640.avif 640w" type="image/avif"  sizes="80vw">
+                <source media="(min-width: 320px) and (max-width: 574px)" srcset="https://tierheilpraxis-jessican.de/img/home-bg-2_640.webp 640w" type="image/webp"  sizes="80vw">
+                <source media="(min-width: 320px) and (max-width: 574px)" srcset="https://tierheilpraxis-jessican.de/img/home-bg-2_640.jpeg 640w" type="image/jpeg"  sizes="80vw">
+                <source media="(min-width: 575px) and (max-width: 767px)" srcset="https://tierheilpraxis-jessican.de/img/home-bg-2_768.avif 768w" type="image/avif"  sizes="80vw">
+                <source media="(min-width: 575px) and (max-width: 767px)" srcset="https://tierheilpraxis-jessican.de/img/home-bg-2_768.webp 768w" type="image/webp"  sizes="80vw">
+                <source media="(min-width: 575px) and (max-width: 767px)" srcset="https://tierheilpraxis-jessican.de/img/home-bg-2_768.jpeg 768w" type="image/jpeg"  sizes="80vw">
+
+                <source media="(min-width: 768px) and (max-width: 1023px)" srcset="https://tierheilpraxis-jessican.de/img/home-bg-2_1024.avif 1024w" type="image/avif" sizes="80vw">
+                <source media="(min-width: 768px) and (max-width: 1023px)" srcset="https://tierheilpraxis-jessican.de/img/home-bg-2_1024.webp 1024w" type="image/webp" sizes="80vw">
+                <source media="(min-width: 768px) and (max-width: 1023px)" srcset="https://tierheilpraxis-jessican.de/img/home-bg-2_1024.jpeg 1024w" type="image/jpeg" sizes="80vw">
+                <source media="(min-width: 1024px) and (max-width: 1365px)" srcset="https://tierheilpraxis-jessican.de/img/home-bg-2_1366.avif 1366w" type="image/avif" sizes="60vw">
+                <source media="(min-width: 1024px) and (max-width: 1365px)" srcset="https://tierheilpraxis-jessican.de/img/home-bg-2_1366.webp 1366w" type="image/webp" sizes="60vw">
+                <source media="(min-width: 1024px) and (max-width: 1365px)" srcset="https://tierheilpraxis-jessican.de/img/home-bg-2_1366.jpeg 1366w" type="image/jpeg" sizes="60vw">
+                <source media="(min-width: 1366px) and (max-width: 1599px)" srcset="https://tierheilpraxis-jessican.de/img/home-bg-2_1600.avif 1600w" type="image/avif" sizes="60vw">
+                <source media="(min-width: 1366px) and (max-width: 1599px)" srcset="https://tierheilpraxis-jessican.de/img/home-bg-2_1600.webp 1600w" type="image/webp" sizes="60vw">
+                <source media="(min-width: 1366px) and (max-width: 1599px)" srcset="https://tierheilpraxis-jessican.de/img/home-bg-2_1600.jpeg 1600w" type="image/jpeg" sizes="60vw">
+                <source media="(min-width: 1600px)" srcset="https://tierheilpraxis-jessican.de/img/home-bg-2_1920.avif 1920w" type="image/avif" sizes="60vw">
+                <source media="(min-width: 1600px)" srcset="https://tierheilpraxis-jessican.de/img/home-bg-2_1920.webp 1920w" type="image/webp" sizes="60vw">
+                <source media="(min-width: 1600px)" srcset="https://tierheilpraxis-jessican.de/img/home-bg-2_1920.jpeg 1920w" type="image/jpeg" sizes="60vw">
+                <img src="https://tierheilpraxis-jessican.de/home-bg-2_1920.jpeg" alt="Tierheilpraktiker Blog" title="Tierheilpraktiker Blog" loading="lazy"  class="card-img-top" style="aspect-ratio: 16/9; object-fit: cover;">
+              </picture>
             </div>
-            <div class="row">
-               <div class="col-lg-4 mb-4">
-                  <div class="card h-100">
-                     <picture>
-                        <source media="(max-width: 319px)" srcset="https://tierheilpraxis-jessican.de/img/naturheilkunde_tmb_320.avif" width="320" type="image/avif" sizes="95vw">
-                        <source media="(max-width: 319px)" srcset="https://tierheilpraxis-jessican.de/img/naturheilkunde_tmb_320.webp" width="320" type="image/webp" sizes="95vw">
-                        <source media="(max-width: 319px)" srcset="https://tierheilpraxis-jessican.de/img/naturheilkunde_tmb_320.jpeg" width="320" type="image/jpeg" sizes="95vw">
-                        <source media="(min-width: 320px) and (max-width: 574px)" srcset="https://tierheilpraxis-jessican.de/img/naturheilkunde_tmb_640.avif" width="478" type="image/avif" sizes="95vw">
-                        <source media="(min-width: 320px) and (max-width: 574px)" srcset="https://tierheilpraxis-jessican.de/img/naturheilkunde_tmb_640.webp" width="478" type="image/webp" sizes="95vw">
-                        <source media="(min-width: 320px) and (max-width: 574px)" srcset="https://tierheilpraxis-jessican.de/img/naturheilkunde_tmb_640.jpeg" width="478" type="image/jpeg" sizes="95vw">
-                        <source media="(min-width: 575px) and (max-width: 767px)" srcset="https://tierheilpraxis-jessican.de/img/naturheilkunde_tmb_768.avif" width="478" height="478" type="image/avif" sizes="95vw">
-                        <source media="(min-width: 575px) and (max-width: 767px)" srcset="https://tierheilpraxis-jessican.de/img/naturheilkunde_tmb_768.webp" width="478" height="478" type="image/webp" sizes="95vw">
-                        <source media="(min-width: 575px) and (max-width: 767px)" srcset="https://tierheilpraxis-jessican.de/img/naturheilkunde_tmb_768.jpeg" width="478" height="478" type="image/jpeg" sizes="95vw">
-                        <source media="(min-width: 768px) and (max-width: 991px)" srcset="https://tierheilpraxis-jessican.de/img/naturheilkunde_tmb_320.avif" width="658" height="658" type="image/avif" sizes="17vw">
-                        <source media="(min-width: 768px) and (max-width: 991px)" srcset="https://tierheilpraxis-jessican.de/img/naturheilkunde_tmb_320.webp" width="658" height="658" type="image/webp" sizes="17vw">
-                        <source media="(min-width: 768px) and (max-width: 991px)" srcset="https://tierheilpraxis-jessican.de/img/naturheilkunde_tmb_320.jpeg" width="658" height="658" type="image/jpeg" sizes="17vw">
-                        <source media="(min-width: 992px) and (max-width: 1199px)" srcset="https://tierheilpraxis-jessican.de/img/naturheilkunde_tmb_320.avif" width="278" height="278" type="image/avif" sizes="17vw">
-                        <source media="(min-width: 992px) and (max-width: 1199px)" srcset="https://tierheilpraxis-jessican.de/img/naturheilkunde_tmb_320.webp" width="278" height="278" type="image/webp" sizes="17vw">
-                        <source media="(min-width: 992px) and (max-width: 1199px)" srcset="https://tierheilpraxis-jessican.de/img/naturheilkunde_tmb_320.jpeg" width="278" height="278" type="image/jpeg" sizes="17vw">
-                        <source media="(min-width: 1200px)" srcset="https://tierheilpraxis-jessican.de/img/naturheilkunde_tmb_320.avif" width="338" height="338" type="image/avif" sizes="17vw">
-                        <source media="(min-width: 1200px)" srcset="https://tierheilpraxis-jessican.de/img/naturheilkunde_tmb_320.webp" width="338" height="338" type="image/webp" sizes="17vw">
-                        <source media="(min-width: 1200px)" srcset="https://tierheilpraxis-jessican.de/img/naturheilkunde_tmb_320.jpeg" width="338" height="338" type="image/jpeg" sizes="17vw">
-                        <img src="https://tierheilpraxis-jessican.de/img/naturheilkunde_tmb_768.jpeg" width="768" height="768" alt="Naturheilkunde am Pferd" title="Naturheilkunde am Pferd" loading="lazy" sizes="100vw" class="card-img-top">
-                     </picture>
-                     <div class="card-body">
-                        <h3 class="card-title">Naturheilkunde</h3>
-                        <p class="card-text">
-                           Entdecken Sie die Kraft der Heilung durch natürliche Therapieansätze, die Körper und Geist Ihres <em>Pferdes</em> oder <em>Hundes</em> in Einklang bringen. Ich biete individuell angepasste <strong>Ernährungsberatung</strong> und -pläne sowie <strong>Pflanzenheilkunde</strong>, um die Gesundheit Ihres Tieres ganzheitlich zu unterstützen und das Wohlbefinden nachhaltig zu fördern.
-                        </p>
-                     </div>
-                  </div>
-               </div>
-               <div class="col-lg-4 mb-4">
-                  <div class="card h-100">
-                     <picture>
-                        <source media="(max-width: 319px)" srcset="https://tierheilpraxis-jessican.de/img/manuelle_therapie_tmb_320.avif" width="320" type="image/avif" sizes="95vw">
-                        <source media="(max-width: 319px)" srcset="https://tierheilpraxis-jessican.de/img/manuelle_therapie_tmb_320.webp" width="320" type="image/webp" sizes="95vw">
-                        <source media="(max-width: 319px)" srcset="https://tierheilpraxis-jessican.de/img/manuelle_therapie_tmb_320.jpeg" width="320" type="image/jpeg" sizes="95vw">
-                        <source media="(min-width: 320px) and (max-width: 574px)" srcset="https://tierheilpraxis-jessican.de/img/manuelle_therapie_tmb_640.avif" width="478" type="image/avif" sizes="95vw">
-                        <source media="(min-width: 320px) and (max-width: 574px)" srcset="https://tierheilpraxis-jessican.de/img/manuelle_therapie_tmb_640.webp" width="478" type="image/webp" sizes="95vw">
-                        <source media="(min-width: 320px) and (max-width: 574px)" srcset="https://tierheilpraxis-jessican.de/img/manuelle_therapie_tmb_640.jpeg" width="478" type="image/jpeg" sizes="95vw">
-                        <source media="(min-width: 575px) and (max-width: 767px)" srcset="https://tierheilpraxis-jessican.de/img/manuelle_therapie_tmb_768.avif" width="478" height="478" type="image/avif" sizes="95vw">
-                        <source media="(min-width: 575px) and (max-width: 767px)" srcset="https://tierheilpraxis-jessican.de/img/manuelle_therapie_tmb_768.webp" width="478" height="478" type="image/webp" sizes="95vw">
-                        <source media="(min-width: 575px) and (max-width: 767px)" srcset="https://tierheilpraxis-jessican.de/img/manuelle_therapie_tmb_768.jpeg" width="478" height="478" type="image/jpeg" sizes="95vw">
-                        <source media="(min-width: 768px) and (max-width: 991px)" srcset="https://tierheilpraxis-jessican.de/img/manuelle_therapie_tmb_320.avif" width="658" height="658" type="image/avif" sizes="17vw">
-                        <source media="(min-width: 768px) and (max-width: 991px)" srcset="https://tierheilpraxis-jessican.de/img/manuelle_therapie_tmb_320.webp" width="658" height="658" type="image/webp" sizes="17vw">
-                        <source media="(min-width: 768px) and (max-width: 991px)" srcset="https://tierheilpraxis-jessican.de/img/manuelle_therapie_tmb_320.jpeg" width="658" height="658" type="image/jpeg" sizes="17vw">
-                        <source media="(min-width: 992px) and (max-width: 1199px)" srcset="https://tierheilpraxis-jessican.de/img/manuelle_therapie_tmb_320.avif" width="278" height="278" type="image/avif" sizes="17vw">
-                        <source media="(min-width: 992px) and (max-width: 1199px)" srcset="https://tierheilpraxis-jessican.de/img/manuelle_therapie_tmb_320.webp" width="278" height="278" type="image/webp" sizes="17vw">
-                        <source media="(min-width: 992px) and (max-width: 1199px)" srcset="https://tierheilpraxis-jessican.de/img/manuelle_therapie_tmb_320.jpeg" width="278" height="278" type="image/jpeg" sizes="17vw">
-                        <source media="(min-width: 1200px)" srcset="https://tierheilpraxis-jessican.de/img/manuelle_therapie_tmb_320.avif" width="338" height="338" type="image/avif" sizes="17vw">
-                        <source media="(min-width: 1200px)" srcset="https://tierheilpraxis-jessican.de/img/manuelle_therapie_tmb_320.webp" width="338" height="338" type="image/webp" sizes="17vw">
-                        <source media="(min-width: 1200px)" srcset="https://tierheilpraxis-jessican.de/img/manuelle_therapie_tmb_320.jpeg" width="338" height="338" type="image/jpeg" sizes="17vw">
-                        <img src="https://tierheilpraxis-jessican.de/img/manuelle_therapie_tmb_768.jpeg" width="768" height="768" alt="Manuelle Therapie am Hund" title="Manuelle Therapie am Hund" loading="lazy" sizes="100vw" class="card-img-top">
-                     </picture>
-                     <div class="card-body">
-                        <h3 class="card-title">Manuelle Therapie</h3>
-                        <p class="card-text">
-                           Erfahren Sie die wohltuende Wirkung gezielter Handgriffe, die Verspannungen lösen und die Beweglichkeit fördern. Die <strong>Manuelle Therapie</strong> hilft Ihrem Tier, Schmerzen zu lindern, die Gelenkfunktion zu verbessern und die Muskulatur zu entspannen, um eine optimale Leistung und Lebensqualität zu erreichen.
-                        </p>
-                     </div>
-                  </div>
-               </div>
-               <div class="col-lg-4 mb-4">
-                  <div class="card h-100">
-                     <picture>
-                        <source media="(max-width: 319px)" srcset="https://tierheilpraxis-jessican.de/img/akupunktur_tmb_320.avif" width="320" type="image/avif" sizes="95vw">
-                        <source media="(max-width: 319px)" srcset="https://tierheilpraxis-jessican.de/img/akupunktur_tmb_320.webp" width="320" type="image/webp" sizes="95vw">
-                        <source media="(max-width: 319px)" srcset="https://tierheilpraxis-jessican.de/img/akupunktur_tmb_320.jpeg" width="320" type="image/jpeg" sizes="95vw">
-                        <source media="(min-width: 320px) and (max-width: 574px)" srcset="https://tierheilpraxis-jessican.de/img/akupunktur_tmb_640.avif" width="478" type="image/avif" sizes="95vw">
-                        <source media="(min-width: 320px) and (max-width: 574px)" srcset="https://tierheilpraxis-jessican.de/img/akupunktur_tmb_640.webp" width="478" type="image/webp" sizes="95vw">
-                        <source media="(min-width: 320px) and (max-width: 574px)" srcset="https://tierheilpraxis-jessican.de/img/akupunktur_tmb_640.jpeg" width="478" type="image/jpeg" sizes="95vw">
-                        <source media="(min-width: 575px) and (max-width: 767px)" srcset="https://tierheilpraxis-jessican.de/img/akupunktur_tmb_768.avif" width="478" height="478" type="image/avif" sizes="95vw">
-                        <source media="(min-width: 575px) and (max-width: 767px)" srcset="https://tierheilpraxis-jessican.de/img/akupunktur_tmb_768.webp" width="478" height="478" type="image/webp" sizes="95vw">
-                        <source media="(min-width: 575px) and (max-width: 767px)" srcset="https://tierheilpraxis-jessican.de/img/akupunktur_tmb_768.jpeg" width="478" height="478" type="image/jpeg" sizes="95vw">
-                        <source media="(min-width: 768px) and (max-width: 991px)" srcset="https://tierheilpraxis-jessican.de/img/akupunktur_tmb_320.avif" width="658" height="658" type="image/avif" sizes="17vw">
-                        <source media="(min-width: 768px) and (max-width: 991px)" srcset="https://tierheilpraxis-jessican.de/img/akupunktur_tmb_320.webp" width="658" height="658" type="image/webp" sizes="17vw">
-                        <source media="(min-width: 768px) and (max-width: 991px)" srcset="https://tierheilpraxis-jessican.de/img/akupunktur_tmb_320.jpeg" width="658" height="658" type="image/jpeg" sizes="17vw">
-                        <source media="(min-width: 992px) and (max-width: 1199px)" srcset="https://tierheilpraxis-jessican.de/img/akupunktur_tmb_320.avif" width="278" height="278" type="image/avif" sizes="17vw">
-                        <source media="(min-width: 992px) and (max-width: 1199px)" srcset="https://tierheilpraxis-jessican.de/img/akupunktur_tmb_320.webp" width="278" height="278" type="image/webp" sizes="17vw">
-                        <source media="(min-width: 992px) and (max-width: 1199px)" srcset="https://tierheilpraxis-jessican.de/img/akupunktur_tmb_320.jpeg" width="278" height="278" type="image/jpeg" sizes="17vw">
-                        <source media="(min-width: 1200px)" srcset="https://tierheilpraxis-jessican.de/img/akupunktur_tmb_320.avif" width="338" height="338" type="image/avif" sizes="17vw">
-                        <source media="(min-width: 1200px)" srcset="https://tierheilpraxis-jessican.de/img/akupunktur_tmb_320.webp" width="338" height="338" type="image/webp" sizes="17vw">
-                        <source media="(min-width: 1200px)" srcset="https://tierheilpraxis-jessican.de/img/akupunktur_tmb_320.jpeg" width="338" height="338" type="image/jpeg" sizes="17vw">
-                        <img src="https://tierheilpraxis-jessican.de/img/akupunktur_tmb_768.jpeg" width="768" height="768" alt="Tierheilpraktiker bei der Akupunktur am Hund" title="Akupunktur am Hund" loading="lazy" sizes="100vw" class="card-img-top">
-                     </picture>
-                     <div class="card-body">
-                        <h3 class="card-title">Traditionell Chinesische Veterinärmedizin</h3>
-                        <p class="card-text">
-                           Die heilende Kraft der TCVM verbindet traditionelle und moderne Ansätze. Die klassische <strong>Akupunktur</strong> löst Energieblockaden und harmonisiert den Energiefluss im Körper, während die moderne <strong>Laserakupunktur</strong> eine schonende Alternative bietet. Beide Methoden unterstützen die natürliche Selbstheilungskraft Ihres Tieres.
-                        </p>
-                     </div>
-                  </div>
-               </div>
-            </div>
-            <div class="text-center mt-3">
-               <a href="behandlung/behandlungsmethoden/" class="btn btn-primary" title="Behandlungsmethoden">Übersicht all meiner Behandlungsmethoden</a>
-            </div>
-         </section>
-         <section class="mt-5 p-4 bg-light">
-            <div class="row">
-               <div class="col-12 text-center">
-                  <h2>Interesse geweckt?</h2>
-                  <p>
-                     Lassen Sie uns gemeinsam daran arbeiten, das Wohlbefinden von Mensch und Tier im Einklang mit der Natur zu fördern. Füllen Sie den passenden <a href="dokumente/" title="Dokumente">Anamnesebogen aus (link)</a> aus und treten Sie mit mir in Kontakt!
-                  </p>
-                  <div class="d-flex justify-content-center align-items-center flex-column flex-sm-row">
-                     <a href="behandlung/vorgehen/" class="btn btn-primary mb-2 mb-sm-0 mr-sm-2" title="Meine Vorgehensweise">Meine Vorgehensweise</a>
-                     <a href="contact/" class="btn btn-success" title="Kontakt aufnehmen">Kontakt aufnehmen</a>
-                  </div>
-               </div>
-            </div>
-         </section>
-      </div>
-   </div>
-   <div class="row">
-      <div class="col-md-12 mx-auto">
-         <section class="mt-5 p-4 rounded" >
-            <div class="row">
-               <div class="col-12 text-center">
-                  <h2>Mein Tierheilpraktiker Blog für Naturheilkunde, Hund und Pferd</h2>
-                  <p>Entdecken Sie interessante Artikel und Neuigkeiten rund um die <em>Tierheilkunde</em>, <em>Therapieverfahren</em>, meinen Erfahrungen als <em>Tierheilpraktiker</em> und Tipps für ein gesundes Zusammenleben mit Ihren vierbeinigen Freunden in meinem Blog. Klicken Sie unten, um alle Beiträge anzuzeigen.</p>
-               </div>
-            </div>
-            <div class="row mt-4 justify-content-center">
-               <div class="col-md-8">
-                  <div class="card">
-                     <picture>
-                        <source media="(max-width: 319px)" srcset="https://tierheilpraxis-jessican.de/img/home-bg-2_320.avif 320w" type="image/avif" sizes="80vw">
-                        <source media="(max-width: 319px)" srcset="https://tierheilpraxis-jessican.de/img/home-bg-2_320.webp 320w" type="image/webp" sizes="80vw">
-                        <source media="(max-width: 319px)" srcset="https://tierheilpraxis-jessican.de/img/home-bg-2_320.jpeg 320w" type="image/jpeg" sizes="80vw">
-                        <source media="(min-width: 320px) and (max-width: 574px)" srcset="https://tierheilpraxis-jessican.de/img/home-bg-2_640.avif 640w" type="image/avif"  sizes="80vw">
-                        <source media="(min-width: 320px) and (max-width: 574px)" srcset="https://tierheilpraxis-jessican.de/img/home-bg-2_640.webp 640w" type="image/webp"  sizes="80vw">
-                        <source media="(min-width: 320px) and (max-width: 574px)" srcset="https://tierheilpraxis-jessican.de/img/home-bg-2_640.jpeg 640w" type="image/jpeg"  sizes="80vw">
-                        <source media="(min-width: 575px) and (max-width: 767px)" srcset="https://tierheilpraxis-jessican.de/img/home-bg-2_768.avif 768w" type="image/avif"  sizes="80vw">
-                        <source media="(min-width: 575px) and (max-width: 767px)" srcset="https://tierheilpraxis-jessican.de/img/home-bg-2_768.webp 768w" type="image/webp"  sizes="80vw">
-                        <source media="(min-width: 575px) and (max-width: 767px)" srcset="https://tierheilpraxis-jessican.de/img/home-bg-2_768.jpeg 768w" type="image/jpeg"  sizes="80vw">
-                        <source media="(min-width: 768px) and (max-width: 1023px)" srcset="https://tierheilpraxis-jessican.de/img/home-bg-2_1024.avif 1024w" type="image/avif" sizes="80vw">
-                        <source media="(min-width: 768px) and (max-width: 1023px)" srcset="https://tierheilpraxis-jessican.de/img/home-bg-2_1024.webp 1024w" type="image/webp" sizes="80vw">
-                        <source media="(min-width: 768px) and (max-width: 1023px)" srcset="https://tierheilpraxis-jessican.de/img/home-bg-2_1024.jpeg 1024w" type="image/jpeg" sizes="80vw">
-                        <source media="(min-width: 1024px) and (max-width: 1365px)" srcset="https://tierheilpraxis-jessican.de/img/home-bg-2_1366.avif 1366w" type="image/avif" sizes="60vw">
-                        <source media="(min-width: 1024px) and (max-width: 1365px)" srcset="https://tierheilpraxis-jessican.de/img/home-bg-2_1366.webp 1366w" type="image/webp" sizes="60vw">
-                        <source media="(min-width: 1024px) and (max-width: 1365px)" srcset="https://tierheilpraxis-jessican.de/img/home-bg-2_1366.jpeg 1366w" type="image/jpeg" sizes="60vw">
-                        <source media="(min-width: 1366px) and (max-width: 1599px)" srcset="https://tierheilpraxis-jessican.de/img/home-bg-2_1600.avif 1600w" type="image/avif" sizes="60vw">
-                        <source media="(min-width: 1366px) and (max-width: 1599px)" srcset="https://tierheilpraxis-jessican.de/img/home-bg-2_1600.webp 1600w" type="image/webp" sizes="60vw">
-                        <source media="(min-width: 1366px) and (max-width: 1599px)" srcset="https://tierheilpraxis-jessican.de/img/home-bg-2_1600.jpeg 1600w" type="image/jpeg" sizes="60vw">
-                        <source media="(min-width: 1600px)" srcset="https://tierheilpraxis-jessican.de/img/home-bg-2_1920.avif 1920w" type="image/avif" sizes="60vw">
-                        <source media="(min-width: 1600px)" srcset="https://tierheilpraxis-jessican.de/img/home-bg-2_1920.webp 1920w" type="image/webp" sizes="60vw">
-                        <source media="(min-width: 1600px)" srcset="https://tierheilpraxis-jessican.de/img/home-bg-2_1920.jpeg 1920w" type="image/jpeg" sizes="60vw">
-                        <img src="https://tierheilpraxis-jessican.de/home-bg-2_1920.jpeg" alt="Tierheilpraktiker Blog" title="Tierheilpraktiker Blog" loading="lazy"  class="card-img-top" style="aspect-ratio: 16/9; object-fit: cover;">
-                     </picture>
-                  </div>
-               </div>
-            </div>
-            <div class="text-center mt-4">
-               <a href="pages/blog/" class="btn btn-info" title="Tierheilpraktiker Blog">Alle Blogbeiträge anzeigen</a>
-            </div>
-         </section>
-      </div>
-   </div>
+          </div>
+        </div>
+        
+        <div class="text-center mt-4">
+          <a href="pages/blog/" class="btn btn-info" title="Tierheilpraktiker Blog">Alle Blogbeiträge anzeigen</a>
+        </div>
+      </section>
+    </div>
+  </div>
 </div>
 {% endblock content %}
