@@ -22,15 +22,19 @@
     {% endblock canonical %}
 
     <title>{% block title %}{{ config.title }}{% endblock title %}</title>
-    <link href="{{ get_url(path='css/bootstrap.min.css') }}" rel="preload" as="style" onload="this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="{{ get_url(path='css/bootstrap.min.css') }}"></noscript>
 
     <link href="{{ get_url(path='css/all.min.css') }}" rel="preload" as="style" onload="this.rel='stylesheet'">
     <noscript><link rel="stylesheet" href="{{ get_url(path='css/all.min.css') }}"></noscript>
+
+    <link href="{{ get_url(path='css/bootstrap.min.css') }}" rel="preload" as="style" onload="this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="{{ get_url(path='css/bootstrap.min.css') }}"></noscript>
+
     <link href="{{ get_url(path='css/local-fonts.css') }}" rel="preload" as="style" onload="this.rel='stylesheet'">
     <noscript><link rel="stylesheet" href="{{ get_url(path='css/local-fonts.css') }}"></noscript> 
     
-    <link rel="stylesheet" href="{{ get_url(path="clean-blog.css", trailing_slash=false) }}">
+    <link rel="preload" as="style" href="{{ get_url(path='css/clean-blog.css', trailing_slash=false) }}" onload="this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="{{ get_url(path='css/clean-blog.css', trailing_slash=false) }}"></noscript>
+
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
 
