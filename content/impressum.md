@@ -10,7 +10,7 @@ Jessica Gebler
 Tierheilpraxis JessICan -natürlich gesund! (Einzelunternehmen)  
 Wachauer Str.6  
 01896 Lichtenberg, DE  
-Telefon: +49 (0) 173 789 0040  
+Telefon: +49 (0) 151 433 53735  
 E-Mail: tierheilpraxis-jessican[at]gmx.de  
 Umsatzsteuer-Identifikationsnummer gemäß § 27a UStG: <TODO> 123123123  
 

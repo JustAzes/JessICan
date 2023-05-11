@@ -88,7 +88,7 @@ Die verantwortliche Stelle für die Datenverarbeitung auf dieser Website ist:
 Jessica Gebler
 Tierheilpraxis JessICan - natürlich gesund! (Kleinunternehmen)
 Wachauer Str. 6, 01896 Lichtenberg
-Telefon: +49 (0) 173789 0040
+Telefon: +49 (0) 151 433 53735
 E-Mail: tierheilpraxis-jessican[at]gmx.de
 
 Verantwortliche Stelle ist die natürliche oder juristische Person, die allein oder gemeinsam mit anderen über
