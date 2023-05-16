@@ -28,7 +28,24 @@
 <div class="container">
   <div class="row">
     <div class="col-lg-10 col-md-10 mx-auto">
-      {{ page.content | safe }}
+      <hr class="featurette-divider">
+      <h2 id=meine-vorgehensweise>Meine Vorgehensweise</h2>
+      <p>Als Tierheilpraktiker ist es meine Leidenschaft, Tieren auf ganzheitliche Weise zu helfen und ihre Gesundheit zu fördern. In der Praxis biete ich eine Vielzahl von Methoden für die Behandlungen an, um das Wohlbefinden Ihrer geliebten Vierbeiner zu verbessern.
+      <h3 id=1-anamnesebogen-ausfullen>1. Anamnesebogen ausfüllen</h3>
+      <p>Bevor wir uns persönlich treffen, bitte ich Sie den <a href=https://tierheilpraxis-jessican.de/dokumente/>Anamnesebogen auszufüllen (link).</a>
+      <p>Dies gibt mir die Möglichkeit, Ihre Tier und dessen Gesundheitsgeschichte kennenzulernen und mich auf unser Gespräch vorzubereiten. So können Sie mir in Ruhe alles berichten, ohne etwas wichtiges zu vergessen. Manchmal sind die kleinen Dinge von großer Bedeutung.
+      <h3 id=2-untersuchung-vor-ort>2. Untersuchung vor Ort</h3>
+      <p>Gemeinsam vereinbaren wir einen Termin, bei dem ich Sie und Ihr Tier in seiner gewohnten Umgebung kennenlernen kann. Während dieses Besuchs werde ich mir Ihr Tier genau ansehen und gegebenenfalls Rückfragen zu Ihrem Tier und Ihnen stellen. Zudem werde ich wichtige Aspekte vor Ort begutachten, wie zum Beispiel den Auslauf, das Futter und ähnliches. All diese Informationen helfen mir dabei, ein umfassendes Bild der Situation zu erhalten.
+      <p>Tipp: Blutuntersuchungen, Röntgenbilder oder andere tierärztliche Befunde können mir zusätzliche wertvolle Informationen liefern!
+      <h3 id=3-behandlung>3. Behandlung</h3>
+      <p>Auf Basis der Anamnese und Untersuchung erstelle ich ein individuelles Behandlungskonzept für Ihr Tier. Die Entscheidung für das geeignete Behandlungsverfahren treffen wir gemeinsam vor Ort, wobei je nach Art der Erkrankung und individueller Situation nur ein spezifisches oder auch mehrere verschiedene Verfahren in Frage kommen.
+      <p>Abhängig von der Schwere der Erkrankung und der Klarheit der Diagnose kann die Auswahl des Behandlungsverfahrens entweder direkt im Anschluss an die Untersuchung oder bei einem separaten Termin erfolgen.
+      <p>Falls die Situation unklar ist oder wichtige Ergebnisse, wie zum Beispiel Laborergebnisse, noch ausstehen, behalte ich mir das Recht vor, einen neuen Termin zu vereinbaren.
+      <h3 id=4-therapieplan>4. Therapieplan</h3>
+      <p>Nach der Erstbehandlung entwickle ich einen individuellen und auf Ihr Tier zugeschnittenen Therapieplan. Dieser Plan berücksichtigt verschiedene Aspekte, wie beispielsweise Bewegungstraining, Ernährungsumstellung, Anwendung von Pflanzenheilkunde oder anderen geeigneten Methoden, um das Wohlbefinden Ihres Tieres zu fördern.
+      <p>Der detaillierte Therapieplan wird Ihnen per E-Mail zugeschickt. Im Preis inbegriffen ist die Möglichkeit, Rückfragen zum Plan zu stellen, sodass alle Ihre Bedenken und Fragen geklärt werden können.
+      <h3 id=5-nachsorge-und-beratung>5. Nachsorge und Beratung</h3>
+      <p>Eine erfolgreiche Behandlung setzt eine angemessene Nachsorge voraus. Um die langfristige Gesundheit Ihres Tieres zu gewährleisten, stehe ich Ihnen kontinuierlich mit Rat und Tat zur Verfügung. Bei Fragen oder Unklarheiten zögern Sie nicht, mich zu kontaktieren. Eine Therapie ist oft ein fortlaufender Prozess, bei dem in den meisten Fällen eine einmalige Behandlung nicht ausreicht. Gerne besuche ich Ihr Tier erneut und wir können bei Bedarf einen Folgetermin vereinbaren, um den Heilungsprozess optimal zu unterstützen.
     </div>
   </div>
   <div class="row">
@@ -37,48 +54,52 @@
       <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
         <p class="lead">Hier finden Sie die Preisinformationen für die verschiedenen Behandlungen und Dienstleistungen, die wir anbieten.</p>
       </div>
-      <div class="container">
-        <div class="card-deck mb-3 text-center">
-          <!-- Erstkonsultation -->
-          <div class="card mb-4 box-shadow">
-            <div class="card-header">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th scope="col">Service</th>
+            <th scope="col">Preis</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
               <h3 class="my-0 font-weight-normal">Erstkonsultation</h3>
-            </div>
-            <div class="card-body">
-              <h2 class="card-title pricing-card-title">90,00 € <small class="text-muted">zzgl. Fahrtkosten</small></h2>
               <ul class="list-unstyled mt-3 mb-4">
                 <li>beinhaltet Anamnese</li>
                 <li>und Erstbehandlung</li>
               </ul>
-            </div>
-          </div>
-          <!-- Nachbehandlung -->
-          <div class="card mb-4 box-shadow">
-            <div class="card-header">
+            </td>
+            <td>
+              <h2 class="pricing-card-title">90,00 € <small class="text-muted">zzgl. Fahrtkosten</small></h2>
+            </td>
+          </tr>
+          <tr>
+            <td>
               <h3 class="my-0 font-weight-normal">Nachbehandlung</h3>
-            </div>
-            <div class="card-body">
-              <h2 class="card-title pricing-card-title">70,00 € <small class="text-muted">zzgl. Fahrtkosten</small></h2>
               <ul class="list-unstyled mt-3 mb-4">
                 <li>Inkl. individuellem Therapieplan</li>
                 <li>Inkl. Zweitbehandlung </li>
               </ul>
-            </div>
-          </div>
-          <!-- Weitere Besuche oder Anpassungen -->
-          <div class="card mb-4 box-shadow">
-            <div class="card-header">
+            </td>
+            <td>
+              <h2 class="pricing-card-title">70,00 € <small class="text-muted">zzgl. Fahrtkosten</small></h2>
+            </td>
+          </tr>
+          <tr>
+            <td>
               <h3 class="my-0 font-weight-normal">Weitere Besuche</h3>
-            </div>
-            <div class="card-body">
-              <h2 class="card-title pricing-card-title">50,00 € <small class="text-muted">pro Stunde</small></h2>
               <ul class="list-unstyled mt-3 mb-4">
                 <li>z.B. Kontrolluntersuchung</li>
                 <li>Anpassung Therapieplan</li>
               </ul>
-            </div>
-          </div>
-        </div>
+            </td>
+            <td>
+              <h2 class="pricing-card-title">50,00 € <small class="text-muted">pro Stunde</small></h2>
+            </td>
+          </tr>
+        </tbody>
+      </table>
         <p>Die Fahrtkosten betragen 0,50 € pro angefangenem Kilometer. Ich berechne die Entfernung anhand der schnellsten Route laut Google Maps Navigationssystem.</p>
         <p>Die Erstkonsultation und Nachbehandlung gehören in der Regel zusammen und werden gemeinsam abgerechnet, es sei denn es gibt einen Grund, die Therapie nach der Erstkonsultation zu beenden.</p>
         <p>Ich bitte Sie, den Betrag in bar zu entrichten.</p>
@@ -86,60 +107,6 @@
       </div>
     </div>
   </div>
-  <div class="container">
-    <table class="table table-striped">
-      <thead>
-        <tr>
-          <th scope="col">Service</th>
-          <th scope="col">Preis</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>
-            <h3 class="my-0 font-weight-normal">Erstkonsultation</h3>
-            <ul class="list-unstyled mt-3 mb-4">
-              <li>beinhaltet Anamnese</li>
-              <li>und Erstbehandlung</li>
-            </ul>
-          </td>
-          <td>
-            <h2 class="pricing-card-title">90,00 € <small class="text-muted">zzgl. Fahrtkosten</small></h2>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <h3 class="my-0 font-weight-normal">Nachbehandlung</h3>
-            <ul class="list-unstyled mt-3 mb-4">
-              <li>Inkl. individuellem Therapieplan</li>
-              <li>Inkl. Zweitbehandlung </li>
-            </ul>
-          </td>
-          <td>
-            <h2 class="pricing-card-title">70,00 € <small class="text-muted">zzgl. Fahrtkosten</small></h2>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <h3 class="my-0 font-weight-normal">Weitere Besuche</h3>
-            <ul class="list-unstyled mt-3 mb-4">
-              <li>z.B. Kontrolluntersuchung</li>
-              <li>Anpassung Therapieplan</li>
-            </ul>
-          </td>
-          <td>
-            <h2 class="pricing-card-title">50,00 € <small class="text-muted">pro Stunde</small></h2>
-          </td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-
-<!--
--->
-
-
-
 
   <div class="row">
     <div class="col-lg-10 col-md-10 mx-auto">
