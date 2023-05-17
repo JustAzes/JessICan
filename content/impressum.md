@@ -8,7 +8,7 @@ render = false
 ### Verantwortlich für den Inhalt dieser Webseite gemäß § 5 TMG:
 
 Jessica Gebler  
-Tierheilpraxis JessICan -natürlich gesund! (Einzelunternehmen, Kleinunternehmenerin)  
+Tierheilpraxis JessICan -natürlich gesund! (Einzelunternehmen, Kleinunternehmerin)  
 Wachauer Str.6  
 01896 Lichtenberg, DE  
 Telefon: +49 (0) 151 433 53735  
