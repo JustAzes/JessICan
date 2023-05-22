@@ -1,5 +1,5 @@
 +++
-title = "Erfahrungsbericht von "
+title = "Ein neues Kapitel in der Reise von Pferd Falko - Ein Abenteuer mit Dresden als Kulisse"
 date = 2023-05-04
 draft = true
 [taxonomies]
@@ -8,46 +8,34 @@ tags = []
 
 +++
 
-
+Tauchen Sie ein in die inspirierende Geschichte von *Pferd* Falko, einem 9-jährigen Reitponymix in Langebrück, Dresden, der trotz seiner gesundheitlichen Herausforderungen nicht aufgibt. Begleiten Sie uns auf dieser aufschlussreichen Reise durch die Welt der Tierheilkunde.
+Fotos: 4. Mai
 <!-- more -->
 
-## Teil 1
+## Die Begegnung mit Falko
+Vor einiger Zeit erreichte mich eine Anfrage aus *Langebrück*, einem idyllischen Ort am Rande von *Dresden*. Ein Reitponymix namens Falko, 9 Jahre alt und voller Charisma, hatte einige gesundheitliche Probleme, die uns auf diese unerwartete Reise führten. Seine Besitzerin hatte den Anamnesebogen ausgefüllt und mir einen umfangreichen Fallbericht geschickt.
 
-Falko ist ein 9-jähriger *Reitponymix*. Die Besitzerin füllte den *Anamnesebogen* aus und kontaktierte mich anschließend. Nach Sichtung des Fallberichts konnte ich mir schon ein umfassendes Bild von ihm machen.
+Falko hatte einen reizenden Husten, besonders wenn er sich bewegte. Zudem hatte er eine Neigung zu Übersprungshandlungen. Zusätzlich zu diesen Problemen litt Falko öfter unter Blähungen und zeigte häufig den Drang zum Urinieren, ohne dass etwas passierte. Frühere Augenprobleme, einschließlich Bindehautentzündung und vermuteter periodischer Augenentzündung, waren ebenfalls Teil seines medizinischen Puzzles.
 
-Grund der Konsultation: Er hustet öfter einmal unter Bewegung. Außerdem neigt er zu Übersprungshandlungen.
+## Ein Besuch bei Falko: Eine eindrucksvolle Erfahrung
+Die erste Begegnung mit Falko war unvergesslich. Er war neugierig und freundlich, und trotz seiner Probleme fiel seine Lebhaftigkeit auf. Der erste Eindruck von Falko war allerdings etwas sorgenerregend - er hatte ein bisschen Übergewicht. Sein Kot war hell und hatte einen sauren Geruch, während sein Fell glänzend und vollständig war. Seine Hufe waren trocken und die Saumlederhaut wuchs locker über den Huf, was als Saumhorn bekannt ist.
 
-Weitere Symptome: Falko leidet öfter unter Blähungen. Er deutet oft zum Urinieren an, jedoch kommt dann nix. Des Weiteren litt er in der Vergangenheit oft unter mehreren Augenproblemen (Bindehautentzündung und die Vermutung einer periodischen Augenentzündung stand im Raum).
+Ein kleiner, trüber Fleck zeichnete sich auf seinem linken Auge ab. Falko war kein Fan von Regen, Wind und Dunkelheit und zeigte Empfindlichkeit am Schlauch. Aber was wirklich auffällig war, war seine Reaktion bei der Druckpunkttestung an den Leberpunkten.
 
-### Behandlungsgang
-Ich machte mir ein umfassendes Bild von Falko vor Ort. Er war neugierig und freundlich. Mir fiel auf, dass er etwas zu viel auf den Rippen hatte. Der Kot war hell und roch etwas sauer.  Das Fell war glänzend und durchgehend. Die Hufe waren recht trocken und die Saumlederhaut wuchs locker über den Huf (Saumhorn). Sein linkes Auge hat einen stecknadelgroßen, trüben Fleck. Falko mag keinen Regen, Wind und Düsterheit und er ist empfindlich am Schlauch. Ansonsten wirkte er unauffällig. Bei der Druckpunkttestung reagierte er bei den Leberpunkten. 
+Nach einigen Diskussionen und Untersuchungen entschieden wir uns für eine erste Behandlung mit ätherischen Ölen und Akupunktur. Bei den ätherischen Ölen durfte Falko seine Präferenz aus einer Auswahl von sechs Optionen zeigen - und er wählte Rhododendron. Danach konzentrierte ich mich auf Akupunkturpunkte, die seine Leber stabilisieren sollten.
 
-Nach ersten Absprachen und Befunderhebungen entschied ich mich für eine erste Behandlung mit *ätherischen Ölen* und *Akupunktur*. 
-*Ätherische Öle*: Falko durfte sich als erstes unter 6 ausgewählten ätherischen Ölen eins aussuchen. Seine Wahl fiel auf Rhododendron. Ich gab der Besitzerin ein verdünntes Öl mit und bat sie, ihm es täglich anzubieten. Anschließend nahm sie davon etwas auf die Hand und streichelte Falko damit. 
-*Akupunktur*: Bei der Akupunktur entschied ich mich für Punkte, die seine Leber stabilisieren sollten. In der ersten Auswahl der Punktwahl vor Ort konzentrierte ich mich auf die Befunde vor Ort, die Druckpunkttestung und viel auf mein Gefühl. 
-Wir verabschiedeten uns und machten einen Folgetermin aus. 
+## Therapieplan: Die Strategie für Falko
+Nach unserer ersten Begegnung ging ich nach Hause und überdachte Falkos Symptome und Auffälligkeiten. Durch eine sorgfältige Analyse konnte ich einen eindeutigen Therapieplan erstellen, der hauptsächlich auf die Entgiftungsorgane Leber und Niere ausgerichtet war.
 
-### Therapieplan
-Zu Hause ging ich nochmal in Ruhe alle Symptome und Auffälligkeiten sowie das äußere Erscheinungsbild durch. Es bildeten sich Zusammenhänge und am Ende ergab alles eine runde Sache. In dem Therapieplan ging ich dann vor allem auf die Entgiftungsorgane *Leber* und *Niere* ein. Die Besitzerin erhielt eine ausführliche Futterplanempfehlung inkl. Empfehlungen für Nahrungsergänzungsmittel. Ausgewählte Pflanzen (*Phytotherapie*) sollten für der Niere und die Leber bei der Entgiftung helfen. Vor allem kamen hier Brennnessel, Löwenzahn und Mariendistel zum Einsatz - auch Bentonit sollte das Ganze unterstützen. Außerdem bat ich sie, einen ordentlichen Bewegungsplan für Falko zu erstellen.
+Dieser Plan beinhaltete eine ausführliche Futterempfehlung und Empfehlungen für Nahrungsergänzungsmittel. *Phytotherapie*, die Verwendung von speziellen Pflanzen wie Brennnessel, Löwenzahn und Mariendistel, wurde auch eingeführt, um die Leber und Nieren bei der Entgiftung zu unterstützen. Bentonit wurde ebenfalls als zusätzliche Unterstützung vorgeschlagen.
 
-Zum Folgetermin erklärte ich der Besitzerin meinen Therapieplan ausführlich und ging auf Fragen ein. Ich erteilte Falko eine zweite *Akupunkturbehandlung* und wir vereinbarten nun abzuwarten. Bei Verschlechterungen sollte sie mir sofort Bescheid geben!
+Nach etwa vier Wochen berichtete Falkos Besitzerin, dass sein Husten deutlich seltener auftrat und er sogar begann, Gewicht zu verlieren. Seine Übersprungshandlungen waren ebenfalls verschwunden.
 
-Nach ca. 4 Wochen fragte ich nach und ich hörte nur Positives. Sein Husten trat immer seltener bis gar nicht mehr auf und er nahm langsam, aber sicher ab. Seine Übersprungshandlungen waren verschwunden.
-Wir vereinbarten, dass sie sich meldet, wenn Bedarf besteht. 
+## Eine Wendung in Falkos Geschichte
+Einige Monate nach unserer ersten Begegnung bekam ich wieder einen Anruf von Falkos Besitzerin. Er hatte weiter abgenommen und seine Kondition hatte sich verbessert. Aber es gab eine neue Herausforderung - sein Husten war zurück.
 
-## Teil 2
-Nach einigen Monaten meldete die Besitzerin von Falko sich wieder. Er nahm immer weiter ab und seine **Kondition** wurde von Woche zu Woche besser. 
-Seit etwa 1 Woche trat nun erneut der Husten auf und sie wollte es gern gleich am Anfang wieder abfangen. 
-Also vereinbarten wir einen Termin. Von vornherein testete ich Falko mittels *Bioresonanz* aus. Mein Fokus lag dabei auf seinem Husten. Bei der Austestung kam das Ligamentum coronarium (Verbindungsband Leber und Zwerchfell) zum Vorschein sowie eine Bindegewebsschwäche. 
+Bei meinem erneuten Besuch stellte ich fest, dass Falko sehr berührungsempfindlich war, besonders am Rücken. Deshalb entschied ich mich für eine sanfte Methode des Blockaden-Lösens und wollte mit *Akupunktur* nachhelfen. Aber Falko zeigte deutlich, dass er heute keine Akupunktur benötigte. Ich respektierte seinen Wunsch und passte den Therapieplan an.
 
-Beim erneuten Besuch sah ich deutliche Fortschritte bezüglich des Abnehmens. Seine Atemfrequenz lag im Normbereich und auch beim Abhören konnte ich keine Auffälligkeiten feststellen. Jedoch zeigte mir die Besitzerin an mehreren Stellen Fellverluste - diese konnten auch bei anderen Pferden im Bestand festgestellt werden. 
-Während meines Untersuchungsganges stellte ich fest, dass Falko sehr berührungsempfindlich v.a. am Rücken war. 
-Ich entschied mich dann für eine sanfte Methode des Blockaden-Lösens und wollte anschließend mit *Akupunktur* etwas bewirken. Allerdings entschied Falko dagegen. Er demonstrierte deutlich, dass er heute keine Akupunktur benötigt. Ich respektierte dies. 
+Dieses Mal konzentrierte ich mich auf die Stärkung von Falkos Bindegewebe und die Behandlung seiner Hautveränderungen. Deshalb empfahl ich kolloidales Silber für die Haut und Ergänzungsmittel für sein Bindegewebe. Der Husten war an sich nur ein Symptom anderer Veränderungen in seinem Körper - eine direkte Erkrankung der Lunge schloss ich erstmal aus.
 
-### Anpassung des Therapieplans
-
-Wir vereinbarten einen erneuten Termin und ich machte mich an die Anpassung des **Therapieplans**. 
-Diesmal war mein Ziel, das Bindegewebe zu stärken sowie die Hautveränderungen in den Griff zu bekommen. Deshalb empfahl ich kolloidales Silber für die Haut und Ergänzungsmittel für Falkos Bindegewebe. Der Husten war an sich nur eine Ursache von anderen Veränderungen im Körper - einen direkten Befund an der Lunge selbst schloss ich erstmal aus. 
-
-Wie Sie sehen, dauert es manchmal mehrere Anläufe bis man auf den richtigen Weg ist. Und jeder Schritt ist ein Schritt in die richtige Richtung. Der Organismus des Körpers ist ein Meisterwerk und findet viele Schlupfstellen, um Probleme sichtbar werden zu lassen. Nun liegt es an guter Beobachtungsgabe und an dem Erkennen von Zusammenhängen, um auf die richtige Fährte zu kommen. 
-Ich berichte, wie es bei Falko weitergeht.
+Die Reise mit Falko geht weiter, und jede Etappe bringt uns neue Erkenntnisse und Herausforderungen. Aber eines ist sicher: Wir sind auf dem richtigen Weg. Folgen Sie mir, um mehr über Falkos Abenteuer zu erfahren.
