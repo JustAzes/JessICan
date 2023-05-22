@@ -96,22 +96,6 @@ Equikinetic ist nicht nur ein hervorragendes Muskeltraining, sondern dient auch 
 
 Im vergangenen Dezember gab ich einen sehr schönen Workshop zum Thema Muskeln, Sehnen und Faszien. Dabei haben wir gemeinsam einige Grundlagen des geführten Longierens geübt. Vielen Dank nochmals für die Gelegenheit!
 
-<picture>
-  <source srcset="https://tierheilpraxis-jessican.de/img/blog/pferde_gesunderhaltend_bewegen_4_small.avif" type="image/avif" media="(max-width: 319px)">
-  <source srcset="https://tierheilpraxis-jessican.de/img/blog/pferde_gesunderhaltend_bewegen_4_small.webp" type="image/webp" media="(max-width: 319px)">
-  <source srcset="https://tierheilpraxis-jessican.de/img/blog/pferde_gesunderhaltend_bewegen_4_small.jpeg" type="image/jpeg" media="(max-width: 319px)">
-
-  <source srcset="https://tierheilpraxis-jessican.de/img/blog/pferde_gesunderhaltend_bewegen_4_medium.avif" type="image/avif" media="(min-width: 320px) and (max-width: 767px)">
-  <source srcset="https://tierheilpraxis-jessican.de/img/blog/pferde_gesunderhaltend_bewegen_4_medium.webp" type="image/webp" media="(min-width: 320px) and (max-width: 767px)">
-  <source srcset="https://tierheilpraxis-jessican.de/img/blog/pferde_gesunderhaltend_bewegen_4_medium.jpeg" type="image/jpeg" media="(min-width: 320px) and (max-width: 767px)">
-
-  <source srcset="https://tierheilpraxis-jessican.de/img/blog/pferde_gesunderhaltend_bewegen_4_large.avif" type="image/avif" media="(min-width: 768px)">
-  <source srcset="https://tierheilpraxis-jessican.de/img/blog/pferde_gesunderhaltend_bewegen_4_large.webp" type="image/webp" media="(min-width: 768px)">
-  <source srcset="https://tierheilpraxis-jessican.de/img/blog/pferde_gesunderhaltend_bewegen_4_large.jpeg" type="image/jpeg" media="(min-width: 768px)">
-
-  <img src="https://tierheilpraxis-jessican.de/img/blog/pferde_gesunderhaltend_bewegen_4_large.jpeg" alt="Bild vor der Equikinetic®" style="max-width: 100%" loading="lazy">
-</picture>
-
 Wenn Sie an der Durchführung der Equikinetic interessiert sind oder beim Lesen weitere Fragen aufgetaucht sind, können Sie mir gerne schreiben. Zur Vertiefung empfehle ich folgendes Buch: <a href="https://amzn.to/3VtUtTP " title="Equikinetic®: Pferde effektiv longieren">Equikinetic®: Pferde effektiv longieren* von Michael Geitner und Alexandra Schmid*</a>.
 
 
