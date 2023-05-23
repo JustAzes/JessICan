@@ -29,15 +29,33 @@
 <!-- Main Content -->
 <div class="container">
   <div class="row">
-      <div class="col-lg-10 col-md-10 mx-auto">
+    <div class="col-lg-10 col-md-10 mx-auto">
         <p class="text-center mb-4 display-4">Dokumente</p>
         <p>Willkommen auf unserer Unterlagen-Seite für Tierheilpraktiker! Als engagierte Tierheilpraktikerin ist es mein Ziel, Ihnen und Ihrem geliebten Vierbeiner die bestmögliche Betreuung und Unterstützung zu bieten. Um den Prozess der Zusammenarbeit zu vereinfachen, habe ich auf dieser Seite alle wichtigen Dokumente zusammengestellt, die Sie während unserer Zusammenarbeit benötigen könnten.</p>
         <p>Hier finden Sie den Behandlungsvertrag, der die Rahmenbedingungen unserer Zusammenarbeit regelt, sowie das Aufklärungsdokument, das Sie über die verschiedenen Therapieformen, Risiken und Erfolgsaussichten informiert. Darüber hinaus stell ich Ihnen einen detaillierten Anamnesebogen für Hunde und Pferde zur Verfügung, mit dem Sie uns alle relevanten Informationen über die Gesundheit und Vorgeschichte Ihres Tieres mitteilen können. Dies ermöglicht es mir, die bestmögliche Behandlungsstrategie für Ihr Tier zu entwickeln und individuell auf seine Bedürfnisse einzugehen.</p>
         <p>Bitte nehmen Sie sich die Zeit, diese Dokumente sorgfältig durchzulesen und auszufüllen. Je mehr Informationen Sie mir zur Verfügung stellen, desto besser kann ich Ihre Bedenken verstehen und eine gezielte Therapie entwickeln, um das Wohlbefinden Ihres Tieres zu fördern. Sollten Sie Fragen zu den Unterlagen oder dem weiteren Vorgehen haben, zögern Sie bitte nicht, mich zu kontaktieren. Ich stehe Ihnen jederzeit gerne zur Verfügung.</p>
         <p>Sie können mir Unterlagen, wie den ausgefüllten Anamnesebogen, gern über das Kontaktformular zukommen lassen.</p>
-        <h2 class="text-center mb-4">Allgemeine Unterlagen</h2>
-        <div class="row">
-          <!--
+        <div class="d-flex flex-wrap justify-content-center align-items-center">
+          <h2 class="text-center mb-4 w-100">Allgemeine Unterlagen</h2>
+          <hr class="w-100">
+          <h3 class="text-center mb-4 w-100">Unterlagen für die Pferdebehandlung</h3>
+          <div class="p-2">
+              <a href="{{ get_url(path="documents/Anamnesefragebogen_Pferd.pdf") }}" download="Anamnesefragebogen_Pferd.pdf" class="btn btn-primary">
+                  Anamnesefragebogen Pferd
+              </a>
+          </div>
+          <hr class="w-100">
+          <h3 class="text-center mb-4 w-100">Unterlagen für die Hundebehandlung</h3>
+          <div class="p-2">
+              <a href="{{ get_url(path="documents/Anamnesefragebogen_Hund.pdf") }}" download="Anamnesefragebogen_Hund.pdf" class="btn btn-primary">
+                  Anamnesefragebogen Hund
+              </a>
+          </div>
+        </div>
+      </div>
+
+
+        <!--
           <div class="col-lg-6 col-md-6 text-center mb-3">
             <div class="dropdown">
               <button class="btn btn-primary dropdown-toggle" type="button" id="behandlungsvDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -63,26 +81,6 @@
           </div>
         </div>
         -->
-        <hr>
-        <h2 class="text-center mb-4">Unterlagen für die Pferdebehandlung</h2>
-        
-        <div class="col-lg-6 col-md-6 text-center mb-3">
-            <a href="{{ get_url(path="documents/Anamnesefragebogen_Pferd.pdf") }}" download = "Anamnesefragebogen_Pferd.pdf" class="btn btn-primary">
-                Anamnesefragebogen Pferd
-            </a>
-        </div>
-                
-        <hr>
-
-        <h2 class="text-center mb-4">Unterlagen für die Hundebehandlung</h2>        
-        <div class="col-lg-6 col-md-6 text-center mb-3">
-            <a href="{{ get_url(path="documents/Anamnesefragebogen_Hund.pdf") }}" download = "Anamnesefragebogen_Hund.pdf" class="btn btn-primary">
-                Anamnesefragebogen Hund
-            </a>
-        </div>
-        <p>Durch die Nutzung der hier bereitgestellten Dokumente und die Zusammenarbeit mit mir als erfahrene Tierheilpraktikerin stellen Sie sicher, dass Ihr Hund oder Pferd die bestmögliche Betreuung erhält. Ich freue mich darauf, Ihnen und Ihrem Tier auf dem Weg zu besserer Gesundheit und Wohlbefinden beizustehen.</p>
-
-        </div>
   </div>
 </div>
 
