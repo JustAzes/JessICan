@@ -17,11 +17,8 @@ Entdecken Sie die faszinierende Welt der Lasertherapie in der Tierheilkunde! Die
   <div class="row featurette">
     <div class="col-md-7 order-md-2">
       <h2 class="featurette-heading">Allgemeines über Akupunktur und Laserakupunktur</h2>
-      <p class="lead">Die <strong>Akupunktur</strong> ist eine alternative Heilmethode aus der traditionellen chinesischen Medizin (TCM). Bei dieser Methode werden sehr dünne Nadeln an bestimmten Punkten des Körpers platziert, um den Fluss von Energie im Körper zu beeinflussen und Blockaden zu lösen.</p>
-      <p class="lead">Die Akupunktur basiert auf der Vorstellung, dass der Körper von Energieleitbahnen, den sogenannten Meridianen, durchzogen ist. In diesen Meridianen fließt die Energie, die für die Gesundheit und das Wohlbefinden des Körpers verantwortlich ist. Wenn der Fluss gestört ist, können Krankheiten und Beschwerden entstehen.</p>
-      <p class="lead">Durch das Einstechen der Nadeln an bestimmten Akupunkturpunkten sollen Blockaden im Qi-Fluss gelöst und der Energiefluss wiederhergestellt werden. Dies soll den Körper in die Lage versetzen, sich selbst zu heilen und Beschwerden zu lindern. Der Ansatz der *Akupunktur* liegt darin, nicht nur die Symptome zu behandeln, sondern die Erkrankung an der Wurzel anzugehen. Somit sollte im Verlauf der Therapie auch die Symptomatik verschwinden.</p>
-      <p class="lead">Die <strong>Laser-Akupunktur</strong> (im Folgenden Lasertherapie genannt) ist eine moderne Variante der traditionellen chinesischen Akupunktur. Im Gegensatz zur herkömmlichen Akupunktur wird bei der Laser-Akupunktur kein Nadelstich benötigt, sondern ein Laserstrahl wird auf die Akupunkturpunkte gerichtet. Doch nicht nur Akupunkturpunkte können bestrahlt werden, sondern der Laser kann auch bei erkranktem Gewebe zum Einsatz kommen.</p>    
-      </div>
+      <p class="lead">Die <strong>Akupunktur</strong> ist eine alternative Heilmethode aus der traditionellen chinesischen Medizin (TCM). Bei dieser Methode werden sehr dünne Nadeln an bestimmten Punkten des Körpers platziert, um den Fluss von Energie im Körper zu beeinflussen und Blockaden zu lösen.</p>    
+    </div>
     <div class="col-md-5">
         <picture>
             <source media="(max-width: 319px)" srcset="https://tierheilpraxis-jessican.de/img/blog/laserakupunktur_blog_320.avif 304w" type="image/avif" sizes="95vw">
@@ -42,6 +39,12 @@ Entdecken Sie die faszinierende Welt der Lasertherapie in der Tierheilkunde! Die
   </div>
   <hr class="featurette-divider">
 </div>
+
+Die Akupunktur basiert auf der Vorstellung, dass der Körper von Energieleitbahnen, den sogenannten Meridianen, durchzogen ist. In diesen Meridianen fließt die Energie, die für die Gesundheit und das Wohlbefinden des Körpers verantwortlich ist. Wenn der Fluss gestört ist, können Krankheiten und Beschwerden entstehen.
+
+Durch das Einstechen der Nadeln an bestimmten Akupunkturpunkten sollen Blockaden im Qi-Fluss gelöst und der Energiefluss wiederhergestellt werden. Dies soll den Körper in die Lage versetzen, sich selbst zu heilen und Beschwerden zu lindern. Der Ansatz der *Akupunktur* liegt darin, nicht nur die Symptome zu behandeln, sondern die Erkrankung an der Wurzel anzugehen. Somit sollte im Verlauf der Therapie auch die Symptomatik verschwinden.
+
+Die *Laser-Akupunktur* (im Folgenden Lasertherapie genannt) ist eine moderne Variante der traditionellen chinesischen Akupunktur. Im Gegensatz zur herkömmlichen Akupunktur wird bei der Laser-Akupunktur kein Nadelstich benötigt, sondern ein Laserstrahl wird auf die Akupunkturpunkte gerichtet. Doch nicht nur Akupunkturpunkte können bestrahlt werden, sondern der Laser kann auch bei erkranktem Gewebe zum Einsatz kommen.
 
 ## Wirkung von Laserakupunktur und Lasertherapie
 
