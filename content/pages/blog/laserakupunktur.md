@@ -1,7 +1,7 @@
 +++
 title = "Tierheilkunde im Licht der Lasertherapie: Schmerzfrei, schonend & effektiv!"
-date = 2023-05-04
-draft = true
+date = 2023-05-24
+draft = false
 [taxonomies]
 categories = ["Therapieformen"]
 tags = []
