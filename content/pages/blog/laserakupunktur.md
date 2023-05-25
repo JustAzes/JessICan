@@ -33,7 +33,7 @@ Entdecken Sie die faszinierende Welt der Lasertherapie in der Tierheilkunde! Die
             <source media="(min-width: 768px)" srcset="https://tierheilpraxis-jessican.de/img/blog/laserakupunktur_blog_1024.avif 972w" type="image/avif" sizes="30vw">
             <source media="(min-width: 768px)" srcset="https://tierheilpraxis-jessican.de/img/blog/laserakupunktur_blog_1024.webp 972w" type="image/webp" sizes="30vw">
             <source media="(min-width: 768px)" srcset="https://tierheilpraxis-jessican.de/img/blog/laserakupunktur_blog_1024.jpeg 972w" type="image/jpeg" sizes="30vw">
-            <img src="https://tierheilpraxis-jessican.de/img/blog/laserakupunktur_blog_1024.jpeg" alt="" title="" loading="lazy" sizes="30vw"  class="card-img-top" style="aspect-ratio: 1/1; object-fit: cover;">
+            <img src="https://tierheilpraxis-jessican.de/img/blog/laserakupunktur_blog_1024.jpeg" alt="Tierheilpraktiker bei der Laserakupunktur an Hund" title="Tierheilpraktiker bei der Laserakupunktur an Hund" loading="lazy" sizes="30vw"  class="card-img-top" style="aspect-ratio: 1/1; object-fit: cover;">
         </picture>
     </div>
   </div>
@@ -107,7 +107,7 @@ Der Energieschub in den Nervenzellen sorgt auch für eine Hyperpolarisation, als
         <source media="(min-width: 1600px)" srcset="https://tierheilpraxis-jessican.de/img/behandlung/laserakupunktur_1920.avif 1920w" type="image/avif" sizes="100vw">
         <source media="(min-width: 1600px)" srcset="https://tierheilpraxis-jessican.de/img/behandlung/laserakupunktur_1920.webp 1920w" type="image/webp" sizes="100vw">
         <source media="(min-width: 1600px)" srcset="https://tierheilpraxis-jessican.de/img/behandlung/laserakupunktur_1920.jpeg 1920w" type="image/jpeg" sizes="100vw">
-        <img src="https://tierheilpraxis-jessican.de/img/behandlung/laserakupunktur_1920.jpeg" alt="Laserakupunktur an Hund und Pferd" title="Laserakupunktur an Hund und Pferd" loading="lazy" sizes="100vw"  class="featurette-image img-fluid mx-auto rounded-img" style="aspect-ratio: 1/1; object-fit: cover;">
+        <img src="https://tierheilpraxis-jessican.de/img/behandlung/laserakupunktur_1920.jpeg" alt="Tierheilpraktiker bei der Laserakupunktur an Pferd" title="Tierheilpraktiker bei der Laserakupunktur an Pferd" loading="lazy" sizes="100vw"  class="featurette-image img-fluid mx-auto rounded-img" style="aspect-ratio: 1/1; object-fit: cover;">
     </picture>
     </div>
   </div>
