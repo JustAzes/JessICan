@@ -33,7 +33,7 @@ Entdecken Sie die faszinierende Welt der Lasertherapie in der Tierheilkunde! Die
             <source media="(min-width: 768px)" srcset="https://tierheilpraxis-jessican.de/img/blog/laserakupunktur_blog_1024.avif 972w" type="image/avif" sizes="30vw">
             <source media="(min-width: 768px)" srcset="https://tierheilpraxis-jessican.de/img/blog/laserakupunktur_blog_1024.webp 972w" type="image/webp" sizes="30vw">
             <source media="(min-width: 768px)" srcset="https://tierheilpraxis-jessican.de/img/blog/laserakupunktur_blog_1024.jpeg 972w" type="image/jpeg" sizes="30vw">
-            <img src="https://tierheilpraxis-jessican.de/img/blog/laserakupunktur_blog_1024.jpeg" alt="Tierheilpraktiker bei der Laserakupunktur an Hund" title="Tierheilpraktiker bei der Laserakupunktur an Hund" loading="lazy" sizes="30vw"  class="card-img-top" style="aspect-ratio: 1/1; object-fit: cover;">
+            <img src="https://tierheilpraxis-jessican.de/img/blog/laserakupunktur_blog_1024.jpeg" alt="Tierheilpraktiker bei der Laserakupunktur an Hund" title="Tierheilpraktiker bei der Laserakupunktur an Hund" loading="lazy" sizes="30vw"  class="featurette-image img-fluid mx-auto rounded-img" style="aspect-ratio: 1/1; object-fit: cover;">
         </picture>
     </div>
   </div>
