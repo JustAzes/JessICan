@@ -30,24 +30,29 @@
 <article>
   <div class="container">
     <div class="row">
-      <div class="col-lg-10 col-md-10 mx-auto text-center">
+      <div class="col-lg-10 col-md-10 mx-auto">
         {{ page.content | safe }}
         <hr style="border-color: green">
-        <strong>“Auch ein langer Weg beginnt mit dem ersten Schritt.”</strong>
-        <br>
-        Eure Jessi von JessICan-natürlich!      
+        <div class="text-center">
+          <strong>“Auch ein langer Weg beginnt mit dem ersten Schritt.”</strong>
+          <br>
+          Eure Jessi von JessICan-natürlich!      
 
-        <div class="shariff" data-button-style='icon' data-services='["facebook", "twitter", "whatsapp"]' style="text-align: center;"></div>
-        {% if page.taxonomies.tags %}
-        <div class="post-tags">
-          <p>Tags:
-            {% for tag in page.taxonomies.tags %}
-            <a href="{{ get_taxonomy_url(kind="tags", name=tag) }}" title="Tag">#{{ tag }}</a>
-            {% endfor %}
-          </p>
+          <div class="d-flex justify-content-center">
+            <div class="shariff" data-theme='white' data-services='["facebook", "twitter", "whatsapp"]'></div>
         </div>
-        {% endif %}
-        <hr style="border-color: green">
+          {% if page.taxonomies.tags %}
+          <div class="post-tags">
+            <p>Tags:
+              {% for tag in page.taxonomies.tags %}
+              <a href="{{ get_taxonomy_url(kind="tags", name=tag) }}" title="Tag">#{{ tag }}</a>
+              {% endfor %}
+            </p>
+          </div>
+          
+          {% endif %}
+          <hr style="border-color: green">
+      </div>
       </div>
     </div>
   </div>
