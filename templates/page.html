@@ -3,8 +3,6 @@
     <meta name="description" content="Blogartikel '+{{ post_macros::page_up_title(page=page) }}+' von Tierheilpraktiker JessICan - natürlich gesund!">
 {% endblock description %}
 {% block headextras %}
-<link rel="stylesheet" type="text/css" href="{{ get_url(path="/shariff-3.2.1/shariff.min.css")}}"> 
-<script type="text/javascript" src="{{ get_url(path="/shariff-3.2.1/shariff.complete.js")}}" defer></script>
 {% endblock headextras %}
 {% block title %}{{ post_macros::page_up_title(page=page) }}{% endblock title %}
 
@@ -89,4 +87,6 @@
 </article>
 {% endblock content %}
 {% block extrascripts %}
+<link rel="stylesheet" type="text/css" href="{{ get_url(path="/shariff-3.2.1/shariff.min.css")}}"> 
+<script type="text/javascript" src="{{ get_url(path="/shariff-3.2.1/shariff.complete.js")}}" defer></script>
 {% endblock extrasripts %}
