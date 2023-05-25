@@ -3,6 +3,8 @@
     <meta name="description" content="Blogartikel '+{{ post_macros::page_up_title(page=page) }}+' von Tierheilpraktiker JessICan - natürlich gesund!">
 {% endblock description %}
 {% block headextras %}
+<link rel="stylesheet" type="text/css" href="{{ get_url(path="/shariff-3.2.1/shariff.min.css")}}"> 
+<script type="text/javascript" src="{{ get_url(path="/shariff-3.2.1/shariff.complete.js")}}" defer></script>
 {% endblock headextras %}
 {% block title %}{{ post_macros::page_up_title(page=page) }}{% endblock title %}
 
@@ -38,8 +40,11 @@
 
           <hr style="border-color: green">
           
-          <div class="shariff justify-content-center" data-button-style='icon' data-theme='white' data-services='["facebook", "twitter", "whatsapp"]'></div>
-          {% if page.taxonomies.tags %}
+          <div class="d-flex justify-content-center">
+            <div class="shariff" data-button-style='icon' data-theme='white' data-services='["facebook", "twitter", "whatsapp"]'></div>
+          </div>{% if page.taxonomies.tags %}
+          <hr style="border-color: green">
+          <div class="shariff" data-button-style='icon' data-theme='white' data-services='["facebook", "twitter", "whatsapp"]' style="display: block; margin-left: auto; margin-right: auto;"></div>
           <div class="post-tags">
             <p>Tags:
               {% for tag in page.taxonomies.tags %}
@@ -56,6 +61,4 @@
 </article>
 {% endblock content %}
 {% block extrascripts %}
-  <link rel="stylesheet" type="text/css" href="{{ get_url(path="/shariff-3.2.1/shariff.min.css")}}"> 
-  <script type="text/javascript" src="{{ get_url(path="/shariff-3.2.1/shariff.complete.js")}}" defer></script>
 {% endblock extrasripts %}
