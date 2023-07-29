@@ -13,6 +13,22 @@ Seit über einem Jahrzehnt ist mein Lewitzer Gino nicht nur ein Teil meines Lebe
 
 <!-- more -->
 
+<picture>
+    <source media="(max-width: 319px)" srcset="https://tierheilpraxis-jessican.de/img/blog/fallbericht_gino_0_320.avif 304w" type="image/avif" sizes="95vw">
+    <source media="(max-width: 319px)" srcset="https://tierheilpraxis-jessican.de/img/blog/fallbericht_gino_0_320.webp 304w" type="image/webp" sizes="95vw">
+    <source media="(max-width: 319px)" srcset="https://tierheilpraxis-jessican.de/img/blog/fallbericht_gino_0_320.jpeg 304w" type="image/jpeg" sizes="95vw">
+    <source media="(min-width: 320px) and (max-width: 639px)" srcset="https://tierheilpraxis-jessican.de/img/blog/fallbericht_gino_0_640.avif 608w" type="image/avif" sizes="95vw">
+    <source media="(min-width: 320px) and (max-width: 639px)" srcset="https://tierheilpraxis-jessican.de/img/blog/fallbericht_gino_0_640.webp 608w" type="image/webp" sizes="95vw">
+    <source media="(min-width: 320px) and (max-width: 639px)" srcset="https://tierheilpraxis-jessican.de/img/blog/fallbericht_gino_0_640.jpeg 608w" type="image/jpeg" sizes="95vw">
+    <source media="(min-width: 640px) and (max-width: 767px)" srcset="https://tierheilpraxis-jessican.de/img/blog/fallbericht_gino_0_768.avif 729w" type="image/avif" sizes="95vw">
+    <source media="(min-width: 640px) and (max-width: 767px)" srcset="https://tierheilpraxis-jessican.de/img/blog/fallbericht_gino_0_768.webp 729w" type="image/webp" sizes="95vw">
+    <source media="(min-width: 640px) and (max-width: 767px)" srcset="https://tierheilpraxis-jessican.de/img/blog/fallbericht_gino_0_768.jpeg 729w" type="image/jpeg" sizes="95vw">
+    <source media="(min-width: 768px)" srcset="https://tierheilpraxis-jessican.de/img/blog/fallbericht_gino_0_1024.avif 972w" type="image/avif" sizes="95vw">
+    <source media="(min-width: 768px)" srcset="https://tierheilpraxis-jessican.de/img/blog/fallbericht_gino_0_1024.webp 972w" type="image/webp" sizes="95vw">
+    <source media="(min-width: 768px)" srcset="https://tierheilpraxis-jessican.de/img/blog/fallbericht_gino_0_1024.jpeg 972w" type="image/jpeg" sizes="95vw">
+    <img src="https://tierheilpraxis-jessican.de/img/blog/fallbericht_gino_0_1024.jpeg" alt="Hustendes Pferd Gino" title="Hustendes Pferd Gino" loading="lazy" sizes="95vw"   style="max-width: 100%" loading="lazy">
+</picture>
+
 Wir klammerten uns an jede Hoffnung, folgten den Ratschlägen der Tierärzte, umarmten jede Therapieform, von Heubedampfungen bis hin zu starken Medikamenten wie Kortison und Salbutamol. Und tatsächlich, als die goldenen Blätter des Herbstes fielen, schien sich auch Ginos Husten zu verabschieden. Doch wie bei einer lückenhaften Sonnenfinsternis, die den Himmel plötzlich wieder verdunkelt, war unsere Erleichterung nur von kurzer Dauer.
 
 Im Sommer 2022 traf uns ein wahrer Sturm der Verzweiflung. Ginos früher so kräftige Lunge kämpfte nun gegen das Unvermeidliche an, sein Körper wurde von einer Kettenreaktion aus endlosem Husten und Atemproblemen erschüttert. In meinem Herzen breitete sich eine Kälte aus, die ich zuvor nie gekannt hatte. Die Optionen, die vor uns lagen, schienen nur aus schlechten Nachrichten zu bestehen - eine Reha an der Nordsee, ein Klinikaufenthalt oder das unaussprechliche Unvermeidliche.
@@ -32,8 +48,21 @@ Die nächsten Monate waren wie eine Reise auf einem ruhigen Fluss - wir arbeitet
 Bis zum Frühlingsanbruch im April 2023 lag eine Pause in Ginos therapeutischer Reise vor uns. In dieser Zeit zeigte Gino einen unerwarteten Tatendrang und Ausdauer, die mir ein Lächeln ins Gesicht zauberten. Mit einem Funken Vitalität in seinen Augen absolvierte er wöchentliche Joggingrunden - eine bemerkenswerte Strecke von bis zu 15 Kilometern - an der Seite meines Mannes. Sein Husten, obwohl stets eine Erinnerung an seine Bedingung, war nun auf die ersten, anfänglichen Momente unserer Trainingseinheiten begrenzt. Es war ein sanftes Echo der Vergangenheit, das bald von Ginos tatkräftigen Hufschlägen und dem freudigen Schnauben übertönt wurde.
 
 <picture>
-  <img src="https://tierheilpraxis-jessican.de/img/blog/gino_todo.jpg" alt="Bild von Gino" style="max-width: 100%" loading="lazy">
+    <source media="(max-width: 319px)" srcset="https://tierheilpraxis-jessican.de/img/blog/fallbericht_gino_1_320.avif 304w" type="image/avif" sizes="95vw">
+    <source media="(max-width: 319px)" srcset="https://tierheilpraxis-jessican.de/img/blog/fallbericht_gino_1_320.webp 304w" type="image/webp" sizes="95vw">
+    <source media="(max-width: 319px)" srcset="https://tierheilpraxis-jessican.de/img/blog/fallbericht_gino_1_320.jpeg 304w" type="image/jpeg" sizes="95vw">
+    <source media="(min-width: 320px) and (max-width: 639px)" srcset="https://tierheilpraxis-jessican.de/img/blog/fallbericht_gino_1_640.avif 608w" type="image/avif" sizes="95vw">
+    <source media="(min-width: 320px) and (max-width: 639px)" srcset="https://tierheilpraxis-jessican.de/img/blog/fallbericht_gino_1_640.webp 608w" type="image/webp" sizes="95vw">
+    <source media="(min-width: 320px) and (max-width: 639px)" srcset="https://tierheilpraxis-jessican.de/img/blog/fallbericht_gino_1_640.jpeg 608w" type="image/jpeg" sizes="95vw">
+    <source media="(min-width: 640px) and (max-width: 767px)" srcset="https://tierheilpraxis-jessican.de/img/blog/fallbericht_gino_1_768.avif 729w" type="image/avif" sizes="95vw">
+    <source media="(min-width: 640px) and (max-width: 767px)" srcset="https://tierheilpraxis-jessican.de/img/blog/fallbericht_gino_1_768.webp 729w" type="image/webp" sizes="95vw">
+    <source media="(min-width: 640px) and (max-width: 767px)" srcset="https://tierheilpraxis-jessican.de/img/blog/fallbericht_gino_1_768.jpeg 729w" type="image/jpeg" sizes="95vw">
+    <source media="(min-width: 768px)" srcset="https://tierheilpraxis-jessican.de/img/blog/fallbericht_gino_1_1024.avif 972w" type="image/avif" sizes="95vw">
+    <source media="(min-width: 768px)" srcset="https://tierheilpraxis-jessican.de/img/blog/fallbericht_gino_1_1024.webp 972w" type="image/webp" sizes="95vw">
+    <source media="(min-width: 768px)" srcset="https://tierheilpraxis-jessican.de/img/blog/fallbericht_gino_1_1024.jpeg 972w" type="image/jpeg" sizes="95vw">
+    <img src="https://tierheilpraxis-jessican.de/img/blog/fallbericht_gino_1_1024.jpeg" alt="Pferd Gino bei der Manuellen Therapie durch Tierheilpraktiker Jessican" title="Pferd Gino bei der Manuellen Therapie durch Tierheilpraktiker Jessican" loading="lazy" sizes="95vw"   style="max-width: 100%" loading="lazy">
 </picture>
+
 
 An diesem leuchtenden Sommertag, dem 23. Juni 2023, sitze ich hier und berichte von Ginos gegenwärtiger Blütezeit. Er erstrahlt mit der Sonne um die Wette, verkörpert sowohl Kraft als auch Anmut in seinem Wesen. Als souveräner Anführer seiner Herde, lebt er diese Rolle mit unerschütterlicher Hingabe und Liebe. Sein unermüdlicher Geist und seine beeindruckende Leistungsbereitschaft stehen symbolisch für die enorme Hürde, die er überwunden hat - seine Krankheit ist ein Teil seiner Geschichte, aber bestimmt nicht sein Leben.
 
