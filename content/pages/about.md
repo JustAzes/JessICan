@@ -4,9 +4,9 @@ path = "about"
 template = "about.html"
 +++
 
-Mein Name ist Jessica und mein Ziel ist es, Menschen und Tieren dabei zu helfen, gemeinsam gesundheitliche Herausforderungen zu bewältigen.
+Mein Name ist Jessica und ich habe es mir zur Aufgabe gemacht, Mensch und Tier auf ihrer gemeinsamen Reise zu besserer Gesundheit zu unterstützen.
 
-## Mensch und Tier? Gemeinsamkeit ist meine Philosophie!
+## Eine Synergie zwischen Mensch und Tier – Das ist meine Philosophie!
 
 Ich bin selbst mit Tieren aufgewachsen - Hund, Katze, (Wüstenrenn-)Maus und viele andere waren stets an meiner Seite. Seit meinem 6. Lebensjahr sitze ich auf dem Pferd und seit 2012 ist mein Lewitzer Pony Gino mein seelischer Ausgleich.
 
@@ -26,16 +26,15 @@ Ich bin selbst mit Tieren aufgewachsen - Hund, Katze, (Wüstenrenn-)Maus und vie
   <img src="https://tierheilpraxis-jessican.de/img/ich_und_gino_large.jpeg" alt="Tierheilpraktiker JessICan und ihr Pferd Gino" style="max-width: 100%;max-height: 80%;" loading="lazy">
 </picture>
 
+Tiere waren stets ein integraler Bestandteil meines Lebens. Angefangen von Hunden und Katzen bis hin zu Wüstenrennmäusen - sie alle begleiteten mich während meiner Kindheit und Jugend. Mit sechs Jahren begann meine Leidenschaft für das Reiten und seit 2012 ist mein treues Lewitzer Pony Gino mein Seelenbalsam und mein treuer Gefährte.
 
-Ich habe einen Bachelorabschluss als staatlich anerkannte Sozialarbeiterin. Die Sozialarbeit hat mir gelehrt, dass eine Familie wie ein Ökosystem funktioniert und jedes Mitglied seine Funktionen und Aufgaben darin einnimmt. Gerät dies durch Veränderungen in ein Ungleichgewicht und schafft es nicht, sich selbst wieder auszubalancieren, so hat das Auswirkungen auf jeden Einzelnen.
+Meine Ausbildung als staatlich anerkannte Sozialarbeiterin, in der ich meinen Bachelorabschluss erlangte, hat mein Verständnis dafür geschärft, dass eine Familie - oder jeder soziale Verband - wie ein Ökosystem funktioniert. Jedes Mitglied spielt eine bestimmte Rolle und hat spezifische Aufgaben. Wenn dieses Gleichgewicht durch Veränderungen gestört wird und es sich nicht selbst regulieren kann, wirkt sich das auf alle Mitglieder aus.
 
-Auch unsere Tiere nehmen unbewusst unsere Charakterzüge, Stärken und Schwächen an. Dabei bleiben sie leider auch nicht von unseren Krankheiten verschont.
+Diese Dynamik zeigt sich ebenso in der Beziehung zwischen uns Menschen und unseren Tieren. Sie übernehmen oft unbewusst unsere Charakterzüge, Stärken und Schwächen und sind leider auch anfällig für unsere Krankheiten.
 
-Hier ein Beispiel aus meinem eigenen Leben:
+Meine persönliche Erfahrung illustriert das:
 
-Ich selbst bin durch verschiedene Allergien vorbelastet und war bereits wegen allergischem Asthma in klinischer Behandlung. Parallel dazu ist mein Pferd an einer chronischen Atemwegserkrankung erkrankt, wobei nach vielen Besuchen unterschiedlicher Tierärzte lediglich eine Verbesserung nur bei Gabe von starken Medikamenten erzielt werden konnte.
-
-Auf der Suche nach alternativen Lösungsmöglichkeiten bin ich in die Tierheilkunde eingestiegen.
+Ich habe verschiedene Allergien und litt unter allergischem Asthma, was eine klinische Behandlung erforderlich machte. Gleichzeitig erkrankte mein Pferd Gino an einer chronischen Atemwegserkrankung. Trotz zahlreicher Tierarztbesuche konnte eine Verbesserung nur durch starke Medikamente erreicht werden. Diese Erfahrung führte mich auf den Weg der Tierheilkunde, auf der Suche nach natürlichen und schonenderen Therapiemethoden.
 
 ---
 
@@ -57,12 +56,15 @@ Auf der Suche nach alternativen Lösungsmöglichkeiten bin ich in die Tierheilku
 
 
 
-Es ist wichtig, sich ständig weiterzuentwickeln und neues Wissen anzueignen. Nur so können wir die Herausforderungen für uns und unsere Liebsten meistern.
+Es ist von entscheidender Bedeutung, ständig zu lernen und sich weiterzuentwickeln. Das ermöglicht es uns, die Herausforderungen des Lebens besser zu meistern, sowohl für uns selbst als auch für die Tiere, die wir lieben.
 
-Ich möchte auch andere dabei unterstützen, dass Mensch und Tier in Einklang mit der Natur leben können. Deshalb studiere ich die Zusammenhänge des "Ökosystems Mensch und Tier" und ergänze dies durch Wissen aus verschiedenen Fachbereichen, wie etwa der Sozialwissenschaften und der Komplementärmedizin, welche **Naturheilkunde**, **Phytotherapie** - die Pflanzenheilkunde, **Aromatherapie** und viele weitere Verfahren beinhaltet. Dieses Wissen wird durch Abschlüsse fundiert. So besitze ich neben dem Bachelorabschluss in der Sozialarbeit auch Zertifikate im Bereich der Kindheitspsychologie, Tierheilkunde sowie Aromatherapie.
+Meine Vision ist es, andere Menschen darin zu unterstützen, ein harmonisches Zusammenleben mit ihren Tieren im Einklang mit der Natur zu ermöglichen. Daher vertiefe ich ständig mein Verständnis für das "Ökosystem Mensch und Tier", ergänzt durch Kenntnisse aus verschiedenen Fachbereichen, wie den Sozialwissenschaften und der Komplementärmedizin. Diese umfasst **Naturheilkunde**, **Phytotherapie** (Pflanzenheilkunde), **Aromatherapie** und viele andere Verfahren.
+
+Ich festige dieses Wissen durch formale Qualifikationen: Neben meinem Bachelor in Sozialarbeit habe ich Zertifikate in Kindheitspsychologie, Tierheilkunde und Aromatherapie erworben.
 
 > "Alles, was gegen die Natur ist, hat auf Dauer keinen Bestand." - Charles Darwin
 
-Fortschritte und Erfolge können Sie gern in meinem [Blog](../pages/blog/) verfolgen!
+Sie können meine Fortschritte und Erfolge gerne in meinem [Blog](../pages/blog/) verfolgen!
 
+Ich freue mich auf unsere gemeinsame Reise,
 Eure Jessica 
