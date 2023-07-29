@@ -5,7 +5,7 @@ date = 2023-06-24
 draft = false
 
 [taxonomies]
-categories = ["Fallbericht"]
+categories = ["Fallbericht", "Atemwegserkrankungen", "Pferde"]
 tags = []
 +++
 
