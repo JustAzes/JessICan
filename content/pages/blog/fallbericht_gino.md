@@ -2,7 +2,7 @@
 title = "Die Odyssee von Gino – Ein Pferd gegen seine Atemwegserkrankung"
 date = 2000-01-01
 
-draft = true
+draft = false
 
 [taxonomies]
 categories = ["Fallbericht"]
