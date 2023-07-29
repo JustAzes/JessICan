@@ -1,6 +1,6 @@
 +++
 title = "Die Odyssee von Gino – Ein Pferd gegen seine Atemwegserkrankung"
-date = 2000-01-01
+date = 2023-06-24
 
 draft = false
 
@@ -43,7 +43,7 @@ Gestärkt mit meinem neu erworbenen Wissen, starteten wir eine Entgiftung und Da
 
 Die nächsten Monate waren wie eine Reise auf einem ruhigen Fluss - wir arbeiteten behutsam an Ginos Kondition und machten Fortschritte in seinem Training. In diesem Zeitraum benötigte Gino keine Inhalationen oder Bedampfungen und erhielt auch keine Medikamente.
 
-2023 brachte eine Fülle von neuen Erfahrungen und Herausforderungen. Im Januar führte ich Ginos erste Akupunkturbehandlung durch, eine Erfahrung, die ihm sichtlich guttat. Im Februar arbeiteten wir mit der Pferdeosteopathin Melanie Bruck <a href="https://www.pferdetherapie-bruck.de/" title="Pferdeosteopathin Melanie Bruck">Pferdeosteopathin Melanie Bruck</a> zusammen, die uns wertvolle Atemübungen beibrachte, die Gino mehr Sicherheit beim Atmen gaben. Schritt für Schritt verschwand seine Bauchatmung und seine Atemfrequenz im Ruhezustand pendelte sich bei 16 Atemzügen pro Minute ein, also endlich wieder im Normbereich.
+2023 brachte eine Fülle von neuen Erfahrungen und Herausforderungen. Im Januar führte ich Ginos erste Akupunkturbehandlung durch, eine Erfahrung, die ihm sichtlich guttat. Seine Entspannung war sichtbar, als er während der Sitzung mehrmals tief ein- und ausatmete. Im Februar arbeiteten wir mit der Pferdeosteopathin Melanie Bruck <a href="https://www.pferdetherapie-bruck.de/" title="Pferdeosteopathin Melanie Bruck">Pferdeosteopathin Melanie Bruck</a> zusammen, die uns wertvolle Atemübungen beibrachte, die Gino mehr Sicherheit beim Atmen gaben. Diese Übungen wurden fast täglich in unser Training integriert. Die manuelle Körpertherapie und die Laserakupunktur wurden als präventive Maßnahmen in unsere Routine aufgenommen. Diese Therapien, besonders die Atemübungen, haben geholfen, seine Atemhilfsmuskeln zu lockern. Schritt für Schritt verschwand seine Bauchatmung und seine Atemfrequenz im Ruhezustand pendelte sich bei 16 Atemzügen pro Minute ein, also endlich wieder im Normbereich. 
 
 Bis zum Frühlingsanbruch im April 2023 lag eine Pause in Ginos therapeutischer Reise vor uns. In dieser Zeit zeigte Gino einen unerwarteten Tatendrang und Ausdauer, die mir ein Lächeln ins Gesicht zauberten. Mit einem Funken Vitalität in seinen Augen absolvierte er wöchentliche Joggingrunden - eine bemerkenswerte Strecke von bis zu 15 Kilometern - an der Seite meines Mannes. Sein Husten, obwohl stets eine Erinnerung an seine Bedingung, war nun auf die ersten, anfänglichen Momente unserer Trainingseinheiten begrenzt. Es war ein sanftes Echo der Vergangenheit, das bald von Ginos tatkräftigen Hufschlägen und dem freudigen Schnauben übertönt wurde.
 
@@ -68,7 +68,7 @@ An diesem leuchtenden Sommertag, dem 23. Juni 2023, sitze ich hier und berichte 
 
 Seine Tage sind nicht länger von Inhalationen und Heubedampfung bestimmt. Gelegentlich, zu Beginn des Trainings, erinnert ein sanfter Husten an seine Vergangenheit, aber das ist mehr Ausnahme als Regel. Mit jedem neuen Tag wächst meine Vorfreude und Zuversicht auf das, was noch kommen mag. Ich weiß, unsere therapeutische Reise ist noch nicht zu Ende. Gino wird weiterhin Unterstützung und präventive Maßnahmen benötigen. Doch, wie ein weiser Spruch uns lehrt: Jeder Weg beginnt mit dem ersten Schritt - und diesen haben wir mit Bravour absolviert.
 
-Ginos Geschichte illustriert die Macht einer ganzheitlichen Betrachtungsweise und den beeindruckenden Einfluss alternativer Therapiemethoden. Gemeinsam haben wir uns auf einen mutigen Pfad begeben und seiner Gesundheit eine neue Richtung gegeben. Die Vielfalt der Lebewesen verlangt eine individuelle Untersuchung der Krankheitsursachen und oft genug die Bereitschaft, sich für alternative Therapieansätze zu öffnen. In Ginos Fall haben ein Kaleidoskop an Methoden - Entgiftung, Darmsanierung, Weihrauch, Aromatherapie, Akupunktur, Atemübungen, Körpertherapie, Laserakupunktur und mehr - zu einer tiefgreifenden positiven Transformation geführt.
+Ginos Geschichte illustriert die Macht einer ganzheitlichen Betrachtungsweise und den beeindruckenden Einfluss alternativer Therapiemethoden. Gemeinsam haben wir uns auf einen mutigen Pfad begeben und seiner Gesundheit eine neue Richtung gegeben. Die Vielfalt der Lebewesen verlangt eine individuelle Untersuchung der Krankheitsursachen und oft genug die Bereitschaft, sich für alternative Therapieansätze zu öffnen. In Ginos Fall haben ein Kaleidoskop an Methoden - Entgiftung, Darmsanierung, Weihrauch, Aromatherapie, Akupunktur, Atemübungen, manuelle Körpertherapie, Laserakupunktur und mehr - zu einer tiefgreifenden positiven Transformation geführt.
 
 Mit der Hoffnung, dass Ginos Reise andere Tierbesitzer dazu inspiriert, den mutigen Schritt zu wagen und alternative Wege zu erkunden, möchte ich schließen. Möge seine Geschichte als Leuchtturm dienen, der jedem geliebten Vierbeiner den Weg zu einem gesünderen und glücklicheren Leben weist.
 
