@@ -18,7 +18,7 @@ Allergien sind nicht nur ein menschliches Problem - auch unsere geliebten Hausti
   <div class="row featurette">
     <div class="col-md-7 order-md-2">
       <h2 class="featurette-heading">Was ist eine Allergie?</h2>
-      <p class="lead">Eine Allergie ist eine besondere Form der Immunreaktion des Körpers, die sich bei wiederholtem Kontakt mit spezifischen Substanzen anders manifestiert als bei erstmaligem Kontakt. Sie kann entweder angeboren sein oder im Laufe des Lebens erworben werden. Antigene - körperfremde Substanzen wie Blütenpollen, fremde Eiweiße, Hausstaubmilben oder Schimmelpilze - lösen eine übermäßige Reaktion des Immunsystems aus. Dabei kommt es nach einer Sensibilisierungsphase, in der Antikörper gebildet werden, zu einer übersteigerten Reaktion zwischen Antigen und Antikörper.</p>    
+      <p class="lead">Eine Allergie ist eine besondere Form der Immunreaktion des Körpers, die sich bei wiederholtem Kontakt mit spezifischen Substanzen anders manifestiert als bei erstmaligem Kontakt. Sie kann entweder angeboren sein oder im Laufe des Lebens erworben werden. </p>    
     </div>
     <div class="col-md-5">
         <picture>
@@ -40,6 +40,7 @@ Allergien sind nicht nur ein menschliches Problem - auch unsere geliebten Hausti
   </div>
   <hr class="featurette-divider">
 </div>
+Antigene - körperfremde Substanzen wie Blütenpollen, fremde Eiweiße, Hausstaubmilben oder Schimmelpilze - lösen eine übermäßige Reaktion des Immunsystems aus. Dabei kommt es nach einer Sensibilisierungsphase, in der Antikörper gebildet werden, zu einer übersteigerten Reaktion zwischen Antigen und Antikörper.
 
 Histamin spielt eine entscheidende Rolle bei dieser Reaktion. Es befindet sich hauptsächlich in Mastzellen, basophilen Granulozyten und Thrombozyten. Wenn die Antikörper, beladen mit Antigenen, sich auf die Mastzellen setzen, platzen diese und setzen Histamin frei.
 
@@ -73,8 +74,8 @@ Für die nachfolgenden Behandlungsansätze richten Sie sich bitte an Ihren Tiera
   <hr class="featurette-divider">
   <div class="row featurette">
     <div class="col-md-7 order-md-2">
-      <h2 class="featurette-heading">Was ist eine Allergie?</h2>
-      <p class="lead">Eine Allergie ist eine besondere Form der Immunreaktion des Körpers, die sich bei wiederholtem Kontakt mit spezifischen Substanzen anders manifestiert als bei erstmaligem Kontakt. Sie kann entweder angeboren sein oder im Laufe des Lebens erworben werden. Antigene - körperfremde Substanzen wie Blütenpollen, fremde Eiweiße, Hausstaubmilben oder Schimmelpilze - lösen eine übermäßige Reaktion des Immunsystems aus. Dabei kommt es nach einer Sensibilisierungsphase, in der Antikörper gebildet werden, zu einer übersteigerten Reaktion zwischen Antigen und Antikörper.</p>    
+      <h2 class="featurette-heading">Alternative Therapieverfahren</h2>
+      <p class="lead">Als **Tierheilpraktiker** stelle ich meine bevorzugten verschiedenen alternativen Ansätze zur Behandlung von Allergien bei Tieren vor. Bitte beachten Sie, dass diese Verfahren und Tipps lediglich der Information dienen und niemals ohne Rücksprache mit dem Tierarzt oder Tierheilpraktiker angewendet werden sollten. Jedes Tier ist individuell und benötigt eine spezifisch abgestimmte Therapie. </p>    
     </div>
     <div class="col-md-5">
         <picture>
@@ -96,11 +97,6 @@ Für die nachfolgenden Behandlungsansätze richten Sie sich bitte an Ihren Tiera
   </div>
   <hr class="featurette-divider">
 </div>
-
-## Alternative Therapieverfahren
-
-Als **Tierheilpraktiker** stelle ich meine bevorzugten verschiedenen alternativen Ansätze zur Behandlung von Allergien bei Tieren vor. Bitte beachten Sie, dass diese Verfahren und Tipps lediglich der Information dienen und niemals ohne Rücksprache mit dem Tierarzt oder Tierheilpraktiker angewendet werden sollten. Jedes Tier ist individuell und benötigt eine spezifisch abgestimmte Therapie. 
-
 Die hier vorgeschlagenen Methoden zielen darauf ab, das Immunsystem zu stärken und den Darm zu entgiften, da Allergien oft ein Zeichen dafür sind, dass das Immunsystem in Not ist.
 In jedem Fall sollten diese Ansätze immer unter der Aufsicht eines erfahrenen Therapeuten erfolgen und dabei mögliche Kontraindikationen berücksichtigt werden. Es ist wichtig zu verstehen, dass obwohl die Symptome von Allergien variieren können, die Ursache oft dieselbe ist und unterschiedliche Methoden und Verfahren für einen Therapieerfolg notwendig sein können.
 
