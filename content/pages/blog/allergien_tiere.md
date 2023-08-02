@@ -34,7 +34,7 @@ Allergien sind nicht nur ein menschliches Problem - auch unsere geliebten Hausti
             <source media="(min-width: 768px)" srcset="https://tierheilpraxis-jessican.de/img/blog/allergie_tiere_1_1024.avif 972w" type="image/avif" sizes="95vw">
             <source media="(min-width: 768px)" srcset="https://tierheilpraxis-jessican.de/img/blog/allergie_tiere_1_1024.webp 972w" type="image/webp" sizes="95vw">
             <source media="(min-width: 768px)" srcset="https://tierheilpraxis-jessican.de/img/blog/allergie_tiere_1_1024.jpeg 972w" type="image/jpeg" sizes="95vw">
-            <img src="https://tierheilpraxis-jessican.de/img/blog/allergie_tiere_1_1024.jpeg" alt="Ein Hund mit Allergie bei Tierheilpraktiker" title="Ein Hund mit Allergie bei Tierheilpraktiker"  loading="lazy" sizes="30vw"  class="featurette-image img-fluid mx-auto rounded-img" style="aspect-ratio: 1/1; object-fit: cover;">
+            <img src="https://tierheilpraxis-jessican.de/img/blog/allergie_tiere_1_1024.jpeg" alt="Ein Hund mit Allergie beim Tierheilpraktiker" title="Ein Hund mit Allergie beim Tierheilpraktiker"  loading="lazy" sizes="30vw"  class="featurette-image img-fluid mx-auto rounded-img" style="aspect-ratio: 1/1; object-fit: cover;">
         </picture>
     </div>
   </div>
@@ -49,7 +49,7 @@ Allergische Reaktionen können nahezu jedes Organ betreffen - beispielsweise Mag
 
 Um eine Allergie zu erkennen, ist eine sorgfältige Beobachtung essentiell. Ein Allergietagebuch, in dem notiert wird, wann Symptome stärker auftreten und wann sie nachlassen, kann hilfreich sein. Zur Bestätigung des Verdachts können Allergietests wie eine Blutuntersuchung und/oder Haaranalyse durchgeführt werden. Auch ein großes Blutbild kann wertvolle Hinweise liefern.
 
-Im Falle eines Verdachts auf Futtermittelallergien bei Hunden oder Pferden kann eine Ausschlussdiät empfehlenswert sein. Dabei erhält das Tier für mindestens drei Wochen ein Futter, dessen Inhaltsstoffe ihm völlig unbekannt sind. Hat sich die symptomlage verbessert, kann nach und nach das verdächtige Futter eingeschlichen werden. Reagiert das Tier erneut, haben Sie den Auslöser gefunden. 
+Im Falle eines Verdachts auf Futtermittelallergien bei **Hund** oder **Pferd** kann eine Ausschlussdiät empfehlenswert sein. Dabei erhält das Tier für mindestens drei Wochen ein Futter, dessen Inhaltsstoffe ihm völlig unbekannt sind. Hat sich die symptomlage verbessert, kann nach und nach das verdächtige Futter eingeschlichen werden. Reagiert das Tier erneut, haben Sie den Auslöser gefunden. 
 
 Beim Pferd kann man alle Futtermittel (auch Mineralfutter und sonstige Präparate) vorerst meiden und dann erfolgt eine stufenweise Prüfung. 
 
@@ -90,7 +90,7 @@ Für die nachfolgenden Behandlungsansätze richten Sie sich bitte an Ihren Tiera
             <source media="(min-width: 768px)" srcset="https://tierheilpraxis-jessican.de/img/blog/allergie_tiere_2_1024.avif 972w" type="image/avif" sizes="95vw">
             <source media="(min-width: 768px)" srcset="https://tierheilpraxis-jessican.de/img/blog/allergie_tiere_2_1024.webp 972w" type="image/webp" sizes="95vw">
             <source media="(min-width: 768px)" srcset="https://tierheilpraxis-jessican.de/img/blog/allergie_tiere_2_1024.jpeg 972w" type="image/jpeg" sizes="95vw">
-            <img src="https://tierheilpraxis-jessican.de/img/blog/allergie_tiere_2_1024.jpeg" alt="Ein Hund mit Allergie bei Tierheilpraktiker" title="Ein Hund mit Allergie bei Tierheilpraktiker"  loading="lazy" sizes="30vw"  class="featurette-image img-fluid mx-auto rounded-img" style="aspect-ratio: 1/1; object-fit: cover;">
+            <img src="https://tierheilpraxis-jessican.de/img/blog/allergie_tiere_2_1024.jpeg" alt="Ein Pferd juckt sich am Baum" title="Ein Pferd juckt sich am Baum"  loading="lazy" sizes="30vw"  class="featurette-image img-fluid mx-auto rounded-img" style="aspect-ratio: 1/1; object-fit: cover;">
         </picture>
     </div>
   </div>
@@ -99,7 +99,7 @@ Für die nachfolgenden Behandlungsansätze richten Sie sich bitte an Ihren Tiera
 
 ## Alternative Therapieverfahren
 
-Als Tierheilpraktikerin stelle ich meine bevorzugten verschiedenen alternativen Ansätze zur Behandlung von Allergien bei Tieren vor. Bitte beachten Sie, dass diese Verfahren und Tipps lediglich der Information dienen und niemals ohne Rücksprache mit dem Tierarzt oder Tierheilpraktiker angewendet werden sollten. Jedes Tier ist individuell und benötigt eine spezifisch abgestimmte Therapie. 
+Als **Tierheilpraktiker** stelle ich meine bevorzugten verschiedenen alternativen Ansätze zur Behandlung von Allergien bei Tieren vor. Bitte beachten Sie, dass diese Verfahren und Tipps lediglich der Information dienen und niemals ohne Rücksprache mit dem Tierarzt oder Tierheilpraktiker angewendet werden sollten. Jedes Tier ist individuell und benötigt eine spezifisch abgestimmte Therapie. 
 
 Die hier vorgeschlagenen Methoden zielen darauf ab, das Immunsystem zu stärken und den Darm zu entgiften, da Allergien oft ein Zeichen dafür sind, dass das Immunsystem in Not ist.
 In jedem Fall sollten diese Ansätze immer unter der Aufsicht eines erfahrenen Therapeuten erfolgen und dabei mögliche Kontraindikationen berücksichtigt werden. Es ist wichtig zu verstehen, dass obwohl die Symptome von Allergien variieren können, die Ursache oft dieselbe ist und unterschiedliche Methoden und Verfahren für einen Therapieerfolg notwendig sein können.
