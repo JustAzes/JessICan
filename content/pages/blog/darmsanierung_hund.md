@@ -13,12 +13,15 @@ Begleiten Sie mich auf einer Entdeckungsreise in die Welt der Darmgesundheit bei
 
 <!-- more -->
 
+
+In der Traditionellen Chinesischen Medizin gilt der Darm als die "Mutter der Gesundheit". Dieses Prinzip lässt sich auch auf unsere Pferde übertragen. Ein gesunder Darm ist entscheidend für das allgemeine Wohlbefinden und die Leistungsfähigkeit unserer Pferde. Aber wie erreicht man einen gesunden Darm? Die Antwort ist eigentlich recht einfach - durch eine gesunde und abwechslungsreiche Ernährung. Dies gilt sowohl für uns Menschen als auch für unsere Tiere.
+
 <div class="container marketing">
   <hr class="featurette-divider">
   <div class="row featurette">
     <div class="col-md-7 order-md-2">
-      <h2 class="featurette-heading">Was ist eine Allergie?</h2>
-      <p class="lead">Eine Allergie ist eine besondere Form der Immunreaktion des Körpers, die sich bei wiederholtem Kontakt mit spezifischen Substanzen anders manifestiert als bei erstmaligem Kontakt. Sie kann entweder angeboren sein oder im Laufe des Lebens erworben werden. </p>    
+      <h2 class="featurette-heading">Was bringt den Darm aus dem Gleichgewicht?</h2>
+      <p class="lead">Wenn der Darm aus dem Gleichgewicht gerät, kann sich dies durch eine Vielzahl von Symptomen oder Krankheiten bemerkbar machen. Einige davon sind beispielsweise Allergien, Durchfall, Blähungen, Hautprobleme, Futterintoleranzen, Verhaltensstörungen usw. Der Darm reagiert sehr empfindlich auf Störungen. Solche Störungen können durch die Verabreichung von Wurmkuren, Medikamenten, falscher Fütterung oder Stress verursacht werden.</p>    
     </div>
     <div class="col-md-5">
         <picture>
@@ -40,12 +43,6 @@ Begleiten Sie mich auf einer Entdeckungsreise in die Welt der Darmgesundheit bei
   </div>
   <hr class="featurette-divider">
 </div>
-
-In der Traditionellen Chinesischen Medizin gilt der Darm als die "Mutter der Gesundheit". Dieses Prinzip lässt sich auch auf unsere Pferde übertragen. Ein gesunder Darm ist entscheidend für das allgemeine Wohlbefinden und die Leistungsfähigkeit unserer Pferde. Aber wie erreicht man einen gesunden Darm? Die Antwort ist eigentlich recht einfach - durch eine gesunde und abwechslungsreiche Ernährung. Dies gilt sowohl für uns Menschen als auch für unsere Tiere.
-
-## Was bringt den Darm aus dem Gleichgewicht?
-
-Wenn der Darm aus dem Gleichgewicht gerät, kann sich dies durch eine Vielzahl von Symptomen oder Krankheiten bemerkbar machen. Einige davon sind beispielsweise Allergien, Durchfall, Blähungen, Hautprobleme, Futterintoleranzen, Verhaltensstörungen usw. Der Darm reagiert sehr empfindlich auf Störungen. Solche Störungen können durch die Verabreichung von Wurmkuren, Medikamenten, falscher Fütterung oder Stress verursacht werden.
 
 Weitere Auslöser können sein:
 
