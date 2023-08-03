@@ -106,8 +106,8 @@ Zuallererst ist es wichtig, allergieauslösende Nahrungsmittel und Umweltreize z
 
 ### Ausleitung von Toxinen 
 
-Eine wichtige Therapiekomponente ist die Entgiftung des Körpers. Dazu schlage ich eine Toxinbindung sowie eine Darmsanierung vor. Empfehlenswert sind beispielsweise Zeolith und/oder Bentonit zur Toxinbindung. Die Darmsanierung kann mit verschiedenen Pflanzen durchgeführt werden. Nähere Hinweise dazu finden Sie in den Blogbeiträgen <a href="https://tierheilpraxis-jessican.de/pages/blog/darmsanierung_pferd/" title="Blogbeitrag zum Thema Darmsanierung beim Pferd">Darmsanierung beim Pferd(link)</a> und 
-<a href="https://tierheilpraxis-jessican.de/pages/blog/darmsanierung_hund/" title="Blogbeitrag zum Thema Darmsanierung beim Hund">Darmsanierung beim Hund (link)</a>
+Eine wichtige Therapiekomponente ist die Entgiftung des Körpers. Dazu schlage ich eine Toxinbindung sowie eine Darmsanierung vor. Empfehlenswert sind beispielsweise Zeolith und/oder Bentonit zur Toxinbindung. Die Darmsanierung kann mit verschiedenen Pflanzen durchgeführt werden. Nähere Hinweise dazu finden Sie in den Blogbeiträgen <a href="https://tierheilpraxis-jessican.de/pages/blog/darmsanierung-pferd/" title="Blogbeitrag zum Thema Darmsanierung beim Pferd">Darmsanierung beim Pferd(link)</a> und 
+<a href="https://tierheilpraxis-jessican.de/pages/blog/darmsanierung-hund/" title="Blogbeitrag zum Thema Darmsanierung beim Hund">Darmsanierung beim Hund (link)</a>
 
 ### Unterstützende Mittel 
 
