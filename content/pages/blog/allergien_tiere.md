@@ -75,7 +75,7 @@ Für die nachfolgenden Behandlungsansätze richten Sie sich bitte an Ihren Tiera
   <div class="row featurette">
     <div class="col-md-7 order-md-2">
       <h2 class="featurette-heading">Alternative Therapieverfahren</h2>
-      <p class="lead">Als **Tierheilpraktiker** stelle ich meine bevorzugten verschiedenen alternativen Ansätze zur Behandlung von Allergien bei Tieren vor. Bitte beachten Sie, dass diese Verfahren und Tipps lediglich der Information dienen und niemals ohne Rücksprache mit dem Tierarzt oder Tierheilpraktiker angewendet werden sollten. Jedes Tier ist individuell und benötigt eine spezifisch abgestimmte Therapie. </p>    
+      <p class="lead">Als Tierheilpraktiker stelle ich meine bevorzugten verschiedenen alternativen Ansätze zur Behandlung von Allergien bei Tieren vor. Bitte beachten Sie, dass diese Verfahren und Tipps lediglich der Information dienen und niemals ohne Rücksprache mit dem Tierarzt oder Tierheilpraktiker angewendet werden sollten. Jedes Tier ist individuell und benötigt eine spezifisch abgestimmte Therapie. </p>    
     </div>
     <div class="col-md-5">
         <picture>
