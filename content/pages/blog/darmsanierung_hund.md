@@ -1,6 +1,6 @@
 +++
 title = "Vom Darm zum Glück: Wie eine Darmsanierung Ihr Hund gesünder und glücklicher macht"
-date = 2000-01-01
+date = 2023-08-02
 
 draft = false
 

@@ -1,6 +1,6 @@
 +++
 title = "Gesunder Darm, glückliches Pferd: Ihr Weg zur optimalen Darmsanierung"
-date = 2000-01-01
+date = 2023-08-01
 
 draft = false
 
