@@ -2,7 +2,7 @@
 title = "Allergien bei Tieren: Ein umfassender Leitfaden"
 date = 2000-01-01
 
-draft = true
+draft = false
 
 [taxonomies]
 categories = ["Allergien", "Hunde", "Pferde", "Akupunktur"]
@@ -106,7 +106,8 @@ Zuallererst ist es wichtig, allergieauslösende Nahrungsmittel und Umweltreize z
 
 ### Ausleitung von Toxinen 
 
-Eine wichtige Therapiekomponente ist die Entgiftung des Körpers. Dazu schlage ich eine Toxinbindung sowie eine Darmsanierung vor. Empfehlenswert sind beispielsweise Zeolith und/oder Bentonit zur Toxinbindung. Die Darmsanierung kann mit verschiedenen Pflanzen durchgeführt werden. Nähere Hinweise dazu finden Sie in dem anderen Blog-Beitrag (Link Pferd und Hund!)
+Eine wichtige Therapiekomponente ist die Entgiftung des Körpers. Dazu schlage ich eine Toxinbindung sowie eine Darmsanierung vor. Empfehlenswert sind beispielsweise Zeolith und/oder Bentonit zur Toxinbindung. Die Darmsanierung kann mit verschiedenen Pflanzen durchgeführt werden. Nähere Hinweise dazu finden Sie in den Blogbeiträgen <a href="https://tierheilpraxis-jessican.de/pages/blog/darmsanierung_pferd/" title="Blogbeitrag zum Thema Darmsanierung beim Pferd">Darmsanierung beim Pferd(link)</a> und 
+<a href="https://tierheilpraxis-jessican.de/pages/blog/darmsanierung_hund/" title="Blogbeitrag zum Thema Darmsanierung beim Hund">Darmsanierung beim Hund (link)</a>
 
 ### Unterstützende Mittel 
 
