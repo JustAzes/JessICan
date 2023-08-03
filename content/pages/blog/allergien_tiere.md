@@ -2,7 +2,7 @@
 title = "Allergien bei Tieren: Ein umfassender Leitfaden"
 date = 2000-01-01
 
-draft = false
+draft = true
 
 [taxonomies]
 categories = ["Allergien", "Hunde", "Pferde", "Akupunktur"]
