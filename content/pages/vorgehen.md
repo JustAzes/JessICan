@@ -10,14 +10,14 @@ template = "vorgehen.html"
 Als Tierheilpraktiker ist es meine Leidenschaft, Tieren auf ganzheitliche Weise zu helfen und ihre Gesundheit zu fördern. In der Praxis biete ich eine Vielzahl von Methoden für die Behandlungen an, um das Wohlbefinden Ihrer geliebten Vierbeiner zu verbessern. 
 
 
-### 1. Anamnesebogen ausfüllen
-Bevor wir uns persönlich treffen, bitte ich Sie den [Anamnesebogen auszufüllen (link).](https://tierheilpraxis-jessican.de/dokumente/)
+### 1. Termin vereinbaren
 
-Dies gibt mir die Möglichkeit, Ihre Tier und dessen Gesundheitsgeschichte kennenzulernen und mich auf unser Gespräch vorzubereiten. So können Sie mir in Ruhe alles berichten, ohne etwas wichtiges zu vergessen. Manchmal sind die kleinen Dinge von großer Bedeutung.
+Gemeinsamen vereinbaren wir einen passenden Termin. Dieser wird in der Regel vor Ort bei dem Tier statt finden. 
+Nach der Terminvergabe erhalten Sie von mir einen kleinen Annamnesebogen, sodass ich bereits das Symptomgeschehen einordnen kann, sowie den Behandlungsvertrag.
 
 ### 2. Untersuchung vor Ort
 
-Gemeinsam vereinbaren wir einen Termin, bei dem ich Sie und Ihr Tier in seiner gewohnten Umgebung kennenlernen kann. Während dieses Besuchs werde ich mir Ihr Tier genau ansehen und gegebenenfalls Rückfragen zu Ihrem Tier und Ihnen stellen. Zudem werde ich wichtige Aspekte vor Ort begutachten, wie zum Beispiel den Auslauf, das Futter und ähnliches. All diese Informationen helfen mir dabei, ein umfassendes Bild der Situation zu erhalten.
+Bei dem vereinbarten Termin lerne ich Sie und Ihr Tier in seiner gewohnten Umgebung kennen. Während dieses Besuchs werde ich mir Ihr Tier genau ansehen und gegebenenfalls Rückfragen zu Ihrem Tier und Ihnen stellen. Zudem werde ich wichtige Aspekte vor Ort begutachten, wie zum Beispiel den Auslauf, das Futter und ähnliches. All diese Informationen helfen mir dabei, ein umfassendes Bild der Situation zu erhalten.
 
 Tipp: Blutuntersuchungen, Röntgenbilder oder andere tierärztliche Befunde können mir zusätzliche wertvolle Informationen liefern!
 
