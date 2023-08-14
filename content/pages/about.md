@@ -58,9 +58,9 @@ Ich habe verschiedene Allergien und litt unter allergischem Asthma, was eine kli
 
 Es ist von entscheidender Bedeutung, ständig zu lernen und sich weiterzuentwickeln. Das ermöglicht es uns, die Herausforderungen des Lebens besser zu meistern, sowohl für uns selbst als auch für die Tiere, die wir lieben.
 
-Meine Vision ist es, andere Menschen darin zu unterstützen, ein harmonisches Zusammenleben mit ihren Tieren im Einklang mit der Natur zu ermöglichen. Daher vertiefe ich ständig mein Verständnis für das "Ökosystem Mensch und Tier", ergänzt durch Kenntnisse aus verschiedenen Fachbereichen, wie den Sozialwissenschaften und der Komplementärmedizin. Diese umfasst **Naturheilkunde**, **Phytotherapie** (Pflanzenheilkunde), **Aromatherapie** und viele andere Verfahren.
+Meine Vision ist es, andere Menschen darin zu unterstützen, ein harmonisches Zusammenleben mit ihren Tieren im Einklang mit der Natur zu ermöglichen. Daher vertiefe ich ständig mein Verständnis für das "Ökosystem Mensch und Tier", ergänzt durch Kenntnisse aus verschiedenen Fachbereichen, wie den Sozialwissenschaften und der Komplementärmedizin. Diese umfasst **Naturheilkunde**, **Phytotherapie** (Pflanzenheilkunde), **Aromatherapie**, **TCM** (Traditionell Chinesische Medizin) und viele andere Verfahren.
 
-Ich festige dieses Wissen durch formale Qualifikationen: Neben meinem Bachelor in Sozialarbeit habe ich Zertifikate in Kindheitspsychologie, Tierheilkunde und Aromatherapie erworben.
+Ich festige dieses Wissen durch formale Qualifikationen: Neben meinem Bachelor in Sozialarbeit habe ich Zertifikate in Kindheitspsychologie, Tierheilkunde, Akupunktur, Tierkommunikation, Blutabnahme- und Injektionstechnik und Aromatherapie erworben.
 
 > "Alles, was gegen die Natur ist, hat auf Dauer keinen Bestand." - Charles Darwin
 
