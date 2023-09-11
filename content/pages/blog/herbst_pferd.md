@@ -4,9 +4,6 @@ date = 2023-09-11
 [taxonomies]
 categories = ["Pferde", "Therapieformen"]
 tags = []
-
-
-draft = false
 +++
 
 Mit dem Beginn des Herbstes stehen wir und unsere Pferde vor vielen Herausforderungen. Eine davon ist der Fellwechsel. Jeder Fellwechsel ist eine erhebliche Belastung für den Organismus des Pferdes, besonders für Leber und Niere, da diese die dabei entstehenden Abfälle ausscheiden müssen.
