@@ -1,5 +1,5 @@
 +++
-title = "Herbstliche Herausforderungen: Optimaler Schutz und Pflege für Ihr Pferd"
+title = "Herbstzauber & Pferdeglück: Wie wir unsere Lieblinge liebevoll durch die goldene Jahreszeit begleiten"
 date = 2023-09-11
 [taxonomies]
 categories = ["Pferde", "Therapieformen"]
