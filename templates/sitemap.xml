@@ -38,7 +38,7 @@
 </url>
 <url>
   <loc>https://tierheilpraxis-jessican.de/impressum/</loc>
-  <lastmod>2023-08-03T12:00:00+00:00</lastmod>
+  <lastmod>2023-10-08T12:00:00+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
@@ -54,6 +54,11 @@
 <url>
   <loc>https://tierheilpraxis-jessican.de/pages/blog/allergien-tiere/</loc>
   <lastmod>2023-08-03T12:00:00+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://tierheilpraxis-jessican.de/pages/blog/herbst-pferd/</loc>
+  <lastmod>2023-09-08T12:00:00+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
