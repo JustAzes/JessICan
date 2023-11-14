@@ -16,19 +16,19 @@ Mein Name ist Jessica und ich habe es mir zur Aufgabe gemacht, Mensch und Tier a
     </div>
     <div class="col-md-5">
         <picture>
-          <source media="(max-width: 319px)" srcset="img/ich_und_gino_320.avif 304w" type="image/avif" sizes="95vw">
-          <source media="(max-width: 319px)" srcset="img/ich_und_gino_320.webp 304w" type="image/webp" sizes="95vw">
-          <source media="(max-width: 319px)" srcset="img/ich_und_gino_320.jpeg 304w" type="image/jpeg" sizes="95vw">
-          <source media="(min-width: 320px) and (max-width: 639px)" srcset="img/ich_und_gino_640.avif 608w" type="image/avif" sizes="95vw">
-          <source media="(min-width: 320px) and (max-width: 639px)" srcset="img/ich_und_gino_640.webp 608w" type="image/webp" sizes="95vw">
-          <source media="(min-width: 320px) and (max-width: 639px)" srcset="img/ich_und_gino_640.jpeg 608w" type="image/jpeg" sizes="95vw">
-          <source media="(min-width: 640px) and (max-width: 767px)" srcset="img/ich_und_gino_768.avif 729w" type="image/avif" sizes="95vw">
-          <source media="(min-width: 640px) and (max-width: 767px)" srcset="img/ich_und_gino_768.webp 729w" type="image/webp" sizes="95vw">
-          <source media="(min-width: 640px) and (max-width: 767px)" srcset="img/ich_und_gino_768.jpeg 729w" type="image/jpeg" sizes="95vw">
-          <source media="(min-width: 768px)" srcset="img/ich_und_gino_1024.avif 972w" type="image/avif" sizes="95vw">
-          <source media="(min-width: 768px)" srcset="img/ich_und_gino_1024.webp 972w" type="image/webp" sizes="95vw">
-          <source media="(min-width: 768px)" srcset="img/ich_und_gino_1024.jpeg 972w" type="image/jpeg" sizes="95vw">
-          <img src="img/ich_und_gino_1024.jpeg" alt="Tierheilpraktiker JessICan und ihr Pferd Gino" title="Tierheilpraktiker JessICan und ihr Pferd Gino" loading="lazy" sizes="30vw"  class="featurette-image img-fluid mx-auto rounded-img" style="aspect-ratio: 1/1; object-fit: cover;">
+          <source media="(max-width: 319px)" srcset="../img/ich_und_gino_320.avif 304w" type="image/avif" sizes="95vw">
+          <source media="(max-width: 319px)" srcset="../img/ich_und_gino_320.webp 304w" type="image/webp" sizes="95vw">
+          <source media="(max-width: 319px)" srcset="../img/ich_und_gino_320.jpeg 304w" type="image/jpeg" sizes="95vw">
+          <source media="(min-width: 320px) and (max-width: 639px)" srcset="../img/ich_und_gino_640.avif 608w" type="image/avif" sizes="95vw">
+          <source media="(min-width: 320px) and (max-width: 639px)" srcset="../img/ich_und_gino_640.webp 608w" type="image/webp" sizes="95vw">
+          <source media="(min-width: 320px) and (max-width: 639px)" srcset="../img/ich_und_gino_640.jpeg 608w" type="image/jpeg" sizes="95vw">
+          <source media="(min-width: 640px) and (max-width: 767px)" srcset="../img/ich_und_gino_768.avif 729w" type="image/avif" sizes="95vw">
+          <source media="(min-width: 640px) and (max-width: 767px)" srcset="../img/ich_und_gino_768.webp 729w" type="image/webp" sizes="95vw">
+          <source media="(min-width: 640px) and (max-width: 767px)" srcset="../img/ich_und_gino_768.jpeg 729w" type="image/jpeg" sizes="95vw">
+          <source media="(min-width: 768px)" srcset="../img/ich_und_gino_1024.avif 972w" type="image/avif" sizes="95vw">
+          <source media="(min-width: 768px)" srcset="../img/ich_und_gino_1024.webp 972w" type="image/webp" sizes="95vw">
+          <source media="(min-width: 768px)" srcset="../img/ich_und_gino_1024.jpeg 972w" type="image/jpeg" sizes="95vw">
+          <img src="../img/ich_und_gino_1024.jpeg" alt="Tierheilpraktiker JessICan und ihr Pferd Gino" title="Tierheilpraktiker JessICan und ihr Pferd Gino" loading="lazy" sizes="30vw"  class="featurette-image img-fluid mx-auto rounded-img" style="aspect-ratio: 1/1; object-fit: cover;">
         </picture>
     </div>
   </div>
@@ -58,19 +58,19 @@ Ich habe verschiedene Allergien und litt unter allergischem Asthma, was eine kli
     </div>
     <div class="col-md-5">
         <picture>
-          <source media="(max-width: 319px)" srcset="img/tali_320.avif 304w" type="image/avif" sizes="95vw">
-          <source media="(max-width: 319px)" srcset="img/tali_320.webp 304w" type="image/webp" sizes="95vw">
-          <source media="(max-width: 319px)" srcset="img/tali_320.jpeg 304w" type="image/jpeg" sizes="95vw">
-          <source media="(min-width: 320px) and (max-width: 639px)" srcset="img/tali_640.avif 608w" type="image/avif" sizes="95vw">
-          <source media="(min-width: 320px) and (max-width: 639px)" srcset="img/tali_640.webp 608w" type="image/webp" sizes="95vw">
-          <source media="(min-width: 320px) and (max-width: 639px)" srcset="img/tali_640.jpeg 608w" type="image/jpeg" sizes="95vw">
-          <source media="(min-width: 640px) and (max-width: 767px)" srcset="img/tali_768.avif 729w" type="image/avif" sizes="95vw">
-          <source media="(min-width: 640px) and (max-width: 767px)" srcset="img/tali_768.webp 729w" type="image/webp" sizes="95vw">
-          <source media="(min-width: 640px) and (max-width: 767px)" srcset="img/tali_768.jpeg 729w" type="image/jpeg" sizes="95vw">
-          <source media="(min-width: 768px)" srcset="img/tali_1024.avif 972w" type="image/avif" sizes="95vw">
-          <source media="(min-width: 768px)" srcset="img/tali_1024.webp 972w" type="image/webp" sizes="95vw">
-          <source media="(min-width: 768px)" srcset="img/tali_1024.jpeg 972w" type="image/jpeg" sizes="95vw">
-          <img src="img/tali_1024.jpeg" alt="Tierheilpraktiker JessICan und ihr Hund Tali" title="Tierheilpraktiker JessICan und ihr Hund Tali" loading="lazy" sizes="30vw"  class="featurette-image img-fluid mx-auto rounded-img" style="aspect-ratio: 1/1; object-fit: cover;">
+          <source media="(max-width: 319px)" srcset="../img/tali_320.avif 304w" type="image/avif" sizes="95vw">
+          <source media="(max-width: 319px)" srcset="../img/tali_320.webp 304w" type="image/webp" sizes="95vw">
+          <source media="(max-width: 319px)" srcset="../img/tali_320.jpeg 304w" type="image/jpeg" sizes="95vw">
+          <source media="(min-width: 320px) and (max-width: 639px)" srcset="../img/tali_640.avif 608w" type="image/avif" sizes="95vw">
+          <source media="(min-width: 320px) and (max-width: 639px)" srcset="../img/tali_640.webp 608w" type="image/webp" sizes="95vw">
+          <source media="(min-width: 320px) and (max-width: 639px)" srcset="../img/tali_640.jpeg 608w" type="image/jpeg" sizes="95vw">
+          <source media="(min-width: 640px) and (max-width: 767px)" srcset="../img/tali_768.avif 729w" type="image/avif" sizes="95vw">
+          <source media="(min-width: 640px) and (max-width: 767px)" srcset="../img/tali_768.webp 729w" type="image/webp" sizes="95vw">
+          <source media="(min-width: 640px) and (max-width: 767px)" srcset="../img/tali_768.jpeg 729w" type="image/jpeg" sizes="95vw">
+          <source media="(min-width: 768px)" srcset="../img/tali_1024.avif 972w" type="image/avif" sizes="95vw">
+          <source media="(min-width: 768px)" srcset="../img/tali_1024.webp 972w" type="image/webp" sizes="95vw">
+          <source media="(min-width: 768px)" srcset="../img/tali_1024.jpeg 972w" type="image/jpeg" sizes="95vw">
+          <img src="../img/tali_1024.jpeg" alt="Tierheilpraktiker JessICan und ihr Hund Tali" title="Tierheilpraktiker JessICan und ihr Hund Tali" loading="lazy" sizes="30vw"  class="featurette-image img-fluid mx-auto rounded-img" style="aspect-ratio: 1/1; object-fit: cover;">
         </picture>
     </div>
   </div>
