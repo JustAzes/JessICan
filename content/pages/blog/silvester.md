@@ -49,7 +49,10 @@ Kräuter wie **Baldrian, Hopfen und Passionsblumen** wirken entspannend. Starten
 ### Hanfprodukte
 **Futterhanf Pellets** oder **CBD Öl** können beruhigend wirken. Führen Sie diese ebenfalls **zwei Wochen vor Silvester** ein.
 
- <div class="row featurette">
+
+<div class="container marketing">
+  <hr class="featurette-divider">
+  <div class="row featurette">
     <div class="col-md-7">
       <h2 class="featurette-heading">Alternative Methoden</h2>
       <p class="lead"><h3>Rescue Tropfen</h3>
@@ -63,9 +66,13 @@ Kräuter wie **Baldrian, Hopfen und Passionsblumen** wirken entspannend. Starten
     <div class="col-md-5 order-md-1">
       <picture>
         <img src="https://tierheilpraxis-jessican.de/img/behandlung/silvester_2.png" alt="" title="" loading="lazy" sizes="100vw"  class="featurette-image img-fluid mx-auto rounded-img" style="aspect-ratio: 1/1; object-fit: cover;">
-    </picture>
+      </picture>
     </div>
   </div>
+  <hr class="featurette-divider">
+</div>
+
+ 
 
 ## Manuelle Techniken
 
