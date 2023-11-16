@@ -18,8 +18,6 @@ Das Jahr neigt sich dem Ende zu, und der Zauber von Silvester steht bevor. Ich e
 
 Der Hund unserer Freunde, sonst so lebensfroh und verspielt, wurde durch die plötzlichen Knallgeräusche zutiefst irritiert und ängstlich. Anstatt zu feiern, fanden wir uns alle – zwei Hunde und vier Erwachsene – zusammen im Badezimmer, umgeben von Musik, um dem Hund etwas Trost und Sicherheit zu bieten. Während wir anstießen, verbrachte der kleine Vierbeiner sein Neujahr verängstigt in der Dusche.
 
-
-
 Diese Erfahrung öffnete mir die Augen dafür, wie stressig und beängstigend Silvester für unsere tierischen Begleiter sein kann. Es ist ein Ereignis, das bei vielen Tieren **Angst und Panik** auslöst. Daher ist es so wichtig, Wege zu finden, um ihnen zu helfen und diesen Übergang ins neue Jahr so stressfrei wie möglich zu gestalten.
 
 <div class="container marketing">
@@ -58,8 +56,8 @@ Kräuter wie **Baldrian, Hopfen und Passionsblumen** wirken entspannend. Starten
       <p class="lead"><h3>Rescue Tropfen</h3>
       <p>Eine spezielle Mischung aus Bachblüten, ideal für stressige Situationen. Beginnen Sie die Anwendung zwei Wochen im Voraus.</p>
       <h3>Homöopathie</h3>
-      <p>- **Rhododendron C200**: Einmal am Tag vor Silvester</p>
-      <p>- **Borax C30**: Zweimal täglich, beginnend 2-3 Tage vor Silvester</p>
+      <p>- Rhododendron C200: Einmal am Tag vor Silvester</p>
+      <p>- Borax C30: gerade, wenn sich das Tier vor den Knallgeräuschen fürchtet und zittert - zweimal täglich, beginnend 2-3 Tage vor Silvester</p>
       <h3>Aromatherapie</h3>
       <p>Ätherische Öle wie **Neroli, Lavendel, römische Kamille, Vanille** und **Vetiver** können beruhigend wirken. Weitere Details finden Sie im Beitrag „Aromatherapie“.</p>
     </div>
