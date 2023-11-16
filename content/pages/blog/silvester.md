@@ -65,7 +65,7 @@ Kräuter wie **Baldrian, Hopfen und Passionsblumen** wirken entspannend. Starten
     </div>
     <div class="col-md-5 order-md-1">
       <picture>
-        <img src="https://tierheilpraxis-jessican.de/img/behandlung/silvester_2.png" alt="" title="" loading="lazy" sizes="100vw"  class="featurette-image img-fluid mx-auto rounded-img" style="aspect-ratio: 1/1; object-fit: cover;">
+        <img src="https://tierheilpraxis-jessican.de/img/blog/silvester_2.png" alt="" title="" loading="lazy" sizes="100vw"  class="featurette-image img-fluid mx-auto rounded-img" style="aspect-ratio: 1/1; object-fit: cover;">
       </picture>
     </div>
   </div>
