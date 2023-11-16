@@ -1,20 +1,20 @@
 {% extends "template.html" %}
-{% block title %}Preisinformationen - {{ config.title }}{% endblock title %}
+{% block title %}Infos & Preise - {{ config.title }}{% endblock title %}
 
 {% block description %}
-    <meta name="description" content="Vorgehen von Tierheilpraktiker JessICan: Akupunktur, Homöopathie, Phytotherapie, Manuelle Therapie, Aromatherapie & Ernährungsberatung für Hund & Pferd">
+    <meta name="description" content="Infos & Preise von Tierheilpraktiker JessICan: Akupunktur, Homöopathie, Manuelle Therapie, Aromatherapie & Ernährungsberatung für Hund & Pferd">
 {% endblock description %}
 
 {% block header %}
 <!-- Page Header -->
-<header class="masthead" style="background-image: url('{{ get_url(path="/img/vorgehen_1024.jpeg")}}')">
+<header class="masthead" style="background-image: url('{{ get_url(path="/img/vorgehen_1024.png")}}')">
   <div class="overlay">
   </div>
   <div class="container">
     <div class="row">
       <div class="col-lg-10 col-md-10 mx-auto">
         <div class="page-heading">
-          <h1>Meine Preise</h1>
+          <h1>Preise und wichtige Infos</h1>
           <span class="subheading"></span>
         </div>
       </div>
@@ -80,16 +80,197 @@
           </tr>
         </tbody>      
       </table>
-      <p>Die Fahrtkosten belaufen sich auf 0,35 € für jeden angefangenen Kilometer. Die Entfernung berechne ich anhand der kürzesten Route, die mir das Google Maps Navigationssystem anzeigt. Normalerweise gehören die Erstkonsultation und die Nachbehandlung zusammen und werden zusammen in Rechnung gestellt, es sei denn, es besteht ein triftiger Grund, die Therapie nach der Erstkonsultation abzubrechen.</p>
-      <p>Da ich den Kleinunternehmerstatus gemäß § 19 UStG inne habe, wird keine Umsatzsteuer erhoben und folglich nicht gesondert auf Rechnungen ausgewiesen. Die Zahlung von Rechnungsbeträgen erfolgt innerhalb von sieben Tagen per Überweisung.</p>
-      <p>Weitere Informationen zu den Preisen und individuellen Angeboten erhalten Sie auf Anfrage.</p>
-    </div>
-    <div class="row">
-      <div class="col-lg-10 col-md-10 mx-auto">
-        <h2>Zusätzliche Informationen</h2>
-        <p>Als mobiler <em>Tierheilpraktiker</em> für <em>Hund</em> und <em>Pferd</em> biete ich Hausbesuche an, um Ihre Tiere in ihrer gewohnten Umgebung auf stressfreie und individuelle Weise zu behandeln. Bei speziellen Anfragen erstelle ich Ihnen gerne ein maßgeschneidertes Angebot. Für Preisauskünfte oder weitere Informationen können Sie mich telefonisch erreichen oder über das Kontaktformular auf meiner Website Kontakt aufnehmen.
-      </div>
     </div>
   </div>
+</div>
+    <!-- FAQ Section -->
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-lg-10 col-md-10 mx-auto">
+
+      <h2>Fragen zur Preisgestaltung</h2>
+        <!-- Frage zur Fahrtkostenberechnung -->
+        <div class="card">
+          <div class="card-header" id="headingTwo">
+            <h5 class="mb-0">
+              <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                Wie hoch sind die Fahrtkosten und wie werden diese berechnet?
+              </button>
+            </h5>
+          </div>
+          <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+            <div class="card-body">
+              Die Fahrtkosten belaufen sich auf 0,35 € für jeden angefangenen Kilometer. Die Entfernung berechne ich anhand der besten Route, die mir das Google Maps Navigationssystem anzeigt.
+            </div>
+          </div>
+        </div>
+
+        <!-- Frage zur Umsatzsteuer und Zahlungsweise -->
+        <div class="card">
+          <div class="card-header" id="headingThree">
+            <h5 class="mb-0">
+              <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                Warum wird auf der Rechnung keine Umsatzsteuer ausgewiesen?
+              </button>
+            </h5>
+          </div>
+          <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+            <div class="card-body">
+              Da ich den Kleinunternehmerstatus gemäß § 19 UStG inne habe, wird keine Umsatzsteuer erhoben und folglich nicht gesondert auf Rechnungen ausgewiesen. Die Zahlung von Rechnungsbeträgen erfolgt innerhalb von sieben Tagen per Überweisung.
+            </div>
+          </div>
+        </div>
+
+        <!-- Zusatzleistungen -->
+        <div class="card">
+          <div class="card-header" id="headingFour">
+            <h5 class="mb-0">
+              <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                Zusatzleistungen und ihre Preise
+              </button>
+            </h5>
+          </div>
+          <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion">
+            <div class="card-body">
+              <table class="table">
+                <tr>
+                  <td>Repertorisieren (Zeitaufwand ca. 4 Stunden)</td>
+                  <td>50,00 €</td>
+                </tr>
+                <tr>
+                  <td>Bachblütenzusammenstellung (Auswahl inkl. erstellte Mischung)</td>
+                  <td>25,00 €</td>
+                </tr>
+              </table>
+              <p>Weitere Informationen zu den Preisen und individuellen Angeboten erhalten Sie auf Anfrage.</p>
+            </div>
+          </div>
+        </div>
+
+        <h2>Allgemeine häufig gestellte Fragen</h2>
+      <div id="accordion">
+        <!-- Praxis -->
+        <div class="card">
+          <div class="card-header" id="headingOne">
+            <h5 class="mb-0">
+              <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                Haben Sie auch eine Praxis, die ich aufsuchen kann?
+              </button>
+            </h5>
+          </div>
+          <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+            <div class="card-body">
+              Als <strong>mobiler</strong> <em>Tierheilpraktiker</em> biete ich ausschließlich Hausbesuche an. Ich komme direkt zu Ihnen nach Hause, um Ihrem Tier in gewohnter Umgebung die bestmögliche Behandlung zu bieten. Mit meiner mobilen Praxis kann ich auf die individuellen Bedürfnisse Ihres Tieres eingehen und eine persönliche sowie stressfreie Atmosphäre schaffen.
+            </div>
+          </div>
+        </div>
+
+        <!-- Ferntherapie -->
+      <div class="card">
+        <div class="card-header" id="headingFive">
+          <h5 class="mb-0">
+            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+              Ich wohne sehr weit weg. Können Sie mir dennoch helfen?
+            </button>
+          </h5>
+        </div>
+        <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordion">
+          <div class="card-body">
+            <p>Ja, auch wenn Sie weit entfernt wohnen, kann ich Ihnen und Ihrem <strong>Hund</strong> oder <strong>Pferd</strong> Unterstützung bieten. Die Ferntherapie ist zwar eine besondere Herausforderung, aber durch eine enge Zusammenarbeit und gute Kommunikation mit Ihnen kann ich eine individuell angepasste und effektive Therapie anbieten.</p>
+
+            <p>In der Praxis nutze ich eine Reihe von Methoden, die ich individuell auswähle und anpasse, um die bestmögliche Therapie für Ihr Tier zu gewährleisten:</p>
+            <ul>
+              <li>Die <strong>Bioresonanztherapie</strong>, für die ich eine Haarprobe Ihres Tieres benötige, um eine individuelle Analyse und Behandlung durchzuführen.</li>
+              <li>Die <strong>Erstellung eines umfassenden Therapiekonzepts</strong> basierend auf detaillierten Informationen über den Gesundheitszustand Ihres Tieres.</li>
+              <li>Eine <strong>umfassende Ernährungsberatung und -anpassung</strong>, um das Wohlbefinden Ihres Tieres zu verbessern.</li>
+              <li>Die <strong>Übermittlung von Akupressurpunkten und Techniken</strong> mittels Infografiken.</li>
+              <li>Die <strong>Nutzung von Videokonferenzen</strong> für direkte Kommunikation und zur Besprechung des Therapiefortschritts.</li>
+            </ul>
+
+            <p>Mit diesen Methoden habe ich bereits gute Erfahrungen gemacht und konnte auch auf Distanz effektiv zur Gesundheit und zum Wohlbefinden der Tiere beitragen. Die Auswahl der Methoden erfolgt stets individuell, basierend auf den spezifischen Bedürfnissen Ihres Tieres.</p>
+          </div>
+        </div>
+      </div>
+      <!-- Vorbereitung auf den Hausbesuch -->
+      <div class="card">
+        <div class="card-header" id="headingPreparation">
+          <h5 class="mb-0">
+            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapsePreparation" aria-expanded="false" aria-controls="collapsePreparation">
+              Ist eine spezielle Vorbereitung für den Hausbesuch notwendig?
+            </button>
+          </h5>
+        </div>
+        <div id="collapsePreparation" class="collapse" aria-labelledby="headingPreparation" data-parent="#accordion">
+          <div class="card-body">
+            Für den Hausbesuch ist keine spezielle Vorbereitung erforderlich. Es ist wichtig, dass Ihr Tier sich in seiner gewohnten Umgebung wie üblich verhält, da dies mir hilft, Umgebungsfaktoren und Verhaltensweisen besser zu beobachten und zu verstehen.
+          </div>
+        </div>
+      </div>
+
+      <!-- Gesetzlicher Hinweis -->
+      <div class="card">
+        <div class="card-header" id="headingLegal">
+          <h5 class="mb-0">
+            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseLegal" aria-expanded="false" aria-controls="collapseLegal">
+              Gesetzlicher Hinweis zu meinen Methoden
+            </button>
+          </h5>
+        </div>
+        <div id="collapseLegal" class="collapse" aria-labelledby="headingLegal" data-parent="#accordion">
+          <div class="card-body">
+            Gemäß §3 des deutschen Heilmittelwerbegesetzes weise ich darauf hin, dass meine komplementärmedizinischen Methoden wissenschaftlich umstritten sind und eine tierärztliche Behandlung im Akutfall nicht ersetzen.
+          </div>
+        </div>
+      </div>
+
+      <!-- Notfallbehandlungen -->
+      <div class="card">
+        <div class="card-header" id="headingEmergency">
+          <h5 class="mb-0">
+            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseEmergency" aria-expanded="false" aria-controls="collapseEmergency">
+              Was tun im Notfall?
+            </button>
+          </h5>
+        </div>
+        <div id="collapseEmergency" class="collapse" aria-labelledby="headingEmergency" data-parent="#accordion">
+          <div class="card-body">
+            <strong>Im Notfall kontaktieren Sie bitte sofort einen Tierarzt.</strong> Meine Dienste als Tierheilpraktiker sind auf geplante Behandlungen ausgerichtet und nicht für Notfallsituationen geeignet.
+          </div>
+        </div>
+      </div>
+      <!-- Versicherungs- und Kostenerstattungsfragen -->
+      <div class="card">
+        <div class="card-header" id="headingInsurance">
+          <h5 class="mb-0">
+            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseInsurance" aria-expanded="false" aria-controls="collapseInsurance">
+              Übernehmen Versicherungen die Kosten für Tierheilpraktiker?
+            </button>
+          </h5>
+        </div>
+        <div id="collapseInsurance" class="collapse" aria-labelledby="headingInsurance" data-parent="#accordion">
+          <div class="card-body">
+            Tierversicherungen übernehmen in der Regel keine Kosten für Behandlungen durch Tierheilpraktiker. Ich empfehle Ihnen, sich direkt bei Ihrer Versicherung zu erkundigen, welche Leistungen möglicherweise erstattet werden können.
+          </div>
+        </div>
+      </div>
+      <!-- Zusammenarbeit mit Tierärzten -->
+      <div class="card">
+        <div class="card-header" id="headingCollaboration">
+          <h5 class="mb-0">
+            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseCollaboration" aria-expanded="false" aria-controls="collapseCollaboration">
+              Wie sieht die Zusammenarbeit mit Tierärzten aus?
+            </button>
+          </h5>
+        </div>
+        <div id="collapseCollaboration" class="collapse" aria-labelledby="headingCollaboration" data-parent="#accordion">
+          <div class="card-body">
+            Ich arbeite bei Bedarf eng mit Tierärzten zusammen, indem ich mich auf veterinärmedizinische Diagnostik und Labortests stütze. Diese Kooperation ermöglicht es mir, meine komplementärmedizinischen Kenntnisse optimal einzusetzen und gemeinsam mit Ihrem Tierarzt die bestmögliche Behandlung für Ihr Tier zu finden.
+          </div>
+        </div>
+      </div>
+      <!-- Gesetzlicher Hinweis zu Behandlungsmethoden -->
+
+      </div>
+    </div>
 </div>
 {% endblock content %}
