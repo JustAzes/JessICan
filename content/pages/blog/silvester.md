@@ -2,7 +2,7 @@
 title = "Tierisch Entspannt ins Neue Jahr: Ein Leitfaden für ein angstfreies Silvester"
 date = 2000-01-01
 
-draft = true
+draft = false
 
 [taxonomies]
 categories = ["Hunde"]
