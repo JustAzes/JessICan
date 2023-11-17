@@ -1,8 +1,8 @@
 +++
 title = "Ein friedvolles Silvester für unsere Vierbeiner"
-date = 2000-01-01
+date = 2023-12-01
 
-draft = false
+draft = true
 
 [taxonomies]
 categories = ["Hunde"]
@@ -18,8 +18,7 @@ tags = []
   <div class="row featurette">
     <div class="col-md-7 order-md-2">
       <h2 class="featurette-heading">Eine persönliche Silvesternacht-Erinnerung</h2>
-      <p class="lead">Das Jahr neigt sich dem Ende zu, und der Zauber von Silvester steht bevor. Ich erinnere mich noch lebhaft an eine Silvesternacht vor einigen Jahren, die wir gemeinsam mit Freunden feierten. Es war ein gemütlicher Abend, wir spielten Spiele, lachten und freuten uns darauf, gemeinsam ins neue Jahr hineinzufeiern. Doch als die Uhr Mitternacht schlug und die ersten Böller und Raketen den Himmel erhellten, veränderte sich die Stimmung schlagartig.</p> 
-      <p>Der Hund unserer Freunde, sonst so lebensfroh und verspielt, wurde durch die plötzlichen Knallgeräusche zutiefst irritiert und ängstlich. Anstatt zu feiern, fanden wir uns alle – zwei Hunde und vier Erwachsene – zusammen im Badezimmer, umgeben von Musik, um dem Hund etwas Trost und Sicherheit zu bieten. Während wir anstießen, verbrachte der kleine Vierbeiner sein Neujahr verängstigt in der Dusche.</p>    
+      <p class="lead">Das Jahr neigt sich dem Ende zu, und der Zauber von Silvester steht bevor. Ich erinnere mich noch lebhaft an eine Silvesternacht vor einigen Jahren, die wir gemeinsam mit Freunden feierten. Es war ein gemütlicher Abend, wir spielten Spiele, lachten und freuten uns darauf, gemeinsam ins neue Jahr hineinzufeiern. Doch als die Uhr Mitternacht schlug und die ersten Böller und Raketen den Himmel erhellten, veränderte sich die Stimmung schlagartig.</p>     
     </div>
     <div class="col-md-5">
         <picture>
@@ -29,23 +28,24 @@ tags = []
   </div>
   <hr class="featurette-divider">
 </div>
+Der Hund unserer Freunde, sonst so lebensfroh und verspielt, wurde durch die plötzlichen Knallgeräusche zutiefst irritiert und ängstlich. Anstatt zu feiern, fanden wir uns alle – zwei Hunde und vier Erwachsene – zusammen im Badezimmer, umgeben von Musik, um dem Hund etwas Trost und Sicherheit zu bieten. Während wir anstießen, verbrachte der kleine Vierbeiner sein Neujahr verängstigt in der Dusche.
 
 Diese eindrucksvolle Erfahrung hat mir vor Augen geführt, wie belastend und beunruhigend Silvester für unsere tierischen Begleiter sein kann. Es ist ein Anlass, der bei vielen Tieren nicht nur Angst und Panik auslöst, sondern auch ernsthafte gesundheitliche Probleme wie Koliksymptome und Panikattacken verursachen kann. Daher ist es so wichtig, Wege zu finden, um ihnen zu helfen und diesen Übergang ins neue Jahr so stressfrei wie möglich zu gestalten.
 
-## Effektive Natürliche Beruhigungsmethoden durch Nahrungsergänzungsmittel
+## Effektive Beruhigungsmethoden durch Nahrungsergänzungsmittel
 
-<a target="_blank" href="https://www.amazon.de/L-Tryptophan-500mg-pflanzlicher-Fermentation-laboruntersucht/dp/B07L151Q71?&_encoding=UTF8&tag=tierheilpr0ee-21&linkCode=ur2&linkId=4a8172b705b19847a1cfb7996bc190d2&camp=1638&creative=6742">Tryptophan*</a> spielt eine wichtige Rolle bei der Serotoninproduktion, einem Neurotransmitter, der für das Wohlbefinden verantwortlich ist. Indem Tryptophan zu Serotonin umgewandelt wird, kann es helfen, übermäßige Angstzustände bei Tieren zu reduzieren. Für optimale Ergebnisse beginnen Sie mit der Verabreichung etwa eine Woche vor Silvester und setzen Sie sie bis kurz nach der Silvesternacht fort.
+<a target="_blank" href="https://www.amazon.de/L-Tryptophan-500mg-pflanzlicher-Fermentation-laboruntersucht/dp/B07L151Q71?&_encoding=UTF8&tag=tierheilpr0ee-21&linkCode=ur2&linkId=4a8172b705b19847a1cfb7996bc190d2&camp=1638&creative=6742"><strong>Tryptophan</strong>*</a> spielt eine wichtige Rolle bei der Serotoninproduktion, einem Neurotransmitter, der für das Wohlbefinden verantwortlich ist. Indem Tryptophan zu Serotonin umgewandelt wird, kann es helfen, übermäßige Angstzustände bei Tieren zu reduzieren. Für optimale Ergebnisse beginnen Sie mit der Verabreichung etwa eine Woche vor Silvester und setzen Sie sie bis kurz nach der Silvesternacht fort.
 
-Natürliche Heilkräuter wie **Baldrian**, **Hopfen** und **Passionsblumen** sind bekannt für ihre beruhigenden Eigenschaften. Diese Kräuter helfen, das Nervensystem sanft zu entspannen und können bei regelmäßiger Anwendung eine beruhigende Wirkung auf das Tier haben. Es ist ratsam, diese Kräuter mindestens **zwei Wochen vor Silvester** in die Ernährung Ihres Tieres einzuführen, um eine effektive Wirkung zu erzielen.
+**Natürliche Heilkräuter** wie **Baldrian**, **Hopfen** und **Passionsblumen** sind bekannt für ihre beruhigenden Eigenschaften. Diese Kräuter helfen, das Nervensystem sanft zu entspannen und können bei regelmäßiger Anwendung eine beruhigende Wirkung auf das Tier haben. Es ist ratsam, diese Kräuter mindestens **zwei Wochen vor Silvester** in die Ernährung Ihres Tieres einzuführen, um eine effektive Wirkung zu erzielen.
 
-Hanfprodukte, erhältlich in Form von **Futterhanf-Pellets** oder <a target="_blank" href="https://www.amazon.de/Bio-CBD-%25C3%2596l-10-Vollspektrum-HempComplete%25C2%25AE/dp/B0BGT5BGCM?&_encoding=UTF8&tag=tierheilpr0ee-21&linkCode=ur2&linkId=987295e238cebb0553d3f71b57813556&camp=1638&creative=6742">Bio <strong>CBD-Öl</strong>*</a>, tragen zur Entspannung bei und können besonders hilfreich sein, um Stress und Unruhe bei Tieren zu verringern. Cannabidiol (CBD), ein Wirkstoff im Hanf, unterstützt eine entspannte Gemütsverfassung. Es ist wichtig, dass Sie Ihr Tier schrittweise an das Produkt gewöhnen, damit es an Silvester nicht durch eine ungewohnte Körperwahrnehmung beunruhigt wird. Bei der Verwendung von CBD-Öl können anfangs 10 Tropfen eines 10%igen Öls ausreichend sein, wobei die Dosierung bei Bedarf angepasst werden kann. Diese Produkte sollten ebenfalls zwei Wochen vor Silvester in die Routine integriert werden.
+**Hanfprodukte**, erhältlich in Form von **Futterhanf-Pellets** oder <a target="_blank" href="https://www.amazon.de/Bio-CBD-%25C3%2596l-10-Vollspektrum-HempComplete%25C2%25AE/dp/B0BGT5BGCM?&_encoding=UTF8&tag=tierheilpr0ee-21&linkCode=ur2&linkId=987295e238cebb0553d3f71b57813556&camp=1638&creative=6742">Bio <strong>CBD-Öl</strong>*</a>, tragen zur Entspannung bei und können besonders hilfreich sein, um Stress und Unruhe bei Tieren zu verringern. Cannabidiol (CBD), ein Wirkstoff im Hanf, unterstützt eine entspannte Gemütsverfassung. Es ist wichtig, dass Sie Ihr Tier schrittweise an das Produkt gewöhnen, damit es an Silvester nicht durch eine ungewohnte Körperwahrnehmung beunruhigt wird. Bei der Verwendung von CBD-Öl können anfangs 10 Tropfen eines 10%igen Öls ausreichend sein, wobei die Dosierung bei Bedarf angepasst werden kann. Diese Produkte sollten ebenfalls zwei Wochen vor Silvester in die Routine integriert werden.
 
-
+## Natürliche Heilverfahren in der Tierheilkunde: Bachblüten, Aromatherapie und mehr
 <div class="container marketing">
   <hr class="featurette-divider">
   <div class="row featurette">
     <div class="col-md-7">
-      <h2 class="featurette-heading">Bachblüten und Homöopathie: Natürliche Unterstützung für Ihre Tiere</h2>
+      <h3 class="featurette-heading">Unterstützung durch Bachblüten</h3>
       <p class="lead">Die speziell für stressige und akute Notfälle zusammengestellte <strong>Bachblütenmischung</strong> <a target="_blank" href="https://www.amazon.de/dp/B08GFTTGCB/ref=twister_B08NR69712?_encoding=UTF8&amp;th=1&_encoding=UTF8&tag=tierheilpr0ee-21&linkCode=ur2&linkId=5aff012fd9238983c564007c9ba243ba&camp=1638&creative=6742">Rescue Tropfen*</a> kann eine wertvolle Unterstützung bieten. Sie hilft, die Nerven zu beruhigen und das Wohlbefinden zu fördern. Für eine optimale Wirkung empfehlen wir, mit der Anwendung der Rescue Tropfen bereits zwei Wochen vor Silvester zu beginnen.</p>
     </div>
     <div class="col-md-5 order-md-1">

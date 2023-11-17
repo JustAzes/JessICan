@@ -46,8 +46,6 @@ Meine persönliche Erfahrung illustriert das:
 
 Ich habe verschiedene Allergien und litt unter allergischem Asthma, was eine klinische Behandlung erforderlich machte. Gleichzeitig erkrankte mein Pferd Gino an einer chronischen Atemwegserkrankung. Trotz zahlreicher Tierarztbesuche konnte eine Verbesserung nur durch starke Medikamente erreicht werden. Diese Erfahrung führte mich auf den Weg der Tierheilkunde, auf der Suche nach natürlichen und schonenderen Therapiemethoden.
 
----
-
 <div class="container marketing">
   <hr class="featurette-divider">
   <div class="row featurette">
