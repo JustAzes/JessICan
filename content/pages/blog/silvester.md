@@ -22,28 +22,28 @@ tags = []
     </div>
     <div class="col-md-5">
         <picture>
-            <source media="(max-width: 319px)" srcset="https://tierheilpraxis-jessican.de/img//silvester_1_320.avif 304w" type="image/avif" sizes="95vw">
-            <source media="(max-width: 319px)" srcset="https://tierheilpraxis-jessican.de/img//silvester_1_320.webp 304w" type="image/webp" sizes="95vw">
-            <source media="(max-width: 319px)" srcset="https://tierheilpraxis-jessican.de/img//silvester_1_320.jpeg 304w" type="image/jpeg" sizes="95vw">
-            <source media="(min-width: 320px) and (max-width: 639px)" srcset="https://tierheilpraxis-jessican.de/img//silvester_1_640.avif 608w" type="image/avif" sizes="95vw">
-            <source media="(min-width: 320px) and (max-width: 639px)" srcset="https://tierheilpraxis-jessican.de/img//silvester_1_640.webp 608w" type="image/webp" sizes="95vw">
-            <source media="(min-width: 320px) and (max-width: 639px)" srcset="https://tierheilpraxis-jessican.de/img//silvester_1_640.jpeg 608w" type="image/jpeg" sizes="95vw">
-            <source media="(min-width: 640px) and (max-width: 767px)" srcset="https://tierheilpraxis-jessican.de/img//silvester_1_768.avif 729w" type="image/avif" sizes="95vw">
-            <source media="(min-width: 640px) and (max-width: 767px)" srcset="https://tierheilpraxis-jessican.de/img//silvester_1_768.webp 729w" type="image/webp" sizes="95vw">
-            <source media="(min-width: 640px) and (max-width: 767px)" srcset="https://tierheilpraxis-jessican.de/img//silvester_1_768.jpeg 729w" type="image/jpeg" sizes="95vw">
-            <source media="(min-width: 768px) and (max-width: 1023px)" srcset="https://tierheilpraxis-jessican.de/img//silvester_1_1024.avif 972w" type="image/avif" sizes="95vw">
-            <source media="(min-width: 768px) and (max-width: 1023px)" srcset="https://tierheilpraxis-jessican.de/img//silvester_1_1024.webp 972w" type="image/webp" sizes="95vw">
-            <source media="(min-width: 768px) and (max-width: 1023px)" srcset="https://tierheilpraxis-jessican.de/img//silvester_1_1024.jpeg 972w" type="image/jpeg" sizes="95vw">
-            <source media="(min-width: 1024px) and (max-width: 1365px)" srcset="https://tierheilpraxis-jessican.de/img//silvester_1_1366.avif 1297w" type="image/avif" sizes="95vw">
-            <source media="(min-width: 1024px) and (max-width: 1365px)" srcset="https://tierheilpraxis-jessican.de/img//silvester_1_1366.webp 1297w" type="image/webp" sizes="95vw">
-            <source media="(min-width: 1024px) and (max-width: 1365px)" srcset="https://tierheilpraxis-jessican.de/img//silvester_1_1366.jpeg 1297w" type="image/jpeg" sizes="95vw">
-            <source media="(min-width: 1366px) and (max-width: 1599px)" srcset="https://tierheilpraxis-jessican.de/img//silvester_1_1600.avif 1520w" type="image/avif" sizes="95vw">
-            <source media="(min-width: 1366px) and (max-width: 1599px)" srcset="https://tierheilpraxis-jessican.de/img//silvester_1_1600.webp 1520w" type="image/webp" sizes="95vw">
-            <source media="(min-width: 1366px) and (max-width: 1599px)" srcset="https://tierheilpraxis-jessican.de/img//silvester_1_1600.jpeg 1520w" type="image/jpeg" sizes="95vw">
-            <source media="(min-width: 1600px)" srcset="https://tierheilpraxis-jessican.de/img//silvester_1_1920.avif 1824w" type="image/avif" sizes="95vw">
-            <source media="(min-width: 1600px)" srcset="https://tierheilpraxis-jessican.de/img//silvester_1_1920.webp 1824w" type="image/webp" sizes="95vw">
-            <source media="(min-width: 1600px)" srcset="https://tierheilpraxis-jessican.de/img//silvester_1_1920.jpeg 1824w" type="image/jpeg" sizes="95vw">
-            <img src="https://tierheilpraxis-jessican.de/img//silvester_1_1920.jpeg" alt="Ängstlicher Hund zu Silvester in Radeberg" title="Ängstlicher Hund zu Silvester in Radeberg"  loading="lazy" sizes="30vw"  class="featurette-image img-fluid mx-auto rounded-img" style="aspect-ratio: 1/1; object-fit: cover;">
+            <source media="(max-width: 319px)" srcset="https://tierheilpraxis-jessican.de/img/blog/silvester_1_320.avif 304w" type="image/avif" sizes="95vw">
+            <source media="(max-width: 319px)" srcset="https://tierheilpraxis-jessican.de/img/blog/silvester_1_320.webp 304w" type="image/webp" sizes="95vw">
+            <source media="(max-width: 319px)" srcset="https://tierheilpraxis-jessican.de/img/blog/silvester_1_320.jpeg 304w" type="image/jpeg" sizes="95vw">
+            <source media="(min-width: 320px) and (max-width: 639px)" srcset="https://tierheilpraxis-jessican.de/img/blog/silvester_1_640.avif 608w" type="image/avif" sizes="95vw">
+            <source media="(min-width: 320px) and (max-width: 639px)" srcset="https://tierheilpraxis-jessican.de/img/blog/silvester_1_640.webp 608w" type="image/webp" sizes="95vw">
+            <source media="(min-width: 320px) and (max-width: 639px)" srcset="https://tierheilpraxis-jessican.de/img/blog/silvester_1_640.jpeg 608w" type="image/jpeg" sizes="95vw">
+            <source media="(min-width: 640px) and (max-width: 767px)" srcset="https://tierheilpraxis-jessican.de/img/blog/silvester_1_768.avif 729w" type="image/avif" sizes="95vw">
+            <source media="(min-width: 640px) and (max-width: 767px)" srcset="https://tierheilpraxis-jessican.de/img/blog/silvester_1_768.webp 729w" type="image/webp" sizes="95vw">
+            <source media="(min-width: 640px) and (max-width: 767px)" srcset="https://tierheilpraxis-jessican.de/img/blog/silvester_1_768.jpeg 729w" type="image/jpeg" sizes="95vw">
+            <source media="(min-width: 768px) and (max-width: 1023px)" srcset="https://tierheilpraxis-jessican.de/img/blog/silvester_1_1024.avif 972w" type="image/avif" sizes="95vw">
+            <source media="(min-width: 768px) and (max-width: 1023px)" srcset="https://tierheilpraxis-jessican.de/img/blog/silvester_1_1024.webp 972w" type="image/webp" sizes="95vw">
+            <source media="(min-width: 768px) and (max-width: 1023px)" srcset="https://tierheilpraxis-jessican.de/img/blog/silvester_1_1024.jpeg 972w" type="image/jpeg" sizes="95vw">
+            <source media="(min-width: 1024px) and (max-width: 1365px)" srcset="https://tierheilpraxis-jessican.de/img/blog/silvester_1_1366.avif 1297w" type="image/avif" sizes="95vw">
+            <source media="(min-width: 1024px) and (max-width: 1365px)" srcset="https://tierheilpraxis-jessican.de/img/blog/silvester_1_1366.webp 1297w" type="image/webp" sizes="95vw">
+            <source media="(min-width: 1024px) and (max-width: 1365px)" srcset="https://tierheilpraxis-jessican.de/img/blog/silvester_1_1366.jpeg 1297w" type="image/jpeg" sizes="95vw">
+            <source media="(min-width: 1366px) and (max-width: 1599px)" srcset="https://tierheilpraxis-jessican.de/img/blog/silvester_1_1600.avif 1520w" type="image/avif" sizes="95vw">
+            <source media="(min-width: 1366px) and (max-width: 1599px)" srcset="https://tierheilpraxis-jessican.de/img/blog/silvester_1_1600.webp 1520w" type="image/webp" sizes="95vw">
+            <source media="(min-width: 1366px) and (max-width: 1599px)" srcset="https://tierheilpraxis-jessican.de/img/blog/silvester_1_1600.jpeg 1520w" type="image/jpeg" sizes="95vw">
+            <source media="(min-width: 1600px)" srcset="https://tierheilpraxis-jessican.de/img/blog/silvester_1_1920.avif 1824w" type="image/avif" sizes="95vw">
+            <source media="(min-width: 1600px)" srcset="https://tierheilpraxis-jessican.de/img/blog/silvester_1_1920.webp 1824w" type="image/webp" sizes="95vw">
+            <source media="(min-width: 1600px)" srcset="https://tierheilpraxis-jessican.de/img/blog/silvester_1_1920.jpeg 1824w" type="image/jpeg" sizes="95vw">
+            <img src="https://tierheilpraxis-jessican.de/img/blog/silvester_1_1920.jpeg" alt="Ängstlicher Hund zu Silvester in Radeberg" title="Ängstlicher Hund zu Silvester in Radeberg"  loading="lazy" sizes="30vw"  class="featurette-image img-fluid mx-auto rounded-img" style="aspect-ratio: 1/1; object-fit: cover;">
         </picture>
     </div>
   </div>
@@ -71,28 +71,28 @@ Diese eindrucksvolle Erfahrung hat mir vor Augen geführt, wie belastend und beu
     </div>
     <div class="col-md-5 order-md-1">
       <picture>
-        <source media="(max-width: 319px)" srcset="https://tierheilpraxis-jessican.de/img//silvester_2_320.avif 304w" type="image/avif" sizes="95vw">
-        <source media="(max-width: 319px)" srcset="https://tierheilpraxis-jessican.de/img//silvester_2_320.webp 304w" type="image/webp" sizes="95vw">
-        <source media="(max-width: 319px)" srcset="https://tierheilpraxis-jessican.de/img//silvester_2_320.jpeg 304w" type="image/jpeg" sizes="95vw">
-        <source media="(min-width: 320px) and (max-width: 639px)" srcset="https://tierheilpraxis-jessican.de/img//silvester_2_640.avif 608w" type="image/avif" sizes="95vw">
-        <source media="(min-width: 320px) and (max-width: 639px)" srcset="https://tierheilpraxis-jessican.de/img//silvester_2_640.webp 608w" type="image/webp" sizes="95vw">
-        <source media="(min-width: 320px) and (max-width: 639px)" srcset="https://tierheilpraxis-jessican.de/img//silvester_2_640.jpeg 608w" type="image/jpeg" sizes="95vw">
-        <source media="(min-width: 640px) and (max-width: 767px)" srcset="https://tierheilpraxis-jessican.de/img//silvester_2_768.avif 729w" type="image/avif" sizes="95vw">
-        <source media="(min-width: 640px) and (max-width: 767px)" srcset="https://tierheilpraxis-jessican.de/img//silvester_2_768.webp 729w" type="image/webp" sizes="95vw">
-        <source media="(min-width: 640px) and (max-width: 767px)" srcset="https://tierheilpraxis-jessican.de/img//silvester_2_768.jpeg 729w" type="image/jpeg" sizes="95vw">
-        <source media="(min-width: 768px) and (max-width: 1023px)" srcset="https://tierheilpraxis-jessican.de/img//silvester_2_1024.avif 972w" type="image/avif" sizes="95vw">
-        <source media="(min-width: 768px) and (max-width: 1023px)" srcset="https://tierheilpraxis-jessican.de/img//silvester_2_1024.webp 972w" type="image/webp" sizes="95vw">
-        <source media="(min-width: 768px) and (max-width: 1023px)" srcset="https://tierheilpraxis-jessican.de/img//silvester_2_1024.jpeg 972w" type="image/jpeg" sizes="95vw">
-        <source media="(min-width: 1024px) and (max-width: 1365px)" srcset="https://tierheilpraxis-jessican.de/img//silvester_2_1366.avif 1297w" type="image/avif" sizes="95vw">
-        <source media="(min-width: 1024px) and (max-width: 1365px)" srcset="https://tierheilpraxis-jessican.de/img//silvester_2_1366.webp 1297w" type="image/webp" sizes="95vw">
-        <source media="(min-width: 1024px) and (max-width: 1365px)" srcset="https://tierheilpraxis-jessican.de/img//silvester_2_1366.jpeg 1297w" type="image/jpeg" sizes="95vw">
-        <source media="(min-width: 1366px) and (max-width: 1599px)" srcset="https://tierheilpraxis-jessican.de/img//silvester_2_1600.avif 1520w" type="image/avif" sizes="95vw">
-        <source media="(min-width: 1366px) and (max-width: 1599px)" srcset="https://tierheilpraxis-jessican.de/img//silvester_2_1600.webp 1520w" type="image/webp" sizes="95vw">
-        <source media="(min-width: 1366px) and (max-width: 1599px)" srcset="https://tierheilpraxis-jessican.de/img//silvester_2_1600.jpeg 1520w" type="image/jpeg" sizes="95vw">
-        <source media="(min-width: 1600px)" srcset="https://tierheilpraxis-jessican.de/img//silvester_2_1920.avif 1824w" type="image/avif" sizes="95vw">
-        <source media="(min-width: 1600px)" srcset="https://tierheilpraxis-jessican.de/img//silvester_2_1920.webp 1824w" type="image/webp" sizes="95vw">
-        <source media="(min-width: 1600px)" srcset="https://tierheilpraxis-jessican.de/img//silvester_2_1920.jpeg 1824w" type="image/jpeg" sizes="95vw">
-        <img src="https://tierheilpraxis-jessican.de/img//silvester_2_1920.jpeg" alt="Glückliche Pferde zu Silvester in Dresden" title="Glückliche Pferde zu Silvester in Dresden" loading="lazy" sizes="100vw"  class="featurette-image img-fluid mx-auto rounded-img" style="aspect-ratio: 1/1; object-fit: cover;">
+        <source media="(max-width: 319px)" srcset="https://tierheilpraxis-jessican.de/img/blog/silvester_2_320.avif 304w" type="image/avif" sizes="95vw">
+        <source media="(max-width: 319px)" srcset="https://tierheilpraxis-jessican.de/img/blog/silvester_2_320.webp 304w" type="image/webp" sizes="95vw">
+        <source media="(max-width: 319px)" srcset="https://tierheilpraxis-jessican.de/img/blog/silvester_2_320.jpeg 304w" type="image/jpeg" sizes="95vw">
+        <source media="(min-width: 320px) and (max-width: 639px)" srcset="https://tierheilpraxis-jessican.de/img/blog/silvester_2_640.avif 608w" type="image/avif" sizes="95vw">
+        <source media="(min-width: 320px) and (max-width: 639px)" srcset="https://tierheilpraxis-jessican.de/img/blog/silvester_2_640.webp 608w" type="image/webp" sizes="95vw">
+        <source media="(min-width: 320px) and (max-width: 639px)" srcset="https://tierheilpraxis-jessican.de/img/blog/silvester_2_640.jpeg 608w" type="image/jpeg" sizes="95vw">
+        <source media="(min-width: 640px) and (max-width: 767px)" srcset="https://tierheilpraxis-jessican.de/img/blog/silvester_2_768.avif 729w" type="image/avif" sizes="95vw">
+        <source media="(min-width: 640px) and (max-width: 767px)" srcset="https://tierheilpraxis-jessican.de/img/blog/silvester_2_768.webp 729w" type="image/webp" sizes="95vw">
+        <source media="(min-width: 640px) and (max-width: 767px)" srcset="https://tierheilpraxis-jessican.de/img/blog/silvester_2_768.jpeg 729w" type="image/jpeg" sizes="95vw">
+        <source media="(min-width: 768px) and (max-width: 1023px)" srcset="https://tierheilpraxis-jessican.de/img/blog/silvester_2_1024.avif 972w" type="image/avif" sizes="95vw">
+        <source media="(min-width: 768px) and (max-width: 1023px)" srcset="https://tierheilpraxis-jessican.de/img/blog/silvester_2_1024.webp 972w" type="image/webp" sizes="95vw">
+        <source media="(min-width: 768px) and (max-width: 1023px)" srcset="https://tierheilpraxis-jessican.de/img/blog/silvester_2_1024.jpeg 972w" type="image/jpeg" sizes="95vw">
+        <source media="(min-width: 1024px) and (max-width: 1365px)" srcset="https://tierheilpraxis-jessican.de/img/blog/silvester_2_1366.avif 1297w" type="image/avif" sizes="95vw">
+        <source media="(min-width: 1024px) and (max-width: 1365px)" srcset="https://tierheilpraxis-jessican.de/img/blog/silvester_2_1366.webp 1297w" type="image/webp" sizes="95vw">
+        <source media="(min-width: 1024px) and (max-width: 1365px)" srcset="https://tierheilpraxis-jessican.de/img/blog/silvester_2_1366.jpeg 1297w" type="image/jpeg" sizes="95vw">
+        <source media="(min-width: 1366px) and (max-width: 1599px)" srcset="https://tierheilpraxis-jessican.de/img/blog/silvester_2_1600.avif 1520w" type="image/avif" sizes="95vw">
+        <source media="(min-width: 1366px) and (max-width: 1599px)" srcset="https://tierheilpraxis-jessican.de/img/blog/silvester_2_1600.webp 1520w" type="image/webp" sizes="95vw">
+        <source media="(min-width: 1366px) and (max-width: 1599px)" srcset="https://tierheilpraxis-jessican.de/img/blog/silvester_2_1600.jpeg 1520w" type="image/jpeg" sizes="95vw">
+        <source media="(min-width: 1600px)" srcset="https://tierheilpraxis-jessican.de/img/blog/silvester_2_1920.avif 1824w" type="image/avif" sizes="95vw">
+        <source media="(min-width: 1600px)" srcset="https://tierheilpraxis-jessican.de/img/blog/silvester_2_1920.webp 1824w" type="image/webp" sizes="95vw">
+        <source media="(min-width: 1600px)" srcset="https://tierheilpraxis-jessican.de/img/blog/silvester_2_1920.jpeg 1824w" type="image/jpeg" sizes="95vw">
+        <img src="https://tierheilpraxis-jessican.de/img/blog/silvester_2_1920.jpeg" alt="Glückliche Pferde zu Silvester in Dresden" title="Glückliche Pferde zu Silvester in Dresden" loading="lazy" sizes="100vw"  class="featurette-image img-fluid mx-auto rounded-img" style="aspect-ratio: 1/1; object-fit: cover;">
       </picture>
     </div>
   </div>
@@ -138,27 +138,27 @@ Für Pferde, die in einem Offenstall leben, ist es wichtig, ihnen ihre Bewegungs
     </div>
     <div class="col-md-5">
         <picture>
-            <source media="(max-width: 319px)" srcset="https://tierheilpraxis-jessican.de/img//silvester_3_320.avif 304w" type="image/avif" sizes="95vw">
-            <source media="(max-width: 319px)" srcset="https://tierheilpraxis-jessican.de/img//silvester_3_320.webp 304w" type="image/webp" sizes="95vw">
-            <source media="(max-width: 319px)" srcset="https://tierheilpraxis-jessican.de/img//silvester_3_320.jpeg 304w" type="image/jpeg" sizes="95vw">
-            <source media="(min-width: 320px) and (max-width: 639px)" srcset="https://tierheilpraxis-jessican.de/img//silvester_3_640.avif 608w" type="image/avif" sizes="95vw">
-            <source media="(min-width: 320px) and (max-width: 639px)" srcset="https://tierheilpraxis-jessican.de/img//silvester_3_640.webp 608w" type="image/webp" sizes="95vw">
-            <source media="(min-width: 320px) and (max-width: 639px)" srcset="https://tierheilpraxis-jessican.de/img//silvester_3_640.jpeg 608w" type="image/jpeg" sizes="95vw">
-            <source media="(min-width: 640px) and (max-width: 767px)" srcset="https://tierheilpraxis-jessican.de/img//silvester_3_768.avif 729w" type="image/avif" sizes="95vw">
-            <source media="(min-width: 640px) and (max-width: 767px)" srcset="https://tierheilpraxis-jessican.de/img//silvester_3_768.webp 729w" type="image/webp" sizes="95vw">
-            <source media="(min-width: 640px) and (max-width: 767px)" srcset="https://tierheilpraxis-jessican.de/img//silvester_3_768.jpeg 729w" type="image/jpeg" sizes="95vw">
-            <source media="(min-width: 768px) and (max-width: 1023px)" srcset="https://tierheilpraxis-jessican.de/img//silvester_3_1024.avif 972w" type="image/avif" sizes="95vw">
-            <source media="(min-width: 768px) and (max-width: 1023px)" srcset="https://tierheilpraxis-jessican.de/img//silvester_3_1024.webp 972w" type="image/webp" sizes="95vw">
-            <source media="(min-width: 768px) and (max-width: 1023px)" srcset="https://tierheilpraxis-jessican.de/img//silvester_3_1024.jpeg 972w" type="image/jpeg" sizes="95vw">
-            <source media="(min-width: 1024px) and (max-width: 1365px)" srcset="https://tierheilpraxis-jessican.de/img//silvester_3_1366.avif 1297w" type="image/avif" sizes="95vw">
-            <source media="(min-width: 1024px) and (max-width: 1365px)" srcset="https://tierheilpraxis-jessican.de/img//silvester_3_1366.webp 1297w" type="image/webp" sizes="95vw">
-            <source media="(min-width: 1024px) and (max-width: 1365px)" srcset="https://tierheilpraxis-jessican.de/img//silvester_3_1366.jpeg 1297w" type="image/jpeg" sizes="95vw">
-            <source media="(min-width: 1366px) and (max-width: 1599px)" srcset="https://tierheilpraxis-jessican.de/img//silvester_3_1600.avif 1520w" type="image/avif" sizes="95vw">
-            <source media="(min-width: 1366px) and (max-width: 1599px)" srcset="https://tierheilpraxis-jessican.de/img//silvester_3_1600.webp 1520w" type="image/webp" sizes="95vw">
-            <source media="(min-width: 1366px) and (max-width: 1599px)" srcset="https://tierheilpraxis-jessican.de/img//silvester_3_1600.jpeg 1520w" type="image/jpeg" sizes="95vw">
-            <source media="(min-width: 1600px)" srcset="https://tierheilpraxis-jessican.de/img//silvester_3_1920.avif 1824w" type="image/avif" sizes="95vw">
-            <source media="(min-width: 1600px)" srcset="https://tierheilpraxis-jessican.de/img//silvester_3_1920.webp 1824w" type="image/webp" sizes="95vw">
-            <source media="(min-width: 1600px)" srcset="https://tierheilpraxis-jessican.de/img//silvester_3_1920.jpeg 1824w" type="image/jpeg" sizes="95vw">
+            <source media="(max-width: 319px)" srcset="https://tierheilpraxis-jessican.de/img/blog/silvester_3_320.avif 304w" type="image/avif" sizes="95vw">
+            <source media="(max-width: 319px)" srcset="https://tierheilpraxis-jessican.de/img/blog/silvester_3_320.webp 304w" type="image/webp" sizes="95vw">
+            <source media="(max-width: 319px)" srcset="https://tierheilpraxis-jessican.de/img/blog/silvester_3_320.jpeg 304w" type="image/jpeg" sizes="95vw">
+            <source media="(min-width: 320px) and (max-width: 639px)" srcset="https://tierheilpraxis-jessican.de/img/blog/silvester_3_640.avif 608w" type="image/avif" sizes="95vw">
+            <source media="(min-width: 320px) and (max-width: 639px)" srcset="https://tierheilpraxis-jessican.de/img/blog/silvester_3_640.webp 608w" type="image/webp" sizes="95vw">
+            <source media="(min-width: 320px) and (max-width: 639px)" srcset="https://tierheilpraxis-jessican.de/img/blog/silvester_3_640.jpeg 608w" type="image/jpeg" sizes="95vw">
+            <source media="(min-width: 640px) and (max-width: 767px)" srcset="https://tierheilpraxis-jessican.de/img/blog/silvester_3_768.avif 729w" type="image/avif" sizes="95vw">
+            <source media="(min-width: 640px) and (max-width: 767px)" srcset="https://tierheilpraxis-jessican.de/img/blog/silvester_3_768.webp 729w" type="image/webp" sizes="95vw">
+            <source media="(min-width: 640px) and (max-width: 767px)" srcset="https://tierheilpraxis-jessican.de/img/blog/silvester_3_768.jpeg 729w" type="image/jpeg" sizes="95vw">
+            <source media="(min-width: 768px) and (max-width: 1023px)" srcset="https://tierheilpraxis-jessican.de/img/blog/silvester_3_1024.avif 972w" type="image/avif" sizes="95vw">
+            <source media="(min-width: 768px) and (max-width: 1023px)" srcset="https://tierheilpraxis-jessican.de/img/blog/silvester_3_1024.webp 972w" type="image/webp" sizes="95vw">
+            <source media="(min-width: 768px) and (max-width: 1023px)" srcset="https://tierheilpraxis-jessican.de/img/blog/silvester_3_1024.jpeg 972w" type="image/jpeg" sizes="95vw">
+            <source media="(min-width: 1024px) and (max-width: 1365px)" srcset="https://tierheilpraxis-jessican.de/img/blog/silvester_3_1366.avif 1297w" type="image/avif" sizes="95vw">
+            <source media="(min-width: 1024px) and (max-width: 1365px)" srcset="https://tierheilpraxis-jessican.de/img/blog/silvester_3_1366.webp 1297w" type="image/webp" sizes="95vw">
+            <source media="(min-width: 1024px) and (max-width: 1365px)" srcset="https://tierheilpraxis-jessican.de/img/blog/silvester_3_1366.jpeg 1297w" type="image/jpeg" sizes="95vw">
+            <source media="(min-width: 1366px) and (max-width: 1599px)" srcset="https://tierheilpraxis-jessican.de/img/blog/silvester_3_1600.avif 1520w" type="image/avif" sizes="95vw">
+            <source media="(min-width: 1366px) and (max-width: 1599px)" srcset="https://tierheilpraxis-jessican.de/img/blog/silvester_3_1600.webp 1520w" type="image/webp" sizes="95vw">
+            <source media="(min-width: 1366px) and (max-width: 1599px)" srcset="https://tierheilpraxis-jessican.de/img/blog/silvester_3_1600.jpeg 1520w" type="image/jpeg" sizes="95vw">
+            <source media="(min-width: 1600px)" srcset="https://tierheilpraxis-jessican.de/img/blog/silvester_3_1920.avif 1824w" type="image/avif" sizes="95vw">
+            <source media="(min-width: 1600px)" srcset="https://tierheilpraxis-jessican.de/img/blog/silvester_3_1920.webp 1824w" type="image/webp" sizes="95vw">
+            <source media="(min-width: 1600px)" srcset="https://tierheilpraxis-jessican.de/img/blog/silvester_3_1920.jpeg 1824w" type="image/jpeg" sizes="95vw">
             <img src="https://tierheilpraxis-jessican.de/img/blog/silvester_3.png" alt="Glücklicher Hund zu Silvester in Langebrück" title="Glücklicher Hund zu Silvester in Langebrück"  loading="lazy" sizes="30vw"  class="featurette-image img-fluid mx-auto rounded-img" style="aspect-ratio: 1/1; object-fit: cover;">
         </picture>
     </div>
