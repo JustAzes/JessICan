@@ -49,7 +49,7 @@ Ich habe verschiedene Allergien und litt unter allergischem Asthma, was eine kli
 <div class="container marketing">
   <hr class="featurette-divider">
   <div class="row featurette">
-    <div class="col-md-7 order-md-2">
+    <div class="col-md-7">
       <h2 class="featurette-heading">Wer rastet, der rostet!</h2>
       <p class="lead">Es ist von entscheidender Bedeutung, ständig zu lernen und sich weiterzuentwickeln. Das ermöglicht es uns, die Herausforderungen des Lebens besser zu meistern, sowohl für uns selbst als auch für die Tiere, die wir lieben.
 </p>    
