@@ -1,15 +1,15 @@
 +++
 title = "Ein friedvolles Silvester für unsere Vierbeiner"
-date = 2023-12-01
+date = 2023-11-22
 
-draft = true
+draft = false
 
 [taxonomies]
-categories = ["Hunde"]
+categories = ["Hunde", "Pferde", "Naturheilkunde", "Tiergesundheit"]
 tags = []
 +++
 
- Das Jahresende rückt näher, und mit ihm die magische Nacht des Silvesters. Als Tierheilpraktiker teile ich mit Ihnen in diesem Blogbeitrag, wie wir unseren geliebten Vierbeinern ein friedvolles Silvester schenken können. Wir erkunden gemeinsam, wie wir Angst und Stress bei unseren Tieren während des Feuerwerks lindern können. Machen wir dieses Silvester für unsere tierischen Freunde so magisch wie für uns!
+ Das Jahresende rückt näher, und mit ihm die magische Nacht des Silvesters. Als *Tierheilpraktiker* für *Pferd* und *Hund* teile ich mit Ihnen in diesem Blogbeitrag, wie wir unseren geliebten Vierbeinern ein friedvolles Silvester schenken können. Wir erkunden gemeinsam, wie wir Angst und Stress bei unseren Tieren während des Feuerwerks lindern können. Machen wir dieses Silvester für unsere tierischen Freunde so magisch wie für uns!
 
 <!-- more -->
 
