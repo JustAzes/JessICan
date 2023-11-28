@@ -82,16 +82,61 @@
     </div>
   </div>
 </div>
-<!-- More information -->
+
 <div class="container mt-5">
   <div class="row">
     <div class="col-lg-10 col-md-10 mx-auto">
-      <h2>Weitere Informationen</h2>
-      <p>Als mobiler <em>Tierheilpraktiker</em> biete ich ausschließlich Hausbesuche an. Ich komme direkt zu Ihnen nach Hause, um Ihrem Tier in gewohnter Umgebung die bestmögliche Behandlung zu bieten. Mit meiner mobilen Praxis kann ich auf die individuellen Bedürfnisse Ihres Tieres eingehen und eine persönliche sowie stressfreie Atmosphäre schaffen.</p>
-      <p>Für individuelle Anfragen oder spezielle Behandlungen erstelle ich Ihnen gerne ein maßgeschneidertes Angebot. Zögern Sie nicht, mich zu kontaktieren, um Ihre Bedürfnisse zu besprechen und gemeinsam die beste Lösung für Sie zu finden.</p>
-      <p>Bei Fragen zu meinen Preisen oder Dienstleistungen stehe ich Ihnen jederzeit zur Verfügung. Sie können mich per Telefon oder über das Kontaktformular auf meiner Website erreichen. Ich freue mich darauf, Ihnen bei den gesundheitlichen Anliegen Ihres Tieres zu helfen und gemeinsam Therapieziele zu erreichen.</p>
-      <p>Da ich ausschließlich Hausbesuche anbiete, bitte ich Sie, den Betrag in bar zu entrichten.</p>
+      <h2>Häufig gestellte Fragen</h2>
+      <div id="accordion">
+        <div class="card">
+          <div class="card-header" id="headingOne">
+            <h5 class="mb-0">
+              <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                Haben Sie auch eine Praxis, die ich aufsuchen kann?
+              </button>
+            </h5>
+          </div>
+
+          <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+            <div class="card-body">
+              Als mobiler <em>Tierheilpraktiker</em> biete ich ausschließlich Hausbesuche an. Ich komme direkt zu Ihnen nach Hause, um Ihrem Tier in gewohnter Umgebung die bestmögliche Behandlung zu bieten. Mit meiner mobilen Praxis kann ich auf die individuellen Bedürfnisse Ihres Tieres eingehen und eine persönliche sowie stressfreie Atmosphäre schaffen.
+            </div>
+          </div>
+        </div>
+        <!-- Weitere Fragen hier hinzufügen -->
+      </div>
     </div>
   </div>
 </div>
+
+
+<!-- Zusatzleistungen-->
+<div class="card">
+  <div class="card-header" id="headingTwo">
+    <h5 class="mb-0">
+      <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+        Zusatzleistungen
+      </button>
+    </h5>
+  </div>
+  <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+    <div class="card-body">
+      <table class="table">
+        <tr>
+          <td>Repertorisieren (Zeitaufwand ca. 4 Stunden)</td>
+          <td>5,00 €</td>
+        </tr>
+        <tr>
+          <td>Bachblütenzusammenstellung</td>
+          <td>5,00 €</td>
+        </tr>
+        <tr>
+          <td>(Laser-)Akupunktur Folgebehandlung</td>
+          <td>25,00 €</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</div>
+
 {% endblock content %}

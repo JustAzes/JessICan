@@ -14,10 +14,10 @@ taxonomies = [
 [extra]
 author = "Jessi von JessICan"
 clean_blog_menu = [
-    {url = "$BASE_URL", name = "Startseite"},
-    {url = "$BASE_URL/behandlung/behandlungsmethoden/", name = "Methoden"},
-    {url = "$BASE_URL/behandlung/vorgehen/", name = "Vorgehen"},
+    #{url = "$BASE_URL", name = "Startseite"},
+    {url = "$BASE_URL/behandlung/behandlungsmethoden/", name = "Meine Leistungen"},
     {url = "$BASE_URL/pages/blog/", name = "Blog"},
+    {url = "$BASE_URL/behandlung/vorgehen/", name = "Infos & Preise"},
     {url = "$BASE_URL/about/", name = "Über mich"},   
     {url = "$BASE_URL/contact/", name = "Kontakt"}
 ]
