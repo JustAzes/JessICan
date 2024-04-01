@@ -1,0 +1,99 @@
+{% extends "template.html" %}
+{% block title %}Meine Leistungen - {{ config.title }}{% endblock title %}
+{% block description %}
+<meta name="description" content="Leistungen als Tierheilpraktiker, Phytotherapie, Manuelle Therapie, Aromatherapie & Ernährungsberatung für Hund & Pferd">
+{% endblock description %}
+{% block header %}
+<!-- Page Header -->
+<header class="masthead" style="background-image: url('{{ get_url(path="/img/kurse/kurse_bg.jpg")}}')">
+  <div class="overlay">
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-10 col-md-10 mx-auto">
+        <div class="page-heading">
+          <h1>Entdecke Kurse für Tiergesundheit</h1>
+          <span class="subheading"></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+{% endblock header %}
+
+{% block content %}
+<hr class="featurette-divider">
+ <!-- Einleitungstext -->
+<div class="container marketing">
+  <div class="row featurette">
+    <div class="col-md-12">
+      <h2 class="featurette-heading">Die Welt der Tierheilkunde: Kurse für ein harmonisches Zusammenleben</h2>
+      <p class="lead"> In der Welt der Tierheilpraxis geht es um so viel mehr als nur um die Behandlung und Linderung von Symptomen. Es ist die Kunst, das Gleichgewicht und die Harmonie zwischen Ihnen und Ihrem tierischen Gefährten zu fördern und zu erhalten. Haben Sie sich je gefragt, wie Sie Ihren vierbeinigen Freund im Alltag unterstützen oder ihm gelegentlich eine besondere Wohltat zukommen lassen können? Genau hier setzen meine Kurse an. </p> 
+      <hr class="featurette-divider">
+      <p>Aus eigener Erfahrung weiß ich, dass zwischen dem Wissen aus Büchern und der realen Anwendung an unseren geliebten Tieren oft eine große Lücke klafft. Deshalb fokussieren sich meine Kurse nicht nur auf die Grundlagen, sondern stellen auch einen direkten Bezug zu den körperlichen und geistigen Besonderheiten der Tiere her. Wir betrachten anwendungsnahe Szenarien und setzen das Gelernte in praktische Übungen direkt am Tier um, damit Sie das Wohlbefinden Ihres Tieres gezielt und liebevoll fördern können.</p>
+      <p>Beginnen wir gemeinsam die Reise in die faszinierende Welt der Tiergesundheit. Entdecken Sie Kurse, die Ihr Herz und das Ihrer Tiere erwärmen werden.</p>
+    </div>
+  </div>
+</div>
+
+<hr class="featurette-divider">
+<section id="gallery">
+  <div class="container">
+    <h3 style="text-align:center;">Kursübersicht</h3>
+    <div class="row" style="display: flex; justify-content:center;flex-wrap:wrap;">
+    <div class="col-lg-4 mb-4">
+    <div class="card">
+      <img src="/img/kurse/akupressur_kurs.jpg" alt="" class="card-img-top">
+      <div class="card-body">
+        <h4 class="card-title">Akupressur für Pferde</h4>
+        <p class="card-text">Erlernen Sie, wie Sie durch gezielte Berührungen die Gesundheit und das Wohlbefinden Ihres Pferdes unterstützen können. Zusätzlich zu einer fundierte Einführung in die Grundlagen der Akupressur bietet dieser Kurs Ihnen praxisnahe Techniken, mit denen Sie die Selbstheilungskräfte Ihres Pferdes sanft fördern können.</p>
+        <div class="text-center mt-3">
+          <a href="akupressur_kurs" class="btn btn-primary" title="Behandlungsmethoden">Mehr erfahren</a>
+        </div>
+      </div>
+     </div>
+    </div>
+    <!--
+  <div class="col-lg-4 mb-4">
+  <div class="card">
+      <img src="https://images.unsplash.com/photo-1516214104703-d870798883c5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=700&q=60" alt="" class="card-img-top">
+      <div class="card-body">
+        <h5 class="card-title">Sunset</h5>
+        <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ut eum similique repellat a laborum, rerum voluptates ipsam eos quo tempore iusto dolore modi dolorum in pariatur. Incidunt repellendus praesentium quae!</p>
+       <div class="text-center mt-3">
+        <a href="https://tierheilpraxis-jessican.de/behandlung/behandlungsmethoden/" class="btn btn-primary" title="Behandlungsmethoden">mehr erfahren</a>
+      </div>
+      </div>
+      </div>
+    </div>
+    <div class="col-lg-4 mb-4">
+      <div class="card">
+          <img src="https://images.unsplash.com/photo-1516214104703-d870798883c5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=700&q=60" alt="" class="card-img-top">
+          <div class="card-body">
+            <h5 class="card-title">Sunset</h5>
+            <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ut eum similique repellat a laborum, rerum voluptates ipsam eos quo tempore iusto dolore modi dolorum in pariatur. Incidunt repellendus praesentium quae!</p>
+           <div class="text-center mt-3">
+            <a href="https://tierheilpraxis-jessican.de/behandlung/behandlungsmethoden/" class="btn btn-primary" title="Behandlungsmethoden">mehr erfahren</a>
+          </div>
+          </div>
+          </div>
+        </div>
+        <div class="col-lg-4 mb-4">
+          <div class="card">
+              <img src="https://images.unsplash.com/photo-1516214104703-d870798883c5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=700&q=60" alt="" class="card-img-top">
+              <div class="card-body">
+                <h5 class="card-title">Sunset</h5>
+                <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ut eum similique repellat a laborum, rerum voluptates ipsam eos quo tempore iusto dolore modi dolorum in pariatur. Incidunt repellendus praesentium quae!</p>
+               <div class="text-center mt-3">
+                <a href="https://tierheilpraxis-jessican.de/behandlung/behandlungsmethoden/" class="btn btn-primary" title="Behandlungsmethoden">mehr erfahren</a>
+              </div>
+              </div>
+              </div>
+            </div>
+    
+  </div>
+  -->
+</div>
+      
+
+{% endblock content %}
