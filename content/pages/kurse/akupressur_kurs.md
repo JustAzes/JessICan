@@ -19,7 +19,7 @@ Genießen Sie einen ganztägigen Kurs von in der Regel 9:00 bis 16:00 Uhr mit mi
 
 ## Teilnahmegebühr
 *Nur 79 € je Teilnehmer*
-
+ 
 Ein Betrag, der die Tür zu wertvollem Wissen über die Gesundheit und das Wohlergehen Ihres Pferdes öffnet. Sehen Sie es als Investition in eine harmonische Partnerschaft mit Ihrem Pferd und in Ihre persönliche Entwicklung als verantwortungsvoller Pferdebesitzer.
 
 ## Bereit, die Gesundheit Ihres Pferdes auf das nächste Level zu heben?
