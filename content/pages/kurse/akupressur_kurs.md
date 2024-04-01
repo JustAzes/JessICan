@@ -11,28 +11,24 @@ Tauchen Sie mit mir in einen **Akupressur**-**Workshop** ein, der darauf ausgeri
 - **Praxisorientiertes Lernen**: Identifizieren und lokalisieren Sie unter meiner Anleitung wichtige Akupressurpunkte an Übrungspferden. Erfahren Sie, wie die richtige Stimulation dieser Punkte die Gesundheit Ihres Pferdes unterstützen kann.
 - **Fallbesprechungen**: Nutzen Sie die Gelegenheit, individuelle Fragen oder Anliegen bezüglich Ihres Pferdes einzubringen und gemeinsam Lösungsansätze zu erarbeiten. 
 
-## Zusatzleistungen für Teilnehmer
-*Umfassendes Handout*: Jeder Teilnehmer erhält ein detailliertes Handout mit wichtigen Informationen und Anleitungen, das als wertvolle Ressource für die Praxis und weitere Vertiefung dient.
+Jeder Teilnehmer erhält ein detailliertes Handout mit wichtigen Informationen und Anleitungen, das als wertvolle Ressource für die Praxis und weitere Vertiefung dient.
 
-## Dauer und Zeitplan
-Genießen Sie einen ganztägigen Kurs von in der Regel 9:00 bis 16:00 Uhr mit mir, inklusive Pausen, fokussiert auf die Gesundheitsförderung Ihres Pferdes.
+## Dauer und Teilnahmegebühr
+Genießen Sie einen ganztägigen Kurs von in der Regel 9:00 bis 16:00 Uhr mit mir, inklusive Pausen, fokussiert auf die Gesundheitsförderung Ihres Pferdes. Die Teilnahmegebühr beträgt 79€ je Teilnehmer.
 
-## Teilnahmegebühr
-*Nur 79 € je Teilnehmer*
- 
-Ein Betrag, der die Tür zu wertvollem Wissen über die Gesundheit und das Wohlergehen Ihres Pferdes öffnet. Sehen Sie es als Investition in eine harmonische Partnerschaft mit Ihrem Pferd und in Ihre persönliche Entwicklung als verantwortungsvoller Pferdebesitzer.
+## Sie sind interessiert?
+Kontaktieren Sie mich gerne für weitere Informationen oder zur Kursanmeldung. Wir können einen Termin direkt bei Ihnen auf dem Hof oder alternativ bei mir vereinbaren. Eine Mindestteilnehmerzahl von 3 Personen ist erforderlich. 
 
-## Bereit, die Gesundheit Ihres Pferdes auf das nächste Level zu heben?
-*Lassen Sie uns gemeinsam den ersten Schritt gehen.*
-Kontaktieren Sie mich jetzt, um mehr über den Workshop zu erfahren oder sich Ihren Platz zu sichern. Ob bei Ihnen auf dem Hof oder in meiner Einrichtung – ich bin flexibel und komme dorthin, wo Sie und Ihre Pferde sich am wohlsten fühlen. Beachten Sie bitte, dass für die Durchführung des Kurses eine Mindestteilnehmerzahl von 3 Personen erforderlich ist.
-
-**Machen Sie den Unterschied im Leben Ihres Pferdes – Ich freue mich darauf, Sie und Ihren treuen Begleiter kennenzulernen!**
+<div style="text-align: center;" >
+<p><a href="https://tierheilpraxis-jessican.de/contact/" class="btn btn-info" title="Kontakt">Kontaktieren Sie mich jetzt</a>
+            </p>
+            </div>
 
 
 
 
 
-
+<!--
 <div class="container mt-3">
   <div class="row">
     <div class="col-sm-4">
@@ -53,10 +49,9 @@ Kontaktieren Sie mich jetzt, um mehr über den Workshop zu erfahren oder sich Ih
         </div>
       </div>
     </div>
-    <!-- Weitere Karten für andere Termine -->
+     Weitere Karten für andere Termine 
   </div>
 </div>
+-->
 
 
-## Sie sind interessiert?
-Kontaktieren Sie mich gerne für weitere Informationen oder zur Kursanmeldung. Wir können einen Termin direkt bei Ihnen auf dem Hof oder alternativ bei mir vereinbaren. Eine Mindestteilnehmerzahl von 3 Personen ist erforderlich. 
