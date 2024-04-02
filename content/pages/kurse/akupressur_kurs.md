@@ -1,7 +1,7 @@
 +++
 title = "Akupressur Kurs"
-path = "kurse/akupressur_kurs"
-template = "kurse/akupressur_kurs.html"
+path = "kurse/akupressur_kurs_pferde"
+template = "kurse/akupressur_kurs_pferde.html"
 +++
 
 Tauchen Sie mit mir in einen **Akupressur**-**Workshop** ein, der darauf ausgerichtet ist, nicht nur akuten und chronischen Beschwerden bei Ihren Pferden vorzubeugen und sie zu behandeln, sondern auch das Wohlbefinden zu fördern und die Verbindung zwischen Ihnen und Ihrem **Pferd** zu vertiefen. Durch die Anwendung gezielter Berührungstechniken, die auf den Lehren der Traditionellen Chinesischen Veterinärmedizin (TCVM) basieren, werden Sie befähigt, einen entscheidenden Beitrag zur Gesundheitsförderung Ihres Pferdes zu leisten. Dieses Seminar ist ideal für Pferdebesitzer, die ihr Verständnis für natürliche und ganzheitliche Methoden erweitern möchten.
