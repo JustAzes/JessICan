@@ -1,5 +1,5 @@
 +++
-title = "Akupressur Kurs"
+title = "Akupressur Kurs Pferde"
 path = "kurse/akupressur_kurs_pferde"
 template = "kurse/akupressur_kurs_pferde.html"
 +++
@@ -17,7 +17,7 @@ Jeder Teilnehmer erhält ein detailliertes Handout mit wichtigen Informationen u
 Genießen Sie einen ganztägigen Kurs von in der Regel 9:00 bis 16:00 Uhr mit mir, inklusive Pausen, fokussiert auf die Gesundheitsförderung Ihres Pferdes. Die Teilnahmegebühr beträgt 79€ je Teilnehmer.
 
 ## Sie sind interessiert?
-Kontaktieren Sie mich gerne für weitere Informationen oder zur Kursanmeldung. Wir können einen Termin direkt bei Ihnen auf dem Hof oder alternativ bei mir vereinbaren. Eine Mindestteilnehmerzahl von 3 Personen ist erforderlich. 
+Kontaktieren Sie mich gerne für weitere Informationen oder zur Kursanmeldung. Bitte beachten Sie, dass für die Durchführung des Kurses eine Mindestteilnehmerzahl von 3 Personen erforderlich ist. Wir können den Kurs entweder direkt bei Ihnen auf dem Hof mit Ihren eigenen Pferden individuell planen oder alternativ bei mir durchführen, wo Übungspferde zur Verfügung stehen.
 
 <div style="text-align: center;" >
 <p><a href="https://tierheilpraxis-jessican.de/contact/" class="btn btn-info" title="Kontakt">Kontaktieren Sie mich jetzt</a>
