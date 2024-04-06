@@ -17,6 +17,16 @@
   <priority>0.90</priority>
 </url>
 <url>
+  <loc>https://tierheilpraxis-jessican.de/kurse/</loc>
+  <lastmod>2024-04-06T12:00:00+00:00</lastmod>
+  <priority>0.90</priority>
+</url>
+<url>
+  <loc>https://tierheilpraxis-jessican.de/kurse/akupressur_kurs_pferde/</loc>
+  <lastmod>2024-04-06T12:00:00+00:00</lastmod>
+  <priority>0.90</priority>
+</url>
+<url>
   <loc>https://tierheilpraxis-jessican.de/behandlung/behandlungsmethoden/</loc>
   <lastmod>2024-01-04T12:00:00+00:00</lastmod>
   <priority>0.90</priority>
@@ -33,7 +43,7 @@
 </url>
 <url>
   <loc>https://tierheilpraxis-jessican.de/contact/</loc>
-  <lastmod>2023-11-22T12:00:00+00:00</lastmod>
+  <lastmod>2024-04-06T12:00:00+00:00</lastmod>
   <priority>0.90</priority>
 </url>
 <url>
@@ -94,6 +104,11 @@
 <url>
   <loc>https://tierheilpraxis-jessican.de/pages/blog/echinacea/</loc>
   <lastmod>2023-11-22T12:00:00+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://tierheilpraxis-jessican.de/pages/blog/akupressur_kurs_pferde/</loc>
+  <lastmod>2024-04-06T12:00:00+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
