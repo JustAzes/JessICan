@@ -1,6 +1,6 @@
 +++
 title = "Kurs: Akupressur für Pferde"
-date = 2019-01-01
+date = 2024-04-14
 [taxonomies]
 categories = ["Kurs", "Pferde", "Therapieformen"]
 tags = []
