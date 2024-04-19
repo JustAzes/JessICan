@@ -19,39 +19,8 @@ Genießen Sie einen ganztägigen Kurs von in der Regel 9:00 bis 16:00 Uhr mit mi
 ## Sie sind interessiert?
 Kontaktieren Sie mich gerne für weitere Informationen oder zur Kursanmeldung. Bitte beachten Sie, dass für die Durchführung des Kurses eine Mindestteilnehmerzahl von 3 Personen erforderlich ist. Wir können den Kurs entweder direkt bei Ihnen auf dem Hof mit Ihren eigenen Pferden individuell planen oder alternativ bei mir durchführen, wo Übungspferde zur Verfügung stehen.
 
-<div style="text-align: center;" >
-<p><a href="https://tierheilpraxis-jessican.de/contact/" class="btn btn-info" title="Kontakt">Kontaktieren Sie mich jetzt</a>
-            </p>
-            </div>
-
-
-
-
-
-<!--
-<div class="container mt-3">
-  <div class="row">
-    <div class="col-sm-4">
-      <div class="card">
-        <div class="card-body">
-          <h5 class="card-title">Kursdatum: 15. April</h5>
-          <p class="card-text">Verfügbare Plätze: 8</p>
-          <a href="#" class="btn btn-primary">Anmelden</a>
-        </div>
-      </div>
-    </div>
-    <div class="col-sm-4">
-      <div class="card">
-        <div class="card-body">
-          <h5 class="card-title">Kursdatum: 15. April</h5>
-          <p class="card-text">Verfügbare Plätze: 8</p>
-          <a href="#" class="btn btn-primary">Anmelden</a>
-        </div>
-      </div>
-    </div>
-     Weitere Karten für andere Termine 
-  </div>
+<div style="text-align: center;">
+  <p>
+    <a href="https://tierheilpraxis-jessican.de/contact/?betreff=Interesse%20Akupressurkurs%20f%C3%BCr%20Pferde#kontaktformular" class="btn btn-info" title="Kontakt">Kontaktieren Sie mich jetzt</a>
+  </p>
 </div>
--->
-
-

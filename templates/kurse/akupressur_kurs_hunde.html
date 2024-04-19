@@ -1,0 +1,44 @@
+{% extends "template.html" %}
+{% block title %}Kurs Akupressur Hunde - {{ config.title }}{% endblock title %}
+{% block description %}
+    <meta name="description" content="Kurs Akupressur für Hunde von Tierheilpraktiker JessICan: Akupunktur,  Manuelle Therapie, Traditionell Chinesische Medizin & Ernährungsberatung">
+{% endblock description %}
+{% block metatags %}
+<meta property="og:url" content="https://tierheilpraxis-jessican.de/kurse/akupressur_kurs_hunde/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Kurs Akupressur für Hunde - Tierheilpraxis JessICan">
+<meta property="og:description" content="Kurs Akupressur für Hunde von Tierheilpraktiker JessICan: Akupunktur, Manuelle Therapie, Traditionell Chinesische Medizin, Ernährungsberatung">
+<meta property="og:image" content="https://tierheilpraxis-jessican.de/favicons/android-chrome-192x192.png">
+{% endblock metatags %}
+{% block headextras %}
+  <meta name="robots">
+{% endblock headextras %}
+
+{% block header %}
+<!-- Page Header -->
+<header class="masthead" style="background-image: url('{{ get_url(path="/img/kurse/akupressur_kurs_hunde_bg.jpg")}}')">
+  <div class="overlay">
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-10 col-md-10 mx-auto">
+        <div class="page-heading">
+          <h1>Akupressur für Hunde</h1>
+          <span class="subheading">Harmonie und Heilung durch Berührung</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+{% endblock header %}
+
+{% block content %}
+<!-- Main Content -->
+<div class="container">
+  <div class="row">
+    <div class="col-lg-10 col-md-10 mx-auto">
+      {{ page.content | safe }}
+    </div>
+  </div>
+</div>
+{% endblock content %}
