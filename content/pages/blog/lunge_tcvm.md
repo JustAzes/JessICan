@@ -1,6 +1,6 @@
 +++
 title = "Die Lunge (Fei) in der Traditionell Chinesischen Medizin"
-date = 2019-01-05
+date = 2025-02-06
 
 draft = false
 
@@ -26,15 +26,9 @@ In der Traditionellen Chinesischen Veterinärmedizin (TCVM) nimmt die Lunge eine
     </div>
     <div class="col-md-5 order-md-1">
       <picture>
-        <source media="(max-width: 319px)" srcset="https://tierheilpraxis-jessican.de/img/blog/lunge_tcvm_1_320.avif 304w" type="image/avif" sizes="95vw">
-        <source media="(max-width: 319px)" srcset="https://tierheilpraxis-jessican.de/img/blog/lunge_tcvm_1_320.webp 304w" type="image/webp" sizes="95vw">
-        <source media="(max-width: 319px)" srcset="https://tierheilpraxis-jessican.de/img/blog/lunge_tcvm_1_320.jpeg 304w" type="image/jpeg" sizes="95vw">
-        <source media="(min-width: 320px) and (max-width: 639px)" srcset="https://tierheilpraxis-jessican.de/img/blog/lunge_tcvm_1_640.avif 608w" type="image/avif" sizes="95vw">
-        <source media="(min-width: 320px) and (max-width: 639px)" srcset="https://tierheilpraxis-jessican.de/img/blog/lunge_tcvm_1_640.webp 608w" type="image/webp" sizes="95vw">
-        <source media="(min-width: 320px) and (max-width: 639px)" srcset="https://tierheilpraxis-jessican.de/img/blog/lunge_tcvm_1_640.jpeg 608w" type="image/jpeg" sizes="95vw">
-        <source media="(min-width: 640px) and (max-width: 767px)" srcset="https://tierheilpraxis-jessican.de/img/blog/lunge_tcvm_1_768.avif 729w" type="image/avif" sizes="95vw">
-        <source media="(min-width: 640px) and (max-width: 767px)" srcset="https://tierheilpraxis-jessican.de/img/blog/lunge_tcvm_1_768.webp 729w" type="image/webp" sizes="95vw">
-        <source media="(min-width: 640px) and (max-width: 767px)" srcset="https://tierheilpraxis-jessican.de/img/blog/lunge_tcvm_1_768.jpeg 729w" type="image/jpeg" sizes="95vw">
+        <source media="(max-width: 767px)" srcset="https://tierheilpraxis-jessican.de/img/blog/lunge_tcvm_1_768.avif 729w" type="image/avif" sizes="95vw">
+        <source media="(max-width: 767px)" srcset="https://tierheilpraxis-jessican.de/img/blog/lunge_tcvm_1_768.webp 729w" type="image/webp" sizes="95vw">
+        <source media="(max-width: 767px)" srcset="https://tierheilpraxis-jessican.de/img/blog/lunge_tcvm_1_768.jpeg 729w" type="image/jpeg" sizes="95vw">
         <source media="(min-width: 768px) and (max-width: 1023px)" srcset="https://tierheilpraxis-jessican.de/img/blog/lunge_tcvm_1_1024.avif 972w" type="image/avif" sizes="95vw">
         <source media="(min-width: 768px) and (max-width: 1023px)" srcset="https://tierheilpraxis-jessican.de/img/blog/lunge_tcvm_1_1024.webp 972w" type="image/webp" sizes="95vw">
         <source media="(min-width: 768px) and (max-width: 1023px)" srcset="https://tierheilpraxis-jessican.de/img/blog/lunge_tcvm_1_1024.jpeg 972w" type="image/jpeg" sizes="95vw">
@@ -80,7 +74,7 @@ In der TCVM steht die Lunge in enger Verbindung mit dem Dickdarm. Beide gehören
 ### Die Lunge-Nieren-Achse
 Die Beziehung zwischen Lunge und Nieren ist in der TCVM von großer Bedeutung. Die Lunge sendet das Qi nach unten, während die Nieren es empfangen und festhalten. Diese Zusammenarbeit ist essentiell für einen harmonischen Qi-Fluss im gesamten Körper.
 
-### Emotionale Aspekte der Lunge
+## Emotionale Aspekte der Lunge
 In der TCVM werden jedem Organ auch emotionale Aspekte zugeordnet. Die Lunge wird mit der Emotion Trauer in Verbindung gebracht. Sie gilt als ein besonders sensibles, verletzliches Organ, das stark auf emotionale Belastungen reagiert. Chronischer Kummer, unverarbeitete Trennungen oder Verlusterfahrungen können die Lungenfunktion nachhaltig schwächen.
 
 ## Der Lungen-Typ in der TCVM

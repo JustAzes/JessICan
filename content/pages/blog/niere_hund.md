@@ -1,7 +1,7 @@
 +++
 title = "Niereninsuffizienz beim Hund: Ganzheitliche Ansätze für mehr Lebensqualität"
 date = 2023-12-01
-draft = false
+draft = true
 
 [taxonomies]
 categories = ["TCVM", "Naturheilkunde"]
@@ -24,15 +24,9 @@ Niereninsuffizienz ist eine ernsthafte Erkrankung, bei der die Nieren ihre wicht
     </div>
     <div class="col-md-5">
       <picture>
-        <source media="(max-width: 319px)" srcset="https://tierheilpraxis-jessican.de/img/blog/niere_hund_1_320.avif 304w" type="image/avif" sizes="95vw">
-        <source media="(max-width: 319px)" srcset="https://tierheilpraxis-jessican.de/img/blog/niere_hund_1_320.webp 304w" type="image/webp" sizes="95vw">
-        <source media="(max-width: 319px)" srcset="https://tierheilpraxis-jessican.de/img/blog/niere_hund_1_320.jpeg 304w" type="image/jpeg" sizes="95vw">
-        <source media="(min-width: 320px) and (max-width: 639px)" srcset="https://tierheilpraxis-jessican.de/img/blog/niere_hund_1_640.avif 608w" type="image/avif" sizes="95vw">
-        <source media="(min-width: 320px) and (max-width: 639px)" srcset="https://tierheilpraxis-jessican.de/img/blog/niere_hund_1_640.webp 608w" type="image/webp" sizes="95vw">
-        <source media="(min-width: 320px) and (max-width: 639px)" srcset="https://tierheilpraxis-jessican.de/img/blog/niere_hund_1_640.jpeg 608w" type="image/jpeg" sizes="95vw">
-        <source media="(min-width: 640px) and (max-width: 767px)" srcset="https://tierheilpraxis-jessican.de/img/blog/niere_hund_1_768.avif 729w" type="image/avif" sizes="95vw">
-        <source media="(min-width: 640px) and (max-width: 767px)" srcset="https://tierheilpraxis-jessican.de/img/blog/niere_hund_1_768.webp 729w" type="image/webp" sizes="95vw">
-        <source media="(min-width: 640px) and (max-width: 767px)" srcset="https://tierheilpraxis-jessican.de/img/blog/niere_hund_1_768.jpeg 729w" type="image/jpeg" sizes="95vw">
+        <source media="(max-width: 767px)" srcset="https://tierheilpraxis-jessican.de/img/blog/niere_hund_1_768.avif 729w" type="image/avif" sizes="95vw">
+        <source media="(max-width: 767px)" srcset="https://tierheilpraxis-jessican.de/img/blog/niere_hund_1_768.webp 729w" type="image/webp" sizes="95vw">
+        <source media="(max-width: 767px)" srcset="https://tierheilpraxis-jessican.de/img/blog/niere_hund_1_768.jpeg 729w" type="image/jpeg" sizes="95vw">
         <source media="(min-width: 768px) and (max-width: 1023px)" srcset="https://tierheilpraxis-jessican.de/img/blog/niere_hund_1_1024.avif 972w" type="image/avif" sizes="95vw">
         <source media="(min-width: 768px) and (max-width: 1023px)" srcset="https://tierheilpraxis-jessican.de/img/blog/niere_hund_1_1024.webp 972w" type="image/webp" sizes="95vw">
         <source media="(min-width: 768px) and (max-width: 1023px)" srcset="https://tierheilpraxis-jessican.de/img/blog/niere_hund_1_1024.jpeg 972w" type="image/jpeg" sizes="95vw">
@@ -97,15 +91,9 @@ Zur Diagnose werden Blut- und Urintests durchgeführt. Besonders wichtig sind di
     </div>
     <div class="col-md-5 order-md-1">
       <picture>
-        <source media="(max-width: 319px)" srcset="https://tierheilpraxis-jessican.de/img/blog/niere_hund_2_320.avif 304w" type="image/avif" sizes="95vw">
-        <source media="(max-width: 319px)" srcset="https://tierheilpraxis-jessican.de/img/blog/niere_hund_2_320.webp 304w" type="image/webp" sizes="95vw">
-        <source media="(max-width: 319px)" srcset="https://tierheilpraxis-jessican.de/img/blog/niere_hund_2_320.jpeg 304w" type="image/jpeg" sizes="95vw">
-        <source media="(min-width: 320px) and (max-width: 639px)" srcset="https://tierheilpraxis-jessican.de/img/blog/niere_hund_2_640.avif 608w" type="image/avif" sizes="95vw">
-        <source media="(min-width: 320px) and (max-width: 639px)" srcset="https://tierheilpraxis-jessican.de/img/blog/niere_hund_2_640.webp 608w" type="image/webp" sizes="95vw">
-        <source media="(min-width: 320px) and (max-width: 639px)" srcset="https://tierheilpraxis-jessican.de/img/blog/niere_hund_2_640.jpeg 608w" type="image/jpeg" sizes="95vw">
-        <source media="(min-width: 640px) and (max-width: 767px)" srcset="https://tierheilpraxis-jessican.de/img/blog/niere_hund_2_768.avif 729w" type="image/avif" sizes="95vw">
-        <source media="(min-width: 640px) and (max-width: 767px)" srcset="https://tierheilpraxis-jessican.de/img/blog/niere_hund_2_768.webp 729w" type="image/webp" sizes="95vw">
-        <source media="(min-width: 640px) and (max-width: 767px)" srcset="https://tierheilpraxis-jessican.de/img/blog/niere_hund_2_768.jpeg 729w" type="image/jpeg" sizes="95vw">
+        <source media="(max-width: 767px)" srcset="https://tierheilpraxis-jessican.de/img/blog/niere_hund_2_768.avif 729w" type="image/avif" sizes="95vw">
+        <source media="(max-width: 767px)" srcset="https://tierheilpraxis-jessican.de/img/blog/niere_hund_2_768.webp 729w" type="image/webp" sizes="95vw">
+        <source media="(max-width: 767px)" srcset="https://tierheilpraxis-jessican.de/img/blog/niere_hund_2_768.jpeg 729w" type="image/jpeg" sizes="95vw">
         <source media="(min-width: 768px) and (max-width: 1023px)" srcset="https://tierheilpraxis-jessican.de/img/blog/niere_hund_2_1024.avif 972w" type="image/avif" sizes="95vw">
         <source media="(min-width: 768px) and (max-width: 1023px)" srcset="https://tierheilpraxis-jessican.de/img/blog/niere_hund_2_1024.webp 972w" type="image/webp" sizes="95vw">
         <source media="(min-width: 768px) and (max-width: 1023px)" srcset="https://tierheilpraxis-jessican.de/img/blog/niere_hund_2_1024.jpeg 972w" type="image/jpeg" sizes="95vw">

@@ -8,7 +8,7 @@
 
 <url>
   <loc>https://tierheilpraxis-jessican.de/</loc>
-  <lastmod>2024-10-25T12:00:00+00:00</lastmod>
+  <lastmod>2025-02-05T12:00:00+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
@@ -55,6 +55,11 @@
   <loc>https://tierheilpraxis-jessican.de/impressum/</loc>
   <lastmod>2023-11-22T12:00:00+00:00</lastmod>
   <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://tierheilpraxis-jessican.de/pages/blog/lunge-tcvm/</loc>
+  <lastmod>2025-02-05T12:00:00+00:00</lastmod>
+  <priority>0.70</priority>
 </url>
 <url>
   <loc>https://tierheilpraxis-jessican.de/pages/blog/fallbericht-gino/</loc>
