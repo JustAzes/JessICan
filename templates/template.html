@@ -22,6 +22,43 @@
     {% endblock canonical %}
 
     <title>{% block title %}{{ config.title }}{% endblock title %}</title>
+
+     <!-- Preconnect to your own domain to speed up font/image requests -->
+     <link rel="preconnect" href="https://tierheilpraxis-jessican.de">
+    
+     <!-- Preload critical fonts used in the header -->
+     <link rel="preload" href="https://tierheilpraxis-jessican.de/fonts/Lora-Regular.woff2" as="font" type="font/woff2" crossorigin>
+     <link rel="preload" href="https://tierheilpraxis-jessican.de/fonts/OpenSans-Regular.woff2" as="font" type="font/woff2" crossorigin>
+     
+     <!-- Preload the header background image -->
+     <link rel="preload" href="https://tierheilpraxis-jessican.de/img/home-bg_large.jpeg" as="image">
+ 
+     <!-- Inline critical CSS for the header to speed up rendering -->
+     <style>
+       /* Critical styles for the masthead header */
+       .masthead {
+         background-image: url('https://tierheilpraxis-jessican.de/img/home-bg_large.jpeg');
+         background-size: cover;
+         background-position: center;
+         height: 100vh;
+         position: relative;
+       }
+       .masthead .overlay {
+         position: absolute;
+         top: 0;
+         left: 0;
+         right: 0;
+         bottom: 0;
+         background-color: rgba(0, 0, 0, 0.5);
+       }
+       .site-heading {
+         position: relative;
+         z-index: 2;
+         text-align: center;
+         padding-top: 20vh;
+         color: #fff;
+       }
+     </style>
     <!--
     <link href="{{ get_url(path='css/bootstrap.min.css') }}" rel="preload" as="style" onload="this.rel='stylesheet'">
     <noscript><link rel="stylesheet" href="{{ get_url(path='css/bootstrap.min.css') }}"></noscript>
