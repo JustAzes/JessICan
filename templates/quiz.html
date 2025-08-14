@@ -320,7 +320,7 @@
           var el = tops[0];
           resultTitle.textContent = 'Ihr Pferd ähnelt dem Element: ' + el;
           resultText.textContent = singleText[el] + ' – Sie möchten mehr dazu erfahren? Sprechen Sie mich gern an.';
-          img1.src = "{{ get_url(path='img/quiz/') }}" + el.toLowerCase() + ".jpg";
+          img1.src = "{{ get_url(path='img/quiz') }}/" + el.toLowerCase() + ".jpg";
           img1.alt = 'Symbolbild Element ' + el;
           img1.style.display = 'block';
         } else {
@@ -337,12 +337,12 @@
             resultText.textContent = 'Ihr Pferd vereint mehrere Elemente (' + sorted.join(', ') + '). Mit einem individuell abgestimmten Plan lassen sich diese Stärken gezielt nutzen. – Sprechen Sie mich gern an.';
           }
 
-          img1.src = "{{ get_url(path='img/quiz/') }}" + sorted[0].toLowerCase() + ".jpg";
+          img1.src = "{{ get_url(path='img/quiz') }}/" + sorted[0].toLowerCase() + ".jpg";
           img1.alt = 'Symbolbild Element ' + sorted[0];
           img1.style.display = 'block';
 
           if (sorted.length >= 2) {
-            img2.src = "{{ get_url(path='img/quiz/') }}" + sorted[1].toLowerCase() + ".jpg";
+            img2.src = "{{ get_url(path='img/quiz') }}/" + sorted[1].toLowerCase() + ".jpg";
             img2.alt = 'Symbolbild Element ' + sorted[1];
             mixPlus.style.display = 'inline-block';
             img2.style.display = 'block';
