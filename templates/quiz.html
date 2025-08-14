@@ -7,7 +7,7 @@
 {% endblock description %}
 
 {% block headextras %}
-  {# Optional: eigenes Bootstrap fürs Quiz, falls du es unter /static/bootstrap/... ablegst
+  {# Optional: volles Bootstrap fürs Quiz, falls du es unter /static/bootstrap/... ablegst
   <link rel="stylesheet" href="{{ get_url(path='bootstrap/css/bootstrap.min.css') }}">
   #}
   <style>
@@ -88,10 +88,8 @@
         <div id="resultAlert" class="alert alert-info d-none" role="alert"></div>
         <div id="resultCard" class="card d-none">
           <div class="card-body">
-            <h4 id="resultTitle" class="card-title"></h4>
-            <p id="resultText" class="card-text"></p>
-
-            <div class="d-flex align-items-center mt-3">
+            <!-- Bilder zuerst -->
+            <div class="d-flex align-items-center mt-1 mb-3">
               <figure class="mr-3 mb-0">
                 <img id="resultImg1" class="answer-img" src="" alt="">
               </figure>
@@ -100,6 +98,12 @@
                 <img id="resultImg2" class="answer-img" src="" alt="">
               </figure>
             </div>
+
+            <!-- Dann Titel -->
+            <h4 id="resultTitle" class="card-title"></h4>
+
+            <!-- Dann langer, formatierter Text -->
+            <div id="resultText" class="card-text"></div>
 
             <div class="mt-4">
               <a href="{{ get_url(path='behandlung/behandlungsmethoden/', trailing_slash=true) }}" class="btn btn-primary mr-2">Mehr zu meinen Methoden</a>
@@ -118,44 +122,196 @@
       {
         "total": 19,
         "questions": [
-          { "q": "Neue Gruppe/Offenstall: Wie zeigt sich dein Pferd beim Umstellen?",
-            "a": ["Setzt sich zügig durch, sportlich-dominant", "Lebhaft, neugierig, schnell mittendrin", "Gelassen, freundlich, findet zu jedem Anschluss", "Beobachtet erst, hält Routinen, bleibt korrekt", "Unsicher, rangniedrig, braucht Zeit und Nähe"] },
-          { "q": "Verladen/Hänger: Womit rechnest du eher?",
-            "a": ["Kurzer Macht-Check – dann geht’s", "Tagesformabhängig – mal super, mal Drama", "Mit Heu/Leckerli klappt’s am schnellsten", "Routine sitzt: rauf, zu, los – fertig", "Allein schwer; mit Kumpel oder vertrautem Hänger ok"] },
-          { "q": "Training, das am meisten Spaß macht:",
-            "a": ["Sport und Tempo, gern Herausforderungen", "Abwechslung, Spiel, Zirkus, Clicker", "Ruhige Gymnastik plus lange Ausritte", "Strukturierter Plan, präzises Arbeiten", "Spontan, abhängig von Stimmung/Umfeld"] },
-          { "q": "Pflege/Herausputzen vor einem Ereignis:",
-            "a": ["Kräftiges Massieren top – aber nicht zu lang", "Genießt Styling und Glitzer, ein bisschen eitel", "Lange putzen okay – danach gern mal wälzen", "Nur das Nötigste; Funktion vor Glamour", "In ruhiger Ecke geduldig – Waschen ungern"] },
-          { "q": "Urlaubsvertretung übernimmt:",
-            "a": ["Testet neue Reiter – klare Führung hilft", "Mag freundliche, spielerische Menschen", "Kommt mit fast allen zurecht, Hauptsache nett", "Am besten feste Bezugspersonen mit Routine", "Nur vertraute Leute; Fremde verunsichern"] },
-          { "q": "Kurzcharakter:",
-            "a": ["Sportlicher Anpacker, führungsstark", "Elegant, lebensfroh, manchmal überdreht", "Gemütlich, friedliebend, futtermotiviert", "Klar, korrekt, detailgenau", "Vorsichtig, sensibel, loyal"] },
-          { "q": "Neues Abenteuer (Trail, Umgebung, Kurs):",
-            "a": ["Blüht auf, will loslegen", "Aufgeregt, spritzig – liebt den Trubel", "Sucht Harmonie und Begleitung", "Checkt die Lage ruhig und sachlich", "Zieht Rückzug/Heimat vor"] },
-          { "q": "Im Mittelpunkt/Publikum:",
-            "a": ["Nimmt die Challenge an", "Genießt die Show, wird albern", "Manchmal Patzer trotz Können", "Arbeitet nüchtern weiter", "Verweigert eher"] },
-          { "q": "Wenn dein Alltag sich ändert, ist dein Pferd eher:",
-            "a": ["Ungeduldig, drängelt", "Hibbelig und verspielt", "Anhänglich, sucht Nähe", "Distanziert, kontrolliert", "Äußerlich ruhig, innerlich angespannt"] },
-          { "q": "Lernstil, der am besten funktioniert:",
-            "a": ["Kurze, klare Ansagen und machen", "Über Spiel und Motivation", "Rituale und Wiederholung", "Präzise Erklärungen und Kriterien", "In eigenem Tempo herausfinden"] },
-          { "q": "Bei Angst/Stress reagiert es eher mit:",
-            "a": ["Gegenwehr/Impuls", "Hysterie/Albernheit", "Kuscheln/Ansprache suchen", "Vorsicht/Überempfindlichkeit", "Rückzug/Unsichtbar werden"] },
-          { "q": "Neue Menschen kennenlernen:",
-            "a": ["Gern offensiv – kann einschüchtern", "Aufgeregt neugierig oder schüchtern", "Freundlich und verbindend", "Höflich, aber reserviert", "Misstrauisch, braucht Zeit"] },
-          { "q": "Fressen/Futterfokus:",
-            "a": ["Behält Konkurrenz im Blick", "Lässt Futter für Action liegen", "Vergisst alles außer Fressen", "Pickt selektiv das Beste", "Frisst, weil es muss"] },
-          { "q": "Größter innerer Antreiber:",
-            "a": ["Action und Ziele", "Spiel und Spaß", "Harmonie und Miteinander", "Ordnung und Klarheit", "Ruhe und Sicherheit"] },
-          { "q": "Geräusche/Wetter (Wind, Planen, knisternde Halle):",
-            "a": ["Stört kaum – weiter geht’s", "Findet’s aufregend, wird spritzig", "Mit Begleitung ok", "Akzeptiert nach kurzer Gewöhnung", "Mag es gar nicht, lieber weg"] },
-          { "q": "Belohnung, die am besten wirkt:",
-            "a": ["Vorwärts gehen dürfen/Aufgabe lösen", "Loben/Spiel/kurzer Fun-Moment", "Futter und ruhige Pause", "Präzises Timing/klare Auflösung", "Zeit/Distanz und Sicherheit"] },
-          { "q": "Rolle, die am ehesten passt:",
-            "a": ["Der Organisator/Anführer", "Der Spielkamerad", "Der Sympathieträger", "Der Beobachter/Perfektionist", "Der Philosoph"] },
-          { "q": "Regeneration nach Anstrengung/Krankheit:",
-            "a": ["Schnell wieder einsatzbereit", "Will früh wieder mitmischen", "Braucht Komfort und Futtermanagement", "Strikten Wiederaufbauplan bevorzugt", "Benötigt viel Ruhe und Schutz"] },
-          { "q": "Berührung/Kontakt:",
-            "a": ["Kräftige Massage, aktivierend", "Sanft streicheln, positive Energie", "Ganz viel Nähe und Kuscheln", "Nur gezielt/zweckmäßig", "Kommt von selbst, wenn bereit"] }
+          {
+            "q": "Neue Herde/Offenstall: Wie reagiert dein Pferd beim Umstellen auf eine neue Gruppe?",
+            "a": [
+              "Geht selbstbewusst voran, zeigt klare Ansagen und setzt sich zügig durch – kleine Rangeleien sind eingeplant.",
+              "Stürzt sich neugierig ins Geschehen, sucht aktiv Kontakt und macht schnell „gute Laune“.",
+              "Bleibt freundlich und gelassen, findet ohne Theater seinen Platz und hält sich von Konflikten fern.",
+              "Beobachtet erst gründlich, respektiert Rangordnung und bevorzugt klare Strukturen und Regeln.",
+              "Wirkt unsicher, bleibt lieber am Rand und braucht vertraute Begleiter oder Zeit, um aufzutauen."
+            ]
+          },
+          {
+            "q": "Verladen/Hänger: Was ist am wahrscheinlichsten, wenn ihr länger nicht gefahren seid?",
+            "a": [
+              "Kurzer Macht-Check – wenn Führung klar ist, steigt es entschlossen ein.",
+              "Tagesform: mal spielerisch locker, mal aufgeregt – mit viel Emotion.",
+              "Mit Heu/Leckerli und ruhiger Ansprache klappt es verlässlich und stressarm.",
+              "Routine sitzt: rauf, zu, los – alles nach Plan, kaum Abweichungen.",
+              "Allein schwer; mit vertrautem Hänger/Herdenkumpel oder mehr Zeit deutlich besser."
+            ]
+          },
+          {
+            "q": "Trainingsvorlieben: Womit blüht dein Pferd mittelfristig am meisten auf?",
+            "a": [
+              "Sportliche Aufgaben, klare Ziele, Tempowechsel – gern fordernd und mit Purpose.",
+              "Viel Abwechslung, Spiele, Zirkuslektionen, Clicker – Motivation durch Spaß.",
+              "Ruhige Gymnastik, Bodenarbeit und entspannte Ausritte – Hauptsache harmonisch.",
+              "Strukturierter Plan, präzise Hilfen, saubere Wiederholungen – Qualität vor Quantität.",
+              "Spontan nach Gefühl, abhängig von Umgebung, Wetter und Stimmung – Sicherheit zuerst."
+            ]
+          },
+          {
+            "q": "Pflege & „Herausputzen“ vor einem Termin:",
+            "a": [
+              "Kräftiges Bürsten/Massieren ist super – aber zu langes Styling nervt.",
+              "Genießt Aufmerksamkeit, Frisuren, Deko – wirkt fast ein wenig eitel.",
+              "Lange putzen ist okay; danach wird sich draußen trotzdem genüsslich gewälzt.",
+              "Nur das Nötigste, funktional und sauber – kein Schnickschnack.",
+              "In ruhiger Ecke geduldig, Waschen eher ungern – Vertrautheit hilft."
+            ]
+          },
+          {
+            "q": "Urlaub/Vertretung: Wie klappt die Betreuung durch andere?",
+            "a": [
+              "Testet neue Menschen – klare, konsequente Führung wird akzeptiert.",
+              "Mag freundliche, spielerische Leute; Stimmung und Lob zählen stark.",
+              "Kommt mit fast allen zurecht, wenn der Umgang ruhig und zugewandt ist.",
+              "Läuft am besten mit festen Bezugspersonen und verlässlicher Routine.",
+              "Fremde verunsichern; bekannte Menschen/Orte sorgen für deutlich mehr Ruhe."
+            ]
+          },
+          {
+            "q": "Kurzcharakter – was trifft am ehesten zu?",
+            "a": [
+              "Athletisch, zielstrebig, durchsetzungsstark – Anpacker-Typ.",
+              "Lebhaft, sympathisch, kontaktfreudig – Show-Talent.",
+              "Gelassen, freundlich, nähesuchend – verlässlich und „erdig“.",
+              "Präzise, ordentlich, ritualtreu – liebt klare Kriterien.",
+              "Vorsichtig, feinfühlig, loyal – Sicherheit hat Priorität."
+            ]
+          },
+          {
+            "q": "Neues Abenteuer (Trail, Kurs, fremdes Gelände):",
+            "a": [
+              "Packt es motiviert an, will vorwärts und Aufgaben lösen.",
+              "Ist elektrisiert, wird spritzig, sucht Interaktion.",
+              "Bleibt freundlich und kooperativ, wenn die Begleitung stimmt.",
+              "Analysiert ruhig, geht strukturiert und korrekt vor.",
+              "Zieht Rückzug/Vertrautes vor; mit Schutz und Zeit wird es besser."
+            ]
+          },
+          {
+            "q": "Im Mittelpunkt (Publikum, Prüfung, viele Blicke):",
+            "a": [
+              "Nimmt die Challenge an und zeigt Leistung.",
+              "Genießt die Aufmerksamkeit, wird verspielt – manchmal etwas drüber.",
+              "Gibt sich Mühe, kann vor Aufregung bekannte Dinge vertun.",
+              "Arbeitet sachlich weiter, blendet Trubel aus.",
+              "Blockt eher ab und würde am liebsten aus der Situation heraus."
+            ]
+          },
+          {
+            "q": "Wenn der Tagesablauf plötzlich anders ist:",
+            "a": [
+              "Wird ungeduldig und möchte zügig Klarheit.",
+              "Ist hibbelig, sucht Nähe und Spaß als Ausgleich.",
+              "Sucht Kontakt und Beruhigung, bleibt grundsätzlich freundlich.",
+              "Bleibt kontrolliert, wirkt aber distanziert – Ordnung wiederherstellen hilft.",
+              "Scheint äußerlich ruhig, ist innerlich angespannt – braucht Sicherheit."
+            ]
+          },
+          {
+            "q": "Lernstil, der am besten funktioniert:",
+            "a": [
+              "Kurze, klare Ansagen und direkt ins Tun kommen.",
+              "Spielerische Sequenzen, viel Lob, häufige kleine Erfolge.",
+              "Rituale, gleichbleibende Abläufe und geduldige Wiederholung.",
+              "Präzise Kriterien, exaktes Timing, systematischer Aufbau.",
+              "Eigenes Tempo respektieren, Ruhepausen und stressarme Umgebung."
+            ]
+          },
+          {
+            "q": "Typische Stress-/Angstreaktion:",
+            "a": [
+              "Geht gegen den Reiz, möchte „durch“ die Situation.",
+              "Wird theatralisch/überdreht, sucht emotionale Entladung.",
+              "Sucht Nähe zum Menschen/Herdenpartnern, möchte Zuspruch.",
+              "Wird sehr vorsichtig/empfindlich, braucht klare Anleitung.",
+              "Zieht sich zurück, versucht unsichtbar zu werden."
+            ]
+          },
+          {
+            "q": "Neue Menschen trifft es meistens …",
+            "a": [
+              "Direkt und selbstbewusst – kann imponieren.",
+              "Neugierig und kontaktfreudig, teils kicherig/schelmisch.",
+              "Freundlich, verbindend – will gemocht werden.",
+              "Höflich, aber reserviert – beobachtet zuerst.",
+              "Misstrauisch, braucht Zeit und klare Signale."
+            ]
+          },
+          {
+            "q": "Fressen/Futterfokus im Alltag:",
+            "a": [
+              "Behält Konkurrenz und Ressourcen im Blick – strategisch.",
+              "Lässt Futter zugunsten von Action/Abenteuer liegen.",
+              "Vergisst alles außer Fressen – Futter motiviert stark.",
+              "Frisst selektiv/geordnet – Qualität vor Quantität.",
+              "Frisst, wenn Ruhe ist – sonst lieber warten."
+            ]
+          },
+          {
+            "q": "Was treibt dein Pferd innerlich am meisten an?",
+            "a": [
+              "Ziele erreichen, vorwärtskommen, Wirksamkeit spüren.",
+              "Kontakt, Freude, positive Stimmung teilen.",
+              "Harmonie, Nähe, gemeinsames Wohlgefühl.",
+              "Ordnung, Klarheit, Perfektion/Feinschliff.",
+              "Sicherheit, Rückzugsmöglichkeiten, Überschaubarkeit."
+            ]
+          },
+          {
+            "q": "Geräusche/Wetter (Wind, Planen, knisternde Halle):",
+            "a": [
+              "Stören kurz – dann weiterarbeiten.",
+              "Machen es aufgedreht – Energie steigt.",
+              "Mit vertrauter Begleitung gut händelbar.",
+              "Nach kurzer Gewöhnung unproblematisch – Routine hilft.",
+              "Belastend; sucht Abstand oder Schutz, bis es sicher ist."
+            ]
+          },
+          {
+            "q": "Was wirkt als Belohnung am besten?",
+            "a": [
+              "Weitergehen/Task lösen dürfen – „Arbeitsbelohnung“.",
+              "Überschwängliches Lob, Spiel, kleine Show-Momente.",
+              "Futter, Pause, ruhiger Zuspruch.",
+              "Exakte Auflösung, klare Kriterien, planbarer Abschluss.",
+              "Zeit, Raum/Distanz und eine sichere Zone."
+            ]
+          },
+          {
+            "q": "Rolle/„Job“, der am ehesten passt:",
+            "a": [
+              "Organisator/Anführer – gibt Richtung.",
+              "Entertainer/Spielkamerad – hebt die Stimmung.",
+              "Sympathieträger/Teamplayer – sorgt für Harmonie.",
+              "Beobachter/Perfektionist – macht Dinge korrekt.",
+              "Philosoph/Wächter – spürt Stimmungen, sichert Ruhe."
+            ]
+          },
+          {
+            "q": "Regeneration nach Anstrengung/Krankheit:",
+            "a": [
+              "Kommt schnell wieder ins Arbeiten – braucht klare Aufbaufahrt.",
+              "Will früh wieder „mitmischen“ – Dosierung schützt vor Überdrehen.",
+              "Komfort, Futtermanagement und sanfter Einstieg fördern Wohlbefinden.",
+              "Strukturierter Stufenplan mit messbaren Schritten gibt Sicherheit.",
+              "Viel Ruhe, Schutz und langsames Heranführen sind entscheidend."
+            ]
+          },
+          {
+            "q": "Berührung/Körperkontakt – was mag es am liebsten?",
+            "a": [
+              "Kräftige, aktivierende Massage – „aufwecken“ und los.",
+              "Sanftes Streicheln und freudiges Loben.",
+              "Ganz viel Nähe/Kuscheln – Kontakt beruhigt.",
+              "Gezielte, zweckmäßige Berührung – funktional statt sentimental.",
+              "Kommt selbst zum Kuscheln, wenn es bereit ist – sonst Abstand."
+            ]
+          }
         ]
       }
       </script>
@@ -181,6 +337,9 @@
       var letters = ['A','B','C','D','E'];
       var letterToElement = { 'A':'Holz','B':'Feuer','C':'Erde','D':'Metall','E':'Wasser' };
       var elementOrder = ['Holz','Feuer','Erde','Metall','Wasser'];
+
+      // IMG-Basis einmal definieren (korrekter Slash)
+      var IMG_BASE = "{{ get_url(path='img/quiz') }}/";
 
       // Render Fragen
       cfg.questions.forEach(function(q, idx){
@@ -225,7 +384,7 @@
         container.appendChild(card);
       });
 
-      // UI Elemente
+      // UI-Elemente
       var inputs = Array.prototype.slice.call(document.querySelectorAll('.quiz-input'));
       var progressBar = document.getElementById('quizProgress');
       var progressText = document.getElementById('progressText');
@@ -239,29 +398,126 @@
       var img2 = document.getElementById('resultImg2');
       var mixPlus = document.getElementById('mixPlus');
 
-      var singleText = {
-        'Holz': 'Holz-Typ: athletisch, zielstrebig, manchmal stur – liebt klare Aufgaben und Bewegung. Biete Herausforderungen und strukturiertes Vorwärts, dann entfaltet es seine Stärke.',
-        'Feuer': 'Feuer-Typ: charmant, lebhaft, sensibel – genießt Aufmerksamkeit und Abwechslung. Mit spielerischem Training und positiver Energie bleibt es motiviert.',
-        'Erde': 'Erde-Typ: freundlich, ausgeglichen, verlässlich – Harmonie und Futtermanagement sind Gold wert. Mit ruhiger Arbeit und Nähe glänzt es in Beständigkeit.',
-        'Metall': 'Metall-Typ: präzise, korrekt, ritualtreu – liebt klare Kriterien und Ordnung. Mit nachvollziehbaren Plänen und feinem Timing lernt es exzellent.',
-        'Wasser': 'Wasser-Typ: vorsichtig, feinfühlig, loyal – Sicherheit und Zeit sind zentral. Mit Schutzraum und geduldigem Aufbau wächst das Vertrauen nachhaltig.'
+      // Lange Texte als HTML
+      var singleHTML = {
+        'Holz': `
+          <p><strong>Kurzprofil:</strong> Athletisch, zielstrebig, manchmal stur – ein Pferd mit natürlichem Vorwärtsdrang und Führungswillen.</p>
+          <ul>
+            <li><strong>Stärken:</strong> Mut, Energie, klare Zielorientierung, gute Leistungsbereitschaft.</li>
+            <li><strong>Herausforderungen:</strong> Ungeduld, Druck kann zu Gegendruck werden, Frust bei Langeweile.</li>
+          </ul>
+          <p><strong>Training & Umgang:</strong> Kurze, klare Aufgaben mit sichtbarem Ziel. Abwechslung in der Arbeit (Übergänge, Tempowechsel, Stangen/Cavaletti, kleine Parcours).
+          Lass es Aufgaben „lösen“, statt es auszubremsen. Fehler möglichst <em>in</em> der Aufgabe auflösen (z. B. noch einmal korrekt anreiten), dann großzügig loben.</p>
+          <p><strong>Management:</strong> Viel freie Bewegung, regelmäßige Auslastung, klare Führungsimpulse im Alltag. Pausen bewusst geben, damit der Kopf runterfahren kann.</p>
+          <p class="mb-0"><em>Merksatz:</em> Führung, Aufgabe, Auslauf – dann spielt das Holz-Pferd seine Stärke aus.</p>
+        `,
+        'Feuer': `
+          <p><strong>Kurzprofil:</strong> Kontaktfreudig, emotional, „Show-Talent“ – liebt Menschen und Aufmerksamkeit.</p>
+          <ul>
+            <li><strong>Stärken:</strong> Ausstrahlung, schnelle Motivation, Lernfreude über Spaß.</li>
+            <li><strong>Herausforderungen:</strong> Übererregung, kurze Konzentrationsfenster, kann „drüber“ werden.</li>
+          </ul>
+          <p><strong>Training & Umgang:</strong> Kurze, spielerische Sequenzen mit klarem Anfang/Ende. Viel positives Feedback, ruhige Atem-/Entspannungssignale etablieren.
+          Reize dosieren, klare Pausen einbauen, Aufgaben variieren – lieber 3×5 Minuten als 1×15 Minuten.</p>
+          <p><strong>Management:</strong> Strukturierte, aber freundliche Umgebung. Reizflut begrenzen, soziale Kontakte positiv nutzen, ruhige „Runterfahr-Momente“ schaffen.</p>
+          <p class="mb-0"><em>Merksatz:</em> Freude lenken statt bremsen – dann bleibt das Feuer warm, nicht heiß.</p>
+        `,
+        'Erde': `
+          <p><strong>Kurzprofil:</strong> Gelassen, freundlich, bindungsstark – der verlässliche Teamplayer.</p>
+          <ul>
+            <li><strong>Stärken:</strong> Nervenstärke, Geduld, hohe Kooperationsbereitschaft.</li>
+            <li><strong>Herausforderungen:</strong> Trägheit, Antrieb fehlt manchmal, neigt zum „Kuschelkurs“ – und ggf. zu Pfunden.</li>
+          </ul>
+          <p><strong>Training & Umgang:</strong> Ruhig, klar, wiederholbar. Kleine Ziele Schritt für Schritt. Spaziergänge, Bodenarbeit, gleichmäßige Gymnastik, leichte Stangenarbeit – Motivation gern über Nähe und Futter (dosiert!).</p>
+          <p><strong>Management:</strong> Feste Routinen, Herdenkontakt, gutes Futtermanagement. Langsame Steigerungen werden gut akzeptiert.</p>
+          <p class="mb-0"><em>Merksatz:</em> Harmonie schafft Leistung – in Ruhe wächst die Qualität.</p>
+        `,
+        'Metall': `
+          <p><strong>Kurzprofil:</strong> Ordentlich, korrekt, ritualtreu – liebt klare Regeln und saubere Ausführung.</p>
+          <ul>
+            <li><strong>Stärken:</strong> Präzision, Stabilität, Verlässlichkeit, gutes Gedächtnis.</li>
+            <li><strong>Herausforderungen:</strong> Stress bei Chaos, festhält an Mustern, Spannung bei Unklarheit.</li>
+          </ul>
+          <p><strong>Training & Umgang:</strong> Kleinschrittige Kriterien, konsequentes Signal-Timing, nachvollziehbare Steigerungen. Qualität vor Quantität; häufiger „Reset“ in bekannte Übungen.</p>
+          <p><strong>Management:</strong> Klare Abläufe (Füttern, Raus-Rein, Training), ruhige Umgebung, wenige unvorhersehbare Änderungen.</p>
+          <p class="mb-0"><em>Merksatz:</em> Erst Ordnung, dann Leistung – und Präzision wird zur Stärke.</p>
+        `,
+        'Wasser': `
+          <p><strong>Kurzprofil:</strong> Vorsichtig, feinfühlig, loyal – Sicherheit steht immer an erster Stelle.</p>
+          <ul>
+            <li><strong>Stärken:</strong> Tiefe Bindung möglich, sehr feine Kommunikation, verlässliche Ausdauer in sicherem Rahmen.</li>
+            <li><strong>Herausforderungen:</strong> Ängstlichkeit, Rückzug, Überforderung durch Reizflut.</li>
+          </ul>
+          <p><strong>Training & Umgang:</strong> Sicherheit schaffen (Kontext, Person, Ritual). In kleinen Schritten exponieren, Wahlmöglichkeiten bieten (Distanz, Tempo).
+          Ruhige Stimme, klare Struktur, viel Bestätigung für Mut-Momente.</p>
+          <p><strong>Management:</strong> Vertraute Herde, feste Bezugspersonen, überschaubare Reize. „Safe Spaces“ (Orte/Handlungen) definieren.</p>
+          <p class="mb-0"><em>Merksatz:</em> Sicherheit gebiert Mut – langsam ist hier schnell.</p>
+        `
       };
 
-      var mixText = {
-        'Holz+Feuer': 'Mischtyp Holz-Feuer: leistungsbereit und lebensfroh. Fordere zielgerichtet und halte die Motivation hoch – Tempo mit Spaß ist der Schlüssel.',
-        'Holz+Erde': 'Mischtyp Holz-Erde: tatkräftig mit ruhigem Kern. Wechsle zwischen fordernden Aufgaben und wohligen Pausen – Balance bringt Bestleistung.',
-        'Holz+Metall': 'Mischtyp Holz-Metall: Antrieb trifft Präzision. Klare Ziele plus saubere Kriterien – so wird Power kontrollierte Qualität.',
-        'Holz+Wasser': 'Mischtyp Holz-Wasser: mutig, aber sensibel für Rahmenbedingungen. Struktur gibt Sicherheit, dann kann die Energie sicher nach vorn gehen.',
-        'Feuer+Erde': 'Mischtyp Feuer-Erde: verspielt und menschenbezogen, sucht Harmonie. Kurze Fun-Einheiten und verlässliche Routinen – Wohlfühlen hält die Flamme am Leuchten.',
-        'Feuer+Metall': 'Mischtyp Feuer-Metall: Showtalent mit Sinn für Form. Abwechslung ja – aber sauber gerahmt, dann bleibt die Energie fokussiert.',
-        'Feuer+Wasser': 'Mischtyp Feuer-Wasser: zwischen Euphorie und Vorsicht. Erst Sicherheit schaffen, dann spielerisch steigern – so funkt es ohne Überforderung.',
-        'Erde+Metall': 'Mischtyp Erde-Metall: verbindlich und ordentlich. Beständige Arbeit mit klaren Schritten – Wohlgefühl und Qualität wachsen Hand in Hand.',
-        'Erde+Wasser': 'Mischtyp Erde-Wasser: sanft, nähebedürftig, sensibel. Sanfte Rituale, Schutz und gutes Management – Vertrauen ist die Basis.',
-        'Metall+Wasser': 'Mischtyp Metall-Wasser: kontrolliert und wachsam. Transparente Regeln und ruhige Umgebung – so entsteht tiefe Gelassenheit.'
+      var mixHTML = {
+        'Holz+Feuer': `
+          <p><strong>Mischtyp Holz + Feuer:</strong> Leistungsbereit mit Ausstrahlung – Power trifft gute Laune.</p>
+          <p><strong>Training:</strong> Zielgerichtete Aufgaben mit Spaß-Momenten kombinieren (z. B. Übergänge + kurze Spielsequenz).
+          Klare Start/Stop-Signale, damit die Energie gerahmt bleibt. Lieber mehrere kurze Sets.</p>
+          <p><strong>Management:</strong> Ausreichend Bewegung, positive soziale Kontakte, Reize dosieren, weil „zu viel Party“ sonst kippen kann.</p>
+        `,
+        'Holz+Erde': `
+          <p><strong>Mischtyp Holz + Erde:</strong> Tatkraft mit ruhigem Kern – arbeitswillig, dabei ausgeglichen.</p>
+          <p><strong>Training:</strong> Fordernde Aufgaben (Ziele!) wechseln mit Wohlfühl-Phasen (Schrittrunde, Putzen).
+          So bleibt die Motivation hoch, ohne zu verspannen.</p>
+          <p><strong>Management:</strong> Viel Bewegungsangebot, klare Routinen und gutes Futtermanagement – dann kommt Substanz zur Kraft.</p>
+        `,
+        'Holz+Metall': `
+          <p><strong>Mischtyp Holz + Metall:</strong> Antrieb trifft Präzision – ideal für feine Qualität in der Arbeit.</p>
+          <p><strong>Training:</strong> Klare Zielsetzung und saubere Kriterien. Lass Power in Bahnen fließen (z. B. Tempounterschiede in exakten Linien, Stangenarbeit mit Muster).</p>
+          <p><strong>Management:</strong> Strukturierter Tagesablauf, regelmäßige Aufgabe – mental wie körperlich.</p>
+        `,
+        'Holz+Wasser': `
+          <p><strong>Mischtyp Holz + Wasser:</strong> Mutig, aber sensibel für Rahmenbedingungen – braucht Führung <em>und</em> Sicherheit.</p>
+          <p><strong>Training:</strong> Erst Sicherheit herstellen (Ort, Person), dann Aufgaben steigern.
+          Klare Ansagen, aber mit „Notausgang“ (Distanz, Pause) – so bleibt Vorwärtsdrang positiv.</p>
+          <p><strong>Management:</strong> Bekannte Routinen, Schutzoptionen, viel Bewegung – Druck raus, Fokus an.</p>
+        `,
+        'Feuer+Erde': `
+          <p><strong>Mischtyp Feuer + Erde:</strong> Verspielt und menschenbezogen, dabei harmoniesuchend.</p>
+          <p><strong>Training:</strong> Kurze Fun-Einheiten, dann ruhige Wiederholung.
+          Positive Stimmung tragen, aber nicht überdrehen lassen – klare Pausen helfen.</p>
+          <p><strong>Management:</strong> Freundliche Umgebung, soziale Bindung, gutes Futtermanagement und geregelte Tagesstruktur.</p>
+        `,
+        'Feuer+Metall': `
+          <p><strong>Mischtyp Feuer + Metall:</strong> Showtalent mit Sinn für Form – es soll gut aussehen und sich gut anfühlen.</p>
+          <p><strong>Training:</strong> Abwechslung ja, aber sauber gerahmt.
+          Präzise Hilfen, klares Timing; wenn’s „zu wild“ wird, mit bekannten Mustern erden.</p>
+          <p><strong>Management:</strong> Strukturiert, aber freundlich; Reizniveau steuerbar halten.</p>
+        `,
+        'Feuer+Wasser': `
+          <p><strong>Mischtyp Feuer + Wasser:</strong> Zwischen Euphorie und Vorsicht – kann schnell kippen.</p>
+          <p><strong>Training:</strong> Erst Sicherheit, dann steigern.
+          Kurze, positive Reize ⇒ Belohnung ⇒ Pause. Frühzeitig Spannungszeichen lesen und rausnehmen.</p>
+          <p><strong>Management:</strong> Überschaubare Umgebung, vertraute Menschen, klare Rituale zum Runterfahren.</p>
+        `,
+        'Erde+Metall': `
+          <p><strong>Mischtyp Erde + Metall:</strong> Verbindlich und ordentlich – verlässliche Qualität im Alltag.</p>
+          <p><strong>Training:</strong> Rituale, klare Schritte, saubere Wiederholungen.
+          Freundliches Miteinander, aber auf Kriterien achten – dann wächst die Präzision.</p>
+          <p><strong>Management:</strong> Geregelter Tagesablauf, Herdenkontakt, ruhige Fütterungssituation.</p>
+        `,
+        'Erde+Wasser': `
+          <p><strong>Mischtyp Erde + Wasser:</strong> Sanft, nähebedürftig, sensibel – ein Herz fürs Team.</p>
+          <p><strong>Training:</strong> Viel Bestätigung, kleine sichere Lernschritte, wohldosierte Reize.
+          Nähe zulassen, aber schrittweise eigenständiger machen.</p>
+          <p><strong>Management:</strong> Vertraute Umgebung, klare Bezugspersonen, Ruhe und Schutzoptionen.</p>
+        `,
+        'Metall+Wasser': `
+          <p><strong>Mischtyp Metall + Wasser:</strong> Kontrolliert und wachsam – braucht transparente Regeln und Sicherheit.</p>
+          <p><strong>Training:</strong> Strukturierte Exposition (kleine Reize, klare Auflösung), langsame Steigerung.
+          Konsistentes Signalbild verhindert Verunsicherung.</p>
+          <p><strong>Management:</strong> Klare, ruhige Abläufe, berechenbare Umwelt, feste Bezugspersonen.</p>
+        `
       };
 
       function countAnswered() {
-        // frisch ermitteln (weil wir dynamisch gerendert haben)
         inputs = Array.prototype.slice.call(document.querySelectorAll('.quiz-input'));
         var names = new Set(inputs.map(function(i){return i.name;}));
         var answered = 0;
@@ -274,7 +530,6 @@
         answeredCountEl.textContent = answered;
       }
 
-      // Events
       document.addEventListener('change', function(e){
         if (e.target.classList && e.target.classList.contains('quiz-input')) countAnswered();
       });
@@ -311,49 +566,74 @@
         var max = Math.max.apply(null, Object.values(counts));
         var tops = elementOrder.filter(function(k){ return counts[k] === max && max > 0; });
 
+        // Reset Anzeige
         resultAlert.classList.add('d-none');
         resultCard.classList.remove('d-none');
         img1.style.display = 'none'; img2.style.display = 'none'; mixPlus.style.display = 'none';
         img1.src = ''; img2.src = ''; img1.alt = ''; img2.alt = '';
 
+        // EINZELTYP
         if (tops.length === 1) {
           var el = tops[0];
-          resultTitle.textContent = 'Ihr Pferd ähnelt dem Element: ' + el;
-          resultText.textContent = singleText[el] + ' – Sie möchten mehr dazu erfahren? Sprechen Sie mich gern an.';
-          img1.src = "{{ get_url(path='img/quiz') }}/" + el.toLowerCase() + ".jpg";
+
+          // Titel
+          resultTitle.textContent = 'Element: ' + el;
+
+          // Bild (oben)
+          img1.src = IMG_BASE + el.toLowerCase() + '.jpg';
           img1.alt = 'Symbolbild Element ' + el;
           img1.style.display = 'block';
-        } else {
+
+          // Langer Text
+          resultText.innerHTML = (singleHTML[el] || '<p>Kurze Beschreibung folgt.</p>') + `
+            <p class="mt-3 mb-0">
+              Sie möchten wissen, welche meiner Methoden hierzu besonders gut passen?
+              <a href="{{ get_url(path='behandlung/behandlungsmethoden/', trailing_slash=true) }}">Hier finden Sie eine Übersicht</a> –
+              oder <a href="{{ get_url(path='contact/', trailing_slash=true) }}">sprechen Sie mich direkt an</a>.
+            </p>`;
+        }
+        // MISCHTYP(E)
+        else {
           var sorted = tops.slice().sort(function(a,b){
             return elementOrder.indexOf(a) - elementOrder.indexOf(b);
           });
-          var title = 'Mischtyp: ' + sorted.join(' + ');
-          resultTitle.textContent = title;
 
-          if (sorted.length === 2) {
-            var key = sorted[0] + '+' + sorted[1];
-            resultText.textContent = (mixText[key] || 'Ihr Pferd vereint zwei Elemente ausgewogen. Struktur und Sicherheit helfen, die Stärken optimal zu nutzen.') + ' – Sprechen Sie mich gern an.';
-          } else {
-            resultText.textContent = 'Ihr Pferd vereint mehrere Elemente (' + sorted.join(', ') + '). Mit einem individuell abgestimmten Plan lassen sich diese Stärken gezielt nutzen. – Sprechen Sie mich gern an.';
-          }
+          // Titel
+          resultTitle.textContent = 'Mischtyp: ' + sorted.join(' + ');
 
-          img1.src = "{{ get_url(path='img/quiz') }}/" + sorted[0].toLowerCase() + ".jpg";
+          // Bilder
+          img1.src = IMG_BASE + sorted[0].toLowerCase() + '.jpg';
           img1.alt = 'Symbolbild Element ' + sorted[0];
           img1.style.display = 'block';
 
           if (sorted.length >= 2) {
-            img2.src = "{{ get_url(path='img/quiz') }}/" + sorted[1].toLowerCase() + ".jpg";
+            img2.src = IMG_BASE + sorted[1].toLowerCase() + '.jpg';
             img2.alt = 'Symbolbild Element ' + sorted[1];
             mixPlus.style.display = 'inline-block';
             img2.style.display = 'block';
+          }
+
+          // 2er-Kombi: spezifischer Text; ab 3 Tops: generischer Text
+          if (sorted.length === 2) {
+            var key = sorted[0] + '+' + sorted[1];
+            resultText.innerHTML = (mixHTML[key] || `<p>Ihr Pferd vereint zwei Elemente ausgewogen: ${sorted[0]} und ${sorted[1]}.</p>`) + `
+              <p class="mt-3 mb-0">
+                Gern bespreche ich mit Ihnen, welche Trainings- und Management-Bausteine zu Ihrem Pferd passen.
+                <a href="{{ get_url(path='contact/', trailing_slash=true) }}">Kontakt aufnehmen</a>.
+              </p>`;
+          } else {
+            resultText.innerHTML = `
+              <p><strong>Vielschichtig:</strong> Ihr Pferd zeigt Anteile von ${sorted.join(', ')}. Das ist völlig normal – entscheidend ist, die Stärken gezielt einzusetzen und sensible Punkte zu respektieren.</p>
+              <p><strong>Training:</strong> Beginnen Sie mit dem „gemeinsamen Nenner“ (z. B. sichere Routine) und ergänzen Sie je nach Tagesform Anteile aus den weiteren Elementen (etwa spielerische Motivation, präzise Kriterien oder mehr Sicherheitsabstand).</p>
+              <p class="mb-0">Für einen individuellen Plan <a href="{{ get_url(path='contact/', trailing_slash=true) }}">sprechen Sie mich gern an</a>.</p>
+            `;
           }
         }
 
         document.getElementById('resultBox').scrollIntoView({behavior:'smooth', block:'start'});
       }
 
-      var evalBtn = document.getElementById('evalBtn');
-      evalBtn.addEventListener('click', evaluate);
+      document.getElementById('evalBtn').addEventListener('click', evaluate);
       countAnswered();
     })();
   </script>
