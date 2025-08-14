@@ -7,13 +7,11 @@
 {% endblock description %}
 
 {% block headextras %}
-  {# Optional: volle Bootstrap-Dateien speziell fürs Quiz einbinden
-     -> nur aktivieren, wenn du sie unter /bootstrap/... bereitstellst
+  {# Optional: vollständiges Bootstrap speziell fürs Quiz einbinden, falls vorhanden
   <link rel="stylesheet" href="{{ get_url(path='bootstrap/css/bootstrap.min.css') }}">
   #}
 
   <style>
-    /* Feinschliff fürs Quiz */
     .quiz-intro small { opacity: .85; }
     .quiz-card { border: 1px solid rgba(0,0,0,.08); border-radius: .75rem; }
     .quiz-card .card-header { background: #f8f9fa; }
@@ -77,12 +75,11 @@
       <form id="quizForm" novalidate>
 
         {# =======================
-           19 FRAGEN (A–E) – einheitlich formuliert
-           Mapping: A=Holz, B=Feuer, C=Erde, D=Metall, E=Wasser
+           19 FRAGEN (A–E), Tera-sicher
+           A=Holz, B=Feuer, C=Erde, D=Metall, E=Wasser
            ======================= #}
 
         {% set questions = [
-          // 1
           {
             "q": "Neue Gruppe/Offenstall: Wie zeigt sich dein Pferd beim Umstellen?",
             "a": [
@@ -93,7 +90,6 @@
               "Unsicher, rangniedrig, braucht Zeit & Nähe (E)"
             ]
           },
-          // 2
           {
             "q": "Verladen/Hänger: Womit rechnest du eher?",
             "a": [
@@ -104,7 +100,6 @@
               "Allein schwer; mit Kumpel/Familiarität ok (E)"
             ]
           },
-          // 3
           {
             "q": "Training, das am meisten Spaß macht:",
             "a": [
@@ -115,7 +110,6 @@
               "Spontan, abhängig von Stimmung/Umfeld (E)"
             ]
           },
-          // 4
           {
             "q": "Pflege/„Herausputzen“ vor einem Ereignis:",
             "a": [
@@ -126,7 +120,6 @@
               "In ruhiger Ecke geduldig – Waschen ungern (E)"
             ]
           },
-          // 5
           {
             "q": "Urlaubsvertretung übernimmt:",
             "a": [
@@ -137,7 +130,6 @@
               "Nur vertraute Leute; Fremde verunsichern (E)"
             ]
           },
-          // 6
           {
             "q": "Kurzcharakter:",
             "a": [
@@ -148,7 +140,6 @@
               "Vorsichtig, sensibel, loyal (E)"
             ]
           },
-          // 7
           {
             "q": "Neues Abenteuer (Trail, Umgebung, Kurs):",
             "a": [
@@ -159,7 +150,6 @@
               "Zieht Rückzug/Heimat vor (E)"
             ]
           },
-          // 8
           {
             "q": "Im Mittelpunkt/Publikum:",
             "a": [
@@ -170,7 +160,6 @@
               "Verweigert eher (E)"
             ]
           },
-          // 9
           {
             "q": "Wenn dein Alltag sich ändert, ist dein Pferd eher:",
             "a": [
@@ -181,7 +170,6 @@
               "Äußerlich ruhig, innerlich angespannt (E)"
             ]
           },
-          // 10
           {
             "q": "Lernstil, der am besten funktioniert:",
             "a": [
@@ -192,7 +180,6 @@
               "In eigenem Tempo herausfinden (E)"
             ]
           },
-          // 11
           {
             "q": "Bei Angst/Stress reagiert es eher mit:",
             "a": [
@@ -203,7 +190,6 @@
               "Rückzug/„Unsichtbar werden“ (E)"
             ]
           },
-          // 12
           {
             "q": "Neue Menschen kennenlernen:",
             "a": [
@@ -214,7 +200,6 @@
               "Misstrauisch, braucht Zeit (E)"
             ]
           },
-          // 13
           {
             "q": "Fressen/Futterfokus:",
             "a": [
@@ -225,7 +210,6 @@
               "Frisst, weil es muss (E)"
             ]
           },
-          // 14
           {
             "q": "Größter innerer Antreiber:",
             "a": [
@@ -236,7 +220,6 @@
               "Ruhe & Sicherheit (E)"
             ]
           },
-          // 15 (NEU)
           {
             "q": "Geräusche/Wetter (Wind, Planen, Halle knistert):",
             "a": [
@@ -247,7 +230,6 @@
               "Mag es gar nicht, lieber weg (E)"
             ]
           },
-          // 16 (NEU)
           {
             "q": "Belohnung, die am besten wirkt:",
             "a": [
@@ -258,7 +240,6 @@
               "Zeit/Distanz & Sicherheit (E)"
             ]
           },
-          // 17
           {
             "q": "Rolle, die am ehesten passt:",
             "a": [
@@ -269,7 +250,6 @@
               "Der Philosoph (E)"
             ]
           },
-          // 18 (NEU)
           {
             "q": "Regeneration nach Anstrengung/Krankheit:",
             "a": [
@@ -280,7 +260,6 @@
               "Benötigt viel Ruhe & Schutz (E)"
             ]
           },
-          // 19
           {
             "q": "Berührung/Kontakt:",
             "a": [
@@ -293,22 +272,22 @@
           }
         ] %}
 
-        {% for i in range(end=questions | length) %}
-          {% set q = questions[i] %}
-          <div class="card quiz-card mb-3" id="card-q{{ i+1 }}">
+        {% set letters = ["A","B","C","D","E"] %}
+
+        {% for q in questions %}
+          <div class="card quiz-card mb-3" id="card-q{{ loop.index }}">
             <div class="card-header">
-              <h5 class="mb-0">Frage {{ i+1 }}</h5>
+              <h5 class="mb-0">Frage {{ loop.index }}</h5>
             </div>
             <div class="card-body">
               <p class="mb-3">{{ q.q }}</p>
               {% for j in range(end=q.a | length) %}
                 {% set opt = q.a[j] %}
-                {% set val = ["A","B","C","D","E"][j] %}
+                {% set val = letters[j] %}
                 <div class="custom-control custom-radio mb-2">
                   <input type="radio" class="custom-control-input quiz-input"
-                         name="q{{ i+1 }}" id="q{{ i+1 }}_{{ val }}" value="{{ val }}"
-                         data-element='{"A":"Holz","B":"Feuer","C":"Erde","D":"Metall","E":"Wasser"}[ "{{ val }}" ]'>
-                  <label class="custom-control-label" for="q{{ i+1 }}_{{ val }}">{{ opt | safe }}</label>
+                         name="q{{ loop.index }}" id="q{{ loop.index }}_{{ val }}" value="{{ val }}">
+                  <label class="custom-control-label" for="q{{ loop.index }}_{{ val }}">{{ opt | safe }}</label>
                 </div>
               {% endfor %}
             </div>
@@ -366,8 +345,9 @@
 {% endblock content %}
 
 {% block extrascripts %}
-  {# Optional: volles Bootstrap-Bundle (nur falls benötigt) #}
-  {# <script src="{{ get_url(path='bootstrap/js/bootstrap.bundle.min.js') }}" defer></script> #}
+  {# Optional: volles Bootstrap-Bundle (nur falls benötigt)
+  <script src="{{ get_url(path='bootstrap/js/bootstrap.bundle.min.js') }}" defer></script>
+  #}
 
   <script>
     (function() {
@@ -387,6 +367,7 @@
 
       var TOTAL = 19;
       var elementOrder = ['Holz','Feuer','Erde','Metall','Wasser'];
+      var letterToElement = { 'A':'Holz','B':'Feuer','C':'Erde','D':'Metall','E':'Wasser' };
 
       var singleText = {
         'Holz': 'Holz-Typ: athletisch, zielstrebig, manchmal stur – liebt klare Aufgaben und Bewegung. Biete Herausforderungen und strukturiertes Vorwärts, dann entfaltet es seine Stärke.',
@@ -396,7 +377,6 @@
         'Wasser': 'Wasser-Typ: vorsichtig, feinfühlig, loyal – Sicherheit und Zeit sind zentral. Mit Schutzraum und geduldigem Aufbau wächst das Vertrauen nachhaltig.'
       };
 
-      // Mischtypen (Kurztexte – jeweils 2 Sätze)
       var mixText = {
         'Holz+Feuer': 'Mischtyp Holz-Feuer: leistungsbereit und lebensfroh. Fordere zielgerichtet und halte die Motivation hoch – Tempo mit Spaß ist der Schlüssel.',
         'Holz+Erde': 'Mischtyp Holz-Erde: tatkräftig mit ruhigem Kern. Wechsle zwischen fordernden Aufgaben und wohligen Pausen – Balance bringt Bestleistung.',
@@ -432,8 +412,8 @@
         groupNames.forEach(function(n){
           var checked = form.querySelector('input[name="'+n+'"]:checked');
           if (checked) {
-            var el = checked.getAttribute('data-element');
-            counts[el] = (counts[el]||0)+1;
+            var element = letterToElement[checked.value];
+            counts[element] = (counts[element]||0)+1;
           }
         });
 
@@ -447,11 +427,9 @@
           return;
         }
 
-        // Top-Wert und mögliche Gleichstände ermitteln
         var max = Math.max.apply(null, Object.values(counts));
         var tops = elementOrder.filter(function(k){ return counts[k] === max && max > 0; });
 
-        // Ergebnis-UI vorbereiten
         resultAlert.classList.add('d-none');
         resultCard.classList.remove('d-none');
         img1.style.display = 'none'; img2.style.display = 'none'; mixPlus.style.display = 'none';
@@ -466,24 +444,33 @@
           img1.alt = 'Symbolbild Element ' + el;
           img1.style.display = 'block';
         } else {
-          // Mischtyp: genau zwei oder mehr – nimm die zwei „stärksten“ gemäß elementOrder
-          var topPair = tops.slice(0,2).sort(function(a,b){
+          var sorted = tops.slice().sort(function(a,b){
             return elementOrder.indexOf(a) - elementOrder.indexOf(b);
           });
-          var key = topPair.join('+');
-          var title = 'Mischtyp: ' + topPair.join(' + ');
+
+          // Für 2er-Mix: spezieller Text; für 3+ Mix: generischer Text
+          var title = 'Mischtyp: ' + sorted.join(' + ');
           resultTitle.textContent = title;
-          resultText.textContent = (mixText[key] || 'Ihr Pferd vereint mehrere Elemente auf hohem Niveau. Struktur und Sicherheit helfen, die Stärken optimal zu nutzen.') + ' – Sprechen Sie mich gern an.';
-          img1.src = '{{ get_url(path="img/quiz/") }}' + topPair[0].toLowerCase() + '.jpg';
-          img1.alt = 'Symbolbild Element ' + topPair[0];
-          img2.src = '{{ get_url(path="img/quiz/") }}' + topPair[1].toLowerCase() + '.jpg';
-          img2.alt = 'Symbolbild Element ' + topPair[1];
+
+          if (sorted.length === 2) {
+            var key = sorted[0] + '+' + sorted[1];
+            resultText.textContent = (mixText[key] || 'Ihr Pferd vereint zwei Elemente ausgewogen. Struktur & Sicherheit helfen, die Stärken optimal zu nutzen.') + ' – Sprechen Sie mich gern an.';
+          } else {
+            resultText.textContent = 'Ihr Pferd vereint mehrere Elemente auf hohem Niveau (' + sorted.join(', ') + '). Mit einem individuell abgestimmten Plan lassen sich diese Stärken gezielt nutzen. – Sprechen Sie mich gern an.';
+          }
+
+          img1.src = '{{ get_url(path="img/quiz/") }}' + sorted[0].toLowerCase() + '.jpg';
+          img1.alt = 'Symbolbild Element ' + sorted[0];
           img1.style.display = 'block';
-          mixPlus.style.display = 'inline-block';
-          img2.style.display = 'block';
+
+          if (sorted.length >= 2) {
+            img2.src = '{{ get_url(path="img/quiz/") }}' + sorted[1].toLowerCase() + '.jpg';
+            img2.alt = 'Symbolbild Element ' + sorted[1];
+            mixPlus.style.display = 'inline-block';
+            img2.style.display = 'block';
+          }
         }
 
-        // sanft scrollen
         document.getElementById('resultBox').scrollIntoView({behavior:'smooth', block:'start'});
       }
 
