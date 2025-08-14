@@ -2,15 +2,14 @@
 {% block title %}Quiz – Elementtyp deines Pferdes | Tierheilpraxis JessICan{% endblock title %}
 
 {% block description %}
-  <meta name="description" content="Interaktives Quiz: Finde heraus, welchem der fünf Elemente (Holz, Feuer, Erde, Metall, Wasser) dein Pferd am ehesten entspricht – inkl. kurzer Auswertung.">
+  <meta name="description" content="Interaktives Quiz: Finde heraus, welchem der fünf Elemente (Holz, Feuer, Erde, Metall, Wasser) dein Pferd am ehesten entspricht – inkl. Auswertung.">
   <link rel="preload" href="{{ get_url(path="/img/home-bg_large.jpeg") }}" as="image">
 {% endblock description %}
 
 {% block headextras %}
-  {# Optional: vollständiges Bootstrap speziell fürs Quiz einbinden, falls vorhanden
+  {# Optional: eigenes Bootstrap fürs Quiz, falls du es unter /static/bootstrap/... ablegst
   <link rel="stylesheet" href="{{ get_url(path='bootstrap/css/bootstrap.min.css') }}">
   #}
-
   <style>
     .quiz-intro small { opacity: .85; }
     .quiz-card { border: 1px solid rgba(0,0,0,.08); border-radius: .75rem; }
@@ -18,7 +17,6 @@
     .answer-img { display: none; max-width: 140px; border-radius: .5rem; }
     .mix-sep { font-weight: 600; }
     .sticky-eval { position: sticky; bottom: 0; z-index: 1030; background: rgba(255,255,255,.98); border-top: 1px solid rgba(0,0,0,.1); }
-    .sr-only-focusable:focus { position: static; width:auto; height:auto; margin:0; overflow: visible; clip: auto; }
     .required-hint { font-size:.9rem; opacity:.8; }
     .progress { height: .75rem; }
     .quiz-badge { min-width: 2.25rem; }
@@ -45,7 +43,7 @@
 <div class="container">
   <div class="row">
     <div class="col-lg-10 col-md-10 mx-auto">
-      
+
       <section class="quiz-intro mb-4">
         <p class="lead mb-1">
           Beantworte die Fragen spontan. Am Ende erfährst du, welchem <strong>Element</strong> dein Pferd am ehesten ähnelt – oder ob es ein <strong>Mischtyp</strong> ist.
@@ -63,7 +61,7 @@
             <div class="mr-2">Fortschritt</div>
             <div class="flex-grow-1">
               <div class="progress" aria-hidden="true">
-                <div id="quizProgress" class="progress-bar" role="progressbar" style="width: 0%" aria-valuemin="0" aria-valuemax="19" aria-valuenow="0"></div>
+                <div id="quizProgress" class="progress-bar" role="progressbar" style="width:0%" aria-valuemin="0" aria-valuemax="19" aria-valuenow="0"></div>
               </div>
             </div>
             <div class="ml-2"><span id="progressText">0</span>/19</div>
@@ -73,239 +71,15 @@
       </section>
 
       <form id="quizForm" novalidate>
-
-        {# =======================
-           19 FRAGEN (A–E), Tera-sicher
-           A=Holz, B=Feuer, C=Erde, D=Metall, E=Wasser
-           ======================= #}
-
-        {% set questions = [
-          {
-            "q": "Neue Gruppe/Offenstall: Wie zeigt sich dein Pferd beim Umstellen?",
-            "a": [
-              "Setzt sich zügig durch, wirkt sportlich-dominant (A)",
-              "Lebhaft, neugierig, schnell mittendrin (B)",
-              "Gelassen, freundlich, findet zu jedem Anschluss (C)",
-              "Beobachtet erst, hält Routinen, bleibt korrekt (D)",
-              "Unsicher, rangniedrig, braucht Zeit & Nähe (E)"
-            ]
-          },
-          {
-            "q": "Verladen/Hänger: Womit rechnest du eher?",
-            "a": [
-              "Kurzer Macht-Check – dann geht’s (A)",
-              "Tagesformabhängig – mal super, mal Drama (B)",
-              "Mit Heu/Leckerli klappt’s am schnellsten (C)",
-              "Routine sitzt: rauf, zu, los – fertig (D)",
-              "Allein schwer; mit Kumpel/Familiarität ok (E)"
-            ]
-          },
-          {
-            "q": "Training, das am meisten Spaß macht:",
-            "a": [
-              "Sport & Tempo, gern Herausforderungen (A)",
-              "Abwechslung, Spiel, Zirkus, Clicker (B)",
-              "Ruhige Gymnastik + lange Ausritte (C)",
-              "Strukturierter Plan, präzises Arbeiten (D)",
-              "Spontan, abhängig von Stimmung/Umfeld (E)"
-            ]
-          },
-          {
-            "q": "Pflege/„Herausputzen“ vor einem Ereignis:",
-            "a": [
-              "Kräftiges Massieren top – aber nicht zu lang (A)",
-              "Genießt Styling & Glitzer, fast ein bisschen eitel (B)",
-              "Lange putzen okay – danach auch gern mal wälzen (C)",
-              "Nur das Nötigste; Funktion vor Glamour (D)",
-              "In ruhiger Ecke geduldig – Waschen ungern (E)"
-            ]
-          },
-          {
-            "q": "Urlaubsvertretung übernimmt:",
-            "a": [
-              "Testet neue Reiter – klare Führung hilft (A)",
-              "Mag freundliche, spielerische Menschen (B)",
-              "Kommt mit (fast) allen zurecht, Hauptsache nett (C)",
-              "Am besten feste Bezugspersonen mit Routine (D)",
-              "Nur vertraute Leute; Fremde verunsichern (E)"
-            ]
-          },
-          {
-            "q": "Kurzcharakter:",
-            "a": [
-              "Sportlicher Anpacker, führungsstark (A)",
-              "Elegant, lebensfroh, manchmal überdreht (B)",
-              "Gemütlich, friedliebend, futtermotiviert (C)",
-              "Klar, korrekt, detailgenau (D)",
-              "Vorsichtig, sensibel, loyal (E)"
-            ]
-          },
-          {
-            "q": "Neues Abenteuer (Trail, Umgebung, Kurs):",
-            "a": [
-              "Blüht auf, will loslegen (A)",
-              "Aufgeregt, kicherig – liebt den Trubel (B)",
-              "Sucht Harmonie & Begleitung (C)",
-              "Checkt die Lage ruhig & sachlich (D)",
-              "Zieht Rückzug/Heimat vor (E)"
-            ]
-          },
-          {
-            "q": "Im Mittelpunkt/Publikum:",
-            "a": [
-              "Nimmt die Challenge an (A)",
-              "Genießt die Show, wird albern (B)",
-              "Manchmal Patzer trotz Können (C)",
-              "Arbeitet nüchtern weiter (D)",
-              "Verweigert eher (E)"
-            ]
-          },
-          {
-            "q": "Wenn dein Alltag sich ändert, ist dein Pferd eher:",
-            "a": [
-              "Ungeduldig, drängelt (A)",
-              "Hibbelig & verspielt (B)",
-              "Anhänglich, sucht Nähe (C)",
-              "Distanziert, kontrolliert (D)",
-              "Äußerlich ruhig, innerlich angespannt (E)"
-            ]
-          },
-          {
-            "q": "Lernstil, der am besten funktioniert:",
-            "a": [
-              "Kurze, klare Ansagen & machen (A)",
-              "Über Spiel & Motivation (B)",
-              "Rituale & Wiederholung (C)",
-              "Präzise Erklärungen & Kriterien (D)",
-              "In eigenem Tempo herausfinden (E)"
-            ]
-          },
-          {
-            "q": "Bei Angst/Stress reagiert es eher mit:",
-            "a": [
-              "Gegenwehr/Impuls (A)",
-              "Hysterie/Albernheit (B)",
-              "Kuscheln/Ansprache suchen (C)",
-              "Vorsicht/Überempfindlichkeit (D)",
-              "Rückzug/„Unsichtbar werden“ (E)"
-            ]
-          },
-          {
-            "q": "Neue Menschen kennenlernen:",
-            "a": [
-              "Gern offensiv – kann einschüchtern (A)",
-              "Aufgeregt neugierig oder schüchtern (B)",
-              "Freundlich & verbindend (C)",
-              "Höflich, aber reserviert (D)",
-              "Misstrauisch, braucht Zeit (E)"
-            ]
-          },
-          {
-            "q": "Fressen/Futterfokus:",
-            "a": [
-              "Behält Konkurrenz im Blick (A)",
-              "Lässt Futter für Action liegen (B)",
-              "Vergisst alles außer Fressen (C)",
-              "Pickt selektiv das Beste (D)",
-              "Frisst, weil es muss (E)"
-            ]
-          },
-          {
-            "q": "Größter innerer Antreiber:",
-            "a": [
-              "Action & Ziele (A)",
-              "Spiel & Spaß (B)",
-              "Harmonie & Miteinander (C)",
-              "Ordnung & Klarheit (D)",
-              "Ruhe & Sicherheit (E)"
-            ]
-          },
-          {
-            "q": "Geräusche/Wetter (Wind, Planen, Halle knistert):",
-            "a": [
-              "Stört kaum – weiter geht’s (A)",
-              "Findet’s aufregend, wird spritzig (B)",
-              "Mit Begleitung ok (C)",
-              "Akzeptiert nach kurzer Gewöhnung (D)",
-              "Mag es gar nicht, lieber weg (E)"
-            ]
-          },
-          {
-            "q": "Belohnung, die am besten wirkt:",
-            "a": [
-              "Vorwärts gehen dürfen/Task lösen (A)",
-              "Loben/Spiel/kurzer Fun-Moment (B)",
-              "Futter & ruhige Pause (C)",
-              "Präzises Timing/klare Auflösung (D)",
-              "Zeit/Distanz & Sicherheit (E)"
-            ]
-          },
-          {
-            "q": "Rolle, die am ehesten passt:",
-            "a": [
-              "Der Organisator/Anführer (A)",
-              "Der Spielkamerad (B)",
-              "Der Sympathieträger (C)",
-              "Der Beobachter/Perfektionist (D)",
-              "Der Philosoph (E)"
-            ]
-          },
-          {
-            "q": "Regeneration nach Anstrengung/Krankheit:",
-            "a": [
-              "Schnell wieder einsatzbereit (A)",
-              "Will früh wieder „mitmischen“ (B)",
-              "Braucht Komfort & Futtermanagement (C)",
-              "Strikten Wiederaufbauplan bevorzugt (D)",
-              "Benötigt viel Ruhe & Schutz (E)"
-            ]
-          },
-          {
-            "q": "Berührung/Kontakt:",
-            "a": [
-              "Kräftige Massage, „aufwecken“ (A)",
-              "Sanft streicheln, viel positive Energie (B)",
-              "Ganz viel Nähe & Kuscheln (C)",
-              "Nur gezielt/zweckmäßig (D)",
-              "Kommt von selbst, wenn bereit (E)"
-            ]
-          }
-        ] %}
-
-        {% set letters = ["A","B","C","D","E"] %}
-
-        {% for q in questions %}
-          <div class="card quiz-card mb-3" id="card-q{{ loop.index }}">
-            <div class="card-header">
-              <h5 class="mb-0">Frage {{ loop.index }}</h5>
-            </div>
-            <div class="card-body">
-              <p class="mb-3">{{ q.q }}</p>
-              {% for j in range(end=q.a | length) %}
-                {% set opt = q.a[j] %}
-                {% set val = letters[j] %}
-                <div class="custom-control custom-radio mb-2">
-                  <input type="radio" class="custom-control-input quiz-input"
-                         name="q{{ loop.index }}" id="q{{ loop.index }}_{{ val }}" value="{{ val }}">
-                  <label class="custom-control-label" for="q{{ loop.index }}_{{ val }}">{{ opt | safe }}</label>
-                </div>
-              {% endfor %}
-            </div>
-          </div>
-        {% endfor %}
+        <div id="quizContainer"></div>
 
         <div class="sticky-eval p-3 mt-4">
           <div class="d-flex align-items-center">
-            <button id="evalBtn" type="button" class="btn btn-success btn-lg mr-3">
-              Auswerten
-            </button>
-            <div class="text-muted">
-              <span id="answeredCount">0</span> von 19 Fragen beantwortet
-            </div>
+            <button id="evalBtn" type="button" class="btn btn-success btn-lg mr-3">Auswerten</button>
+            <div class="text-muted"><span id="answeredCount">0</span> von 19 Fragen beantwortet</div>
             <a href="#resultBox" class="ml-auto btn btn-link">zur Auswertung springen</a>
           </div>
         </div>
-
       </form>
 
       <hr class="my-4">
@@ -339,19 +113,119 @@
         Hinweis: Dieses Quiz ersetzt keine Diagnose. Es hilft, Tendenzen einzuordnen. Für eine individuelle Einschätzung <a href="{{ get_url(path='contact/', trailing_slash=true) }}">sprechen Sie mich gern an</a>.
       </p>
 
+      {# --- Die Fragen kommen als JSON: --- #}
+      <script id="quizData" type="application/json">
+      {
+        "total": 19,
+        "questions": [
+          { "q": "Neue Gruppe/Offenstall: Wie zeigt sich dein Pferd beim Umstellen?",
+            "a": ["Setzt sich zügig durch, sportlich-dominant", "Lebhaft, neugierig, schnell mittendrin", "Gelassen, freundlich, findet zu jedem Anschluss", "Beobachtet erst, hält Routinen, bleibt korrekt", "Unsicher, rangniedrig, braucht Zeit und Nähe"] },
+          { "q": "Verladen/Hänger: Womit rechnest du eher?",
+            "a": ["Kurzer Macht-Check – dann geht’s", "Tagesformabhängig – mal super, mal Drama", "Mit Heu/Leckerli klappt’s am schnellsten", "Routine sitzt: rauf, zu, los – fertig", "Allein schwer; mit Kumpel oder vertrautem Hänger ok"] },
+          { "q": "Training, das am meisten Spaß macht:",
+            "a": ["Sport und Tempo, gern Herausforderungen", "Abwechslung, Spiel, Zirkus, Clicker", "Ruhige Gymnastik plus lange Ausritte", "Strukturierter Plan, präzises Arbeiten", "Spontan, abhängig von Stimmung/Umfeld"] },
+          { "q": "Pflege/Herausputzen vor einem Ereignis:",
+            "a": ["Kräftiges Massieren top – aber nicht zu lang", "Genießt Styling und Glitzer, ein bisschen eitel", "Lange putzen okay – danach gern mal wälzen", "Nur das Nötigste; Funktion vor Glamour", "In ruhiger Ecke geduldig – Waschen ungern"] },
+          { "q": "Urlaubsvertretung übernimmt:",
+            "a": ["Testet neue Reiter – klare Führung hilft", "Mag freundliche, spielerische Menschen", "Kommt mit fast allen zurecht, Hauptsache nett", "Am besten feste Bezugspersonen mit Routine", "Nur vertraute Leute; Fremde verunsichern"] },
+          { "q": "Kurzcharakter:",
+            "a": ["Sportlicher Anpacker, führungsstark", "Elegant, lebensfroh, manchmal überdreht", "Gemütlich, friedliebend, futtermotiviert", "Klar, korrekt, detailgenau", "Vorsichtig, sensibel, loyal"] },
+          { "q": "Neues Abenteuer (Trail, Umgebung, Kurs):",
+            "a": ["Blüht auf, will loslegen", "Aufgeregt, spritzig – liebt den Trubel", "Sucht Harmonie und Begleitung", "Checkt die Lage ruhig und sachlich", "Zieht Rückzug/Heimat vor"] },
+          { "q": "Im Mittelpunkt/Publikum:",
+            "a": ["Nimmt die Challenge an", "Genießt die Show, wird albern", "Manchmal Patzer trotz Können", "Arbeitet nüchtern weiter", "Verweigert eher"] },
+          { "q": "Wenn dein Alltag sich ändert, ist dein Pferd eher:",
+            "a": ["Ungeduldig, drängelt", "Hibbelig und verspielt", "Anhänglich, sucht Nähe", "Distanziert, kontrolliert", "Äußerlich ruhig, innerlich angespannt"] },
+          { "q": "Lernstil, der am besten funktioniert:",
+            "a": ["Kurze, klare Ansagen und machen", "Über Spiel und Motivation", "Rituale und Wiederholung", "Präzise Erklärungen und Kriterien", "In eigenem Tempo herausfinden"] },
+          { "q": "Bei Angst/Stress reagiert es eher mit:",
+            "a": ["Gegenwehr/Impuls", "Hysterie/Albernheit", "Kuscheln/Ansprache suchen", "Vorsicht/Überempfindlichkeit", "Rückzug/Unsichtbar werden"] },
+          { "q": "Neue Menschen kennenlernen:",
+            "a": ["Gern offensiv – kann einschüchtern", "Aufgeregt neugierig oder schüchtern", "Freundlich und verbindend", "Höflich, aber reserviert", "Misstrauisch, braucht Zeit"] },
+          { "q": "Fressen/Futterfokus:",
+            "a": ["Behält Konkurrenz im Blick", "Lässt Futter für Action liegen", "Vergisst alles außer Fressen", "Pickt selektiv das Beste", "Frisst, weil es muss"] },
+          { "q": "Größter innerer Antreiber:",
+            "a": ["Action und Ziele", "Spiel und Spaß", "Harmonie und Miteinander", "Ordnung und Klarheit", "Ruhe und Sicherheit"] },
+          { "q": "Geräusche/Wetter (Wind, Planen, knisternde Halle):",
+            "a": ["Stört kaum – weiter geht’s", "Findet’s aufregend, wird spritzig", "Mit Begleitung ok", "Akzeptiert nach kurzer Gewöhnung", "Mag es gar nicht, lieber weg"] },
+          { "q": "Belohnung, die am besten wirkt:",
+            "a": ["Vorwärts gehen dürfen/Aufgabe lösen", "Loben/Spiel/kurzer Fun-Moment", "Futter und ruhige Pause", "Präzises Timing/klare Auflösung", "Zeit/Distanz und Sicherheit"] },
+          { "q": "Rolle, die am ehesten passt:",
+            "a": ["Der Organisator/Anführer", "Der Spielkamerad", "Der Sympathieträger", "Der Beobachter/Perfektionist", "Der Philosoph"] },
+          { "q": "Regeneration nach Anstrengung/Krankheit:",
+            "a": ["Schnell wieder einsatzbereit", "Will früh wieder mitmischen", "Braucht Komfort und Futtermanagement", "Strikten Wiederaufbauplan bevorzugt", "Benötigt viel Ruhe und Schutz"] },
+          { "q": "Berührung/Kontakt:",
+            "a": ["Kräftige Massage, aktivierend", "Sanft streicheln, positive Energie", "Ganz viel Nähe und Kuscheln", "Nur gezielt/zweckmäßig", "Kommt von selbst, wenn bereit"] }
+        ]
+      }
+      </script>
+
     </div>
   </div>
 </div>
 {% endblock content %}
 
 {% block extrascripts %}
-  {# Optional: volles Bootstrap-Bundle (nur falls benötigt)
+  {# Optional: volles Bootstrap-Bundle (falls eingebunden)
   <script src="{{ get_url(path='bootstrap/js/bootstrap.bundle.min.js') }}" defer></script>
   #}
 
   <script>
     (function() {
+      var dataEl = document.getElementById('quizData');
+      var cfg = JSON.parse(dataEl.textContent);
+      var TOTAL = cfg.total || (cfg.questions ? cfg.questions.length : 0);
+      var container = document.getElementById('quizContainer');
       var form = document.getElementById('quizForm');
+
+      var letters = ['A','B','C','D','E'];
+      var letterToElement = { 'A':'Holz','B':'Feuer','C':'Erde','D':'Metall','E':'Wasser' };
+      var elementOrder = ['Holz','Feuer','Erde','Metall','Wasser'];
+
+      // Render Fragen
+      cfg.questions.forEach(function(q, idx){
+        var card = document.createElement('div');
+        card.className = 'card quiz-card mb-3';
+        card.id = 'card-q' + (idx+1);
+
+        var head = document.createElement('div');
+        head.className = 'card-header';
+        head.innerHTML = '<h5 class="mb-0">Frage ' + (idx+1) + '</h5>';
+
+        var body = document.createElement('div');
+        body.className = 'card-body';
+        var p = document.createElement('p');
+        p.className = 'mb-3';
+        p.textContent = q.q;
+        body.appendChild(p);
+
+        q.a.forEach(function(text, i){
+          var val = letters[i];
+          var wrap = document.createElement('div');
+          wrap.className = 'custom-control custom-radio mb-2';
+          var input = document.createElement('input');
+          input.type = 'radio';
+          input.className = 'custom-control-input quiz-input';
+          input.name = 'q' + (idx+1);
+          input.id = 'q' + (idx+1) + '_' + val;
+          input.value = val;
+
+          var label = document.createElement('label');
+          label.className = 'custom-control-label';
+          label.setAttribute('for', input.id);
+          label.textContent = text + ' (' + val + ')';
+
+          wrap.appendChild(input);
+          wrap.appendChild(label);
+          body.appendChild(wrap);
+        });
+
+        card.appendChild(head);
+        card.appendChild(body);
+        container.appendChild(card);
+      });
+
+      // UI Elemente
       var inputs = Array.prototype.slice.call(document.querySelectorAll('.quiz-input'));
       var progressBar = document.getElementById('quizProgress');
       var progressText = document.getElementById('progressText');
@@ -364,10 +238,6 @@
       var img1 = document.getElementById('resultImg1');
       var img2 = document.getElementById('resultImg2');
       var mixPlus = document.getElementById('mixPlus');
-
-      var TOTAL = 19;
-      var elementOrder = ['Holz','Feuer','Erde','Metall','Wasser'];
-      var letterToElement = { 'A':'Holz','B':'Feuer','C':'Erde','D':'Metall','E':'Wasser' };
 
       var singleText = {
         'Holz': 'Holz-Typ: athletisch, zielstrebig, manchmal stur – liebt klare Aufgaben und Bewegung. Biete Herausforderungen und strukturiertes Vorwärts, dann entfaltet es seine Stärke.',
@@ -391,6 +261,8 @@
       };
 
       function countAnswered() {
+        // frisch ermitteln (weil wir dynamisch gerendert haben)
+        inputs = Array.prototype.slice.call(document.querySelectorAll('.quiz-input'));
         var names = new Set(inputs.map(function(i){return i.name;}));
         var answered = 0;
         names.forEach(function(n) {
@@ -402,22 +274,31 @@
         answeredCountEl.textContent = answered;
       }
 
-      inputs.forEach(function(i){
-        i.addEventListener('change', countAnswered);
+      // Events
+      document.addEventListener('change', function(e){
+        if (e.target.classList && e.target.classList.contains('quiz-input')) countAnswered();
       });
 
       function evaluate() {
         var counts = { 'Holz':0, 'Feuer':0, 'Erde':0, 'Metall':0, 'Wasser':0 };
-        var groupNames = Array.from(new Set(inputs.map(function(i){return i.name;})));
-        groupNames.forEach(function(n){
+        var names = new Set(Array.prototype.slice.call(document.querySelectorAll('.quiz-input')).map(function(i){return i.name;}));
+        names.forEach(function(n){
           var checked = form.querySelector('input[name="'+n+'"]:checked');
           if (checked) {
-            var element = letterToElement[checked.value];
-            counts[element] = (counts[element]||0)+1;
+            var el = letterToElement[checked.value];
+            counts[el] = (counts[el]||0)+1;
           }
         });
 
         var answered = Object.values(counts).reduce(function(a,b){return a+b;},0);
+        var resultAlert = document.getElementById('resultAlert');
+        var resultCard  = document.getElementById('resultCard');
+        var resultTitle = document.getElementById('resultTitle');
+        var resultText  = document.getElementById('resultText');
+        var img1 = document.getElementById('resultImg1');
+        var img2 = document.getElementById('resultImg2');
+        var mixPlus = document.getElementById('mixPlus');
+
         if (answered === 0) {
           resultAlert.classList.remove('d-none','alert-success','alert-warning');
           resultAlert.classList.add('alert-info');
@@ -433,38 +314,35 @@
         resultAlert.classList.add('d-none');
         resultCard.classList.remove('d-none');
         img1.style.display = 'none'; img2.style.display = 'none'; mixPlus.style.display = 'none';
-        img1.src = ''; img2.src = '';
-        img1.alt = ''; img2.alt = '';
+        img1.src = ''; img2.src = ''; img1.alt = ''; img2.alt = '';
 
         if (tops.length === 1) {
           var el = tops[0];
           resultTitle.textContent = 'Ihr Pferd ähnelt dem Element: ' + el;
           resultText.textContent = singleText[el] + ' – Sie möchten mehr dazu erfahren? Sprechen Sie mich gern an.';
-          img1.src = '{{ get_url(path="img/quiz/") }}' + el.toLowerCase() + '.jpg';
+          img1.src = "{{ get_url(path='img/quiz/') }}" + el.toLowerCase() + ".jpg";
           img1.alt = 'Symbolbild Element ' + el;
           img1.style.display = 'block';
         } else {
           var sorted = tops.slice().sort(function(a,b){
             return elementOrder.indexOf(a) - elementOrder.indexOf(b);
           });
-
-          // Für 2er-Mix: spezieller Text; für 3+ Mix: generischer Text
           var title = 'Mischtyp: ' + sorted.join(' + ');
           resultTitle.textContent = title;
 
           if (sorted.length === 2) {
             var key = sorted[0] + '+' + sorted[1];
-            resultText.textContent = (mixText[key] || 'Ihr Pferd vereint zwei Elemente ausgewogen. Struktur & Sicherheit helfen, die Stärken optimal zu nutzen.') + ' – Sprechen Sie mich gern an.';
+            resultText.textContent = (mixText[key] || 'Ihr Pferd vereint zwei Elemente ausgewogen. Struktur und Sicherheit helfen, die Stärken optimal zu nutzen.') + ' – Sprechen Sie mich gern an.';
           } else {
-            resultText.textContent = 'Ihr Pferd vereint mehrere Elemente auf hohem Niveau (' + sorted.join(', ') + '). Mit einem individuell abgestimmten Plan lassen sich diese Stärken gezielt nutzen. – Sprechen Sie mich gern an.';
+            resultText.textContent = 'Ihr Pferd vereint mehrere Elemente (' + sorted.join(', ') + '). Mit einem individuell abgestimmten Plan lassen sich diese Stärken gezielt nutzen. – Sprechen Sie mich gern an.';
           }
 
-          img1.src = '{{ get_url(path="img/quiz/") }}' + sorted[0].toLowerCase() + '.jpg';
+          img1.src = "{{ get_url(path='img/quiz/') }}" + sorted[0].toLowerCase() + ".jpg";
           img1.alt = 'Symbolbild Element ' + sorted[0];
           img1.style.display = 'block';
 
           if (sorted.length >= 2) {
-            img2.src = '{{ get_url(path="img/quiz/") }}' + sorted[1].toLowerCase() + '.jpg';
+            img2.src = "{{ get_url(path='img/quiz/') }}" + sorted[1].toLowerCase() + ".jpg";
             img2.alt = 'Symbolbild Element ' + sorted[1];
             mixPlus.style.display = 'inline-block';
             img2.style.display = 'block';
@@ -474,6 +352,7 @@
         document.getElementById('resultBox').scrollIntoView({behavior:'smooth', block:'start'});
       }
 
+      var evalBtn = document.getElementById('evalBtn');
       evalBtn.addEventListener('click', evaluate);
       countAnswered();
     })();
