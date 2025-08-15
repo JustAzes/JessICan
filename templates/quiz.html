@@ -372,7 +372,7 @@
           var label = document.createElement('label');
           label.className = 'custom-control-label';
           label.setAttribute('for', input.id);
-          label.textContent = text + ' (' + val + ')';
+          label.textContent = text; // + ' (' + val + ')';
 
           wrap.appendChild(input);
           wrap.appendChild(label);
