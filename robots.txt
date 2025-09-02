@@ -1,0 +1,12 @@
+# www.robotstxt.org/
+# www.google.com/support/webmasters/bin/answer.py?hl=en&answer=156449
+User-Agent: *
+
+# Asimov's law
+Disallow: /harming/humans
+Disallow: /ignoring/human/orders
+Disallow: /harm/to/self
+
+Allow: /
+
+Sitemap: https://tierheilpraxis-jessican.de/sitemap.xml
