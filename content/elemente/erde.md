@@ -13,8 +13,8 @@ intro = "Gelassen, sozial und verbindlich: Der Erde-Hund schätzt Nähe, verläs
 character = "Der klassische, tolerante Familienhund: ruhig, ausgeglichen, geduldig und sehr sozial. Er bindet sich tief an seine Bezugspersonen, wirkt mitunter träge und lässt sich am besten durch Futter und Leckerlis motivieren."
 health = "Besitzt einen stabilen Körperbau, der stark zu Übergewicht neigt (‚leichtfuttrig‘). Typische Beschwerden sind Verdauungsprobleme (Durchfall, Blähungen), weiche Bindegewebskonturen, Lymphstau und Futterunverträglichkeiten."
 harmony = "Perfekt für Halter, die Gelassenheit und beständige Routinen schätzen. Ein sehr hitziger Alltag (durch einen Feuer-Halter) bringt den Erde-Hund aus der Balance."
-front_image = "img/quiz/erde.jpg"
-back_image = "img/quiz/erde.jpg"
-front_alt = "Illustration zum TCVM-Element Erde mit Hund"
-back_alt = "Illustration zum TCVM-Element Erde mit Hund"
+front_image = "img/elemente/erde-vorderseite.webp"
+back_image = "img/elemente/erde-rueckseite.webp"
+front_alt = "Illustration der TCVM-Karte Element Erde mit einem entspannt liegenden Hund unter einem großen Baum"
+back_alt = "Rückseite der Erde-Hund-Karte mit Angaben zu Charakter, Körper und Gesundheit sowie Hund-Mensch-Harmonie"
 +++
