@@ -13,8 +13,8 @@ intro = "Lebhaft, verbindlich und feinfühlig für jede Stimmung: Der Feuer-Hund
 character = "Liebt Aufmerksamkeit, ist freundlich, extrovertiert und sehr kommunikativ. Er reagiert extrem sensibel auf Stimmungen, ist schnell erregbar, überdreht leicht und neigt zu Hyperaktivität oder Trennungsangst."
 health = "Zeigt oft ein elegantes Fell und fließende Bewegungen. Gesundheitliche Schwachstellen sind das Herz-Kreislauf-System, Durchblutungsstörungen (wie kalte Pfoten bei innerer Hitze) sowie empfindliche Ohren."
 harmony = "Braucht viel Zuwendung, Nähe und kreative Trainingsformen (wie Trickdogging). Ein kontrollierender Halter (Metall-Typ) oder rein leistungsfixierter Halter (Holz-Typ) führt schnell zur Überforderung des Hundes."
-front_image = "img/quiz/feuer.jpg"
+front_image = "img/elemente/feuer-vorderseite.webp"
 back_image = "img/quiz/feuer.jpg"
-front_alt = "Illustration zum TCVM-Element Feuer mit Hund"
-back_alt = "Illustration zum TCVM-Element Feuer mit Hund"
+front_alt = "Vorderseite der Feuer-Hund-Karte: Element Feuer – Der Entertainer"
+back_alt = "Informationen zum Feuer-Hund"
 +++
