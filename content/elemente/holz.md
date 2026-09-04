@@ -13,8 +13,8 @@ intro = "Tatkräftig, mutig und zielorientiert: Der Holz-Hund möchte Aufgaben l
 character = "Selbstbewusst, furchtlos, reaktionsfreudig und stark leistungsorientiert. Der Hund ist schnell frustriert oder ungeduldig, wenn es nicht vorangeht, und neigt zu dominantem Verhalten."
 health = "Kräftiger, athletischer Körperbau mit wachen Augen. Neigt zu dauerhafter Muskelspannung, Sehnenerkrankungen, Krallenproblemen und allergischem Juckreiz. Die Verdauung reagiert bei Stress oft mit Verstopfung oder Blähungen."
 harmony = "Braucht klare Führung und fordernde Aufgaben (wie z. B. Agility). Er profitiert von ruhigen Haltern (Erde-Typ), bildet jedoch eine explosive Mischung mit unsicheren Menschen (Wasser-Typ), da der Hund dann die Kontrolle übernimmt."
-front_image = "img/quiz/holz.jpg"
-back_image = "img/quiz/holz.jpg"
-front_alt = "Illustration zum TCVM-Element Holz mit Hund"
-back_alt = "Illustration zum TCVM-Element Holz mit Hund"
+front_image = "img/elemente/holz-vorderseite.webp"
+back_image = "img/elemente/holz-rueckseite.webp"
+front_alt = "Illustration der TCVM-Karte Element Holz mit einem athletischen Hund in einem Wald"
+back_alt = "Rückseite der Holz-Hund-Karte mit Angaben zu Charakter, Körper und Gesundheit sowie Hund-Mensch-Harmonie"
 +++

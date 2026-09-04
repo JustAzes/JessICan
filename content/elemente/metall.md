@@ -13,8 +13,8 @@ intro = "Verlässlich, unabhängig und ordnungsliebend: Der Metall-Hund fühlt s
 character = "Distanziert, unabhängig, loyal und extrem strukturiert. Der Hund liebt feste Routinen, braucht viel Zeit bei Veränderungen und begegnet neuen Situationen oft erst argwöhnisch oder zurückhaltend."
 health = "Das Fell ist oft eher schlicht oder dünn, die Haut neigt zu extremer Trockenheit und trockenen Ekzemen. Typisch sind Anfälligkeiten für Atemwegserkrankungen (Husten, Asthma) und eine große Empfindlichkeit gegenüber feuchter Kälte, weshalb der Hund schnell friert."
 harmony = "Erwartet vom Halter Fairness, Respekt und Beständigkeit. Passt hervorragend zu strukturierten Menschen, kommt aber schlecht mit sehr sprunghaften Haltern (Feuer-Typ) zurecht."
-front_image = "img/quiz/metall.jpg"
-back_image = "img/quiz/metall.jpg"
-front_alt = "Illustration zum TCVM-Element Metall mit Hund"
-back_alt = "Illustration zum TCVM-Element Metall mit Hund"
+front_image = "img/elemente/metall-vorderseite.webp"
+back_image = "img/elemente/metall-rueckseite.webp"
+front_alt = "Illustration der TCVM-Karte Element Metall mit einem sitzenden Hund zwischen Kristallen und Zahnrädern"
+back_alt = "Rückseite der Metall-Hund-Karte mit Angaben zu Charakter, Körper und Gesundheit sowie Hund-Mensch-Harmonie"
 +++

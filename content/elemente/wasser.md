@@ -13,8 +13,8 @@ intro = "Feinfühlig, vorsichtig und aufmerksam: Der Wasser-Hund braucht Sicherh
 character = "Sehr vorsichtig, misstrauisch und stark reizempfindlich, benötigt eine lange Eingewöhnungszeit. Er arbeitet oft aus Angst vor Fehlern mit, weshalb Bestrafung extrem kontraproduktiv ist, und zeigt sich in Gruppen meist unauffällig oder rangniedrig."
 health = "Friert sehr leicht und sollte bei Kälte geschützt werden. Neigt zu Problemen im Rücken- und Lendenbereich, Arthrose und einem schwachen Immunsystem bei Dauerstress."
 harmony = "Braucht zwingend eine souveräne, ruhige Führungsfigur, die Sicherheit vermittelt. Ungeduldige Menschen (Holz-Typ) oder selbst ängstliche Halter verstärken die Panik des Hundes massiv."
-front_image = "img/quiz/wasser.jpg"
-back_image = "img/quiz/wasser.jpg"
-front_alt = "Illustration zum TCVM-Element Wasser mit Hund"
-back_alt = "Illustration zum TCVM-Element Wasser mit Hund"
+front_image = "img/elemente/wasser-vorderseite.webp"
+back_image = "img/elemente/wasser-rueckseite.webp"
+front_alt = "Illustration der TCVM-Karte Element Wasser mit einem ruhig sitzenden Hund an einem See"
+back_alt = "Rückseite der Wasser-Hund-Karte mit Angaben zu Charakter, Körper und Gesundheit sowie Hund-Mensch-Harmonie"
 +++

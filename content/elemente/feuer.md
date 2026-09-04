@@ -14,7 +14,7 @@ character = "Liebt Aufmerksamkeit, ist freundlich, extrovertiert und sehr kommun
 health = "Zeigt oft ein elegantes Fell und fließende Bewegungen. Gesundheitliche Schwachstellen sind das Herz-Kreislauf-System, Durchblutungsstörungen (wie kalte Pfoten bei innerer Hitze) sowie empfindliche Ohren."
 harmony = "Braucht viel Zuwendung, Nähe und kreative Trainingsformen (wie Trickdogging). Ein kontrollierender Halter (Metall-Typ) oder rein leistungsfixierter Halter (Holz-Typ) führt schnell zur Überforderung des Hundes."
 front_image = "img/elemente/feuer-vorderseite.webp"
-back_image = "img/quiz/feuer.jpg"
-front_alt = "Vorderseite der Feuer-Hund-Karte: Element Feuer – Der Entertainer"
-back_alt = "Informationen zum Feuer-Hund"
+back_image = "img/elemente/feuer-rueckseite.webp"
+front_alt = "Illustration der TCVM-Karte Element Feuer mit einem aufmerksamen Hund auf einer sonnigen Blumenwiese"
+back_alt = "Rückseite der Feuer-Hund-Karte mit Angaben zu Charakter, Körper und Gesundheit sowie Hund-Mensch-Harmonie"
 +++
