@@ -87,6 +87,7 @@
 
 .element-hero {
   position: relative;
+  overflow: hidden;
   padding: 7.5rem 0 4.75rem;
   background:
     radial-gradient(circle at 8% 18%, rgba(255, 255, 255, 0.95) 0, rgba(255, 255, 255, 0) 34%),
@@ -408,14 +409,21 @@
   margin-inline: auto;
 }
 
+.element-hero-card img,
 .element-card-figure img {
   transition: transform 180ms ease, box-shadow 180ms ease;
 }
 
+.element-hero-card a:hover img,
+.element-hero-card a:focus-visible img,
 .element-card-figure a:hover img,
 .element-card-figure a:focus img {
   transform: translateY(-4px);
   box-shadow: 0 30px 80px rgba(30, 42, 36, 0.18);
+}
+
+.element-card-save {
+  margin: 0.55rem 0 0;
 }
 
 .element-downloads {
@@ -678,6 +686,7 @@
 
 @media (prefers-reduced-motion: reduce) {
   .element-button,
+  .element-hero-card img,
   .element-card-figure img,
   .element-switch {
     transition: none;
