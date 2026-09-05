@@ -1,26 +1,15 @@
 {% extends "template.html" %}
 
-{% set card_front = "img/elemente/feuer-vorderseite.webp" %}
-{% set card_back = "img/elemente/feuer-rueckseite.webp" %}
-{% if page.extra.slug == "holz" %}
-  {% set_global card_front = "img/elemente/holz-vorderseite.webp" %}
-  {% set_global card_back = "img/elemente/holz-rueckseite.webp" %}
-{% elif page.extra.slug == "erde" %}
-  {% set_global card_front = "img/elemente/erde-vorderseite.webp" %}
-  {% set_global card_back = "img/elemente/erde-rueckseite.webp" %}
-{% elif page.extra.slug == "metall" %}
-  {% set_global card_front = "img/elemente/metall-vorderseite.webp" %}
-  {% set_global card_back = "img/elemente/metall-rueckseite.webp" %}
-{% elif page.extra.slug == "wasser" %}
-  {% set_global card_front = "img/elemente/wasser-vorderseite.webp" %}
-  {% set_global card_back = "img/elemente/wasser-rueckseite.webp" %}
-{% endif %}
-
 {% block title %}{{ page.title }} | {{ config.title }}{% endblock title %}
 {% block description %}<meta name="description" content="{{ page.description }}">{% endblock description %}
 {% block canonical %}<link rel="canonical" href="{{ page.permalink | safe }}">{% endblock canonical %}
 
 {% block metatags %}
+{% set card_front = "img/elemente/feuer-vorderseite.webp" %}
+{% if page.extra.slug == "holz" %}{% set card_front = "img/elemente/holz-vorderseite.webp" %}
+{% elif page.extra.slug == "erde" %}{% set card_front = "img/elemente/erde-vorderseite.webp" %}
+{% elif page.extra.slug == "metall" %}{% set card_front = "img/elemente/metall-vorderseite.webp" %}
+{% elif page.extra.slug == "wasser" %}{% set card_front = "img/elemente/wasser-vorderseite.webp" %}{% endif %}
 <meta property="og:title" content="{{ page.title }} | {{ config.title }}">
 <meta property="og:description" content="{{ page.description }}">
 <meta property="og:image" content="{{ get_url(path=card_front) | safe }}">
@@ -32,6 +21,11 @@
 {% endblock metatags %}
 
 {% block headextras %}
+{% set card_front = "img/elemente/feuer-vorderseite.webp" %}
+{% if page.extra.slug == "holz" %}{% set card_front = "img/elemente/holz-vorderseite.webp" %}
+{% elif page.extra.slug == "erde" %}{% set card_front = "img/elemente/erde-vorderseite.webp" %}
+{% elif page.extra.slug == "metall" %}{% set card_front = "img/elemente/metall-vorderseite.webp" %}
+{% elif page.extra.slug == "wasser" %}{% set card_front = "img/elemente/wasser-vorderseite.webp" %}{% endif %}
 <link rel="stylesheet" href="{{ get_url(path='css/elemente.css') }}">
 <link rel="stylesheet" href="{{ get_url(path='css/elemente-karten.css') }}">
 <link rel="stylesheet" href="{{ get_url(path='css/elemente-karten-bilder.css') }}">
@@ -41,6 +35,21 @@
 
 {% block header %}{% endblock header %}
 {% block content %}
+{% set card_front = "img/elemente/feuer-vorderseite.webp" %}
+{% set card_back = "img/elemente/feuer-rueckseite.webp" %}
+{% if page.extra.slug == "holz" %}
+  {% set card_front = "img/elemente/holz-vorderseite.webp" %}
+  {% set card_back = "img/elemente/holz-rueckseite.webp" %}
+{% elif page.extra.slug == "erde" %}
+  {% set card_front = "img/elemente/erde-vorderseite.webp" %}
+  {% set card_back = "img/elemente/erde-rueckseite.webp" %}
+{% elif page.extra.slug == "metall" %}
+  {% set card_front = "img/elemente/metall-vorderseite.webp" %}
+  {% set card_back = "img/elemente/metall-rueckseite.webp" %}
+{% elif page.extra.slug == "wasser" %}
+  {% set card_front = "img/elemente/wasser-vorderseite.webp" %}
+  {% set card_back = "img/elemente/wasser-rueckseite.webp" %}
+{% endif %}
 <main class="element-page element--{{ page.extra.slug }}" id="inhalt">
   <section class="element-hero" aria-labelledby="element-title">
     <div class="element-shell">
