@@ -64,6 +64,7 @@
 
 {% block content %}
 {%- set slug = page.extra.slug -%}
+{%- set card_sheet = "img/elemente/" ~ slug ~ "-karte.jpg" -%}
 {%- set front_webp = "img/elemente/" ~ slug ~ "-vorderseite.webp" -%}
 {%- set front_webp_sm = "img/elemente/" ~ slug ~ "-vorderseite-640.webp" -%}
 {%- set front_jpg = "img/elemente/" ~ slug ~ "-vorderseite.jpg" -%}
@@ -114,7 +115,7 @@
             </picture>
           </a>
           <figcaption>Die {{ page.extra.element }}-Karte – tippen zum Vergrößern</figcaption>
-          <p class="element-card-save"><a class="element-text-link" href="{{ get_url(path=front_jpg) }}" download>Karte aufs Handy speichern</a></p>
+          <p class="element-card-save"><a class="element-text-link" href="{{ get_url(path=card_sheet) }}" download>Karte speichern – Vorder- &amp; Rückseite</a></p>
         </figure>
       </div>
     </div>
