@@ -159,7 +159,7 @@ Für Pferde, die in einem Offenstall leben, ist es wichtig, ihnen ihre Bewegungs
             <source media="(min-width: 1600px)" srcset="https://tierheilpraxis-jessican.de/img/blog/silvester_3_1920.avif 1824w" type="image/avif" sizes="95vw">
             <source media="(min-width: 1600px)" srcset="https://tierheilpraxis-jessican.de/img/blog/silvester_3_1920.webp 1824w" type="image/webp" sizes="95vw">
             <source media="(min-width: 1600px)" srcset="https://tierheilpraxis-jessican.de/img/blog/silvester_3_1920.jpeg 1824w" type="image/jpeg" sizes="95vw">
-            <img src="https://tierheilpraxis-jessican.de/img/blog/silvester_3.png" alt="Glücklicher Hund zu Silvester in Langebrück" title="Glücklicher Hund zu Silvester in Langebrück"  loading="lazy" sizes="30vw"  class="featurette-image img-fluid mx-auto rounded-img" style="aspect-ratio: 1/1; object-fit: cover;">
+            <img src="https://tierheilpraxis-jessican.de/img/blog/silvester_3_1024.jpeg" alt="Glücklicher Hund zu Silvester in Langebrück" title="Glücklicher Hund zu Silvester in Langebrück"  loading="lazy" sizes="30vw"  class="featurette-image img-fluid mx-auto rounded-img" style="aspect-ratio: 1/1; object-fit: cover;">
         </picture>
     </div>
   </div>

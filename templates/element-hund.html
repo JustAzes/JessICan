@@ -63,6 +63,8 @@
 
 {% block header %}{% endblock header %}
 
+{% block main_open %}{% endblock main_open %}
+{% block main_close %}{% endblock main_close %}
 {% block content %}
 {%- set slug = page.extra.slug -%}
 {%- set card_sheet = "img/elemente/" ~ slug ~ "-karte.jpg" -%}

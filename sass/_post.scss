@@ -24,13 +24,15 @@
     font-size: 18px;
     font-style: italic;
     margin-top: 0;
-    color: $gray-600;
+    // $gray-600 erreicht auf Weiß nur 3,3:1 und ist damit zu hell.
+  color: $gray-700;
     > a {
-      text-decoration: none;
+      // Dauerhaft unterstrichen: im Fließtext darf ein Link nicht allein
+      // über die Farbe erkennbar sein (WCAG 1.4.1).
+      text-decoration: underline;
       color: $gray-900;
       &:focus,
       &:hover {
-        text-decoration: underline;
         color: $primary;
       }
     }
@@ -43,3 +45,38 @@
     }
   }
 }
+
+// Teilen-Links am Beitragsende: reine Links, keine fremde Bibliothek.
+.share-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.share-link {
+  display: inline-flex;
+  gap: 0.5rem;
+  align-items: center;
+  padding: 0.55rem 1rem;
+  color: $white;
+  border-radius: 999px;
+  font-family: 'Open Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    color: $white;
+    text-decoration: none;
+    filter: brightness(0.9);
+  }
+}
+
+.share-link--facebook { background-color: #2d4373; }
+.share-link--whatsapp { background-color: #1f7a45; }
+.share-link--mail { background-color: $gray-700; }

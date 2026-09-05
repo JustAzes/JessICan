@@ -16,7 +16,7 @@
 
 {% block header %}
 <!-- Page Header -->
-<header class="masthead" style="background-image: url('{{ get_url(path="/img/kurse/akupressur_kurs_hunde_bg.jpg")}}')">
+<header class="masthead" style="background-image: url('{{ get_url(path="/img/kurse/akupressur_kurs_hunde_bg.jpg") }}'); background-image: image-set(url('{{ get_url(path="/img/kurse/akupressur_kurs_hunde_bg.webp") }}') type('image/webp'), url('{{ get_url(path="/img/kurse/akupressur_kurs_hunde_bg.jpg") }}') type('image/jpeg'))">
   <div class="overlay">
   </div>
   <div class="container">

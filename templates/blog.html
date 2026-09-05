@@ -9,7 +9,7 @@
 
 <!-- Page Header -->
 {% block header %}
-  <header class="masthead" style="background-image: url('{{ get_url(path="/img/blog-main.jpeg")}}')">
+  <header class="masthead" style="background-image: url('{{ get_url(path="/img/blog-main.jpeg") }}'); background-image: image-set(url('{{ get_url(path="/img/blog-main.webp") }}') type('image/webp'), url('{{ get_url(path="/img/blog-main.jpeg") }}') type('image/jpeg'))">
     <div class="overlay">
     </div>
     <div class="container">
