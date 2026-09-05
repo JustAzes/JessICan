@@ -1,0 +1,41 @@
+.tcvm-image-card-grid {
+  align-items: start;
+  gap: clamp(1.25rem, 3vw, 2.25rem);
+}
+
+.tcvm-image-card {
+  margin: 0;
+  min-width: 0;
+}
+
+.tcvm-image-card__frame {
+  background: #f7f4ef;
+  border: 1px solid rgba(75, 68, 59, 0.12);
+  border-radius: 22px;
+  padding: clamp(0.55rem, 1.7vw, 0.95rem);
+  box-shadow: 0 16px 36px rgba(40, 35, 30, 0.10);
+}
+
+.tcvm-image-card__frame img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 15px;
+}
+
+.tcvm-image-card .tcvm-card-caption {
+  margin-top: 0.7rem;
+  text-align: center;
+}
+
+@media (max-width: 760px) {
+  .tcvm-image-card-grid {
+    grid-template-columns: 1fr;
+    max-width: 480px;
+    margin-inline: auto;
+  }
+
+  .tcvm-image-card__frame {
+    border-radius: 18px;
+  }
+}
