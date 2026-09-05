@@ -1,5 +1,21 @@
 {% extends "template.html" %}
 
+{% set card_front = "img/elemente/feuer-vorderseite.webp" %}
+{% set card_back = "img/elemente/feuer-rueckseite.webp" %}
+{% if page.extra.slug == "holz" %}
+  {% set_global card_front = "img/elemente/holz-vorderseite.webp" %}
+  {% set_global card_back = "img/elemente/holz-rueckseite.webp" %}
+{% elif page.extra.slug == "erde" %}
+  {% set_global card_front = "img/elemente/erde-vorderseite.webp" %}
+  {% set_global card_back = "img/elemente/erde-rueckseite.webp" %}
+{% elif page.extra.slug == "metall" %}
+  {% set_global card_front = "img/elemente/metall-vorderseite.webp" %}
+  {% set_global card_back = "img/elemente/metall-rueckseite.webp" %}
+{% elif page.extra.slug == "wasser" %}
+  {% set_global card_front = "img/elemente/wasser-vorderseite.webp" %}
+  {% set_global card_back = "img/elemente/wasser-rueckseite.webp" %}
+{% endif %}
+
 {% block title %}{{ page.title }} | {{ config.title }}{% endblock title %}
 {% block description %}<meta name="description" content="{{ page.description }}">{% endblock description %}
 {% block canonical %}<link rel="canonical" href="{{ page.permalink | safe }}">{% endblock canonical %}
@@ -7,8 +23,8 @@
 {% block metatags %}
 <meta property="og:title" content="{{ page.title }} | {{ config.title }}">
 <meta property="og:description" content="{{ page.description }}">
-<meta property="og:image" content="{{ get_url(path=page.extra.front_image) | safe }}">
-<meta property="og:image:alt" content="{{ page.extra.front_alt }}">
+<meta property="og:image" content="{{ get_url(path=card_front) | safe }}">
+<meta property="og:image:alt" content="Vorderseite der {{ page.extra.element }}-Hund-Karte">
 <meta property="og:url" content="{{ page.permalink | safe }}">
 <meta property="og:type" content="article">
 <meta property="og:locale" content="de_DE">
@@ -18,8 +34,9 @@
 {% block headextras %}
 <link rel="stylesheet" href="{{ get_url(path='css/elemente.css') }}">
 <link rel="stylesheet" href="{{ get_url(path='css/elemente-karten.css') }}">
-<link rel="preload" as="image" href="{{ get_url(path=page.extra.front_image) }}">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"{{ page.title }}","description":"{{ page.description }}","url":"{{ page.permalink | safe }}","image":"{{ get_url(path=page.extra.front_image) | safe }}","inLanguage":"de-DE"}</script>
+<link rel="stylesheet" href="{{ get_url(path='css/elemente-karten-bilder.css') }}">
+<link rel="preload" as="image" href="{{ get_url(path=card_front) }}" type="image/webp">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"{{ page.title }}","description":"{{ page.description }}","url":"{{ page.permalink | safe }}","image":"{{ get_url(path=card_front) | safe }}","inLanguage":"de-DE"}</script>
 {% endblock headextras %}
 
 {% block header %}{% endblock header %}
@@ -34,48 +51,25 @@
           <h1 id="element-title">{{ page.extra.element }}-Hund</h1>
           <p class="element-subtitle">{{ page.extra.subtitle }}</p>
           <p class="element-intro">{{ page.extra.intro }}</p>
-          <dl class="element-facts"><div><dt>Emotion</dt><dd>{{ page.extra.emotion }}</dd></div><div><dt>Funktionskreis</dt><dd>{{ page.extra.organs }}</dd></div></dl>
-          <div class="element-actions"><a class="element-button element-button--primary" href="#karte">Karte ansehen</a><a class="element-button element-button--secondary" href="#profil">Profil lesen</a></div>
+          <div class="element-actions"><a class="element-button element-button--primary" href="#karte">Karte ansehen</a></div>
         </div>
-        <figure class="element-hero-card"><img src="{{ get_url(path=page.extra.front_image) }}" alt="{{ page.extra.front_alt }}" fetchpriority="high" decoding="async"><figcaption>{{ page.extra.element }} · {{ page.extra.subtitle }}</figcaption></figure>
+        <figure class="element-hero-card"><img src="{{ get_url(path=card_front) }}" alt="Vorderseite der {{ page.extra.element }}-Hund-Karte: {{ page.extra.subtitle }}" fetchpriority="high" decoding="async"><figcaption>{{ page.extra.element }} · {{ page.extra.subtitle }}</figcaption></figure>
       </div>
     </div>
   </section>
 
   <section class="element-card-section" id="karte" aria-labelledby="karte-title">
     <div class="element-shell">
-      <div class="element-section-heading element-section-heading--center"><p class="element-kicker">Die Karte zum Element</p><h2 id="karte-title">{{ page.extra.element }} – {{ page.extra.subtitle }}</h2><p>Vorder- und Rückseite sind hier als responsive digitale Karte umgesetzt und bleiben auch auf dem Smartphone gut lesbar.</p></div>
-      <div class="tcvm-card-grid">
-        <div>
-          <article class="tcvm-print-card tcvm-card-front" aria-label="Vorderseite der {{ page.extra.element }}-Karte">
-            <img class="tcvm-card-image" src="{{ get_url(path=page.extra.front_image) }}" alt="" loading="lazy" decoding="async">
-            <div class="tcvm-card-front-copy"><p class="tcvm-card-eyebrow">Element {{ page.extra.element }}</p><h3>{{ page.extra.element }}</h3><p>{{ page.extra.subtitle }}</p></div>
-          </article>
-          <p class="tcvm-card-caption">Vorderseite</p>
-        </div>
-        <div>
-          <article class="tcvm-print-card tcvm-card-back" aria-label="Rückseite der {{ page.extra.element }}-Karte">
-            <header class="tcvm-card-back-head"><p>Element {{ page.extra.element }}</p><h3>{{ page.extra.subtitle }}</h3></header>
-            <div class="tcvm-card-back-list">
-              <section class="tcvm-card-back-item"><h4>Charakter · {{ page.extra.emotion }}</h4><p>{{ page.extra.character }}</p></section>
-              <section class="tcvm-card-back-item"><h4>Körper &amp; Gesundheit · {{ page.extra.organs }}</h4><p>{{ page.extra.health }}</p></section>
-              <section class="tcvm-card-back-item"><h4>Hund-Mensch-Harmonie</h4><p>{{ page.extra.harmony }}</p></section>
-            </div>
-          </article>
-          <p class="tcvm-card-caption">Rückseite</p>
-        </div>
-      </div>
-      <p class="tcvm-card-tip">Tipp: Diese Seite eignet sich direkt als QR-Ziel am Stand. Die Karteninhalte sind zusätzlich darunter als gut lesbarer Webtext aufbereitet.</p>
-    </div>
-  </section>
-
-  <section class="element-section" id="profil" aria-labelledby="profil-title">
-    <div class="element-shell">
-      <div class="element-section-heading"><p class="element-kicker">Das Profil im Überblick</p><h2 id="profil-title">Woran erkennst du einen {{ page.extra.element }}-Hund?</h2></div>
-      <div class="element-profile-grid">
-        <article class="element-info-card"><span class="element-card-number">01</span><p class="element-info-label">Charakter</p><h3>TCM-Emotion: {{ page.extra.emotion }}</h3><p>{{ page.extra.character }}</p></article>
-        <article class="element-info-card"><span class="element-card-number">02</span><p class="element-info-label">Körper &amp; Gesundheit</p><h3>{{ page.extra.organs }}</h3><p>{{ page.extra.health }}</p></article>
-        <article class="element-info-card"><span class="element-card-number">03</span><p class="element-info-label">Hund-Mensch-Harmonie</p><h3>Was im Alltag unterstützt</h3><p>{{ page.extra.harmony }}</p></article>
+      <div class="element-section-heading element-section-heading--center"><p class="element-kicker">Die Originalkarte</p><h2 id="karte-title">Vorder- und Rückseite</h2></div>
+      <div class="tcvm-card-grid tcvm-image-card-grid">
+        <figure class="tcvm-image-card">
+          <div class="tcvm-image-card__frame"><img src="{{ get_url(path=card_front) }}" alt="Vorderseite der {{ page.extra.element }}-Hund-Karte: {{ page.extra.subtitle }}" loading="eager" decoding="async"></div>
+          <figcaption class="tcvm-card-caption">Vorderseite</figcaption>
+        </figure>
+        <figure class="tcvm-image-card">
+          <div class="tcvm-image-card__frame"><img src="{{ get_url(path=card_back) }}" alt="Rückseite der {{ page.extra.element }}-Hund-Karte mit Charakter, Körper und Gesundheit sowie Hund-Mensch-Harmonie" loading="lazy" decoding="async"></div>
+          <figcaption class="tcvm-card-caption">Rückseite</figcaption>
+        </figure>
       </div>
     </div>
   </section>
