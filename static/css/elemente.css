@@ -1062,9 +1062,9 @@
 
 .element-target-grid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: clamp(1rem, 2.5vw, 1.75rem);
-  max-width: 940px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(1rem, 2.5vw, 1.5rem);
+  max-width: 1060px;
   margin-inline: auto;
 }
 
@@ -1138,6 +1138,10 @@
   .element-target-grid {
     grid-template-columns: 1fr;
     max-width: 520px;
+  }
+
+  .element-target-title {
+    font-size: 1.35rem;
   }
 }
 

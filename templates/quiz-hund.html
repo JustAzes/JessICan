@@ -1,0 +1,477 @@
+{% extends "template.html" %}
+
+{% block title %}Welches Element ist dein Hund? Element-Quiz | {{ config.title }}{% endblock title %}
+
+{% block description %}
+<meta name="description" content="Interaktives Element-Quiz für Hundehalter: 20 Fragen aus dem Hundealltag zeigen, welchem der fünf TCVM-Elemente – Holz, Feuer, Erde, Metall oder Wasser – dein Hund am ehesten entspricht. Mit Auswertung für Mischtypen.">
+{% endblock description %}
+
+{% block canonical %}<link rel="canonical" href="{{ page.permalink | safe }}">{% endblock canonical %}
+
+{% block metatags %}
+<meta property="og:title" content="Welches Element ist dein Hund? | {{ config.title }}">
+<meta property="og:description" content="20 kurze Fragen aus dem Hundealltag – am Ende erfährst du, welchem der fünf TCVM-Elemente dein Hund am ehesten entspricht.">
+<meta property="og:image" content="{{ get_url(path='img/elemente/holz-vorderseite.jpg') | safe }}">
+<meta property="og:url" content="{{ page.permalink | safe }}">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="de_DE">
+<meta property="og:site_name" content="{{ config.title }}">
+<meta name="twitter:card" content="summary_large_image">
+{% endblock metatags %}
+
+{% block headextras %}
+<link rel="stylesheet" href="{{ get_url(path='css/quiz.css') }}">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "Startseite", "item": "{{ get_url(path='/', trailing_slash=true) | safe }}"},
+    {"@type": "ListItem", "position": 2, "name": "Die fünf Elemente", "item": "{{ get_url(path='elemente/', trailing_slash=true) | safe }}"},
+    {"@type": "ListItem", "position": 3, "name": "Die fünf Elemente beim Hund", "item": "{{ get_url(path='elemente/hund/', trailing_slash=true) | safe }}"},
+    {"@type": "ListItem", "position": 4, "name": "Element-Quiz für Hunde", "item": "{{ page.permalink | safe }}"}
+  ]
+}
+</script>
+{% endblock headextras %}
+
+{% block header %}{% endblock header %}
+
+{% block content %}
+<main class="quiz-page" id="inhalt">
+
+  <section class="quiz-hero" aria-labelledby="quiz-title">
+    <div class="quiz-shell">
+      <nav class="quiz-breadcrumb" aria-label="Brotkrumen-Navigation">
+        <a href="{{ get_url(path='/', trailing_slash=true) }}">Startseite</a><span aria-hidden="true">/</span>
+        <a href="{{ get_url(path='elemente/', trailing_slash=true) }}">Die fünf Elemente</a><span aria-hidden="true">/</span>
+        <a href="{{ get_url(path='elemente/hund/', trailing_slash=true) }}">Beim Hund</a><span aria-hidden="true">/</span>
+        <span aria-current="page">Quiz</span>
+      </nav>
+
+      <p class="quiz-kicker">TCVM · Element-Quiz für Hunde</p>
+      <h1 id="quiz-title">Welches Element ist dein Hund?</h1>
+      <p class="quiz-subtitle">20 Fragen aus dem Hundealltag – spontan beantwortet</p>
+      <p class="quiz-intro">Antworte so, wie dein Hund sich <em>üblicherweise</em> verhält, nicht wie er an einem guten Tag sein könnte. Es geht um Tendenzen, nicht um Schubladen. Am Ende erfährst du, welchem Element er am ehesten entspricht – oder ob er ein Mischtyp ist. Fragen, bei denen nichts richtig passt, kannst du überspringen; sie zählen dann nicht mit.</p>
+
+      <ul class="quiz-legend">
+        <li><i class="quiz-dot--holz" aria-hidden="true"></i>Holz</li>
+        <li><i class="quiz-dot--feuer" aria-hidden="true"></i>Feuer</li>
+        <li><i class="quiz-dot--erde" aria-hidden="true"></i>Erde</li>
+        <li><i class="quiz-dot--metall" aria-hidden="true"></i>Metall</li>
+        <li><i class="quiz-dot--wasser" aria-hidden="true"></i>Wasser</li>
+      </ul>
+
+      <div class="quiz-actions">
+        <a class="quiz-button quiz-button--primary" href="#frage-1">Quiz starten</a>
+        <a class="quiz-button" href="{{ get_url(path='elemente/hund/', trailing_slash=true) }}">Zu den Elementekarten</a>
+      </div>
+    </div>
+  </section>
+
+  <div class="quiz-progress">
+    <div class="quiz-shell quiz-progress-inner">
+      <span class="quiz-progress-label"><span id="answeredCount">0</span> von 20 beantwortet</span>
+      <span class="quiz-progress-track">
+        <span class="quiz-progress-fill" id="quizProgress" role="progressbar" aria-valuemin="0" aria-valuemax="20" aria-valuenow="0" aria-label="Beantwortete Fragen"></span>
+      </span>
+    </div>
+  </div>
+
+  <section class="quiz-questions">
+    <div class="quiz-shell">
+      <form id="quizForm" novalidate>
+        <div id="quizContainer"></div>
+      </form>
+    </div>
+
+    <div class="quiz-submit">
+      <div class="quiz-shell quiz-submit-inner">
+        <button id="evalBtn" type="button" class="quiz-button quiz-button--primary">Auswerten</button>
+        <span class="quiz-submit-count"><span id="submitCount">0</span> von 20 Fragen beantwortet</span>
+      </div>
+    </div>
+
+    <div class="quiz-shell">
+      <p class="quiz-hint">Dieses Quiz ersetzt keine Diagnose. Es hilft, Tendenzen einzuordnen. Für eine individuelle Einschätzung <a href="{{ get_url(path='contact/', trailing_slash=true) }}">sprich mich gern an</a>.</p>
+    </div>
+  </section>
+
+  <section class="quiz-result" id="resultBox" aria-live="polite" aria-atomic="true" hidden>
+    <div class="quiz-shell">
+      <p class="quiz-result-note" id="resultNote" hidden></p>
+
+      <article class="quiz-result-card" id="resultCard" hidden>
+        <header class="quiz-result-head">
+          <div class="quiz-result-images">
+            <img id="resultImg1" src="" alt="" width="1024" height="1536" hidden>
+            <span class="quiz-result-plus" id="mixPlus" aria-hidden="true" hidden>+</span>
+            <img id="resultImg2" src="" alt="" width="1024" height="1536" hidden>
+          </div>
+          <div>
+            <p class="quiz-result-kicker" id="resultKicker">Dein Ergebnis</p>
+            <h2 class="quiz-result-title" id="resultTitle"></h2>
+          </div>
+        </header>
+
+        <div class="quiz-result-body">
+          <div id="resultText"></div>
+          <div class="quiz-result-actions">
+            <a class="quiz-button quiz-button--primary" href="{{ get_url(path='contact/', trailing_slash=true) }}">Termin anfragen</a>
+            <a class="quiz-button" href="{{ get_url(path='elemente/hund/', trailing_slash=true) }}">Zur passenden Elementekarte</a>
+            <a class="quiz-button" href="{{ get_url(path='behandlung/behandlungsmethoden/', trailing_slash=true) }}">Meine Leistungen</a>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <aside class="quiz-note">
+    <div class="quiz-shell quiz-note-inner">
+      <div class="quiz-note-mark" aria-hidden="true">i</div>
+      <div>
+        <h2>Wichtiger Hinweis</h2>
+        <p>Die Element-Zuordnung ist eine typologische Orientierung aus der Traditionellen Chinesischen Veterinärmedizin (TCVM). Sie ersetzt keine tierärztliche Diagnose oder Behandlung. Beschwerden, akute Symptome oder deutliche Verhaltensänderungen sollten immer tierärztlich abgeklärt werden. Du hast auch ein Pferd? Dann geht es <a href="{{ get_url(path='quiz/', trailing_slash=true) }}">hier zum Pferde-Quiz</a>.</p>
+      </div>
+    </div>
+  </aside>
+
+  <div hidden>
+      <script id="quizData" type="application/json">
+      {
+        "total": 20,
+        "questions": [
+          {
+            "q": "Begegnung mit einem fremden Hund an der Leine – was passiert?",
+            "a": [
+              "Geht aufgerichtet und steif hin und will klären, wer hier das Sagen hat.",
+              "Zieht quietschend vor Freude hin und will sofort spielen.",
+              "Bleibt freundlich und gelassen, schnüffelt kurz und trottet weiter.",
+              "Ignoriert den anderen souverän oder geht bewusst auf Abstand.",
+              "Macht einen Bogen, drückt sich hinter dich oder erstarrt."
+            ]
+          },
+          {
+            "q": "Es klingelt an der Tür.",
+            "a": [
+              "Prescht vor, bellt kontrollierend und stellt sich zwischen dich und die Tür.",
+              "Dreht völlig auf, jault vor Freude und springt am Besuch hoch.",
+              "Steht gemütlich auf, begrüßt freundlich und legt sich wieder hin.",
+              "Meldet einmal sachlich und zieht sich dann auf seinen Platz zurück.",
+              "Erschrickt, bellt unsicher oder verschwindet in einem anderen Raum."
+            ]
+          },
+          {
+            "q": "Der Tagesablauf ist plötzlich ganz anders als sonst.",
+            "a": [
+              "Nutzt das Durcheinander, testet Grenzen und macht sein eigenes Ding.",
+              "Wird aufgedreht und findet schwer zurück in die Ruhe.",
+              "Nimmt es gelassen – solange das Futter zur gewohnten Zeit kommt.",
+              "Ist sichtlich irritiert und braucht Tage, bis die Routine wieder sitzt.",
+              "Wird unsicher, zieht sich zurück und beobachtet aus der Distanz."
+            ]
+          },
+          {
+            "q": "Was motiviert ihn im Training am stärksten?",
+            "a": [
+              "Eine echte Aufgabe mit klarem Ziel – Suchen, Apportieren, Tempo.",
+              "Abwechslung, Tricks, Lob und vor allem deine Begeisterung.",
+              "Futter. Ganz eindeutig Futter.",
+              "Saubere Wiederholung nach festen Regeln – es soll richtig sein.",
+              "Ruhe und Vorhersehbarkeit, damit er nichts falsch machen kann."
+            ]
+          },
+          {
+            "q": "Wie klappt das Alleinbleiben?",
+            "a": [
+              "Gut, solange er vorher ausgelastet war – sonst räumt er die Wohnung um.",
+              "Schwer: Er jammert, bellt oder kann einfach nicht abschalten.",
+              "Er schläft die meiste Zeit einfach durch.",
+              "Zuverlässig, wenn der Ablauf drumherum immer derselbe ist.",
+              "Er wartet angespannt an der Tür und entspannt erst, wenn du zurück bist."
+            ]
+          },
+          {
+            "q": "In einer Hundegruppe ist er …",
+            "a": [
+              "vorne dabei, selbstbewusst und beansprucht Ressourcen für sich.",
+              "überall gleichzeitig, kaspert herum und macht Stimmung.",
+              "verträglich mit fast allen und geht Streit aus dem Weg.",
+              "am Rand, sucht sich einen Hund aus und bleibt bei dem.",
+              "unauffällig weit unten in der Rangordnung – manchmal wird er übersehen."
+            ]
+          },
+          {
+            "q": "Du schimpfst einmal deutlich mit ihm.",
+            "a": [
+              "Er setzt sich zur Wehr oder wird störrisch – Druck erzeugt Gegendruck.",
+              "Er ist sofort tief getroffen und dreht danach erst recht auf.",
+              "Er wirkt kurz betreten und ist eine Minute später wieder da.",
+              "Er zieht sich zurück und trägt es dir eine ganze Weile nach.",
+              "Er duckt sich weg, verkriecht sich – und arbeitet danach aus Angst mit."
+            ]
+          },
+          {
+            "q": "Körperbau und Bewegung",
+            "a": [
+              "Kräftig, muskulös, sehnig – wirkt eigentlich immer unter Spannung.",
+              "Elegant und fein, mit fließenden, schnellen Bewegungen.",
+              "Stabil und rund, gemütlicher Gang, neigt sichtbar zu Übergewicht.",
+              "Eher schlank und drahtig, aufrechte und kontrollierte Haltung.",
+              "Zart oder feingliedrig, oft mit angespanntem Rücken."
+            ]
+          },
+          {
+            "q": "Fell und Haut",
+            "a": [
+              "Kräftiges Fell, aber immer wieder allergischer Juckreiz oder Krallenprobleme.",
+              "Glänzendes, elegantes Fell – dafür sind die Ohren empfindlich.",
+              "Weiches Fell und weiche Konturen, neigt zu Lymphstau.",
+              "Schlicht oder dünn; die Haut ist auffällig trocken, manchmal schuppig.",
+              "Eher stumpf, und bei Dauerstress verliert er schnell Substanz."
+            ]
+          },
+          {
+            "q": "Sein Lieblingsplatz in der Wohnung ist …",
+            "a": [
+              "erhöht, mit Überblick über den ganzen Raum.",
+              "direkt an dir, am liebsten mit Körperkontakt.",
+              "mitten im Weg, wo die ganze Familie vorbeikommt.",
+              "immer derselbe – und ungern ein anderer.",
+              "geschützt: in einer Ecke, unter dem Tisch oder in der Box."
+            ]
+          },
+          {
+            "q": "Wärme und Kälte",
+            "a": [
+              "Hitze macht ihm deutlich mehr zu schaffen als Kälte.",
+              "Wirkt oft warm und hechelt schnell, hat aber kalte Pfoten.",
+              "Kommt mit beidem zurecht, wird bei Feuchtigkeit aber träge.",
+              "Feuchte Kälte ist sein Feind – da friert er sofort.",
+              "Friert generell schnell und sucht Decken und Wärmequellen."
+            ]
+          },
+          {
+            "q": "Wenn er Stress hat, reagiert der Bauch …",
+            "a": [
+              "mit Verstopfung oder Blähungen – alles ist verkrampft.",
+              "kaum, dafür kann er vor Aufregung gar nicht fressen.",
+              "sofort mit Durchfall oder Blähungen; der Magen ist die Schwachstelle.",
+              "mit Verstopfung; er hält buchstäblich alles zurück.",
+              "mit häufigem Urinabsatz oder einer empfindlichen Blase."
+            ]
+          },
+          {
+            "q": "Beim Tierarzt …",
+            "a": [
+              "wehrt er sich aktiv und will die Situation kontrollieren.",
+              "ist er völlig aufgedreht und begrüßt erst mal das ganze Wartezimmer.",
+              "lässt er fast alles mit sich machen, besonders gegen Leberwurst.",
+              "erträgt er es steif und würdevoll, will aber schnell wieder raus.",
+              "zittert er, drückt sich an dich und braucht sehr behutsame Hände."
+            ]
+          },
+          {
+            "q": "Auf dem Spaziergang …",
+            "a": [
+              "zieht er nach vorn, will Strecke machen und Aufgaben lösen.",
+              "läuft er im Zickzack und begrüßt alles und jeden.",
+              "schnüffelt er ausgiebig, das Tempo bleibt gemütlich.",
+              "läuft er zuverlässig dieselbe Runde und mag Abweichungen nicht.",
+              "bleibt er dicht bei dir und schreckt bei Unbekanntem zurück."
+            ]
+          },
+          {
+            "q": "Silvester, Gewitter oder Staubsauger",
+            "a": [
+              "Er bellt dagegen an und will die Quelle stellen.",
+              "Er wird hektisch, läuft herum und kann nicht runterfahren.",
+              "Er hebt kurz den Kopf und schläft weiter.",
+              "Er zieht sich wortlos an seinen Platz zurück.",
+              "Panik: Er sucht ein Versteck und zittert."
+            ]
+          },
+          {
+            "q": "Ruhephasen im Alltag",
+            "a": [
+              "Braucht Anleitung dazu, sonst sucht er sich selbst Arbeit.",
+              "Fallen ihm schwer – er ist schnell wieder auf den Beinen.",
+              "Sein Spezialgebiet: Er schläft viel und gern.",
+              "Nimmt er sich selbst, sehr regelmäßig und ungern gestört.",
+              "Nur wenn er sich wirklich sicher fühlt."
+            ]
+          },
+          {
+            "q": "Wie zeigt er Zuneigung?",
+            "a": [
+              "Über gemeinsames Tun – er bringt dir Spielzeug und Aufgaben.",
+              "Überschwänglich, laut, mit viel Körper- und Blickkontakt.",
+              "Er legt sich einfach an dich und bleibt liegen.",
+              "Zurückhaltend, aber absolut verlässlich – er ist einfach da.",
+              "Leise und vorsichtig, dafür sehr tief an eine Bezugsperson gebunden."
+            ]
+          },
+          {
+            "q": "Was bringt ihn am meisten aus dem Gleichgewicht?",
+            "a": [
+              "Wenn nichts vorangeht und ihm langweilig wird.",
+              "Alleinsein und zu wenig Zuwendung.",
+              "Dauerhafte Unruhe und ein hektischer, hitziger Alltag.",
+              "Ständige Veränderung und unklare Regeln.",
+              "Druck, Lautstärke und Situationen ohne Rückzugsmöglichkeit."
+            ]
+          },
+          {
+            "q": "Welche körperlichen Baustellen kennt ihr?",
+            "a": [
+              "Muskelverspannungen, Sehnen, Kreuzband, Krallen.",
+              "Herz und Kreislauf, Durchblutung, empfindliche Ohren.",
+              "Verdauung, Futterunverträglichkeiten, Übergewicht.",
+              "Atemwege und Husten, trockene Ekzeme.",
+              "Rücken und Lende, Arthrose, ein anfälliges Immunsystem."
+            ]
+          },
+          {
+            "q": "Was braucht er von dir am dringendsten?",
+            "a": [
+              "Klare Führung und echte Aufgaben.",
+              "Nähe, Kreativität – und jemanden, der ihn wieder herunterfährt.",
+              "Verlässliche Routinen und Bewegung statt Extraleckerli.",
+              "Fairness, Respekt und Beständigkeit.",
+              "Eine souveräne, ruhige Begleitung, die Sicherheit gibt."
+            ]
+          }
+        ]
+      }      </script>
+  </div>
+
+</main>
+{% endblock content %}
+
+{% block extrascripts %}
+  <script>
+    window.QUIZ_CONFIG = {
+      imgBase: "{{ get_url(path='img/quiz') }}/",
+      contactUrl: "{{ get_url(path='contact/', trailing_slash=true) }}",
+      methodsUrl: "{{ get_url(path='behandlung/behandlungsmethoden/', trailing_slash=true) }}",
+      elementsUrl: "{{ get_url(path='elemente/hund/', trailing_slash=true) }}",
+      animal: "Hund",
+      animalPossessive: "dein Hund"
+    };
+
+    window.QUIZ_TEXTS = (function () {
+      var singleHTML = {
+        'Holz': `
+          <p><strong>Kurzprofil:</strong> Selbstbewusst, furchtlos und stark leistungsorientiert – ein Hund mit natürlichem Vorwärtsdrang und dem Wunsch, Aufgaben zu lösen.</p>
+          <ul>
+            <li><strong>Stärken:</strong> Mut, schnelle Auffassungsgabe, Ausdauer, klare Kommunikation.</li>
+            <li><strong>Herausforderungen:</strong> Ungeduld, Frust bei Stillstand, dominantes Auftreten, Druck erzeugt Gegendruck.</li>
+          </ul>
+          <p><strong>Alltag &amp; Training:</strong> Er braucht klare Führung und fordernde Aufgaben – Suchspiele, Apportieren, Agility, Mantrailing. Kurze Einheiten mit sichtbarem Ziel wirken besser als langes Üben. Konflikte löst du nicht über Härte, sondern indem du ihm eine Aufgabe gibst, an der er sich abarbeiten kann.</p>
+          <p><strong>Gesundheit im Blick:</strong> Der Organkreis Leber und Gallenblase steht hinter dauerhafter Muskelspannung, Sehnen- und Bandproblemen, Krallenveränderungen und allergischem Juckreiz. Bei Stress reagiert die Verdauung oft mit Verstopfung oder Blähungen. Regelmäßige Lockerung der Muskulatur und echte Auslastung sind hier keine Kür.</p>
+          <p><strong>Passung Mensch:</strong> Ruhige, souveräne Halter (Erde-Typ) tun ihm gut. Mit unsicheren Menschen (Wasser-Typ) entsteht schnell eine schwierige Mischung, weil er dann selbst die Führung übernimmt.</p>
+          <p><em>Merksatz:</em> Gib ihm eine Aufgabe – dann muss er sich keine suchen.</p>
+        `,
+        'Feuer': `
+          <p><strong>Kurzprofil:</strong> Freundlich, extrovertiert und sehr kommunikativ – der Hund, der Aufmerksamkeit liebt und jede Stimmung im Raum sofort mitbekommt.</p>
+          <ul>
+            <li><strong>Stärken:</strong> Kontaktfreude, Lernbereitschaft, Ausdruck, große Nähe zum Menschen.</li>
+            <li><strong>Herausforderungen:</strong> Schnelle Erregbarkeit, Überdrehen, Hyperaktivität, Trennungsangst.</li>
+          </ul>
+          <p><strong>Alltag &amp; Training:</strong> Er blüht bei kreativen Trainingsformen auf – Trickdogging, Nasenarbeit, gemeinsame Spiele. Genauso wichtig ist aber das Gegenteil: geübte Ruhe. Kurze Einheiten, klare Endsignale und feste Pausen verhindern, dass er sich hochschaukelt. Er lernt Gelassenheit nur, wenn du sie ihm zeigst.</p>
+          <p><strong>Gesundheit im Blick:</strong> Hinter dem Element steht der Organkreis Herz und Dünndarm. Typisch sind Herz-Kreislauf-Themen, Durchblutungsstörungen – kalte Pfoten bei gleichzeitiger innerer Hitze – und empfindliche Ohren. Viele dieser Hunde wirken warm, hecheln früh und kommen abends schwer herunter.</p>
+          <p><strong>Passung Mensch:</strong> Ein kontrollierender Halter (Metall-Typ) oder ein rein leistungsfixierter (Holz-Typ) überfordert ihn schnell. Er braucht Zuwendung, Abwechslung und jemanden, der ihn aktiv herunterfährt.</p>
+          <p><em>Merksatz:</em> Ruhe ist bei ihm eine Übung – keine Selbstverständlichkeit.</p>
+        `,
+        'Erde': `
+          <p><strong>Kurzprofil:</strong> Der klassische, tolerante Familienhund: ruhig, ausgeglichen, geduldig und sehr sozial – tief gebunden an seine Menschen.</p>
+          <ul>
+            <li><strong>Stärken:</strong> Verträglichkeit, Nervenstärke, Verlässlichkeit, große Alltagstauglichkeit.</li>
+            <li><strong>Herausforderungen:</strong> Trägheit, Übergewicht, Grübeln, ein empfindlicher Magen-Darm-Trakt.</li>
+          </ul>
+          <p><strong>Alltag &amp; Training:</strong> Er lässt sich am besten über Futter motivieren – genau das wird ihm auf Dauer zum Verhängnis. Setze Leckerlis gezielt ein, rechne sie von der Tagesration ab und ersetze einen Teil der Belohnung durch Bewegung und Beschäftigung. Ruhige Gymnastik, Schnüffelarbeit und beständige Routinen passen gut zu ihm.</p>
+          <p><strong>Gesundheit im Blick:</strong> Der Organkreis Milz und Magen macht ihn anfällig für Verdauungsprobleme, Durchfall und Blähungen, Futterunverträglichkeiten, weiche Bindegewebskonturen und Lymphstau. Sein stabiler Körperbau nimmt schnell zu und gibt Gewicht nur langsam wieder ab.</p>
+          <p><strong>Passung Mensch:</strong> Perfekt für Halter, die Gelassenheit und beständige Abläufe schätzen. Ein sehr hitziger, hektischer Alltag (Feuer-Typ) bringt ihn aus der Balance.</p>
+          <p><em>Merksatz:</em> Nicht das nächste Leckerli, sondern die nächste Runde bringt ihn weiter.</p>
+        `,
+        'Metall': `
+          <p><strong>Kurzprofil:</strong> Distanziert, unabhängig, loyal und extrem strukturiert – ein Hund, der feste Routinen liebt und Neues erst einmal prüft.</p>
+          <ul>
+            <li><strong>Stärken:</strong> Verlässlichkeit, Konzentration, Sauberkeit im Arbeiten, echte Bindung ohne Anhänglichkeit.</li>
+            <li><strong>Herausforderungen:</strong> Lange Umstellungszeiten, Argwohn gegenüber Neuem, Rückzug bis hin zur Arbeitsverweigerung.</li>
+          </ul>
+          <p><strong>Alltag &amp; Training:</strong> Er arbeitet gern präzise und nach klaren Kriterien. Kündige Veränderungen an, halte Abläufe stabil und gib ihm Pausen, die wirklich ungestört sind. Er ist kein Hund für spontane Kurswechsel – aber wenn eine Sache einmal sitzt, sitzt sie.</p>
+          <p><strong>Gesundheit im Blick:</strong> Der Organkreis Lunge und Dickdarm zeigt sich in eher schlichtem oder dünnem Fell, ausgeprägt trockener Haut und trockenen Ekzemen. Typisch sind Anfälligkeiten der Atemwege – Husten, Asthma – und eine große Empfindlichkeit gegenüber feuchter Kälte. Anhaltender Kummer schwächt ihn spürbar.</p>
+          <p><strong>Passung Mensch:</strong> Er erwartet Fairness, Respekt und Beständigkeit. Zu strukturierten Menschen passt er hervorragend, mit sehr sprunghaften Haltern (Feuer-Typ) kommt er schlecht zurecht.</p>
+          <p><em>Merksatz:</em> Verlässlichkeit ist für ihn keine Marotte, sondern Sicherheit.</p>
+        `,
+        'Wasser': `
+          <p><strong>Kurzprofil:</strong> Sehr vorsichtig, misstrauisch und stark reizempfindlich – ein feinfühliger Hund, der Zeit und vor allem Sicherheit braucht.</p>
+          <ul>
+            <li><strong>Stärken:</strong> Feine Wahrnehmung, tiefe Bindung an seine Bezugsperson, große Aufmerksamkeit für kleinste Signale.</li>
+            <li><strong>Herausforderungen:</strong> Angst, Rückzug, lange Eingewöhnung, Mitarbeit aus Sorge vor Fehlern.</li>
+          </ul>
+          <p><strong>Alltag &amp; Training:</strong> Bestrafung ist bei ihm nicht nur unnötig, sondern kontraproduktiv – sie verstärkt genau das Muster, das ihn belastet. Arbeite in kleinen Schritten, lass ihm die Wahl über Abstand und Tempo, und belohne jeden Moment von Mut. Feste Rituale und ein geschützter Rückzugsort sind wichtiger als jede Trainingsmethode.</p>
+          <p><strong>Gesundheit im Blick:</strong> Der Organkreis Niere und Blase macht ihn kälteempfindlich – er friert leicht und sollte geschützt werden. Typisch sind Probleme im Rücken- und Lendenbereich, Arthrose und ein Immunsystem, das unter Dauerstress nachgibt.</p>
+          <p><strong>Passung Mensch:</strong> Er braucht zwingend eine souveräne, ruhige Führungsfigur. Ungeduldige Menschen (Holz-Typ) oder selbst ängstliche Halter verstärken seine Panik massiv.</p>
+          <p><em>Merksatz:</em> Sicherheit zuerst – Mut kommt danach von allein.</p>
+        `
+      };
+
+      var mixHTML = {
+        'Holz+Feuer': `
+          <p><strong>Mischtyp Holz + Feuer:</strong> Antrieb trifft Ausstrahlung – ein Hund mit viel Energie, der arbeiten <em>und</em> gefallen will.</p>
+          <p><strong>Alltag:</strong> Kombiniere zielgerichtete Aufgaben mit spielerischen Elementen, aber rahme beides klar ein: deutliches Startsignal, deutliches Ende. Lieber mehrere kurze Einheiten als eine lange, sonst kippt die Begeisterung in Überdrehtheit.</p>
+          <p><strong>Worauf achten:</strong> Beide Elemente neigen zu Hitze und Anspannung. Ausreichend echte Ruhephasen, kühlende Fütterung und ein bewusstes Herunterfahren am Abend halten ihn im Gleichgewicht.</p>
+        `,
+        'Holz+Erde': `
+          <p><strong>Mischtyp Holz + Erde:</strong> Tatkraft mit ruhigem Kern – arbeitswillig, dabei nervenstark und gut ansprechbar.</p>
+          <p><strong>Alltag:</strong> Fordernde Aufgaben im Wechsel mit Wohlfühlphasen. So bleibt die Motivation hoch, ohne dass er sich verspannt. Über Futter ist er gut zu motivieren – dosiere es bewusst.</p>
+          <p><strong>Worauf achten:</strong> Die Erde-Seite neigt zu Übergewicht, die Holz-Seite zu Sehnen- und Bandproblemen. Beides zusammen belastet die Gelenke. Regelmäßige, gleichmäßige Bewegung ist wichtiger als einzelne Kraftakte.</p>
+        `,
+        'Holz+Metall': `
+          <p><strong>Mischtyp Holz + Metall:</strong> Antrieb trifft Präzision – ein Hund, der Aufgaben nicht nur lösen, sondern richtig lösen will.</p>
+          <p><strong>Alltag:</strong> Klare Ziele und saubere Kriterien passen perfekt. Gib der Energie feste Bahnen: strukturierte Suchaufgaben, präzise Bodenarbeit, verlässliche Abläufe. Spontane Wechsel frustrieren ihn.</p>
+          <p><strong>Worauf achten:</strong> Beide Elemente neigen zu Anspannung – körperlich in der Muskulatur, innerlich in der Haltung. Achte auf Lockerung und darauf, dass er auch abschalten darf, ohne dass etwas „erledigt" wurde.</p>
+        `,
+        'Holz+Wasser': `
+          <p><strong>Mischtyp Holz + Wasser:</strong> Vorwärtsdrang trifft Vorsicht – er will los, traut sich aber nicht immer. Das kann sich als Unberechenbarkeit zeigen.</p>
+          <p><strong>Alltag:</strong> Erst Sicherheit herstellen (bekannter Ort, ruhige Person), dann Anforderungen steigern. Klare Ansagen ja, aber immer mit einem Ausweg: mehr Abstand, eine Pause, ein bekannter Ablauf.</p>
+          <p><strong>Worauf achten:</strong> Unter Druck kann aus Unsicherheit schnell Abwehr werden. Bestrafung verschärft das. Diese Kombination profitiert besonders von einer souveränen, ruhigen Bezugsperson.</p>
+        `,
+        'Feuer+Erde': `
+          <p><strong>Mischtyp Feuer + Erde:</strong> Verspielt und menschenbezogen, dabei grundsätzlich harmoniesuchend – ein sehr angenehmer Familienhund.</p>
+          <p><strong>Alltag:</strong> Kurze fröhliche Einheiten, dann ruhige Wiederholung. Die gute Stimmung trägt viel, aber lass ihn nicht überdrehen – klare Pausen helfen ihm, wieder herunterzukommen.</p>
+          <p><strong>Worauf achten:</strong> Aufregung schlägt bei ihm schnell auf den Magen. Feste Fütterungszeiten, ruhige Fütterungssituation und keine Action direkt nach dem Fressen.</p>
+        `,
+        'Feuer+Metall': `
+          <p><strong>Mischtyp Feuer + Metall:</strong> Ausdrucksstark und zugleich auf Form bedacht – er sucht Kontakt, will dabei aber wissen, woran er ist.</p>
+          <p><strong>Alltag:</strong> Abwechslung ja, aber sauber gerahmt. Präzise Signale und klares Timing geben ihm Halt; wenn es zu wild wird, erde ihn mit bekannten Übungen.</p>
+          <p><strong>Worauf achten:</strong> Die beiden Elemente ziehen in verschiedene Richtungen – Nähe gegen Distanz. Das kann widersprüchlich wirken. Halte das Reizniveau steuerbar und respektiere seine Rückzugszeiten.</p>
+        `,
+        'Feuer+Wasser': `
+          <p><strong>Mischtyp Feuer + Wasser:</strong> Zwischen Euphorie und Vorsicht – die Stimmung kann schnell kippen, in beide Richtungen.</p>
+          <p><strong>Alltag:</strong> Erst Sicherheit, dann steigern. Arbeite in kurzen positiven Reizen, belohne, mach Pause. Lies frühzeitig die Anspannungszeichen und nimm raus, bevor er hochfährt.</p>
+          <p><strong>Worauf achten:</strong> Diese Kombination reagiert besonders empfindlich auf Lärm und Trubel. Überschaubare Umgebungen, vertraute Menschen und feste Rituale zum Herunterfahren sind hier zentral.</p>
+        `,
+        'Erde+Metall': `
+          <p><strong>Mischtyp Erde + Metall:</strong> Verbindlich und ordentlich – ein verlässlicher Hund, der den Alltag ohne Drama mitträgt.</p>
+          <p><strong>Alltag:</strong> Rituale, klare Schritte, saubere Wiederholungen. Freundlich im Ton, aber konsequent in den Kriterien – so wächst seine Sicherheit.</p>
+          <p><strong>Worauf achten:</strong> Die Erde-Seite neigt zu Gewicht, die Metall-Seite zu trockener Haut und Atemwegsthemen. Ein geregelter Tagesablauf, ruhige Fütterung und Schutz vor feuchter Kälte decken beides gut ab.</p>
+        `,
+        'Erde+Wasser': `
+          <p><strong>Mischtyp Erde + Wasser:</strong> Sanft, nähebedürftig und sensibel – ein Hund mit viel Herz für seine Menschen.</p>
+          <p><strong>Alltag:</strong> Viel Bestätigung, kleine sichere Lernschritte, wohldosierte Reize. Nähe zulassen, ihn aber schrittweise auch eigenständiger machen, damit die Bindung nicht in Abhängigkeit kippt.</p>
+          <p><strong>Worauf achten:</strong> Beide Elemente reagieren empfindlich auf Feuchtigkeit und Kälte. Warm halten, trocken liegen, und bei Dauerstress genau auf Verdauung und Immunsystem schauen.</p>
+        `,
+        'Metall+Wasser': `
+          <p><strong>Mischtyp Metall + Wasser:</strong> Kontrolliert und wachsam – er braucht transparente Regeln <em>und</em> das Gefühl von Sicherheit.</p>
+          <p><strong>Alltag:</strong> Führe Neues strukturiert ein: kleiner Reiz, klare Auflösung, langsame Steigerung. Ein konsistentes Signalbild verhindert Verunsicherung; Wechselhaftigkeit ist sein größter Stressfaktor.</p>
+          <p><strong>Worauf achten:</strong> Diese Kombination friert schnell und hält Spannung im Rücken. Warme, trockene Liegeplätze, Schutz vor Zugluft und regelmäßige, sanfte Bewegung tun ihm gut.</p>
+        `
+      };
+      return { single: singleHTML, mix: mixHTML };
+    })();
+  </script>
+  <script src="{{ get_url(path='js/element-quiz.js') }}" defer></script>
+{% endblock extrascripts %}
