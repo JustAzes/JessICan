@@ -1,11 +1,9 @@
 +++
-title = "Über mich"
+title = "Infos & Preise"
 path = "behandlung/vorgehen"
 template = "vorgehen.html"
 +++
 
-
-## Meine Vorgehensweise
 
 Als Tierheilpraktiker ist es meine Leidenschaft, Tieren auf ganzheitliche Weise zu helfen und ihre Gesundheit zu fördern. In der Praxis biete ich eine Vielzahl von Methoden für die Behandlungen an, um das Wohlbefinden Ihrer geliebten Vierbeiner zu verbessern. 
 
