@@ -34,7 +34,8 @@ a {
 
 blockquote {
   font-style: italic;
-  color: $gray-600;
+  // $gray-600 erreicht auf Weiß nur 3,3:1 und ist damit zu hell.
+  color: $gray-700;
 }
 
 .section-heading {

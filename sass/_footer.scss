@@ -11,3 +11,42 @@ footer {
     text-align: center;
   }
 }
+// Soziale Netzwerke: runde Schaltflächen mit Inline-SVG statt FontAwesome.
+.visually-hidden {
+  position: absolute !important;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.social-link {
+  display: inline-flex;
+  width: 50px;
+  height: 50px;
+  align-items: center;
+  justify-content: center;
+  color: $white;
+  background-color: $gray-900;
+  border-radius: 50%;
+  transition: background-color 0.2s ease;
+
+  &:hover,
+  &:focus {
+    color: $white;
+    background-color: $primary;
+  }
+
+  svg {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+.list-inline-item .social-link {
+  vertical-align: middle;
+}

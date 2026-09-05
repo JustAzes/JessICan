@@ -9,7 +9,7 @@
   <meta name="robots" content="noindex, nofollow">
 {% endblock headextras %}
 {% block header %}
-  <header class="masthead" style="background-image: url('{{ get_url(path="/img/home-bg_large.jpeg")}}')">
+  <header class="masthead" style="background-image: url('{{ get_url(path="/img/home-bg_large.jpeg") }}'); background-image: image-set(url('{{ get_url(path="/img/home-bg_large.webp") }}') type('image/webp'), url('{{ get_url(path="/img/home-bg_large.jpeg") }}') type('image/jpeg'))">
     <div class="overlay">
     </div>
     <div class="container">

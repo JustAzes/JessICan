@@ -30,3 +30,29 @@
   object-fit: cover;
   border-radius: 20px;
 }
+// Bootstraps Standardgrün und -türkis erreichen mit weißer Schrift nur 3,1:1
+// und fallen damit unter die WCAG-Grenze von 4,5:1. Wir verwenden die
+// dunkleren Praxisfarben aus _variables.scss.
+.btn-success {
+  background-color: $success;
+  border-color: $success;
+  &:hover,
+  &:focus,
+  &:active {
+    color: $white;
+    background-color: darken($success, 7.5) !important;
+    border-color: darken($success, 7.5) !important;
+  }
+}
+
+.btn-info {
+  background-color: $info;
+  border-color: $info;
+  &:hover,
+  &:focus,
+  &:active {
+    color: $white;
+    background-color: darken($info, 7.5) !important;
+    border-color: darken($info, 7.5) !important;
+  }
+}

@@ -50,7 +50,7 @@
 
 {% block header %}
 <!-- Page Header -->
-<header class="masthead" style="background-image: url('{{ get_url(path="/img/vorgehen_1024.jpeg")}}')">
+<header class="masthead" style="background-image: url('{{ get_url(path="/img/vorgehen_1024.jpeg") }}'); background-image: image-set(url('{{ get_url(path="/img/vorgehen_1024.webp") }}') type('image/webp'), url('{{ get_url(path="/img/vorgehen_1024.jpeg") }}') type('image/jpeg'))">
   <div class="overlay"></div>
   <div class="container">
     <div class="row">
@@ -65,6 +65,8 @@
 </header>
 {% endblock header %}
 
+{% block main_open %}{% endblock main_open %}
+{% block main_close %}{% endblock main_close %}
 {% block content %}
 <main class="preis-page" id="inhalt">
 

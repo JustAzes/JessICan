@@ -22,33 +22,13 @@
     {% endblock canonical %}
 
     <title>{% block title %}{{ config.title }}{% endblock title %}</title>
-    <!--
-    <link href="{{ get_url(path='css/bootstrap.min.css') }}" rel="preload" as="style" onload="this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="{{ get_url(path='css/bootstrap.min.css') }}"></noscript>
 
-    <link href="{{ get_url(path='css/all.min.css') }}" rel="preload" as="style" onload="this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="{{ get_url(path='css/all.min.css') }}"></noscript>
-    
-    
-    <link href="{{ get_url(path='css/local-fonts.css') }}" rel="preload" as="style" onload="this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="{{ get_url(path='css/local-fonts.css') }}"></noscript> 
-    
-    -->
-    <!--
-    <link rel="stylesheet" href="https://tierheilpraxis-jessican.de/css/local-fonts.css">
-    <link rel="stylesheet" href="https://tierheilpraxis-jessican.de/css/bootstrap.min.css" type="text/css">
-    <link rel="stylesheet" href="https://tierheilpraxis-jessican.de/css/all.min.css" type="text/css">
-    <link rel="stylesheet" href="https://tierheilpraxis-jessican.de/clean-blog.css" type="text/css">
-    --> 
-    
-    <!--
-    <link rel="stylesheet" href="https://tierheilpraxis-jessican.de/css/styles.pure.css" type="text/css">
-    -->
-    <link rel="stylesheet" href="https://tierheilpraxis-jessican.de/css/local-fonts.css">
-    <link rel="stylesheet" href="https://tierheilpraxis-jessican.de/css/bootstrap.min.css" type="text/css">
-    <link rel="stylesheet" href="https://tierheilpraxis-jessican.de/css/all.min.css" type="text/css">
-    <link rel="stylesheet" href="https://tierheilpraxis-jessican.de/clean-blog.css" type="text/css">
-    
+    <!-- Ein einziges Stylesheet: Schriften, Bootstrap-Teilmenge und Theme.
+         Erzeugt aus sass/clean-blog.scss, siehe tools/build-css.sh -->
+    <link rel="preload" as="font" type="font/woff2" href="{{ get_url(path='fonts/OpenSans-Regular.woff2') }}" crossorigin>
+    <link rel="preload" as="font" type="font/woff2" href="{{ get_url(path='fonts/Lora-Regular.woff2') }}" crossorigin>
+    <link rel="stylesheet" href="{{ get_url(path='clean-blog.css') }}">
+
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
 
@@ -58,9 +38,7 @@
     <link rel="icon" type="image/png" sizes="16x16" href="{{ get_url(path="favicons/favicon-16x16.png") }}">
     <link rel="manifest" href="{{ get_url(path="favicons/site.webmanifest") }}">
     <link rel="mask-icon" href="{{ get_url(path="favicons/safari-pinned-tab.svg") }}" color="#5bbad5">
-    {% block analytics %}
-    <script data-goatcounter="https://jessican.goatcounter.com/count" async src="//gc.zgo.at/count.js" defer></script>
-    {% endblock analytics %}
+    {% block analytics %}{% endblock analytics %}
     {% block metatags %}
     <meta property="og:title" content="Tierheilpraktiker JessICan - natürlich gesund! Hund & Pferd">
     <meta property="og:description" content="Tierheilpraktiker JessICan: Akupunktur, Homöopathie, Phytotherapie, Manuelle Therapie, Aromatherapie & Ernährungsberatung für Hund & Pferd">
@@ -116,7 +94,7 @@
         data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
         aria-label="MENU">
         Menu
-        <i class="fas fa-bars"></i>
+        <svg class="nav-burger" viewBox="0 0 448 512" width="16" height="16" aria-hidden="true" focusable="false"><path fill="currentColor" d="M16 132h416c8.8 0 16-7.2 16-16V76c0-8.8-7.2-16-16-16H16C7.2 60 0 67.2 0 76v40c0 8.8 7.2 16 16 16zm0 160h416c8.8 0 16-7.2 16-16v-40c0-8.8-7.2-16-16-16H16c-8.8 0-16 7.2-16 16v40c0 8.8 7.2 16 16 16zm0 160h416c8.8 0 16-7.2 16-16v-40c0-8.8-7.2-16-16-16H16c-8.8 0-16 7.2-16 16v40c0 8.8 7.2 16 16 16z"/></svg>
       </button>
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
@@ -135,7 +113,7 @@
 
   <!-- Page Header -->
   {% block header %}
-  <header class="masthead" style="background-image: url('{{ get_url(path="/img/home-bg_large.jpeg")}}');background-size:100%">
+  <header class="masthead" style="background-image: url('{{ get_url(path="/img/home-bg_large.jpeg") }}'); background-image: image-set(url('{{ get_url(path="/img/home-bg_large.webp") }}') type('image/webp'), url('{{ get_url(path="/img/home-bg_large.jpeg") }}') type('image/jpeg'));background-size:100%">
     <div class="overlay">
     </div>
     <div class="container">
@@ -151,6 +129,9 @@
   </header>
   {% endblock header %}
 
+  {# Hauptbereich. Templates, die selbst ein <main> mitbringen (Elemente, Quiz,
+     Preise), überschreiben main_open/main_close mit einem leeren Block. #}
+  {% block main_open %}<main id="inhalt">{% endblock main_open %}
   {% block content %}
   <!-- Main Content -->
   <div class="container">
@@ -161,6 +142,7 @@
     </div>
   </div>
   {% endblock content %}
+  {% block main_close %}</main>{% endblock main_close %}
 
   <hr>
 
@@ -172,11 +154,13 @@
           <ul class="list-inline text-center">
             {% for item in config.extra.clean_blog_social %}
             <li class="list-inline-item">
-              <a href="{{ item.url | replace(from="$BASE_URL", to=config.base_url) }}" title="Start">
-                <span class="fa-stack fa-lg">
-                  <i class="fas fa-circle fa-stack-2x"></i>
-                  <i class="{{ item.icon }} fa-stack-1x fa-inverse"></i>
-                </span>
+              <a class="social-link" href="{{ item.url | replace(from="$BASE_URL", to=config.base_url) }}" rel="noopener" title="{{ item.name }}">
+                <span class="visually-hidden">{{ item.name }}</span>
+                {% if item.icon == "instagram" %}
+                <svg viewBox="0 0 448 512" width="20" height="20" aria-hidden="true" focusable="false"><path fill="currentColor" d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/></svg>
+                {% elif item.icon == "facebook" %}
+                <svg viewBox="0 0 512 512" width="20" height="20" aria-hidden="true" focusable="false"><path fill="currentColor" d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z"/></svg>
+                {% endif %}
               </a>
             </li>
             {% endfor %}
@@ -198,20 +182,14 @@
               <span id="currentYear"></span>
             {% endblock copyright %}
           </p>
-          <script>
-            document.getElementById('currentYear').innerHTML = new Date().getFullYear();
-          </script>
         </div>
       </div>
     </div>
   </footer>
 
-  <!-- Bootstrap core JavaScript -->
-  <script src="{{ get_url(path='js/jquery.min.js') }}" defer></script>
-  <script src="{{ get_url(path='js/bootstrap.bundle.min.js') }}" defer></script>
-
-  <!-- Custom scripts for this template -->
-  <script src="{{ get_url(path='js/clean-blog.min.js') }}" defer ></script>
+  <!-- Eigenes Skript statt jQuery und Bootstrap-JS: gebraucht wird nur noch
+       das Aufklappen der Navigation. -->
+  <script src="{{ get_url(path='js/site.js') }}" defer></script>
 
   
   <!--- Additional scripts -->
