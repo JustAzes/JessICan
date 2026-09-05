@@ -5,94 +5,247 @@
 {% block canonical %}<link rel="canonical" href="{{ page.permalink | safe }}">{% endblock canonical %}
 
 {% block metatags %}
-{% set card_front = "img/elemente/feuer-vorderseite.webp" %}
-{% if page.extra.slug == "holz" %}{% set card_front = "img/elemente/holz-vorderseite.webp" %}
-{% elif page.extra.slug == "erde" %}{% set card_front = "img/elemente/erde-vorderseite.webp" %}
-{% elif page.extra.slug == "metall" %}{% set card_front = "img/elemente/metall-vorderseite.webp" %}
-{% elif page.extra.slug == "wasser" %}{% set card_front = "img/elemente/wasser-vorderseite.webp" %}{% endif %}
+{%- set slug = page.extra.slug -%}
+{%- set front_webp = "img/elemente/" ~ slug ~ "-vorderseite.webp" -%}
+{%- set front_webp_sm = "img/elemente/" ~ slug ~ "-vorderseite-640.webp" -%}
+{%- set front_jpg = "img/elemente/" ~ slug ~ "-vorderseite.jpg" -%}
+{%- set back_webp = "img/elemente/" ~ slug ~ "-rueckseite.webp" -%}
+{%- set back_webp_sm = "img/elemente/" ~ slug ~ "-rueckseite-640.webp" -%}
+{%- set back_jpg = "img/elemente/" ~ slug ~ "-rueckseite.jpg" -%}
 <meta property="og:title" content="{{ page.title }} | {{ config.title }}">
 <meta property="og:description" content="{{ page.description }}">
-<meta property="og:image" content="{{ get_url(path=card_front) | safe }}">
-<meta property="og:image:alt" content="Vorderseite der {{ page.extra.element }}-Hund-Karte">
+<meta property="og:image" content="{{ get_url(path=front_jpg) | safe }}">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="{{ page.extra.front_height }}">
+<meta property="og:image:alt" content="Vorderseite der Elementekarte {{ page.extra.element }}-Hund – {{ page.extra.subtitle }}">
 <meta property="og:url" content="{{ page.permalink | safe }}">
 <meta property="og:type" content="article">
 <meta property="og:locale" content="de_DE">
+<meta property="og:site_name" content="{{ config.title }}">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{ page.title }}">
+<meta name="twitter:description" content="{{ page.description }}">
+<meta name="twitter:image" content="{{ get_url(path=front_jpg) | safe }}">
 {% endblock metatags %}
 
 {% block headextras %}
-{% set card_front = "img/elemente/feuer-vorderseite.webp" %}
-{% if page.extra.slug == "holz" %}{% set card_front = "img/elemente/holz-vorderseite.webp" %}
-{% elif page.extra.slug == "erde" %}{% set card_front = "img/elemente/erde-vorderseite.webp" %}
-{% elif page.extra.slug == "metall" %}{% set card_front = "img/elemente/metall-vorderseite.webp" %}
-{% elif page.extra.slug == "wasser" %}{% set card_front = "img/elemente/wasser-vorderseite.webp" %}{% endif %}
+{%- set slug = page.extra.slug -%}
+{%- set front_webp = "img/elemente/" ~ slug ~ "-vorderseite.webp" -%}
+{%- set front_webp_sm = "img/elemente/" ~ slug ~ "-vorderseite-640.webp" -%}
+{%- set front_jpg = "img/elemente/" ~ slug ~ "-vorderseite.jpg" -%}
+{%- set back_webp = "img/elemente/" ~ slug ~ "-rueckseite.webp" -%}
+{%- set back_webp_sm = "img/elemente/" ~ slug ~ "-rueckseite-640.webp" -%}
+{%- set back_jpg = "img/elemente/" ~ slug ~ "-rueckseite.jpg" -%}
 <link rel="stylesheet" href="{{ get_url(path='css/elemente.css') }}">
-<link rel="stylesheet" href="{{ get_url(path='css/elemente-karten.css') }}">
-<link rel="stylesheet" href="{{ get_url(path='css/elemente-karten-bilder.css') }}">
-<link rel="preload" as="image" href="{{ get_url(path=card_front) }}" type="image/webp">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"{{ page.title }}","description":"{{ page.description }}","url":"{{ page.permalink | safe }}","image":"{{ get_url(path=card_front) | safe }}","inLanguage":"de-DE"}</script>
+<link rel="preload" as="image" href="{{ get_url(path=front_webp) }}" imagesrcset="{{ get_url(path=front_webp_sm) }} 640w, {{ get_url(path=front_webp) }} 1200w" imagesizes="(max-width: 899px) 90vw, 440px" type="image/webp">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "{{ page.title }}",
+  "description": "{{ page.description }}",
+  "url": "{{ page.permalink | safe }}",
+  "image": ["{{ get_url(path=front_jpg) | safe }}", "{{ get_url(path=back_jpg) | safe }}"],
+  "inLanguage": "de-DE",
+  "isPartOf": {"@type": "WebSite", "name": "{{ config.title }}", "url": "{{ get_url(path='/', trailing_slash=true) | safe }}"},
+  "about": {"@type": "Thing", "name": "Fünf-Elemente-Lehre der Traditionellen Chinesischen Veterinärmedizin"},
+  "author": {"@type": "Person", "name": "{{ config.extra.author }}"},
+  "publisher": {"@type": "Organization", "name": "{{ config.title }}"}
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "Startseite", "item": "{{ get_url(path='/', trailing_slash=true) | safe }}"},
+    {"@type": "ListItem", "position": 2, "name": "Die fünf Elemente beim Hund", "item": "{{ get_url(path='elemente/', trailing_slash=true) | safe }}"},
+    {"@type": "ListItem", "position": 3, "name": "{{ page.extra.element }}-Hund", "item": "{{ page.permalink | safe }}"}
+  ]
+}
+</script>
 {% endblock headextras %}
 
 {% block header %}{% endblock header %}
+
 {% block content %}
-{% set card_front = "img/elemente/feuer-vorderseite.webp" %}
-{% set card_back = "img/elemente/feuer-rueckseite.webp" %}
-{% if page.extra.slug == "holz" %}
-  {% set card_front = "img/elemente/holz-vorderseite.webp" %}
-  {% set card_back = "img/elemente/holz-rueckseite.webp" %}
-{% elif page.extra.slug == "erde" %}
-  {% set card_front = "img/elemente/erde-vorderseite.webp" %}
-  {% set card_back = "img/elemente/erde-rueckseite.webp" %}
-{% elif page.extra.slug == "metall" %}
-  {% set card_front = "img/elemente/metall-vorderseite.webp" %}
-  {% set card_back = "img/elemente/metall-rueckseite.webp" %}
-{% elif page.extra.slug == "wasser" %}
-  {% set card_front = "img/elemente/wasser-vorderseite.webp" %}
-  {% set card_back = "img/elemente/wasser-rueckseite.webp" %}
-{% endif %}
-<main class="element-page element--{{ page.extra.slug }}" id="inhalt">
+{%- set slug = page.extra.slug -%}
+{%- set front_webp = "img/elemente/" ~ slug ~ "-vorderseite.webp" -%}
+{%- set front_webp_sm = "img/elemente/" ~ slug ~ "-vorderseite-640.webp" -%}
+{%- set front_jpg = "img/elemente/" ~ slug ~ "-vorderseite.jpg" -%}
+{%- set back_webp = "img/elemente/" ~ slug ~ "-rueckseite.webp" -%}
+{%- set back_webp_sm = "img/elemente/" ~ slug ~ "-rueckseite-640.webp" -%}
+{%- set back_jpg = "img/elemente/" ~ slug ~ "-rueckseite.jpg" -%}
+<main class="element-page element--{{ slug }}" id="inhalt">
+
   <section class="element-hero" aria-labelledby="element-title">
     <div class="element-shell">
-      <nav class="element-breadcrumb" aria-label="Brotkrumen-Navigation"><a href="{{ get_url(path='/', trailing_slash=true) }}">Startseite</a><span>/</span><span>TCVM-Elemente</span><span>/</span><span aria-current="page">{{ page.extra.element }}</span></nav>
+      <nav class="element-breadcrumb" aria-label="Brotkrumen-Navigation">
+        <a href="{{ get_url(path='/', trailing_slash=true) }}">Startseite</a><span aria-hidden="true">/</span>
+        <a href="{{ get_url(path='elemente/', trailing_slash=true) }}">Die fünf Elemente</a><span aria-hidden="true">/</span>
+        <span aria-current="page">{{ page.extra.element }}-Hund</span>
+      </nav>
+
       <div class="element-hero-grid">
         <div class="element-hero-copy">
           <p class="element-kicker">TCVM · Fünf-Elemente-Lehre</p>
           <h1 id="element-title">{{ page.extra.element }}-Hund</h1>
           <p class="element-subtitle">{{ page.extra.subtitle }}</p>
           <p class="element-intro">{{ page.extra.intro }}</p>
-          <div class="element-actions"><a class="element-button element-button--primary" href="#karte">Karte ansehen</a></div>
+
+          <dl class="element-facts">
+            <div>
+              <dt>Emotion</dt>
+              <dd>{{ page.extra.emotion }}</dd>
+            </div>
+            <div>
+              <dt>Organkreis</dt>
+              <dd>{{ page.extra.organs }}</dd>
+            </div>
+          </dl>
+
+          <div class="element-actions">
+            <a class="element-button element-button--primary" href="#karte">Karte ansehen &amp; speichern</a>
+            <a class="element-button" href="#profil">Zum Steckbrief</a>
+          </div>
         </div>
-        <figure class="element-hero-card"><img src="{{ get_url(path=card_front) }}" alt="Vorderseite der {{ page.extra.element }}-Hund-Karte: {{ page.extra.subtitle }}" fetchpriority="high" decoding="async"><figcaption>{{ page.extra.element }} · {{ page.extra.subtitle }}</figcaption></figure>
+
+        <figure class="element-hero-card">
+          <picture>
+            <source type="image/webp"
+                    srcset="{{ get_url(path=front_webp_sm) }} 640w, {{ get_url(path=front_webp) }} 1200w"
+                    sizes="(max-width: 899px) 90vw, 440px">
+            <img src="{{ get_url(path=front_jpg) }}"
+                 width="1200" height="{{ page.extra.front_height }}"
+                 alt="Vorderseite der Elementekarte: Element {{ page.extra.element }} – {{ page.extra.subtitle }}, Bleistiftzeichnung eines Hundes"
+                 fetchpriority="high" decoding="async">
+          </picture>
+          <figcaption>Vorderseite der Karte</figcaption>
+        </figure>
       </div>
     </div>
   </section>
 
   <section class="element-card-section" id="karte" aria-labelledby="karte-title">
     <div class="element-shell">
-      <div class="element-section-heading element-section-heading--center"><p class="element-kicker">Die Originalkarte</p><h2 id="karte-title">Vorder- und Rückseite</h2></div>
-      <div class="tcvm-card-grid tcvm-image-card-grid">
-        <figure class="tcvm-image-card">
-          <div class="tcvm-image-card__frame"><img src="{{ get_url(path=card_front) }}" alt="Vorderseite der {{ page.extra.element }}-Hund-Karte: {{ page.extra.subtitle }}" loading="eager" decoding="async"></div>
-          <figcaption class="tcvm-card-caption">Vorderseite</figcaption>
+      <div class="element-section-heading element-section-heading--center">
+        <p class="element-kicker">Die Karte vom Stand</p>
+        <h2 id="karte-title">Deine {{ page.extra.element }}-Karte – Vorder- und Rückseite</h2>
+        <p>Genau diese Karte gibt es bei uns vor Ort. Tippe auf ein Bild, um es in voller Größe zu öffnen, oder speichere es dir direkt aufs Handy.</p>
+      </div>
+
+      <div class="element-card-grid">
+        <figure class="element-card-figure">
+          <a href="{{ get_url(path=front_jpg) }}" target="_blank" rel="noopener">
+            <picture>
+              <source type="image/webp"
+                      srcset="{{ get_url(path=front_webp_sm) }} 640w, {{ get_url(path=front_webp) }} 1200w"
+                      sizes="(max-width: 759px) 88vw, 430px">
+              <img src="{{ get_url(path=front_jpg) }}"
+                   width="1200" height="{{ page.extra.front_height }}"
+                   alt="Vorderseite der Elementekarte {{ page.extra.element }}-Hund – {{ page.extra.subtitle }}"
+                   loading="lazy" decoding="async">
+            </picture>
+          </a>
+          <figcaption>Vorderseite · {{ page.extra.subtitle }}</figcaption>
         </figure>
-        <figure class="tcvm-image-card">
-          <div class="tcvm-image-card__frame"><img src="{{ get_url(path=card_back) }}" alt="Rückseite der {{ page.extra.element }}-Hund-Karte mit Charakter, Körper und Gesundheit sowie Hund-Mensch-Harmonie" loading="lazy" decoding="async"></div>
-          <figcaption class="tcvm-card-caption">Rückseite</figcaption>
+
+        <figure class="element-card-figure">
+          <a href="{{ get_url(path=back_jpg) }}" target="_blank" rel="noopener">
+            <picture>
+              <source type="image/webp"
+                      srcset="{{ get_url(path=back_webp_sm) }} 640w, {{ get_url(path=back_webp) }} 1200w"
+                      sizes="(max-width: 759px) 88vw, 430px">
+              <img src="{{ get_url(path=back_jpg) }}"
+                   width="1200" height="1703"
+                   alt="Rückseite der Elementekarte {{ page.extra.element }}-Hund mit den Texten zu Charakter, Körper &amp; Gesundheit sowie Hund-Mensch-Harmonie"
+                   loading="lazy" decoding="async">
+            </picture>
+          </a>
+          <figcaption>Rückseite · Charakter, Körper &amp; Harmonie</figcaption>
         </figure>
+      </div>
+
+      <div class="element-downloads">
+        <a class="element-text-link" href="{{ get_url(path=front_jpg) }}" download>Vorderseite herunterladen (JPG)</a>
+        <a class="element-text-link" href="{{ get_url(path=back_jpg) }}" download>Rückseite herunterladen (JPG)</a>
+      </div>
+      <p class="element-card-tip">Die Texte der Rückseite stehen unten noch einmal als lesbarer Steckbrief – praktisch, wenn du sie vorlesen oder kopieren möchtest.</p>
+    </div>
+  </section>
+
+  <section class="element-section" id="profil" aria-labelledby="profil-title">
+    <div class="element-shell">
+      <div class="element-section-heading element-section-heading--center">
+        <p class="element-kicker">Der Steckbrief zum Nachlesen</p>
+        <h2 id="profil-title">{{ page.extra.element }}-Hund im Überblick</h2>
+      </div>
+
+      <div class="element-profile-grid">
+        <article class="element-info-card">
+          <span class="element-card-number" aria-hidden="true">01</span>
+          <p class="element-info-label">TCM-Emotion: {{ page.extra.emotion }}</p>
+          <h3>Charakter</h3>
+          <p>{{ page.extra.character }}</p>
+        </article>
+
+        <article class="element-info-card">
+          <span class="element-card-number" aria-hidden="true">02</span>
+          <p class="element-info-label">Organkreis: {{ page.extra.organs }}</p>
+          <h3>Körper &amp; Gesundheit</h3>
+          <p>{{ page.extra.health }}</p>
+        </article>
+
+        <article class="element-info-card">
+          <span class="element-card-number" aria-hidden="true">03</span>
+          <p class="element-info-label">Mensch &amp; Hund</p>
+          <h3>Hund-Mensch-Harmonie</h3>
+          <p>{{ page.extra.harmony }}</p>
+        </article>
       </div>
     </div>
   </section>
 
-  <aside class="element-note"><div class="element-shell element-note-inner"><div class="element-note-mark">i</div><div><h2>Wichtiger Hinweis</h2><p>Die Element-Zuordnung ist eine typologische Orientierung aus der Traditionellen Chinesischen Veterinärmedizin (TCVM). Sie ersetzt keine tierärztliche Diagnose oder Behandlung. Beschwerden, akute Symptome oder deutliche Verhaltensänderungen sollten tierärztlich abgeklärt werden.</p></div></div></aside>
+  <aside class="element-note">
+    <div class="element-shell element-note-inner">
+      <div class="element-note-mark" aria-hidden="true">i</div>
+      <div>
+        <h2>Wichtiger Hinweis</h2>
+        <p>Die Element-Zuordnung ist eine typologische Orientierung aus der Traditionellen Chinesischen Veterinärmedizin (TCVM). Sie ersetzt keine tierärztliche Diagnose oder Behandlung. Beschwerden, akute Symptome oder deutliche Verhaltensänderungen sollten immer tierärztlich abgeklärt werden.</p>
+      </div>
+    </div>
+  </aside>
 
-  <section class="element-more" aria-labelledby="weitere-elemente-title"><div class="element-shell"><div class="element-section-heading element-section-heading--center"><p class="element-kicker">Alle fünf Hundetypen</p><h2 id="weitere-elemente-title">Welches Element passt?</h2></div><nav class="element-switcher" aria-label="Weitere TCVM-Elemente für Hunde">
-    <a class="element-switch element-switch--holz{% if page.extra.slug == 'holz' %} is-active{% endif %}" href="{{ get_url(path='elemente/holz/', trailing_slash=true) }}">Holz<span>Der Sportler</span></a>
-    <a class="element-switch element-switch--feuer{% if page.extra.slug == 'feuer' %} is-active{% endif %}" href="{{ get_url(path='elemente/feuer/', trailing_slash=true) }}">Feuer<span>Der Entertainer</span></a>
-    <a class="element-switch element-switch--erde{% if page.extra.slug == 'erde' %} is-active{% endif %}" href="{{ get_url(path='elemente/erde/', trailing_slash=true) }}">Erde<span>Der Gemütliche</span></a>
-    <a class="element-switch element-switch--metall{% if page.extra.slug == 'metall' %} is-active{% endif %}" href="{{ get_url(path='elemente/metall/', trailing_slash=true) }}">Metall<span>Der Pedant</span></a>
-    <a class="element-switch element-switch--wasser{% if page.extra.slug == 'wasser' %} is-active{% endif %}" href="{{ get_url(path='elemente/wasser/', trailing_slash=true) }}">Wasser<span>Der sensible Zuhörer</span></a>
-  </nav></div></section>
+  <section class="element-more" aria-labelledby="weitere-elemente-title">
+    <div class="element-shell">
+      <div class="element-section-heading element-section-heading--center">
+        <p class="element-kicker">Alle fünf Hundetypen</p>
+        <h2 id="weitere-elemente-title">Welches Element passt zu deinem Hund?</h2>
+        <p>Viele Hunde zeigen Anteile mehrerer Elemente. Vergleiche in Ruhe – meist passt ein Typ am deutlichsten.</p>
+      </div>
+      <nav class="element-switcher" aria-label="Weitere TCVM-Elemente für Hunde">
+        <a class="element-switch element-switch--holz{% if slug == 'holz' %} is-active{% endif %}" href="{{ get_url(path='elemente/holz/', trailing_slash=true) }}"{% if slug == 'holz' %} aria-current="page"{% endif %}>Holz<span>Der Sportler</span></a>
+        <a class="element-switch element-switch--feuer{% if slug == 'feuer' %} is-active{% endif %}" href="{{ get_url(path='elemente/feuer/', trailing_slash=true) }}"{% if slug == 'feuer' %} aria-current="page"{% endif %}>Feuer<span>Der Entertainer</span></a>
+        <a class="element-switch element-switch--erde{% if slug == 'erde' %} is-active{% endif %}" href="{{ get_url(path='elemente/erde/', trailing_slash=true) }}"{% if slug == 'erde' %} aria-current="page"{% endif %}>Erde<span>Der Gemütliche</span></a>
+        <a class="element-switch element-switch--metall{% if slug == 'metall' %} is-active{% endif %}" href="{{ get_url(path='elemente/metall/', trailing_slash=true) }}"{% if slug == 'metall' %} aria-current="page"{% endif %}>Metall<span>Der Pedant</span></a>
+        <a class="element-switch element-switch--wasser{% if slug == 'wasser' %} is-active{% endif %}" href="{{ get_url(path='elemente/wasser/', trailing_slash=true) }}"{% if slug == 'wasser' %} aria-current="page"{% endif %}>Wasser<span>Der sensible Zuhörer</span></a>
+      </nav>
+    </div>
+  </section>
 
-  <section class="element-cta"><div class="element-shell element-cta-inner"><div><p class="element-kicker">Individuell statt Schublade</p><h2>Du möchtest deinen Hund ganzheitlich begleiten?</h2><p>Jeder Hund ist einzigartig und kann Anteile mehrerer Elemente zeigen. In der Tierheilpraxis betrachten wir deshalb immer das gesamte Tier, sein Umfeld und seine Vorgeschichte.</p></div></div></section>
+  <section class="element-cta">
+    <div class="element-shell element-cta-inner">
+      <div>
+        <p class="element-kicker">Individuell statt Schublade</p>
+        <h2>Du möchtest deinen Hund ganzheitlich begleiten?</h2>
+        <p>Jeder Hund ist einzigartig und kann Anteile mehrerer Elemente zeigen. In der Tierheilpraxis betrachte ich deshalb immer das gesamte Tier, sein Umfeld und seine Vorgeschichte – und leite daraus einen passenden Therapieplan ab.</p>
+      </div>
+      <div class="element-cta-actions">
+        <a class="element-button element-button--primary" href="{{ get_url(path='contact/', trailing_slash=true) }}">Termin anfragen</a>
+        <a class="element-button" href="{{ get_url(path='behandlung/behandlungsmethoden/', trailing_slash=true) }}">Meine Leistungen</a>
+      </div>
+    </div>
+  </section>
+
 </main>
 {% endblock content %}

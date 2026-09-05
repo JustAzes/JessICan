@@ -12,6 +12,36 @@
   <priority>1.00</priority>
 </url>
 <url>
+  <loc>https://tierheilpraxis-jessican.de/elemente/</loc>
+  <lastmod>2026-09-05T12:00:00+00:00</lastmod>
+  <priority>0.90</priority>
+</url>
+<url>
+  <loc>https://tierheilpraxis-jessican.de/elemente/holz/</loc>
+  <lastmod>2026-09-05T12:00:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://tierheilpraxis-jessican.de/elemente/feuer/</loc>
+  <lastmod>2026-09-05T12:00:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://tierheilpraxis-jessican.de/elemente/erde/</loc>
+  <lastmod>2026-09-05T12:00:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://tierheilpraxis-jessican.de/elemente/metall/</loc>
+  <lastmod>2026-09-05T12:00:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://tierheilpraxis-jessican.de/elemente/wasser/</loc>
+  <lastmod>2026-09-05T12:00:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
   <loc>https://tierheilpraxis-jessican.de/behandlung/vorgehen/</loc>
   <lastmod>2024-06-18T12:00:00+00:00</lastmod>
   <priority>0.90</priority>

@@ -1,0 +1,173 @@
+{% extends "template.html" %}
+
+{% block title %}{{ page.title }} – Holz, Feuer, Erde, Metall &amp; Wasser | {{ config.title }}{% endblock title %}
+{% block description %}<meta name="description" content="{{ page.description }}">{% endblock description %}
+{% block canonical %}<link rel="canonical" href="{{ page.permalink | safe }}">{% endblock canonical %}
+
+{% block metatags %}
+<meta property="og:title" content="{{ page.title }} | {{ config.title }}">
+<meta property="og:description" content="{{ page.description }}">
+<meta property="og:image" content="{{ get_url(path='img/elemente/holz-vorderseite.jpg') | safe }}">
+<meta property="og:image:alt" content="Elementekarten für Hunde der Tierheilpraxis JessICan">
+<meta property="og:url" content="{{ page.permalink | safe }}">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="de_DE">
+<meta property="og:site_name" content="{{ config.title }}">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{ page.title }}">
+<meta name="twitter:description" content="{{ page.description }}">
+<meta name="twitter:image" content="{{ get_url(path='img/elemente/holz-vorderseite.jpg') | safe }}">
+{% endblock metatags %}
+
+{% block headextras %}
+{%- set slugs = ["holz", "feuer", "erde", "metall", "wasser"] -%}
+<link rel="stylesheet" href="{{ get_url(path='css/elemente.css') }}">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "name": "{{ page.title }}",
+  "description": "{{ page.description }}",
+  "url": "{{ page.permalink | safe }}",
+  "inLanguage": "de-DE",
+  "mainEntity": {
+    "@type": "ItemList",
+    "itemListElement": [
+      {%- for s in slugs %}
+      {%- set el = get_page(path="elemente/" ~ s ~ ".md") %}
+      {"@type": "ListItem", "position": {{ loop.index }}, "name": "{{ el.extra.element }}-Hund – {{ el.extra.subtitle }}", "url": "{{ el.permalink | safe }}"}{% if not loop.last %},{% endif %}
+      {%- endfor %}
+    ]
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "Startseite", "item": "{{ get_url(path='/', trailing_slash=true) | safe }}"},
+    {"@type": "ListItem", "position": 2, "name": "Die fünf Elemente beim Hund", "item": "{{ page.permalink | safe }}"}
+  ]
+}
+</script>
+{% endblock headextras %}
+
+{% block header %}{% endblock header %}
+
+{% block content %}
+{%- set slugs = ["holz", "feuer", "erde", "metall", "wasser"] -%}
+<main class="element-page element-page--overview" id="inhalt">
+
+  <section class="element-hero" aria-labelledby="uebersicht-title">
+    <div class="element-shell">
+      <nav class="element-breadcrumb" aria-label="Brotkrumen-Navigation">
+        <a href="{{ get_url(path='/', trailing_slash=true) }}">Startseite</a><span aria-hidden="true">/</span>
+        <span aria-current="page">Die fünf Elemente</span>
+      </nav>
+      <div class="element-hero-copy element-hero-copy--wide">
+        <p class="element-kicker">TCVM · Fünf-Elemente-Lehre</p>
+        <h1 id="uebersicht-title">Die fünf Elemente beim Hund</h1>
+        <p class="element-subtitle">Holz, Feuer, Erde, Metall oder Wasser – welcher Typ ist dein Hund?</p>
+        <p class="element-intro">In der Traditionellen Chinesischen Veterinärmedizin (TCVM) wird jedes Wesen einem oder mehreren der fünf Elemente zugeordnet. Die Zuordnung beschreibt, wie ein Hund tickt, worauf sein Körper empfindlich reagiert und welcher Mensch am besten zu ihm passt. Zu jedem Element gibt es bei mir eine Elementekarte – hier findest du alle fünf zum Ansehen, Speichern und Nachlesen.</p>
+        <div class="element-actions">
+          <a class="element-button element-button--primary" href="#karten">Zu den fünf Karten</a>
+          <a class="element-button" href="{{ get_url(path='contact/', trailing_slash=true) }}">Termin anfragen</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="element-card-section" id="karten" aria-labelledby="karten-title">
+    <div class="element-shell">
+      <div class="element-section-heading element-section-heading--center">
+        <p class="element-kicker">Alle Karten auf einen Blick</p>
+        <h2 id="karten-title">Die fünf Elementekarten</h2>
+        <p>Tippe auf ein Element, um die komplette Karte mit Vorder- und Rückseite sowie den ausführlichen Steckbrief zu öffnen.</p>
+      </div>
+
+      <ul class="element-overview-grid">
+        {%- for s in slugs %}
+        {%- set el = get_page(path="elemente/" ~ s ~ ".md") %}
+        <li class="element-overview-item element--{{ s }}">
+          <a class="element-overview-card" href="{{ el.permalink }}">
+            <span class="element-overview-media">
+              <picture>
+                <source type="image/webp"
+                        srcset="{{ get_url(path='img/elemente/' ~ s ~ '-vorderseite-640.webp') }} 640w, {{ get_url(path='img/elemente/' ~ s ~ '-vorderseite.webp') }} 1200w"
+                        sizes="(max-width: 599px) 88vw, (max-width: 991px) 44vw, 280px">
+                <img src="{{ get_url(path='img/elemente/' ~ s ~ '-vorderseite.jpg') }}"
+                     width="1200" height="{{ el.extra.front_height }}"
+                     alt="Vorderseite der Elementekarte {{ el.extra.element }}-Hund – {{ el.extra.subtitle }}"
+                     loading="{% if loop.index <= 2 %}eager{% else %}lazy{% endif %}" decoding="async">
+              </picture>
+            </span>
+            <span class="element-overview-body">
+              <span class="element-overview-name">{{ el.extra.element }}-Hund</span>
+              <span class="element-overview-subtitle">{{ el.extra.subtitle }}</span>
+              <span class="element-overview-teaser">{{ el.extra.intro }}</span>
+              <span class="element-overview-meta">{{ el.extra.emotion }} · {{ el.extra.organs }}</span>
+              <span class="element-overview-more">Karte &amp; Steckbrief ansehen</span>
+            </span>
+          </a>
+        </li>
+        {%- endfor %}
+      </ul>
+    </div>
+  </section>
+
+  <section class="element-section" aria-labelledby="einordnung-title">
+    <div class="element-shell">
+      <div class="element-section-heading element-section-heading--center">
+        <p class="element-kicker">Gut zu wissen</p>
+        <h2 id="einordnung-title">So liest du die Elemente richtig</h2>
+      </div>
+      <div class="element-profile-grid">
+        <article class="element-info-card">
+          <span class="element-card-number" aria-hidden="true">01</span>
+          <p class="element-info-label">Typologie</p>
+          <h3>Kein Etikett, sondern eine Landkarte</h3>
+          <p>Die Elemente beschreiben Tendenzen – keine festen Schubladen. Sie helfen dabei, das Verhalten und die körperlichen Schwachstellen eines Hundes besser einzuordnen und Training wie Therapie darauf abzustimmen.</p>
+        </article>
+        <article class="element-info-card">
+          <span class="element-card-number" aria-hidden="true">02</span>
+          <p class="element-info-label">Mischtypen</p>
+          <h3>Die meisten Hunde sind Mischungen</h3>
+          <p>Sehr oft passt ein Element am deutlichsten, ein zweites klingt daneben mit. Lies ruhig mehrere Karten – häufig erkennst du deinen Hund in einer Kombination wieder.</p>
+        </article>
+        <article class="element-info-card">
+          <span class="element-card-number" aria-hidden="true">03</span>
+          <p class="element-info-label">Mensch &amp; Tier</p>
+          <h3>Auch du hast ein Element</h3>
+          <p>Spannend wird es im Zusammenspiel: Manche Kombinationen aus Hundetyp und Haltertyp harmonieren sofort, andere brauchen bewusste Absprachen im Alltag. Jede Karte beschreibt das auf ihrer Rückseite.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <aside class="element-note">
+    <div class="element-shell element-note-inner">
+      <div class="element-note-mark" aria-hidden="true">i</div>
+      <div>
+        <h2>Wichtiger Hinweis</h2>
+        <p>Die Element-Zuordnung ist eine typologische Orientierung aus der Traditionellen Chinesischen Veterinärmedizin (TCVM). Sie ersetzt keine tierärztliche Diagnose oder Behandlung. Beschwerden, akute Symptome oder deutliche Verhaltensänderungen sollten immer tierärztlich abgeklärt werden.</p>
+      </div>
+    </div>
+  </aside>
+
+  <section class="element-cta">
+    <div class="element-shell element-cta-inner">
+      <div>
+        <p class="element-kicker">Und dein Pferd?</p>
+        <h2>Für Pferde gibt es das Element-Quiz</h2>
+        <p>Mit 19 kurzen Fragen findest du heraus, welchem Element dein Pferd am ehesten entspricht – inklusive Auswertung für Mischtypen.</p>
+      </div>
+      <div class="element-cta-actions">
+        <a class="element-button element-button--primary" href="{{ get_url(path='quiz/', trailing_slash=true) }}">Zum Pferde-Quiz</a>
+        <a class="element-button" href="{{ get_url(path='behandlung/behandlungsmethoden/', trailing_slash=true) }}">Meine Leistungen</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+{% endblock content %}
