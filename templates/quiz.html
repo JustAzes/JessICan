@@ -1,123 +1,140 @@
 {% extends "template.html" %}
-{% block title %}Quiz – Elementtyp deines Pferdes | Tierheilpraxis JessICan{% endblock title %}
+
+{% block title %}Welches Element ist dein Pferd? Element-Quiz | {{ config.title }}{% endblock title %}
 
 {% block description %}
-  <meta name="description" content="Interaktives Quiz: Finde heraus, welchem der fünf Elemente (Holz, Feuer, Erde, Metall, Wasser) dein Pferd am ehesten entspricht – inkl. Auswertung.">
-  <link rel="preload" href="{{ get_url(path="/img/home-bg_large.jpeg") }}" as="image">
+<meta name="description" content="Interaktives Element-Quiz für Pferdebesitzer: 19 Fragen aus dem Stallalltag zeigen, welchem der fünf TCM-Elemente – Holz, Feuer, Erde, Metall oder Wasser – dein Pferd am ehesten entspricht. Mit Auswertung für Mischtypen.">
 {% endblock description %}
 
+{% block canonical %}<link rel="canonical" href="{{ page.permalink | safe }}">{% endblock canonical %}
+
+{% block metatags %}
+<meta property="og:title" content="Welches Element ist dein Pferd? | {{ config.title }}">
+<meta property="og:description" content="19 kurze Fragen aus dem Stallalltag – am Ende erfährst du, welchem der fünf TCM-Elemente dein Pferd am ehesten entspricht.">
+<meta property="og:image" content="{{ get_url(path='img/quiz/holz.jpg') | safe }}">
+<meta property="og:url" content="{{ page.permalink | safe }}">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="de_DE">
+<meta property="og:site_name" content="{{ config.title }}">
+<meta name="twitter:card" content="summary_large_image">
+{% endblock metatags %}
+
 {% block headextras %}
-  {# Optional: volles Bootstrap fürs Quiz, falls du es unter /static/bootstrap/... ablegst
-  <link rel="stylesheet" href="{{ get_url(path='bootstrap/css/bootstrap.min.css') }}">
-  #}
-  <style>
-    .quiz-intro small { opacity: .85; }
-    .quiz-card { border: 1px solid rgba(0,0,0,.08); border-radius: .75rem; }
-    .quiz-card .card-header { background: #f8f9fa; }
-    .answer-img { display: none; max-width: 140px; border-radius: .5rem; }
-    .mix-sep { font-weight: 600; }
-    .sticky-eval { position: sticky; bottom: 0; z-index: 1030; background: rgba(255,255,255,.98); border-top: 1px solid rgba(0,0,0,.1); }
-    .required-hint { font-size:.9rem; opacity:.8; }
-    .progress { height: .75rem; }
-    .quiz-badge { min-width: 2.25rem; }
-  </style>
+<link rel="stylesheet" href="{{ get_url(path='css/quiz.css') }}">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "Startseite", "item": "{{ get_url(path='/', trailing_slash=true) | safe }}"},
+    {"@type": "ListItem", "position": 2, "name": "Die fünf Elemente", "item": "{{ get_url(path='elemente/', trailing_slash=true) | safe }}"},
+    {"@type": "ListItem", "position": 3, "name": "Element-Quiz für Pferde", "item": "{{ page.permalink | safe }}"}
+  ]
+}
+</script>
 {% endblock headextras %}
 
-{% block header %}
-<header class="masthead" style="background-image: url('{{ get_url(path="/img/home-bg_large.jpeg")}}')">
-  <div class="overlay"></div>
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-10 col-md-10 mx-auto">
-        <div class="site-heading">
-          <h1>Welches Element ist dein Pferd?</h1>
-          <span class="subheading">Interaktives Quiz für Pferdebesitzer – 19 Fragen</span>
-        </div>
-      </div>
-    </div>
-  </div>
-</header>
-{% endblock header %}
+{% block header %}{% endblock header %}
 
 {% block content %}
-<div class="container">
-  <div class="row">
-    <div class="col-lg-10 col-md-10 mx-auto">
+<main class="quiz-page" id="inhalt">
 
-      <section class="quiz-intro mb-4">
-        <p class="lead mb-1">
-          Beantworte die Fragen spontan. Am Ende erfährst du, welchem <strong>Element</strong> dein Pferd am ehesten ähnelt – oder ob es ein <strong>Mischtyp</strong> ist.
-        </p>
-        <small class="text-muted d-block">
-          Elemente: <span class="badge badge-secondary quiz-badge">Holz (A)</span>
-          <span class="badge badge-danger quiz-badge">Feuer (B)</span>
-          <span class="badge badge-warning quiz-badge">Erde (C)</span>
-          <span class="badge badge-info quiz-badge">Metall (D)</span>
-          <span class="badge badge-primary quiz-badge">Wasser (E)</span>
-        </small>
+  <section class="quiz-hero" aria-labelledby="quiz-title">
+    <div class="quiz-shell">
+      <nav class="quiz-breadcrumb" aria-label="Brotkrumen-Navigation">
+        <a href="{{ get_url(path='/', trailing_slash=true) }}">Startseite</a><span aria-hidden="true">/</span>
+        <a href="{{ get_url(path='elemente/', trailing_slash=true) }}">Die fünf Elemente</a><span aria-hidden="true">/</span>
+        <span aria-current="page">Pferde-Quiz</span>
+      </nav>
 
-        <div class="mt-3">
-          <div class="d-flex align-items-center mb-1">
-            <div class="mr-2">Fortschritt</div>
-            <div class="flex-grow-1">
-              <div class="progress" aria-hidden="true">
-                <div id="quizProgress" class="progress-bar" role="progressbar" style="width:0%" aria-valuemin="0" aria-valuemax="19" aria-valuenow="0"></div>
-              </div>
-            </div>
-            <div class="ml-2"><span id="progressText">0</span>/19</div>
-          </div>
-          <span class="required-hint text-muted">Tipp: Du kannst Fragen überspringen, sie zählen dann einfach nicht mit.</span>
-        </div>
-      </section>
+      <p class="quiz-kicker">TCVM · Element-Quiz für Pferde</p>
+      <h1 id="quiz-title">Welches Element ist dein Pferd?</h1>
+      <p class="quiz-subtitle">19 Fragen aus dem Stallalltag – spontan beantwortet</p>
+      <p class="quiz-intro">Antworte so, wie dein Pferd sich <em>üblicherweise</em> verhält, nicht wie es an einem guten Tag sein könnte. Am Ende erfährst du, welchem Element es am ehesten entspricht – oder ob es ein Mischtyp ist. Fragen, bei denen nichts richtig passt, kannst du einfach überspringen; sie zählen dann nicht mit.</p>
 
+      <ul class="quiz-legend">
+        <li><i class="quiz-dot--holz" aria-hidden="true"></i>Holz</li>
+        <li><i class="quiz-dot--feuer" aria-hidden="true"></i>Feuer</li>
+        <li><i class="quiz-dot--erde" aria-hidden="true"></i>Erde</li>
+        <li><i class="quiz-dot--metall" aria-hidden="true"></i>Metall</li>
+        <li><i class="quiz-dot--wasser" aria-hidden="true"></i>Wasser</li>
+      </ul>
+
+      <div class="quiz-actions">
+        <a class="quiz-button quiz-button--primary" href="#frage-1">Quiz starten</a>
+        <a class="quiz-button" href="{{ get_url(path='elemente/', trailing_slash=true) }}">Was die Elemente bedeuten</a>
+      </div>
+    </div>
+  </section>
+
+  <div class="quiz-progress">
+    <div class="quiz-shell quiz-progress-inner">
+      <span class="quiz-progress-label"><span id="answeredCount">0</span> von 19 beantwortet</span>
+      <span class="quiz-progress-track">
+        <span class="quiz-progress-fill" id="quizProgress" role="progressbar" aria-valuemin="0" aria-valuemax="19" aria-valuenow="0" aria-label="Beantwortete Fragen"></span>
+      </span>
+    </div>
+  </div>
+
+  <section class="quiz-questions">
+    <div class="quiz-shell">
       <form id="quizForm" novalidate>
         <div id="quizContainer"></div>
-
-        <div class="sticky-eval p-3 mt-4">
-          <div class="d-flex align-items-center">
-            <button id="evalBtn" type="button" class="btn btn-success btn-lg mr-3">Auswerten</button>
-            <div class="text-muted"><span id="answeredCount">0</span> von 19 Fragen beantwortet</div>
-            <a href="#resultBox" class="ml-auto btn btn-link">zur Auswertung springen</a>
-          </div>
-        </div>
       </form>
+    </div>
 
-      <hr class="my-4">
+    <div class="quiz-submit">
+      <div class="quiz-shell quiz-submit-inner">
+        <button id="evalBtn" type="button" class="quiz-button quiz-button--primary">Auswerten</button>
+        <span class="quiz-submit-count"><span id="submitCount">0</span> von 19 Fragen beantwortet</span>
+      </div>
+    </div>
 
-      <section id="resultBox" aria-live="polite" aria-atomic="true">
-        <div id="resultAlert" class="alert alert-info d-none" role="alert"></div>
-        <div id="resultCard" class="card d-none">
-          <div class="card-body">
-            <!-- Bilder zuerst -->
-            <div class="d-flex align-items-center mt-1 mb-3">
-              <figure class="mr-3 mb-0">
-                <img id="resultImg1" class="answer-img" src="" alt="">
-              </figure>
-              <span class="mix-sep" id="mixPlus" style="display:none;">+</span>
-              <figure class="ml-3 mb-0">
-                <img id="resultImg2" class="answer-img" src="" alt="">
-              </figure>
-            </div>
+    <div class="quiz-shell">
+      <p class="quiz-hint">Dieses Quiz ersetzt keine Diagnose. Es hilft, Tendenzen einzuordnen. Für eine individuelle Einschätzung <a href="{{ get_url(path='contact/', trailing_slash=true) }}">sprich mich gern an</a>.</p>
+    </div>
+  </section>
 
-            <!-- Dann Titel -->
-            <h4 id="resultTitle" class="card-title"></h4>
+  <section class="quiz-result" id="resultBox" aria-live="polite" aria-atomic="true" hidden>
+    <div class="quiz-shell">
+      <p class="quiz-result-note" id="resultNote" hidden></p>
 
-            <!-- Dann langer, formatierter Text -->
-            <div id="resultText" class="card-text"></div>
+      <article class="quiz-result-card" id="resultCard" hidden>
+        <header class="quiz-result-head">
+          <div class="quiz-result-images">
+            <img id="resultImg1" src="" alt="" width="1024" height="1536" hidden>
+            <span class="quiz-result-plus" id="mixPlus" aria-hidden="true" hidden>+</span>
+            <img id="resultImg2" src="" alt="" width="1024" height="1536" hidden>
+          </div>
+          <div>
+            <p class="quiz-result-kicker" id="resultKicker">Dein Ergebnis</p>
+            <h2 class="quiz-result-title" id="resultTitle"></h2>
+          </div>
+        </header>
 
-            <div class="mt-4">
-              <a href="{{ get_url(path='behandlung/behandlungsmethoden/', trailing_slash=true) }}" class="btn btn-primary mr-2">Mehr zu meinen Methoden</a>
-              <a href="{{ get_url(path='contact/', trailing_slash=true) }}" class="btn btn-info">Jetzt Termin vereinbaren</a>
-            </div>
+        <div class="quiz-result-body">
+          <div id="resultText"></div>
+          <div class="quiz-result-actions">
+            <a class="quiz-button quiz-button--primary" href="{{ get_url(path='contact/', trailing_slash=true) }}">Termin anfragen</a>
+            <a class="quiz-button" href="{{ get_url(path='behandlung/behandlungsmethoden/', trailing_slash=true) }}">Meine Leistungen</a>
+            <a class="quiz-button" href="{{ get_url(path='elemente/', trailing_slash=true) }}">Mehr zu den Elementen</a>
           </div>
         </div>
-      </section>
+      </article>
+    </div>
+  </section>
 
-      <p class="mt-3 text-muted">
-        Hinweis: Dieses Quiz ersetzt keine Diagnose. Es hilft, Tendenzen einzuordnen. Für eine individuelle Einschätzung <a href="{{ get_url(path='contact/', trailing_slash=true) }}">sprechen Sie mich gern an</a>.
-      </p>
+  <aside class="quiz-note">
+    <div class="quiz-shell quiz-note-inner">
+      <div class="quiz-note-mark" aria-hidden="true">i</div>
+      <div>
+        <h2>Wichtiger Hinweis</h2>
+        <p>Die Element-Zuordnung ist eine typologische Orientierung aus der Traditionellen Chinesischen Veterinärmedizin (TCVM). Sie ersetzt keine tierärztliche Diagnose oder Behandlung. Beschwerden, akute Symptome oder deutliche Verhaltensänderungen sollten immer tierärztlich abgeklärt werden.</p>
+      </div>
+    </div>
+  </aside>
 
-      {# --- Die Fragen kommen als JSON: --- #}
+  <div hidden>
       <script id="quizData" type="application/json">
       {
         "total": 19,
@@ -315,90 +332,111 @@
         ]
       }
       </script>
-
-    </div>
   </div>
-</div>
+
+</main>
 {% endblock content %}
 
 {% block extrascripts %}
-  {# Optional: volles Bootstrap-Bundle (falls eingebunden)
-  <script src="{{ get_url(path='bootstrap/js/bootstrap.bundle.min.js') }}" defer></script>
-  #}
-
   <script>
-    (function() {
+    (function () {
       var dataEl = document.getElementById('quizData');
       var cfg = JSON.parse(dataEl.textContent);
       var TOTAL = cfg.total || (cfg.questions ? cfg.questions.length : 0);
       var container = document.getElementById('quizContainer');
       var form = document.getElementById('quizForm');
 
-      var letters = ['A','B','C','D','E'];
-      var letterToElement = { 'A':'Holz','B':'Feuer','C':'Erde','D':'Metall','E':'Wasser' };
-      var elementOrder = ['Holz','Feuer','Erde','Metall','Wasser'];
+      var letters = ['A', 'B', 'C', 'D', 'E'];
+      var letterToElement = { 'A': 'Holz', 'B': 'Feuer', 'C': 'Erde', 'D': 'Metall', 'E': 'Wasser' };
+      var elementOrder = ['Holz', 'Feuer', 'Erde', 'Metall', 'Wasser'];
+      var elementSlug = { 'Holz': 'holz', 'Feuer': 'feuer', 'Erde': 'erde', 'Metall': 'metall', 'Wasser': 'wasser' };
 
-      // IMG-Basis einmal definieren (korrekter Slash)
       var IMG_BASE = "{{ get_url(path='img/quiz') }}/";
 
-      // Render Fragen
-      cfg.questions.forEach(function(q, idx){
-        var card = document.createElement('div');
-        card.className = 'card quiz-card mb-3';
-        card.id = 'card-q' + (idx+1);
+      /* --- Fragen rendern --------------------------------------------------- */
 
-        var head = document.createElement('div');
-        head.className = 'card-header';
-        head.innerHTML = '<h5 class="mb-0">Frage ' + (idx+1) + '</h5>';
+      cfg.questions.forEach(function (q, idx) {
+        var no = idx + 1;
 
-        var body = document.createElement('div');
-        body.className = 'card-body';
-        var p = document.createElement('p');
-        p.className = 'mb-3';
-        p.textContent = q.q;
-        body.appendChild(p);
+        var card = document.createElement('fieldset');
+        card.className = 'quiz-card';
+        card.id = 'frage-' + no;
 
-        q.a.forEach(function(text, i){
+        var legend = document.createElement('legend');
+        var num = document.createElement('span');
+        num.className = 'quiz-card-no';
+        num.textContent = 'Frage ' + no + ' von ' + TOTAL;
+        var text = document.createElement('span');
+        text.className = 'quiz-card-q';
+        text.textContent = q.q;
+        legend.appendChild(num);
+        legend.appendChild(text);
+        card.appendChild(legend);
+
+        var options = document.createElement('div');
+        options.className = 'quiz-options';
+
+        q.a.forEach(function (answer, i) {
           var val = letters[i];
           var wrap = document.createElement('div');
-          wrap.className = 'custom-control custom-radio mb-2';
+          wrap.className = 'quiz-option';
+
           var input = document.createElement('input');
           input.type = 'radio';
-          input.className = 'custom-control-input quiz-input';
-          input.name = 'q' + (idx+1);
-          input.id = 'q' + (idx+1) + '_' + val;
+          input.className = 'quiz-input';
+          input.name = 'q' + no;
+          input.id = 'q' + no + '_' + val;
           input.value = val;
 
           var label = document.createElement('label');
-          label.className = 'custom-control-label';
           label.setAttribute('for', input.id);
-          label.textContent = text; // + ' (' + val + ')';
+          label.appendChild(document.createTextNode(answer));
 
           wrap.appendChild(input);
           wrap.appendChild(label);
-          body.appendChild(wrap);
+          options.appendChild(wrap);
         });
 
-        card.appendChild(head);
-        card.appendChild(body);
+        card.appendChild(options);
         container.appendChild(card);
       });
 
-      // UI-Elemente
-      var inputs = Array.prototype.slice.call(document.querySelectorAll('.quiz-input'));
-      var progressBar = document.getElementById('quizProgress');
-      var progressText = document.getElementById('progressText');
-      var answeredCountEl = document.getElementById('answeredCount');
-      var evalBtn = document.getElementById('evalBtn');
-      var resultAlert = document.getElementById('resultAlert');
-      var resultCard = document.getElementById('resultCard');
-      var resultTitle = document.getElementById('resultTitle');
-      var resultText = document.getElementById('resultText');
-      var img1 = document.getElementById('resultImg1');
-      var img2 = document.getElementById('resultImg2');
-      var mixPlus = document.getElementById('mixPlus');
+      /* --- Fortschritt ------------------------------------------------------ */
 
-      // Lange Texte als HTML
+      var progressBar = document.getElementById('quizProgress');
+      var answeredCountEl = document.getElementById('answeredCount');
+      var submitCountEl = document.getElementById('submitCount');
+
+      function questionNames() {
+        var names = [];
+        for (var i = 1; i <= TOTAL; i++) { names.push('q' + i); }
+        return names;
+      }
+
+      function countAnswered() {
+        var answered = 0;
+        questionNames().forEach(function (n, i) {
+          var card = document.getElementById('frage-' + (i + 1));
+          if (form.querySelector('input[name="' + n + '"]:checked')) {
+            answered++;
+            if (card) { card.classList.add('is-answered'); }
+          } else if (card) {
+            card.classList.remove('is-answered');
+          }
+        });
+        progressBar.style.width = (answered / TOTAL * 100) + '%';
+        progressBar.setAttribute('aria-valuenow', answered);
+        answeredCountEl.textContent = answered;
+        submitCountEl.textContent = answered;
+        return answered;
+      }
+
+      form.addEventListener('change', function (e) {
+        if (e.target.classList && e.target.classList.contains('quiz-input')) { countAnswered(); }
+      });
+
+      /* --- Ergebnistexte ---------------------------------------------------- */
+
       var singleHTML = {
         'Holz': `
           <p><strong>Kurzprofil:</strong> Athletisch, zielstrebig, manchmal stur – ein Pferd mit natürlichem Vorwärtsdrang und Führungswillen.</p>
@@ -517,124 +555,109 @@
         `
       };
 
-      function countAnswered() {
-        inputs = Array.prototype.slice.call(document.querySelectorAll('.quiz-input'));
-        var names = new Set(inputs.map(function(i){return i.name;}));
-        var answered = 0;
-        names.forEach(function(n) {
-          if (form.querySelector('input[name="'+n+'"]:checked')) answered++;
-        });
-        progressBar.style.width = (answered / TOTAL * 100) + '%';
-        progressBar.setAttribute('aria-valuenow', answered);
-        progressText.textContent = answered;
-        answeredCountEl.textContent = answered;
+      /* --- Auswertung ------------------------------------------------------- */
+
+      var resultBox = document.getElementById('resultBox');
+      var resultNote = document.getElementById('resultNote');
+      var resultCard = document.getElementById('resultCard');
+      var resultKicker = document.getElementById('resultKicker');
+      var resultTitle = document.getElementById('resultTitle');
+      var resultText = document.getElementById('resultText');
+      var img1 = document.getElementById('resultImg1');
+      var img2 = document.getElementById('resultImg2');
+      var mixPlus = document.getElementById('mixPlus');
+
+      var CONTACT_URL = "{{ get_url(path='contact/', trailing_slash=true) }}";
+      var METHODS_URL = "{{ get_url(path='behandlung/behandlungsmethoden/', trailing_slash=true) }}";
+
+      function setImage(img, element) {
+        img.src = IMG_BASE + elementSlug[element] + '.jpg';
+        img.alt = 'Sinnbild für das Element ' + element;
+        img.hidden = false;
       }
 
-      document.addEventListener('change', function(e){
-        if (e.target.classList && e.target.classList.contains('quiz-input')) countAnswered();
-      });
+      function resetResult() {
+        img1.hidden = true; img2.hidden = true; mixPlus.hidden = true;
+        img1.removeAttribute('src'); img2.removeAttribute('src');
+        img1.alt = ''; img2.alt = '';
+        resultCard.className = 'quiz-result-card';
+      }
 
       function evaluate() {
-        var counts = { 'Holz':0, 'Feuer':0, 'Erde':0, 'Metall':0, 'Wasser':0 };
-        var names = new Set(Array.prototype.slice.call(document.querySelectorAll('.quiz-input')).map(function(i){return i.name;}));
-        names.forEach(function(n){
-          var checked = form.querySelector('input[name="'+n+'"]:checked');
+        var counts = { 'Holz': 0, 'Feuer': 0, 'Erde': 0, 'Metall': 0, 'Wasser': 0 };
+        questionNames().forEach(function (n) {
+          var checked = form.querySelector('input[name="' + n + '"]:checked');
           if (checked) {
             var el = letterToElement[checked.value];
-            counts[el] = (counts[el]||0)+1;
+            counts[el] = (counts[el] || 0) + 1;
           }
         });
 
-        var answered = Object.values(counts).reduce(function(a,b){return a+b;},0);
-        var resultAlert = document.getElementById('resultAlert');
-        var resultCard  = document.getElementById('resultCard');
-        var resultTitle = document.getElementById('resultTitle');
-        var resultText  = document.getElementById('resultText');
-        var img1 = document.getElementById('resultImg1');
-        var img2 = document.getElementById('resultImg2');
-        var mixPlus = document.getElementById('mixPlus');
+        var answered = elementOrder.reduce(function (a, k) { return a + counts[k]; }, 0);
+
+        resultBox.hidden = false;
 
         if (answered === 0) {
-          resultAlert.classList.remove('d-none','alert-success','alert-warning');
-          resultAlert.classList.add('alert-info');
-          resultAlert.textContent = 'Bitte beantworte mindestens eine Frage, um eine Tendenz zu erhalten.';
-          resultCard.classList.add('d-none');
-          document.getElementById('card-q1').scrollIntoView({behavior:'smooth', block:'start'});
+          resultNote.hidden = false;
+          resultNote.textContent = 'Bitte beantworte mindestens eine Frage, um eine Tendenz zu erhalten.';
+          resultCard.hidden = true;
+          document.getElementById('frage-1').scrollIntoView({ behavior: 'smooth', block: 'start' });
           return;
         }
 
-        var max = Math.max.apply(null, Object.values(counts));
-        var tops = elementOrder.filter(function(k){ return counts[k] === max && max > 0; });
+        resultNote.hidden = true;
+        resultCard.hidden = false;
+        resetResult();
 
-        // Reset Anzeige
-        resultAlert.classList.add('d-none');
-        resultCard.classList.remove('d-none');
-        img1.style.display = 'none'; img2.style.display = 'none'; mixPlus.style.display = 'none';
-        img1.src = ''; img2.src = ''; img1.alt = ''; img2.alt = '';
+        var max = Math.max.apply(null, elementOrder.map(function (k) { return counts[k]; }));
+        var tops = elementOrder.filter(function (k) { return counts[k] === max && max > 0; });
 
-        // EINZELTYP
+        var closing = '<p>Möchtest du wissen, welche meiner Methoden dazu besonders gut passen? '
+          + '<a href="' + METHODS_URL + '">Hier findest du eine Übersicht</a> – oder '
+          + '<a href="' + CONTACT_URL + '">sprich mich direkt an</a>.</p>';
+
         if (tops.length === 1) {
           var el = tops[0];
-
-          // Titel
-          resultTitle.textContent = 'Element: ' + el;
-
-          // Bild (oben)
-          img1.src = IMG_BASE + el.toLowerCase() + '.jpg';
-          img1.alt = 'Symbolbild Element ' + el;
-          img1.style.display = 'block';
-
-          // Langer Text
-          resultText.innerHTML = (singleHTML[el] || '<p>Kurze Beschreibung folgt.</p>') + `
-            <p class="mt-3 mb-0">
-              Sie möchten wissen, welche meiner Methoden hierzu besonders gut passen?
-              <a href="{{ get_url(path='behandlung/behandlungsmethoden/', trailing_slash=true) }}">Hier finden Sie eine Übersicht</a> –
-              oder <a href="{{ get_url(path='contact/', trailing_slash=true) }}">sprechen Sie mich direkt an</a>.
-            </p>`;
-        }
-        // MISCHTYP(E)
-        else {
-          var sorted = tops.slice().sort(function(a,b){
+          resultCard.className = 'quiz-result-card quiz-result--' + elementSlug[el];
+          resultKicker.textContent = 'Dein Ergebnis · ' + counts[el] + ' von ' + answered + ' Antworten';
+          resultTitle.textContent = 'Element ' + el;
+          setImage(img1, el);
+          resultText.innerHTML = (singleHTML[el] || '<p>Kurze Beschreibung folgt.</p>') + closing;
+        } else {
+          var sorted = tops.slice().sort(function (a, b) {
             return elementOrder.indexOf(a) - elementOrder.indexOf(b);
           });
 
-          // Titel
-          resultTitle.textContent = 'Mischtyp: ' + sorted.join(' + ');
+          resultCard.className = 'quiz-result-card quiz-result--mix';
+          resultKicker.textContent = 'Dein Ergebnis · Mischtyp';
+          resultTitle.textContent = sorted.join(' + ');
 
-          // Bilder
-          img1.src = IMG_BASE + sorted[0].toLowerCase() + '.jpg';
-          img1.alt = 'Symbolbild Element ' + sorted[0];
-          img1.style.display = 'block';
-
+          setImage(img1, sorted[0]);
           if (sorted.length >= 2) {
-            img2.src = IMG_BASE + sorted[1].toLowerCase() + '.jpg';
-            img2.alt = 'Symbolbild Element ' + sorted[1];
-            mixPlus.style.display = 'inline-block';
-            img2.style.display = 'block';
+            mixPlus.hidden = false;
+            setImage(img2, sorted[1]);
           }
 
-          // 2er-Kombi: spezifischer Text; ab 3 Tops: generischer Text
           if (sorted.length === 2) {
             var key = sorted[0] + '+' + sorted[1];
-            resultText.innerHTML = (mixHTML[key] || `<p>Ihr Pferd vereint zwei Elemente ausgewogen: ${sorted[0]} und ${sorted[1]}.</p>`) + `
-              <p class="mt-3 mb-0">
-                Gern bespreche ich mit Ihnen, welche Trainings- und Management-Bausteine zu Ihrem Pferd passen.
-                <a href="{{ get_url(path='contact/', trailing_slash=true) }}">Kontakt aufnehmen</a>.
-              </p>`;
+            resultText.innerHTML = (mixHTML[key]
+              || '<p>Dein Pferd vereint zwei Elemente ausgewogen: ' + sorted[0] + ' und ' + sorted[1] + '.</p>')
+              + '<p>Gern bespreche ich mit dir, welche Trainings- und Management-Bausteine zu deinem Pferd passen. '
+              + '<a href="' + CONTACT_URL + '">Kontakt aufnehmen</a>.</p>';
           } else {
-            resultText.innerHTML = `
-              <p><strong>Vielschichtig:</strong> Ihr Pferd zeigt Anteile von ${sorted.join(', ')}. Das ist völlig normal – entscheidend ist, die Stärken gezielt einzusetzen und sensible Punkte zu respektieren.</p>
-              <p><strong>Training:</strong> Beginnen Sie mit dem „gemeinsamen Nenner“ (z. B. sichere Routine) und ergänzen Sie je nach Tagesform Anteile aus den weiteren Elementen (etwa spielerische Motivation, präzise Kriterien oder mehr Sicherheitsabstand).</p>
-              <p class="mb-0">Für einen individuellen Plan <a href="{{ get_url(path='contact/', trailing_slash=true) }}">sprechen Sie mich gern an</a>.</p>
-            `;
+            resultText.innerHTML =
+              '<p><strong>Vielschichtig:</strong> Dein Pferd zeigt Anteile von ' + sorted.join(', ')
+              + '. Das ist völlig normal – entscheidend ist, die Stärken gezielt einzusetzen und sensible Punkte zu respektieren.</p>'
+              + '<p><strong>Training:</strong> Beginne mit dem gemeinsamen Nenner (zum Beispiel einer sicheren Routine) und ergänze je nach Tagesform Anteile aus den weiteren Elementen – etwa spielerische Motivation, präzise Kriterien oder mehr Sicherheitsabstand.</p>'
+              + '<p>Für einen individuellen Plan <a href="' + CONTACT_URL + '">sprich mich gern an</a>.</p>';
           }
         }
 
-        document.getElementById('resultBox').scrollIntoView({behavior:'smooth', block:'start'});
+        resultBox.scrollIntoView({ behavior: 'smooth', block: 'start' });
       }
 
       document.getElementById('evalBtn').addEventListener('click', evaluate);
       countAnswered();
     })();
   </script>
-{% endblock extrasripts %}
+{% endblock extrascripts %}

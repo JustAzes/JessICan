@@ -53,8 +53,9 @@
   "@type": "BreadcrumbList",
   "itemListElement": [
     {"@type": "ListItem", "position": 1, "name": "Startseite", "item": "{{ get_url(path='/', trailing_slash=true) | safe }}"},
-    {"@type": "ListItem", "position": 2, "name": "Die fünf Elemente beim Hund", "item": "{{ get_url(path='elemente/', trailing_slash=true) | safe }}"},
-    {"@type": "ListItem", "position": 3, "name": "{{ page.extra.element }}-Hund", "item": "{{ page.permalink | safe }}"}
+    {"@type": "ListItem", "position": 2, "name": "Die fünf Elemente", "item": "{{ get_url(path='elemente/', trailing_slash=true) | safe }}"},
+    {"@type": "ListItem", "position": 3, "name": "Die fünf Elemente beim Hund", "item": "{{ get_url(path='elemente/hund/', trailing_slash=true) | safe }}"},
+    {"@type": "ListItem", "position": 4, "name": "{{ page.extra.element }}-Hund", "item": "{{ page.permalink | safe }}"}
   ]
 }
 </script>
@@ -75,6 +76,7 @@
       <nav class="element-breadcrumb" aria-label="Brotkrumen-Navigation">
         <a href="{{ get_url(path='/', trailing_slash=true) }}">Startseite</a><span aria-hidden="true">/</span>
         <a href="{{ get_url(path='elemente/', trailing_slash=true) }}">Die fünf Elemente</a><span aria-hidden="true">/</span>
+        <a href="{{ get_url(path='elemente/hund/', trailing_slash=true) }}">Beim Hund</a><span aria-hidden="true">/</span>
         <span aria-current="page">{{ page.extra.element }}-Hund</span>
       </nav>
 
@@ -98,7 +100,7 @@
 
           <div class="element-actions">
             <a class="element-button element-button--primary" href="#steckbrief">Zum Steckbrief</a>
-            <a class="element-button" href="{{ get_url(path='elemente/', trailing_slash=true) }}">Alle fünf Elemente</a>
+            <a class="element-button" href="{{ get_url(path='elemente/hund/', trailing_slash=true) }}">Alle fünf Hundetypen</a>
           </div>
         </div>
 
