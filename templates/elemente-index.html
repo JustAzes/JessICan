@@ -1,44 +1,37 @@
 {% extends "template.html" %}
 
-{% block title %}{{ page.title }} – Holz, Feuer, Erde, Metall &amp; Wasser | {{ config.title }}{% endblock title %}
+{% block title %}Die fünf Elemente der TCM – Holz, Feuer, Erde, Metall &amp; Wasser | {{ config.title }}{% endblock title %}
 {% block description %}<meta name="description" content="{{ page.description }}">{% endblock description %}
 {% block canonical %}<link rel="canonical" href="{{ page.permalink | safe }}">{% endblock canonical %}
 
 {% block metatags %}
-<meta property="og:title" content="{{ page.title }} | {{ config.title }}">
+<meta property="og:title" content="Die fünf Elemente der TCM | {{ config.title }}">
 <meta property="og:description" content="{{ page.description }}">
 <meta property="og:image" content="{{ get_url(path='img/elemente/holz-vorderseite.jpg') | safe }}">
-<meta property="og:image:alt" content="Elementekarten für Hunde der Tierheilpraxis JessICan">
+<meta property="og:image:alt" content="Die fünf Elemente der Traditionellen Chinesischen Medizin">
 <meta property="og:url" content="{{ page.permalink | safe }}">
-<meta property="og:type" content="website">
+<meta property="og:type" content="article">
 <meta property="og:locale" content="de_DE">
 <meta property="og:site_name" content="{{ config.title }}">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="{{ page.title }}">
+<meta name="twitter:title" content="Die fünf Elemente der TCM">
 <meta name="twitter:description" content="{{ page.description }}">
 <meta name="twitter:image" content="{{ get_url(path='img/elemente/holz-vorderseite.jpg') | safe }}">
 {% endblock metatags %}
 
 {% block headextras %}
-{%- set slugs = ["holz", "feuer", "erde", "metall", "wasser"] -%}
 <link rel="stylesheet" href="{{ get_url(path='css/elemente.css') }}">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "CollectionPage",
-  "name": "{{ page.title }}",
+  "@type": "Article",
+  "headline": "Die fünf Elemente der Traditionellen Chinesischen Medizin",
   "description": "{{ page.description }}",
   "url": "{{ page.permalink | safe }}",
   "inLanguage": "de-DE",
-  "mainEntity": {
-    "@type": "ItemList",
-    "itemListElement": [
-      {%- for s in slugs %}
-      {%- set el = get_page(path="elemente/" ~ s ~ ".md") %}
-      {"@type": "ListItem", "position": {{ loop.index }}, "name": "{{ el.extra.element }}-Hund – {{ el.extra.subtitle }}", "url": "{{ el.permalink | safe }}"}{% if not loop.last %},{% endif %}
-      {%- endfor %}
-    ]
-  }
+  "about": {"@type": "Thing", "name": "Fünf-Elemente-Lehre (Wu Xing)"},
+  "author": {"@type": "Person", "name": "{{ config.extra.author }}"},
+  "publisher": {"@type": "Organization", "name": "{{ config.title }}"}
 }
 </script>
 <script type="application/ld+json">
@@ -47,7 +40,7 @@
   "@type": "BreadcrumbList",
   "itemListElement": [
     {"@type": "ListItem", "position": 1, "name": "Startseite", "item": "{{ get_url(path='/', trailing_slash=true) | safe }}"},
-    {"@type": "ListItem", "position": 2, "name": "Die fünf Elemente beim Hund", "item": "{{ page.permalink | safe }}"}
+    {"@type": "ListItem", "position": 2, "name": "Die fünf Elemente", "item": "{{ page.permalink | safe }}"}
   ]
 }
 </script>
@@ -56,7 +49,6 @@
 {% block header %}{% endblock header %}
 
 {% block content %}
-{%- set slugs = ["holz", "feuer", "erde", "metall", "wasser"] -%}
 <main class="element-page element-page--overview" id="inhalt">
 
   <section class="element-hero" aria-labelledby="uebersicht-title">
@@ -66,81 +58,210 @@
         <span aria-current="page">Die fünf Elemente</span>
       </nav>
       <div class="element-hero-copy element-hero-copy--wide">
-        <p class="element-kicker">TCVM · Fünf-Elemente-Lehre</p>
-        <h1 id="uebersicht-title">Die fünf Elemente beim Hund</h1>
-        <p class="element-subtitle">Holz, Feuer, Erde, Metall oder Wasser – welcher Typ ist dein Hund?</p>
-        <p class="element-intro">In der Traditionellen Chinesischen Veterinärmedizin (TCVM) wird jedes Wesen einem oder mehreren der fünf Elemente zugeordnet. Die Zuordnung beschreibt, wie ein Hund tickt, worauf sein Körper empfindlich reagiert und welcher Mensch am besten zu ihm passt. Zu jedem Element gibt es bei mir eine Elementekarte – hier findest du alle fünf zum Ansehen, Speichern und Nachlesen.</p>
+        <p class="element-kicker">TCM &amp; TCVM · Wu Xing</p>
+        <h1 id="uebersicht-title">Die fünf Elemente</h1>
+        <p class="element-subtitle">Holz, Feuer, Erde, Metall und Wasser – ein Ordnungsmodell für Mensch und Tier</p>
+        <p class="element-intro">Die Fünf-Elemente-Lehre ist eines der ältesten Denkmodelle der Traditionellen Chinesischen Medizin. Sie beschreibt nicht fünf Bausteine, aus denen die Welt besteht, sondern fünf <em>Bewegungsqualitäten</em>: fünf Arten, wie Energie sich verhält. Jede davon hat eine Jahreszeit, eine Gefühlslage, einen Organkreis und ein typisches Temperament. Weil dieselbe Logik für Menschen wie für Tiere gilt, arbeite ich in der Praxis mit genau diesem Modell.</p>
         <div class="element-actions">
-          <a class="element-button element-button--primary" href="#karten">Zu den fünf Karten</a>
-          <a class="element-button" href="{{ get_url(path='contact/', trailing_slash=true) }}">Termin anfragen</a>
+          <a class="element-button element-button--primary" href="#elemente">Die fünf Elemente ansehen</a>
+          <a class="element-button" href="#zyklen">Wie sie zusammenspielen</a>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="element-card-section" id="karten" aria-labelledby="karten-title">
+  <section class="element-section" aria-labelledby="grundidee-title">
     <div class="element-shell">
       <div class="element-section-heading element-section-heading--center">
-        <p class="element-kicker">Alle Karten auf einen Blick</p>
-        <h2 id="karten-title">Die fünf Elementekarten</h2>
-        <p>Tippe auf ein Element, um die Karte in Ruhe anzusehen und den passenden Steckbrief zu lesen.</p>
-      </div>
-
-      <ul class="element-overview-grid">
-        {%- for s in slugs %}
-        {%- set el = get_page(path="elemente/" ~ s ~ ".md") %}
-        <li class="element-overview-item element--{{ s }}">
-          <a class="element-overview-card" href="{{ el.permalink }}">
-            <span class="element-overview-media">
-              <picture>
-                <source type="image/webp"
-                        srcset="{{ get_url(path='img/elemente/' ~ s ~ '-vorderseite-640.webp') }} 640w, {{ get_url(path='img/elemente/' ~ s ~ '-vorderseite.webp') }} 1200w"
-                        sizes="(max-width: 599px) 88vw, (max-width: 991px) 44vw, 280px">
-                <img src="{{ get_url(path='img/elemente/' ~ s ~ '-vorderseite.jpg') }}"
-                     width="1200" height="{{ el.extra.front_height }}"
-                     alt="Vorderseite der Elementekarte {{ el.extra.element }}-Hund – {{ el.extra.subtitle }}"
-                     loading="{% if loop.index <= 2 %}eager{% else %}lazy{% endif %}" decoding="async">
-              </picture>
-            </span>
-            <span class="element-overview-body">
-              <span class="element-overview-name">{{ el.extra.element }}-Hund</span>
-              <span class="element-overview-subtitle">{{ el.extra.subtitle }}</span>
-              <span class="element-overview-teaser">{{ el.extra.intro }}</span>
-              <span class="element-overview-meta">{{ el.extra.emotion }} · {{ el.extra.organs }}</span>
-              <span class="element-overview-more">Karte &amp; Steckbrief ansehen</span>
-            </span>
-          </a>
-        </li>
-        {%- endfor %}
-      </ul>
-    </div>
-  </section>
-
-  <section class="element-section" aria-labelledby="einordnung-title">
-    <div class="element-shell">
-      <div class="element-section-heading element-section-heading--center">
-        <p class="element-kicker">Gut zu wissen</p>
-        <h2 id="einordnung-title">So liest du die Elemente richtig</h2>
+        <p class="element-kicker">Die Grundidee</p>
+        <h2 id="grundidee-title">Warum dieses Modell so nützlich ist</h2>
       </div>
       <div class="element-profile-grid">
         <article class="element-info-card">
           <span class="element-card-number" aria-hidden="true">01</span>
-          <p class="element-info-label">Typologie</p>
-          <h3>Kein Etikett, sondern eine Landkarte</h3>
-          <p>Die Elemente beschreiben Tendenzen – keine festen Schubladen. Sie helfen dabei, das Verhalten und die körperlichen Schwachstellen eines Hundes besser einzuordnen und Training wie Therapie darauf abzustimmen.</p>
+          <p class="element-info-label">Zusammenhang</p>
+          <h3>Wesen und Körper gehören zusammen</h3>
+          <p>Jedes Element verbindet ein Temperament mit einem Organkreis und einer typischen Schwachstelle. Wer ständig unter Druck steht, reagiert anders als jemand, der schnell verunsichert ist – und der Körper macht diese Muster mit. Das Modell macht diesen Zusammenhang sichtbar, statt Verhalten und Beschwerden getrennt zu betrachten.</p>
         </article>
         <article class="element-info-card">
           <span class="element-card-number" aria-hidden="true">02</span>
-          <p class="element-info-label">Mischtypen</p>
-          <h3>Die meisten Hunde sind Mischungen</h3>
-          <p>Sehr oft passt ein Element am deutlichsten, ein zweites klingt daneben mit. Lies ruhig mehrere Karten – häufig erkennst du deinen Hund in einer Kombination wieder.</p>
+          <p class="element-info-label">Kein Etikett</p>
+          <h3>Eine Landkarte, keine Schublade</h3>
+          <p>Kein Lebewesen ist „reines Holz“ oder „reines Wasser“. Meist ist ein Element führend, ein zweites klingt mit, und die Verteilung verschiebt sich mit Alter, Jahreszeit und Lebenslage. Die Zuordnung ist ein Werkzeug zum Verstehen – keine Diagnose und kein Charakterurteil.</p>
         </article>
         <article class="element-info-card">
           <span class="element-card-number" aria-hidden="true">03</span>
-          <p class="element-info-label">Mensch &amp; Tier</p>
-          <h3>Auch du hast ein Element</h3>
-          <p>Spannend wird es im Zusammenspiel: Manche Kombinationen aus Hundetyp und Haltertyp harmonieren sofort, andere brauchen bewusste Absprachen im Alltag. Jede Karte beschreibt das auf ihrer Rückseite.</p>
+          <p class="element-info-label">Praxisnutzen</p>
+          <h3>Sie erklärt, warum es hakt</h3>
+          <p>Viele Konflikte im Alltag sind keine Erziehungs- oder Charakterfrage, sondern ein Aufeinandertreffen zweier Elemente. Wer das erkennt, kann Training, Umfeld und Therapie anpassen, statt gegen die Natur eines Tieres oder Menschen zu arbeiten.</p>
         </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="element-card-section" id="elemente" aria-labelledby="elemente-title">
+    <div class="element-shell">
+      <div class="element-section-heading element-section-heading--center">
+        <p class="element-kicker">Kurz vorgestellt</p>
+        <h2 id="elemente-title">Die fünf Elemente auf einen Blick</h2>
+        <p>Jedes Element steht für eine Grundbewegung – vom Aufbruch bis zum Rückzug.</p>
+      </div>
+
+      <ul class="element-brief-list">
+        <li class="element-brief element--holz">
+          <p class="element-brief-name">Holz <span>Der Aufbruch</span></p>
+          <p class="element-brief-text">Wachstum, Antrieb, Durchsetzung. Holz will vorwärts, plant, setzt Ziele und räumt Hindernisse aus dem Weg. Gerät es unter Druck, wird aus Tatkraft Anspannung, Ungeduld und Zorn.</p>
+          <p class="element-brief-meta">Frühling · Wut &amp; Zorn · Leber &amp; Gallenblase</p>
+        </li>
+        <li class="element-brief element--feuer">
+          <p class="element-brief-name">Feuer <span>Die Begegnung</span></p>
+          <p class="element-brief-text">Wärme, Ausdruck, Kontakt. Feuer sucht Nähe, begeistert sich schnell und spürt jede Stimmung im Raum. Im Übermaß kippt es in Unruhe, Überdrehtheit und Verlustangst.</p>
+          <p class="element-brief-meta">Sommer · Freude · Herz &amp; Dünndarm</p>
+        </li>
+        <li class="element-brief element--erde">
+          <p class="element-brief-name">Erde <span>Die Mitte</span></p>
+          <p class="element-brief-text">Nähren, halten, ausgleichen. Erde sorgt für Stabilität, Verbindlichkeit und ein gutes Miteinander. Aus dem Gleichgewicht wird daraus Grübeln, Trägheit und ein Zuviel an Fürsorge.</p>
+          <p class="element-brief-meta">Spätsommer · Sorge &amp; Grübeln · Milz &amp; Magen</p>
+        </li>
+        <li class="element-brief element--metall">
+          <p class="element-brief-name">Metall <span>Die Klarheit</span></p>
+          <p class="element-brief-text">Ordnung, Grenzen, Loslassen. Metall schätzt Struktur, Verlässlichkeit und klare Regeln. Erstarrt es, entstehen Rückzug, Strenge und eine schwer greifbare Traurigkeit.</p>
+          <p class="element-brief-meta">Herbst · Trauer &amp; Kummer · Lunge &amp; Dickdarm</p>
+        </li>
+        <li class="element-brief element--wasser">
+          <p class="element-brief-name">Wasser <span>Die Tiefe</span></p>
+          <p class="element-brief-text">Ruhe, Reserve, Vorsicht. Wasser beobachtet, hält Kraft zurück und geht kein unnötiges Risiko ein. Fehlt Sicherheit, wird daraus Angst, Rückzug und ein leerer Energiespeicher.</p>
+          <p class="element-brief-meta">Winter · Angst · Niere &amp; Blase</p>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="element-section" id="zyklen" aria-labelledby="zyklen-title">
+    <div class="element-shell">
+      <div class="element-section-heading element-section-heading--center">
+        <p class="element-kicker">Das Zusammenspiel</p>
+        <h2 id="zyklen-title">Wie die Elemente aufeinander wirken</h2>
+        <p>Die Elemente stehen nicht nebeneinander, sondern in zwei festen Kreisläufen. Erst daraus erklärt sich, warum manche Kombinationen tragen – und andere reiben.</p>
+      </div>
+
+      <div class="element-cycle">
+        <figure class="element-cycle-figure">
+          <svg viewBox="0 0 350 350" role="img" aria-labelledby="zyklus-svg-title zyklus-svg-desc">
+            <title id="zyklus-svg-title">Nähr- und Kontrollzyklus der fünf Elemente</title>
+            <desc id="zyklus-svg-desc">Fünf Elemente im Kreis angeordnet. Der Nährzyklus verläuft außen im Kreis: Holz nährt Feuer, Feuer nährt Erde, Erde nährt Metall, Metall nährt Wasser, Wasser nährt Holz. Der Kontrollzyklus verläuft als Stern in der Mitte: Holz kontrolliert Erde, Erde kontrolliert Wasser, Wasser kontrolliert Feuer, Feuer kontrolliert Metall, Metall kontrolliert Holz.</desc>
+
+            <defs>
+              <marker id="pfeilNaehr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5.5" markerHeight="5.5" orient="auto-start-reverse">
+                <path d="M0 0 L10 5 L0 10 z" fill="#4f7856"></path>
+              </marker>
+              <marker id="pfeilKontroll" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5.5" markerHeight="5.5" orient="auto-start-reverse">
+                <path d="M0 0 L10 5 L0 10 z" fill="#9aa3a0"></path>
+              </marker>
+            </defs>
+
+            <g class="cycle-ke" stroke="#9aa3a0" stroke-width="1.6" stroke-dasharray="6 5" marker-end="url(#pfeilKontroll)">
+              <line x1="188.3" y1="93.9" x2="233.4" y2="232.8"></line>
+              <line x1="211.9" y1="248.4" x2="93.8" y2="162.6"></line>
+              <line x1="102.0" y1="137.3" x2="248.0" y2="137.3"></line>
+              <line x1="256.2" y1="162.6" x2="138.1" y2="248.4"></line>
+              <line x1="116.6" y1="232.8" x2="161.7" y2="93.9"></line>
+            </g>
+
+            <g class="cycle-sheng" stroke="#4f7856" stroke-width="2.6" stroke-linecap="round" marker-end="url(#pfeilNaehr)">
+              <line x1="209.8" y1="78.3" x2="256.2" y2="112.0"></line>
+              <line x1="277.7" y1="178.2" x2="260.0" y2="232.8"></line>
+              <line x1="203.7" y1="273.7" x2="146.3" y2="273.7"></line>
+              <line x1="90.0" y1="232.8" x2="72.3" y2="178.2"></line>
+              <line x1="93.8" y1="112.0" x2="140.2" y2="78.3"></line>
+            </g>
+
+            <g class="cycle-nodes">
+              <circle cx="175" cy="53" r="34" fill="#f0f7ef" stroke="#4f7856" stroke-width="2"></circle>
+              <text x="175" y="58">Holz</text>
+              <circle cx="291" cy="137.3" r="34" fill="#fff3ed" stroke="#b54a36" stroke-width="2"></circle>
+              <text x="291" y="142.3">Feuer</text>
+              <circle cx="246.7" cy="273.7" r="34" fill="#fbf6e9" stroke="#94743a" stroke-width="2"></circle>
+              <text x="246.7" y="278.7">Erde</text>
+              <circle cx="103.3" cy="273.7" r="34" fill="#f1f4f6" stroke="#68747e" stroke-width="2"></circle>
+              <text x="103.3" y="278.7">Metall</text>
+              <circle cx="59" cy="137.3" r="34" fill="#edf7fb" stroke="#3e708d" stroke-width="2"></circle>
+              <text x="59" y="142.3">Wasser</text>
+            </g>
+          </svg>
+          <figcaption>
+            <span class="element-legend"><span class="element-legend-line element-legend-line--sheng" aria-hidden="true"></span>Nährzyklus – ein Element stärkt das nächste</span>
+            <span class="element-legend"><span class="element-legend-line element-legend-line--ke" aria-hidden="true"></span>Kontrollzyklus – ein Element bremst ein anderes</span>
+          </figcaption>
+        </figure>
+
+        <div class="element-cycle-copy">
+          <h3>Der Nährzyklus</h3>
+          <p>Im Kreis herum stärkt jedes Element das folgende: Holz nährt Feuer, Feuer nährt Erde, Erde nährt Metall, Metall nährt Wasser, und Wasser nährt wieder Holz. Solange dieser Kreislauf rund läuft, gleichen sich Schwankungen von selbst aus.</p>
+
+          <h3>Der Kontrollzyklus</h3>
+          <p>Quer durch die Mitte hält jedes Element ein anderes im Zaum: Holz kontrolliert Erde, Erde kontrolliert Wasser, Wasser kontrolliert Feuer, Feuer kontrolliert Metall, Metall kontrolliert Holz. Dieses Bremsen ist gesund – es verhindert, dass ein Element überhandnimmt.</p>
+
+          <h3>Wenn es kippt</h3>
+          <p>Schwierig wird es an zwei Stellen. Ist ein Element zu stark, überkontrolliert es sein Gegenüber und unterdrückt es – zu viel Holz erdrückt die Erde. Ist es zu schwach, fällt die Bremse weg und das kontrollierte Element wuchert. Genau hier entstehen die Muster, die im Alltag als „das passt einfach nicht zusammen“ auffallen.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="element-card-section" id="konflikte" aria-labelledby="konflikte-title">
+    <div class="element-shell">
+      <div class="element-section-heading element-section-heading--center">
+        <p class="element-kicker">Worauf man achten sollte</p>
+        <h2 id="konflikte-title">Wenn zwei Typen aufeinandertreffen</h2>
+        <p>Nicht nur im Tier selbst spielen die Elemente zusammen – auch zwischen Tier und Mensch. Drei typische Reibungspunkte:</p>
+      </div>
+
+      <div class="element-profile-grid">
+        <article class="element-info-card">
+          <span class="element-card-number" aria-hidden="true">01</span>
+          <p class="element-info-label">Tempo</p>
+          <h3>Ungeduld trifft Vorsicht</h3>
+          <p>Ein Holz-Mensch will vorankommen, ein Wasser-Tier braucht Zeit und Sicherheit. Je mehr Druck entsteht, desto stärker zieht sich das Tier zurück – und desto ungeduldiger wird der Mensch. Hier hilft nicht mehr Konsequenz, sondern ein langsameres Tempo.</p>
+        </article>
+        <article class="element-info-card">
+          <span class="element-card-number" aria-hidden="true">02</span>
+          <p class="element-info-label">Struktur</p>
+          <h3>Spontaneität trifft Ordnung</h3>
+          <p>Ein Feuer-Mensch lebt von Abwechslung, ein Metall-Tier von festen Abläufen. Was für den einen Lebendigkeit ist, ist für den anderen Verunsicherung. Verlässliche Rituale im Alltag entschärfen das, ohne dass jemand sich verbiegen muss.</p>
+        </article>
+        <article class="element-info-card">
+          <span class="element-card-number" aria-hidden="true">03</span>
+          <p class="element-info-label">Nähe</p>
+          <h3>Ruhe trifft Rastlosigkeit</h3>
+          <p>Ein Erde-Tier sucht Gemütlichkeit, ein hitziger Alltag bringt es aus der Balance – oft zuerst über den Magen. Umgekehrt langweilt sich ein Holz-Tier bei zu viel Ruhe und sucht sich eigene Aufgaben. Beides zeigt sich früher im Verhalten als im Befund.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="element-more" id="tiere" aria-labelledby="tiere-title">
+    <div class="element-shell">
+      <div class="element-section-heading element-section-heading--center">
+        <p class="element-kicker">Für dein Tier</p>
+        <h2 id="tiere-title">Welches Element passt zu deinem Tier?</h2>
+        <p>Für Hund und Pferd habe ich die fünf Typen ausführlich aufbereitet – mit allem, was im Alltag zählt.</p>
+      </div>
+
+      <div class="element-target-grid">
+        <a class="element-target" href="{{ get_url(path='elemente/hund/', trailing_slash=true) }}">
+          <span class="element-target-kicker">Hund</span>
+          <span class="element-target-title">Die fünf Elementekarten</span>
+          <span class="element-target-text">Zu jedem Element eine Karte mit Charakter, körperlichen Tendenzen und der Frage, welcher Mensch am besten passt. Zum Ansehen, Speichern und Nachlesen.</span>
+          <span class="element-target-more">Zu den Hundekarten</span>
+        </a>
+
+        <a class="element-target" href="{{ get_url(path='quiz/', trailing_slash=true) }}">
+          <span class="element-target-kicker">Pferd</span>
+          <span class="element-target-title">Das Element-Quiz</span>
+          <span class="element-target-text">19 kurze Fragen aus dem Stallalltag – am Ende erfährst du, welchem Element dein Pferd am ehesten entspricht, inklusive Auswertung für Mischtypen.</span>
+          <span class="element-target-more">Zum Pferde-Quiz</span>
+        </a>
       </div>
     </div>
   </section>
@@ -150,7 +271,7 @@
       <div class="element-note-mark" aria-hidden="true">i</div>
       <div>
         <h2>Wichtiger Hinweis</h2>
-        <p>Die Element-Zuordnung ist eine typologische Orientierung aus der Traditionellen Chinesischen Veterinärmedizin (TCVM). Sie ersetzt keine tierärztliche Diagnose oder Behandlung. Beschwerden, akute Symptome oder deutliche Verhaltensänderungen sollten immer tierärztlich abgeklärt werden.</p>
+        <p>Die Fünf-Elemente-Lehre ist ein typologisches Ordnungsmodell aus der Traditionellen Chinesischen Medizin. Sie ersetzt keine tierärztliche Diagnose oder Behandlung. Beschwerden, akute Symptome oder deutliche Verhaltensänderungen sollten immer tierärztlich abgeklärt werden.</p>
       </div>
     </div>
   </aside>
@@ -159,8 +280,8 @@
     <div class="element-shell element-cta-inner">
       <div>
         <p class="element-kicker">Individuell statt Schublade</p>
-        <h2>Du möchtest deinen Hund ganzheitlich begleiten?</h2>
-        <p>Jeder Hund ist einzigartig und kann Anteile mehrerer Elemente zeigen. In der Tierheilpraxis betrachte ich deshalb immer das gesamte Tier, sein Umfeld und seine Vorgeschichte – und leite daraus einen passenden Therapieplan ab.</p>
+        <h2>Du möchtest dein Tier ganzheitlich begleiten?</h2>
+        <p>Jedes Tier ist einzigartig und zeigt Anteile mehrerer Elemente. In der Tierheilpraxis betrachte ich deshalb immer das gesamte Tier, sein Umfeld und seine Vorgeschichte – und leite daraus einen passenden Therapieplan ab.</p>
       </div>
       <div class="element-cta-actions">
         <a class="element-button element-button--primary" href="{{ get_url(path='contact/', trailing_slash=true) }}">Termin anfragen</a>

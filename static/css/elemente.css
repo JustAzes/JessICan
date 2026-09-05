@@ -919,3 +919,235 @@
     break-inside: avoid;
   }
 }
+
+/* ---------------------------------------------------------------------------
+   Allgemeine Elementeübersicht: /elemente/
+   --------------------------------------------------------------------------- */
+
+/* Kurzvorstellung der fünf Elemente (ohne Bild) */
+
+.element-brief-list {
+  display: grid;
+  gap: 0.85rem;
+  max-width: 940px;
+  margin: 0 auto;
+  padding: 0;
+  list-style: none;
+}
+
+.element-brief {
+  padding: clamp(1.15rem, 2.5vw, 1.6rem) clamp(1.25rem, 3vw, 1.9rem);
+  background: #ffffff;
+  border: 1px solid var(--element-line);
+  border-left: 5px solid var(--element-accent);
+  border-radius: 1.1rem;
+  box-shadow: 0 12px 34px rgba(24, 35, 31, 0.06);
+}
+
+.element-brief-name {
+  margin: 0;
+  color: var(--element-ink);
+  font-size: 1.35rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+}
+
+.element-brief-name span {
+  margin-left: 0.55rem;
+  color: var(--element-accent-dark);
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 0;
+}
+
+.element-brief-text {
+  margin: 0.6rem 0 0;
+  color: var(--element-muted);
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+.element-brief-meta {
+  margin: 0.75rem 0 0;
+  color: var(--element-muted);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+}
+
+/* Nähr- und Kontrollzyklus */
+
+.element-cycle {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  gap: clamp(2rem, 5vw, 4rem);
+  align-items: center;
+  max-width: 1040px;
+  margin-inline: auto;
+}
+
+.element-cycle-figure {
+  margin: 0;
+}
+
+.element-cycle-figure svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-width: 420px;
+  margin-inline: auto;
+}
+
+.cycle-nodes text {
+  fill: var(--element-ink);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 800;
+  text-anchor: middle;
+}
+
+.element-cycle-figure figcaption {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem 1.4rem;
+  justify-content: center;
+  margin-top: 1.2rem;
+}
+
+.element-legend {
+  display: inline-flex;
+  gap: 0.5rem;
+  align-items: center;
+  color: var(--element-muted);
+  font-size: 0.82rem;
+  font-weight: 600;
+}
+
+.element-legend-line {
+  display: block;
+  width: 1.9rem;
+  height: 0;
+  border-top: 3px solid #4f7856;
+}
+
+.element-legend-line--ke {
+  border-top: 2px dashed #9aa3a0;
+}
+
+.element-cycle-copy h3 {
+  margin: 0;
+  color: var(--element-ink);
+  font-size: 1.2rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+.element-cycle-copy h3 + p {
+  margin: 0.55rem 0 0;
+}
+
+.element-cycle-copy p {
+  color: var(--element-muted);
+  font-size: 1rem;
+  line-height: 1.72;
+}
+
+.element-cycle-copy p + h3 {
+  margin-top: 1.75rem;
+}
+
+/* Einstiegskarten Hund / Pferd */
+
+.element-target-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(1rem, 2.5vw, 1.75rem);
+  max-width: 940px;
+  margin-inline: auto;
+}
+
+.element-target {
+  display: flex;
+  flex-direction: column;
+  padding: clamp(1.5rem, 3.5vw, 2.25rem);
+  color: var(--element-ink) !important;
+  background: #ffffff;
+  border: 1px solid var(--element-line);
+  border-top: 4px solid var(--element-accent);
+  border-radius: 1.3rem;
+  box-shadow: 0 16px 48px rgba(24, 35, 31, 0.07);
+  text-decoration: none !important;
+  transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
+}
+
+.element-target:hover,
+.element-target:focus-visible {
+  color: var(--element-ink) !important;
+  transform: translateY(-4px);
+  border-color: var(--element-accent);
+  box-shadow: 0 26px 64px rgba(24, 35, 31, 0.16);
+}
+
+.element-target-kicker {
+  display: block;
+  color: var(--element-accent-dark);
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.element-target-title {
+  display: block;
+  margin-top: 0.5rem;
+  color: var(--element-ink);
+  font-size: 1.5rem;
+  font-weight: 800;
+  letter-spacing: -0.025em;
+  line-height: 1.2;
+}
+
+.element-target-text {
+  display: block;
+  margin-top: 0.8rem;
+  color: var(--element-muted);
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+.element-target-more {
+  display: block;
+  margin-top: auto;
+  padding-top: 1.4rem;
+  color: var(--element-accent-dark);
+  font-size: 0.9rem;
+  font-weight: 800;
+}
+
+.element-target-more::after {
+  content: " →";
+}
+
+@media (max-width: 899px) {
+  .element-cycle {
+    grid-template-columns: 1fr;
+  }
+
+  .element-target-grid {
+    grid-template-columns: 1fr;
+    max-width: 520px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .element-target {
+    transition: none;
+  }
+
+  .element-target:hover,
+  .element-target:focus-visible {
+    transform: none;
+  }
+}
