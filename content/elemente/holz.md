@@ -2,7 +2,7 @@
 title = "Holz-Hund – Der Sportler"
 path = "elemente/holz"
 template = "element-hund.html"
-description = "Der Holz-Hund in der TCVM: Charakter, typische körperliche Tendenzen und Hund-Mensch-Harmonie."
+description = "Holz-Hund (TCVM): sportlich, mutig, ungeduldig – Charakter, Leber-/Gallenblasen-Themen wie Muskelspannung und Sehnen sowie der passende Mensch. Mit Elementekarte."
 [extra]
 element = "Holz"
 slug = "holz"
@@ -13,6 +13,5 @@ intro = "Tatkräftig, mutig und zielorientiert: Der Holz-Hund möchte Aufgaben l
 character = "Selbstbewusst, furchtlos, reaktionsfreudig und stark leistungsorientiert. Der Hund ist schnell frustriert oder ungeduldig, wenn es nicht vorangeht, und neigt zu dominantem Verhalten."
 health = "Kräftiger, athletischer Körperbau mit wachen Augen. Neigt zu dauerhafter Muskelspannung, Sehnenerkrankungen, Krallenproblemen und allergischem Juckreiz. Die Verdauung reagiert bei Stress oft mit Verstopfung oder Blähungen."
 harmony = "Braucht klare Führung und fordernde Aufgaben (wie z. B. Agility). Er profitiert von ruhigen Haltern (Erde-Typ), bildet jedoch eine explosive Mischung mit unsicheren Menschen (Wasser-Typ), da der Hund dann die Kontrolle übernimmt."
-front_image = "img/quiz/holz.jpg"
-front_alt = "Holz-Hund – Der Sportler"
+front_height = 1826
 +++

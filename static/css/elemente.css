@@ -273,6 +273,11 @@
   outline-offset: 0.35rem;
 }
 
+.element-hero-card picture,
+.element-card-figure picture {
+  display: block;
+}
+
 .element-hero-card img,
 .element-card-figure img {
   display: block;
@@ -705,5 +710,203 @@
   .element-card-figure img,
   .element-info-card {
     box-shadow: none;
+  }
+}
+
+/* ---------------------------------------------------------------------------
+   Übersichtsseite: /elemente/
+   --------------------------------------------------------------------------- */
+
+.element-hero-copy--wide {
+  max-width: 68ch;
+}
+
+.element-page--overview .element-hero h1 {
+  max-width: 18ch;
+}
+
+.element-overview-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: clamp(0.85rem, 1.8vw, 1.4rem);
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0;
+  list-style: none;
+}
+
+.element-overview-item {
+  display: flex;
+}
+
+.element-overview-card {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  overflow: hidden;
+  color: var(--element-ink) !important;
+  background: #ffffff;
+  border: 1px solid var(--element-line);
+  border-top: 4px solid var(--element-accent);
+  border-radius: 1.3rem;
+  box-shadow: 0 16px 48px rgba(24, 35, 31, 0.07);
+  text-decoration: none !important;
+  transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
+}
+
+.element-overview-card:hover,
+.element-overview-card:focus-visible {
+  color: var(--element-ink) !important;
+  transform: translateY(-4px);
+  border-color: var(--element-accent);
+  box-shadow: 0 26px 64px rgba(24, 35, 31, 0.16);
+}
+
+.element-overview-media {
+  display: block;
+  overflow: hidden;
+  aspect-ratio: 3 / 4;
+  background: var(--element-tint);
+  border-bottom: 1px solid var(--element-line);
+}
+
+.element-overview-media picture {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.element-overview-media img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  transition: transform 320ms ease;
+}
+
+.element-overview-card:hover .element-overview-media img,
+.element-overview-card:focus-visible .element-overview-media img {
+  transform: scale(1.03);
+}
+
+.element-overview-body {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  padding: clamp(1.1rem, 2.5vw, 1.5rem);
+}
+
+.element-overview-name {
+  display: block;
+  color: var(--element-ink);
+  font-size: 1.4rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+}
+
+.element-overview-subtitle {
+  display: block;
+  margin-top: 0.2rem;
+  color: var(--element-accent-dark);
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.element-overview-teaser {
+  display: block;
+  margin-top: 0.75rem;
+  color: var(--element-muted);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.element-overview-meta {
+  display: block;
+  margin-top: 0.9rem;
+  color: var(--element-muted);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.element-overview-more {
+  display: block;
+  margin-top: auto;
+  padding-top: 1.1rem;
+  color: var(--element-accent-dark);
+  font-size: 0.88rem;
+  font-weight: 800;
+}
+
+.element-overview-more::after {
+  content: " →";
+}
+
+/* ---------------------------------------------------------------------------
+   Kartenabbildungen auf den Elementseiten
+   --------------------------------------------------------------------------- */
+
+.element-card-figure img {
+  background: #ffffff;
+}
+
+.element-card-tip {
+  max-width: 62ch;
+  margin: 1.75rem auto 0;
+  color: var(--element-muted);
+  font-size: 0.92rem;
+  line-height: 1.65;
+  text-align: center;
+}
+
+@media (max-width: 1099px) {
+  .element-overview-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    max-width: 860px;
+  }
+}
+
+@media (max-width: 767px) {
+  .element-overview-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    max-width: 620px;
+  }
+}
+
+@media (max-width: 479px) {
+  .element-overview-grid {
+    grid-template-columns: 1fr;
+    max-width: 380px;
+  }
+
+  .element-overview-media {
+    aspect-ratio: 4 / 3;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .element-overview-card,
+  .element-overview-media img {
+    transition: none;
+  }
+
+  .element-overview-card:hover,
+  .element-overview-card:focus-visible {
+    transform: none;
+  }
+
+  .element-overview-card:hover .element-overview-media img,
+  .element-overview-card:focus-visible .element-overview-media img {
+    transform: none;
+  }
+}
+
+@media print {
+  .element-overview-card {
+    box-shadow: none;
+    break-inside: avoid;
   }
 }
