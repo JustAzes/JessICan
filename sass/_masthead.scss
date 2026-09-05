@@ -81,14 +81,3 @@ header.masthead {
     }
   }
 }
-// Variante ohne Hintergrundbild: einfarbige Markenfläche.
-// Die Dokumenteseite hatte zuvor weiße Schrift auf fast weißem Grund und war
-// dadurch praktisch unlesbar.
-header.masthead.masthead--plain {
-  background-color: $primary;
-  background-image: none;
-
-  .overlay {
-    display: none;
-  }
-}

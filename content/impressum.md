@@ -5,7 +5,7 @@ render = false
 +++
 
 ## Impressum
-### Verantwortlich für den Inhalt dieser Webseite gemäß § 5 TMG:
+### Verantwortlich für den Inhalt dieser Webseite gemäß § 5 DDG:
 
 Jessica Gebler  
 Tierheilpraxis JessICan -natürlich gesund! (Einzelunternehmen, Kleinunternehmerin)  
@@ -62,7 +62,7 @@ Andere Daten werden automatisch oder nach Ihrer Einwilligung beim Besuch der Web
 
 ##### Wofür nutzen wir Ihre Daten?
 
-Ein Teil der Daten wird erhoben, um eine fehlerfreie Bereitstellung der Website zu gewährleisten. Andere Daten können zur Analyse Ihres Nutzerverhaltens verwendet werden.
+Die Daten werden erhoben, um eine fehlerfreie Bereitstellung der Website zu gewährleisten. Eine Analyse Ihres Nutzerverhaltens findet nicht statt: Wir setzen weder Cookies noch Analyse- oder Trackingdienste ein.
 
 ##### Welche Rechte haben Sie bezüglich Ihrer Daten?
 
@@ -142,15 +142,15 @@ werden Ihre Daten gelöscht, sofern wir keine anderen rechtlich zulässigen Grü
 personenbezogenen Daten haben (z. B. steuer- oder handelsrechtliche Aufbewahrungsfristen); im
 letztgenannten Fall erfolgt die Löschung nach Fortfall dieser Gründe.
 
-#### Allgemeine Hinweise zu den Rechtsgrundlagen der Datenverarbeitung auf dieser
-Website
+#### Allgemeine Hinweise zu den Rechtsgrundlagen der Datenverarbeitung auf dieser Website
+
 Sofern Sie in die Datenverarbeitung eingewilligt haben, verarbeiten wir Ihre personenbezogenen Daten auf
 Grundlage von Art. 6 Abs. 1 lit. a DSGVO bzw. Art. 9 Abs. 2 lit. a DSGVO, sofern besondere Datenkategorien
 nach Art. 9 Abs. 1 DSGVO verarbeitet werden. Im Falle einer ausdrücklichen Einwilligung in die Übertragung
 personenbezogener Daten in Drittstaaten erfolgt die Datenverarbeitung außerdem auf Grundlage von Art.
 49 Abs. 1 lit. a DSGVO. Sofern Sie in die Speicherung von Cookies oder in den Zugriff auf Informationen in
 Ihr Endgerät (z. B. via Device-Fingerprinting) eingewilligt haben, erfolgt die Datenverarbeitung zusätzlich
-auf Grundlage von § 25 Abs. 1 TTDSG. Die Einwilligung ist jederzeit widerrufbar. Sind Ihre Daten zur
+auf Grundlage von § 25 Abs. 1 TDDDG (bis zum 13. Mai 2024: § 25 Abs. 1 TTDSG). Die Einwilligung ist jederzeit widerrufbar. Sind Ihre Daten zur
 Vertragserfüllung oder zur Durchführung vorvertraglicher Maßnahmen erforderlich, verarbeiten wir Ihre
 Daten auf Grundlage des Art. 6 Abs. 1 lit. b DSGVO. Des Weiteren verarbeiten wir Ihre Daten, sofern diese
 zur Erfüllung einer rechtlichen Verpflichtung erforderlich sind auf Grundlage von Art. 6 Abs. 1 lit. c DSGVO.
@@ -173,6 +173,13 @@ Im Falle von Verstößen gegen die DSGVO steht den Betroffenen ein Beschwerderec
 Aufsichtsbehörde, insbesondere in dem Mitgliedstaat ihres gewöhnlichen Aufenthalts, ihres Arbeitsplatzes
 oder des Orts des mutmaßlichen Verstoßes zu. Das Beschwerderecht besteht unbeschadet anderweitiger
 verwaltungsrechtlicher oder gerichtlicher Rechtsbehelfe.
+
+Für uns zuständig ist:
+
+Die Sächsische Datenschutz- und Transparenzbeauftragte  
+Besucheranschrift: Maternistraße 17, 01067 Dresden  
+Postanschrift: Postfach 11 01 32, 01330 Dresden  
+Website: www.datenschutz.sachsen.de
 
 #### Recht auf Datenübertragbarkeit
 Sie haben das Recht, Daten, die wir auf Grundlage Ihrer Einwilligung oder in Erfüllung eines Vertrags
@@ -225,26 +232,6 @@ Weitere Informationen zu Google Fonts finden Sie unter
 https://developers.google.com/fonts/faq und in der Datenschutzerklärung von Google:
 https://policies.google.com/privacy?hl=de.
 
-#### Font Awesome (lokales Hosting)
-Diese Seite nutzt zur einheitlichen Darstellung von Schriftarten Font Awesome. Font Awesome ist lokal
-installiert. Eine Verbindung zu Servern von Fonticons, Inc. findet dabei nicht statt.
-
-Weitere Informationen zu Font Awesome finden Sie in der Datenschutzerklärung für Font Awesome unter:
-https://fontawesome.com/privacy.
-
-#### Analytics mittels GoatCounter
-GoatCounter wird genutzt, um Webseiten-Besucherstatistiken zu erstellen und benötigt keine Einwilligungserklärung gemäß GDPR. Dies liegt daran, dass 1) keine persönlich identifizierbaren Informationen erfasst werden und 2) es im legitimen Interesse des Website-Besitzers liegt, zu wissen, wie viele Besucher seine Website besuchen.
-
-Folgende Informationen werden erfasst:
-- URL der besuchten Seite
-- Referer-Header
-- User-Agent-Kopfzeile
-- Bildschirmgröße
-- Landes- und Regionsnamen, basierend auf der IP-Adresse
-- Ein Hash, der aus der IP-Adresse, dem User-Agent und einer Zufallszahl besteht.
-
-Es erfolgt keine Weitergabe von Informationen an Dritte. Weitere Informationen finden Sie unter: https://www.goatcounter.com/help/gdpr.
-
 #### Keine Verwendung von Cookies
 
 Wir verwenden auf unserer Webseite keine Cookies. Es werden keine Informationen über Ihre Nutzung der Webseite gespeichert oder an Dritte weitergegeben.
@@ -253,59 +240,51 @@ Wir verwenden auf unserer Webseite keine Cookies. Es werden keine Informationen 
 
 Treten Sie bzgl. Fragen jeglicher Art per E-Mail oder Kontaktformular mit uns in Kontakt, erteilen Sie uns zum Zwecke der Kontaktaufnahme Ihre freiwillige Einwilligung. Hierfür ist die Angabe einer validen E-Mail-Adresse erforderlich. Diese dient der Zuordnung der Anfrage und der anschließenden Beantwortung derselben. Die Angabe weiterer Daten ist optional. Die von Ihnen gemachten Angaben werden zum Zwecke der Bearbeitung der Anfrage sowie für mögliche Anschlussfragen gespeichert. Nach Erledigung der von Ihnen gestellten Anfrage werden personenbezogene Daten gelöscht.
 
-Bei E-Mail-Anfragen über das Kontaktformular werden Ihre Daten gemäß Art. 6 Abs. 1 DSGVO vom Dienstleister Formspree.io an uns weitergeleitet. Die Übermittlung erfolgt sicher über HTTPS, aber die resultierende E-Mail ist unverschlüsselt. Formspree.io ist ein US-Unternehmen, das sich den EU-DSGVO-Vorgaben gemäß Privacy Shield unterwirft. Personenbezogene Daten werden gelöscht, wenn sie nicht mehr erforderlich sind oder gesetzliche Aufbewahrungspflichten dem nicht entgegenstehen.
+Bei Anfragen über das Kontaktformular werden Ihre Daten vom Dienstleister Formspree.io an uns weitergeleitet. Rechtsgrundlage ist Ihre Einwilligung nach Art. 6 Abs. 1 S. 1 lit. a DSGVO beziehungsweise, wenn Ihre Anfrage der Anbahnung eines Vertrags dient, Art. 6 Abs. 1 S. 1 lit. b DSGVO. Die Übermittlung erfolgt verschlüsselt über HTTPS, die daraus entstehende E-Mail ist jedoch unverschlüsselt. Formspree.io ist ein US-Unternehmen; Ihre Daten werden damit in die USA übermittelt. Grundlage dieser Übermittlung ist der Angemessenheitsbeschluss der Europäischen Kommission zum EU-U.S. Data Privacy Framework vom 10. Juli 2023 sowie ergänzend die Standardvertragsklauseln der Europäischen Kommission. Das zuvor an dieser Stelle genannte EU-US Privacy Shield wurde vom Europäischen Gerichtshof bereits 2020 für ungültig erklärt. Personenbezogene Daten werden gelöscht, wenn sie nicht mehr erforderlich sind oder gesetzliche Aufbewahrungspflichten dem nicht entgegenstehen.
 
 Bei Nutzung des Kontaktformulars erhebt Formspree.io Ihre Daten und leitet sie über Sendgrid.com an jessicagebler22[at]gmail.com weiter. Formspree.io speichert nur die letzten 100 Nachrichten und unterliegt deren Datenschutzerklärung. Weitere Informationen und Widerspruchsmöglichkeiten finden Sie unter: http://docs.formspree.io/files/privacy.pdf. Um uns ohne Drittanbieter zu kontaktieren, senden Sie eine E-Mail an jessicagebler22[at]gmail.com.
+
+#### Teilen-Schaltflächen unter Blogbeiträgen
+
+Unter unseren Blogbeiträgen finden Sie Schaltflächen zum Teilen bei Facebook und WhatsApp sowie per E-Mail.
+Dabei handelt es sich um gewöhnliche Links, nicht um eingebundene Schaltflächen der Anbieter. Es wird kein
+Skript der Anbieter geladen, es werden keine Cookies gesetzt und es findet keine Übertragung statt, solange
+Sie nicht selbst auf einen dieser Links klicken. Erst dann bauen Sie eine Verbindung zum jeweiligen Dienst
+auf, für die dessen eigene Datenschutzbestimmungen gelten.
+
+#### Unsere Profile in sozialen Netzwerken
+
+Im Fußbereich unserer Website verlinken wir auf unsere Profile bei Instagram und Facebook (Meta Platforms
+Ireland Limited, Merrion Road, Dublin 4, Irland). Auch hierbei handelt es sich um einfache Links. Erst wenn
+Sie einen dieser Links anklicken und die Seite des Anbieters aufrufen, werden dort Daten verarbeitet – dann
+nach den Datenschutzbestimmungen des jeweiligen Netzwerks. Rechtsgrundlage für die Verlinkung ist unser
+berechtigtes Interesse an einer Außendarstellung nach Art. 6 Abs. 1 S. 1 lit. f DSGVO.
 
 #### Datenschutzerklärung für WhatsApp Business
 
 ##### Nutzung von WhatsApp Business
-Diese Webseite bietet den Besuchern die Möglichkeit, über den Nachrichtendienst WhatsApp der WhatsApp Ireland Limited, 4 Grand Canal Square, Grand Canal Harbour, Dublin 2, Irland, in Kontakt zu treten. Hierfür wird die sogenannte "Business-Version" von WhatsApp verwendet.
+Sie können uns über den Nachrichtendienst WhatsApp der WhatsApp Ireland Limited, 4 Grand Canal Square, Grand Canal Harbour, Dublin 2, Irland, erreichen. Hierfür wird die sogenannte "Business-Version" von WhatsApp verwendet. Auf der Website selbst ist WhatsApp nicht eingebunden; es werden von dort aus keine Daten an WhatsApp übertragen.
 
 ##### Verarbeitung von personenbezogenen Daten
 Bei der Kontaktaufnahme über WhatsApp werden folgende Daten verarbeitet und gespeichert:
 
-##### Mobilfunknummer des Nutzers
-Vor- und Nachname des Nutzers (falls bereitgestellt)
-Nachrichtenverlauf zwischen Nutzer und Webseite
-Kundennummer und Rufnummer des Nutzers (falls zutreffend)
+- Mobilfunknummer des Nutzers
+- Vor- und Nachname des Nutzers (falls bereitgestellt)
+- Nachrichtenverlauf zwischen Nutzer und uns
+- Kundennummer und Rufnummer des Nutzers (falls zutreffend)
+
 Die personenbezogenen Daten werden gemäß Art. 6 Abs. 1 lit. b DSGVO (bei konkreten Geschäftsangelegenheiten) oder Art. 6 Abs. 1 lit. f DSGVO (bei allgemeinen Anfragen) verarbeitet und ausschließlich zur Beantwortung und Erledigung der Anfragen des Nutzers verwendet. Eine Weitergabe der Daten an Dritte findet nicht statt.
 
 ##### Löschung von Daten
 Nutzer haben das Recht, der Verarbeitung ihrer Daten zu widersprechen und die Löschung ihrer Daten zu verlangen. Dazu genügt eine WhatsApp-Nachricht mit dem Text "Ich möchte den Chat-Verlauf löschen" oder "Ich möchte meine Daten löschen". Die Löschung wird innerhalb weniger Tage durchgeführt.
 
 ##### Datenschutz und Datenspeicherung bei WhatsApp
-Bitte beachten Sie, dass bei der Nutzung von WhatsApp personenbezogene Daten auf Servern von WhatsApp Ireland Limited und möglicherweise auch auf Servern von WhatsApp Inc. (1601 Willow Road, 1601 Menlo Park, Menlo Park, Kalifornien, 94025) außerhalb der Europäischen Union verarbeitet werden können. WhatsApp hat sich jedoch verpflichtet, die europäischen Datenschutzgesetze einzuhalten (https://www.privacyshield.gov/participant?id=a2zt0000000TSnwAAG&status=Active).
+Bitte beachten Sie, dass bei der Nutzung von WhatsApp personenbezogene Daten auf Servern von WhatsApp Ireland Limited und möglicherweise auch auf Servern von WhatsApp Inc. (1601 Willow Road, 1601 Menlo Park, Menlo Park, Kalifornien, 94025) außerhalb der Europäischen Union verarbeitet werden können. Grundlage einer Übermittlung in die USA ist der Angemessenheitsbeschluss der Europäischen Kommission zum EU-U.S. Data Privacy Framework vom 10. Juli 2023.
 
 Weitere Informationen zum Datenschutz bei WhatsApp finden Sie in der Datenschutzrichtlinie von WhatsApp: https://www.whatsapp.com/legal/#privacy-policy
 
 ##### Alternativen zu WhatsApp Business zur Kontaktaufnahme
 Die Nutzung von WhatsApp zur Kontaktaufnahme ist freiwillig. Alternativ stehen weiterhin die Kontaktmöglichkeiten per Telefon, Kontaktformular oder E-Mail zur Verfügung. Bei der Übermittlung von vertraulichen Daten wird empfohlen, auf andere Kontaktmethoden wie persönliche Gespräche oder Telefonate zurückzugreifen.
-
-#### Nutzung von Google My Business Chat
-Diese Webseite bietet die Möglichkeit, über den Google My Business Chat, einem Service der Google LLC, 1600 Amphitheatre Parkway, Mountain View, CA 94043, USA, in Kontakt zu treten.
-
-##### Verarbeitung von personenbezogenen Daten
-Bei der Kontaktaufnahme über Google My Business Chat werden die folgenden Daten verarbeitet und gespeichert:
-
-##### Name und E-Mail-Adresse des Nutzers
-Nachrichtenverlauf zwischen Nutzer und Webseite
-Standortdaten (sofern zugelassen)
-Die Verarbeitung dieser Daten erfolgt gemäß Art. 6 Abs. 1 lit. b DSGVO (bei konkreten Geschäftsangelegenheiten) oder Art. 6 Abs. 1 lit. f DSGVO (bei allgemeinen Anfragen) und wird ausschließlich zur Beantwortung und Erledigung der Anfragen des Nutzers verwendet. Eine Weitergabe der Daten an Dritte findet nicht statt.
-
-##### Schutz und Speicherung von Daten
-Google My Business Chat nutzt branchenführende Sicherheitsfunktionen, um die Daten der Nutzer zu schützen. Die Inhalte, die die Nutzer in Google Chat teilen, sind nur für sie und die Personen sichtbar, mit denen sie chatten. Die Daten werden bei der Übertragung und während der Speicherung verschlüsselt.
-
-##### Kontrolle über die Daten
-Nutzer haben die Möglichkeit, die Datenschutzeinstellungen in ihrem Google-Konto anzupassen. Sie können entscheiden, ob ihre Daten aus Google Chat verwendet werden sollen, um die App zu personalisieren und intelligente Funktionen zu ermöglichen. Nutzer haben auch das Recht, der Verarbeitung ihrer Daten zu widersprechen und die Löschung ihrer Daten zu verlangen.
-
-##### Datenschutz und Datenspeicherung bei Google
-Bitte beachten Sie, dass bei der Nutzung von Google My Business Chat personenbezogene Daten auf Servern von Google LLC verarbeitet werden können. Google hat sich jedoch verpflichtet, die europäischen Datenschutzgesetze einzuhalten (https://www.privacyshield.gov/participant?id=a2zt000000001L5AAI).
-
-Weitere Informationen zum Datenschutz bei Google My Business Chat finden Sie in der Datenschutzrichtlinie von Google: https://policies.google.com/privacy
-
-##### Alternativen zu Google My Business Chat zur Kontaktaufnahme
-Die Nutzung von Google My Business Chat zur Kontaktaufnahme ist freiwillig. Alternativ stehen weiterhin die Kontaktmöglichkeiten per Telefon, Kontaktformular oder E-Mail  zur Verfügung. Bei der Übermittlung von vertraulichen Daten wird empfohlen, auf andere Kontaktmethoden wie persönliche Gespräche oder Telefonate zurückzugreifen.
 
 ### 5. Haftungsausschluss
 
