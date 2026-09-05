@@ -1,199 +1,36 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<urlset
-      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
-            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+{#- Automatisch aus dem Inhalt erzeugt. Zola stellt hier `entries` bereit: jede
+    Seite, Sektion und Taxonomie. Ausgefiltert werden Paginierungs-Umleitungen,
+    die 404-Seite und leere Sammelseiten.
 
-<url>
-  <loc>https://tierheilpraxis-jessican.de/</loc>
-  <lastmod>2025-09-01T12:00:00+00:00</lastmod>
-  <priority>1.00</priority>
-</url>
-<url>
-  <loc>https://tierheilpraxis-jessican.de/elemente/</loc>
-  <lastmod>2026-09-05T12:00:00+00:00</lastmod>
-  <priority>0.90</priority>
-</url>
-<url>
-  <loc>https://tierheilpraxis-jessican.de/elemente/hund/</loc>
-  <lastmod>2026-09-05T12:00:00+00:00</lastmod>
-  <priority>0.85</priority>
-</url>
-<url>
-  <loc>https://tierheilpraxis-jessican.de/elemente/holz/</loc>
-  <lastmod>2026-09-05T12:00:00+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://tierheilpraxis-jessican.de/elemente/feuer/</loc>
-  <lastmod>2026-09-05T12:00:00+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://tierheilpraxis-jessican.de/elemente/erde/</loc>
-  <lastmod>2026-09-05T12:00:00+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://tierheilpraxis-jessican.de/elemente/metall/</loc>
-  <lastmod>2026-09-05T12:00:00+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://tierheilpraxis-jessican.de/elemente/wasser/</loc>
-  <lastmod>2026-09-05T12:00:00+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://tierheilpraxis-jessican.de/behandlung/vorgehen/</loc>
-  <lastmod>2024-06-18T12:00:00+00:00</lastmod>
-  <priority>0.90</priority>
-</url>
-<url>
-  <loc>https://tierheilpraxis-jessican.de/kurse/</loc>
-  <lastmod>2025-09-01T12:00:00+00:00</lastmod>
-  <priority>0.92</priority>
-</url>
-<url>
-  <loc>https://tierheilpraxis-jessican.de/quiz/</loc>
-  <lastmod>2026-09-05T12:00:00+00:00</lastmod>
-  <priority>0.75</priority>
-</url>
-<url>
-  <loc>https://tierheilpraxis-jessican.de/quiz/hund/</loc>
-  <lastmod>2026-09-05T12:00:00+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://tierheilpraxis-jessican.de/kurse/akupressur_kurs_pferde/</loc>
-  <lastmod>2024-04-19T12:00:00+00:00</lastmod>
-  <priority>0.90</priority>
-</url>
-<url>
-  <loc>https://tierheilpraxis-jessican.de/kurse/akupressur_kurs_hunde/</loc>
-  <lastmod>2024-04-19T12:00:00+00:00</lastmod>
-  <priority>0.90</priority>
-</url>
-<url>
-  <loc>https://tierheilpraxis-jessican.de/behandlung/behandlungsmethoden/</loc>
-  <lastmod>2024-01-04T12:00:00+00:00</lastmod>
-  <priority>0.90</priority>
-</url>
-<url>
-  <loc>https://tierheilpraxis-jessican.de/pages/blog/</loc>
-  <lastmod>2023-11-22T12:00:00+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://tierheilpraxis-jessican.de/about/</loc>
-  <lastmod>2023-11-22T12:00:00+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://tierheilpraxis-jessican.de/contact/</loc>
-  <lastmod>2024-04-06T12:00:00+00:00</lastmod>
-  <priority>0.90</priority>
-</url>
-<url>
-  <loc>https://tierheilpraxis-jessican.de/impressum/</loc>
-  <lastmod>2023-11-22T12:00:00+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://tierheilpraxis-jessican.de/pages/blog/lunge-tcvm/</loc>
-  <lastmod>2025-02-05T12:00:00+00:00</lastmod>
-  <priority>0.70</priority>
-</url>
-<url>
-  <loc>https://tierheilpraxis-jessican.de/pages/blog/fallbericht-gino/</loc>
-  <lastmod>2023-11-22T12:00:00+00:00</lastmod>
-  <priority>0.70</priority>
-</url>
-<url>
-  <loc>https://tierheilpraxis-jessican.de/pages/blog/silvester/</loc>
-  <lastmod>2023-11-22T12:00:00+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://tierheilpraxis-jessican.de/pages/blog/herbst-pferd/</loc>
-  <lastmod>2023-11-22T12:00:00+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://tierheilpraxis-jessican.de/pages/blog/allergien-tiere/</loc>
-  <lastmod>2023-11-22T12:00:00+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://tierheilpraxis-jessican.de/pages/blog/herbst-pferd/</loc>
-  <lastmod>2023-11-22T12:00:00+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://tierheilpraxis-jessican.de/pages/blog/darmsanierung-pferd/</loc>
-  <lastmod>2023-11-22T12:00:00+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://tierheilpraxis-jessican.de/pages/blog/darmsanierung-hund/</loc>
-  <lastmod>2023-11-22T12:00:00+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://tierheilpraxis-jessican.de/pages/blog/pferde-gesunderhaltend-bewegen/</loc>
-  <lastmod>2023-11-22T12:00:00+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://tierheilpraxis-jessican.de/pages/blog/hund-arthrose/</loc>
-  <lastmod>2023-11-22T12:00:00+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://tierheilpraxis-jessican.de/pages/blog/teebaumoel/</loc>
-  <lastmod>2023-11-22T12:00:00+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://tierheilpraxis-jessican.de/pages/blog/echinacea/</loc>
-  <lastmod>2023-11-22T12:00:00+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://tierheilpraxis-jessican.de/pages/blog/akupressur_kurs_pferde/</loc>
-  <lastmod>2024-04-16T12:00:00+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://tierheilpraxis-jessican.de/pages/blog/weihrauch/</loc>
-  <lastmod>2023-11-22T12:00:00+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://tierheilpraxis-jessican.de/pages/blog/page/2/</loc>
-  <lastmod>2023-11-22T12:00:00+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://tierheilpraxis-jessican.de/pages/blog/aroma-tiere/</loc>
-  <lastmod>2023-11-22T12:00:00+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://tierheilpraxis-jessican.de/pages/blog/soziale-arbeit-naturheilkunde/</loc>
-  <lastmod>2023-11-22T12:00:00+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://tierheilpraxis-jessican.de/pages/blog/einfuehrung-naturheilkunde/</loc>
-  <lastmod>2023-11-22T12:00:00+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://tierheilpraxis-jessican.de/pages/blog/laserakupunktur/</loc>
-  <lastmod>2023-11-22T12:00:00+00:00</lastmod>
-  <priority>0.8</priority>
-</url>
+    Im Kontext dieses Templates gibt es kein `config`, deshalb steht die
+    Basis-URL hier fest. -#}
+{%- set base = "https://tierheilpraxis-jessican.de" -%}
+{%- set skip = [
+      "/404/",
+      "/pages/",
+      "/pages/blog/new/",
+      "/categories/",
+      "/tags/",
+      "/elemente/"
+    ] -%}
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+{%- for entry in entries %}
+{%- set path = entry.permalink | replace(from=base, to="") %}
+{%- if path is not containing("/page/") and path not in skip %}
+  <url>
+    <loc>{{ entry.permalink | escape_xml | safe }}</loc>
+{%- if entry.updated %}
+    <lastmod>{{ entry.updated }}</lastmod>
+{%- endif %}
+    <priority>{% if path == "/" %}1.0{% elif path is starting_with("/pages/blog/") %}0.6{% elif path is starting_with("/categories/") or path is starting_with("/tags/") %}0.4{% elif path is starting_with("/elemente/") or path is starting_with("/quiz") %}0.8{% else %}0.9{% endif %}</priority>
+  </url>
+{%- endif %}
+{%- endfor %}
+{#- Die allgemeine Elementeübersicht liegt unter /elemente/ und ist keine
+    Zola-Sektion, deshalb steht sie hier ausdrücklich. -#}
+  <url>
+    <loc>{{ base | safe }}/elemente/</loc>
+    <priority>0.9</priority>
+  </url>
 </urlset>

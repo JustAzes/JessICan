@@ -76,3 +76,73 @@ img::-moz-selection {
   color: $white;
   background: transparent;
 }
+
+// Lange URLs im Fließtext (vor allem in der Datenschutzerklärung) sollen
+// umbrechen statt die Seite auf dem Handy breiter zu machen als das Display.
+p,
+li,
+dd,
+td,
+figcaption,
+.card-text {
+  overflow-wrap: break-word;
+}
+
+// Breite Tabellen bekommen einen eigenen Scrollbereich, statt die ganze
+// Seite seitlich zu verschieben.
+.table-scroll {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+
+  > table {
+    margin-bottom: 0;
+  }
+}
+
+@media (max-width: 767px) {
+  .table-scroll > table {
+    min-width: 34rem;
+  }
+
+  .table-scroll > table th,
+  .table-scroll > table td {
+    font-size: 0.92rem;
+  }
+}
+
+// Überschriften dürfen umbrechen; lange Komposita wie
+// "Berufshaftpflichtversicherung" sprengen sonst schmale Displays.
+h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+  hyphens: auto;
+}
+
+// Flex-Elemente von Bootstrap wachsen standardmäßig mit ihrem Inhalt
+// (min-width: auto). Dadurch schob eine breite Tabelle die ganze Seite
+// seitlich heraus, statt im eigenen Scrollbereich zu bleiben.
+.row > [class*="col-"] {
+  min-width: 0;
+}
+
+.table-scroll {
+  max-width: 100%;
+}
+
+.table-scroll:focus-visible {
+  outline: 3px solid $primary;
+  outline-offset: 2px;
+}
+
+.table-scroll-hint {
+  display: none;
+  margin: 0.5rem 0 0;
+  color: $gray-700;
+  font-size: 0.85rem;
+  font-style: italic;
+}
+
+@media (max-width: 767px) {
+  .table-scroll-hint {
+    display: block;
+  }
+}

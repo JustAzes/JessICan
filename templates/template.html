@@ -55,30 +55,78 @@
       {
         "@context": "https://schema.org",
         "@type": "ProfessionalService",
-        "name": "Tierheilpraxis JessICan - natürlich gesund!",
-        "image": "{{ get_url(path="favicons/android-chrome-192x192.png") }}",
+        "@id": "{{ get_url(path="/") }}#praxis",
+        "name": "Tierheilpraxis JessICan",
+        "alternateName": "Tierheilpraxis JessICan - natürlich gesund!",
+        "description": "Mobile Tierheilpraxis für Hund und Pferd: Naturheilkunde, Akupunktur, TCVM und Ernährungsberatung als Hausbesuch in Lichtenberg, Radeberg, Pulsnitz, Dresden, Kamenz, Bautzen und Umgebung.",
+        "image": "{{ get_url(path="img/home-bg_large.jpeg") }}",
+        "logo": "{{ get_url(path="favicons/android-chrome-192x192.png") }}",
         "url": "{{ get_url(path="/") }}",
+        "founder": {"@type": "Person", "name": "Jessica Gebler", "jobTitle": "Tierheilpraktikerin"},
         "address": {
           "@type": "PostalAddress",
           "streetAddress": "Wachauer Str. 6",
           "addressLocality": "Lichtenberg",
-          "addressRegion": "SN",
+          "addressRegion": "Sachsen",
           "postalCode": "01896",
           "addressCountry": "DE"
         },
-        "email": "tierheilpraxis-jessican@gmx.de",
-        "telephone": "+49 15143353735",
-        "priceRange" : "$",
-        "areaServed": {
-          "@type": "GeoCircle",
-          "geoMidpoint": {
-              "@type": "GeoCoordinates",
-              "latitude": 51.16852402315845,
-              "longitude": 13.951463445890758
-          },
-          "geoRadius": 100000          
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 51.16852402315845,
+          "longitude": 13.951463445890758
         },
-        "serviceType": "Mobiler Tierheilpraktiker für Hund und Pferd"
+        "email": "tierheilpraxis-jessican@gmx.de",
+        "telephone": "+4915143353735",
+        "priceRange": "€€",
+        "currenciesAccepted": "EUR",
+        "paymentAccepted": "Überweisung",
+        "sameAs": [
+          "https://www.instagram.com/jessican_natuerlich/",
+          "https://facebook.com/tierheilpraxisjessican"
+        ],
+        "openingHoursSpecification": [{
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
+          "opens": "08:00",
+          "closes": "18:00"
+        }],
+        "availableLanguage": "de",
+        "serviceType": "Mobiler Tierheilpraktiker für Hund und Pferd",
+        "areaServed": [
+          {"@type": "City", "name": "Radeberg"},
+          {"@type": "City", "name": "Pulsnitz"},
+          {"@type": "City", "name": "Großröhrsdorf"},
+          {"@type": "City", "name": "Königsbrück"},
+          {"@type": "City", "name": "Arnsdorf"},
+          {"@type": "City", "name": "Ottendorf-Okrilla"},
+          {"@type": "City", "name": "Dresden"},
+          {"@type": "City", "name": "Kamenz"},
+          {"@type": "City", "name": "Bautzen"},
+          {"@type": "City", "name": "Bischofswerda"},
+          {"@type": "City", "name": "Radeburg"},
+          {"@type": "City", "name": "Wachau"}
+        ],
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "Behandlungsmethoden",
+          "itemListElement": [
+            {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Akupunktur und Laserakupunktur für Hund und Pferd"}},
+            {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Traditionelle Chinesische Veterinärmedizin (TCVM)"}},
+            {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Bioresonanztherapie für Hund und Pferd"}},
+            {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Ernährungsberatung für Hund und Pferd"}},
+            {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Phytotherapie und Homöopathie"}},
+            {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Laboranalysen über Partnerlabor"}}
+          ]
+        },
+        "knowsAbout": [
+          "Traditionelle Chinesische Veterinärmedizin",
+          "Akupunktur beim Hund",
+          "Akupunktur beim Pferd",
+          "Bioresonanzanalyse",
+          "Ernährungsberatung für Hunde",
+          "Fünf-Elemente-Lehre"
+        ]
       }
     </script>
 </head>
