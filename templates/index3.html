@@ -1,0 +1,42 @@
+{#- Entwurfsseite: Logo-Animation für Brückner Haustechnik & Ausbau GmbH.
+
+    Bewusst eigenständig, ohne das Grundtemplate der Tierheilpraxis: hier
+    steht nur das Logo. Die Seite ist nirgends verlinkt, steht nicht in der
+    Sitemap und ist von der Indexierung ausgenommen. Erreichbar nur über die
+    direkte Adresse /index3/.
+
+    Das SVG in brueckner-logo.html wird von tools/brueckner-logo.py erzeugt. -#}
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Logo-Animation (Entwurf) – Brückner Haustechnik &amp; Ausbau GmbH</title>
+  <meta name="description" content="Entwurf einer Logo-Animation für Brückner Haustechnik &amp; Ausbau GmbH.">
+  <meta name="theme-color" content="#070108">
+  {#- Kein Website-Stylesheet und keine Webfont: die Logoschrift steckt als
+      Pfade im SVG, sonst gibt es auf dieser Seite nichts zu setzen. -#}
+  <link rel="stylesheet" href="{{ get_url(path='css/index3.css') }}">
+</head>
+
+<body>
+  <main class="bk-stage" data-bk-stage>
+    {% include "brueckner-logo.html" %}
+
+    <button class="bk-replay" type="button" data-bk-replay title="Animation neu starten">
+      <span class="visually-hidden">Animation neu starten</span>
+      <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+        <path d="M3 12a9 9 0 1 0 3.1-6.8"></path>
+        <path d="M3 4v5h5"></path>
+      </svg>
+    </button>
+
+    <p class="bk-note">Entwurf einer Logo-Animation</p>
+  </main>
+
+  <script src="{{ get_url(path='js/brueckner-logo.js') }}" defer></script>
+</body>
+
+</html>
