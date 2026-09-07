@@ -1,0 +1,571 @@
+/* Test-Startseite /index2/ mit der Yin-Yang-Galaxie.
+ *
+ * Eigenes Stylesheet, damit das gemeinsame clean-blog.css unberührt bleibt:
+ * die Seite ist ein Entwurf und wird nur über die direkte Adresse aufgerufen.
+ */
+
+:root {
+  --yy-ink: #04080b;
+  --yy-ink-2: #070d12;
+  --yy-fog: rgba(255, 255, 255, 0.62);
+  --yy-line: rgba(255, 255, 255, 0.16);
+  --yy-teal: #0c626e;
+  /* Durchmesser des Zeichens. Muss zu FIT_LANDSCAPE/FIT_PORTRAIT in
+     js/yinyang-galaxy.js passen, damit der Titel daneben Platz hat. */
+  --yy-disc: min(62vh, 72vw);
+}
+
+/* --- Grundgerüst ---------------------------------------------------- */
+
+body.yy-body {
+  background-color: var(--yy-ink);
+  color: #e8eef1;
+}
+
+body.yy-body hr {
+  border-top-color: var(--yy-line);
+  margin: 0;
+}
+
+/* Die Navigation liegt über dem schwarzen Kopfbereich. */
+body.yy-body #mainNav {
+  background-color: transparent;
+  border-bottom-color: transparent;
+}
+
+body.yy-body #mainNav .navbar-brand,
+body.yy-body #mainNav .nav-link,
+body.yy-body #mainNav .navbar-toggler {
+  color: #fff;
+}
+
+body.yy-body #mainNav .navbar-brand:hover,
+body.yy-body #mainNav .navbar-brand:focus,
+body.yy-body #mainNav .nav-link:hover,
+body.yy-body #mainNav .nav-link:focus {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* Aufgeklapptes Menü auf kleinen Displays braucht einen eigenen Grund. */
+@media (max-width: 991px) {
+  body.yy-body #mainNav .navbar-collapse.show {
+    background-color: rgba(4, 8, 11, 0.94);
+    border: 1px solid var(--yy-line);
+    border-radius: 6px;
+    padding: 0.4rem 0.6rem;
+    margin-top: 0.4rem;
+  }
+}
+
+/* --- Kopfbereich mit der Animation ---------------------------------- */
+
+.yy-hero {
+  position: relative;
+  min-height: 100vh;
+  /* Auf Mobilgeräten meint 100vh oft mehr als das sichtbare Fenster. */
+  min-height: 100svh;
+  margin: 0;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--yy-ink);
+  /* Entspricht dem Hintergrund im Shader: oben links ein Hauch Petrol. */
+  background-image: radial-gradient(115% 85% at 10% 6%, #08191d 0%, #05090d 55%, #04080b 100%);
+  isolation: isolate;
+}
+
+.yy-canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  z-index: 0;
+  /* Waagerecht ziehen dreht das Zeichen, senkrecht bleibt dem Scrollen
+     der Seite vorbehalten. */
+  touch-action: pan-y;
+  cursor: grab;
+}
+
+.yy-hero.is-grabbing .yy-canvas {
+  cursor: grabbing;
+}
+
+.yy-hero--static .yy-canvas {
+  display: none;
+}
+
+.yy-hero__inner {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 1560px;
+  padding: 5rem clamp(1.25rem, 3.5vw, 3.5rem);
+  pointer-events: none;
+  text-align: center;
+}
+
+/* Untertitel und Schaltflächen stehen unten, damit die Mitte für das
+   Zeichen frei bleibt. */
+.yy-hero__foot {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 5.5rem;
+  z-index: 1;
+  padding: 0 1.25rem;
+  text-align: center;
+  pointer-events: none;
+}
+
+.yy-hero__inner a,
+.yy-hero__inner button,
+.yy-hero__foot a,
+.yy-hero__foot button {
+  pointer-events: auto;
+}
+
+/* --- Titel: "Tierheilpraxis" links, "JessICan" rechts --------------- */
+
+.yy-title {
+  margin: 0;
+  font-weight: 700;
+  letter-spacing: -0.015em;
+  line-height: 1.02;
+  color: #fff;
+  text-wrap: balance;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.1em;
+  font-size: clamp(1.9rem, 9.5vw, 3rem);
+  text-shadow: 0 0 26px rgba(4, 8, 11, 0.9), 0 0 80px rgba(4, 8, 11, 0.7);
+}
+
+.yy-title__part {
+  display: block;
+}
+
+/* Bis 992px stehen Titel, Untertitel und Schaltflächen untereinander am
+   unteren Rand; das Zeichen hat die obere Hälfte für sich. */
+@media (max-width: 991px) {
+  .yy-hero {
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+
+  .yy-hero__inner {
+    padding: 0 1.25rem;
+  }
+
+  .yy-title {
+    line-height: 1.08;
+  }
+
+  .yy-hero__foot {
+    position: static;
+    margin-top: 1.2rem;
+    padding-bottom: 5.5rem;
+  }
+
+  /* Der Pfeil hätte hier keinen Platz mehr; die Schaltflächen laden
+     ohnehin zum Weiterklicken ein. */
+  .yy-scroll {
+    display: none;
+  }
+
+  .yy-tagline {
+    margin-top: 0.9rem;
+  }
+}
+
+@media (max-width: 991px) and (max-height: 780px) {
+  .yy-hero__foot {
+    padding-bottom: 4rem;
+  }
+
+  .yy-tagline {
+    margin-top: 0.5rem;
+  }
+
+  .yy-cta {
+    margin-top: 1.2rem;
+  }
+}
+
+@media (min-width: 992px) {
+  /* Titel und Zeichen werden gemeinsam um 8 % der Fensterhöhe angehoben
+     (LIFT_LANDSCAPE im Skript). */
+  .yy-hero__inner {
+    transform: translateY(-8vh);
+  }
+
+  /* Ab hier steht der Titel wie beim Vorbild links und rechts neben dem
+     Zeichen, das dazwischen hindurchläuft. */
+  .yy-title {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    gap: 0;
+    font-size: clamp(1.5rem, 3.3vw, 3.2rem);
+  }
+
+  .yy-title__part {
+    white-space: nowrap;
+  }
+
+  .yy-title__part--left {
+    grid-column: 1;
+    text-align: left;
+  }
+
+  .yy-title__part--right {
+    grid-column: 3;
+    text-align: right;
+  }
+
+  .yy-title::before {
+    content: "";
+    grid-column: 2;
+    /* Platz für das Zeichen in der Mitte. */
+    width: var(--yy-disc);
+  }
+
+  .yy-hero__foot {
+    bottom: 4.5rem;
+  }
+
+  .yy-cta {
+    margin-top: 1.6rem;
+  }
+}
+
+/* Einblenden nach dem Formieren – wie ein Aufklaren aus dem Nebel. */
+.yy-title__part,
+.yy-tagline,
+.yy-cta,
+.yy-scroll {
+  opacity: 0;
+  transform: translateY(0.6rem);
+  filter: blur(10px);
+  transition: opacity 1.5s ease, transform 1.5s cubic-bezier(0.16, 1, 0.3, 1),
+    filter 1.5s ease;
+}
+
+.yy-title__part--left {
+  transform: translate(-1.4rem, 0.4rem);
+}
+
+.yy-title__part--right {
+  transform: translate(1.4rem, 0.4rem);
+}
+
+.yy-hero.is-revealed .yy-title__part,
+.yy-hero.is-revealed .yy-tagline,
+.yy-hero.is-revealed .yy-cta,
+.yy-hero.is-revealed .yy-scroll {
+  opacity: 1;
+  transform: none;
+  filter: none;
+}
+
+.yy-hero.is-revealed .yy-title__part--right {
+  transition-delay: 0.18s;
+}
+
+.yy-hero.is-revealed .yy-tagline {
+  transition-delay: 0.5s;
+}
+
+.yy-hero.is-revealed .yy-cta {
+  transition-delay: 0.8s;
+}
+
+.yy-hero.is-revealed .yy-scroll {
+  transition-delay: 1.2s;
+}
+
+.yy-tagline {
+  margin: 1.6rem 0 0;
+  font-size: clamp(1rem, 2.4vw, 1.35rem);
+  font-weight: 400;
+  letter-spacing: 0.14em;
+  text-transform: lowercase;
+  color: var(--yy-fog);
+}
+
+@media (min-width: 992px) and (max-height: 700px) {
+  .yy-hero__foot {
+    bottom: 3.2rem;
+  }
+
+  .yy-hero__inner {
+    padding-bottom: 8rem;
+  }
+
+  .yy-tagline {
+    margin-top: 0;
+  }
+
+  .yy-cta {
+    margin-top: 1rem;
+  }
+}
+
+/* --- Schaltflächen -------------------------------------------------- */
+
+.yy-cta {
+  margin-top: 2.2rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  justify-content: center;
+}
+
+.yy-btn {
+  display: inline-block;
+  padding: 0.8rem 1.5rem;
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #eaf2f4;
+  border: 1px solid var(--yy-line);
+  border-radius: 999px;
+  background-color: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(6px);
+  transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+}
+
+.yy-btn:hover,
+.yy-btn:focus {
+  color: #fff;
+  text-decoration: none;
+  border-color: rgba(255, 255, 255, 0.45);
+  background-color: rgba(255, 255, 255, 0.12);
+}
+
+.yy-btn--primary {
+  color: #04191c;
+  border-color: #fff;
+  background-color: #fff;
+}
+
+.yy-btn--primary:hover,
+.yy-btn--primary:focus {
+  color: #04191c;
+  border-color: #fff;
+  background-color: rgba(255, 255, 255, 0.82);
+}
+
+.yy-btn:focus-visible,
+.yy-replay:focus-visible,
+.yy-scroll:focus-visible {
+  outline: 2px solid #7fd6df;
+  outline-offset: 3px;
+}
+
+/* --- Animation neu starten (unten rechts, wie beim Vorbild) --------- */
+
+.yy-replay {
+  position: absolute;
+  right: 1rem;
+  bottom: 1rem;
+  z-index: 2;
+  width: 44px;
+  height: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  color: #dfe9ec;
+  border: 1px solid var(--yy-line);
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.06);
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.yy-replay:hover,
+.yy-replay:focus {
+  color: #fff;
+  background-color: rgba(255, 255, 255, 0.16);
+}
+
+.yy-hero--static .yy-replay {
+  display: none;
+}
+
+/* --- Hinweis zum Weiterscrollen ------------------------------------- */
+
+.yy-scroll {
+  position: absolute;
+  left: 50%;
+  bottom: 1.4rem;
+  z-index: 2;
+  margin-left: -22px;
+  width: 44px;
+  height: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(255, 255, 255, 0.6);
+  text-decoration: none;
+}
+
+.yy-scroll:hover,
+.yy-scroll:focus {
+  color: #fff;
+}
+
+.yy-scroll svg {
+  animation: yy-nudge 2.6s ease-in-out infinite;
+}
+
+@keyframes yy-nudge {
+  0%, 100% { transform: translateY(-3px); }
+  50% { transform: translateY(3px); }
+}
+
+/* --- Inhalt unterhalb des Kopfbereichs ------------------------------ */
+
+.yy-main {
+  background-color: var(--yy-ink);
+}
+
+.yy-section {
+  max-width: 940px;
+  margin: 0 auto;
+  padding: 5rem 1.25rem;
+}
+
+.yy-kicker {
+  margin: 0 0 0.9rem;
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #7fd6df;
+}
+
+.yy-section h2 {
+  margin: 0 0 1.2rem;
+  font-size: clamp(1.6rem, 4.4vw, 2.4rem);
+  color: #fff;
+}
+
+.yy-section p {
+  margin: 0 0 1.2rem;
+  font-size: 1.05rem;
+  line-height: 1.65;
+  color: #c3ced4;
+}
+
+.yy-section p a {
+  color: #9fe3ea;
+}
+
+.yy-links {
+  list-style: none;
+  margin: 2.4rem 0 0;
+  padding: 0;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+
+.yy-links a {
+  display: block;
+  height: 100%;
+  padding: 1.4rem 1.5rem;
+  color: #e8eef1;
+  text-decoration: none;
+  border: 1px solid var(--yy-line);
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.03);
+  transition: background-color 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+}
+
+.yy-links a:hover,
+.yy-links a:focus {
+  color: #fff;
+  border-color: rgba(255, 255, 255, 0.4);
+  background-color: rgba(255, 255, 255, 0.08);
+  transform: translateY(-2px);
+}
+
+.yy-links strong {
+  display: block;
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 1.05rem;
+  margin-bottom: 0.35rem;
+}
+
+.yy-links span {
+  font-size: 0.95rem;
+  color: #9fadb4;
+}
+
+/* --- Fußbereich der Seite dunkel nachziehen ------------------------- */
+
+body.yy-body footer {
+  background-color: var(--yy-ink-2);
+  color: #a9b7bd;
+}
+
+body.yy-body footer p,
+body.yy-body footer .copyright {
+  color: #a9b7bd;
+}
+
+body.yy-body footer a {
+  color: #d5e2e6;
+}
+
+body.yy-body footer a:hover,
+body.yy-body footer a:focus {
+  color: #7fd6df;
+}
+
+body.yy-body footer .social-link {
+  background-color: rgba(255, 255, 255, 0.08);
+  color: #fff;
+}
+
+body.yy-body footer .social-link:hover,
+body.yy-body footer .social-link:focus {
+  background-color: var(--yy-teal);
+}
+
+body.yy-body footer .btn-info {
+  color: #04191c;
+  border-color: #fff;
+  background-color: #fff;
+}
+
+/* --- Rücksicht auf Systemeinstellungen ------------------------------ */
+
+@media (prefers-reduced-motion: reduce) {
+  .yy-title__part,
+  .yy-tagline,
+  .yy-cta,
+  .yy-scroll {
+    opacity: 1;
+    transform: none;
+    filter: none;
+    transition: none;
+  }
+
+  .yy-scroll svg {
+    animation: none;
+  }
+
+  .yy-links a:hover,
+  .yy-links a:focus {
+    transform: none;
+  }
+}

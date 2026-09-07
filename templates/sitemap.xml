@@ -7,6 +7,7 @@
 {%- set base = "https://tierheilpraxis-jessican.de" -%}
 {%- set skip = [
       "/404/",
+      "/index2/",
       "/pages/",
       "/pages/blog/new/",
       "/categories/",

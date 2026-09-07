@@ -1,0 +1,108 @@
+{% extends "template.html" %}
+
+{#- Entwurf einer neuen Startseite mit der Yin-Yang-Galaxie.
+    Die Seite ist absichtlich nirgends verlinkt, steht nicht in der Sitemap
+    und ist per robots-Angabe von der Indexierung ausgenommen. Erreichbar nur
+    über die direkte Adresse /index2/. -#}
+
+{% block title %}Tierheilpraxis JessICan{% endblock title %}
+
+{% block description %}
+<meta name="description" content="Entwurf der neuen Startseite der Tierheilpraxis JessICan.">
+<meta name="robots" content="noindex, nofollow">
+{% endblock description %}
+
+{% block canonical %}{% endblock canonical %}
+{% block metatags %}{% endblock metatags %}
+
+{% block bodyclass %} class="yy-body"{% endblock bodyclass %}
+
+{% block headextras %}
+<link rel="stylesheet" href="{{ get_url(path='css/index2.css') }}">
+{% endblock headextras %}
+
+{% block header %}
+<header class="yy-hero" data-yy-hero>
+  <canvas class="yy-canvas" data-yy-canvas aria-hidden="true"></canvas>
+
+  <div class="yy-hero__inner">
+    <h1 class="yy-title">
+      <span class="yy-title__part yy-title__part--left">Tierheilpraxis</span>
+      <span class="yy-title__part yy-title__part--right">JessICan</span>
+    </h1>
+  </div>
+
+  <div class="yy-hero__foot">
+    <p class="yy-tagline">natürlich gesund!</p>
+    <div class="yy-cta">
+      <a class="yy-btn yy-btn--primary" href="{{ get_url(path='behandlung/behandlungsmethoden/', trailing_slash=true) }}" title="Meine Leistungen">Meine Leistungen</a>
+      <a class="yy-btn" href="{{ get_url(path='contact/', trailing_slash=true) }}" title="Termin anfragen">Termin anfragen</a>
+    </div>
+  </div>
+
+  <button class="yy-replay" type="button" data-yy-replay title="Animation neu starten">
+    <span class="visually-hidden">Animation neu starten</span>
+    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+      <path d="M3 12a9 9 0 1 0 3.1-6.8"></path>
+      <path d="M3 4v5h5"></path>
+    </svg>
+  </button>
+
+  <a class="yy-scroll" href="#inhalt">
+    <span class="visually-hidden">Weiter zum Inhalt</span>
+    <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+      <path d="M6 9l6 6 6-6"></path>
+    </svg>
+  </a>
+</header>
+{% endblock header %}
+
+{% block main_open %}{% endblock main_open %}
+{% block main_close %}{% endblock main_close %}
+
+{% block content %}
+<main class="yy-main" id="inhalt">
+  <section class="yy-section">
+    <p class="yy-kicker">Mobile Tierheilpraxis · Radeberg · Pulsnitz · Dresden</p>
+    <h2>Zwei Kräfte, ein Gleichgewicht</h2>
+    <p>
+      Yin und Yang stehen in der Traditionellen Chinesischen Veterinärmedizin für
+      das Zusammenspiel gegensätzlicher Kräfte. Gesundheit heißt dort nicht
+      Stillstand, sondern ein Gleichgewicht, das sich immer wieder neu
+      einstellt. Genau daran arbeite ich mit Ihrem Tier: ich schaue auf das
+      ganze Bild, nicht nur auf das Symptom.
+    </p>
+    <p>
+      Ich komme mobil zu Ihnen nach Hause oder in den Stall und bringe
+      Akupunktur, Naturheilkunde, Körpertherapie und Ernährungsberatung mit.
+      Jedes Behandlungskonzept entsteht neu – abgestimmt auf das Tier, das vor
+      mir steht.
+    </p>
+
+    <ul class="yy-links">
+      <li>
+        <a href="{{ get_url(path='behandlung/behandlungsmethoden/', trailing_slash=true) }}">
+          <strong>Meine Leistungen</strong>
+          <span>Alle Behandlungsmethoden im Überblick</span>
+        </a>
+      </li>
+      <li>
+        <a href="{{ get_url(path='elemente/', trailing_slash=true) }}">
+          <strong>Die fünf Elemente</strong>
+          <span>Holz, Feuer, Erde, Metall und Wasser</span>
+        </a>
+      </li>
+      <li>
+        <a href="{{ get_url(path='behandlung/vorgehen/', trailing_slash=true) }}">
+          <strong>Infos &amp; Preise</strong>
+          <span>Wie ein Termin abläuft</span>
+        </a>
+      </li>
+    </ul>
+  </section>
+</main>
+{% endblock content %}
+
+{% block extrascripts %}
+<script src="{{ get_url(path='js/yinyang-galaxy.js') }}" defer></script>
+{% endblock extrascripts %}
