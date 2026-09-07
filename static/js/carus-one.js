@@ -52,22 +52,45 @@
    * vorwärts wie rückwärts scrubben.
    * ================================================================== */
 
-  var STORY_SECONDS = 22;
+  var STORY_SECONDS = 48;
 
   var SC = {
-    dark: [0.000, 0.045],   // Szene 1  Nichts (rund 1 s)
-    seed: [0.045, 0.088],   // Szene 1  erster Punkt glimmt auf
-    first: [0.088, 0.140],  // Szene 2  erste Verbindung
-    grow: [0.135, 0.275],   // Szene 2  exponentielles Wachstum
-    pull: [0.245, 0.300],   // Kamera fährt zurück
-    data: [0.300, 0.450],   // Szene 3  klinische Datenpunkte
-    patient: [0.450, 0.560], // Szene 4  Patient View
-    pop: [0.560, 0.720],    // Szene 5  Population
-    orbit: [0.720, 0.815],  // Szene 6  carus.one entsteht
-    cap: [0.800, 0.900],    // Szene 7  Capabilities
-    ai: [0.880, 0.945],     // Szene 8  Intelligence Layer
-    end: [0.930, 1.000]     // Finale
+    dark: [0.000, 0.021],   // Szene 1  Nichts (rund 1 s)
+    seed: [0.021, 0.042],   // Szene 1  erster Punkt glimmt auf
+    first: [0.042, 0.069],  // Szene 2  erste Verbindung
+    grow: [0.066, 0.145],   // Szene 2  exponentielles Wachstum
+    pull: [0.128, 0.160],   // Kamera fährt zurück
+    data: [0.162, 0.481],   // Szene 3  klinische Datenpunkte (15 s)
+    art: [0.481, 0.601],    // Szene 3b klinische Artefakte (6 s)
+    patient: [0.601, 0.688], // Szene 4  Patient View
+    pop: [0.688, 0.780],    // Szene 5  Population
+    orbit: [0.780, 0.850],  // Szene 6  carus.one entsteht
+    cap: [0.842, 0.912],    // Szene 7  Capabilities
+    ai: [0.900, 0.952],     // Szene 8  Intelligence Layer
+    end: [0.942, 1.000]     // Finale
   };
+
+  /* Szene 3: neun klinische Datenpunkte. Jeder bekommt ein festes Fenster,
+     in dem die Kamera zuerst hinfliegt und dann stehen bleibt – nur so
+     bleibt Zeit, Bezeichnung, Code und Standard zu lesen.
+     Die Beschriftungen im Markup übernehmen diese Werte (data-c1-dp). */
+  var DP_COUNT = 9;
+  var DP_START = 0.162;
+  var DP_STEP = (0.481 - 0.162) / DP_COUNT;   // rund 1,7 s je Punkt
+  var DP_TRAVEL = 0.013;                       // Anflug, danach Stillstand
+
+  /* Szene 3b: vier Artefakte, in denen dieselben Daten dem Menschen
+     begegnen – Entlassbrief, Vitalwertmonitor, Patientenakte, Bildgebung.
+     Bewusst reduzierte Drahtgitter, keine Bildschirmfotos. */
+  var AR_COUNT = 4;
+  var AR_START = 0.481;
+  var AR_STEP = (0.601 - 0.481) / AR_COUNT;    // rund 1,4 s je Artefakt
+  var AR_POS = [
+    [-0.40, 0.12, 0.24],
+    [0.42, -0.08, -0.20],
+    [-0.28, -0.22, -0.36],
+    [0.34, 0.24, 0.32]
+  ];
 
   function ramp(a, b, p) {
     if (b <= a) { return p >= b ? 1 : 0; }
@@ -517,6 +540,14 @@
     '  int i = gl_VertexID;',
     '  float birth, size, tint;',
     '  vec3 p = nodePos(i, birth, size, tint);',
+    /* Noch nicht geborene Knoten ganz aus dem Bild schieben: sonst zahlt
+       die Grafikkarte die Füllkosten für unsichtbare Sprites. */
+    '  if (uGrow < birth) {',
+    '    gl_Position = vec4(2.0, 2.0, 2.0, 1.0);',
+    '    gl_PointSize = 0.0;',
+    '    vCol = vec3(0.0); vA = 0.0; vSoft = 0.0;',
+    '    return;',
+    '  }',
     /* Der Datenpunkt, den die Kamera gerade anfliegt, tritt hervor. */
     '  float hot = (i == uHot) ? uHotAmt : 0.0;',
     '  size *= 1.0 + 2.6 * hot;',
@@ -702,30 +733,43 @@
   var CAM = [
     /* p,    dist, azimut, hoehe, fov, ziel */
     [0.000, 0.42, 0.30, 0.10, 40, 'origin'],
-    [0.075, 0.52, 0.42, 0.12, 40, 'origin'],
-    [0.135, 0.72, 0.60, 0.16, 42, 'origin'],
-    [0.215, 1.70, 0.95, 0.26, 46, 'origin'],
-    [0.275, 2.90, 1.25, 0.34, 48, 'origin'],
-    [0.300, 0.72, 1.45, 0.18, 40, 'spine0', 1],
-    [0.318, 0.58, 1.62, 0.14, 38, 'spine1', 1],
-    [0.336, 0.56, 1.80, 0.12, 38, 'spine2', 1],
-    [0.354, 0.56, 1.98, 0.14, 38, 'spine3', 1],
-    [0.372, 0.58, 2.16, 0.16, 38, 'spine4', 1],
-    [0.390, 0.60, 2.34, 0.18, 38, 'spine5', 1],
-    [0.408, 0.60, 2.52, 0.16, 38, 'spine6', 1],
-    [0.426, 0.62, 2.70, 0.14, 38, 'spine7', 1],
-    [0.444, 0.66, 2.88, 0.16, 38, 'spine8', 1],
-    [0.470, 1.70, 3.15, 0.28, 44, 'origin'],
-    [0.520, 2.60, 3.55, 0.34, 46, 'origin'],
-    [0.560, 3.10, 3.90, 0.30, 46, 'origin'],
-    [0.640, 4.40, 4.45, 0.40, 48, 'origin'],
-    [0.720, 5.70, 5.05, 0.48, 50, 'origin'],
-    [0.780, 4.00, 5.55, 0.30, 46, 'origin'],
-    [0.830, 2.95, 5.90, 0.18, 44, 'origin'],
-    [0.890, 2.65, 6.25, 0.12, 42, 'ai'],
-    [0.945, 3.40, 6.60, 0.20, 44, 'origin'],
-    [1.000, 5.20, 7.05, 0.30, 42, 'origin']
+    [0.040, 0.52, 0.42, 0.12, 40, 'origin'],
+    [0.069, 0.72, 0.60, 0.16, 42, 'origin'],
+    [0.112, 1.70, 0.95, 0.26, 46, 'origin'],
+    [0.145, 2.90, 1.25, 0.34, 48, 'origin'],
+    [0.615, 1.55, 3.15, 0.26, 44, 'origin'],
+    [0.650, 2.60, 3.40, 0.32, 46, 'origin'],
+    [0.688, 3.10, 3.70, 0.30, 46, 'origin'],
+    [0.735, 4.40, 4.20, 0.40, 48, 'origin'],
+    [0.780, 5.70, 4.80, 0.48, 50, 'origin'],
+    [0.818, 4.00, 5.30, 0.30, 46, 'origin'],
+    [0.865, 2.95, 5.70, 0.18, 44, 'origin'],
+    [0.910, 2.65, 6.10, 0.12, 42, 'ai'],
+    [0.955, 3.40, 6.50, 0.20, 44, 'origin'],
+    [1.000, 5.20, 7.00, 0.30, 42, 'origin']
   ];
+
+  /* Für jeden Datenpunkt und jedes Artefakt zwei Schlüsselbilder:
+     angekommen und weiterhin dort. Zwischen zwei gleichen Zielen steht
+     die Kamera still, es bleibt also Lesezeit. */
+  (function () {
+    var k, a;
+    for (k = 0; k < DP_COUNT; k++) {
+      a = DP_START + k * DP_STEP;
+      var dist = 0.72 - Math.min(0.16, k * 0.02);
+      var azi = 1.45 + k * 0.17;
+      var hgt = 0.12 + (k % 3) * 0.03;
+      CAM.push([a + DP_TRAVEL, dist, azi, hgt, 38, 'spine' + k, 1]);
+      CAM.push([a + DP_STEP - 0.002, dist, azi + 0.05, hgt, 38, 'spine' + k, 1]);
+    }
+    CAM.push([DP_START - 0.001, 2.90, 1.25, 0.34, 48, 'origin']);
+    for (k = 0; k < AR_COUNT; k++) {
+      a = AR_START + k * AR_STEP;
+      CAM.push([a + 0.009, 0.98, 3.05 + k * 0.06, 0.10, 40, AR_POS[k]]);
+      CAM.push([a + AR_STEP - 0.002, 0.98, 3.05 + k * 0.06 + 0.03, 0.10, 40, AR_POS[k]]);
+    }
+    CAM.sort(function (x, y) { return x[0] - y[0]; });
+  }());
 
   /* ================================================================== *
    * Start
@@ -858,14 +902,32 @@
       kind = 'orbit';
       ax = parseFloat(anchor.slice(6)) || 0;
     }
+    var from = parseFloat(el.getAttribute('data-c1-from')) || 0;
+    var to = parseFloat(el.getAttribute('data-c1-to')) || 1;
+    var fade = parseFloat(el.getAttribute('data-c1-fade')) || 0.02;
+    /* Die neun Datenpunkte holen ihr Zeitfenster aus DP_START/DP_STEP –
+       so bleiben Kamerahalt, hervorgehobener Knoten und Schrift synchron. */
+    var dpi = el.getAttribute('data-c1-dp');
+    if (dpi !== null) {
+      var kk = parseInt(dpi, 10) || 0;
+      from = DP_START + kk * DP_STEP + DP_TRAVEL * 0.4;
+      to = DP_START + (kk + 1) * DP_STEP - 0.006;
+      fade = 0.007;
+    }
+    var ari = el.getAttribute('data-c1-art');
+    if (ari !== null) {
+      var ak = parseInt(ari, 10) || 0;
+      from = AR_START + ak * AR_STEP + 0.005;
+      to = AR_START + (ak + 1) * AR_STEP - 0.005;
+      fade = 0.006;
+      kind = 'world';
+      ax = AR_POS[ak][0]; ay = AR_POS[ak][1]; az = AR_POS[ak][2];
+    }
     labels.push({
       el: el, kind: kind, idx: idx, x: ax, y: ay, z: az,
       align: el.getAttribute('data-c1-align') || 'center',
-      flip: false,
-      from: parseFloat(el.getAttribute('data-c1-from')) || 0,
-      to: parseFloat(el.getAttribute('data-c1-to')) || 1,
-      fade: parseFloat(el.getAttribute('data-c1-fade')) || 0.02,
-      shown: false
+      panel: ari !== null,
+      flip: false, from: from, to: to, fade: fade, shown: false
     });
   });
 
@@ -967,6 +1029,9 @@
 
   function anchorPos(name, out) {
     if (name === 'origin') { out[0] = out[1] = out[2] = 0; return out; }
+    if (name && name.length === 3 && typeof name[0] === 'number') {
+      out[0] = name[0]; out[1] = name[1]; out[2] = name[2]; return out;
+    }
     if (name === 'ai') {
       out[0] = 0.30; out[1] = 0.06; out[2] = 0.18; return out;
     }
@@ -1074,7 +1139,12 @@
       var L = labels[i];
       var vis = window01(p, L.from, L.to, L.fade);
       if (vis <= 0.002) {
-        if (L.shown) { L.el.style.opacity = '0'; L.el.style.visibility = 'hidden'; L.shown = false; }
+        if (L.shown) {
+          L.el.style.opacity = '0';
+          L.el.style.visibility = 'hidden';
+          L.el.style.willChange = '';
+          L.shown = false;
+        }
         continue;
       }
       var ok = true, depth = 1;
@@ -1092,14 +1162,24 @@
         depth = scr[2];
       }
       if (!ok) {
-        if (L.shown) { L.el.style.opacity = '0'; L.el.style.visibility = 'hidden'; L.shown = false; }
+        if (L.shown) {
+          L.el.style.opacity = '0';
+          L.el.style.visibility = 'hidden';
+          L.el.style.willChange = '';
+          L.shown = false;
+        }
         continue;
       }
       /* Weiter entfernte Begriffe sind kleiner und schwächer – dadurch
          entsteht die räumliche Tiefe im Textraum. */
       var sc = L.kind === 'center' ? 1 : Math.max(0.42, Math.min(1.25, 1.6 / Math.max(0.35, depth)));
-      var op = vis * (L.kind === 'center' ? 1 : Math.max(0.2, Math.min(1, 2.3 / Math.max(0.4, depth))));
-      if (!L.shown) { L.el.style.visibility = 'visible'; L.shown = true; }
+      if (L.panel) { sc = Math.max(0.78, Math.min(1.12, 1.05 / Math.max(0.4, depth))); }
+      var op = vis * (L.kind === 'center' ? 1 : Math.max(0.32, Math.min(1, 2.9 / Math.max(0.4, depth))));
+      if (!L.shown) {
+        L.el.style.visibility = 'visible';
+        L.el.style.willChange = 'transform, opacity';
+        L.shown = true;
+      }
       L.el.style.opacity = op.toFixed(3);
       /* "right" setzt den Text neben den Punkt, damit die dünne Linie
          davor vom Punkt weg läuft und die Schrift ihn nicht verdeckt. */
@@ -1197,6 +1277,7 @@
     /* In der weiten Populationsansicht etwas anheben, sonst verliert sich
        die Landschaft in der Entfernung. */
     globalDim *= 1 + 0.34 * window01(p, SC.pop[0] + 0.03, SC.pop[1] - 0.01, 0.04);
+    globalDim *= 1 - 0.45 * window01(p, SC.art[0] + 0.01, SC.art[1] - 0.01, 0.02);
     /* Im Finale wird die Datenwelt dunkler, der Text tritt hervor. */
     globalDim *= 1 - 0.28 * ease(SC.end[0], 1.0, p);
 
@@ -1208,9 +1289,9 @@
     /* Welcher Datenpunkt ist gerade im Fokus? Ergibt sich aus derselben
        Zeitrechnung wie die Beschriftung. */
     var hotIdx = -1, hotAmt = 0;
-    for (var hk = 0; hk < 9; hk++) {
-      var ha = 0.299 + hk * 0.018;
-      var hv = window01(p, ha, ha + 0.0165, 0.008);
+    for (var hk = 0; hk < DP_COUNT; hk++) {
+      var ha = DP_START + hk * DP_STEP;
+      var hv = window01(p, ha + DP_TRAVEL * 0.5, ha + DP_STEP - 0.004, 0.008);
       if (hv > hotAmt) { hotAmt = hv; hotIdx = W.named['spine' + hk]; }
     }
     if (typeof hotIdx !== 'number') { hotIdx = -1; }

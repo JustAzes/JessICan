@@ -117,8 +117,9 @@ body {
   /* Wird pro Bild aus dem 3D-Raum gesetzt. */
   transform: translate3d(-50%, -50%, 0);
   transform-origin: 50% 50%;
-  will-change: transform, opacity;
   white-space: nowrap;
+  /* will-change setzt das Skript nur für die Elemente, die gerade zu sehen
+     sind – 51 dauerhafte Ebenen wären teurer als keine. */
 }
 
 /* Ein klinischer Datenpunkt: nur Typografie und eine hauchdünne Linie. */
@@ -139,7 +140,8 @@ body {
 }
 
 .c1-dp__k,
-.c1-dp__v {
+.c1-dp__v,
+.c1-dp__s {
   display: block;
 }
 
@@ -151,13 +153,211 @@ body {
 }
 
 .c1-dp__v {
-  margin-top: 0.45em;
-  font-size: clamp(0.7rem, 1.4vw, 0.9rem);
+  margin-top: 0.5em;
+  font-size: clamp(0.86rem, 1.75vw, 1.12rem);
   font-weight: 400;
-  letter-spacing: 0.1em;
-  color: var(--c1-mute);
+  letter-spacing: 0.07em;
+  color: rgba(240, 245, 252, 0.9);
   font-variant-numeric: tabular-nums;
 }
+
+/* Dritte Zeile: unter welchem Standard der Wert liegt. Klein und
+   zurückgenommen, aber lesbar – das ist die klinische Datensprache. */
+.c1-dp__s {
+  margin-top: 0.62em;
+  font-size: clamp(0.6rem, 1.15vw, 0.74rem);
+  font-weight: 500;
+  letter-spacing: 0.19em;
+  text-transform: uppercase;
+  color: rgba(160, 196, 240, 0.72);
+}
+
+/* --- Szene 3b: klinische Artefakte ---------------------------------- *
+ * Wie dieselben Daten dem Menschen begegnen: Entlassbrief, Monitor,
+ * Patientenakte, Bildgebung. Bewusst extrem reduzierte Drahtgitter -
+ * dünne Rahmen, Typografie, unleserlicher Fülltext. Keine Nachbauten
+ * echter Oberflächen, keine Bildschirmfotos.
+ */
+
+.c1-art {
+  margin: 0;
+  white-space: normal;
+  text-align: left;
+  color: var(--c1-fg);
+}
+
+.c1-art__t {
+  margin: 0 0 0.55rem;
+  font-size: clamp(0.94rem, 2vw, 1.3rem);
+  font-weight: 300;
+  letter-spacing: -0.005em;
+  color: #fff;
+}
+
+.c1-art__m {
+  margin: 0.6rem 0 0;
+  font-size: clamp(0.55rem, 1.05vw, 0.68rem);
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgba(160, 196, 240, 0.68);
+}
+
+/* Rahmen aller vier Artefakte */
+.c1-art__page,
+.c1-art__win,
+.c1-art__view,
+.c1-art__grid {
+  position: relative;
+  border: 1px solid rgba(200, 220, 248, 0.3);
+  /* Kein backdrop-filter: er kostet pro Bild eine eigene Kompositionsstufe
+     und der halbtransparente Grund genügt über dem Sternenfeld. */
+  background-color: rgba(9, 14, 24, 0.66);
+}
+
+/* Unleserliche Textzeilen */
+.c1-art__l,
+.c1-art__hd {
+  display: block;
+  height: 1px;
+  background-color: rgba(210, 226, 248, 0.42);
+}
+
+.c1-art__hd {
+  height: 2px;
+  width: 46%;
+  margin-bottom: 0.7rem;
+  background-color: rgba(230, 240, 255, 0.7);
+}
+
+.c1-art__l {
+  margin-bottom: 0.42rem;
+}
+
+/* Zeilenlängen variieren, damit es wie gesetzter Text wirkt */
+.c1-art__l:nth-child(2n) { width: 92%; }
+.c1-art__l:nth-child(3n) { width: 78%; }
+.c1-art__l:nth-child(4n) { width: 96%; }
+.c1-art__l:nth-child(5n) { width: 64%; }
+.c1-art__l:nth-child(7n) { width: 86%; }
+.c1-art__l:last-child { width: 41%; }
+
+/* 1 Entlassbrief */
+.c1-art__page {
+  width: clamp(12rem, 25vw, 19rem);
+  padding: 1.3rem 1.5rem 1.5rem;
+}
+
+/* 2 Vitalwerte */
+.c1-art__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  width: clamp(16rem, 34vw, 25rem);
+  padding: 1px;
+  background-color: rgba(200, 220, 248, 0.14);
+}
+
+.c1-art__grid > div {
+  padding: 0.8rem 0.9rem 0.85rem;
+  background-color: rgba(10, 15, 26, 0.72);
+}
+
+.c1-art__grid b {
+  display: block;
+  font-size: clamp(0.95rem, 2vw, 1.3rem);
+  font-weight: 300;
+  letter-spacing: -0.01em;
+  color: #fff;
+  font-variant-numeric: tabular-nums;
+}
+
+.c1-art__grid i {
+  display: block;
+  margin-top: 0.28em;
+  font-size: clamp(0.5rem, 0.95vw, 0.62rem);
+  font-style: normal;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: rgba(226, 236, 252, 0.5);
+}
+
+/* 3 Patientenakte */
+.c1-art__win {
+  width: clamp(16rem, 34vw, 25rem);
+  height: clamp(10rem, 21vw, 15rem);
+  overflow: hidden;
+}
+
+.c1-art__bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1.8rem;
+  border-bottom: 1px solid rgba(200, 220, 248, 0.26);
+  background-color: rgba(200, 220, 248, 0.07);
+}
+
+.c1-art__side {
+  position: absolute;
+  top: 1.8rem;
+  bottom: 0;
+  left: 0;
+  width: 27%;
+  border-right: 1px solid rgba(200, 220, 248, 0.22);
+  background-image: repeating-linear-gradient(to bottom,
+    rgba(210, 226, 248, 0.34) 0 1px, transparent 1px 0.62rem);
+  background-position: 0.55rem 0.6rem;
+  background-repeat: no-repeat;
+  background-size: 62% 100%;
+}
+
+.c1-art__body {
+  position: absolute;
+  top: 2.6rem;
+  right: 1rem;
+  left: 32%;
+  display: block;
+}
+
+/* 4 Bildgebung: bewusst abstrakte, erkennbar synthetische Fläche */
+.c1-art__view {
+  position: relative;
+  width: clamp(13rem, 27vw, 19.5rem);
+  height: clamp(13rem, 27vw, 19.5rem);
+  overflow: hidden;
+  background-color: rgba(6, 9, 16, 0.85);
+}
+
+.c1-art__form {
+  position: absolute;
+  inset: 7%;
+  border-radius: 6px;
+  /* Bewusst abstrakt und symmetrisch: eine synthetische Graufläche, kein
+     Nachbau einer echten Aufnahme. Der Vermerk "synthetisch" steht daneben. */
+  background-image:
+    radial-gradient(30% 18% at 50% 12%, rgba(226, 236, 252, 0.34), transparent 74%),
+    radial-gradient(20% 30% at 28% 48%, rgba(196, 214, 242, 0.2), transparent 76%),
+    radial-gradient(20% 30% at 72% 48%, rgba(196, 214, 242, 0.2), transparent 76%),
+    radial-gradient(9% 40% at 50% 52%, rgba(236, 244, 255, 0.3), transparent 78%),
+    radial-gradient(64% 24% at 50% 86%, rgba(158, 180, 212, 0.16), transparent 80%),
+    linear-gradient(180deg, rgba(120, 140, 172, 0.09), rgba(90, 106, 132, 0.05));
+}
+
+.c1-art__ov {
+  position: absolute;
+  font-size: clamp(0.46rem, 0.9vw, 0.58rem);
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(210, 226, 248, 0.62);
+}
+
+.c1-art__ov--tl { top: 0.5rem; left: 0.55rem; }
+.c1-art__ov--tr { top: 0.5rem; right: 0.55rem; }
+.c1-art__ov--bl { bottom: 0.5rem; left: 0.55rem; }
+.c1-art__ov--br { bottom: 0.5rem; right: 0.55rem; color: rgba(160, 196, 240, 0.62); }
 
 /* Cluster im Patientenkontext */
 .c1-cluster {
@@ -168,11 +368,12 @@ body {
   color: rgba(240, 246, 255, 0.85);
 }
 
-/* Ressourcennamen weit hinten: nur angedeutet */
+/* FHIR-Ressourcennamen im Raum: zurückgenommen, aber lesbar */
 .c1-faint {
-  font-size: clamp(0.55rem, 1vw, 0.68rem);
-  letter-spacing: 0.14em;
-  color: var(--c1-faint);
+  font-size: clamp(0.62rem, 1.2vw, 0.8rem);
+  font-weight: 400;
+  letter-spacing: 0.15em;
+  color: rgba(200, 220, 248, 0.72);
 }
 
 /* Capabilities: Bestandteile des Datenraums, kein Menü */
@@ -220,6 +421,14 @@ body {
   color: var(--c1-mute);
 }
 
+.c1-title__std {
+  margin: 1.5em 0 0;
+  font-size: clamp(0.58rem, 1.1vw, 0.72rem);
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  color: rgba(160, 196, 240, 0.72);
+}
+
 /* --- Der Name und das Finale ---------------------------------------- */
 
 .c1-center {
@@ -261,6 +470,14 @@ body {
   opacity: 0;
   visibility: hidden;
   margin-top: clamp(1.4rem, 3.4vh, 2.6rem);
+}
+
+.c1-final__slogan {
+  margin: 0 0 clamp(1.1rem, 2.6vh, 1.9rem);
+  font-size: clamp(1.05rem, 2.8vw, 1.85rem);
+  font-weight: 300;
+  letter-spacing: -0.005em;
+  color: #fff;
 }
 
 .c1-final__kicker {
@@ -442,9 +659,14 @@ body {
     margin-top: 0.7rem;
   }
 
+  .c1-final__slogan {
+    margin-bottom: 0.7rem;
+    font-size: clamp(0.95rem, 2.2vw, 1.25rem);
+  }
+
   .c1-final__claim {
     margin-top: 0.7rem;
-    font-size: clamp(0.95rem, 2.2vw, 1.3rem);
+    font-size: clamp(0.9rem, 2vw, 1.15rem);
   }
 
   .c1-final__meta {
