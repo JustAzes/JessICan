@@ -1,0 +1,519 @@
+/* carus.one – Coming-Soon-Teaser (/index4/).
+ *
+ * Die Bewegung steckt vollständig in WebGL (js/carus-one.js). Hier stehen
+ * nur der Rahmen und die Schrift, die über der Szene liegt: sehr dunkler
+ * Grund, weißes Licht, viel negativer Raum, keine Karten und keine
+ * Rahmen um Text.
+ */
+
+:root {
+  --c1-ink: #000005;
+  --c1-fg: #f4f6fa;
+  --c1-mute: rgba(233, 238, 247, 0.52);
+  --c1-faint: rgba(216, 226, 242, 0.3);
+  --c1-line: rgba(214, 226, 245, 0.14);
+  --c1-sans: ui-sans-serif, -apple-system, "Segoe UI", Roboto, "Helvetica Neue",
+    Arial, "Noto Sans", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  /* Die Sequenz wird nicht gescrollt, sondern gescrubbt. */
+  overflow: hidden;
+  overscroll-behavior: none;
+  background-color: #000;
+}
+
+body {
+  color: var(--c1-fg);
+  font-family: var(--c1-sans);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+.c1 {
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+  background-color: var(--c1-ink);
+  touch-action: none;
+  cursor: grab;
+}
+
+.c1.is-live {
+  cursor: grab;
+}
+
+.c1__canvas {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+/* --- Rückfall ohne WebGL 2: ruhiges Sternenfeld, Text sofort da ----- */
+
+.c1__stars {
+  position: absolute;
+  inset: 0;
+  display: none;
+  background-image:
+    radial-gradient(1.4px 1.4px at 18% 24%, rgba(255, 255, 255, 0.85), transparent 60%),
+    radial-gradient(1px 1px at 71% 18%, rgba(255, 255, 255, 0.65), transparent 60%),
+    radial-gradient(1.6px 1.6px at 42% 61%, rgba(255, 255, 255, 0.75), transparent 60%),
+    radial-gradient(1px 1px at 86% 72%, rgba(214, 230, 255, 0.6), transparent 60%),
+    radial-gradient(1.2px 1.2px at 12% 78%, rgba(255, 240, 220, 0.6), transparent 60%),
+    radial-gradient(1px 1px at 58% 38%, rgba(255, 255, 255, 0.5), transparent 60%),
+    radial-gradient(1.3px 1.3px at 30% 44%, rgba(255, 255, 255, 0.6), transparent 60%),
+    radial-gradient(1px 1px at 92% 34%, rgba(255, 255, 255, 0.45), transparent 60%),
+    radial-gradient(70% 55% at 50% 48%, #060a16 0%, #000208 62%, #000004 100%);
+}
+
+.c1.is-fallback .c1__canvas {
+  display: none;
+}
+
+.c1.is-fallback .c1__stars {
+  display: block;
+}
+
+.c1.is-fallback .c1__layer,
+.c1.is-fallback .c1-hint,
+.c1.is-fallback .c1-replay,
+.c1.is-fallback .c1-progress {
+  display: none;
+}
+
+/* Ohne WebGL läuft kein Skript, das die Deckkraft setzt – der Text muss
+   also aus dem Stylesheet heraus sichtbar sein. */
+.c1.is-fallback .c1-word,
+.c1.is-fallback .c1-final {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* --- Die projizierte Schrift ---------------------------------------- */
+
+.c1__layer {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.c1__layer > * {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  visibility: hidden;
+  /* Wird pro Bild aus dem 3D-Raum gesetzt. */
+  transform: translate3d(-50%, -50%, 0);
+  transform-origin: 50% 50%;
+  will-change: transform, opacity;
+  white-space: nowrap;
+}
+
+/* Ein klinischer Datenpunkt: nur Typografie und eine hauchdünne Linie. */
+.c1-dp {
+  margin: 0;
+  padding-left: 1.15rem;
+  border-left: 1px solid rgba(214, 226, 245, 0.32);
+  text-align: left;
+}
+
+/* Am rechten Bildrand steht der Text links vom Punkt, die Linie wandert mit. */
+.c1-dp.is-flip {
+  padding-left: 0;
+  padding-right: 1.15rem;
+  border-left: 0;
+  border-right: 1px solid rgba(214, 226, 245, 0.32);
+  text-align: right;
+}
+
+.c1-dp__k,
+.c1-dp__v {
+  display: block;
+}
+
+.c1-dp__k {
+  font-size: clamp(1.15rem, 2.8vw, 1.85rem);
+  font-weight: 300;
+  letter-spacing: -0.01em;
+  color: #fff;
+}
+
+.c1-dp__v {
+  margin-top: 0.45em;
+  font-size: clamp(0.7rem, 1.4vw, 0.9rem);
+  font-weight: 400;
+  letter-spacing: 0.1em;
+  color: var(--c1-mute);
+  font-variant-numeric: tabular-nums;
+}
+
+/* Cluster im Patientenkontext */
+.c1-cluster {
+  font-size: clamp(0.64rem, 1.3vw, 0.84rem);
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgba(240, 246, 255, 0.85);
+}
+
+/* Ressourcennamen weit hinten: nur angedeutet */
+.c1-faint {
+  font-size: clamp(0.55rem, 1vw, 0.68rem);
+  letter-spacing: 0.14em;
+  color: var(--c1-faint);
+}
+
+/* Capabilities: Bestandteile des Datenraums, kein Menü */
+.c1-cap {
+  font-size: clamp(0.8rem, 1.6vw, 1.1rem);
+  font-weight: 300;
+  letter-spacing: 0.02em;
+  color: #fff;
+}
+
+/* Intelligence Layer */
+.c1-ai {
+  font-size: clamp(0.66rem, 1.25vw, 0.86rem);
+  font-weight: 400;
+  letter-spacing: 0.12em;
+  color: rgba(226, 236, 252, 0.78);
+}
+
+.c1-ai--lead {
+  font-size: clamp(1rem, 2.3vw, 1.5rem);
+  letter-spacing: 0.015em;
+  color: #fff;
+}
+
+/* Szenentitel in der Bildmitte */
+.c1-title {
+  text-align: center;
+  white-space: normal;
+  width: min(24rem, 78vw);
+}
+
+.c1-title__h {
+  margin: 0;
+  font-size: clamp(1.5rem, 4.4vw, 2.6rem);
+  font-weight: 300;
+  letter-spacing: -0.015em;
+  color: #fff;
+}
+
+.c1-title__s {
+  margin: 0.55em 0 0;
+  font-size: clamp(0.7rem, 1.5vw, 0.9rem);
+  font-weight: 400;
+  letter-spacing: 0.11em;
+  color: var(--c1-mute);
+}
+
+/* --- Der Name und das Finale ---------------------------------------- */
+
+.c1-center {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 4vmin;
+  text-align: center;
+  pointer-events: none;
+}
+
+.c1-word {
+  margin: 0;
+  font-size: clamp(2.6rem, 9vw, 7rem);
+  font-weight: 300;
+  letter-spacing: -0.035em;
+  line-height: 1;
+  color: #fff;
+  opacity: 0;
+  visibility: hidden;
+  white-space: nowrap;
+}
+
+.c1-word__a,
+.c1-word__b {
+  display: inline-block;
+  will-change: transform, opacity;
+}
+
+.c1-word__b {
+  /* ".one" etwas zurückgenommen, aber klar lesbar. */
+  color: rgba(255, 255, 255, 0.86);
+}
+
+.c1-final {
+  opacity: 0;
+  visibility: hidden;
+  margin-top: clamp(1.4rem, 3.4vh, 2.6rem);
+}
+
+.c1-final__kicker {
+  margin: 0;
+  font-size: clamp(0.68rem, 1.5vw, 0.88rem);
+  font-weight: 500;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: rgba(226, 236, 252, 0.72);
+}
+
+.c1-final__claim {
+  margin: clamp(1.2rem, 3vh, 2.2rem) 0 0;
+  font-size: clamp(1.15rem, 3.2vw, 2rem);
+  font-weight: 300;
+  letter-spacing: -0.01em;
+  line-height: 1.28;
+  color: #fff;
+}
+
+.c1-final__meta {
+  margin: clamp(1rem, 2.4vh, 1.7rem) 0 0;
+  font-size: clamp(0.64rem, 1.3vw, 0.8rem);
+  font-weight: 400;
+  letter-spacing: 0.2em;
+  color: var(--c1-mute);
+}
+
+.c1-final__soon {
+  margin: clamp(1.4rem, 3.2vh, 2.4rem) 0 0;
+  font-size: clamp(0.66rem, 1.4vw, 0.84rem);
+  font-weight: 400;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* --- Hinweis, Fußzeile, Bedienung ----------------------------------- */
+
+.c1-hint {
+  position: absolute;
+  left: 50%;
+  bottom: 3.4rem;
+  z-index: 2;
+  margin: 0;
+  transform: translateX(-50%);
+  font-size: 0.64rem;
+  font-weight: 400;
+  letter-spacing: 0.26em;
+  text-transform: uppercase;
+  color: rgba(226, 236, 252, 0.34);
+  opacity: 0;
+  transition: opacity 1.4s ease;
+  pointer-events: none;
+}
+
+.c1-hint.is-visible {
+  opacity: 1;
+}
+
+.c1-hint.is-gone,
+.c1.is-final .c1-hint {
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.c1-foot {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1.1rem clamp(1rem, 3vw, 2.4rem);
+  font-size: 0.62rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  opacity: 0;
+  transition: opacity 1.6s ease;
+  pointer-events: none;
+}
+
+.c1.is-final .c1-foot,
+.c1.is-fallback .c1-foot {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.c1-foot__org {
+  color: rgba(226, 236, 252, 0.44);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.c1-foot__org:hover,
+.c1-foot__org:focus {
+  color: #fff;
+  border-bottom-color: rgba(255, 255, 255, 0.4);
+}
+
+.c1-foot__note {
+  color: rgba(226, 236, 252, 0.26);
+}
+
+.c1-replay {
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  z-index: 3;
+  width: 38px;
+  height: 38px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  color: rgba(226, 236, 252, 0.5);
+  border: 1px solid var(--c1-line);
+  border-radius: 50%;
+  background-color: rgba(226, 236, 252, 0.03);
+  cursor: pointer;
+  transition: color 0.2s ease, background-color 0.2s ease;
+}
+
+.c1-replay:hover,
+.c1-replay:focus {
+  color: #fff;
+  background-color: rgba(226, 236, 252, 0.12);
+}
+
+.c1-replay:focus-visible,
+.c1-foot__org:focus-visible {
+  outline: 1px solid rgba(255, 255, 255, 0.6);
+  outline-offset: 3px;
+}
+
+.c1-progress {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 3;
+  height: 1px;
+  background-color: rgba(226, 236, 252, 0.08);
+  pointer-events: none;
+}
+
+.c1-progress i {
+  display: block;
+  height: 100%;
+  background-color: rgba(226, 236, 252, 0.45);
+  transform: scaleX(0);
+  transform-origin: 0 50%;
+}
+
+.c1-sr {
+  position: absolute !important;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* --- Flache Fenster: Handy im Querformat ---------------------------- */
+
+@media (max-height: 480px) {
+  .c1-word {
+    font-size: clamp(1.8rem, 6vw, 3.2rem);
+  }
+
+  .c1-final {
+    margin-top: 0.7rem;
+  }
+
+  .c1-final__claim {
+    margin-top: 0.7rem;
+    font-size: clamp(0.95rem, 2.2vw, 1.3rem);
+  }
+
+  .c1-final__meta {
+    margin-top: 0.55rem;
+  }
+
+  .c1-final__soon {
+    margin-top: 0.8rem;
+  }
+
+  .c1-hint {
+    bottom: 2.4rem;
+  }
+}
+
+/* --- Kleine Displays ------------------------------------------------ */
+
+@media (max-width: 640px) {
+  .c1-hint {
+    bottom: 3rem;
+  }
+
+  .c1-foot {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.4rem;
+    padding-bottom: 0.9rem;
+    text-align: center;
+  }
+
+  .c1-cap {
+    letter-spacing: 0.03em;
+  }
+}
+
+/* --- Rücksicht auf Systemeinstellungen ------------------------------ */
+
+@media (prefers-reduced-motion: reduce) {
+  /* Keine Sequenz: das Finale steht sofort und unbewegt da. */
+  .c1 {
+    cursor: default;
+  }
+
+  .c1__layer,
+  .c1-hint,
+  .c1-replay,
+  .c1-progress {
+    display: none;
+  }
+
+  .c1-word {
+    opacity: 1 !important;
+    visibility: visible !important;
+  }
+
+  .c1-word__a,
+  .c1-word__b {
+    transform: none !important;
+    opacity: 1 !important;
+  }
+
+  .c1-final {
+    opacity: 1 !important;
+    visibility: visible !important;
+  }
+
+  .c1-foot {
+    opacity: 1;
+    pointer-events: auto;
+    transition: none;
+  }
+}
