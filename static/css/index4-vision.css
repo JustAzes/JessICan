@@ -89,14 +89,6 @@
   line-height: 1.02;
 }
 
-.v-lead {
-  max-width: 46rem;
-  margin: clamp(1.8rem, 5vh, 3rem) 0 0;
-  font-size: clamp(1rem, 1.7vw, 1.3rem);
-  font-weight: 300;
-  line-height: 1.62;
-  color: rgba(233, 238, 247, 0.78);
-}
 
 .v-sub {
   max-width: 40rem;
@@ -170,8 +162,10 @@
 .v-eco__stage {
   position: relative;
   margin-top: clamp(3rem, 9vh, 6rem);
-  aspect-ratio: 100 / 48;
-  max-height: 62vh;
+  /* Flach genug, dass Kern und alle vier Bereiche gemeinsam in ein
+     Fenster passen - das Bild wirkt nur als Ganzes. */
+  aspect-ratio: 100 / 34;
+  max-height: 46vh;
 }
 
 .v-eco__web {
@@ -263,15 +257,6 @@
   color: rgba(233, 238, 247, 0.78);
 }
 
-.v-eco__meta {
-  margin: 0.7rem 0 0;
-  font-size: clamp(0.6rem, 0.95vw, 0.7rem);
-  font-weight: 500;
-  letter-spacing: 0.13em;
-  text-transform: uppercase;
-  line-height: 1.7;
-  color: rgba(160, 196, 240, 0.5);
-}
 
 /* ==================================================================== *
  * Sektion 2: die Basis
@@ -286,7 +271,7 @@
   position: relative;
   display: grid;
   grid-template-columns: minmax(0, 1fr);
-  padding: clamp(1.6rem, 3.4vh, 2.6rem) 0;
+  padding: clamp(1.5rem, 3.2vh, 2.4rem) 0 clamp(2.1rem, 4vh, 3rem);
   transform: translateX(calc(var(--i) * -0.9rem));
   opacity: 0.4;
   transition: opacity 0.7s ease, transform 0.7s ease;
@@ -301,10 +286,10 @@
    Architekturkasten, nur eine Kante aus Licht. */
 .v-layer__plate {
   position: absolute;
-  bottom: 0.6rem;
+  bottom: 0.35rem;
   left: calc(var(--i) * 1.4rem);
   width: min(46rem, 96%);
-  height: 3.4rem;
+  height: 2rem;
   transform: rotateX(80deg) rotateZ(-0.6deg);
   transform-origin: 50% 100%;
   border: 1px solid rgba(214, 226, 245, 0.14);
@@ -351,49 +336,10 @@
   color: rgba(233, 238, 247, 0.78);
 }
 
-.v-layer__meta {
-  margin: 0.9rem 0 0;
-  font-size: clamp(0.6rem, 0.95vw, 0.72rem);
-  font-weight: 500;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
-  color: rgba(160, 196, 240, 0.46);
-}
 
-.v-layer__say {
-  margin: 1.3rem 0 0;
-  font-size: clamp(0.95rem, 1.7vw, 1.2rem);
-  font-weight: 300;
-  color: #fff;
-}
 
-/* Ebene 3 reicht nach aussen */
-.v-layer__reach {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 0.9rem;
-  margin: 1.2rem 0 0;
-  font-size: clamp(0.66rem, 1.05vw, 0.78rem);
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: rgba(226, 236, 252, 0.6);
-}
 
-.v-layer__reach span {
-  position: relative;
-  padding-left: 1.5rem;
-}
 
-.v-layer__reach span::before {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 0;
-  width: 1rem;
-  height: 1px;
-  background: rgba(190, 216, 250, 0.5);
-}
 
 /* ==================================================================== *
  * Sektion 3: der Lebenszyklus
@@ -406,7 +352,7 @@
 .v-life__scroll {
   /* Die Hoehe bestimmt, wie lange die neun Phasen laufen. */
   position: relative;
-  height: 540vh;
+  height: 470vh;
   margin-top: clamp(3rem, 8vh, 5rem);
 }
 
@@ -559,23 +505,7 @@
   color: rgba(233, 238, 247, 0.8);
 }
 
-.v-pane__t {
-  max-width: 42rem;
-  margin: 1.5rem 0 0;
-  font-size: clamp(0.86rem, 1.35vw, 1.02rem);
-  font-weight: 300;
-  line-height: 1.62;
-  color: var(--c1-mute);
-}
 
-.v-pane__say {
-  max-width: 42rem;
-  margin: 1.5rem 0 0;
-  font-size: clamp(0.95rem, 1.6vw, 1.15rem);
-  font-weight: 300;
-  line-height: 1.45;
-  color: #fff;
-}
 
 .v-pane__loop {
   margin: 1.8rem 0 0;
@@ -740,14 +670,14 @@
  * ==================================================================== */
 
 .v-back {
-  padding-top: clamp(3rem, 7vh, 6rem);
+  padding-top: clamp(1.5rem, 3vh, 3rem);
   text-align: center;
 }
 
 .v-back__stage {
   position: relative;
-  height: clamp(15rem, 34vh, 24rem);
-  margin-bottom: clamp(2rem, 6vh, 4rem);
+  height: clamp(13rem, 28vh, 20rem);
+  margin-bottom: clamp(1.6rem, 4vh, 3rem);
 }
 
 .v-back__seed {
@@ -879,15 +809,6 @@
   color: #fff;
 }
 
-.v-room__meta {
-  margin: 0.7rem 0 0;
-  font-size: clamp(0.58rem, 0.9vw, 0.68rem);
-  font-weight: 500;
-  letter-spacing: 0.13em;
-  text-transform: uppercase;
-  line-height: 1.75;
-  color: rgba(160, 196, 240, 0.5);
-}
 
 .v-room__c {
   margin: 0.9rem 0 0;
@@ -1360,7 +1281,7 @@
   .v-layer__plate {
     left: 0;
     width: 100%;
-    height: 2.4rem;
+    height: 1.6rem;
     opacity: 0.8;
   }
 
@@ -1498,7 +1419,7 @@
   }
 
   .v-life__scroll {
-    height: 620vh;
+    height: 560vh;
   }
 }
 
