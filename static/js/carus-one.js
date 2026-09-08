@@ -52,44 +52,52 @@
    * vorwärts wie rückwärts scrubben.
    * ================================================================== */
 
-  var STORY_SECONDS = 48;
+  var STORY_SECONDS = 40;
 
   var SC = {
-    dark: [0.000, 0.021],   // Szene 1  Nichts (rund 1 s)
-    seed: [0.021, 0.042],   // Szene 1  erster Punkt glimmt auf
-    first: [0.042, 0.069],  // Szene 2  erste Verbindung
-    grow: [0.066, 0.145],   // Szene 2  exponentielles Wachstum
-    pull: [0.128, 0.160],   // Kamera fährt zurück
-    data: [0.162, 0.481],   // Szene 3  klinische Datenpunkte (15 s)
-    art: [0.481, 0.601],    // Szene 3b klinische Artefakte (6 s)
-    patient: [0.601, 0.688], // Szene 4  Patient View
-    pop: [0.688, 0.780],    // Szene 5  Population
-    orbit: [0.780, 0.850],  // Szene 6  carus.one entsteht
-    cap: [0.842, 0.912],    // Szene 7  Capabilities
-    ai: [0.900, 0.952],     // Szene 8  Intelligence Layer
-    end: [0.942, 1.000]     // Finale
+    dark: [0.000, 0.025],   // Szene 1  Nichts (rund 1 s)
+    seed: [0.025, 0.050],   // Szene 1  erster Punkt glimmt auf
+    first: [0.050, 0.082],  // Szene 2  erste Verbindung
+    grow: [0.079, 0.155],   // Szene 2  exponentielles Wachstum
+    pull: [0.140, 0.160],   // Kamera fährt zurück
+    data: [0.160, 0.415],   // Szene 3  klinische Datenpunkte (10 s)
+    art: [0.415, 0.5425],   // Szene 3b klinische Artefakte (5 s)
+    patient: [0.5425, 0.6275], // Szene 4  Patient View
+    pop: [0.6275, 0.7175], // Szene 5  Population
+    orbit: [0.7175, 0.7775], // Szene 6  carus.one entsteht (kurz gehalten)
+    cap: [0.7725, 0.8425],  // Szene 7  Capabilities
+    ai: [0.8375, 0.8800],   // Szene 8  Intelligence Layer
+    end: [0.8800, 1.0000]   // Finale mit gestaffeltem Slogan
   };
+
+  /* Finale: "Healthcare" – zwei Sekunden Pause – "beyond imagination."
+     Danach kommt der Rest schnell hintereinander. */
+  var SLOGAN_A = [0.882, 0.900];
+  var SLOGAN_PAUSE = 2 / 40;              // zwei Sekunden auf dieser Achse
+  var SLOGAN_B = [0.900 + SLOGAN_PAUSE, 0.918 + SLOGAN_PAUSE];
+  var FIN_START = SLOGAN_B[1];            // dann zügig der Rest
+  var FIN_STEP = 0.005;                   // Versatz zwischen den Zeilen
+  var FIN_FADE = 0.012;                   // Blende je Zeile (rund 0,5 s)
 
   /* Szene 3: neun klinische Datenpunkte. Jeder bekommt ein festes Fenster,
      in dem die Kamera zuerst hinfliegt und dann stehen bleibt – nur so
      bleibt Zeit, Bezeichnung, Code und Standard zu lesen.
      Die Beschriftungen im Markup übernehmen diese Werte (data-c1-dp). */
-  var DP_COUNT = 9;
-  var DP_START = 0.162;
-  var DP_STEP = (0.481 - 0.162) / DP_COUNT;   // rund 1,7 s je Punkt
+  var DP_COUNT = 6;
+  var DP_START = 0.160;
+  var DP_STEP = (0.415 - 0.160) / DP_COUNT;   // rund 1,7 s je Punkt
   var DP_TRAVEL = 0.013;                       // Anflug, danach Stillstand
 
   /* Szene 3b: vier Artefakte, in denen dieselben Daten dem Menschen
      begegnen – Entlassbrief, Vitalwertmonitor, Patientenakte, Bildgebung.
      Bewusst reduzierte Drahtgitter, keine Bildschirmfotos. */
-  var AR_COUNT = 4;
-  var AR_START = 0.481;
-  var AR_STEP = (0.601 - 0.481) / AR_COUNT;    // rund 1,4 s je Artefakt
+  var AR_COUNT = 3;
+  var AR_START = 0.415;
+  var AR_STEP = (0.5425 - 0.415) / AR_COUNT;   // rund 1,7 s je Artefakt
   var AR_POS = [
     [-0.40, 0.12, 0.24],
     [0.42, -0.08, -0.20],
-    [-0.28, -0.22, -0.36],
-    [0.34, 0.24, 0.32]
+    [-0.26, 0.22, -0.34]
   ];
 
   function ramp(a, b, p) {
@@ -733,19 +741,19 @@
   var CAM = [
     /* p,    dist, azimut, hoehe, fov, ziel */
     [0.000, 0.42, 0.30, 0.10, 40, 'origin'],
-    [0.040, 0.52, 0.42, 0.12, 40, 'origin'],
-    [0.069, 0.72, 0.60, 0.16, 42, 'origin'],
-    [0.112, 1.70, 0.95, 0.26, 46, 'origin'],
-    [0.145, 2.90, 1.25, 0.34, 48, 'origin'],
-    [0.615, 1.55, 3.15, 0.26, 44, 'origin'],
-    [0.650, 2.60, 3.40, 0.32, 46, 'origin'],
-    [0.688, 3.10, 3.70, 0.30, 46, 'origin'],
-    [0.735, 4.40, 4.20, 0.40, 48, 'origin'],
-    [0.780, 5.70, 4.80, 0.48, 50, 'origin'],
-    [0.818, 4.00, 5.30, 0.30, 46, 'origin'],
-    [0.865, 2.95, 5.70, 0.18, 44, 'origin'],
-    [0.910, 2.65, 6.10, 0.12, 42, 'ai'],
-    [0.955, 3.40, 6.50, 0.20, 44, 'origin'],
+    [0.042, 0.52, 0.42, 0.12, 40, 'origin'],
+    [0.075, 0.72, 0.60, 0.16, 42, 'origin'],
+    [0.120, 1.70, 0.95, 0.26, 46, 'origin'],
+    [0.152, 2.90, 1.25, 0.34, 48, 'origin'],
+    [0.556, 1.55, 3.15, 0.26, 44, 'origin'],
+    [0.590, 2.60, 3.40, 0.32, 46, 'origin'],
+    [0.628, 3.10, 3.70, 0.30, 46, 'origin'],
+    [0.672, 4.40, 4.20, 0.40, 48, 'origin'],
+    [0.718, 5.70, 4.80, 0.48, 50, 'origin'],
+    [0.752, 4.00, 5.30, 0.30, 46, 'origin'],
+    [0.800, 2.95, 5.70, 0.18, 44, 'origin'],
+    [0.848, 2.65, 6.10, 0.12, 42, 'ai'],
+    [0.892, 3.40, 6.50, 0.20, 44, 'origin'],
     [1.000, 5.20, 7.00, 0.30, 42, 'origin']
   ];
 
@@ -934,7 +942,17 @@
   var wordEl = root.querySelector('[data-c1-word]');
   var wordA = root.querySelector('[data-c1-part="a"]');
   var wordB = root.querySelector('[data-c1-part="b"]');
-  var finalEl = root.querySelector('[data-c1-final]');
+  var sloA = root.querySelector('[data-c1-slogan="a"]');
+  var sloB = root.querySelector('[data-c1-slogan="b"]');
+  var finParts = Array.prototype.slice.call(root.querySelectorAll('[data-c1-fin]'));
+
+  /* Einblenden: Deckkraft und ein kurzer Weg von unten, jedes Bild neu
+     gesetzt – deshalb keine CSS-Übergänge, die dagegen arbeiten würden. */
+  function reveal(el, t) {
+    el.style.opacity = t.toFixed(3);
+    el.style.visibility = t > 0.002 ? 'visible' : 'hidden';
+    el.style.transform = t >= 1 ? 'none' : 'translateY(' + ((1 - t) * 9).toFixed(2) + 'px)';
+  }
   var hintEl = root.querySelector('[data-c1-hint]');
   var progressEl = root.querySelector('[data-c1-progress]');
 
@@ -1143,6 +1161,7 @@
           L.el.style.opacity = '0';
           L.el.style.visibility = 'hidden';
           L.el.style.willChange = '';
+          L.el.classList.remove('is-on');
           L.shown = false;
         }
         continue;
@@ -1166,6 +1185,7 @@
           L.el.style.opacity = '0';
           L.el.style.visibility = 'hidden';
           L.el.style.willChange = '';
+          L.el.classList.remove('is-on');
           L.shown = false;
         }
         continue;
@@ -1178,6 +1198,7 @@
       if (!L.shown) {
         L.el.style.visibility = 'visible';
         L.el.style.willChange = 'transform, opacity';
+        L.el.classList.add('is-on');
         L.shown = true;
       }
       L.el.style.opacity = op.toFixed(3);
@@ -1218,9 +1239,9 @@
     /* "carus" und ".one" erscheinen gegenüberliegend auf der Umlaufbahn
        und werden von der Kamerabewegung zusammengeführt. Am Ende sitzen
        beide auf ihrer normalen Textposition und lesen sich als carus.one. */
-    var appear = ease(SC.orbit[0] + 0.005, SC.orbit[0] + 0.045, p);
-    var appearB = ease(SC.orbit[0] + 0.030, SC.orbit[0] + 0.070, p);
-    var merge = ease(SC.orbit[0] + 0.055, SC.orbit[1] + 0.010, p);
+    var appear = ease(SC.orbit[0] + 0.004, SC.orbit[0] + 0.030, p);
+    var appearB = ease(SC.orbit[0] + 0.020, SC.orbit[0] + 0.046, p);
+    var merge = ease(SC.orbit[0] + 0.036, SC.orbit[1] + 0.006, p);
     wordEl.style.opacity = Math.max(appear, appearB).toFixed(3);
     if (appear <= 0.002 && appearB <= 0.002) {
       wordEl.style.visibility = 'hidden';
@@ -1396,10 +1417,13 @@
     /* --- Text ---------------------------------------------------- */
     drawLabels(p, m01, m12);
     drawWord(p);
-    if (finalEl) {
-      var fin = ease(SC.end[0] + 0.012, 0.995, p);
-      finalEl.style.opacity = fin.toFixed(3);
-      finalEl.style.visibility = fin > 0.002 ? 'visible' : 'hidden';
+    /* "Healthcare" – Pause – "beyond imagination." – dann der Rest. */
+    if (sloA) { reveal(sloA, ease(SLOGAN_A[0], SLOGAN_A[1], p)); }
+    if (sloB) { reveal(sloB, ease(SLOGAN_B[0], SLOGAN_B[1], p)); }
+    for (var fi = 0; fi < finParts.length; fi++) {
+      /* Kurzer Versatz und kurze Blende: der komplette Rest ist rund eine
+         Sekunde nach "beyond imagination." und noch vor p = 1 vollstaendig da. */
+      reveal(finParts[fi], ease(FIN_START + fi * FIN_STEP, FIN_START + FIN_FADE + fi * FIN_STEP, p));
     }
     if (progressEl) { progressEl.style.transform = 'scaleX(' + p.toFixed(4) + ')'; }
 

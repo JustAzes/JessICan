@@ -95,7 +95,9 @@ body {
 /* Ohne WebGL läuft kein Skript, das die Deckkraft setzt – der Text muss
    also aus dem Stylesheet heraus sichtbar sein. */
 .c1.is-fallback .c1-word,
-.c1.is-fallback .c1-final {
+.c1.is-fallback .c1-slogan__a,
+.c1.is-fallback .c1-slogan__b,
+.c1.is-fallback .c1-final > p {
   opacity: 1;
   visibility: visible;
 }
@@ -173,8 +175,8 @@ body {
 }
 
 /* --- Szene 3b: klinische Artefakte ---------------------------------- *
- * Wie dieselben Daten dem Menschen begegnen: Entlassbrief, Monitor,
- * Patientenakte, Bildgebung. Bewusst extrem reduzierte Drahtgitter -
+ * Wie dieselben Daten dem Menschen begegnen: Entlassbrief, Monitor der
+ * Intensivmedizin, Bildgebung. Bewusst reduzierte Drahtgitter -
  * dünne Rahmen, Typografie, unleserlicher Fülltext. Keine Nachbauten
  * echter Oberflächen, keine Bildschirmfotos.
  */
@@ -203,11 +205,9 @@ body {
   color: rgba(160, 196, 240, 0.68);
 }
 
-/* Rahmen aller vier Artefakte */
+/* Rahmen der Artefakte */
 .c1-art__page,
-.c1-art__win,
-.c1-art__view,
-.c1-art__grid {
+.c1-art__view {
   position: relative;
   border: 1px solid rgba(200, 220, 248, 0.3);
   /* Kein backdrop-filter: er kostet pro Bild eine eigene Kompositionsstufe
@@ -248,12 +248,73 @@ body {
   padding: 1.3rem 1.5rem 1.5rem;
 }
 
-/* 2 Vitalwerte */
+/* 2 Vitalwerte: Kurve über den Zahlen, wie auf einem Monitor */
+.c1-art__mon {
+  position: relative;
+  width: clamp(16rem, 34vw, 25rem);
+  border: 1px solid rgba(200, 220, 248, 0.3);
+  background-color: rgba(9, 14, 24, 0.66);
+}
+
+.c1-art__trace {
+  height: clamp(2.6rem, 5.5vw, 3.9rem);
+  overflow: hidden;
+  border-bottom: 1px solid rgba(200, 220, 248, 0.18);
+}
+
+.c1-ecg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.c1-ecg__g {
+  /* Zwei Bildbreiten Weg, dann setzt es nahtlos wieder an. */
+  animation: c1-ecg-run 2.2s linear infinite;
+  animation-play-state: paused;
+}
+
+.c1-art.is-on .c1-ecg__g {
+  animation-play-state: running;
+}
+
+.c1-ecg__line,
+.c1-ecg__glow {
+  fill: none;
+  stroke: #7fd4a8;
+  stroke-linejoin: round;
+  vector-effect: non-scaling-stroke;
+}
+
+.c1-ecg__line {
+  stroke-width: 1.4;
+}
+
+.c1-ecg__glow {
+  stroke-width: 5;
+  stroke-opacity: 0.16;
+}
+
+@keyframes c1-ecg-run {
+  from { transform: translateX(0); }
+  to { transform: translateX(-240px); }
+}
+
+/* Die Herzfrequenz schlägt im Takt der Kurve mit. */
+.c1-art.is-on .c1-art__hr {
+  animation: c1-pulse 0.733s ease-out infinite;
+}
+
+@keyframes c1-pulse {
+  0% { opacity: 1; transform: scale(1.06); }
+  22% { opacity: 0.86; transform: scale(1); }
+  100% { opacity: 1; transform: scale(1); }
+}
+
 .c1-art__grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1px;
-  width: clamp(16rem, 34vw, 25rem);
   padding: 1px;
   background-color: rgba(200, 220, 248, 0.14);
 }
@@ -265,6 +326,7 @@ body {
 
 .c1-art__grid b {
   display: block;
+  transform-origin: 0 50%;
   font-size: clamp(0.95rem, 2vw, 1.3rem);
   font-weight: 300;
   letter-spacing: -0.01em;
@@ -282,46 +344,7 @@ body {
   color: rgba(226, 236, 252, 0.5);
 }
 
-/* 3 Patientenakte */
-.c1-art__win {
-  width: clamp(16rem, 34vw, 25rem);
-  height: clamp(10rem, 21vw, 15rem);
-  overflow: hidden;
-}
-
-.c1-art__bar {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 1.8rem;
-  border-bottom: 1px solid rgba(200, 220, 248, 0.26);
-  background-color: rgba(200, 220, 248, 0.07);
-}
-
-.c1-art__side {
-  position: absolute;
-  top: 1.8rem;
-  bottom: 0;
-  left: 0;
-  width: 27%;
-  border-right: 1px solid rgba(200, 220, 248, 0.22);
-  background-image: repeating-linear-gradient(to bottom,
-    rgba(210, 226, 248, 0.34) 0 1px, transparent 1px 0.62rem);
-  background-position: 0.55rem 0.6rem;
-  background-repeat: no-repeat;
-  background-size: 62% 100%;
-}
-
-.c1-art__body {
-  position: absolute;
-  top: 2.6rem;
-  right: 1rem;
-  left: 32%;
-  display: block;
-}
-
-/* 4 Bildgebung: bewusst abstrakte, erkennbar synthetische Fläche */
+/* 3 Bildgebung: bewusst abstrakte, erkennbar synthetische Fläche */
 .c1-art__view {
   position: relative;
   width: clamp(13rem, 27vw, 19.5rem);
@@ -330,19 +353,13 @@ body {
   background-color: rgba(6, 9, 16, 0.85);
 }
 
-.c1-art__form {
+.c1-xray {
   position: absolute;
-  inset: 7%;
-  border-radius: 6px;
-  /* Bewusst abstrakt und symmetrisch: eine synthetische Graufläche, kein
-     Nachbau einer echten Aufnahme. Der Vermerk "synthetisch" steht daneben. */
-  background-image:
-    radial-gradient(30% 18% at 50% 12%, rgba(226, 236, 252, 0.34), transparent 74%),
-    radial-gradient(20% 30% at 28% 48%, rgba(196, 214, 242, 0.2), transparent 76%),
-    radial-gradient(20% 30% at 72% 48%, rgba(196, 214, 242, 0.2), transparent 76%),
-    radial-gradient(9% 40% at 50% 52%, rgba(236, 244, 255, 0.3), transparent 78%),
-    radial-gradient(64% 24% at 50% 86%, rgba(158, 180, 212, 0.16), transparent 80%),
-    linear-gradient(180deg, rgba(120, 140, 172, 0.09), rgba(90, 106, 132, 0.05));
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .c1-art__ov {
@@ -466,18 +483,40 @@ body {
   color: rgba(255, 255, 255, 0.86);
 }
 
-.c1-final {
-  opacity: 0;
-  visibility: hidden;
-  margin-top: clamp(1.4rem, 3.4vh, 2.6rem);
-}
-
-.c1-final__slogan {
-  margin: 0 0 clamp(1.1rem, 2.6vh, 1.9rem);
+/* Der Slogan kommt in zwei Hälften mit zwei Sekunden Pause dazwischen;
+   die Deckkraft setzt das Skript, deshalb hier keine Übergänge. */
+.c1-slogan {
+  margin: clamp(1.1rem, 2.8vh, 2rem) 0 0;
   font-size: clamp(1.05rem, 2.8vw, 1.85rem);
   font-weight: 300;
   letter-spacing: -0.005em;
+  line-height: 1.25;
   color: #fff;
+  white-space: normal;
+}
+
+.c1-slogan__a,
+.c1-slogan__b {
+  /* Zwei eigene Zeilen: so bleibt jede Haelfte fuer sich zentriert und die
+     zweite kann zwei Sekunden spaeter erscheinen, ohne die erste zu schieben. */
+  display: block;
+  opacity: 0;
+  visibility: hidden;
+  will-change: opacity, transform;
+}
+
+.c1-slogan__b {
+  margin-top: 0.18em;
+}
+
+.c1-final {
+  margin-top: clamp(1.2rem, 3vh, 2.2rem);
+}
+
+.c1-final > p {
+  opacity: 0;
+  visibility: hidden;
+  will-change: opacity, transform;
 }
 
 .c1-final__kicker {
@@ -659,8 +698,8 @@ body {
     margin-top: 0.7rem;
   }
 
-  .c1-final__slogan {
-    margin-bottom: 0.7rem;
+  .c1-slogan {
+    margin-top: 0.7rem;
     font-size: clamp(0.95rem, 2.2vw, 1.25rem);
   }
 
@@ -728,9 +767,12 @@ body {
     opacity: 1 !important;
   }
 
-  .c1-final {
+  .c1-slogan__a,
+  .c1-slogan__b,
+  .c1-final > p {
     opacity: 1 !important;
     visibility: visible !important;
+    transform: none !important;
   }
 
   .c1-foot {
