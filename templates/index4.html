@@ -15,16 +15,59 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  {#- Entwurfsstand auf einer fremden Domain: bewusst nicht indexierbar.
+      Eine kanonische Adresse wird erst gesetzt, wenn die produktive
+      Veroeffentlichungsadresse bestaetigt ist. -#}
   <meta name="robots" content="noindex, nofollow">
-  <title>carus.one &ndash; Clinical Data &amp; AI Ecosystem</title>
-  <meta name="description" content="carus.one – Healthcare beyond imagination. Eine gemeinsame Datenbasis für Forschung, klinische Datenprodukte und KI. One data foundation. Endless possibilities. Coming soon.">
-  <meta name="theme-color" content="#000000">
+  <title>carus.one &ndash; Daten und KI f&uuml;r die Universit&auml;tsmedizin</title>
+  <meta name="description" content="carus.one entsteht als gemeinsames Daten- und KI-Ökosystem des Universitätsklinikums Dresden – für Forschung, Qualitätsmanagement, Organisation und perspektivisch die Versorgung. Die Plattform ist im Aufbau.">
+  <meta name="theme-color" content="#05070b">
+  <link rel="icon" href="{{ get_url(path='img/carus-icon.svg') }}" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="{{ get_url(path='img/carus-icon-180.png') }}">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="de_DE">
+  <meta property="og:site_name" content="carus.one">
+  <meta property="og:title" content="carus.one – Daten und KI für die Universitätsmedizin">
+  <meta property="og:description" content="Ein gemeinsames Daten- und KI-Ökosystem für Forschung, Qualitätsmanagement, Organisation und perspektivisch die Versorgung. Im Aufbau.">
+  <meta property="og:image" content="{{ get_url(path='img/carus-share.png') }}">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="carus.one – dunkles Datennetz mit dem Schriftzug carus.one">
+  <meta name="twitter:card" content="summary_large_image">
   <link rel="stylesheet" href="{{ get_url(path='css/index4.css') }}">
   <link rel="stylesheet" href="{{ get_url(path='css/index4-vision.css') }}">
+  {#- Ohne JavaScript laeuft keine Sequenz: dann steht sofort das
+      Endbild mit ruhigem Sternenfeld da, wie im Rueckfall ohne WebGL. -#}
+  <noscript>
+    <style>
+      .c1__canvas { display: none !important; }
+      .c1__stars { display: block !important; }
+      .c1__layer,
+      .c1-tools,
+      .c1-progress { display: none !important; }
+      .c1-word,
+      .c1-slogan__a,
+      .c1-slogan__b,
+      .c1-final > p { opacity: 1 !important; visibility: visible !important; transform: none !important; }
+    </style>
+  </noscript>
 </head>
 
 <body>
-  <div class="c1" data-c1>
+  <a class="v-skip" href="#inhalt">Zum Inhalt springen</a>
+
+  <header class="v-nav">
+    <a class="v-nav__brand" href="#top">carus.one</a>
+    <nav aria-label="Abschnitte dieser Seite">
+      <ul>
+        <li><a href="#vision">Vision</a></li>
+        <li><a href="#fundament">Fundament</a></li>
+        <li><a href="#lebenszyklus">Lebenszyklus</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="c1" data-c1 id="top" aria-label="Einstiegsanimation von carus.one">
     <canvas class="c1__canvas" data-c1-canvas aria-hidden="true"></canvas>
 
     {#- Wird nur sichtbar, wenn WebGL 2 fehlt: statisches Sternenfeld. -#}
@@ -70,7 +113,7 @@
         <!-- Synthetische Thoraxaufnahme, rein rechnerisch erzeugt von
              tools/carus-xray.py. Kein echtes Patientenbild. -->
         <img class="c1-xray" src="{{ get_url(path='img/carus-xray-thorax.png') }}"
-             width="512" height="512" alt="" aria-hidden="true" decoding="async">
+             width="512" height="512" alt="" aria-hidden="true" decoding="async" fetchpriority="low">
         <span class="c1-art__ov c1-art__ov--tl">CR &middot; PA</span>
         <span class="c1-art__ov c1-art__ov--tr">512 &times; 512</span>
         <span class="c1-art__ov c1-art__ov--bl">WL 40 / WW 400</span>
@@ -155,430 +198,238 @@
       </p>
 
       <div class="c1-final">
-        <p class="c1-final__kicker" data-c1-fin="0">Clinical Data &amp; AI Ecosystem</p>
+        <p class="c1-final__kicker" data-c1-fin="0">Daten- und KI-&Ouml;kosystem</p>
         <p class="c1-final__claim" data-c1-fin="1">One data foundation.<br>Endless possibilities.</p>
-        <p class="c1-final__meta" data-c1-fin="2">Research &middot; Care &middot; AI &middot; Innovation</p>
-        <p class="c1-final__soon" data-c1-fin="3">Coming soon.</p>
+        <p class="c1-final__meta" data-c1-fin="2">Forschung &middot; Versorgung &middot; KI &middot; Innovation</p>
+        <p class="c1-final__soon" data-c1-fin="3">Im Aufbau.</p>
       </div>
     </div>
 
-    <p class="c1-hint" data-c1-hint><span class="c1-hint__a">Scrollen oder ziehen</span><span class="c1-hint__b">Weiter zur Vision</span></p>
+    <a class="c1-enter" href="#vision">Die Vision entdecken</a>
 
-    <footer class="c1-foot">
-      <a class="c1-foot__org" href="https://www.uniklinikum-dresden.de/" rel="noopener">Universitätsklinikum Dresden</a>
-      <span class="c1-foot__note">Synthetische Demodaten &middot; Entwurf</span>
-    </footer>
+    <p class="c1-foot">
+      <span class="c1-foot__org">Universit&auml;tsklinikum Dresden</span>
+      <span class="c1-foot__note">Synthetische Beispieldaten &middot; Entwurf</span>
+    </p>
 
-    <button class="c1-replay" type="button" data-c1-replay title="Sequenz neu starten">
-      <span class="c1-sr">Sequenz neu starten</span>
-      <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+    <div class="c1-tools">
+    <button class="c1-btn" type="button" data-c1-pause aria-pressed="false">
+      <span class="c1-btn__on">Animation anhalten</span>
+      <span class="c1-btn__off">Animation fortsetzen</span>
+      <svg class="c1-btn__i c1-btn__i--pause" viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true" focusable="false">
+        <rect x="6" y="5" width="4" height="14" rx="1"></rect><rect x="14" y="5" width="4" height="14" rx="1"></rect>
+      </svg>
+      <svg class="c1-btn__i c1-btn__i--play" viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true" focusable="false">
+        <path d="M8 5l11 7-11 7z"></path>
+      </svg>
+    </button>
+    <button class="c1-replay c1-btn" type="button" data-c1-replay>
+      <span class="c1-btn__on">Sequenz neu starten</span>
+      <svg class="c1-btn__i" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
         <path d="M3 12a9 9 0 1 0 3.1-6.8"></path>
         <path d="M3 4v5h5"></path>
       </svg>
     </button>
+    </div>
 
     <div class="c1-progress" aria-hidden="true"><i data-c1-progress></i></div>
-  </div>
+  </section>
 
 
   <!-- ================================================================ *
-   * Der Vision-Teil unter dem Teaser. Der Teaser bleibt als fest
-   * stehender Hintergrund liegen und zieht sich beim Scrollen zurueck
-   * (js/carus-one.js). Alles hier ist scrollgetrieben: js/carus-vision.js.
-   *
-   * Grundregel fuer den Inhalt: pro visuellem Element genau eine
-   * Kernbotschaft. Keine Erklaerabsaetze, keine wiederholten
-   * Begriffslisten - die Technik steht nur als eine ruhige zweite Zeile
-   * je Abschnitt.
+   * Der Informationsbereich unter dem Teaser: vier zusammenhaengende
+   * Abschnitte in einer Leserichtung. Alle Texte stehen als HTML da und
+   * sind ohne JavaScript, ohne Klick und ohne Warten lesbar. Bewegung
+   * gibt es nur als kurze Einblendung (js/carus-vision.js).
    * ================================================================ -->
-  <main class="v" id="vision">
+  <main id="inhalt">
 
-    <!-- Uebergang: die Szene wird ruhig, dann kommt die Vision ---------- -->
-    <section class="v-sec v-sec--intro" data-v-in>
-      <p class="v-kicker">Die Vision</p>
-      <h2 class="v-h1">Daten nicht nur sammeln.<br><em>Wirkung daraus schaffen.</em></h2>
-      <p class="v-sub">Ein gemeinsames Daten&ouml;kosystem &ndash; von der wissenschaftlichen Idee bis zur Anwendung in der Versorgung.</p>
-    </section>
+    <!-- 1 Die Vision --------------------------------------------------- -->
+    <section class="s" id="vision" aria-labelledby="vision-h">
+      <div class="s__inner">
+        <p class="s__kicker">Die Vision</p>
+        <h2 class="s__h" id="vision-h">Eine gemeinsame Basis f&uuml;r bessere Medizin.</h2>
 
-    <!-- Sektion 1: ein Oekosystem fuer das gesamte Klinikum ------------- -->
-    <section class="v-sec v-eco" data-v-in>
-      <p class="v-kicker">Ein &Ouml;kosystem f&uuml;r das gesamte Klinikum</p>
-      <h2 class="v-h2">Eine starke gemeinsame Basis.<br><em>Viele M&ouml;glichkeiten.</em></h2>
-
-      <div class="v-eco__stage" data-v-eco>
-        <svg class="v-eco__web" viewBox="0 0 100 62" preserveAspectRatio="none" aria-hidden="true">
-          <g class="v-eco__lines">
-            <path data-v-edge="0" d="M41 29 C34 26 28 21 19 15"></path>
-            <path data-v-edge="1" d="M59 29 C66 26 72 21 81 15"></path>
-            <path data-v-edge="2" d="M41 33 C34 36 28 41 19 47"></path>
-            <path data-v-edge="3" d="M59 33 C66 36 72 41 81 47"></path>
-          </g>
-          <g class="v-eco__mesh">
-            <path d="M19 15 C40 8 60 8 81 15"></path>
-            <path d="M81 15 C90 28 90 34 81 47"></path>
-            <path d="M81 47 C60 54 40 54 19 47"></path>
-            <path d="M19 47 C10 34 10 28 19 15"></path>
-          </g>
-        </svg>
-
-        <p class="v-eco__core"><span>carus.one</span></p>
-
-        <article class="v-eco__area v-eco__area--a" data-v-area="0">
-          <h3>Forschung</h3>
-          <p class="v-eco__claim">Schneller von der Idee zur Erkenntnis.</p>
-        </article>
-        <article class="v-eco__area v-eco__area--b" data-v-area="1">
-          <h3>Qualit&auml;t</h3>
-          <p class="v-eco__claim">Qualit&auml;t sichtbar und messbar machen.</p>
-        </article>
-        <article class="v-eco__area v-eco__area--c" data-v-area="2">
-          <h3>Organisation</h3>
-          <p class="v-eco__claim">Prozesse verstehen, Entscheidungen unterst&uuml;tzen.</p>
-        </article>
-        <article class="v-eco__area v-eco__area--d" data-v-area="3">
-          <h3>Versorgung</h3>
-          <p class="v-eco__claim">Datenprodukte dort nutzen, wo sie wirken.</p>
-        </article>
-      </div>
-    </section>
-
-    <!-- Sektion 2: die starke Basis ------------------------------------- -->
-    <section class="v-sec v-base" data-v-in>
-      <p class="v-kicker">Die Basis</p>
-      <h2 class="v-h2">Starke Basis.<br><em>Skalierbare Wirkung.</em></h2>
-
-      <div class="v-stack" data-v-stack>
-        <article class="v-layer" data-v-layer="0" style="--i:0">
-          <span class="v-layer__plate" aria-hidden="true"></span>
-          <div class="v-layer__text">
-            <p class="v-layer__n">Ebene 1</p>
-            <h3>Skalierbare Infrastruktur</h3>
-            <p class="v-layer__q">Speicher und Rechenleistung wachsen mit den Anforderungen.</p>
-          </div>
-        </article>
-        <article class="v-layer" data-v-layer="1" style="--i:1">
-          <span class="v-layer__plate" aria-hidden="true"></span>
-          <div class="v-layer__text">
-            <p class="v-layer__n">Ebene 2</p>
-            <h3>Vertrauensw&uuml;rdige Daten</h3>
-            <p class="v-layer__q">Historisiert, nachvollziehbar, semantisch erschlossen.</p>
-          </div>
-        </article>
-        <article class="v-layer" data-v-layer="2" style="--i:2">
-          <span class="v-layer__plate" aria-hidden="true"></span>
-          <div class="v-layer__text">
-            <p class="v-layer__n">Ebene 3</p>
-            <h3>Offen und anschlussf&auml;hig</h3>
-            <p class="v-layer__q">Daten enden nicht in einer einzelnen Anwendung.</p>
-          </div>
-        </article>
-        <article class="v-layer" data-v-layer="3" style="--i:3">
-          <span class="v-layer__plate" aria-hidden="true"></span>
-          <div class="v-layer__text">
-            <p class="v-layer__n">Ebene 4</p>
-            <h3>Sicher von Anfang an</h3>
-            <p class="v-layer__q">Rollen, Zugriffe und Datenr&auml;ume geh&ouml;ren zur Plattform.</p>
-          </div>
-        </article>
-        <article class="v-layer" data-v-layer="4" style="--i:4">
-          <span class="v-layer__plate" aria-hidden="true"></span>
-          <div class="v-layer__text">
-            <p class="v-layer__n">Ebene 5</p>
-            <h3>Services statt Einzell&ouml;sungen</h3>
-            <p class="v-layer__q">Kein Projekt beginnt wieder bei null.</p>
-          </div>
-        </article>
-      </div>
-
-      <p class="v-meta">Compute &middot; Storage &middot; GPU &middot; FHIR &middot; OMOP &middot; APIs &middot; Audit &middot; sichere Datenr&auml;ume</p>
-      <p class="v-claim">Die Basis soll nicht zum Limit der n&auml;chsten Idee werden.</p>
-    </section>
-
-    <!-- Sektion 3: von der Idee zum Datenprodukt ------------------------ -->
-    <section class="v-sec v-life" data-v-life>
-      <div class="v-life__head" data-v-in>
-        <p class="v-kicker">Der Lebenszyklus</p>
-        <h2 class="v-h2">Von der Idee<br><em>bis zur Wirkung.</em></h2>
-        <p class="v-sub">Ein Datenprodukt beginnt nicht mit einem Antrag. Es beginnt mit einer Frage.</p>
-      </div>
-
-      <div class="v-life__scroll" data-v-life-scroll>
-        <div class="v-life__stage">
-          <div class="v-rail" data-v-rail>
-            <span class="v-rail__track" aria-hidden="true"><i data-v-rail-fill></i></span>
-            <ol class="v-rail__list">
-              <li data-v-dot="0"><span>01</span><b>Idee</b></li>
-              <li data-v-dot="1"><span>02</span><b>Exploration</b></li>
-              <li data-v-dot="2"><span>03</span><b>Zugang</b></li>
-              <li data-v-dot="3"><span>04</span><b>Entwickeln</b></li>
-              <li data-v-dot="4"><span>05</span><b>Validieren</b></li>
-              <li data-v-dot="5"><span>06</span><b>Freigeben</b></li>
-              <li data-v-dot="6"><span>07</span><b>Nutzen</b></li>
-              <li data-v-dot="7"><span>08</span><b>Betreiben</b></li>
-              <li data-v-dot="8"><span>09</span><b>Weiterentwickeln</b></li>
-            </ol>
+        <div class="s__cols" data-v-in>
+          <div class="s__lead">
+            <p>Wir entwickeln carus.one als gemeinsames Daten- und KI-&Ouml;kosystem f&uuml;r das Universit&auml;tsklinikum Dresden. Es soll klinische Informationen verbinden und sicher nutzbar machen &ndash; f&uuml;r Forschung, Qualit&auml;tsmanagement, Organisation und perspektivisch die Versorgung.</p>
+            <p>Nicht jedes Vorhaben soll seine eigene Datenwelt aufbauen m&uuml;ssen. Unser Ziel ist eine verl&auml;ssliche Grundlage, auf der aus Fragen Erkenntnisse und aus Erkenntnissen nutzbare Anwendungen entstehen.</p>
           </div>
 
-          <div class="v-life__panes">
-            <article class="v-pane" data-v-pane="0">
-              <p class="v-pane__n">01</p>
-              <h3>Idee</h3>
-              <p class="v-pane__c">Eine Frage entsteht.</p>
-              <ul class="v-chips">
-                <li>Forschungsfrage</li><li>klinisches Problem</li><li>Qualit&auml;tsproblem</li><li>KI-Idee</li>
-              </ul>
-            </article>
-
-            <article class="v-pane" data-v-pane="1">
-              <p class="v-pane__n">02</p>
-              <h3>Exploration</h3>
-              <p class="v-pane__c">Ist die Idee mit unseren Daten m&ouml;glich?</p>
-              <div class="v-feas" data-v-feas>
-                <div class="v-feas__nums">
-                  <p><b data-v-feas-n>4.281</b><i>m&ouml;gliche F&auml;lle</i></p>
-                  <p><b data-v-feas-v>17</b><i>Variablen</i></p>
-                  <p><b>2018&ndash;2026</b><i>Zeitraum</i></p>
-                  <p><b data-v-feas-q>hoch</b><i>Datenqualit&auml;t</i></p>
-                </div>
-                <div class="v-feas__ctrl" role="group" aria-label="Demo-Kohorte eingrenzen">
-                  <button type="button" data-v-feas-f="0" aria-pressed="false">Erwachsene</button>
-                  <button type="button" data-v-feas-f="1" aria-pressed="false">station&auml;r</button>
-                  <button type="button" data-v-feas-f="2" aria-pressed="false">mit Bildgebung</button>
-                  <button type="button" data-v-feas-f="3" aria-pressed="false">Verlauf &ge; 12 Monate</button>
-                </div>
-                <p class="v-feas__hint">Synthetische Demodaten</p>
-              </div>
-            </article>
-
-            <article class="v-pane" data-v-pane="2">
-              <p class="v-pane__n">03</p>
-              <h3>Sicherer Zugang</h3>
-              <p class="v-pane__c">Governance erm&ouml;glicht Nutzung &ndash; kontrolliert und nachvollziehbar.</p>
-              <ul class="v-chips">
-                <li>Metadaten</li><li>aggregierte Daten</li><li>synthetische Daten</li><li>genehmigte Echtdaten</li>
-              </ul>
-            </article>
-
-            <article class="v-pane" data-v-pane="3">
-              <p class="v-pane__n">04</p>
-              <h3>Entwickeln</h3>
-              <p class="v-pane__c">Aus einer Frage entsteht etwas Nutzbares.</p>
-              <ul class="v-chips">
-                <li>Analyse</li><li>Datenprodukt</li><li>Modell</li><li>KI-Anwendung</li>
-              </ul>
-            </article>
-
-            <article class="v-pane" data-v-pane="4">
-              <p class="v-pane__n">05</p>
-              <h3>Validieren</h3>
-              <p class="v-pane__c">Je n&auml;her an die Versorgung, desto h&ouml;her die Anforderungen.</p>
-              <ul class="v-chips v-chips--ring">
-                <li>Reproduzierbarkeit</li><li>klinische Plausibilit&auml;t</li><li>Datenschutz</li><li>Robustheit</li>
-              </ul>
-            </article>
-
-            <article class="v-pane" data-v-pane="5">
-              <p class="v-pane__n">06</p>
-              <h3>Freigeben</h3>
-              <p class="v-pane__c">Translation ist Teamarbeit.</p>
-              <ul class="v-chips">
-                <li>Fachbereich</li><li>Forschung</li><li>IT</li><li>Datenschutz</li>
-              </ul>
-            </article>
-
-            <article class="v-pane" data-v-pane="6">
-              <p class="v-pane__n">07</p>
-              <h3>Nutzen</h3>
-              <p class="v-pane__c">Aus Daten entsteht Wirkung.</p>
-              <p class="v-pane__targets"><span>Forschung</span><span>Qualit&auml;t</span><span>Organisation</span><span>Versorgung</span></p>
-            </article>
-
-            <article class="v-pane" data-v-pane="7">
-              <p class="v-pane__n">08</p>
-              <h3>Betreiben</h3>
-              <p class="v-pane__c">Produktiv bedeutet nicht fertig.</p>
-              <ul class="v-chips">
-                <li>Monitoring</li><li>Datenqualit&auml;t</li><li>Drift</li><li>Versionen</li>
-              </ul>
-            </article>
-
-            <article class="v-pane" data-v-pane="8">
-              <p class="v-pane__n">09</p>
-              <h3>Weiterentwickeln</h3>
-              <p class="v-pane__c">Oder bewusst abl&ouml;sen.</p>
-              <p class="v-pane__loop">und zur&uuml;ck zu <b>01 &middot; Idee</b></p>
-            </article>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Der zentrale visuelle Moment: die Rueckkopplung ----------------- -->
-    <section class="v-sec v-back" data-v-back>
-      <div class="v-back__stage">
-        <span class="v-back__seed" aria-hidden="true"></span>
-        <ul class="v-back__terms">
-          <li data-v-back-t="0">neue Daten</li>
-          <li data-v-back-t="1">neue Modelle</li>
-          <li data-v-back-t="2">Annotationen</li>
-          <li data-v-back-t="3">Qualit&auml;t</li>
-          <li data-v-back-t="4">Ergebnisse</li>
-          <li data-v-back-t="5">Erfahrungen</li>
-          <li data-v-back-t="6">Wissen</li>
-        </ul>
-      </div>
-      <h2 class="v-h1 v-h1--tight">Jede Erkenntnis<br><em>wird Teil des &Ouml;kosystems.</em></h2>
-      <p class="v-sub">Was in einem Projekt entsteht, soll nicht in einem Projektordner enden.</p>
-    </section>
-
-    <!-- Sektion 4: sichere Raeume fuer Daten und KI --------------------- -->
-    <section class="v-sec v-rooms" data-v-in>
-      <p class="v-kicker">Innovation braucht Freiraum</p>
-      <h2 class="v-h2">Sicher experimentieren.<br><em>Kontrolliert weiterentwickeln.</em></h2>
-
-      <div class="v-rooms__set" data-v-rooms>
-        <article class="v-room" data-v-room="0">
-          <h3>Erkunden</h3>
-          <p class="v-room__c">Ideen schnell pr&uuml;fen.</p>
-        </article>
-        <article class="v-room" data-v-room="1">
-          <h3>Forschen</h3>
-          <p class="v-room__c">Mit echten Fragestellungen sicher arbeiten.</p>
-        </article>
-        <article class="v-room" data-v-room="2">
-          <h3>KI entwickeln</h3>
-          <p class="v-room__c">Dort, wo Daten und Governance zusammenkommen.</p>
-        </article>
-        <article class="v-room" data-v-room="3">
-          <h3>Produktiv einsetzen</h3>
-          <p class="v-room__c">Nur Gepr&uuml;ftes verl&auml;sst den Entwicklungsraum.</p>
-        </article>
-      </div>
-
-      <p class="v-claim v-claim--big">Nicht jede Idee braucht sofort Echtdaten.<br>Nicht jedes Experiment geh&ouml;rt sofort in die Versorgung.</p>
-    </section>
-
-    <!-- Sektion 5: intelligente Systeme --------------------------------- -->
-    <section class="v-sec v-ai" data-v-in>
-      <p class="v-kicker">Intelligente Systeme</p>
-      <h2 class="v-h2">KI beginnt nicht beim Modell.<br><em>Sie beginnt bei den Daten.</em></h2>
-
-      <ol class="v-ai__steps" data-v-ai>
-        <li data-v-ai-s="0"><b>Verstehen</b><span>klinische Informationen strukturieren</span></li>
-        <li data-v-ai-s="1"><b>Unterst&uuml;tzen</b><span>Entscheidungen vorbereiten</span></li>
-        <li data-v-ai-s="2"><b>Vorhersagen</b><span>Muster erkennen, Entwicklungen modellieren</span></li>
-        <li data-v-ai-s="3"><b>Automatisieren</b><span>wiederkehrende Prozesse unterst&uuml;tzen</span></li>
-        <li data-v-ai-s="4"><b>Lernen</b><span>Ergebnisse zur&uuml;ck in das &Ouml;kosystem f&uuml;hren</span></li>
-      </ol>
-
-      <p class="v-meta">lokale Modelle &middot; multimodale KI &middot; RAG &middot; sichere Agenten</p>
-      <p class="v-note">Zukunftsrichtungen, an denen wir arbeiten.</p>
-    </section>
-
-    <!-- Sektion 6: die richtige Geschwindigkeit ------------------------- -->
-    <section class="v-sec v-speed" data-v-in>
-      <p class="v-kicker">Daten, wenn sie gebraucht werden</p>
-      <h2 class="v-h2">Nicht alles braucht Echtzeit.<br><em>Aber manches wird sie brauchen.</em></h2>
-
-      <ol class="v-speed__line" data-v-speed>
-        <li data-v-sp="0">periodisch</li>
-        <li data-v-sp="1">t&auml;glich</li>
-        <li data-v-sp="2">mehrmals t&auml;glich</li>
-        <li data-v-sp="3">ereignisnah</li>
-        <li data-v-sp="4">nahezu in Echtzeit</li>
-      </ol>
-
-      <p class="v-meta">Batch &middot; Events &middot; APIs &middot; Streams</p>
-    </section>
-
-    <!-- Sektion 7: lokal stark, international anschlussfaehig ----------- -->
-    <section class="v-sec v-net" data-v-in>
-      <p class="v-kicker">Vernetzt</p>
-      <h2 class="v-h2">Eine Plattform am UKD.<br><em>Anschluss an eine gr&ouml;&szlig;ere Datenwelt.</em></h2>
-
-      <div class="v-net__stage" data-v-net>
-        <svg viewBox="0 0 100 40" preserveAspectRatio="none" aria-hidden="true">
-          <g class="v-net__edges">
-            <path data-v-hop="0" d="M12 20 L36 9" pathLength="1"></path>
-            <path data-v-hop="0" d="M12 20 L36 20" pathLength="1"></path>
-            <path data-v-hop="0" d="M12 20 L36 31" pathLength="1"></path>
-            <path data-v-hop="1" d="M36 9 L62 6" pathLength="1"></path>
-            <path data-v-hop="1" d="M36 20 L62 15" pathLength="1"></path>
-            <path data-v-hop="1" d="M36 20 L62 26" pathLength="1"></path>
-            <path data-v-hop="1" d="M36 31 L62 34" pathLength="1"></path>
-            <path data-v-hop="2" d="M62 6 L88 10" pathLength="1"></path>
-            <path data-v-hop="2" d="M62 15 L88 19" pathLength="1"></path>
-            <path data-v-hop="2" d="M62 26 L88 24" pathLength="1"></path>
-            <path data-v-hop="2" d="M62 34 L88 31" pathLength="1"></path>
-          </g>
-          <g class="v-net__dots">
-            <line class="v-net__home" x1="12" y1="20" x2="12" y2="20"></line>
-            <line data-v-hop="0" x1="36" y1="9" x2="36" y2="9"></line>
-            <line data-v-hop="0" x1="36" y1="20" x2="36" y2="20"></line>
-            <line data-v-hop="0" x1="36" y1="31" x2="36" y2="31"></line>
-            <line data-v-hop="1" x1="62" y1="6" x2="62" y2="6"></line>
-            <line data-v-hop="1" x1="62" y1="15" x2="62" y2="15"></line>
-            <line data-v-hop="1" x1="62" y1="26" x2="62" y2="26"></line>
-            <line data-v-hop="1" x1="62" y1="34" x2="62" y2="34"></line>
-            <line data-v-hop="2" x1="88" y1="10" x2="88" y2="10"></line>
-            <line data-v-hop="2" x1="88" y1="19" x2="88" y2="19"></line>
-            <line data-v-hop="2" x1="88" y1="24" x2="88" y2="24"></line>
-            <line data-v-hop="2" x1="88" y1="31" x2="88" y2="31"></line>
-          </g>
-        </svg>
-        <p class="v-net__labels">
-          <span class="v-net__l v-net__l--home">UKD</span>
-          <span class="v-net__l" data-v-hop="0">weitere Standorte</span>
-          <span class="v-net__l" data-v-hop="1">Deutschland</span>
-          <span class="v-net__l" data-v-hop="2">Europa</span>
-        </p>
-      </div>
-
-      <p class="v-meta">FHIR &middot; OMOP &middot; MII &middot; offene Standards</p>
-    </section>
-
-    <!-- Sektion 8: das lernende Oekosystem ------------------------------ -->
-    <section class="v-sec v-loop" data-v-loop>
-      <div class="v-loop__scroll" data-v-loop-scroll>
-        <div class="v-loop__stage">
-          <ul class="v-loop__ring" data-v-ring>
-            <li data-v-ring-i="0">Daten</li>
-            <li data-v-ring-i="1">Frage</li>
-            <li data-v-ring-i="2">Erkenntnis</li>
-            <li data-v-ring-i="3">Produkt</li>
-            <li data-v-ring-i="4">Nutzung</li>
-            <li data-v-ring-i="5">Wirkung</li>
-            <li data-v-ring-i="6">neue Daten</li>
+          <ul class="fields">
+            <li>
+              <h3>Forschung</h3>
+              <p>Fragestellungen pr&uuml;fen, Daten erkunden und neue Erkenntnisse gewinnen.</p>
+            </li>
+            <li>
+              <h3>Qualit&auml;tsmanagement</h3>
+              <p>Behandlungsqualit&auml;t nachvollziehen und Verbesserungsm&ouml;glichkeiten erkennen.</p>
+            </li>
+            <li>
+              <h3>Organisation</h3>
+              <p>Prozesse und Ressourcen verstehen und Entscheidungen besser vorbereiten.</p>
+            </li>
+            <li>
+              <h3>Versorgung</h3>
+              <p>Validierte Anwendungen schrittweise in klinische Arbeitsabl&auml;ufe bringen.</p>
+            </li>
           </ul>
-          <svg class="v-loop__arc" viewBox="0 0 100 100" aria-hidden="true">
-            <circle cx="50" cy="50" r="35" data-v-ring-arc></circle>
-          </svg>
-          <div class="v-loop__end">
-            <h2 class="v-h1 v-h1--tight">Ein lernendes<br><em>Daten&ouml;kosystem.</em></h2>
-            <p class="v-sub">Die st&auml;rkste Plattform ist nicht die, die am meisten speichert. Sondern die, aus deren Nutzung neues Wissen entsteht.</p>
-          </div>
         </div>
       </div>
     </section>
 
-    <!-- Finale: zurueck in die Datenwolke ------------------------------- -->
-    <section class="v-sec v-fin" data-v-fin>
-      <p class="v-fin__read" data-v-in>Jeder Punkt: ein Ereignis &middot; ein Datenpunkt &middot; eine Erkenntnis &middot; ein Datenprodukt &middot; neues Wissen</p>
+    <!-- 2 Das Fundament ------------------------------------------------ -->
+    <section class="s" id="fundament" aria-labelledby="fundament-h">
+      <div class="s__inner">
+        <p class="s__kicker">Das Fundament</p>
+        <h2 class="s__h" id="fundament-h">Eine starke Basis, die mitw&auml;chst.</h2>
 
-      <div class="v-fin__end" data-v-in>
-        <p class="v-fin__word">carus.one</p>
-        <p class="v-fin__claim">Eine starke Basis f&uuml;r Daten, Forschung und intelligente Medizin.</p>
-        <p class="v-fin__steps"><span>Von der Idee.</span><span>&Uuml;ber Daten.</span><span>Bis zur Wirkung.</span></p>
-        <p class="v-fin__build">Wir bauen die Grundlage.</p>
-        <p class="v-fin__soon">Coming soon.</p>
+        <div class="s__cols s__cols--wide" data-v-in>
+          <div class="s__lead">
+            <p>Neue Ideen brauchen nicht jedes Mal eine neue technische Grundlage. carus.one soll Infrastruktur, vertrauensw&uuml;rdige Daten und wiederverwendbare Dienste so verbinden, dass neue Anwendungen auf Bestehendem aufbauen k&ouml;nnen.</p>
+          </div>
+
+          <!-- Einfache Schichtung: was auf was aufbaut. -->
+          <figure class="stack" aria-labelledby="stack-cap">
+            <ol class="stack__rows">
+              <li class="stack__row stack__row--top"><b>Anwendungen</b><span>Auswertungen, Datenservices, KI-Anwendungen</span></li>
+              <li class="stack__row"><b>Daten und Dienste</b><span>vertrauensw&uuml;rdige Daten, wiederverwendbare Bausteine</span></li>
+              <li class="stack__row"><b>Infrastruktur</b><span>Speicher, Rechenleistung, Plattformdienste</span></li>
+            </ol>
+            <figcaption id="stack-cap">Jede Ebene tr&auml;gt die dar&uuml;berliegende: Anwendungen entstehen auf gemeinsamen Daten und Diensten, diese auf einer Infrastruktur, die mitwachsen kann.</figcaption>
+          </figure>
+        </div>
+
+        <ul class="pillars" data-v-in>
+          <li>
+            <h3>Mit den Anforderungen wachsen</h3>
+            <p>Speicher, Rechenleistung und Plattformdienste sollen sich schrittweise erweitern lassen &ndash; f&uuml;r mehr Daten, neue Datenarten und zus&auml;tzliche Anwendungen.</p>
+          </li>
+          <li>
+            <h3>Sicher mit Daten und KI arbeiten</h3>
+            <p>Gesch&uuml;tzte Arbeitsumgebungen sollen Exploration, Forschung und Entwicklung erm&ouml;glichen. Dazu geh&ouml;ren die unterst&uuml;tzte Datenarbeit mit KI und die Entwicklung und Pr&uuml;fung eigener KI-Anwendungen &ndash; mit geregelten Zug&auml;ngen und klarer Verantwortung.</p>
+          </li>
+          <li>
+            <h3>Wissen und Systeme verbinden</h3>
+            <p>Offene Standards und dokumentierte Schnittstellen sollen Daten und Ergebnisse wiederverwendbar machen. Sie schaffen die Grundlage f&uuml;r Zusammenarbeit im Klinikum und perspektivisch mit nationalen und internationalen Partnern &ndash; innerhalb der jeweiligen Zugangsbedingungen.</p>
+          </li>
+        </ul>
+
+        <p class="s__note" data-v-in>Damit soll auch die Daten- und Arbeitsgrundlage f&uuml;r die KI-Klinik entstehen: f&uuml;r die gemeinsame Entwicklung, Pr&uuml;fung und &Uuml;berf&uuml;hrung intelligenter Anwendungen in den klinischen Alltag. Die Datenbereitstellung soll zum Einsatz passen &ndash; von reproduzierbaren Forschungsst&auml;nden bis zu zunehmend ereignisnahen Anwendungen.</p>
       </div>
+    </section>
 
-      <footer class="v-foot">
-        <a href="https://www.uniklinikum-dresden.de/" rel="noopener">Universit&auml;tsklinikum Dresden</a>
-        <span>Entwurf &middot; synthetische Demodaten</span>
-      </footer>
+    <!-- 3 Von der Idee zur Anwendung ----------------------------------- -->
+    <section class="s" id="lebenszyklus" aria-labelledby="life-h">
+      <div class="s__inner">
+        <p class="s__kicker">Der Lebenszyklus</p>
+        <h2 class="s__h" id="life-h">Von der ersten Frage bis zur nutzbaren Anwendung.</h2>
+
+        <div class="s__lead" data-v-in>
+          <p>Ein Vorhaben beginnt oft lange vor dem formalen Projektstart. carus.one soll diesen Weg begleiten: von der ersten Machbarkeitspr&uuml;fung &uuml;ber Forschung und Entwicklung bis zum verantworteten Betrieb und zur Weiterentwicklung.</p>
+          <p class="s__aside">Ein Datenprodukt kann dabei ein dokumentierter Datensatz, ein Datenservice, eine Auswertung oder eine validierte KI-Anwendung sein.</p>
+        </div>
+
+        <div class="flow-wrap" data-v-in>
+          <ol class="flow">
+            <li class="flow__step">
+              <div class="flow__head">
+                <p class="flow__n"><span class="visually-hidden">Phase </span>01</p>
+                <h3>Idee und Machbarkeit</h3>
+              </div>
+              <p class="flow__t">Welche Frage wollen wir beantworten? Welche Daten gibt es daf&uuml;r? Fr&uuml;he Machbarkeitspr&uuml;fungen, Kohortenabfragen und Exploration mit geeigneten Metadaten, aggregierten oder synthetischen Daten helfen, aus einer Idee eine belastbare Fragestellung zu entwickeln.</p>
+            </li>
+            <li class="flow__step">
+              <div class="flow__head">
+                <p class="flow__n"><span class="visually-hidden">Phase </span>02</p>
+                <h3>Erforschen und entwickeln</h3>
+              </div>
+              <p class="flow__t">Auf Grundlage des passenden Nutzungsrahmens werden erforderliche Daten zug&auml;nglich. Forschung, Medizin und Entwicklung arbeiten in gesch&uuml;tzten Umgebungen an Analysen, Modellen und ersten Anwendungen.</p>
+            </li>
+            <li class="flow__step">
+              <div class="flow__head">
+                <p class="flow__n"><span class="visually-hidden">Phase </span>03</p>
+                <h3>Pr&uuml;fen und freigeben</h3>
+              </div>
+              <p class="flow__t">Ergebnisse werden fachlich und technisch gepr&uuml;ft. Je nach Einsatzzweck werden klinische Validierung, Datenschutz, Sicherheit und weitere Anforderungen einbezogen. Zust&auml;ndige Akteure kl&auml;ren Freigabe, Verantwortung und Betrieb.</p>
+            </li>
+            <li class="flow__step">
+              <div class="flow__head">
+                <p class="flow__n"><span class="visually-hidden">Phase </span>04</p>
+                <h3>Anwenden und betreiben</h3>
+              </div>
+              <p class="flow__t">Freigegebene Datenprodukte werden in Forschung, Qualit&auml;tsmanagement, Organisation oder Versorgung genutzt. Datenqualit&auml;t, Funktionsf&auml;higkeit und gegebenenfalls Modellverhalten werden beobachtet; Erfahrungen aus der Nutzung flie&szlig;en zur&uuml;ck.</p>
+            </li>
+            <li class="flow__step">
+              <div class="flow__head">
+                <p class="flow__n"><span class="visually-hidden">Phase </span>05</p>
+                <h3>Weiterentwickeln oder abl&ouml;sen</h3>
+              </div>
+              <p class="flow__t">Neue Erkenntnisse und Anforderungen f&uuml;hren zu neuen Versionen. &Uuml;berholte Produkte werden kontrolliert ersetzt oder au&szlig;er Betrieb genommen. Geeignete Ergebnisse bleiben dokumentiert und k&ouml;nnen weitere Vorhaben unterst&uuml;tzen.</p>
+            </li>
+          </ol>
+
+          <p class="flow__loop" aria-hidden="true"><span>Iteration</span></p>
+        </div>
+
+        <p class="s__note" data-v-in>Datenzugang, Berechtigungen und Schutzma&szlig;nahmen begleiten jede Phase. Fr&uuml;he Exploration bedeutet nicht ungeregelten Zugriff.</p>
+      </div>
+    </section>
+
+    <!-- 4 Lernendes Oekosystem und Abschluss --------------------------- -->
+    <section class="s s--end" id="oekosystem" aria-labelledby="loop-h">
+      <div class="s__inner">
+        <h2 class="s__h" id="loop-h">Aus jeder Anwendung kann neues Wissen entstehen.</h2>
+
+        <div class="s__lead" data-v-in>
+          <p>Ergebnisse sollen nicht in einzelnen Projekten verschwinden. Gepr&uuml;fte Daten, Modelle, Annotationen und Erfahrungen k&ouml;nnen dokumentiert in das &Ouml;kosystem zur&uuml;ckflie&szlig;en &ndash; und dort, wo ihre Nutzung zul&auml;ssig ist, die Grundlage f&uuml;r weitere Vorhaben bilden.</p>
+          <p>So entsteht ein lernendes Daten&ouml;kosystem: Jede Nutzung kann helfen, die gemeinsame Basis weiterzuentwickeln.</p>
+        </div>
+
+        <!-- Ein einzelnes, ruhiges Motiv: Ergebnisse fliessen in das Netz zurueck. -->
+        <svg class="motif" viewBox="0 0 340 130" role="img" aria-label="Wenige Punkte, deren Verbindungen in eine gemeinsame Struktur zur&uuml;ckf&uuml;hren.">
+          <g class="motif__lines">
+            <path d="M22 65 C80 44 120 84 178 65"></path>
+            <path d="M22 65 C78 88 122 40 178 65"></path>
+            <path d="M178 65 C214 46 236 40 262 44"></path>
+            <path d="M178 65 C214 84 236 90 262 86"></path>
+            <path d="M178 65 L252 65"></path>
+            <path d="M262 44 L300 58"></path>
+            <path d="M262 86 L300 72"></path>
+            <path d="M252 65 L300 58"></path>
+            <path d="M252 65 L300 72"></path>
+            <path d="M300 58 L318 40"></path>
+            <path d="M300 72 L322 88"></path>
+          </g>
+          <g class="motif__dots">
+            <line x1="22" y1="65" x2="22" y2="65"></line>
+            <line class="motif__hub" x1="178" y1="65" x2="178" y2="65"></line>
+            <line x1="262" y1="44" x2="262" y2="44"></line>
+            <line x1="262" y1="86" x2="262" y2="86"></line>
+            <line x1="252" y1="65" x2="252" y2="65"></line>
+            <line class="motif__far" x1="300" y1="58" x2="300" y2="58"></line>
+            <line class="motif__far" x1="300" y1="72" x2="300" y2="72"></line>
+            <line class="motif__far" x1="318" y1="40" x2="318" y2="40"></line>
+            <line class="motif__far" x1="322" y1="88" x2="322" y2="88"></line>
+          </g>
+        </svg>
+
+        <div class="close" data-v-in>
+          <p class="close__word">carus.one</p>
+          <p class="close__claim">Eine starke Basis. Von der Idee bis zur Wirkung.</p>
+          <p class="close__status">Im Aufbau.</p>
+          <p class="close__note">Wir entwickeln carus.one schrittweise. Diese Seite beschreibt unser Zielbild; die dargestellten F&auml;higkeiten entstehen in unterschiedlichen Ausbaustufen.</p>
+        </div>
+      </div>
     </section>
   </main>
+
+  <footer class="v-foot">
+    <div class="v-foot__inner">
+      <p class="v-foot__org"><a href="https://www.uniklinikum-dresden.de/" rel="noopener">Universit&auml;tsklinikum Dresden</a></p>
+      <p class="v-foot__note">Entwurfsfassung &middot; alle klinischen Werte in der Einstiegsanimation sind synthetische Beispieldaten.</p>
+    </div>
+  </footer>
 
   <script src="{{ get_url(path='js/carus-one.js') }}" defer></script>
   <script src="{{ get_url(path='js/carus-vision.js') }}" defer></script>

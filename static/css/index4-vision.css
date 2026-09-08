@@ -1,1540 +1,678 @@
-/* carus.one – der Vision-Teil unter dem Teaser (/index4/).
+/* carus.one – der Informationsbereich unter dem Teaser (/index4/).
  *
- * Gleiche visuelle Sprache wie der Teaser: tiefes Schwarz, weisse Schrift,
- * sehr viel negativer Raum, feine Linien und Punkte. Keine Kacheln, keine
- * Icons, keine Bilder, keine Rahmen um Text. Die Bewegung kommt aus dem
- * Scrollen (js/carus-vision.js) und bleibt funktional: sie erklaert.
+ * Ein Gestaltungssystem, keine Sammlung von Effekten: durchgehend
+ * dieselbe Inhaltsbreite, dieselben Abstaende, dieselbe Typografie.
+ * Der Teaser bleibt das visuelle Highlight; hier zaehlt Lesbarkeit.
+ *
+ * Alle Farben sind volldeckend gesetzt, damit die Kontraste messbar
+ * bleiben (Ziel: WCAG 2.2 AA).
  */
 
-.v {
-  position: relative;
-  z-index: 1;
-  /* Der Teaser steht fest im Hintergrund – der Vision-Teil beginnt
-     darunter und schiebt sich darueber. */
-  margin-top: 100vh;
-  padding-bottom: 0;
-  color: var(--c1-fg);
-  font-family: var(--c1-sans);
+:root {
+  --v-max: 1160px;
+  --v-pad: clamp(1.25rem, 4vw, 2.5rem);
+  --v-bg: #05070b;
+  --v-fg: #f4f7fb;
+  --v-body: #ccd6e4;
+  --v-mute: #97a7bc;
+  --v-accent: #8ab4e8;
+  --v-line: rgba(196, 214, 240, 0.16);
+  --v-line-soft: rgba(196, 214, 240, 0.09);
 }
 
-@supports (height: 100svh) {
-  .v {
-    margin-top: 100svh;
-  }
-}
+/* --- Grundlagen ------------------------------------------------------ */
 
-.v-sec {
-  position: relative;
-  width: min(76rem, 100% - 2.6rem);
-  margin: 0 auto;
-  padding: clamp(6rem, 14vh, 11rem) 0;
-}
-
-/* Ein einziger, fest stehender Schleier legt sich ueber die Datenwolke,
-   damit die Schrift ruhig steht. Bewusst nicht als seitenhoher Verlauf:
-   der waere eine 20.000 Pixel hohe Ebene und kostet Bildrate. Am
-   Seitenende wird er duenner, dann kommt die Wolke fuer das Finale
-   zurueck (--v-tail aus js/carus-vision.js). */
-.v::before {
-  content: "";
-  position: fixed;
-  inset: -1px;
-  z-index: -1;
-  pointer-events: none;
-  opacity: calc((1 - var(--c1-hero, 1)) * 0.9 - var(--v-tail, 0) * 0.34);
-  background:
-    radial-gradient(120% 90% at 50% 40%, rgba(0, 0, 3, 0.84) 0%, rgba(0, 0, 3, 0.96) 70%, #000003 100%);
-}
-
-/* --- Typografie ------------------------------------------------------ */
-
-.v-kicker {
-  margin: 0 0 clamp(1.4rem, 4vh, 2.6rem);
-  font-size: clamp(0.6rem, 1.1vw, 0.72rem);
-  font-weight: 500;
-  letter-spacing: 0.3em;
-  text-transform: uppercase;
-  color: rgba(160, 196, 240, 0.72);
-}
-
-.v-kicker--second {
-  margin-top: -1.6rem;
-  color: rgba(226, 236, 252, 0.34);
-}
-
-.v-h1,
-.v-h2 {
-  margin: 0;
-  font-weight: 200;
-  letter-spacing: -0.02em;
-  line-height: 1.06;
-  color: #fff;
-}
-
-.v-h1 {
-  font-size: clamp(2.3rem, 7.4vw, 5.6rem);
-}
-
-.v-h2 {
-  font-size: clamp(1.9rem, 5.4vw, 4rem);
-}
-
-.v-h1 em,
-.v-h2 em {
-  font-style: normal;
-  color: rgba(233, 238, 247, 0.52);
-}
-
-.v-h1--tight {
-  line-height: 1.02;
-}
-
-
-.v-sub {
-  max-width: 40rem;
-  margin: 1.4rem 0 0;
-  font-size: clamp(0.86rem, 1.3vw, 1rem);
-  font-weight: 300;
-  line-height: 1.66;
-  color: var(--c1-mute);
-}
-
-.v-note {
-  margin: 2.4rem 0 0;
-  font-size: clamp(0.74rem, 1.1vw, 0.84rem);
-  font-weight: 400;
-  line-height: 1.6;
-  color: rgba(226, 236, 252, 0.34);
-}
-
-.v-meta {
-  margin: 1.6rem 0 0;
-  font-size: clamp(0.62rem, 1.05vw, 0.76rem);
-  font-weight: 500;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  color: rgba(160, 196, 240, 0.5);
-}
-
-.v-claim {
-  max-width: 44rem;
-  margin: clamp(3rem, 8vh, 5rem) 0 0;
-  font-size: clamp(1.1rem, 2.2vw, 1.7rem);
-  font-weight: 300;
-  line-height: 1.4;
-  color: #fff;
-}
-
-.v-claim--big {
-  font-size: clamp(1.25rem, 3vw, 2.3rem);
-  line-height: 1.28;
-}
-
-/* --- Einblenden beim Hereinscrollen --------------------------------- */
-
-[data-v-in] > *,
-[data-v-in].v-fin__read,
-[data-v-in].v-fin__end {
-  opacity: 0;
-  transform: translateY(18px);
-  transition: opacity 0.9s cubic-bezier(0.22, 0.61, 0.36, 1),
-    transform 0.9s cubic-bezier(0.22, 0.61, 0.36, 1);
-}
-
-[data-v-in].is-in > *,
-[data-v-in].is-in.v-fin__read,
-[data-v-in].is-in.v-fin__end {
-  opacity: 1;
-  transform: none;
-}
-
-[data-v-in].is-in > *:nth-child(2) { transition-delay: 0.08s; }
-[data-v-in].is-in > *:nth-child(3) { transition-delay: 0.16s; }
-[data-v-in].is-in > *:nth-child(4) { transition-delay: 0.24s; }
-[data-v-in].is-in > *:nth-child(5) { transition-delay: 0.32s; }
-[data-v-in].is-in > *:nth-child(6) { transition-delay: 0.4s; }
-[data-v-in].is-in > *:nth-child(7) { transition-delay: 0.48s; }
-
-/* ==================================================================== *
- * Sektion 1: das Oekosystem
- * ==================================================================== */
-
-.v-eco__stage {
-  position: relative;
-  margin-top: clamp(3rem, 9vh, 6rem);
-  /* Flach genug, dass Kern und alle vier Bereiche gemeinsam in ein
-     Fenster passen - das Bild wirkt nur als Ganzes. */
-  aspect-ratio: 100 / 34;
-  max-height: 46vh;
-}
-
-.v-eco__web {
+.visually-hidden {
   position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  overflow: visible;
-}
-
-.v-eco__lines path,
-.v-eco__mesh path {
-  fill: none;
-  stroke: rgba(214, 226, 245, 0.22);
-  stroke-width: 0.9;
-  vector-effect: non-scaling-stroke;
-  transition: stroke 0.6s ease, stroke-width 0.6s ease;
-}
-
-.v-eco__mesh path {
-  stroke: rgba(214, 226, 245, 0.09);
-}
-
-.v-eco__lines path.is-on {
-  stroke: rgba(206, 228, 255, 0.85);
-  stroke-width: 1.4;
-}
-
-.v-eco__core {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  margin: 0;
-  transform: translate(-50%, -50%);
-  font-size: clamp(1.1rem, 2.6vw, 2rem);
-  font-weight: 300;
-  letter-spacing: -0.01em;
-  color: #fff;
-  white-space: nowrap;
-}
-
-.v-eco__core span {
-  position: relative;
-}
-
-.v-eco__core span::after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 13rem;
-  height: 13rem;
-  transform: translate(-50%, -50%);
-  border-radius: 50%;
-  background: radial-gradient(closest-side, rgba(150, 190, 255, 0.16), transparent 70%);
-  pointer-events: none;
-}
-
-.v-eco__area {
-  position: absolute;
-  width: min(20rem, 34%);
-  opacity: 0.34;
-  transition: opacity 0.7s ease, transform 0.7s ease;
-}
-
-.v-eco__area.is-on {
-  opacity: 1;
-  transform: translateY(-4px);
-}
-
-.v-eco__area--a { top: 4%; left: 0; text-align: left; }
-.v-eco__area--b { top: 4%; right: 0; text-align: right; }
-.v-eco__area--c { bottom: 4%; left: 0; text-align: left; }
-.v-eco__area--d { bottom: 4%; right: 0; text-align: right; }
-
-.v-eco__area h3 {
-  margin: 0;
-  font-size: clamp(1.1rem, 2.4vw, 1.8rem);
-  font-weight: 300;
-  letter-spacing: -0.01em;
-  color: #fff;
-}
-
-.v-eco__claim {
-  margin: 0.5rem 0 0;
-  font-size: clamp(0.82rem, 1.3vw, 0.98rem);
-  font-weight: 300;
-  line-height: 1.5;
-  color: rgba(233, 238, 247, 0.78);
-}
-
-
-/* ==================================================================== *
- * Sektion 2: die Basis
- * ==================================================================== */
-
-.v-stack {
-  margin-top: clamp(3.4rem, 10vh, 6.5rem);
-  perspective: 1400px;
-}
-
-.v-layer {
-  position: relative;
-  display: grid;
-  grid-template-columns: minmax(0, 1fr);
-  padding: clamp(1.5rem, 3.2vh, 2.4rem) 0 clamp(2.1rem, 4vh, 3rem);
-  transform: translateX(calc(var(--i) * -0.9rem));
-  opacity: 0.4;
-  transition: opacity 0.7s ease, transform 0.7s ease;
-}
-
-.v-layer.is-on {
-  opacity: 1;
-  transform: translateX(calc(var(--i) * -0.9rem)) translateY(-3px);
-}
-
-/* Die schwebende Ebene: eine feine, im Raum gekippte Platte. Kein
-   Architekturkasten, nur eine Kante aus Licht. */
-.v-layer__plate {
-  position: absolute;
-  bottom: 0.35rem;
-  left: calc(var(--i) * 1.4rem);
-  width: min(46rem, 96%);
-  height: 2rem;
-  transform: rotateX(80deg) rotateZ(-0.6deg);
-  transform-origin: 50% 100%;
-  border: 1px solid rgba(214, 226, 245, 0.14);
-  border-bottom: 0;
-  background: linear-gradient(100deg, rgba(120, 170, 240, 0.12), rgba(120, 170, 240, 0.03) 60%, transparent);
-  pointer-events: none;
-  transition: border-color 0.7s ease, background 0.7s ease, box-shadow 0.7s ease;
-}
-
-.v-layer.is-on .v-layer__plate {
-  border-color: rgba(190, 216, 250, 0.55);
-  background: linear-gradient(100deg, rgba(150, 195, 255, 0.26), rgba(150, 195, 255, 0.06) 60%, transparent);
-  box-shadow: 0 -14px 40px -18px rgba(150, 195, 255, 0.45);
-}
-
-.v-layer__text {
-  position: relative;
-  max-width: 44rem;
-  padding-left: clamp(0rem, 4vw, 3.4rem);
-}
-
-.v-layer__n {
-  margin: 0 0 0.5rem;
-  font-size: 0.62rem;
-  font-weight: 500;
-  letter-spacing: 0.28em;
-  text-transform: uppercase;
-  color: rgba(160, 196, 240, 0.62);
-}
-
-.v-layer h3 {
-  margin: 0;
-  font-size: clamp(1.3rem, 3vw, 2.2rem);
-  font-weight: 250;
-  letter-spacing: -0.015em;
-  color: #fff;
-}
-
-.v-layer__q {
-  margin: 0.7rem 0 0;
-  font-size: clamp(0.9rem, 1.5vw, 1.1rem);
-  font-weight: 300;
-  line-height: 1.58;
-  color: rgba(233, 238, 247, 0.78);
-}
-
-
-
-
-
-
-/* ==================================================================== *
- * Sektion 3: der Lebenszyklus
- * ==================================================================== */
-
-.v-life {
-  padding-bottom: 0;
-}
-
-.v-life__scroll {
-  /* Die Hoehe bestimmt, wie lange die neun Phasen laufen. */
-  position: relative;
-  height: 470vh;
-  margin-top: clamp(3rem, 8vh, 5rem);
-}
-
-.v-life__stage {
-  position: sticky;
-  top: 0;
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
-  padding: clamp(3rem, 9vh, 6rem) 0 clamp(2rem, 6vh, 4rem);
-}
-
-@supports (height: 100svh) {
-  .v-life__stage {
-    height: 100svh;
-  }
-}
-
-/* Die Schiene mit den neun Phasen */
-.v-rail {
-  position: relative;
-  flex: 0 0 auto;
-}
-
-.v-rail__track {
-  position: absolute;
-  top: 0.42rem;
-  left: 0;
-  display: block;
-  width: 100%;
+  width: 1px;
   height: 1px;
-  background: rgba(214, 226, 245, 0.14);
-}
-
-.v-rail__track i {
-  display: block;
-  width: 100%;
-  height: 100%;
-  transform: scaleX(0);
-  transform-origin: 0 50%;
-  background: linear-gradient(90deg, rgba(150, 195, 255, 0.5), rgba(214, 234, 255, 0.95));
-  will-change: transform;
-}
-
-.v-rail__list {
-  display: grid;
-  grid-template-columns: repeat(9, 1fr);
-  margin: 0;
+  margin: -1px;
   padding: 0;
-  list-style: none;
-}
-
-.v-rail__list li {
-  position: relative;
-  padding-top: 1.5rem;
-  text-align: center;
-  opacity: 0.4;
-  transition: opacity 0.5s ease;
-}
-
-.v-rail__list li::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 50%;
-  width: 5px;
-  height: 5px;
-  transform: translate(-50%, 0);
-  border-radius: 50%;
-  background: rgba(226, 236, 252, 0.45);
-  transition: background 0.5s ease, box-shadow 0.5s ease, transform 0.5s ease;
-}
-
-.v-rail__list li.is-on {
-  opacity: 1;
-}
-
-.v-rail__list li.is-on::before {
-  background: #fff;
-  box-shadow: 0 0 14px rgba(180, 214, 255, 0.9);
-  transform: translate(-50%, 0) scale(1.5);
-}
-
-.v-rail__list li.is-past {
-  opacity: 0.7;
-}
-
-.v-rail__list span {
-  display: block;
-  font-size: 0.6rem;
-  font-weight: 500;
-  letter-spacing: 0.16em;
-  color: rgba(160, 196, 240, 0.7);
-}
-
-.v-rail__list b {
-  display: block;
-  margin-top: 0.2rem;
-  font-size: clamp(0.58rem, 0.9vw, 0.72rem);
-  font-weight: 400;
-  letter-spacing: 0.06em;
-  color: rgba(233, 238, 247, 0.72);
-}
-
-/* Die Inhalte der Phasen liegen uebereinander, nur eine ist aktiv. */
-.v-life__panes {
-  position: relative;
-  flex: 1 1 auto;
-  margin-top: clamp(2rem, 6vh, 4rem);
-}
-
-.v-pane {
-  position: absolute;
-  inset: 0;
-  max-width: 54rem;
-  opacity: 0;
-  transform: translateY(22px);
-  transition: opacity 0.55s ease, transform 0.55s ease;
-  pointer-events: none;
   overflow: hidden;
-}
-
-.v-pane.is-on {
-  opacity: 1;
-  transform: none;
-  pointer-events: auto;
-}
-
-.v-pane__n {
-  margin: 0;
-  font-size: 0.66rem;
-  font-weight: 500;
-  letter-spacing: 0.3em;
-  color: rgba(160, 196, 240, 0.7);
-}
-
-.v-pane h3 {
-  margin: 0.6rem 0 0;
-  font-size: clamp(1.7rem, 4.4vw, 3.2rem);
-  font-weight: 200;
-  letter-spacing: -0.02em;
-  line-height: 1.06;
-  color: #fff;
-}
-
-.v-pane__c {
-  margin: 0.9rem 0 0;
-  font-size: clamp(1rem, 2vw, 1.45rem);
-  font-weight: 300;
-  color: rgba(233, 238, 247, 0.8);
-}
-
-
-
-.v-pane__loop {
-  margin: 1.8rem 0 0;
-  font-size: clamp(0.7rem, 1.1vw, 0.82rem);
-  font-weight: 500;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  color: rgba(160, 196, 240, 0.72);
-}
-
-.v-pane__loop b {
-  font-weight: 500;
-  color: #fff;
-}
-
-/* Begriffe als freie Textpunkte, nicht als Kacheln */
-.v-chips {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem 1.5rem;
-  margin: 1.4rem 0 0;
-  padding: 0;
-  list-style: none;
-}
-
-.v-chips li {
-  position: relative;
-  padding-left: 0.8rem;
-  font-size: clamp(0.7rem, 1.1vw, 0.84rem);
-  font-weight: 400;
-  letter-spacing: 0.04em;
-  color: rgba(226, 236, 252, 0.62);
-  opacity: 0;
-  transform: translateY(6px);
-  transition: opacity 0.5s ease, transform 0.5s ease;
-}
-
-.v-pane.is-on .v-chips li {
-  opacity: 1;
-  transform: none;
-}
-
-.v-chips li::before {
-  content: "";
-  position: absolute;
-  top: 0.55em;
-  left: 0;
-  width: 3px;
-  height: 3px;
-  border-radius: 50%;
-  background: rgba(170, 205, 250, 0.75);
-}
-
-.v-chips--ring li {
-  color: rgba(226, 236, 252, 0.75);
-}
-
-.v-pane__targets {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.8rem 2.2rem;
-  margin: 1.6rem 0 0;
-  font-size: clamp(0.9rem, 1.7vw, 1.2rem);
-  font-weight: 300;
-  color: #fff;
-}
-
-.v-pane__targets span {
-  position: relative;
-  padding-left: 1.4rem;
-}
-
-.v-pane__targets span::before {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 0;
-  width: 0.9rem;
-  height: 1px;
-  background: rgba(190, 216, 250, 0.6);
-}
-
-/* Kleiner Datenraum in Phase 02 */
-.v-feas {
-  margin: 1.6rem 0 0;
-  padding: 1.2rem 0 0;
-  border-top: 1px solid rgba(214, 226, 245, 0.14);
-}
-
-.v-feas__nums {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1.2rem 2.6rem;
-  margin: 0;
-}
-
-.v-feas__nums p {
-  margin: 0;
-}
-
-.v-feas__nums b {
-  display: block;
-  font-size: clamp(1.2rem, 2.6vw, 1.9rem);
-  font-weight: 250;
-  letter-spacing: -0.01em;
-  color: #fff;
-  font-variant-numeric: tabular-nums;
-}
-
-.v-feas__nums i {
-  display: block;
-  margin-top: 0.2rem;
-  font-size: 0.62rem;
-  font-style: normal;
-  font-weight: 500;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
-  color: rgba(160, 196, 240, 0.56);
-}
-
-.v-feas__ctrl {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.6rem;
-  margin-top: 1.3rem;
-}
-
-.v-feas__ctrl button {
-  padding: 0.42rem 0.9rem;
-  border: 1px solid rgba(214, 226, 245, 0.22);
-  border-radius: 999px;
-  background: transparent;
-  color: rgba(226, 236, 252, 0.7);
-  font: inherit;
-  font-size: clamp(0.66rem, 1vw, 0.78rem);
-  letter-spacing: 0.06em;
-  cursor: pointer;
-  transition: border-color 0.3s ease, color 0.3s ease, background 0.3s ease;
-}
-
-.v-feas__ctrl button:hover {
-  border-color: rgba(214, 226, 245, 0.45);
-  color: #fff;
-}
-
-.v-feas__ctrl button[aria-pressed="true"] {
-  border-color: rgba(190, 216, 250, 0.7);
-  background: rgba(150, 195, 255, 0.14);
-  color: #fff;
-}
-
-.v-feas__hint {
-  margin: 0.9rem 0 0;
-  font-size: 0.62rem;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: rgba(226, 236, 252, 0.28);
-}
-
-/* ==================================================================== *
- * Der zentrale Moment: die Rueckkopplung
- * ==================================================================== */
-
-.v-back {
-  padding-top: clamp(1.5rem, 3vh, 3rem);
-  text-align: center;
-}
-
-.v-back__stage {
-  position: relative;
-  height: clamp(13rem, 28vh, 20rem);
-  margin-bottom: clamp(1.6rem, 4vh, 3rem);
-}
-
-.v-back__seed {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 6px;
-  height: 6px;
-  transform: translate(-50%, -50%);
-  border-radius: 50%;
-  background: #fff;
-  box-shadow: 0 0 24px 6px rgba(170, 210, 255, 0.5);
-}
-
-.v-back__terms {
-  position: absolute;
-  inset: 0;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-.v-back__terms li {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  font-size: clamp(0.7rem, 1.2vw, 0.9rem);
-  font-weight: 400;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: rgba(226, 236, 252, 0.82);
+  clip-path: inset(50%);
   white-space: nowrap;
-  opacity: 0;
-  will-change: transform, opacity;
+  border: 0;
 }
 
-.v-back .v-h1 {
-  text-align: center;
-}
-
-.v-back .v-sub {
-  margin-left: auto;
-  margin-right: auto;
-  text-align: center;
-}
-
-/* ==================================================================== *
- * Sektion 4: sichere Raeume
- * ==================================================================== */
-
-.v-rooms__set {
-  position: relative;
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: clamp(1.2rem, 3vw, 2.6rem);
-  margin-top: clamp(3.4rem, 9vh, 6rem);
-}
-
-/* Eine durchgehende feine Linie verbindet die vier Raeume. */
-.v-rooms__set::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 6%;
-  width: 88%;
-  height: 1px;
-  background: linear-gradient(90deg, rgba(214, 226, 245, 0.08), rgba(214, 226, 245, 0.34), rgba(214, 226, 245, 0.08));
-}
-
-.v-room {
-  position: relative;
-  padding-top: 2.4rem;
-  opacity: 0.42;
-  transition: opacity 0.7s ease;
-}
-
-.v-room.is-on {
-  opacity: 1;
-}
-
-.v-room::before {
-  content: "";
-  position: absolute;
-  top: -4px;
-  left: 0;
-  width: 9px;
-  height: 9px;
-  border: 1px solid rgba(214, 226, 245, 0.5);
-  border-radius: 50%;
-  background: #000005;
-  transition: border-color 0.6s ease, box-shadow 0.6s ease;
-}
-
-/* Der Schutzgrad steigt von links nach rechts: mehr Ringe um den Punkt. */
-.v-room::after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 4.5px;
-  width: calc(1.6rem + var(--r, 0) * 0.9rem);
-  height: calc(1.6rem + var(--r, 0) * 0.9rem);
-  transform: translate(-50%, -50%);
-  margin-top: -2.1rem;
-  border: 1px solid rgba(214, 226, 245, 0.12);
-  border-radius: 50%;
-  pointer-events: none;
-  transition: border-color 0.6s ease;
-}
-
-.v-room:nth-child(1) { --r: 0; }
-.v-room:nth-child(2) { --r: 1; }
-.v-room:nth-child(3) { --r: 2; }
-.v-room:nth-child(4) { --r: 3; }
-
-.v-room.is-on::before {
-  border-color: rgba(206, 228, 255, 0.95);
-  box-shadow: 0 0 16px rgba(170, 210, 255, 0.75);
-}
-
-.v-room.is-on::after {
-  border-color: rgba(190, 216, 250, 0.4);
-}
-
-.v-room h3 {
-  margin: 0;
-  font-size: clamp(1.05rem, 2.1vw, 1.6rem);
-  font-weight: 300;
-  letter-spacing: -0.01em;
-  color: #fff;
-}
-
-
-.v-room__c {
-  margin: 0.9rem 0 0;
-  font-size: clamp(0.8rem, 1.25vw, 0.95rem);
-  font-weight: 300;
-  line-height: 1.55;
-  color: rgba(233, 238, 247, 0.76);
-}
-
-/* ==================================================================== *
- * Sektion 5: intelligente Systeme
- * ==================================================================== */
-
-.v-ai__steps {
-  margin: clamp(3rem, 9vh, 6rem) 0 0;
-  padding: 0;
-  list-style: none;
-  counter-reset: none;
-}
-
-.v-ai__steps li {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr);
-  gap: 0.4rem;
-  padding: clamp(1.4rem, 3.6vh, 2.6rem) 0;
-  border-top: 1px solid rgba(214, 226, 245, 0.1);
-  opacity: 0.34;
-  transition: opacity 0.7s ease;
-}
-
-.v-ai__steps li.is-on {
-  opacity: 1;
-}
-
-.v-ai__steps b {
-  font-size: clamp(2rem, 6.4vw, 4.6rem);
-  font-weight: 200;
-  letter-spacing: -0.025em;
-  line-height: 1;
-  color: #fff;
-}
-
-.v-ai__steps span {
-  max-width: 34rem;
-  font-size: clamp(0.8rem, 1.25vw, 0.95rem);
-  font-weight: 300;
-  line-height: 1.6;
-  color: var(--c1-mute);
-}
-
-/* ==================================================================== *
- * Sektion 6: Geschwindigkeit
- * ==================================================================== */
-
-.v-speed__line {
-  position: relative;
-  display: grid;
-  grid-template-columns: repeat(5, minmax(0, 1fr));
-  gap: 0.6rem;
-  margin: clamp(3.4rem, 9vh, 6rem) 0 clamp(2.6rem, 7vh, 4rem);
-  padding: 2.6rem 0 0;
-  list-style: none;
-}
-
-.v-speed__line::before {
-  content: "";
-  position: absolute;
-  top: 1.1rem;
-  left: 0;
-  width: 100%;
-  height: 1px;
-  background: rgba(214, 226, 245, 0.14);
-}
-
-/* Ein Lichtimpuls laeuft ueber die Linie. */
-.v-speed__line::after {
-  content: "";
-  position: absolute;
-  top: 0.95rem;
-  left: 0;
-  width: 4rem;
-  height: 3px;
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--v-accent);
+  outline-offset: 3px;
   border-radius: 2px;
-  background: linear-gradient(90deg, transparent, rgba(214, 234, 255, 0.95), transparent);
-  animation: v-pulse 5.2s linear infinite;
-  animation-play-state: paused;
 }
 
-.v-speed.is-in .v-speed__line::after {
-  animation-play-state: running;
-}
+/* --- Sprunglink ------------------------------------------------------ */
 
-@keyframes v-pulse {
-  from { transform: translateX(-4rem); }
-  to { transform: translateX(calc(100% + 4rem)); }
-}
-
-.v-speed__line li {
-  position: relative;
-  font-size: clamp(0.68rem, 1.15vw, 0.86rem);
-  font-weight: 400;
-  letter-spacing: 0.1em;
-  color: rgba(226, 236, 252, 0.72);
-}
-
-.v-speed__line li::before {
-  content: "";
+.v-skip {
   position: absolute;
-  top: -1.65rem;
-  left: 0;
-  width: 5px;
-  height: 5px;
-  border-radius: 50%;
-  background: rgba(226, 236, 252, 0.5);
-}
-
-.v-speed__line li:last-child {
-  color: #fff;
-}
-
-.v-speed__line li:last-child::before {
-  background: #fff;
-  box-shadow: 0 0 12px rgba(180, 214, 255, 0.85);
-}
-
-/* ==================================================================== *
- * Sektion 7: vernetzt
- * ==================================================================== */
-
-.v-net__stage {
-  position: relative;
-  margin: clamp(3rem, 9vh, 6rem) 0 clamp(2rem, 6vh, 3.6rem);
-  aspect-ratio: 100 / 34;
-  max-height: 46vh;
-}
-
-.v-net__stage svg {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-}
-
-.v-net__edges path {
-  /* pathLength="1" im Markup: die Strichlaenge 1 ist damit der ganze Weg,
-     und stroke-dashoffset zeichnet ihn beim Scrollen aus. */
-  fill: none;
-  stroke: rgba(190, 216, 250, 0.5);
-  /* Strichstaerke in Nutzerkoordinaten: non-scaling-stroke wuerde die
-     Strichmuster auf Pixel beziehen und den Weg gestrichelt zeichnen. */
-  stroke-width: 0.09;
-  stroke-dasharray: 1;
-  stroke-dashoffset: 1;
-  transition: stroke-dashoffset 1.1s cubic-bezier(0.3, 0.7, 0.3, 1);
-}
-
-.v-net__edges path.is-on {
-  stroke-dashoffset: 0;
-}
-
-.v-net__dots line {
-  /* Der Kasten wird verzerrt gestreckt, damit die Wege breit laufen -
-     die Punkte bekommen deshalb keinen Radius, sondern eine feste
-     Groesse ueber die Strichstaerke eines Punktes. */
-  fill: none;
-  stroke: rgba(226, 236, 252, 0.85);
-  stroke-width: 5;
-  stroke-linecap: round;
-  vector-effect: non-scaling-stroke;
-  opacity: 0;
-  transition: opacity 0.7s ease;
-}
-
-.v-net__dots line.is-on,
-.v-net__home {
-  opacity: 1;
-}
-
-.v-net__home {
-  stroke: #fff !important;
-  stroke-width: 9 !important;
-  filter: drop-shadow(0 0 7px rgba(170, 210, 255, 0.9));
-}
-
-.v-net__labels {
-  position: absolute;
-  inset: 0;
-  margin: 0;
-}
-
-.v-net__l {
-  position: absolute;
-  font-size: clamp(0.6rem, 1vw, 0.74rem);
-  font-weight: 500;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  color: rgba(226, 236, 252, 0.62);
-  white-space: nowrap;
-  opacity: 0;
-  transition: opacity 0.7s ease;
-}
-
-.v-net__l.is-on,
-.v-net__l--home {
-  opacity: 1;
-}
-
-/* Die Beschriftungen stehen als Stufen unter den Knotengruppen. */
-.v-net__l {
-  bottom: -1.9rem;
-  transform: translateX(-50%);
-}
-
-.v-net__l--home {
-  left: 12%;
-  font-size: clamp(0.7rem, 1.2vw, 0.9rem);
-  color: #fff;
-}
-
-.v-net__l:nth-child(2) { left: 36%; }
-.v-net__l:nth-child(3) { left: 62%; }
-.v-net__l:nth-child(4) { left: 88%; }
-
-/* ==================================================================== *
- * Sektion 8: das lernende Oekosystem
- * ==================================================================== */
-
-.v-loop {
-  padding: 0;
-}
-
-.v-loop__scroll {
-  position: relative;
-  height: 330vh;
-}
-
-.v-loop__stage {
-  position: sticky;
   top: 0;
-  display: grid;
-  place-items: center;
-  height: 100vh;
-  overflow: hidden;
-}
-
-@supports (height: 100svh) {
-  .v-loop__stage {
-    height: 100svh;
-  }
-}
-
-.v-loop__ring {
-  position: absolute;
-  top: 50%;
   left: 50%;
-  width: 0;
-  height: 0;
+  z-index: 40;
+  transform: translate(-50%, -120%);
+  padding: 0.75rem 1.25rem;
+  background-color: #0b1018;
+  border: 1px solid var(--v-accent);
+  border-top: 0;
+  border-radius: 0 0 4px 4px;
+  color: var(--v-fg);
+  font-size: 0.95rem;
+  text-decoration: none;
+  transition: transform 0.15s ease;
+}
+
+.v-skip:focus {
+  transform: translate(-50%, 0);
+}
+
+/* --- Navigation ------------------------------------------------------ */
+
+.v-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 30;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  width: 100%;
+  padding: 0 var(--v-pad);
+  /* Im schwarzen Auftakt tritt die Leiste zurueck. Der schwache Verlauf
+     sichert den Kontrast auch dort, wo helle Partikel liegen. */
+  background-color: transparent;
+  background-image: linear-gradient(to bottom, rgba(5, 7, 11, 0.88), rgba(5, 7, 11, 0.45) 60%, rgba(5, 7, 11, 0));
+  border-bottom: 1px solid transparent;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.v-nav.is-stuck {
+  background-color: rgba(5, 7, 11, 0.94);
+  background-image: none;
+  border-bottom-color: var(--v-line-soft);
+}
+
+.v-nav__brand {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  padding-right: 0.5rem;
+  color: var(--v-fg);
+  font-size: 1rem;
+  font-weight: 400;
+  letter-spacing: -0.01em;
+  text-decoration: none;
+}
+
+.v-nav nav ul {
+  display: flex;
+  gap: clamp(0.15rem, 1.4vw, 0.75rem);
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
-.v-loop__ring li {
-  position: absolute;
-  top: 0;
-  left: 0;
-  font-size: clamp(0.95rem, 2.2vw, 1.6rem);
-  font-weight: 300;
-  letter-spacing: -0.005em;
-  color: #fff;
-  white-space: nowrap;
-  opacity: 0;
-  will-change: transform, opacity;
-}
-
-.v-loop__arc {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: min(74vh, 92vw);
-  height: min(74vh, 92vw);
-  transform: translate(-50%, -50%);
-  pointer-events: none;
-}
-
-.v-loop__arc circle {
-  fill: none;
-  stroke: rgba(190, 216, 250, 0.4);
-  stroke-width: 0.35;
-  stroke-dasharray: 220;
-  stroke-dashoffset: 220;
-  transform: rotate(-90deg);
-  transform-origin: 50% 50%;
-}
-
-.v-loop__end {
-  position: relative;
-  width: min(46rem, 88vw);
-  text-align: center;
-  opacity: 0;
-  transform: translateY(16px);
-  transition: opacity 0.8s ease, transform 0.8s ease;
-}
-
-.v-loop__end.is-on {
-  opacity: 1;
-  transform: none;
-}
-
-.v-loop__end .v-sub {
-  margin-left: auto;
-  margin-right: auto;
-}
-
-/* ==================================================================== *
- * Finale
- * ==================================================================== */
-
-.v-fin {
-  padding-top: clamp(6rem, 16vh, 12rem);
-  text-align: center;
-}
-
-.v-fin__read {
-  max-width: 52rem;
-  margin: 0 auto clamp(6rem, 18vh, 13rem);
-  font-size: clamp(0.7rem, 1.15vw, 0.86rem);
-  font-weight: 400;
-  letter-spacing: 0.1em;
-  line-height: 2.1;
-  color: rgba(226, 236, 252, 0.44);
-}
-
-.v-fin__word {
-  margin: 0;
-  font-size: clamp(2.6rem, 9vw, 7rem);
-  font-weight: 200;
-  letter-spacing: -0.035em;
-  color: #fff;
-}
-
-.v-fin__claim {
-  max-width: 34rem;
-  margin: clamp(1.6rem, 4vh, 2.6rem) auto 0;
-  font-size: clamp(1rem, 1.9vw, 1.35rem);
-  font-weight: 300;
-  line-height: 1.5;
-  color: rgba(233, 238, 247, 0.82);
-}
-
-.v-fin__steps {
-  display: flex;
-  flex-direction: column;
-  gap: 0.35rem;
-  margin: clamp(2.4rem, 7vh, 4.4rem) 0 0;
-  font-size: clamp(1.05rem, 2.4vw, 1.8rem);
-  font-weight: 250;
-  color: #fff;
-}
-
-.v-fin__build {
-  margin: clamp(2.4rem, 7vh, 4.4rem) 0 0;
-  font-size: clamp(1.1rem, 2.6vw, 2rem);
-  font-weight: 300;
-  color: rgba(233, 238, 247, 0.6);
-}
-
-.v-fin__soon {
-  margin: clamp(2rem, 6vh, 3.4rem) 0 0;
-  font-size: 0.66rem;
-  font-weight: 500;
-  letter-spacing: 0.32em;
-  text-transform: uppercase;
-  color: rgba(226, 236, 252, 0.34);
-}
-
-.v-foot {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 0.5rem 1.6rem;
-  margin-top: clamp(7rem, 20vh, 14rem);
-  padding-bottom: clamp(3rem, 8vh, 5rem);
-  font-size: 0.6rem;
-  font-weight: 500;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  color: rgba(226, 236, 252, 0.3);
-}
-
-.v-foot a {
-  color: inherit;
+.v-nav nav a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 0 clamp(0.4rem, 1.2vw, 0.85rem);
+  color: #b3c0d2;
+  font-size: clamp(0.82rem, 1.1vw, 0.94rem);
   text-decoration: none;
-  border-bottom: 1px solid rgba(226, 236, 252, 0.2);
+  transition: color 0.2s ease;
 }
 
-.v-foot a:hover {
-  color: rgba(226, 236, 252, 0.7);
+.v-nav nav a:hover,
+.v-nav nav a:focus-visible {
+  color: var(--v-fg);
 }
 
-/* ==================================================================== *
- * Schmale Darstellung
- * ==================================================================== */
-
-@media (max-width: 900px) {
-  .v-eco__stage {
-    aspect-ratio: auto;
-    max-height: none;
-    display: grid;
-    gap: clamp(2rem, 6vh, 3.4rem);
-    padding-left: 1.6rem;
+/* Schmale Geraete: die Leiste muss vollstaendig hineinpassen. */
+@media (max-width: 30rem) {
+  .v-nav {
+    padding: 0 0.75rem;
   }
 
-  .v-eco__web {
-    display: none;
+  .v-nav__brand {
+    font-size: 0.88rem;
+    padding-right: 0.25rem;
   }
 
-  /* Statt der Sternstruktur eine durchgehende Linie durch die Bereiche. */
-  .v-eco__stage::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 3px;
-    width: 1px;
-    background: linear-gradient(180deg, transparent, rgba(214, 226, 245, 0.3) 12%, rgba(214, 226, 245, 0.3) 88%, transparent);
-  }
-
-  .v-eco__core {
-    position: relative;
-    top: auto;
-    left: auto;
-    transform: none;
-    text-align: left;
-  }
-
-  .v-eco__area {
-    position: relative;
-    top: auto;
-    right: auto;
-    bottom: auto;
-    left: auto;
-    width: 100%;
-    text-align: left;
-  }
-
-  .v-eco__area--b,
-  .v-eco__area--d {
-    text-align: left;
-  }
-
-  .v-eco__area::before {
-    content: "";
-    position: absolute;
-    top: 0.7rem;
-    left: -1.6rem;
-    width: 1rem;
-    height: 1px;
-    background: rgba(190, 216, 250, 0.5);
-  }
-
-  .v-layer {
-    transform: none;
-  }
-
-  .v-layer.is-on {
-    transform: translateY(-2px);
-  }
-
-  .v-layer__plate {
-    left: 0;
-    width: 100%;
-    height: 1.6rem;
-    opacity: 0.8;
-  }
-
-  .v-layer__text {
-    padding-left: 0;
-  }
-
-  /* Der Lebenszyklus laeuft senkrecht: schmale Schiene links, Inhalt
-     rechts daneben. Die Nummer steht in der Tafel selbst. */
-  .v-life__stage {
-    display: grid;
-    grid-template-columns: 1.1rem minmax(0, 1fr);
-    gap: 1.2rem;
-    padding-top: 1.6rem;
-  }
-
-  .v-rail {
-    position: relative;
-    height: 100%;
-  }
-
-  .v-rail__track {
-    top: 0;
-    left: 2px;
-    width: 1px;
-    height: 100%;
-  }
-
-  .v-rail__track i {
-    transform: scaleY(0);
-    transform-origin: 50% 0;
-    background: linear-gradient(180deg, rgba(150, 195, 255, 0.5), rgba(214, 234, 255, 0.95));
-  }
-
-  .v-rail__list {
-    display: grid;
-    grid-template-columns: none;
-    grid-auto-rows: 1fr;
-    height: 100%;
+  .v-nav nav ul {
     gap: 0;
   }
 
-  .v-rail__list li {
-    padding: 0;
-    text-align: left;
+  .v-nav nav a {
+    padding: 0 0.3rem;
+    font-size: 0.78rem;
+  }
+}
+
+/* --- Abschnitte ------------------------------------------------------ */
+
+main {
+  /* Deutsche Zusammensetzungen sind lang: bei starker Textvergroesserung
+     muessen sie umbrechen duerfen, statt aus der Spalte zu laufen. */
+  overflow-wrap: break-word;
+  hyphens: auto;
+  position: relative;
+  z-index: 1;
+  display: block;
+  background-color: var(--v-bg);
+  color: var(--v-body);
+  font-family: var(--c1-sans);
+  /* Weicher Anschluss an die dunkle Szene darueber. */
+  box-shadow: 0 -6rem 6rem -3rem rgba(5, 7, 11, 0.9);
+}
+
+.s {
+  padding: clamp(3.75rem, 7.5vw, 6.5rem) 0;
+  border-top: 1px solid var(--v-line-soft);
+  scroll-margin-top: 4.5rem;
+}
+
+.s:first-child {
+  border-top: 0;
+}
+
+.s__inner {
+  width: min(var(--v-max), 100% - 2 * var(--v-pad));
+  margin: 0 auto;
+}
+
+.s__kicker {
+  margin: 0 0 0.9rem;
+  color: var(--v-accent);
+  font-size: 0.8125rem;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.s__h {
+  max-width: 24em;
+  margin: 0 0 clamp(1.75rem, 3.5vw, 2.75rem);
+  color: var(--v-fg);
+  font-size: clamp(1.7rem, 3.3vw, 2.6rem);
+  font-weight: 300;
+  letter-spacing: -0.015em;
+  line-height: 1.14;
+  text-wrap: balance;
+}
+
+.s__lead p {
+  max-width: 34em;
+  margin: 0 0 1.1rem;
+  font-size: clamp(1rem, 0.35vw + 0.93rem, 1.125rem);
+  line-height: 1.62;
+}
+
+.s__lead p:last-child {
+  margin-bottom: 0;
+}
+
+.s__aside {
+  color: var(--v-mute);
+  font-size: clamp(0.94rem, 0.25vw + 0.88rem, 1rem) !important;
+}
+
+.s__note {
+  max-width: 44em;
+  margin: clamp(2rem, 4vw, 3rem) 0 0;
+  padding-top: 1.4rem;
+  border-top: 1px solid var(--v-line-soft);
+  color: var(--v-mute);
+  font-size: clamp(0.94rem, 0.25vw + 0.88rem, 1.02rem);
+  line-height: 1.6;
+}
+
+.s__cols {
+  display: grid;
+  gap: clamp(2.25rem, 4.5vw, 3.5rem);
+}
+
+@media (min-width: 62rem) {
+  .s__cols {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    align-items: start;
   }
 
-  .v-rail__list li::before {
-    top: 50%;
-    left: 2px;
-    transform: translate(-50%, -50%);
+  .s__cols--wide {
+    grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+  }
+}
+
+/* --- Die vier Anwendungsbereiche ------------------------------------- */
+
+.fields {
+  display: grid;
+  gap: 0;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border-top: 1px solid var(--v-line);
+}
+
+.fields li {
+  padding: 1.25rem 0;
+  border-bottom: 1px solid var(--v-line-soft);
+}
+
+.fields h3 {
+  margin: 0 0 0.35rem;
+  color: var(--v-fg);
+  font-size: 1.0625rem;
+  font-weight: 500;
+  letter-spacing: 0.005em;
+}
+
+.fields p {
+  max-width: 30em;
+  margin: 0;
+  font-size: clamp(0.95rem, 0.25vw + 0.89rem, 1.02rem);
+  line-height: 1.55;
+}
+
+@media (min-width: 34rem) {
+  .fields {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: clamp(1.5rem, 3vw, 2.5rem);
+  }
+}
+
+/* --- Die Schichtung des Fundaments ---------------------------------- */
+
+.stack {
+  margin: 0;
+}
+
+.stack__rows {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.stack__row {
+  position: relative;
+  padding: 1rem 1.15rem;
+  border: 1px solid var(--v-line);
+  background-color: rgba(138, 180, 232, 0.04);
+}
+
+.stack__row + .stack__row {
+  margin-top: 0.85rem;
+}
+
+/* Pfeil nach oben: was auf was aufbaut. */
+.stack__row + .stack__row::after {
+  content: "";
+  position: absolute;
+  top: -0.85rem;
+  left: 1.6rem;
+  width: 1px;
+  height: 0.85rem;
+  background-color: var(--v-line);
+}
+
+.stack__row--top {
+  border-color: rgba(138, 180, 232, 0.42);
+  background-color: rgba(138, 180, 232, 0.09);
+}
+
+.stack__row b {
+  display: block;
+  color: var(--v-fg);
+  font-size: 1.0625rem;
+  font-weight: 500;
+}
+
+.stack__row span {
+  display: block;
+  margin-top: 0.2rem;
+  color: var(--v-mute);
+  font-size: 0.94rem;
+  line-height: 1.5;
+}
+
+.stack figcaption {
+  margin-top: 1rem;
+  color: var(--v-mute);
+  font-size: 0.94rem;
+  line-height: 1.55;
+}
+
+/* --- Die drei Schwerpunkte ------------------------------------------ */
+
+.pillars {
+  display: grid;
+  gap: clamp(1.75rem, 3.5vw, 2.75rem);
+  margin: clamp(2.5rem, 5vw, 4rem) 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.pillars li {
+  padding-top: 1.15rem;
+  border-top: 1px solid var(--v-line);
+}
+
+.pillars h3 {
+  margin: 0 0 0.5rem;
+  color: var(--v-fg);
+  font-size: clamp(1.05rem, 1.4vw, 1.2rem);
+  font-weight: 500;
+  line-height: 1.3;
+}
+
+.pillars p {
+  max-width: 34em;
+  margin: 0;
+  font-size: clamp(0.95rem, 0.25vw + 0.89rem, 1.02rem);
+  line-height: 1.6;
+}
+
+@media (min-width: 62rem) {
+  .pillars {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+/* --- Der Lebenszyklus ----------------------------------------------- */
+
+.flow-wrap {
+  position: relative;
+  margin: clamp(2.25rem, 4.5vw, 3.5rem) 0 0;
+}
+
+.flow {
+  position: relative;
+  margin: 0;
+  padding: 0 0 0 2rem;
+  list-style: none;
+}
+
+/* Die durchgehende Linie greift die Verbindungen des Teasers auf. */
+.flow::before {
+  content: "";
+  position: absolute;
+  top: 0.55rem;
+  bottom: 0.55rem;
+  left: 0.4375rem;
+  width: 1px;
+  background: linear-gradient(180deg, rgba(138, 180, 232, 0.55), rgba(138, 180, 232, 0.26));
+}
+
+.flow__step {
+  position: relative;
+  padding-bottom: clamp(1.9rem, 3.6vw, 2.9rem);
+}
+
+.flow__step:last-child {
+  padding-bottom: 0;
+}
+
+/* Der Punkt sitzt auf der Linie, auf Hoehe der Phasennummer. */
+.flow__step::before {
+  content: "";
+  position: absolute;
+  top: 0.4rem;
+  left: -1.78rem;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background-color: #cfe0f7;
+  box-shadow: 0 0 0 3px var(--v-bg), 0 0 12px rgba(138, 180, 232, 0.7);
+}
+
+.flow__n {
+  margin: 0 0 0.3rem;
+  color: var(--v-accent);
+  font-size: 0.8125rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+}
+
+.flow__step h3 {
+  margin: 0 0 0.5rem;
+  color: var(--v-fg);
+  font-size: clamp(1.1rem, 1.7vw, 1.35rem);
+  font-weight: 500;
+  line-height: 1.28;
+}
+
+.flow__t {
+  max-width: 36em;
+  margin: 0;
+  font-size: clamp(0.95rem, 0.3vw + 0.88rem, 1.06rem);
+  line-height: 1.62;
+}
+
+@media (min-width: 62rem) {
+  .flow {
+    padding-left: 4.5rem;
   }
 
-  .v-rail__list li.is-on::before {
-    transform: translate(-50%, -50%) scale(1.5);
+  .flow::before {
+    left: 2.4375rem;
   }
 
-  .v-rail__list span,
-  .v-rail__list b {
-    display: none;
+  .flow__step {
+    display: grid;
+    grid-template-columns: minmax(0, 14rem) minmax(0, 1fr);
+    gap: 0 clamp(1.5rem, 3vw, 2.5rem);
+    align-items: start;
   }
 
-  .v-life__panes {
-    margin-top: 0;
+  .flow__step::before {
+    left: -2.28rem;
   }
 
-  .v-rooms__set {
-    grid-template-columns: minmax(0, 1fr);
-    gap: 2.4rem;
+  .flow__step h3 {
+    margin-bottom: 0;
   }
+}
 
-  .v-rooms__set::before {
-    top: 0;
-    bottom: 0;
-    left: 4px;
-    width: 1px;
-    height: auto;
-    background: linear-gradient(180deg, rgba(214, 226, 245, 0.08), rgba(214, 226, 245, 0.34), rgba(214, 226, 245, 0.08));
-  }
+/* Die Rueckfuehrung: eine Klammer von der letzten zur ersten Phase macht
+   die Iteration sichtbar - ohne eine automatische Freigabe zu behaupten. */
+.flow__loop {
+  display: none;
+}
 
-  .v-room {
-    padding-top: 0;
-    padding-left: 2rem;
-  }
-
-  .v-room::before {
-    top: 0.35rem;
+@media (min-width: 48rem) {
+  .flow__loop {
+    position: absolute;
+    top: 0.4rem;
+    bottom: 0.4rem;
     left: 0;
+    display: block;
+    width: 1.5rem;
+    margin: 0;
+    border: 1px solid rgba(138, 180, 232, 0.3);
+    border-right: 0;
+    border-radius: 0.7rem 0 0 0.7rem;
+    pointer-events: none;
   }
 
-  .v-room::after {
-    display: none;
+  /* Pfeilspitze oben: der Weg fuehrt zurueck zur ersten Phase. */
+  .flow__loop::after {
+    content: "";
+    position: absolute;
+    top: -1px;
+    right: -4px;
+    width: 7px;
+    height: 7px;
+    border-top: 1px solid rgba(138, 180, 232, 0.55);
+    border-right: 1px solid rgba(138, 180, 232, 0.55);
+    transform: rotate(-45deg);
   }
 
-  .v-speed__line {
-    grid-template-columns: minmax(0, 1fr);
-    gap: 1.5rem;
-    padding: 0 0 0 2rem;
-  }
-
-  .v-speed__line::before {
-    top: 0;
-    bottom: 0;
-    left: 4px;
-    width: 1px;
-    height: auto;
-  }
-
-  .v-speed__line::after {
-    top: 0;
-    left: 2.5px;
-    width: 3px;
-    height: 3rem;
-    background: linear-gradient(180deg, transparent, rgba(214, 234, 255, 0.95), transparent);
-    animation-name: v-pulse-y;
-  }
-
-  @keyframes v-pulse-y {
-    from { transform: translateY(-3rem); }
-    to { transform: translateY(calc(100% + 3rem)); }
-  }
-
-  .v-speed__line li::before {
-    top: 0.45em;
-    left: -2rem;
-  }
-
-  .v-net__stage {
-    aspect-ratio: 100 / 52;
-    max-height: none;
-  }
-
-  .v-loop__ring li {
-    font-size: clamp(0.8rem, 3.6vw, 1.05rem);
-  }
-
-  .v-life__scroll {
-    height: 560vh;
+  .flow__loop span {
+    position: absolute;
+    top: 50%;
+    left: 0.05rem;
+    color: var(--v-mute);
+    font-size: 0.75rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    writing-mode: vertical-rl;
+    transform: translateY(-50%) rotate(180deg);
+    white-space: nowrap;
   }
 }
 
-@media (max-width: 560px) {
-  .v-sec {
-    width: calc(100% - 2rem);
-    padding: clamp(5rem, 13vh, 8rem) 0;
-  }
-
-  .v-pane h3 {
-    font-size: clamp(1.5rem, 8vw, 2.2rem);
-  }
-
-  .v-feas__nums {
-    gap: 1rem 1.8rem;
+@media (min-width: 62rem) {
+  .flow__loop {
+    left: 0.5rem;
   }
 }
 
-/* ==================================================================== *
- * Reduzierte Bewegung: alles sofort sichtbar, nichts bewegt sich
- * ==================================================================== */
+/* --- Abschluss ------------------------------------------------------- */
+
+.s--end .s__h {
+  max-width: 30em;
+}
+
+.motif {
+  display: block;
+  width: min(24rem, 100%);
+  height: auto;
+  margin: clamp(2.5rem, 5vw, 4rem) 0 0;
+}
+
+.motif__lines path {
+  fill: none;
+  stroke: rgba(138, 180, 232, 0.4);
+  stroke-width: 1;
+  vector-effect: non-scaling-stroke;
+}
+
+.motif__dots line {
+  stroke: #dbe7f8;
+  stroke-width: 4.5;
+  stroke-linecap: round;
+  vector-effect: non-scaling-stroke;
+}
+
+.motif__hub {
+  stroke-width: 8 !important;
+}
+
+.motif__far {
+  stroke: #93a3b8 !important;
+  stroke-width: 3 !important;
+}
+
+.close {
+  margin-top: clamp(2.5rem, 5vw, 4rem);
+  padding-top: clamp(2rem, 4vw, 3rem);
+  border-top: 1px solid var(--v-line-soft);
+}
+
+.close__word {
+  margin: 0;
+  color: var(--v-fg);
+  font-size: clamp(1.9rem, 4.5vw, 3rem);
+  font-weight: 300;
+  letter-spacing: -0.03em;
+}
+
+.close__claim {
+  max-width: 26em;
+  margin: 0.75rem 0 0;
+  color: var(--v-fg);
+  font-size: clamp(1.05rem, 1.6vw, 1.3rem);
+  font-weight: 300;
+  line-height: 1.4;
+}
+
+.close__status {
+  margin: 1.4rem 0 0;
+  color: var(--v-accent);
+  font-size: 0.8125rem;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.close__note {
+  max-width: 40em;
+  margin: 0.9rem 0 0;
+  color: var(--v-mute);
+  font-size: clamp(0.94rem, 0.25vw + 0.88rem, 1.02rem);
+  line-height: 1.6;
+}
+
+/* --- Fussbereich ----------------------------------------------------- */
+
+.v-foot {
+  overflow-wrap: break-word;
+  position: relative;
+  z-index: 1;
+  padding: clamp(2.25rem, 4vw, 3.25rem) 0 clamp(2.5rem, 5vw, 4rem);
+  background-color: var(--v-bg);
+  border-top: 1px solid var(--v-line-soft);
+  color: var(--v-mute);
+  font-family: var(--c1-sans);
+}
+
+.v-foot__inner {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem 2rem;
+  align-items: baseline;
+  justify-content: space-between;
+  width: min(var(--v-max), 100% - 2 * var(--v-pad));
+  margin: 0 auto;
+}
+
+.v-foot p {
+  margin: 0;
+  font-size: 0.94rem;
+  line-height: 1.55;
+}
+
+.v-foot__note {
+  max-width: 34em;
+}
+
+.v-foot a {
+  display: inline-block;
+  min-height: 44px;
+  padding: 0.6rem 0;
+  color: var(--v-body);
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+}
+
+.v-foot a:hover {
+  color: var(--v-fg);
+}
+
+/* --- Einblenden beim ersten Erscheinen -------------------------------
+ * Nur wenn das Skript laeuft. Ohne JavaScript ist alles sofort da.
+ * ------------------------------------------------------------------- */
+
+.v-anim [data-v-in] {
+  opacity: 0;
+  transform: translateY(12px);
+  transition: opacity 0.6s cubic-bezier(0.22, 0.61, 0.36, 1),
+    transform 0.6s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+.v-anim [data-v-in].is-in {
+  opacity: 1;
+  transform: none;
+}
 
 @media (prefers-reduced-motion: reduce) {
-  [data-v-in] > *,
-  [data-v-in].v-fin__read,
-  [data-v-in].v-fin__end,
-  .v-pane,
-  .v-chips li,
-  .v-loop__end {
-    opacity: 1 !important;
-    transform: none !important;
-    transition: none !important;
-  }
-
-  .v-eco__area,
-  .v-room,
-  .v-ai__steps li,
-  .v-rail__list li {
-    opacity: 1 !important;
-  }
-
-  .v-speed__line::after {
-    display: none;
-  }
-
-  /* Ohne Bewegung werden die sticky-Buehnen zu normalen Abschnitten. */
-  .v-life__scroll,
-  .v-loop__scroll {
-    height: auto;
-  }
-
-  .v-life__stage,
-  .v-loop__stage {
-    position: static;
-    height: auto;
-    display: block;
-  }
-
-  .v-life__panes {
-    margin-top: 2rem;
-  }
-
-  .v-pane {
-    position: relative;
-    inset: auto;
-    margin-bottom: 4rem;
-    pointer-events: auto;
-  }
-
-  .v-loop__ring {
-    position: relative;
-    top: auto;
-    left: auto;
-    width: auto;
-    height: auto;
-    display: grid;
-    gap: 0.6rem;
-    padding: 3rem 0;
-    text-align: center;
-  }
-
-  .v-loop__ring li {
-    position: relative;
-    top: auto;
-    left: auto;
+  .v-anim [data-v-in] {
     opacity: 1;
-    transform: none !important;
+    transform: none;
+    transition: none;
   }
 
-  .v-loop__arc {
-    display: none;
-  }
-
-  .v-back__terms li {
-    position: relative;
-    top: auto;
-    left: auto;
-    opacity: 1;
-    transform: none !important;
-  }
-
-  .v-back__terms {
-    position: relative;
-    inset: auto;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 0.6rem 1.6rem;
-  }
-
-  .v-back__stage {
-    height: auto;
-  }
-
-  .v-back__seed {
-    display: none;
+  .v-skip,
+  .v-nav {
+    transition: none;
   }
 }
