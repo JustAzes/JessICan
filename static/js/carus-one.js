@@ -72,12 +72,12 @@
 
   /* Finale: "Healthcare" – zwei Sekunden Pause – "beyond imagination."
      Danach kommt der Rest schnell hintereinander. */
-  var SLOGAN_A = [0.882, 0.900];
+  var SLOGAN_A = [0.872, 0.886];
   var SLOGAN_PAUSE = 2 / 40;              // zwei Sekunden auf dieser Achse
-  var SLOGAN_B = [0.900 + SLOGAN_PAUSE, 0.918 + SLOGAN_PAUSE];
-  var FIN_START = SLOGAN_B[1];            // dann zügig der Rest
-  var FIN_STEP = 0.005;                   // Versatz zwischen den Zeilen
-  var FIN_FADE = 0.012;                   // Blende je Zeile (rund 0,5 s)
+  var SLOGAN_B = [0.886 + SLOGAN_PAUSE, 0.900 + SLOGAN_PAUSE];
+  var FIN_PAUSE = 0.8 / 40;               // danach noch eine kurze Pause
+  var FIN_START = SLOGAN_B[1] + FIN_PAUSE;
+  var FIN_FADE = 0.014;                   // der Rest kommt in einem Stueck
 
   /* Szene 3: neun klinische Datenpunkte. Jeder bekommt ein festes Fenster,
      in dem die Kamera zuerst hinfliegt und dann stehen bleibt – nur so
@@ -89,7 +89,7 @@
   var DP_TRAVEL = 0.013;                       // Anflug, danach Stillstand
 
   /* Szene 3b: vier Artefakte, in denen dieselben Daten dem Menschen
-     begegnen – Entlassbrief, Vitalwertmonitor, Patientenakte, Bildgebung.
+     begegnen – Arztbrief, Vitalwertmonitor, Bildgebung.
      Bewusst reduzierte Drahtgitter, keine Bildschirmfotos. */
   var AR_COUNT = 3;
   var AR_START = 0.415;
@@ -1420,10 +1420,10 @@
     /* "Healthcare" – Pause – "beyond imagination." – dann der Rest. */
     if (sloA) { reveal(sloA, ease(SLOGAN_A[0], SLOGAN_A[1], p)); }
     if (sloB) { reveal(sloB, ease(SLOGAN_B[0], SLOGAN_B[1], p)); }
+    /* Der Rest erscheint ohne Staffelung: ein Block, eine Blende. */
+    var finT = ease(FIN_START, FIN_START + FIN_FADE, p);
     for (var fi = 0; fi < finParts.length; fi++) {
-      /* Kurzer Versatz und kurze Blende: der komplette Rest ist rund eine
-         Sekunde nach "beyond imagination." und noch vor p = 1 vollstaendig da. */
-      reveal(finParts[fi], ease(FIN_START + fi * FIN_STEP, FIN_START + FIN_FADE + fi * FIN_STEP, p));
+      reveal(finParts[fi], finT);
     }
     if (progressEl) { progressEl.style.transform = 'scaleX(' + p.toFixed(4) + ')'; }
 

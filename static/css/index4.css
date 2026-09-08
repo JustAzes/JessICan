@@ -175,7 +175,7 @@ body {
 }
 
 /* --- Szene 3b: klinische Artefakte ---------------------------------- *
- * Wie dieselben Daten dem Menschen begegnen: Entlassbrief, Monitor der
+ * Wie dieselben Daten dem Menschen begegnen: Arztbrief, Monitor der
  * Intensivmedizin, Bildgebung. Bewusst reduzierte Drahtgitter -
  * dünne Rahmen, Typografie, unleserlicher Fülltext. Keine Nachbauten
  * echter Oberflächen, keine Bildschirmfotos.
@@ -242,7 +242,7 @@ body {
 .c1-art__l:nth-child(7n) { width: 86%; }
 .c1-art__l:last-child { width: 41%; }
 
-/* 1 Entlassbrief */
+/* 1 Arztbrief */
 .c1-art__page {
   width: clamp(12rem, 25vw, 19rem);
   padding: 1.3rem 1.5rem 1.5rem;
@@ -430,8 +430,18 @@ body {
   color: #fff;
 }
 
+.c1-title__c {
+  /* Der Kernsatz der Szene: staerker als die Unterzeile, ruhiger als
+     die Ueberschrift. */
+  margin: 0.5em 0 0;
+  font-size: clamp(0.95rem, 2.1vw, 1.28rem);
+  font-weight: 300;
+  letter-spacing: -0.005em;
+  color: #fff;
+}
+
 .c1-title__s {
-  margin: 0.55em 0 0;
+  margin: 0.45em 0 0;
   font-size: clamp(0.7rem, 1.5vw, 0.9rem);
   font-weight: 400;
   letter-spacing: 0.11em;
