@@ -897,7 +897,7 @@
   var labels = [];
   Array.prototype.forEach.call(root.querySelectorAll('[data-c1-from]'), function (el) {
     var anchor = el.getAttribute('data-c1-anchor') || 'center';
-    var kind = 'center', ax = 0, ay = 0, az = 0, idx = -1;
+    var kind = 'center', ax = 0, ay = 0, az = 0, ar = 1, idx = -1;
     if (anchor.indexOf('node:') === 0) {
       kind = 'node';
       idx = W.named[anchor.slice(5)];
@@ -909,6 +909,17 @@
     } else if (anchor.indexOf('orbit:') === 0) {
       kind = 'orbit';
       ax = parseFloat(anchor.slice(6)) || 0;
+    } else if (anchor.indexOf('ring:') === 0) {
+      /* ring:Startwinkel,Radius,Hoehe,Umlaufgeschwindigkeit – die
+         Beschriftung kreist um den Mittelpunkt der Szene. */
+      kind = 'ring';
+      var rp = anchor.slice(5).split(',');
+      ax = parseFloat(rp[0]) || 0;
+      ar = parseFloat(rp[1]);
+      ay = parseFloat(rp[2]) || 0;
+      az = parseFloat(rp[3]);
+      if (!(ar > 0)) { ar = 1; }
+      if (isNaN(az)) { az = 0.14; }
     }
     var from = parseFloat(el.getAttribute('data-c1-from')) || 0;
     var to = parseFloat(el.getAttribute('data-c1-to')) || 1;
@@ -932,7 +943,7 @@
       ax = AR_POS[ak][0]; ay = AR_POS[ak][1]; az = AR_POS[ak][2];
     }
     labels.push({
-      el: el, kind: kind, idx: idx, x: ax, y: ay, z: az,
+      el: el, kind: kind, idx: idx, x: ax, y: ay, z: az, r: ar,
       align: el.getAttribute('data-c1-align') || 'center',
       panel: ari !== null,
       flip: false, from: from, to: to, fade: fade, shown: false
@@ -966,21 +977,40 @@
     time: 0,
     mx: 0, my: 0,       // Zeigerposition, normiert
     tx: 0, ty: 0,       // geglättete Parallaxe
-    wasFinal: false
+    wasFinal: false,
+    /* Die Seite geht nach der Sequenz in den Vision-Teil ueber. Solange
+       die Sequenz laeuft, scrubbt das Rad; danach scrollt die Seite. */
+    done: false,
+    scrollY: 0,
+    bg: 0,              // 0 = Teaser im Vordergrund, 1 = nur noch Hintergrund
+    tail: 0             // am Seitenende kommt die Datenwolke zurueck
   };
 
   if (reduceMotion) { st.p = 1; }
+
+  function setDone(v) {
+    if (st.done === v) { return; }
+    st.done = v;
+    root.classList.toggle('is-done', v);
+  }
+
+  if (reduceMotion) { setDone(true); }
 
   function nudge(d) {
     st.autoplay = false;
     st.p = Math.max(0, Math.min(1, st.p + d));
     root.classList.toggle('is-final', st.p > 0.955);
+    if (st.p >= 1) { setDone(true); }
     if (hintEl) { hintEl.classList.add('is-gone'); }
   }
 
   if (!reduceMotion) {
     root.addEventListener('wheel', function (e) {
       if (Math.abs(e.deltaY) < 1) { return; }
+      /* Ist die Sequenz durch oder die Seite schon gescrollt, gehoert das
+         Rad der Seite - nur so erreicht man den Vision-Teil darunter. */
+      if (st.done || window.pageYOffset > 1) { return; }
+      if (e.deltaY < 0) { return; }
       e.preventDefault();
       nudge(e.deltaY / 9000);
     }, { passive: false });
@@ -988,6 +1018,7 @@
     var dragY = null;
     root.addEventListener('pointerdown', function (e) {
       if (e.pointerType === 'mouse' && e.button !== 0) { return; }
+      if (st.done) { return; }
       dragY = e.clientY;
     });
     root.addEventListener('pointermove', function (e) {
@@ -1033,8 +1064,10 @@
     replay.addEventListener('click', function () {
       st.p = 0;
       st.autoplay = !reduceMotion;
+      setDone(reduceMotion);
       root.classList.remove('is-final');
       if (hintEl) { hintEl.classList.remove('is-gone'); }
+      window.scrollTo(0, 0);
     });
   }
 
@@ -1068,6 +1101,9 @@
     var t = smooth(ramp(k0[0], k1[0], p));
 
     var dist = k0[1] + (k1[1] - k0[1]) * t;
+    /* Der Teaser zieht sich beim Weiterscrollen zurueck und wird zum
+       ruhigen Hintergrund des Vision-Teils. */
+    dist *= 1 + 0.62 * st.bg - 0.18 * st.tail;
     var azi = k0[2] + (k1[2] - k0[2]) * t;
     var hgt = k0[3] + (k1[3] - k0[3]) * t;
     var fov = k0[4] + (k1[4] - k0[4]) * t;
@@ -1176,6 +1212,10 @@
       } else if (L.kind === 'orbit') {
         ok = project(Math.cos(L.x), 0, Math.sin(L.x), scr);
         depth = scr[2];
+      } else if (L.kind === 'ring') {
+        var rang = L.x + st.time * L.z;
+        ok = project(Math.cos(rang) * L.r, L.y, Math.sin(rang) * L.r, scr);
+        depth = scr[2];
       } else {
         ok = project(L.x, L.y, L.z, scr);
         depth = scr[2];
@@ -1194,7 +1234,11 @@
          entsteht die räumliche Tiefe im Textraum. */
       var sc = L.kind === 'center' ? 1 : Math.max(0.42, Math.min(1.25, 1.6 / Math.max(0.35, depth)));
       if (L.panel) { sc = Math.max(0.78, Math.min(1.12, 1.05 / Math.max(0.4, depth))); }
+      /* Die kreisenden Standards sollen auch auf der Rueckseite lesbar
+         bleiben, deshalb ein engerer Bereich fuer Groesse und Deckkraft. */
+      if (L.kind === 'ring') { sc = Math.max(0.66, Math.min(1.1, 1.35 / Math.max(0.4, depth))); }
       var op = vis * (L.kind === 'center' ? 1 : Math.max(0.32, Math.min(1, 2.9 / Math.max(0.4, depth))));
+      if (L.kind === 'ring') { op = vis * Math.max(0.5, Math.min(1, 2.4 / Math.max(0.4, depth))); }
       if (!L.shown) {
         L.el.style.visibility = 'visible';
         L.el.style.willChange = 'transform, opacity';
@@ -1276,14 +1320,35 @@
       if (st.p >= 1) { st.autoplay = false; }
       if (hintEl && st.p > 0.06) { hintEl.classList.add('is-visible'); }
     }
+    /* Sobald die Sequenz am Ende ist, gehoert das Scrollen der Seite. */
+    if (st.p >= 1 && !st.done) { setDone(true); }
     var isFinal = st.p > 0.955;
     if (isFinal !== st.wasFinal) {
       root.classList.toggle('is-final', isFinal);
       st.wasFinal = isFinal;
     }
+    /* Wie weit ist die Seite in den Vision-Teil gescrollt? Daraus folgen
+       Helligkeit, Kameraabstand und die Deckkraft der Teaser-Schrift. */
+    var vh = window.innerHeight || 800;
+    st.scrollY = window.pageYOffset || 0;
+    /* Direkt aus der Scrollposition, ohne zeitliche Glaettung: die
+       Position ist bereits stetig, und bei niedriger Bildrate darf die
+       Schrift des Teasers nicht hinterherhinken. */
+    st.bg = smooth(Math.min(1, st.scrollY / (vh * 0.85)));
+    var docH = Math.max(1, document.documentElement.scrollHeight - vh);
+    st.tail = smooth(ramp(0.965, 1.0, st.scrollY / docH));
+    var hv = (1 - st.bg).toFixed(3);
+    if (hv !== heroFade) {
+      docEl.style.setProperty('--c1-hero', hv);
+      heroFade = hv;
+      root.classList.toggle('is-bg', st.bg > 0.5);
+    }
+
     /* Idle: nach dem Ende bleibt die Szene in Bewegung, aber ruhig. */
     st.tx += (st.mx * 1.5 - st.tx) * Math.min(1, dt * 2.6);
     st.ty += (st.my * 1.1 - st.ty) * Math.min(1, dt * 2.6);
+
+    if (bgSkip()) { if (running) { req(); } return; }
 
     resize();
     if (!fbScene || !fbA || !fbB) { if (running) { req(); } return; }
@@ -1301,6 +1366,9 @@
     globalDim *= 1 - 0.45 * window01(p, SC.art[0] + 0.01, SC.art[1] - 0.01, 0.02);
     /* Im Finale wird die Datenwelt dunkler, der Text tritt hervor. */
     globalDim *= 1 - 0.28 * ease(SC.end[0], 1.0, p);
+    /* Im Vision-Teil bleiben nur wenige Punkte stehen; am Seitenende
+       kommt die Wolke fuer das Finale wieder zurueck. */
+    globalDim *= (1 - 0.88 * st.bg) * (1 + 3.6 * st.tail);
 
     var cam = updateCamera(p, m01, m12);
     var pix = (view.h * 0.5) / Math.tan(0.5 * cam.fov * DEG) * 0.0115;
@@ -1441,6 +1509,17 @@
     if (running) { req(); }
   }
 
+  /* Im Hintergrund des Vision-Teils genuegt die halbe Bildrate: die Wolke
+     bewegt sich dort nur noch sehr langsam. */
+  function bgSkip() {
+    if (st.bg < 0.96 || st.tail > 0.01) { return false; }
+    skipToggle = !skipToggle;
+    return skipToggle;
+  }
+
+  var skipToggle = false;
+  var docEl = document.documentElement;
+  var heroFade = '';
   var running = false, pending = false, last = 0;
   var fpsFrames = 0, fpsSince = 0;
 
