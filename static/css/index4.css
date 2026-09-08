@@ -24,11 +24,18 @@ html,
 body {
   margin: 0;
   padding: 0;
-  height: 100%;
-  /* Die Sequenz wird nicht gescrollt, sondern gescrubbt. */
-  overflow: hidden;
-  overscroll-behavior: none;
+  /* Die Sequenz wird gescrubbt, der Vision-Teil darunter gescrollt.
+     Die Umschaltung besorgt js/carus-one.js. */
+  /* clip statt hidden: hidden macht html/body zum Scrollcontainer und
+     bricht damit position:sticky im Vision-Teil. */
+  overflow-x: clip;
+  overscroll-behavior-y: contain;
   background-color: #000;
+}
+
+:root {
+  /* 1 = Teaser im Vordergrund, 0 = nur noch Hintergrund des Vision-Teils */
+  --c1-hero: 1;
 }
 
 body {
@@ -41,14 +48,58 @@ body {
 .c1 {
   position: fixed;
   inset: 0;
+  z-index: 0;
   overflow: hidden;
   background-color: var(--c1-ink);
   touch-action: none;
   cursor: grab;
 }
 
+/* Ist die Seite im Vision-Teil, verschwinden die Bedienelemente des
+   Teasers vollstaendig - auch die spaeter definierten Zustaende. */
+.c1.is-bg.is-final .c1-hint,
+.c1.is-bg.is-final .c1-replay,
+.c1.is-bg.is-final .c1-progress,
+.c1.is-bg.is-final .c1-foot,
+.c1.is-bg.is-done .c1-hint {
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Nach der Sequenz gehoert die Geste der Seite, nicht mehr dem Teaser. */
+.c1.is-done {
+  touch-action: pan-y;
+  cursor: default;
+}
+
+/* Beim Scrollen tritt die Teaser-Schrift zurueck; die Punkte bleiben als
+   ruhiger Hintergrund stehen. */
+.c1__layer,
+.c1-center {
+  opacity: var(--c1-hero);
+}
+
+.c1-hint,
+.c1-replay,
+.c1-progress,
+.c1-foot {
+  transition: opacity 0.4s ease;
+}
+
+.c1.is-bg .c1-hint,
+.c1.is-bg .c1-replay,
+.c1.is-bg .c1-progress,
+.c1.is-bg .c1-foot {
+  opacity: 0;
+  pointer-events: none;
+}
+
 .c1.is-live {
   cursor: grab;
+}
+
+.c1.is-live.is-done {
+  cursor: default;
 }
 
 .c1__canvas {
@@ -448,6 +499,17 @@ body {
   color: var(--c1-mute);
 }
 
+.c1-std {
+  /* Die Standards kreisen um den Patientenkontext, statt als Zeile
+     darunter zu stehen. Position kommt pro Bild aus dem Skript. */
+  font-size: clamp(0.6rem, 1.15vw, 0.78rem);
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: rgba(168, 202, 244, 0.82);
+  white-space: nowrap;
+}
+
 .c1-title__std {
   margin: 1.5em 0 0;
   font-size: clamp(0.58rem, 1.1vw, 0.72rem);
@@ -581,6 +643,20 @@ body {
   opacity: 0;
   transition: opacity 1.4s ease;
   pointer-events: none;
+}
+
+/* Zwei Zustaende: waehrend der Sequenz scrubben, danach weiterscrollen. */
+.c1-hint__b,
+.c1.is-done .c1-hint__a {
+  display: none;
+}
+
+.c1.is-done .c1-hint__b {
+  display: inline;
+}
+
+.c1.is-done .c1-hint {
+  opacity: 1;
 }
 
 .c1-hint.is-visible {
