@@ -137,8 +137,10 @@
       /* Die vier Bereiche laufen durch, waehrend die Buehne durch die
          Bildschirmmitte wandert. */
       var k = Math.min(3, Math.floor(ramp(0.34, 0.72, p) * 4));
-      for (var i = 0; i < areas.length; i++) { setOn(areas[i], i === k); }
-      for (var j = 0; j < edges.length; j++) { setOn(edges[j], j === k); }
+      /* Aufdeckend statt umschaltend: was gelesen ist, bleibt hell. Sonst
+         steht das, was man gerade angesehen hat, gleich wieder grau da. */
+      for (var i = 0; i < areas.length; i++) { setOn(areas[i], i <= k); }
+      for (var j = 0; j < edges.length; j++) { setOn(edges[j], j <= k); }
     });
   }
 
@@ -149,7 +151,7 @@
     var layers = stack.querySelectorAll('[data-v-layer]');
     track(stack, function () {
       var k = activeByFocus(layers);
-      for (var i = 0; i < layers.length; i++) { setOn(layers[i], i === k); }
+      for (var i = 0; i < layers.length; i++) { setOn(layers[i], i <= k); }
     });
   }
 
@@ -282,7 +284,7 @@
     var steps = aiList.querySelectorAll('[data-v-ai-s]');
     track(aiList, function () {
       var k = activeByFocus(steps);
-      for (var i = 0; i < steps.length; i++) { setOn(steps[i], i === k); }
+      for (var i = 0; i < steps.length; i++) { setOn(steps[i], i <= k); }
     });
   }
 
