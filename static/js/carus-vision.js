@@ -36,12 +36,34 @@
     if (el.classList.contains('is-on') !== on) { el.classList.toggle('is-on', on); }
   }
 
-  /* Fortschritt eines normalen Abschnitts: 0 beim Hereinkommen von unten,
-     1 beim Verlassen nach oben. */
+  /* Fortschritt eines normalen Abschnitts, symmetrisch um die
+     Bildschirmmitte: 0 wenn der Abschnitt gerade von unten hereinkommt,
+     etwa 0,5 wenn seine Mitte auf der Fokuslinie steht, 1 wenn er oben
+     hinausgeht. So laeuft die Hervorhebung nicht schon durch, bevor der
+     Abschnitt in der Mitte angekommen ist. */
   function progressPass(el) {
     var r = el.getBoundingClientRect();
     var vh = window.innerHeight || 800;
-    return clamp01((vh * 0.86 - r.top) / (r.height * 0.72 + vh * 0.2));
+    var mid = r.top + r.height / 2;
+    var span = vh + r.height;
+    return clamp01((vh + r.height / 2 - mid) / span);
+  }
+
+  /* Welcher Eintrag steht der Fokuslinie am naechsten? Fuer untereinander
+     stehende Bloecke ist das genauer als jede Rechnung aus dem
+     Abschnittsfortschritt: hervorgehoben wird, was man gerade ansieht. */
+  var FOCUS = 0.46;
+
+  function activeByFocus(els) {
+    var vh = window.innerHeight || 800;
+    var line = vh * FOCUS;
+    var best = 0, bestD = Infinity;
+    for (var i = 0; i < els.length; i++) {
+      var r = els[i].getBoundingClientRect();
+      var d = Math.abs(r.top + r.height / 2 - line);
+      if (d < bestD) { bestD = d; best = i; }
+    }
+    return best;
   }
 
   /* Fortschritt einer festgehaltenen Buehne: 0 wenn ihr Kopf oben
@@ -112,8 +134,9 @@
     var areas = ecoStage.querySelectorAll('[data-v-area]');
     var edges = ecoStage.querySelectorAll('[data-v-edge]');
     track(ecoStage, function (p) {
-      /* Vier Bereiche in der zweiten Haelfte des Durchlaufs durchgehen. */
-      var k = Math.min(3, Math.floor(ramp(0.12, 0.92, p) * 4));
+      /* Die vier Bereiche laufen durch, waehrend die Buehne durch die
+         Bildschirmmitte wandert. */
+      var k = Math.min(3, Math.floor(ramp(0.34, 0.72, p) * 4));
       for (var i = 0; i < areas.length; i++) { setOn(areas[i], i === k); }
       for (var j = 0; j < edges.length; j++) { setOn(edges[j], j === k); }
     });
@@ -124,8 +147,8 @@
   var stack = root.querySelector('[data-v-stack]');
   if (stack) {
     var layers = stack.querySelectorAll('[data-v-layer]');
-    track(stack, function (p) {
-      var k = Math.min(layers.length - 1, Math.floor(ramp(0.06, 0.96, p) * layers.length));
+    track(stack, function () {
+      var k = activeByFocus(layers);
       for (var i = 0; i < layers.length; i++) { setOn(layers[i], i === k); }
     });
   }
@@ -228,7 +251,7 @@
         /* Jeder Begriff startet weiter aussen und wird nach innen
            gezogen – aus dem Produkt zurueck in das Netzwerk. */
         var a = (i / terms.length) * Math.PI * 2 + 0.4;
-        var t = smooth(ramp(0.04 + i * 0.11, 0.34 + i * 0.11, p));
+        var t = smooth(ramp(0.24 + i * 0.055, 0.46 + i * 0.055, p));
         var d = 1 - t;
         var x = Math.cos(a) * R * d;
         var y = Math.sin(a) * h * 0.42 * d;
@@ -247,7 +270,7 @@
   if (rooms) {
     var roomEls = rooms.querySelectorAll('[data-v-room]');
     track(rooms, function (p) {
-      var k = Math.min(roomEls.length - 1, Math.floor(ramp(0.08, 0.95, p) * roomEls.length));
+      var k = Math.min(roomEls.length - 1, Math.floor(ramp(0.32, 0.68, p) * roomEls.length));
       for (var i = 0; i < roomEls.length; i++) { setOn(roomEls[i], i <= k); }
     });
   }
@@ -257,8 +280,8 @@
   var aiList = root.querySelector('[data-v-ai]');
   if (aiList) {
     var steps = aiList.querySelectorAll('[data-v-ai-s]');
-    track(aiList, function (p) {
-      var k = Math.min(steps.length - 1, Math.floor(ramp(0.04, 0.96, p) * steps.length));
+    track(aiList, function () {
+      var k = activeByFocus(steps);
       for (var i = 0; i < steps.length; i++) { setOn(steps[i], i === k); }
     });
   }
@@ -269,7 +292,7 @@
   if (net) {
     var hops = net.querySelectorAll('[data-v-hop]');
     track(net, function (p) {
-      var reach = ramp(0.1, 0.8, p) * 3;
+      var reach = ramp(0.3, 0.68, p) * 3;
       for (var i = 0; i < hops.length; i++) {
         var lvl = parseInt(hops[i].getAttribute('data-v-hop'), 10) || 0;
         setOn(hops[i], reach > lvl);
