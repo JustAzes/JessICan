@@ -8,7 +8,6 @@
 {%- set skip = [
       "/404/",
       "/index2/",
-      "/index3/",
       "/pages/",
       "/pages/blog/new/",
       "/categories/",
