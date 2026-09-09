@@ -1,0 +1,561 @@
+/* Styles used only by the "Infos & Preise" page (/behandlung/vorgehen/).
+   Everything is scoped under .preis-page so the rest of the site is untouched. */
+
+.preis-page {
+  --preis-ink: #18231f;
+  --preis-muted: #55605c;
+  --preis-line: rgba(24, 35, 31, 0.14);
+  --preis-accent: #006061;
+  --preis-accent-dark: #00494a;
+  --preis-tint: #edf5f5;
+  --preis-shadow: 0 16px 48px rgba(24, 35, 31, 0.07);
+
+  color: var(--preis-ink);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+.preis-page *,
+.preis-page *::before,
+.preis-page *::after {
+  box-sizing: border-box;
+}
+
+.preis-shell {
+  width: min(1080px, calc(100% - 2rem));
+  margin-inline: auto;
+}
+
+.preis-section {
+  padding: clamp(3rem, 7vw, 5.5rem) 0;
+}
+
+.preis-section--tint {
+  background: var(--preis-tint);
+}
+
+.preis-kicker {
+  margin: 0 0 0.7rem;
+  color: var(--preis-accent-dark);
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  line-height: 1.4;
+  text-transform: uppercase;
+}
+
+.preis-heading {
+  max-width: 760px;
+  margin-bottom: clamp(1.75rem, 4vw, 2.75rem);
+}
+
+.preis-heading--center {
+  margin-inline: auto;
+  text-align: center;
+}
+
+.preis-page h2 {
+  margin: 0;
+  color: var(--preis-ink);
+  font-size: clamp(1.85rem, 4vw, 2.9rem);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 1.12;
+}
+
+.preis-heading > p:last-child {
+  margin: 0.9rem 0 0;
+  color: var(--preis-muted);
+  font-size: 1.02rem;
+  line-height: 1.7;
+}
+
+.preis-lead {
+  max-width: 68ch;
+  margin: 0 auto;
+  color: var(--preis-muted);
+  font-size: clamp(1.02rem, 1.7vw, 1.16rem);
+  line-height: 1.75;
+}
+
+/* --- Kurzinfos ---------------------------------------------------------- */
+
+.preis-facts {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+  margin: clamp(2rem, 4vw, 3rem) 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.preis-facts li {
+  padding: 1.15rem 1.25rem;
+  background: #ffffff;
+  border: 1px solid var(--preis-line);
+  border-top: 4px solid var(--preis-accent);
+  border-radius: 1.1rem;
+  box-shadow: var(--preis-shadow);
+}
+
+.preis-facts strong {
+  display: block;
+  margin-bottom: 0.3rem;
+  color: var(--preis-ink);
+  font-size: 1.02rem;
+  font-weight: 800;
+}
+
+.preis-facts span {
+  display: block;
+  color: var(--preis-muted);
+  font-size: 0.93rem;
+  line-height: 1.6;
+}
+
+/* --- Preistabelle als Karten -------------------------------------------- */
+
+.preis-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(1rem, 2.5vw, 1.6rem);
+  padding: 0;
+  list-style: none;
+}
+
+.preis-card {
+  display: flex;
+  flex-direction: column;
+  padding: clamp(1.4rem, 3vw, 2rem);
+  background: #ffffff;
+  border: 1px solid var(--preis-line);
+  border-radius: 1.3rem;
+  box-shadow: var(--preis-shadow);
+}
+
+.preis-card h3 {
+  margin: 0;
+  color: var(--preis-ink);
+  font-size: 1.3rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  line-height: 1.25;
+}
+
+.preis-card ul {
+  margin: 1rem 0 1.5rem;
+  padding: 0;
+  list-style: none;
+}
+
+.preis-card li {
+  position: relative;
+  padding-left: 1.4rem;
+  color: var(--preis-muted);
+  font-size: 0.96rem;
+  line-height: 1.6;
+}
+
+.preis-card li + li {
+  margin-top: 0.5rem;
+}
+
+.preis-card li::before {
+  position: absolute;
+  top: 0.55em;
+  left: 0.15rem;
+  width: 0.42rem;
+  height: 0.42rem;
+  content: "";
+  background: var(--preis-accent);
+  border-radius: 50%;
+}
+
+.preis-amount {
+  margin: auto 0 0;
+  padding-top: 1.1rem;
+  border-top: 1px solid var(--preis-line);
+}
+
+.preis-amount b {
+  display: block;
+  color: var(--preis-accent-dark);
+  font-size: clamp(1.75rem, 3.4vw, 2.25rem);
+  font-weight: 800;
+  letter-spacing: -0.035em;
+  line-height: 1.1;
+}
+
+.preis-amount span {
+  display: block;
+  margin-top: 0.3rem;
+  color: var(--preis-muted);
+  font-size: 0.84rem;
+  font-weight: 600;
+}
+
+.preis-hint {
+  max-width: 70ch;
+  margin: clamp(1.75rem, 3vw, 2.5rem) auto 0;
+  color: var(--preis-muted);
+  font-size: 0.93rem;
+  line-height: 1.7;
+  text-align: center;
+}
+
+/* --- Ablauf (Markdown-Inhalt der Seite) --------------------------------- */
+
+.preis-prose {
+  max-width: 72ch;
+  margin-inline: auto;
+}
+
+.preis-prose h3 {
+  position: relative;
+  margin: 2.6rem 0 0.7rem;
+  padding-left: 1.1rem;
+  color: var(--preis-ink);
+  font-size: 1.25rem;
+  font-weight: 800;
+  letter-spacing: -0.015em;
+  line-height: 1.3;
+}
+
+.preis-prose h3::before {
+  position: absolute;
+  top: 0.12em;
+  bottom: 0.12em;
+  left: 0;
+  width: 4px;
+  content: "";
+  background: var(--preis-accent);
+  border-radius: 999px;
+}
+
+.preis-prose h3:first-of-type {
+  margin-top: 0;
+}
+
+.preis-prose p {
+  margin: 0.85rem 0 0;
+  color: var(--preis-muted);
+  font-size: 1rem;
+  line-height: 1.75;
+}
+
+.preis-prose ul {
+  margin: 0.85rem 0 0;
+  color: var(--preis-muted);
+  font-size: 1rem;
+  line-height: 1.75;
+}
+
+/* --- FAQ ----------------------------------------------------------------- */
+
+.preis-faq {
+  max-width: 860px;
+  margin-inline: auto;
+}
+
+.preis-faq + .preis-faq {
+  margin-top: clamp(2.5rem, 5vw, 3.5rem);
+}
+
+.preis-faq > h3 {
+  margin: 0 0 1.4rem;
+  color: var(--preis-ink);
+  font-size: clamp(1.35rem, 2.6vw, 1.75rem);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+.preis-faq details {
+  overflow: hidden;
+  background: #ffffff;
+  border: 1px solid var(--preis-line);
+  border-radius: 1rem;
+  box-shadow: 0 8px 26px rgba(24, 35, 31, 0.05);
+}
+
+.preis-faq details + details {
+  margin-top: 0.7rem;
+}
+
+.preis-faq details[open] {
+  border-color: var(--preis-accent);
+}
+
+.preis-faq summary {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 1.05rem 1.25rem;
+  color: var(--preis-ink);
+  font-size: 1.02rem;
+  font-weight: 700;
+  line-height: 1.45;
+  cursor: pointer;
+  list-style: none;
+  transition: background-color 160ms ease;
+}
+
+.preis-faq summary::-webkit-details-marker {
+  display: none;
+}
+
+.preis-faq summary:hover,
+.preis-faq summary:focus-visible {
+  background: var(--preis-tint);
+}
+
+.preis-faq summary:focus-visible {
+  outline: 3px solid var(--preis-accent);
+  outline-offset: -3px;
+}
+
+.preis-faq summary::after {
+  flex: none;
+  width: 1.6rem;
+  height: 1.6rem;
+  margin-top: 0.05rem;
+  content: "";
+  background: var(--preis-tint);
+  border-radius: 50%;
+  /* Chevron nach unten */
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none' stroke='%2300494a' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M4 6l4 4 4-4'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 0.95rem;
+  transition: transform 200ms ease;
+}
+
+.preis-faq details[open] summary::after {
+  transform: rotate(180deg);
+}
+
+.preis-faq .preis-faq-body {
+  padding: 0 1.25rem 1.3rem;
+  border-top: 1px solid var(--preis-line);
+}
+
+.preis-faq .preis-faq-body > *:first-child {
+  margin-top: 1.05rem;
+}
+
+.preis-faq .preis-faq-body p,
+.preis-faq .preis-faq-body li {
+  color: var(--preis-muted);
+  font-size: 0.98rem;
+  line-height: 1.72;
+}
+
+.preis-faq .preis-faq-body p {
+  margin: 0.85rem 0 0;
+}
+
+.preis-faq .preis-faq-body ul {
+  margin: 0.85rem 0 0;
+  padding-left: 1.15rem;
+}
+
+.preis-faq .preis-faq-body li + li {
+  margin-top: 0.4rem;
+}
+
+/* --- Notfallhinweis ------------------------------------------------------ */
+
+.preis-alert {
+  padding: 2.1rem 0;
+  color: #ffffff;
+  background: #7f2d20;
+}
+
+.preis-alert-inner {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: 1.1rem;
+  align-items: start;
+  max-width: 900px;
+}
+
+.preis-alert-mark {
+  display: grid;
+  width: 2.5rem;
+  height: 2.5rem;
+  place-items: center;
+  border: 1px solid rgba(255, 255, 255, 0.55);
+  border-radius: 50%;
+  font-family: Georgia, serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.preis-alert h2 {
+  margin: 0;
+  color: #ffffff;
+  font-size: 1.25rem;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+}
+
+.preis-alert p {
+  margin: 0.6rem 0 0;
+  color: rgba(255, 255, 255, 0.88);
+  font-size: 0.95rem;
+  line-height: 1.65;
+}
+
+/* --- Abschluss-CTA ------------------------------------------------------- */
+
+.preis-cta-inner {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 2rem;
+  align-items: center;
+  padding: clamp(1.75rem, 4vw, 3rem);
+  background: var(--preis-tint);
+  border: 1px solid var(--preis-line);
+  border-radius: 1.5rem;
+}
+
+.preis-cta-inner h2 {
+  font-size: clamp(1.6rem, 3.4vw, 2.4rem);
+}
+
+.preis-cta-inner > div:first-child > p:last-child {
+  margin: 0.9rem 0 0;
+  color: var(--preis-muted);
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+.preis-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  justify-content: flex-end;
+}
+
+/* Eigene Buttons statt .btn – .btn wird global auf Großbuchstaben getrimmt */
+.preis-button {
+  display: inline-flex;
+  min-height: 3.15rem;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 1.35rem;
+  color: var(--preis-accent-dark) !important;
+  background: #ffffff;
+  border: 1px solid var(--preis-line);
+  border-radius: 999px;
+  font-size: 0.9rem;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+  line-height: 1.2;
+  text-align: center;
+  text-decoration: none !important;
+  transition: transform 160ms ease, box-shadow 160ms ease, background-color 160ms ease;
+}
+
+.preis-button:hover,
+.preis-button:focus {
+  color: var(--preis-accent-dark) !important;
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px rgba(24, 35, 31, 0.12);
+}
+
+.preis-button--primary {
+  color: #ffffff !important;
+  background: var(--preis-accent-dark);
+  border-color: transparent;
+}
+
+.preis-button--primary:hover,
+.preis-button--primary:focus {
+  color: #ffffff !important;
+  background: var(--preis-accent);
+}
+
+.preis-page a:focus-visible {
+  outline: 3px solid var(--preis-accent);
+  outline-offset: 4px;
+}
+
+/* --- Responsive ---------------------------------------------------------- */
+
+@media (max-width: 900px) {
+  .preis-facts,
+  .preis-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .preis-cta-inner {
+    grid-template-columns: 1fr;
+  }
+
+  .preis-actions {
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 575px) {
+  .preis-shell {
+    width: min(100% - 1.25rem, 1080px);
+  }
+
+  .preis-actions {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .preis-button {
+    width: 100%;
+  }
+
+  .preis-faq summary {
+    padding: 0.95rem 1rem;
+    font-size: 0.98rem;
+  }
+
+  .preis-faq .preis-faq-body {
+    padding: 0 1rem 1.15rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .preis-button,
+  .preis-faq summary,
+  .preis-faq summary::after {
+    transition: none;
+  }
+
+  .preis-button:hover,
+  .preis-button:focus {
+    transform: none;
+  }
+}
+
+@media print {
+  .preis-page .preis-actions,
+  .preis-page .preis-cta {
+    display: none !important;
+  }
+
+  .preis-faq details {
+    box-shadow: none;
+    break-inside: avoid;
+  }
+
+  .preis-faq .preis-faq-body {
+    display: block !important;
+  }
+
+  .preis-alert {
+    color: #000000;
+    background: #ffffff !important;
+  }
+
+  .preis-alert h2,
+  .preis-alert p {
+    color: #000000;
+  }
+}
