@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Designvorschauen | JessICan &middot; Prototypen</title>
+<meta name="description" content="Übersicht der beiden Designvorschauen für die Tierheilpraxis JessICan. Entwurfsseiten ohne echte Terminanfrage.">
+<style>
+/* Eigenstaendige Uebersichtsseite. Bewusst ohne gemeinsame CSS-/JS-Datei,
+   damit zwischen den beiden Vorschauen keine geteilte Laufzeitabhaengigkeit
+   entsteht. Schriften werden aus dem vorhandenen Bestand gelesen. */
+@font-face{font-family:"JCP Lora";font-style:normal;font-weight:700;
+  src:local("Lora Bold"),url(/fonts/Lora-Bold.woff2) format("woff2");font-display:swap}
+@font-face{font-family:"JCP Open Sans";font-style:normal;font-weight:400;
+  src:local("Open Sans"),url(/fonts/OpenSans-Regular.woff2) format("woff2");font-display:swap}
+@font-face{font-family:"JCP Open Sans";font-style:normal;font-weight:600;
+  src:local("Open Sans SemiBold"),url(/fonts/OpenSans-SemiBold.woff2) format("woff2");font-display:swap}
+
+:root{
+  --ink:#21352B; --soft:#4A5C52; --brand:#214E3B; --brand-dark:#173B2B;
+  --bg:#F7F6F0; --line:#D5DED3; --accent:#7A5526;
+}
+*,*::before,*::after{box-sizing:border-box}
+body{
+  margin:0;background:var(--bg);color:var(--ink);
+  font-family:"JCP Open Sans","Open Sans",Helvetica,Arial,sans-serif;
+  font-size:17px;line-height:1.65;overflow-wrap:break-word;
+}
+h1,h2,h3{font-family:"JCP Lora",Lora,Georgia,serif;font-weight:700;
+  line-height:1.2;margin:0 0 .5em;hyphens:auto}
+h1{font-size:clamp(1.9rem,1.4rem+2.2vw,2.75rem)}
+h2{font-size:clamp(1.25rem,1.1rem+.7vw,1.5rem)}
+p{margin:0 0 1rem}
+p:last-child{margin-bottom:0}
+a{color:var(--brand);text-underline-offset:.18em}
+a:hover{color:var(--brand-dark)}
+:focus-visible{outline:3px solid var(--brand);outline-offset:2px;border-radius:3px}
+ul{margin:0;padding:0;list-style:none}
+
+.shell{width:100%;max-width:64rem;margin-inline:auto;padding-inline:clamp(1rem,4vw,2rem)}
+.bar{background:var(--ink);color:#E6EDE8;font-size:.875rem}
+.bar .shell{display:flex;flex-wrap:wrap;gap:.35rem 1.5rem;align-items:center;
+  padding-block:.5rem}
+.bar p{margin:0}
+.bar b{color:#fff}
+.bar a{color:#fff;font-weight:600;display:inline-flex;align-items:center;
+  gap:.35em;min-height:32px}
+.bar a:hover{color:#C3D3C8}
+
+.ext{display:inline-block;width:.7em;height:.7em;border:2px solid currentColor;
+  position:relative;margin-left:.1em;flex:none}
+.ext::after{content:"";position:absolute;right:-.32em;top:-.32em;width:.55em;
+  height:.55em;border-top:2px solid currentColor;border-right:2px solid currentColor;
+  background:var(--ink)}
+.card .ext::after{background:#fff}
+
+main{padding-block:clamp(2.5rem,6vw,4.5rem)}
+.intro{max-width:40rem;margin-bottom:clamp(2rem,4vw,3rem)}
+.eyebrow{font-size:.8125rem;font-weight:600;letter-spacing:.1em;
+  text-transform:uppercase;color:var(--accent);margin:0 0 .5rem}
+.lead{font-size:1.125rem}
+
+.grid{display:grid;grid-template-columns:1fr;gap:1.5rem}
+@media (min-width:820px){.grid{grid-template-columns:1fr 1fr}}
+
+.card{background:#fff;border:1px solid var(--line);border-radius:14px;
+  padding:clamp(1.25rem,3vw,2rem);display:flex;flex-direction:column}
+.card h2{margin-bottom:.25em}
+.card .kind{font-size:.875rem;color:var(--soft);margin:0 0 1rem}
+.card ul{margin:0 0 1.5rem;font-size:.9375rem;color:var(--soft)}
+.card li{position:relative;padding-left:1.25rem;margin-bottom:.35rem}
+.card li::before{content:"";position:absolute;left:0;top:.62em;width:8px;
+  height:2px;background:var(--accent)}
+.card .go{margin-top:auto}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.5em;
+  min-height:48px;padding:.6rem 1.35rem;font-size:1rem;font-weight:600;
+  text-decoration:none;border:2px solid var(--brand);border-radius:10px;
+  background:var(--brand);color:#fff;transition:background-color .18s ease,
+  border-color .18s ease}
+.btn:hover{background:var(--brand-dark);border-color:var(--brand-dark);color:#fff}
+.path{display:block;font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+  font-size:.8125rem;color:var(--soft);margin-top:.75rem}
+
+.note{background:#fff;border:1px solid var(--line);border-left:3px solid var(--accent);
+  border-radius:0 10px 10px 0;padding:1rem 1.25rem;font-size:.9375rem;
+  margin-top:clamp(2rem,4vw,3rem);max-width:48rem}
+
+footer{background:var(--ink);color:#C8D5CC;font-size:.875rem;
+  padding-block:1.75rem;margin-top:clamp(2.5rem,5vw,4rem)}
+footer a{color:#fff;display:inline-flex;align-items:center;gap:.35em;min-height:44px}
+footer a:hover{color:#C3D3C8}
+footer ul{display:flex;flex-wrap:wrap;gap:0 1.5rem;margin-bottom:.75rem}
+footer p{margin:0}
+
+.skip{position:absolute;left:.75rem;top:-100px;z-index:9;padding:.75rem 1.1rem;
+  background:var(--brand);color:#fff;font-weight:600;text-decoration:none;
+  border-radius:0 0 10px 10px}
+.skip:focus{top:0;color:#fff}
+
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{transition-duration:.01ms!important;animation-duration:.01ms!important}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#inhalt">Zum Inhalt springen</a>
+
+<div class="bar">
+  <div class="shell">
+    <p><b>Designvorschauen</b> &ndash; Entwurfsseiten, keine echten Terminanfragen.</p>
+    <p><a href="/">Aktuelle Website öffnen&nbsp;<span class="ext" aria-hidden="true"></span></a></p>
+  </div>
+</div>
+
+<main id="inhalt">
+  <div class="shell">
+    <div class="intro">
+      <p class="eyebrow">Tierheilpraxis JessICan</p>
+      <h1>Zwei Entwürfe für die Website</h1>
+      <p class="lead">Beide Vorschauen zeigen dieselben Inhalte in
+        unterschiedlicher Gestaltung und Nutzerführung. Sie liegen neben der
+        veröffentlichten Website und ändern nichts an ihr.</p>
+      <p>Alle Seiten der Vorschauen sind auf <code>noindex, nofollow</code>
+        gesetzt. Die Kontaktformulare sind Demos: Sie prüfen Eingaben nur im
+        Browser und versenden nichts.</p>
+    </div>
+
+    <ul class="grid">
+      <li class="card">
+        <h2>Variante&nbsp;1: Sanft</h2>
+        <p class="kind">Sanfte Modernisierung des bestehenden Auftritts</p>
+        <p>Der vertraute Aufbau bleibt: großflächiger Bildkopf, bekannte
+          Menüpunkte, drei Leistungskarten. Verbessert wurden Texte, Abstände,
+          Lesbarkeit und die Wege zum Kontakt.</p>
+        <ul>
+          <li>13 Seiten</li>
+          <li>Klassischer Bildkopf, Open Sans in den Überschriften</li>
+          <li>Fünf Elemente als Übersicht mit Verweisen auf die aktuelle Website</li>
+          <li>Kurse auf einer gemeinsamen Seite</li>
+        </ul>
+        <p class="go">
+          <a class="btn" href="/prototyp/sanft/">Variante Sanft öffnen</a>
+          <span class="path">/prototyp/sanft/</span>
+        </p>
+      </li>
+
+      <li class="card">
+        <h2>Variante&nbsp;2: Komplett</h2>
+        <p class="kind">Kompletter Neuauftritt mit eigener Nutzerführung</p>
+        <p>Neu gedacht von der Startseite an: Split-Hero, eigene Wege für Hund
+          und Pferd, Navigation mit Untermenüs und eine zusammenhängende
+          Elemente-Welt mit Profilen und zwei Beobachtungsquizzen.</p>
+        <ul>
+          <li>28 Seiten</li>
+          <li>Split-Hero, Lora in den Überschriften</li>
+          <li>Eigene Seiten für Hund, Pferd und Einsatzgebiet</li>
+          <li>Fünf Hund-Profile plus je ein Quiz für Hund und Pferd</li>
+        </ul>
+        <p class="go">
+          <a class="btn" href="/prototyp/komplett/">Variante Komplett öffnen</a>
+          <span class="path">/prototyp/komplett/</span>
+        </p>
+      </li>
+    </ul>
+
+    <p class="note"><b>Zur Einordnung:</b> Diese Seite ist eine reine
+      Auswahlhilfe. Sie gehört nicht zur veröffentlichten Website, ist nicht in
+      der Sitemap enthalten und aus dem Menü der aktuellen Website nicht
+      verlinkt. Für eine echte Anfrage nutze bitte die
+      <a href="/contact/">Kontaktseite der aktuellen Website&nbsp;<span class="ext" aria-hidden="true"></span></a>.</p>
+  </div>
+</main>
+
+<footer>
+  <div class="shell">
+    <ul>
+      <li><a href="/">Startseite der aktuellen Website&nbsp;<span class="ext" aria-hidden="true"></span></a></li>
+      <li><a href="/contact/">Echte Anfrage auf der aktuellen Website&nbsp;<span class="ext" aria-hidden="true"></span></a></li>
+      <li><a href="/impressum/">Impressum und Datenschutz der aktuellen Website&nbsp;<span class="ext" aria-hidden="true"></span></a></li>
+    </ul>
+    <p>Bei akuten Problemen oder Notfällen wende dich bitte an eine
+      Tierarztpraxis oder den tierärztlichen Notdienst.</p>
+  </div>
+</footer>
+</body>
+</html>
