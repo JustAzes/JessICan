@@ -7,11 +7,20 @@
   text-transform: uppercase;
   border-radius: 10px;
   @include sans-serif-font;
+  &:hover { text-decoration: none; }
+  &.focus,
+  &:focus { outline: 0; box-shadow: 0 0 0 .2rem rgba(0, 123, 255, .25); }
 }
+// Existing footer links sit inside paragraphs, whose links are underlined.
+p a.btn { text-decoration: underline; }
+p a.btn:hover { text-decoration: none; }
+p a.btn:focus { text-decoration: underline; }
 
 .btn-primary {
   background-color: $primary;
   border-color: $primary;
+  &.focus,
+  &:focus { box-shadow: 0 0 0 .2rem rgba(38, 143, 255, .5); }
   &:hover,
   &:focus,
   &:active {
@@ -36,6 +45,8 @@
 .btn-success {
   background-color: $success;
   border-color: $success;
+  &.focus,
+  &:focus { box-shadow: 0 0 0 .2rem rgba(72, 180, 97, .5); }
   &:hover,
   &:focus,
   &:active {
@@ -46,8 +57,14 @@
 }
 
 .btn-info {
+  --bs-btn-color: #fff;
+  --bs-btn-hover-color: #fff;
+  --bs-btn-active-color: #fff;
+  --bs-btn-disabled-color: #fff;
   background-color: $info;
   border-color: $info;
+  &.focus,
+  &:focus { box-shadow: 0 0 0 .2rem rgba(58, 176, 195, .5); }
   &:hover,
   &:focus,
   &:active {

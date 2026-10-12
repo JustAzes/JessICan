@@ -1,0 +1,140 @@
+// Bootstrap 5 supplies the framework. These theme settings preserve the existing
+// site's typography, 30px grid gutters and Bootstrap 4 markup during migration.
+// Keep them separate from the generated subset so dependency updates are reviewable.
+:root {
+  --bs-border-radius: .25rem;
+  --bs-border-color: #dee2e6;
+  --bs-secondary-color: #6c757d;
+  --bs-emphasis-color: #212529;
+  --bs-emphasis-color-rgb: 33, 37, 41;
+  --bs-code-color: #e83e8c;
+}
+
+html { line-height: 1.15; }
+body { text-align: left; }
+h1 { font-size: 2.5rem; }
+h2 { font-size: 2rem; }
+h3 { font-size: 1.75rem; }
+h4 { font-size: 1.5rem; }
+small { font-size: 80%; font-weight: 400; }
+ol, ul { padding-left: 40px; }
+a { text-decoration: none; }
+a:hover { text-decoration: underline; }
+hr {
+  box-sizing: content-box;
+  height: 0;
+  overflow: visible;
+  color: gray;
+  border-top: 1px solid rgba(0, 0, 0, .1);
+  opacity: 1;
+}
+label { margin-bottom: .5rem; }
+legend { float: none; max-width: 100%; font-size: 1.5rem; }
+legend + * { clear: none; }
+code { word-break: break-word; }
+mark { padding: .2em; color: inherit; background-color: #fcf8e3; }
+kbd { padding: .2rem .4rem; border-radius: .2rem; }
+kbd kbd { font-weight: 700; }
+
+// Bootstrap 5's additional XXL breakpoint would widen the existing desktop site.
+.container, .row { --bs-gutter-x: 30px; }
+@media (min-width: 1200px) { .container { max-width: 1140px; } }
+.row > [class*="col-"] { position: relative; }
+// Bootstrap 4 applied column padding only to columns, not headings within a row.
+.row > :not([class*="col-"]) {
+  width: auto;
+  padding-right: 0;
+  padding-left: 0;
+}
+.row > p:not([class]) { margin-top: 30px; }
+
+// Aliases for existing physical-direction utility names.
+.ml-auto { margin-left: auto !important; }
+.float-left { float: left !important; }
+.float-right { float: right !important; }
+@media (min-width: 576px) { .mr-sm-2 { margin-right: .5rem !important; } }
+.text-muted { color: #6c757d !important; }
+// These Bootstrap 5 utility names already existed in the course markup, but
+// had no effect with Bootstrap 4. Preserve their previous neutral link styling.
+.link-success { color: #212529 !important; text-decoration-color: currentColor !important; }
+.link-success:hover, .link-success:focus {
+  color: #006061 !important;
+  text-decoration-color: currentColor !important;
+}
+.link-offset-2 { text-underline-offset: auto !important; }
+
+.navbar {
+  --bs-navbar-padding-x: 1rem;
+  --bs-navbar-color: rgba(0, 0, 0, .5);
+  --bs-navbar-hover-color: rgba(0, 0, 0, .7);
+  --bs-navbar-active-color: rgba(0, 0, 0, .9);
+  --bs-navbar-toggler-border-color: rgba(0, 0, 0, .1);
+  --bs-navbar-toggler-focus-width: 0;
+}
+.navbar-brand { display: inline-block; line-height: inherit; }
+.navbar-brand:hover, .navbar-brand:focus,
+.nav-link:hover, .nav-link:focus { text-decoration: none; }
+.nav-link:focus-visible { box-shadow: none; outline: 1px auto -webkit-focus-ring-color; }
+.navbar-toggler:focus { box-shadow: none; outline: 5px auto -webkit-focus-ring-color; }
+.navbar-toggler:hover { text-decoration: none; }
+@media (max-width: 991.98px) {
+  .navbar-expand-lg > .container { padding-right: 0; padding-left: 0; }
+}
+
+.card {
+  --bs-card-spacer-y: 1.25rem;
+  --bs-card-spacer-x: 1.25rem;
+  --bs-card-title-spacer-y: .75rem;
+  --bs-card-border-color: rgba(0, 0, 0, .125);
+}
+
+// Preserve the contact page's input heights and validation message sizing.
+.form-group { margin-bottom: 1rem; }
+.form-control {
+  height: calc(1.5em + .75rem + 2px);
+  color: #495057;
+  border-color: #ced4da;
+}
+.form-control:focus {
+  color: #495057;
+  border-color: #80bdff;
+  box-shadow: 0 0 0 .2rem rgba(0, 123, 255, .25);
+}
+textarea.form-control { height: auto; min-height: 0; }
+.form-control[readonly] { background-color: #e9ecef; opacity: 1; }
+.valid-feedback, .invalid-feedback { font-size: 80%; }
+
+// Bootstrap 5 tables use bottom borders and smaller cell padding by default.
+.table { --bs-table-bg: transparent; }
+.table > :not(caption) > * > * {
+  padding: .75rem;
+  color: #212529;
+  border-bottom-width: 0;
+  border-top: 1px solid #dee2e6;
+  box-shadow: none;
+}
+.table thead th { vertical-align: bottom; border-bottom: 2px solid #dee2e6; }
+.table tbody + tbody { border-top: 2px solid #dee2e6; }
+caption { padding-top: .75rem; padding-bottom: .75rem; color: #6c757d; }
+
+// Retain legacy dropdown positioning for the site's own JavaScript.
+.dropdown-menu {
+  --bs-dropdown-border-color: rgba(0, 0, 0, .15);
+  --bs-dropdown-item-padding-x: 1.5rem;
+  --bs-dropdown-header-padding-x: 1.5rem;
+  --bs-dropdown-divider-bg: #e9ecef;
+  --bs-dropdown-link-hover-bg: #f8f9fa;
+  --bs-dropdown-link-hover-color: #16181b;
+  --bs-dropdown-link-active-bg: #007bff;
+  top: 100%; left: 0; float: left; margin-top: .125rem;
+}
+.dropdown-menu-right { right: 0; left: auto; }
+.navbar-nav .dropdown-menu { float: none; }
+.dropleft, .dropright, .dropup { position: relative; }
+.dropup .dropdown-menu { top: auto; bottom: 100%; margin-top: 0; margin-bottom: .125rem; }
+.dropright .dropdown-menu { top: 0; left: 100%; margin-top: 0; margin-left: .125rem; }
+.dropleft .dropdown-menu { top: 0; right: 100%; left: auto; margin-top: 0; margin-right: .125rem; }
+.dropdown-item:hover, .dropdown-item:focus { text-decoration: none; }
+.collapsing { position: relative; }
+.modal-open { overflow: hidden; }
+.modal-backdrop { --bs-backdrop-zindex: 1040; }

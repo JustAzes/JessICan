@@ -1,0 +1,6 @@
+# SHA-256 digests published by GitHub for the official getzola/zola v0.23.6 release:
+# https://github.com/getzola/zola/releases/expanded_assets/v0.23.6
+cbffbd29b3f59c3f52633507c8cb945a7a02d8b1399b43b235f5932912297aa3  zola-v0.23.6-aarch64-apple-darwin.tar.gz
+266448fffbf7c7004ca399d0e76dd699541771096d8a42aede98cebe2a029d02  zola-v0.23.6-aarch64-unknown-linux-gnu.tar.gz
+79a4d0ab51a4d863c068e6e594c6fce36f0aa17429a414ea63066f5910d14460  zola-v0.23.6-x86_64-apple-darwin.tar.gz
+7d77a4220a4f699cba2fc0e0c7859f780e887e269159ad4fab90e11ea16c906f  zola-v0.23.6-x86_64-unknown-linux-musl.tar.gz

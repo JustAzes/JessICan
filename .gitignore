@@ -1,2 +1,4 @@
 public*
 todo*
+/.tools/
+__pycache__/

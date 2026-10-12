@@ -1,20 +1,20 @@
-{% macro page_title(page) %}
+{% component post.page_title(page, author) %}
 <a href="{{ page.permalink }}">
     <h2 class="post-title">{{ page.title }}</h2>
 </a>
 <p class="post-meta">Gepostet von
-    <a href="#">{{config.extra.author}}</a>
+    <a href="#">{{author}}</a>
     am {{ page.date | date(format="%e %B %Y")}}</p>
-{% endmacro page_list %}
+{% endcomponent post.page_title %}
 
-{% macro page_header(page) %}
+{% component post.page_header(page, author) %}
 <h1>{{ page.title }}</h1>
 <span class="meta">Gepostet von
-    <a href="#">{{config.extra.author}}</a>
+    <a href="#">{{author}}</a>
     am {{ page.date | date(format="%e %B %Y")}}
 </span>
-{% endmacro page_list %}
+{% endcomponent post.page_header %}
 
-{% macro page_up_title(page) %}
+{% component post.page_up_title(page) %}
 {{ page.title }}
-{% endmacro page_up_title %}
+{% endcomponent post.page_up_title %}

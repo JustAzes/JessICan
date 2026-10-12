@@ -1,10 +1,10 @@
 {% extends "template.html" %}
 {% block description %}
-    <meta name="description" content="Blogartikel '+{{ post_macros::page_up_title(page=page) }}+' von Tierheilpraktiker JessICan - natürlich gesund!">
+    <meta name="description" content="Blogartikel '+{{<post.page_up_title page />}}+' von Tierheilpraktiker JessICan - natürlich gesund!">
 {% endblock description %}
 {% block headextras %}
 {% endblock headextras %}
-{% block title %}{{ post_macros::page_up_title(page=page) }}{% endblock title %}
+{% block title %}{{<post.page_up_title page />}}{% endblock title %}
 
 
 {% block header %}
@@ -15,7 +15,7 @@
     <div class="row">
       <div class="col-lg-10 col-md-10 mx-auto">
         <div class="post-heading">
-          {{ post_macros::page_header(page=page) }}
+          {{<post.page_header page author={config.extra.author} />}}
         </div>
       </div>
     </div>

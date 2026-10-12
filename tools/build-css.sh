@@ -13,20 +13,13 @@
 set -euo pipefail
 
 BUILD_DIR="${1:-public_check}"
+SCRIPT_ROOT="$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")/.." && pwd)"
 
 if [ ! -d "$BUILD_DIR" ]; then
   echo "Build-Verzeichnis '$BUILD_DIR' fehlt. Erst 'zola build -o $BUILD_DIR' ausführen." >&2
   exit 1
 fi
 
-{
-  echo "// Automatisch erzeugt von tools/build-css.sh - nicht von Hand bearbeiten."
-  echo "// Enthält die Bootstrap-Regeln, die diese Website tatsächlich verwendet."
-  echo ""
-} > sass/_bootstrap-subset.scss
-
-python3 tools/bootstrap-subset.py "$BUILD_DIR" /tmp/bootstrap-subset.css
-cat /tmp/bootstrap-subset.css >> sass/_bootstrap-subset.scss
-rm -f /tmp/bootstrap-subset.css
+python3 "$SCRIPT_ROOT/tools/bootstrap-subset.py" "$BUILD_DIR" "$SCRIPT_ROOT/sass/_bootstrap-subset.scss"
 
 echo "sass/_bootstrap-subset.scss aktualisiert."

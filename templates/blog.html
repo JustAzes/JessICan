@@ -7,8 +7,8 @@
   <meta name="robots" content="noindex, follow">
 {% endblock headextras %}
 
-<!-- Page Header -->
 {% block header %}
+<!-- Page Header -->
   <header class="masthead" style="background-image: url('{{ get_url(path="/img/blog-main.jpeg") }}'); background-image: image-set(url('{{ get_url(path="/img/blog-main.webp") }}') type('image/webp'), url('{{ get_url(path="/img/blog-main.jpeg") }}') type('image/jpeg'))">
     <div class="overlay">
     </div>
@@ -41,9 +41,11 @@
     <div class="row">
       <div class="col-lg-10 col-md-10 mx-auto">
         <div class="posts">
-          {% for page in paginator.pages %}
+          {# Zola 0.23 breaks date ties by descending permalink. Preserve the
+             existing ascending permalink order for articles on the same date. #}
+          {% for page in paginator.pages | sort(attribute="permalink") | reverse | sort(attribute="date") | reverse %}
           <div class="post-preview">
-            {{ post_macros::page_title(page=page) }}
+            {{<post.page_title page author={config.extra.author} />}}
             <p class="post-summary">{{ page.summary | safe }}</p>
           </div>
           {% endfor %}

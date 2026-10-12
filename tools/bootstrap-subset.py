@@ -11,6 +11,8 @@ Aufruf:  python3 tools/bootstrap-subset.py <build-verzeichnis> <ziel.css>
 import os
 import re
 import sys
+import tempfile
+from pathlib import Path
 
 # Klassen, die Bootstrap oder clean-blog.js erst im Browser setzen und die
 # deshalb nie im generierten HTML stehen.
@@ -50,7 +52,7 @@ def used_classes(build_dir):
         for fn in files:
             if not fn.endswith((".html", ".js")):
                 continue
-            text = open(os.path.join(dirpath, fn), encoding="utf-8", errors="ignore").read()
+            text = Path(dirpath, fn).read_text(encoding="utf-8", errors="ignore")
             for m in attr.finditer(text):
                 for group in m.groups():
                     if group:
@@ -66,6 +68,10 @@ def split_top_level(css):
     """Zerlegt CSS in Blöcke: (at-regel oder None, inhalt)."""
     out, i, n = [], 0, len(css)
     while i < n:
+        while i < n and css[i].isspace():
+            i += 1
+        if i == n:
+            break
         if css[i] == "@":
             j = i
             while j < n and css[j] not in "{;":
@@ -122,12 +128,35 @@ def selector_needed(selector, classes):
     return bool(BARE_KEEP.match(selector.strip().lstrip(">+~ ")))
 
 
+def split_selectors(selectors):
+    """Kommas in :is(), :not() und Attributwerten sind keine Trenner."""
+    start, depth, quote, escaped = 0, 0, None, False
+    for i, char in enumerate(selectors):
+        if escaped:
+            escaped = False
+        elif char == "\\":
+            escaped = True
+        elif quote:
+            if char == quote:
+                quote = None
+        elif char in "\"'":
+            quote = char
+        elif char in "([":
+            depth += 1
+        elif char in ")]":
+            depth -= 1
+        elif char == "," and depth == 0:
+            yield selectors[start:i].strip()
+            start = i + 1
+    yield selectors[start:].strip()
+
+
 def filter_rules(chunk, classes, used_animations):
     kept = []
     for selectors, decls in split_rules(chunk):
         if not decls:
             continue
-        keep = [s for s in (x.strip() for x in selectors.split(",")) if s and selector_needed(s, classes)]
+        keep = [s for s in split_selectors(selectors) if s and selector_needed(s, classes)]
         if keep:
             kept.append(",".join(keep) + "{" + decls + "}")
             for m in re.finditer(r"animation(?:-name)?\s*:\s*([^;]+)", decls):
@@ -137,8 +166,18 @@ def filter_rules(chunk, classes, used_animations):
 
 
 def main():
-    build_dir, target = sys.argv[1], sys.argv[2]
-    src = open("static/css/bootstrap.min.css", encoding="utf-8").read()
+    if len(sys.argv) != 3:
+        raise SystemExit("Aufruf: bootstrap-subset.py <build-verzeichnis> <ziel.css>")
+    build_dir, target = Path(sys.argv[1]), Path(sys.argv[2])
+    if not build_dir.is_dir() or not any(build_dir.rglob("*.html")):
+        raise SystemExit(f"Kein HTML-Build gefunden: {build_dir}")
+    root = Path(__file__).resolve().parent.parent
+    src = (root / "static/css/bootstrap.min.css").read_text(encoding="utf-8")
+    # Die Herstellerangabe und MIT-Lizenz müssen auch in der Teilmenge und
+    # dem von Zola komprimierten Stylesheet erhalten bleiben.
+    licenses = re.findall(r"/\*!.*?\*/", src, flags=re.S)
+    if not licenses or not re.search(r"Bootstrap\s+v5\.3\.8\b", licenses[0]):
+        raise SystemExit("Erwartete Bootstrap-5.3.8-Lizenzangabe fehlt.")
     src = re.sub(r"/\*.*?\*/", "", src, flags=re.S)
 
     classes = used_classes(build_dir) | RUNTIME_CLASSES
@@ -176,9 +215,28 @@ def main():
         if name in used_animations:
             body_parts.append(at_rule + "{" + chunk + "}")
 
-    result = "".join(body_parts)
-    with open(target, "w", encoding="utf-8") as fh:
-        fh.write(result)
+    result = "\n".join(licenses) + "\n" + "".join(body_parts) + "\n"
+    # Leere CSS-Variablen sind gültig. Zolas Sass-Parser benötigt dafür ein
+    # Leerzeichen, das die Bedeutung der Herstellerdeklaration nicht ändert.
+    result = re.sub(r"(--[\w-]+:)(?=[;}])", r"\1 ", result)
+    if not body_parts:
+        raise SystemExit("Bootstrap-Teilmenge ist leer; Zieldatei unverändert.")
+    result = ("// Automatisch erzeugt von tools/build-css.sh; nicht von Hand bearbeiten.\n"
+              "// Bootstrap-Regeln aus dem fertigen HTML-Build und Laufzeitklassen.\n\n"
+              if target.suffix == ".scss" else "") + result
+    # Erst nach erfolgreicher Erzeugung ersetzen, auch bei parallelen Aufrufen.
+    mode = target.stat().st_mode & 0o777 if target.exists() else 0o644
+    temporary = None
+    try:
+        with tempfile.NamedTemporaryFile(mode="w", encoding="utf-8", dir=target.parent,
+                                         prefix=f".{target.name}.", delete=False) as fh:
+            temporary = Path(fh.name)
+            fh.write(result)
+        temporary.chmod(mode)
+        os.replace(temporary, target)
+    finally:
+        if temporary is not None:
+            temporary.unlink(missing_ok=True)
 
     print(f"Bootstrap: {len(src)/1024:.0f} KB -> {len(result)/1024:.0f} KB "
           f"({len(classes)} Klassen berücksichtigt)")

@@ -1,7 +1,7 @@
 +++
 title = "Impressum und Datenschutz"
 template = "impressum.html"
-render = false
+render = true
 +++
 
 ## Impressum

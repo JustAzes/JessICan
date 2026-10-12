@@ -18,13 +18,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 {%- for entry in entries %}
 {%- set path = entry.permalink | replace(from=base, to="") %}
-{%- if path is not containing("/page/") and path not in skip %}
+{%- if "/page/" not in path and path not in skip %}
   <url>
     <loc>{{ entry.permalink | escape_xml | safe }}</loc>
 {%- if entry.updated %}
     <lastmod>{{ entry.updated }}</lastmod>
 {%- endif %}
-    <priority>{% if path == "/" %}1.0{% elif path is starting_with("/pages/blog/") %}0.6{% elif path is starting_with("/categories/") or path is starting_with("/tags/") %}0.4{% elif path is starting_with("/elemente/") or path is starting_with("/quiz") %}0.8{% else %}0.9{% endif %}</priority>
+    <priority>{% if path == "/" %}1.0{% elif path is starting_with(pat="/pages/blog/") %}0.6{% elif path is starting_with(pat="/categories/") or path is starting_with(pat="/tags/") %}0.4{% elif path is starting_with(pat="/elemente/") or path is starting_with(pat="/quiz") %}0.8{% else %}0.9{% endif %}</priority>
   </url>
 {%- endif %}
 {%- endfor %}
