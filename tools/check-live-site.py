@@ -4,7 +4,8 @@
 Keeps inherited proxy and CA configuration. Never runs Zola or writes the build.
 Uses every HTML route, referenced assets, CSS dependencies, manifest icons and
 quiz result images by default; --all-files expands to every public build file.
-Waits for the deployed homepage, CSS and manifest before comparing the rest.
+Waits for the deployed homepage, CSS and manifest, then retries stale or missing
+files within the same publication deadline while comparing the complete build.
 
 Usage: python3 tools/check-live-site.py --build .tools/site --all-files
 """
@@ -17,6 +18,7 @@ import json
 import re
 import sys
 import time
+import urllib.error
 import urllib.request
 from html.parser import HTMLParser
 from pathlib import Path
@@ -154,15 +156,24 @@ def main():
                 item['pass'] = item['pass'] and item['bootstrap_5_3_8']
             if not item['pass']:
                 item['error'] = 'HTTP status or live bytes differ from the validated local build'
+        except urllib.error.HTTPError as error:
+            item.update({'pass': False, 'status': error.code,
+                         'error': type(error).__name__ + ': ' + str(error)})
         except Exception as error:
             item.update({'pass': False, 'error': type(error).__name__ + ': ' + str(error)})
         return item
+    def publication_pending(item):
+        # Only publication propagation is retried. Certificate, proxy,
+        # permission and unexpected-redirect failures remain immediate errors.
+        status = item.get('status', 0)
+        return not item['pass'] and (status in {200, 404} or 500 <= status < 600)
     if args.plan:
         report['paths'] = sorted(selected)
         print(json.dumps({k:v for k,v in report.items() if k not in {'paths','results'}}, indent=2))
     else:
         # A branch publication can precede Pages' CDN propagation. Check three
-        # independently changed files before claiming the expected build is live.
+        # representative files first; unchanged sentinels do not establish that
+        # modified subpages or newly added assets have finished publishing.
         sentinels = ('/', '/clean-blog.css', '/favicons/site.webmanifest')
         started = time.monotonic()
         deadline = started + args.wait_seconds
@@ -171,17 +182,19 @@ def main():
         latest = []
         if not missing:
             while True:
+                if attempt and time.monotonic() >= deadline:
+                    break
                 attempt += 1
                 latest = []
                 for path in sentinels:
                     remaining = max(0.1, deadline - time.monotonic())
                     item = check(path, min(args.timeout, remaining) if args.wait_seconds else args.timeout)
                     latest.append(item)
-                    if 'Tunnel connection failed: 403' in item.get('error', ''):
+                    if not item['pass'] and not publication_pending(item):
                         break
                 ready = len(latest) == len(sentinels) and all(item['pass'] for item in latest)
-                proxy_denied = any('Tunnel connection failed: 403' in item.get('error', '') for item in latest)
-                if ready or proxy_denied or time.monotonic() >= deadline:
+                fatal_error = any(not item['pass'] and not publication_pending(item) for item in latest)
+                if ready or fatal_error or time.monotonic() >= deadline:
                     break
                 print(f'Waiting for Pages publication: attempt {attempt}; '
                       f'{sum(item["pass"] for item in latest)}/{len(sentinels)} expected files ready', flush=True)
@@ -194,8 +207,26 @@ def main():
         if ready:
             print('PASS expected homepage, CSS and manifest are live', flush=True)
             checked_paths = {item['path'] for item in latest}
+            def check_published_file(path):
+                attempts = 0
+                route_started = time.monotonic()
+                while True:
+                    remaining = deadline - time.monotonic()
+                    if attempts and remaining <= 0:
+                        break
+                    attempts += 1
+                    timeout = min(args.timeout, max(0.1, remaining)) if remaining > 0 else args.timeout
+                    item = check(path, timeout)
+                    if not publication_pending(item) or time.monotonic() >= deadline:
+                        break
+                    print('Waiting for Pages publication: ' + path, flush=True)
+                    time.sleep(min(5, max(0, deadline - time.monotonic())))
+                if attempts > 1:
+                    item['publication_attempts'] = attempts
+                    item['publication_wait_seconds'] = round(time.monotonic() - route_started, 2)
+                return item
             with concurrent.futures.ThreadPoolExecutor(max_workers=max(1,min(args.workers,8))) as executor:
-                futures = [executor.submit(check, p) for p in sorted(selected) if p not in checked_paths]
+                futures = [executor.submit(check_published_file, p) for p in sorted(selected) if p not in checked_paths]
                 for future in concurrent.futures.as_completed(futures):
                     item = future.result()
                     report['results'].append(item)
@@ -203,6 +234,9 @@ def main():
                         print('FAIL ' + item['path'] + ': ' + item.get('error',''), flush=True)
                     elif len(report['results']) % 25 == 0:
                         print('Validated ' + str(len(report['results'])) + '/' + str(len(selected)), flush=True)
+        report['publication_wait']['all_files_seconds'] = round(time.monotonic() - started, 2)
+        report['publication_wait']['retried_routes'] = sum(
+            item.get('publication_attempts', 1) > 1 for item in report['results'])
         report['passed'] = sum(r['pass'] for r in report['results'])
         report['failed'] = len(report['results']) - report['passed']
         report['complete'] = len(report['results']) == len(selected) and not missing

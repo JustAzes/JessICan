@@ -77,6 +77,23 @@ Breakpoints liegen separat in `sass/_bootstrap-compat.scss`. Dadurch kann die
 Bootstrap-Version aktualisiert werden, ohne das gewünschte Aussehen an die
 Standarddarstellung der neuen Version anzupassen.
 
+## Hero-Bilder neu komprimieren
+
+Die AVIF-Hintergründe für Über mich und den Blogindex werden aus den vorhandenen
+WebP-Dateien bei identischer Auflösung und unverändertem Bildausschnitt erzeugt:
+
+```bash
+bash tools/encode-hero-images.sh
+```
+
+Dieser optionale Wartungsschritt benötigt ImageMagick 7 sowie FFmpeg/ffprobe 7
+oder neuer mit dem `libaom-av1`-Encoder und Python 3. Der normale Zola-Build und
+das Deployment benötigen diese Bildwerkzeuge nicht. Das Skript verwendet die
+festgelegten Farb- und Kompressionsparameter, prüft AVIF-Format und Pixelmaße
+und ersetzt ausschließlich `about.avif` und `blog-main.avif`. Die bestehenden
+WebP-/JPEG-Fallbacks bleiben erhalten. Nach Änderungen Darstellung und
+Lighthouse-Ergebnisse erneut prüfen; AVIF-Kompression ist verlustbehaftet.
+
 ## Migration und Browser prüfen
 
 Der Vergleich zweier Produktionsbuilds kontrolliert alle Ausgabepfade, sichtbaren
