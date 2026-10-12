@@ -2,6 +2,7 @@
 {% block title %}Über mich - {{ config.title }}{% endblock title %}
 {% block description %}
     <meta name="description" content="Über mich von Tierheilpraktiker JessICan: Akupunktur, Homöopathie, Phytotherapie, Manuelle Therapie, Aromatherapie & Ernährungsberatung für Hund & Pferd">
+    <link rel="preload" href="{{ get_url(path='/img/about.webp') }}" as="image" type="image/webp" fetchpriority="high">
 {% endblock description %}
 {% block header %}
 <!-- Page Header -->

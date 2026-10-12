@@ -121,6 +121,10 @@ Der zusätzliche direkte Browserlauf prüft Cookies, Speicher und automatisch
 geladene externe Ressourcen, ohne das Kontaktformular abzusenden. Browser-Caching
 funktioniert unabhängig von Cookies. GitHub Pages bestimmt die HTTP-Cache-Header;
 bestehende Indexierungsregeln können den Lighthouse-SEO-Wert bewusst begrenzen.
+`check-site.py` prüft zusätzlich alle erzeugten HTML- und CSS-Dateien auf externe
+Ressourcen, einschließlich Schriftarten und Inline-Styles. Automatisch geladene
+Fremdressourcen brechen den Build ab. Formspree bleibt als ausdrücklich gewünschtes
+Ziel beim bewussten Absenden des Kontaktformulars zulässig.
 
 Vollständige HTML-/JSON-Berichte liegen 30 Tage im Actions-Artefakt
 `lighthouse-reports`. Die kompakten Zusammenfassungen bleiben auf dem separaten

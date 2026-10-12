@@ -26,7 +26,7 @@ Seit über einem Jahrzehnt ist mein Lewitzer Gino nicht nur ein Teil meines Lebe
     <source media="(min-width: 768px)" srcset="https://tierheilpraxis-jessican.de/img/blog/fallbericht_gino_0_1024.avif 972w" type="image/avif" sizes="95vw">
     <source media="(min-width: 768px)" srcset="https://tierheilpraxis-jessican.de/img/blog/fallbericht_gino_0_1024.webp 972w" type="image/webp" sizes="95vw">
     <source media="(min-width: 768px)" srcset="https://tierheilpraxis-jessican.de/img/blog/fallbericht_gino_0_1024.jpeg 972w" type="image/jpeg" sizes="95vw">
-    <img src="https://tierheilpraxis-jessican.de/img/blog/fallbericht_gino_0_1024.jpeg" alt="Hustendes Pferd Gino" title="Hustendes Pferd Gino" loading="lazy" sizes="95vw"   style="max-width: 100%" loading="lazy">
+    <img width="972" height="437" src="https://tierheilpraxis-jessican.de/img/blog/fallbericht_gino_0_1024.jpeg" alt="Hustendes Pferd Gino" title="Hustendes Pferd Gino" loading="lazy" sizes="95vw"   style="max-width: 100%; height: auto;" loading="lazy">
 </picture>
 
 Wir klammerten uns an jede Hoffnung, folgten den Ratschlägen der Tierärzte, umarmten jede Therapieform, von Heubedampfungen bis hin zu starken Medikamenten wie Kortison und Salbutamol. Und tatsächlich, als die goldenen Blätter des Herbstes fielen, schien sich auch Ginos Husten zu verabschieden. Doch wie bei einer lückenhaften Sonnenfinsternis, die den Himmel plötzlich wieder verdunkelt, war unsere Erleichterung nur von kurzer Dauer.
@@ -60,7 +60,7 @@ Bis zum Frühlingsanbruch im April 2023 lag eine Pause in Ginos therapeutischer 
     <source media="(min-width: 768px)" srcset="https://tierheilpraxis-jessican.de/img/blog/fallbericht_gino_1_1024.avif 972w" type="image/avif" sizes="95vw">
     <source media="(min-width: 768px)" srcset="https://tierheilpraxis-jessican.de/img/blog/fallbericht_gino_1_1024.webp 972w" type="image/webp" sizes="95vw">
     <source media="(min-width: 768px)" srcset="https://tierheilpraxis-jessican.de/img/blog/fallbericht_gino_1_1024.jpeg 972w" type="image/jpeg" sizes="95vw">
-    <img src="https://tierheilpraxis-jessican.de/img/blog/fallbericht_gino_1_1024.jpeg" alt="Pferd Gino bei der Manuellen Therapie durch Tierheilpraktiker Jessican" title="Pferd Gino bei der Manuellen Therapie durch Tierheilpraktiker Jessican" loading="lazy" sizes="95vw"   style="max-width: 100%" loading="lazy">
+    <img width="972" height="546" src="https://tierheilpraxis-jessican.de/img/blog/fallbericht_gino_1_1024.jpeg" alt="Pferd Gino bei der Manuellen Therapie durch Tierheilpraktiker Jessican" title="Pferd Gino bei der Manuellen Therapie durch Tierheilpraktiker Jessican" loading="lazy" sizes="95vw"   style="max-width: 100%; height: auto;" loading="lazy">
 </picture>
 
 

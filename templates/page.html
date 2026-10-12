@@ -1,6 +1,7 @@
 {% extends "template.html" %}
 {% block description %}
     <meta name="description" content="Blogartikel '+{{<post.page_up_title page />}}+' von Tierheilpraktiker JessICan - natürlich gesund!">
+    <link rel="preload" href="{{ get_url(path='/img/blog-pages-bg.webp') }}" as="image" type="image/webp" fetchpriority="high">
 {% endblock description %}
 {% block headextras %}
 {% endblock headextras %}

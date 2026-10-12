@@ -8,6 +8,7 @@ No network requests or third-party Python packages are required.
 from __future__ import annotations
 
 import argparse
+import importlib.util
 import json
 from html.parser import HTMLParser
 from pathlib import Path
@@ -148,6 +149,13 @@ def check(root: Path) -> int:
             raise ValueError(f"Missing or invalid manifest icon: {url.path}")
         count += 1
     print(f"PASS {count} route, navigation, asset and data checks; sitemap and CNAME valid")
+    # Both GitHub Actions and Netlify use this entry point. Check every generated
+    # page and CSS file so a future external font/script cannot slip through.
+    guard_path = Path(__file__).with_name("check-local-resources.py")
+    guard_spec = importlib.util.spec_from_file_location("local_resources", guard_path)
+    guard = importlib.util.module_from_spec(guard_spec)
+    guard_spec.loader.exec_module(guard)
+    count += guard.check(root, base + "/")
     return count
 
 

@@ -28,7 +28,7 @@ In der faszinierenden Welt der Tiergesundheit gibt es eine Praxis, die nicht nur
   <source srcset="https://tierheilpraxis-jessican.de/img/kurse/akupressur_kurs_pferde_768.webp" type="image/webp" media="(min-width: 768px)">
   <source srcset="https://tierheilpraxis-jessican.de/img/kurse/akupressur_kurs_pferde_768.jpeg" type="image/jpeg" media="(min-width: 768px)">
 
-  <img src="https://tierheilpraxis-jessican.de/img/kurse/akupressur_kurs_pferde_1600.jpeg" alt="Akupressur Kurs für Pferde bei Dresden und Friedersdorf" style="max-width: 100%" loading="lazy">
+  <img width="1520" height="1520" src="https://tierheilpraxis-jessican.de/img/kurse/akupressur_kurs_pferde_1600.jpeg" alt="Akupressur Kurs für Pferde bei Dresden und Friedersdorf" style="max-width: min(100%, 729px); height: auto;" loading="lazy">
 </picture>
 
 

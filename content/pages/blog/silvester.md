@@ -43,7 +43,7 @@ tags = []
             <source media="(min-width: 1600px)" srcset="https://tierheilpraxis-jessican.de/img/blog/silvester_1_1920.avif 1824w" type="image/avif" sizes="95vw">
             <source media="(min-width: 1600px)" srcset="https://tierheilpraxis-jessican.de/img/blog/silvester_1_1920.webp 1824w" type="image/webp" sizes="95vw">
             <source media="(min-width: 1600px)" srcset="https://tierheilpraxis-jessican.de/img/blog/silvester_1_1920.jpeg 1824w" type="image/jpeg" sizes="95vw">
-            <img src="https://tierheilpraxis-jessican.de/img/blog/silvester_1_1920.jpeg" alt="Ängstlicher Hund zu Silvester in Radeberg" title="Ängstlicher Hund zu Silvester in Radeberg"  loading="lazy" sizes="30vw"  class="featurette-image img-fluid mx-auto rounded-img" style="aspect-ratio: 1/1; object-fit: cover;">
+            <img width="1824" height="1824" src="https://tierheilpraxis-jessican.de/img/blog/silvester_1_1920.jpeg" alt="Ängstlicher Hund zu Silvester in Radeberg" title="Ängstlicher Hund zu Silvester in Radeberg"  loading="lazy" sizes="30vw"  class="featurette-image img-fluid mx-auto rounded-img" style="aspect-ratio: 1/1; object-fit: cover;">
         </picture>
     </div>
   </div>
@@ -92,7 +92,7 @@ Diese eindrucksvolle Erfahrung hat mir vor Augen geführt, wie belastend und beu
         <source media="(min-width: 1600px)" srcset="https://tierheilpraxis-jessican.de/img/blog/silvester_2_1920.avif 1824w" type="image/avif" sizes="95vw">
         <source media="(min-width: 1600px)" srcset="https://tierheilpraxis-jessican.de/img/blog/silvester_2_1920.webp 1824w" type="image/webp" sizes="95vw">
         <source media="(min-width: 1600px)" srcset="https://tierheilpraxis-jessican.de/img/blog/silvester_2_1920.jpeg 1824w" type="image/jpeg" sizes="95vw">
-        <img src="https://tierheilpraxis-jessican.de/img/blog/silvester_2_1920.jpeg" alt="Glückliche Pferde zu Silvester in Dresden" title="Glückliche Pferde zu Silvester in Dresden" loading="lazy" sizes="100vw"  class="featurette-image img-fluid mx-auto rounded-img" style="aspect-ratio: 1/1; object-fit: cover;">
+        <img width="1824" height="1824" src="https://tierheilpraxis-jessican.de/img/blog/silvester_2_1920.jpeg" alt="Glückliche Pferde zu Silvester in Dresden" title="Glückliche Pferde zu Silvester in Dresden" loading="lazy" sizes="100vw"  class="featurette-image img-fluid mx-auto rounded-img" style="aspect-ratio: 1/1; object-fit: cover;">
       </picture>
     </div>
   </div>
@@ -159,7 +159,7 @@ Für Pferde, die in einem Offenstall leben, ist es wichtig, ihnen ihre Bewegungs
             <source media="(min-width: 1600px)" srcset="https://tierheilpraxis-jessican.de/img/blog/silvester_3_1920.avif 1824w" type="image/avif" sizes="95vw">
             <source media="(min-width: 1600px)" srcset="https://tierheilpraxis-jessican.de/img/blog/silvester_3_1920.webp 1824w" type="image/webp" sizes="95vw">
             <source media="(min-width: 1600px)" srcset="https://tierheilpraxis-jessican.de/img/blog/silvester_3_1920.jpeg 1824w" type="image/jpeg" sizes="95vw">
-            <img src="https://tierheilpraxis-jessican.de/img/blog/silvester_3_1024.jpeg" alt="Glücklicher Hund zu Silvester in Langebrück" title="Glücklicher Hund zu Silvester in Langebrück"  loading="lazy" sizes="30vw"  class="featurette-image img-fluid mx-auto rounded-img" style="aspect-ratio: 1/1; object-fit: cover;">
+            <img width="972" height="972" src="https://tierheilpraxis-jessican.de/img/blog/silvester_3_1024.jpeg" alt="Glücklicher Hund zu Silvester in Langebrück" title="Glücklicher Hund zu Silvester in Langebrück"  loading="lazy" sizes="30vw"  class="featurette-image img-fluid mx-auto rounded-img" style="aspect-ratio: 1/1; object-fit: cover;">
         </picture>
     </div>
   </div>

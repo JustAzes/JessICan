@@ -24,7 +24,7 @@ Pferde, die sich täglich frei und ungehindert bewegen können, legen große Str
   <source srcset="https://tierheilpraxis-jessican.de/img/blog/pferde_gesunderhaltend_bewegen_1_large.webp" type="image/webp" media="(min-width: 768px)">
   <source srcset="https://tierheilpraxis-jessican.de/img/blog/pferde_gesunderhaltend_bewegen_1_large.jpeg" type="image/jpeg" media="(min-width: 768px)">
 
-  <img src="https://tierheilpraxis-jessican.de/img/blog/pferde_gesunderhaltend_bewegen_1_large.jpeg" alt="Bild von Pferd in Bewegung" style="max-width: 100%" loading="lazy">
+  <img width="1280" height="852" src="https://tierheilpraxis-jessican.de/img/blog/pferde_gesunderhaltend_bewegen_1_large.jpeg" alt="Bild von Pferd in Bewegung" style="max-width: 100%; height: auto;" loading="lazy">
 </picture>
 
 Doch was bedeutet gesunderhaltend Bewegen genau?
@@ -62,7 +62,7 @@ Durch beispielsweise einseitige oder überstrapazierte Bewegungen können Verfil
   <source srcset="https://tierheilpraxis-jessican.de/img/blog/pferde_gesunderhaltend_bewegen_2_large.webp" type="image/webp" media="(min-width: 768px)">
   <source srcset="https://tierheilpraxis-jessican.de/img/blog/pferde_gesunderhaltend_bewegen_2_large.jpeg" type="image/jpeg" media="(min-width: 768px)">
 
-  <img src="https://tierheilpraxis-jessican.de/img/blog/pferde_gesunderhaltend_bewegen_2_large.jpeg" alt="Bild von Pferd in Bewegung mit eingezeichneten dorsalen und ventralen Muskelketten" style="max-width: 100%" loading="lazy">
+  <img width="1280" height="1152" src="https://tierheilpraxis-jessican.de/img/blog/pferde_gesunderhaltend_bewegen_2_large.jpeg" alt="Bild von Pferd in Bewegung mit eingezeichneten dorsalen und ventralen Muskelketten" style="max-width: 100%; height: auto;" loading="lazy">
 </picture>
 
 
@@ -86,7 +86,7 @@ Dieser Bewegungsablauf unterstützt dabei, das Pferd gerade zu richten. Jedes Pf
   <source srcset="https://tierheilpraxis-jessican.de/img/blog/pferde_gesunderhaltend_bewegen_3_large.webp" type="image/webp" media="(min-width: 768px)">
   <source srcset="https://tierheilpraxis-jessican.de/img/blog/pferde_gesunderhaltend_bewegen_3_large.jpeg" type="image/jpeg" media="(min-width: 768px)">
 
-  <img src="https://tierheilpraxis-jessican.de/img/blog/pferde_gesunderhaltend_bewegen_3_large.jpeg" alt="Bild von Pferd mit Zubehör für die Equikinetic®" style="max-width: 100%" loading="lazy">
+  <img width="1280" height="575" src="https://tierheilpraxis-jessican.de/img/blog/pferde_gesunderhaltend_bewegen_3_large.jpeg" alt="Bild von Pferd mit Zubehör für die Equikinetic®" style="max-width: 100%; height: auto;" loading="lazy">
 </picture>
 
 

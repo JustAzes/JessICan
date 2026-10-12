@@ -2,6 +2,7 @@
 {% block title %}Blog - {{ config.title }}{% endblock title %}
 {% block description %}
   <meta name="description" content="Blog von Tierheilpraktiker JessICan">
+  <link rel="preload" href="{{ get_url(path='/img/blog-main.webp') }}" as="image" type="image/webp" fetchpriority="high">
 {% endblock description %}
 {% block headextras %}
   <meta name="robots" content="noindex, follow">

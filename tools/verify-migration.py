@@ -108,11 +108,18 @@ def capture(root: Path, destination: Path, browser, width: int, route_path: str)
     page.route("**/*", respond)
     try:
         page.goto("https://tierheilpraxis-jessican.de" + route_path, wait_until="networkidle")
-        page.locator('img[loading="lazy"]').evaluate_all('(images) => images.forEach(image => image.loading = "eager")')
+        # Visit each viewport to load and paint lazy images as a visitor would.
+        # Changing loading="lazy" to eager can leave offscreen JPEGs unpainted
+        # in a full-page Chromium screenshot despite successful image.decode().
+        position = 0
+        for _ in range(200):
+            page.evaluate("position => window.scrollTo(0, position)", position)
+            page.wait_for_timeout(75)
+            if position + 1000 >= page.evaluate("document.body.scrollHeight"):
+                break
+            position += 800
         page.wait_for_load_state("networkidle")
         page.evaluate("Promise.all([...document.images].filter(image => image.currentSrc || image.getAttribute('src')).map(image => image.decode().catch(() => {})))")
-        page.evaluate("window.scrollTo(0, document.body.scrollHeight)")
-        page.wait_for_timeout(300)
         page.evaluate("window.scrollTo(0, 0)")
         page.evaluate("document.fonts.ready")
         page.wait_for_timeout(350)

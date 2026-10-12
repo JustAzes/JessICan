@@ -32,7 +32,7 @@ Mit dem Beginn des Herbstes stehen wir und unsere Pferde vor vielen Herausforder
           <source media="(min-width: 768px)" srcset="https://tierheilpraxis-jessican.de/img/blog/herbst_pferd_1_1024.avif 972w" type="image/avif" sizes="95vw">
           <source media="(min-width: 768px)" srcset="https://tierheilpraxis-jessican.de/img/blog/herbst_pferd_1_1024.webp 972w" type="image/webp" sizes="95vw">
           <source media="(min-width: 768px)" srcset="https://tierheilpraxis-jessican.de/img/blog/herbst_pferd_1_1024.jpeg 972w" type="image/jpeg" sizes="95vw">
-          <img src="https://tierheilpraxis-jessican.de/img/blog/herbst_pferd_1_1024.jpeg" alt="Bild vom Herbst bei Tierheilpraxis nahe Pulsnitz" title="Bild vom Herbst bei Tierheilpraxis nahe Pulsnitz" loading="lazy" sizes="95vw"   class="featurette-image img-fluid mx-auto rounded-img" style="aspect-ratio: 1/1; object-fit: cover;">
+          <img width="972" height="972" src="https://tierheilpraxis-jessican.de/img/blog/herbst_pferd_1_1024.jpeg" alt="Bild vom Herbst bei Tierheilpraxis nahe Pulsnitz" title="Bild vom Herbst bei Tierheilpraxis nahe Pulsnitz" loading="lazy" sizes="95vw"   class="featurette-image img-fluid mx-auto rounded-img" style="aspect-ratio: 1/1; object-fit: cover;">
       </picture>
     </div>
   </div>
@@ -74,7 +74,7 @@ Besonders gefährliche Pflanzen sind Eiben, Robinien, Thuja, Samen des Bergahorn
           <source media="(min-width: 768px)" srcset="https://tierheilpraxis-jessican.de/img/blog/herbst_pferd_2_1024.avif 972w" type="image/avif" sizes="95vw">
           <source media="(min-width: 768px)" srcset="https://tierheilpraxis-jessican.de/img/blog/herbst_pferd_2_1024.webp 972w" type="image/webp" sizes="95vw">
           <source media="(min-width: 768px)" srcset="https://tierheilpraxis-jessican.de/img/blog/herbst_pferd_2_1024.jpeg 972w" type="image/jpeg" sizes="95vw">
-          <img src="https://tierheilpraxis-jessican.de/img/blog/herbst_pferd_2_1024.jpeg" alt="Pferd im Herbst auf Weide bei Radeberg" title="Pferd im Herbst auf Weide bei Radeberg" loading="lazy" sizes="95vw"   class="featurette-image img-fluid mx-auto rounded-img" style="aspect-ratio: 1/1; object-fit: cover;">
+          <img width="972" height="972" src="https://tierheilpraxis-jessican.de/img/blog/herbst_pferd_2_1024.jpeg" alt="Pferd im Herbst auf Weide bei Radeberg" title="Pferd im Herbst auf Weide bei Radeberg" loading="lazy" sizes="95vw"   class="featurette-image img-fluid mx-auto rounded-img" style="aspect-ratio: 1/1; object-fit: cover;">
       </picture>
     </div>
   </div>
@@ -108,7 +108,7 @@ Daher sollten die Weiden vor allem dann geschlossen werden, wenn der Sommer lang
           <source media="(min-width: 768px)" srcset="https://tierheilpraxis-jessican.de/img/blog/herbst_pferd_3_1024.avif 972w" type="image/avif" sizes="95vw">
           <source media="(min-width: 768px)" srcset="https://tierheilpraxis-jessican.de/img/blog/herbst_pferd_3_1024.webp 972w" type="image/webp" sizes="95vw">
           <source media="(min-width: 768px)" srcset="https://tierheilpraxis-jessican.de/img/blog/herbst_pferd_3_1024.jpeg 972w" type="image/jpeg" sizes="95vw">
-          <img src="https://tierheilpraxis-jessican.de/img/blog/herbst_pferd_3_1024.jpeg" alt="Hagebuttenstrauch in Dresden" title="Hagebuttenstrauch in Dresden" loading="lazy" sizes="95vw"   class="featurette-image img-fluid mx-auto rounded-img" style="aspect-ratio: 1/1; object-fit: cover;">
+          <img width="972" height="972" src="https://tierheilpraxis-jessican.de/img/blog/herbst_pferd_3_1024.jpeg" alt="Hagebuttenstrauch in Dresden" title="Hagebuttenstrauch in Dresden" loading="lazy" sizes="95vw"   class="featurette-image img-fluid mx-auto rounded-img" style="aspect-ratio: 1/1; object-fit: cover;">
       </picture>
     </div>
   </div>

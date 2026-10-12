@@ -2,6 +2,7 @@
 {% block title %}Kontakt - {{ config.title }}{% endblock title %}
 {% block description %}
     <meta name="description" content="Kontaktseite von Tierheilpraktiker JessICan: Akupunktur, Homöopathie, Phytotherapie, Manuelle Therapie, Aromatherapie & Ernährungsberatung">
+    <link rel="preload" href="{{ get_url(path='/img/contact.webp') }}" as="image" type="image/webp" fetchpriority="high">
 {% endblock description %}
 {% block header %}
 <!-- Page Header -->
@@ -34,7 +35,7 @@
         <div class="control-group">
           <div class="form-group floating-label-form-group controls">
             <label for="name">Name</label>
-            <input type="text" class="form-control" placeholder="Name" id="name" name="name" required
+            <input type="text" class="form-control" placeholder="Name" id="name" name="name" autocomplete="name" required
               data-validation-required-message="Bitte tragen Sie Ihren Namen ein.">
             <p class="help-block text-danger"></p>
           </div>
@@ -42,14 +43,14 @@
         <div class="control-group">
           <div class="form-group floating-label-form-group controls">
             <label for="email">Email Address</label>
-            <input type="email" class="form-control" placeholder="E-Mail Adresse" id="email" name="email" required
+            <input type="email" class="form-control" placeholder="E-Mail Adresse" id="email" name="email" autocomplete="email" required
               data-validation-required-message="Bitte tragen Sie Ihre E-Mail-Adresse ein.">
             <p class="help-block text-danger"></p>
           </div>
         </div>
         <div class="form-group floating-label-form-group controls">
           <label for="telefonnummer">Telefonnummer</label>
-          <input type="text" class="form-control" placeholder="Telefonnummer" id="telefonnummer" name="telefonnummer" pattern="^(?:\+49|0(?!0))\d{8,}$"title="Bitte geben Sie eine gültige deutsche Telefonnummer ein (mit Vorwahl), beginnend mit 0 oder +49">
+          <input type="text" class="form-control" placeholder="Telefonnummer" id="telefonnummer" name="telefonnummer" autocomplete="tel" inputmode="tel" pattern="^(?:\+49|0(?!0))\d{8,}$" title="Bitte geben Sie eine gültige deutsche Telefonnummer ein (mit Vorwahl), beginnend mit 0 oder +49">
           <p class="help-block text-danger"></p>
         </div>
         <div class="form-group floating-label-form-group controls">
@@ -104,6 +105,5 @@
     if (nachricht) document.getElementById('message').value = nachricht;
   });
   </script>
-  </body>
   
 {% endblock extrascripts %}

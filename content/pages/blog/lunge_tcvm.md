@@ -41,7 +41,7 @@ In der Traditionellen Chinesischen Veterinärmedizin (TCVM) nimmt die Lunge eine
         <source media="(min-width: 1600px)" srcset="https://tierheilpraxis-jessican.de/img/blog/lunge_tcvm_1_1920.avif 1824w" type="image/avif" sizes="95vw">
         <source media="(min-width: 1600px)" srcset="https://tierheilpraxis-jessican.de/img/blog/lunge_tcvm_1_1920.webp 1824w" type="image/webp" sizes="95vw">
         <source media="(min-width: 1600px)" srcset="https://tierheilpraxis-jessican.de/img/blog/lunge_tcvm_1_1920.jpeg 1824w" type="image/jpeg" sizes="95vw">
-        <img src="https://tierheilpraxis-jessican.de/img/blog/lunge_tcvm_1_1920.jpeg" alt="Die Lunge in der TCVM - Pferd" title="Die Lunge in der TCVM" loading="lazy" sizes="100vw" class="featurette-image img-fluid mx-auto rounded-img" style="aspect-ratio: 1/1; object-fit: cover;">
+        <img width="1824" height="1824" src="https://tierheilpraxis-jessican.de/img/blog/lunge_tcvm_1_1920.jpeg" alt="Die Lunge in der TCVM - Pferd" title="Die Lunge in der TCVM" loading="lazy" sizes="100vw" class="featurette-image img-fluid mx-auto rounded-img" style="aspect-ratio: 1/1; object-fit: cover;">
       </picture>
     </div>
   </div>
@@ -154,7 +154,7 @@ Dieses Muster zeigt sich durch:
             <source media="(min-width: 768px)" srcset="https://tierheilpraxis-jessican.de/img/blog/lunge_tcvm_1024.avif 972w" type="image/avif" sizes="95vw">
             <source media="(min-width: 768px)" srcset="https://tierheilpraxis-jessican.de/img/blog/lunge_tcvm_1024.webp 972w" type="image/webp" sizes="95vw">
             <source media="(min-width: 768px)" srcset="https://tierheilpraxis-jessican.de/img/blog/lunge_tcvm_1024.jpeg 972w" type="image/jpeg" sizes="95vw">
-            <img src="https://tierheilpraxis-jessican.de/img/blog/lunge_tcvm_1024.jpeg" alt="Lungenmeridian Hund" title="Lungenmeridian einer Hündin in Dresden"  loading="lazy" sizes="30vw"  class="featurette-image img-fluid mx-auto rounded-img" style="aspect-ratio: 1/1; object-fit: cover;">
+            <img width="972" height="1202" src="https://tierheilpraxis-jessican.de/img/blog/lunge_tcvm_1024.jpeg" alt="Lungenmeridian Hund" title="Lungenmeridian einer Hündin in Dresden"  loading="lazy" sizes="30vw"  class="featurette-image img-fluid mx-auto rounded-img" style="aspect-ratio: 1/1; object-fit: cover;">
         </picture>
     </div>
   </div>
