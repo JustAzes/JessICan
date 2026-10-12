@@ -107,3 +107,35 @@ Netzzugang zur Produktionsdomain; GitHub Actions führt sie nach jedem erfolgrei
 Der Screenshot-Vergleich prüft Mobil-, Tablet- und Desktopbreite. Ein bloßer
 Build-Erfolg ersetzt diese Prüfung beim Wechsel der Zola- oder Bootstrap-Version
 nicht.
+
+## Lighthouse und Cookie-Freiheit prüfen
+
+Nach einem vollständig erfolgreichen Deployment führt `Lighthouse production
+audit` echte mobile und Desktop-Messungen der Produktionsdomain aus. Lighthouse,
+Chrome-Launcher und Playwright sind ausschließlich Prüfwerkzeuge unter
+`tools/performance`; sie werden weder für den Website-Build benötigt noch an
+Besucher ausgeliefert. Die Versionen und Paket-Digests sind im npm-Lockfile
+festgelegt und werden durch Dependabot geprüft.
+
+Der zusätzliche direkte Browserlauf prüft Cookies, Speicher und automatisch
+geladene externe Ressourcen, ohne das Kontaktformular abzusenden. Browser-Caching
+funktioniert unabhängig von Cookies. GitHub Pages bestimmt die HTTP-Cache-Header;
+bestehende Indexierungsregeln können den Lighthouse-SEO-Wert bewusst begrenzen.
+
+Vollständige HTML-/JSON-Berichte liegen 30 Tage im Actions-Artefakt
+`lighthouse-reports`. Die kompakten Zusammenfassungen bleiben auf dem separaten
+Branch `performance-reports` unter `runs/<Actions-Lauf-ID>/` erhalten. Dieser
+Branch hat keinen Einfluss auf die veröffentlichte Seite.
+
+Für einen eigenen Lauf sind Node.js ab 22.19 und Chrome/Chromium erforderlich:
+
+```bash
+npm ci --prefix tools/performance --ignore-scripts --no-audit --no-fund
+CHROME_PATH=/usr/bin/chromium node tools/performance/run-lighthouse.mjs \
+  --output .tools/lighthouse --runs 1
+```
+
+Diese Messung braucht direkten Netzzugang zur Produktionsdomain. Für lokale
+Funktionsprüfungen kann `--base-url http://127.0.0.1:1111` angegeben werden;
+lokale Ergebnisse sind keine Live-PageSpeed-Messungen. Mehrere Wiederholungen
+lassen sich mit `--runs 3` ausführen, einzelne Seiten mit `--routes /,/contact/`.

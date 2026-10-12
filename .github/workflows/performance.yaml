@@ -1,0 +1,104 @@
+name: Lighthouse production audit
+
+on:
+  workflow_run:
+    workflows: [Build and deploy GH Pages]
+    types: [completed]
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: lighthouse-production
+  cancel-in-progress: false
+
+jobs:
+  audit:
+    if: >-
+      github.ref == 'refs/heads/main' &&
+      (github.event_name == 'workflow_dispatch' ||
+       (github.event.workflow_run.conclusion == 'success' &&
+        github.event.workflow_run.head_repository.full_name == github.repository))
+    runs-on: ubuntu-24.04
+    timeout-minutes: 35
+    outputs:
+      reports_ready: ${{ steps.reports.outputs.ready }}
+    steps:
+      - name: Check out the deployed source
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          ref: ${{ github.event.workflow_run.head_sha || github.sha }}
+          persist-credentials: false
+
+      - name: Install the audit Node.js version
+        uses: actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38 # v6.5.0
+        with:
+          node-version: '24.19.0'
+          package-manager-cache: false
+
+      - name: Install locked audit tools
+        run: npm ci --prefix tools/performance --ignore-scripts --no-audit --no-fund
+
+      # Chrome connects directly to production with Lighthouse's standard
+      # mobile and desktop settings. No proxy fulfilment or local build bytes.
+      - name: Audit the homepage and important subpages
+        env:
+          CHROME_PATH: /usr/bin/google-chrome
+          AUDIT_SOURCE_SHA: ${{ github.event.workflow_run.head_sha || github.sha }}
+          AUDIT_RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+        run: node tools/performance/run-lighthouse.mjs --output .tools/lighthouse --runs 1
+
+      - name: Check for reports
+        id: reports
+        if: always()
+        run: |
+          if test -f .tools/lighthouse/summary.json; then
+            echo 'ready=true' >> "$GITHUB_OUTPUT"
+          fi
+          if test -f .tools/lighthouse/summary.md; then
+            cat .tools/lighthouse/summary.md >> "$GITHUB_STEP_SUMMARY"
+          fi
+
+      - name: Save complete Lighthouse reports
+        if: always()
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        with:
+          name: lighthouse-reports
+          path: .tools/lighthouse
+          include-hidden-files: true
+          if-no-files-found: warn
+          retention-days: 30
+
+  publish-reports:
+    needs: audit
+    if: always() && needs.audit.outputs.reports_ready == 'true'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    permissions:
+      contents: write
+    steps:
+      - name: Download public website audit reports
+        uses: actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333 # v8.0.2
+        with:
+          name: lighthouse-reports
+          path: .tools/lighthouse
+          digest-mismatch: error
+
+      - name: Prepare the compact audit history
+        run: |
+          mkdir -p .tools/audit-history
+          cp .tools/lighthouse/summary.json .tools/lighthouse/summary.md .tools/audit-history/
+
+      # This separate branch contains only public-site measurements. It is
+      # never used as the Pages source and cannot alter the website.
+      - name: Publish reviewable audit history
+        uses: peaceiris/actions-gh-pages@84c30a85c19949d7eee79c4ff27748b70285e453 # v4.1.0
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_branch: performance-reports
+          publish_dir: .tools/audit-history
+          destination_dir: runs/${{ github.run_id }}
+          keep_files: true
+          force_orphan: false
