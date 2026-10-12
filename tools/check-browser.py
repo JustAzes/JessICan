@@ -179,7 +179,7 @@ def check(root: Path, executable: str, live: bool = False,
             require(page.locator("#email").evaluate("field => field.validity.typeMismatch"),
                     "Malformed email incorrectly validates")
             page.locator("#email").fill("test@example.invalid")
-            privacy = page.get_by_role("checkbox", name="Ich habe den Hinweis")
+            privacy = page.get_by_role("checkbox", name="Formspree")
             require(privacy.is_visible() and not privacy.is_checked(),
                     "Privacy acknowledgement must start visible and unchecked")
             require(privacy.evaluate("field => field.required && field.validity.valueMissing"),
