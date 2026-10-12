@@ -138,6 +138,15 @@ def check(root: Path) -> int:
     cname = (root / "CNAME").read_text().strip()
     if cname != "tierheilpraxis-jessican.de":
         raise ValueError("Production CNAME changed")
+    manifest_path = "/favicons/site.webmanifest"
+    manifest = json.loads(site_path(root, manifest_path).read_text(encoding="utf-8"))
+    for icon in manifest.get("icons", []):
+        url = urlsplit(urljoin(base + manifest_path, icon["src"]))
+        if url.netloc != origin.netloc:
+            raise ValueError("Manifest icon must be hosted on the site")
+        if not site_path(root, url.path).read_bytes().startswith(b"\x89PNG\r\n\x1a\n"):
+            raise ValueError(f"Missing or invalid manifest icon: {url.path}")
+        count += 1
     print(f"PASS {count} route, navigation, asset and data checks; sitemap and CNAME valid")
     return count
 
