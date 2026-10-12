@@ -56,13 +56,13 @@ Die Datenverarbeitung auf dieser Website erfolgt durch den Websitebetreiber. Des
 
 ##### Wie erfassen wir Ihre Daten?
 
-Ihre Daten werden zum einen dadurch erhoben, dass Sie uns diese mitteilen. Hierbei kann es sich z. B. um Daten handeln, die Sie in ein Kontaktformular eingeben.
+Ihre Daten werden zum einen dadurch erhoben, dass Sie uns diese mitteilen, zum Beispiel beim Absenden einer Anfrage über das Kontaktformular oder bei einer Kontaktaufnahme per E-Mail oder Telefon. Eingaben in das Kontaktformular werden erst mit dem bewussten Absenden an Formspree übermittelt.
 
-Andere Daten werden automatisch oder nach Ihrer Einwilligung beim Besuch der Website durch unsere IT-Systeme erfasst. Das sind vor allem technische Daten (z. B. Internetbrowser, Betriebssystem oder Uhrzeit des Seitenaufrufs). Die Erfassung dieser Daten erfolgt automatisch, sobald Sie diese Website betreten.
+Beim Aufruf der Website verarbeitet unser Hosting-Anbieter außerdem technische Daten, die Ihr Browser übermittelt, zum Beispiel die IP-Adresse, Angaben zum Browser und den Zeitpunkt des Seitenaufrufs. Einzelheiten hierzu finden Sie im Abschnitt „Hosting“.
 
 ##### Wofür nutzen wir Ihre Daten?
 
-Die Daten werden erhoben, um eine fehlerfreie Bereitstellung der Website zu gewährleisten. Eine Analyse Ihres Nutzerverhaltens findet nicht statt: Wir setzen weder Cookies noch Analyse- oder Trackingdienste ein.
+Technische Daten dienen der Bereitstellung, Stabilität und Sicherheit der Website. Die Angaben aus einer Kontaktaufnahme verwenden wir zur Bearbeitung und Beantwortung Ihrer Anfrage. Wir setzen weder Cookies noch Analyse- oder Trackingdienste ein.
 
 ##### Welche Rechte haben Sie bezüglich Ihrer Daten?
 
@@ -76,13 +76,13 @@ Wir hosten die Inhalte unserer Website bei folgendem Anbieter:
 
 #### Externes Hosting
 
-Unser Hosting-Anbieter erhebt in sogenannten Logfiles die folgenden Daten, die von Ihrem Browser übermittelt werden:
+Die Website wird als statische Website über GitHub Pages bereitgestellt. Beim Abruf der Seiten verarbeitet GitHub technische Daten, die Ihr Browser übermittelt. Dazu können insbesondere gehören:
 
-IP-Adresse, die Adresse der zuvor besuchten Website (Referer-Anfrageheader), Datum und Uhrzeit der Anfrage, Zeitzonendifferenz zur Greenwich Mean Time (GMT), Inhalt der Anforderung, HTTP-Statuscode, übertragene Datenmenge, Website, von der die Anforderung stammt, sowie Informationen zu Browser und Betriebssystem.
+IP-Adresse, Datum und Uhrzeit der Anfrage, die angeforderte Seite oder Datei, HTTP-Statuscode, übertragene Datenmenge sowie Angaben zu Browser und Betriebssystem. Je nach Browsereinstellung kann auch die Adresse der zuvor besuchten Seite als Referer übermittelt werden. Solche Angaben können in technischen Serverprotokollen gespeichert werden.
 
 Die Erhebung dieser Daten ist notwendig, um unsere Website darzustellen und deren Stabilität und Sicherheit zu gewährleisten. Dies entspricht unserem berechtigten Interesse gemäß Art. 6 Abs. 1 S. 1 lit. f DSGVO.
 
-Es findet kein Tracking statt, und wir haben keinen direkten Zugriff auf diese Daten. Stattdessen erhalten wir lediglich eine anonymisierte, statistische Zusammenfassung, welche die Adresse der zuvor besuchten Seite, die Häufigkeit der jeweils aufgerufenen Seiten und die Anzahl der eindeutigen Besucher enthält. Diese Daten werden nicht mit anderen Daten zusammengeführt.
+Auf unserer Website sind keine Analyse- oder Trackingdienste eingebunden. Technische Serverprotokolle des Hosting-Anbieters sind hiervon unabhängig.
 
 Für die Bereitstellung unserer Website nutzen wir den folgenden Hosting-Anbieter:
 
@@ -91,20 +91,15 @@ GitHub Inc.
 San Francisco, CA 94107
 United States
 
-GitHub ist Empfänger Ihrer personenbezogenen Daten. Unser berechtigtes Interesse gemäß Art. 6 Abs. 1 S. 1 lit. f DSGVO besteht darin, selbst keinen Server in unseren Räumlichkeiten betreiben zu müssen. Der Serverstandort befindet sich in den USA.
+GitHub ist Empfänger der beim Seitenaufruf anfallenden technischen Daten. Unser berechtigtes Interesse gemäß Art. 6 Abs. 1 S. 1 lit. f DSGVO besteht in der zuverlässigen und sicheren Bereitstellung dieser Website. GitHub hat seinen Sitz in den USA; eine Verarbeitung von Daten außerhalb der Europäischen Union, insbesondere in den USA, ist möglich.
 
-Weitere Informationen zu Widerspruchs- und Beseitigungsmöglichkeiten gegenüber GitHub finden Sie hier: https://docs.github.com/en/free-pro-team@latest/github/site-policy/github-privacy-statement#github-pages
+Weitere Informationen zur Datenverarbeitung, zu internationalen Datenübermittlungen und zu Betroffenenrechten bei GitHub finden Sie in der [Datenschutzerklärung des Anbieters](https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement).
 
 Sie haben das Recht, der Verarbeitung Ihrer Daten zu widersprechen. Ob der Widerspruch erfolgreich ist, hängt von einer Interessenabwägung ab.
 
-Die Daten werden gelöscht, sobald der Zweck der Verarbeitung entfällt.
+Informationen zur Speicherung und Löschung der durch GitHub verarbeiteten Daten finden Sie ebenfalls in der Datenschutzerklärung des Anbieters.
 
 Die Verarbeitung der in diesem Abschnitt genannten Daten ist weder gesetzlich noch vertraglich vorgeschrieben. Ohne diese Verarbeitung kann die Funktionsfähigkeit der Website jedoch nicht garantiert werden.
-
-GitHub hat Compliance-Maßnahmen für internationale Datenübermittlungen implementiert. Diese gelten für alle weltweiten Aktivitäten von GitHub, bei denen personenbezogene Daten von natürlichen Personen aus der EU verarbeitet werden. Diese Maßnahmen basieren auf den EU-Standardvertragsklauseln (SCCs). Weitere Informationen finden Sie hier: https://docs.github.com/en/free-pro-team@latest/github/site-policy/github-data-protection-addendum#attachment-1–the-standard-contractual-clauses-processors
-
-#### Rechtliche Hinweise zum Hosting:
-Grundsätzlich ist ein Auftragsverarbeitungsvertrag mit dem Hosting-Anbieter abzuschließen. Das Bayerische Landesamt für Datenschutzaufsicht hat jedoch eine Ausnahme für das Hosting rein statischer Websites gemacht. Wenn die Website der Selbstdarstellung dient, z. B. von Vereinen oder Kleinunternehmen, keine personenbezogenen Daten an den Betreiber übermittelt werden und kein Tracking stattfindet, liegt keine Auftragsverarbeitung vor. Weiter heißt es: „Die Tatsache, dass auch beim Hosting von statischen Webseiten zwangsläufig IP-Adressen, d. h. personenbezogene Daten, verarbeitet werden müssen, führt nicht zur Annahme einer Auftragsverarbeitung. Das wäre nicht sachgerecht. Die (kurzfristige) IP-Adressenspeicherung ist vielmehr noch der TK-Zugangsvermittlung des Website-Hosters nach dem TKG zuzurechnen und dient in erster Linie Sicherheitszwecken des Hosters.“ (https://www.lda.bayern.de/media/veroeffentlichungen/FAQ_Hosting_keine_Auftragsverarbeitung.pdf) Wir gehen davon aus, dass diese Ausnahme auf GitHub Pages anwendbar ist.
 
 ### 3. Allgemeine Hinweise und Pflichtinformationen
 #### Datenschutz
@@ -144,24 +139,10 @@ letztgenannten Fall erfolgt die Löschung nach Fortfall dieser Gründe.
 
 #### Allgemeine Hinweise zu den Rechtsgrundlagen der Datenverarbeitung auf dieser Website
 
-Sofern Sie in die Datenverarbeitung eingewilligt haben, verarbeiten wir Ihre personenbezogenen Daten auf
-Grundlage von Art. 6 Abs. 1 lit. a DSGVO bzw. Art. 9 Abs. 2 lit. a DSGVO, sofern besondere Datenkategorien
-nach Art. 9 Abs. 1 DSGVO verarbeitet werden. Im Falle einer ausdrücklichen Einwilligung in die Übertragung
-personenbezogener Daten in Drittstaaten erfolgt die Datenverarbeitung außerdem auf Grundlage von Art.
-49 Abs. 1 lit. a DSGVO. Sofern Sie in die Speicherung von Cookies oder in den Zugriff auf Informationen in
-Ihr Endgerät (z. B. via Device-Fingerprinting) eingewilligt haben, erfolgt die Datenverarbeitung zusätzlich
-auf Grundlage von § 25 Abs. 1 TDDDG (bis zum 13. Mai 2024: § 25 Abs. 1 TTDSG). Die Einwilligung ist jederzeit widerrufbar. Sind Ihre Daten zur
-Vertragserfüllung oder zur Durchführung vorvertraglicher Maßnahmen erforderlich, verarbeiten wir Ihre
-Daten auf Grundlage des Art. 6 Abs. 1 lit. b DSGVO. Des Weiteren verarbeiten wir Ihre Daten, sofern diese
-zur Erfüllung einer rechtlichen Verpflichtung erforderlich sind auf Grundlage von Art. 6 Abs. 1 lit. c DSGVO.
-Die Datenverarbeitung kann ferner auf Grundlage unseres berechtigten Interesses nach Art. 6 Abs. 1 lit. f
-DSGVO erfolgen. Über die jeweils im Einzelfall einschlägigen Rechtsgrundlagen wird in den folgenden
-Absätzen dieser Datenschutzerklärung informiert.
+Die Bereitstellung und Absicherung der Website sowie die Beantwortung allgemeiner Anfragen erfolgen auf Grundlage unserer berechtigten Interessen nach Art. 6 Abs. 1 lit. f DSGVO. Dient Ihre Anfrage der Anbahnung oder Durchführung eines Vertrags, ist Art. 6 Abs. 1 lit. b DSGVO die Rechtsgrundlage. Soweit wir Daten zur Erfüllung einer gesetzlichen Verpflichtung aufbewahren müssen, erfolgt dies auf Grundlage von Art. 6 Abs. 1 lit. c DSGVO. Die jeweils einschlägigen Zwecke und Rechtsgrundlagen erläutern wir in den entsprechenden Abschnitten dieser Datenschutzerklärung.
 
 #### Widerruf Ihrer Einwilligung zur Datenverarbeitung
-Viele Datenverarbeitungsvorgänge sind nur mit Ihrer ausdrücklichen Einwilligung möglich. Sie können eine
-bereits erteilte Einwilligung jederzeit widerrufen. Die Rechtmäßigkeit der bis zum Widerruf erfolgten
-Datenverarbeitung bleibt vom Widerruf unberührt.
+Soweit eine Datenverarbeitung auf Ihrer Einwilligung beruht, können Sie eine bereits erteilte Einwilligung jederzeit mit Wirkung für die Zukunft widerrufen. Die Rechtmäßigkeit der bis zum Widerruf erfolgten Datenverarbeitung bleibt vom Widerruf unberührt.
 
 #### Widerspruchsrecht gegen die Datenerhebung in besonderen Fällen sowie gegen Direktwerbung (Art. 21 DSGVO)
 Wenn die Datenverarbeitung auf Grundlage von Art. 6 Abs. 1 lit. e oder f DSGVO erfolgt, haben Sie jederzeit das Recht, aus Gründen, die sich aus Ihrer besonderen Situation ergeben, gegen die Verarbeitung Ihrer personenbezogenen Daten Widerspruch einzulegen; dies gilt auch für ein auf diese Bestimmungen gestütztes Profiling. Die jeweilige Rechtsgrundlage, auf denen eine Verarbeitung beruht, entnehmen Sie dieser Datenschutzerklärung. Wenn Sie Widerspruch einlegen, werden wir Ihre betroffenen personenbezogenen Daten nicht mehr verarbeiten, es sei denn, wir können zwingende schutzwürdige Gründe für die Verarbeitung nachweisen, die Ihre Interessen, Rechte und Freiheiten überwiegen oder die Verarbeitung dient der Geltendmachung, Ausübung oder Verteidigung von Rechtsansprüchen (Widerspruch nach Art. 21 Abs. 1 DSGVO).
@@ -216,11 +197,7 @@ Verteidigung von Rechtsansprüchen oder zum Schutz der Rechte einer anderen nat�
 juristischen Person oder aus Gründen eines wichtigen öffentlichen Interesses der Europäischen Union oder eines Mitgliedstaats verarbeitet werden.
 
 #### SSL- bzw. TLS-Verschlüsselung
-Diese Seite nutzt aus Sicherheitsgründen und zum Schutz der Übertragung vertraulicher Inhalte, wie zum
-Beispiel Bestellungen oder Anfragen, die Sie an uns als Seitenbetreiber senden, eine SSL- bzw. TLSVerschlüsselung. Eine verschlüsselte Verbindung erkennen Sie daran, dass die Adresszeile des Browsers von
-„http://“ auf „https://“ wechselt und an dem Schloss-Symbol in Ihrer Browserzeile.
-Wenn die SSL- bzw. TLS-Verschlüsselung aktiviert ist, können die Daten, die Sie an uns übermitteln, nicht
-von Dritten mitgelesen werden.
+Diese Website wird über HTTPS bereitgestellt. Auch die Übermittlung des Kontaktformulars an Formspree erfolgt über HTTPS. Dabei schützt die TLS-Verschlüsselung die Daten während der Übertragung zwischen Ihrem Browser und dem jeweiligen Server. Eine HTTPS-Verbindung erkennen Sie an „https://“ in der Adresszeile Ihres Browsers. Die Empfänger der Daten können deren Inhalt verarbeiten; für eine anschließende Kommunikation per E-Mail ist damit keine Ende-zu-Ende-Verschlüsselung zugesichert.
 
 ### 4. Plugins und Tools
 #### Google Fonts (lokales Hosting)
@@ -234,15 +211,23 @@ https://policies.google.com/privacy?hl=de.
 
 #### Keine Verwendung von Cookies
 
-Wir verwenden auf unserer Webseite keine Cookies. Es werden keine Informationen über Ihre Nutzung der Webseite gespeichert oder an Dritte weitergegeben.
+Wir setzen auf dieser Website keine Cookies und binden keine Analyse- oder Trackingdienste ein. Schriftarten, Skripte und andere für die Darstellung benötigte Dateien werden unter unserer eigenen Website-Adresse bereitgestellt. Beim Seitenaufruf entstehen die im Abschnitt „Hosting“ beschriebenen technischen Daten. Wenn Sie das Kontaktformular bewusst absenden, werden die eingegebenen Daten an Formspree übermittelt, wie im folgenden Abschnitt beschrieben.
 
-#### Kontaktformular mit formspree.io
+<span id="kontaktformular-datenschutz"></span>
 
-Treten Sie bzgl. Fragen jeglicher Art per E-Mail oder Kontaktformular mit uns in Kontakt, erteilen Sie uns zum Zwecke der Kontaktaufnahme Ihre freiwillige Einwilligung. Hierfür ist die Angabe einer validen E-Mail-Adresse erforderlich. Diese dient der Zuordnung der Anfrage und der anschließenden Beantwortung derselben. Die Angabe weiterer Daten ist optional. Die von Ihnen gemachten Angaben werden zum Zwecke der Bearbeitung der Anfrage sowie für mögliche Anschlussfragen gespeichert. Nach Erledigung der von Ihnen gestellten Anfrage werden personenbezogene Daten gelöscht.
+#### Kontaktformular mit Formspree
 
-Bei Anfragen über das Kontaktformular werden Ihre Daten vom Dienstleister Formspree.io an uns weitergeleitet. Rechtsgrundlage ist Ihre Einwilligung nach Art. 6 Abs. 1 S. 1 lit. a DSGVO beziehungsweise, wenn Ihre Anfrage der Anbahnung eines Vertrags dient, Art. 6 Abs. 1 S. 1 lit. b DSGVO. Die Übermittlung erfolgt verschlüsselt über HTTPS, die daraus entstehende E-Mail ist jedoch unverschlüsselt. Formspree.io ist ein US-Unternehmen; Ihre Daten werden damit in die USA übermittelt. Grundlage dieser Übermittlung ist der Angemessenheitsbeschluss der Europäischen Kommission zum EU-U.S. Data Privacy Framework vom 10. Juli 2023 sowie ergänzend die Standardvertragsklauseln der Europäischen Kommission. Das zuvor an dieser Stelle genannte EU-US Privacy Shield wurde vom Europäischen Gerichtshof bereits 2020 für ungültig erklärt. Personenbezogene Daten werden gelöscht, wenn sie nicht mehr erforderlich sind oder gesetzliche Aufbewahrungspflichten dem nicht entgegenstehen.
+Über das Kontaktformular können Sie uns eine Nachricht senden. Name, E-Mail-Adresse und Nachricht sind Pflichtfelder; Telefonnummer und Betreff sind freiwillige Angaben. Wir verwenden diese Daten zur Bearbeitung Ihrer Anfrage und für mögliche Rückfragen.
 
-Bei Nutzung des Kontaktformulars erhebt Formspree.io Ihre Daten und leitet sie über Sendgrid.com an jessicagebler22[at]gmail.com weiter. Formspree.io speichert nur die letzten 100 Nachrichten und unterliegt deren Datenschutzerklärung. Weitere Informationen und Widerspruchsmöglichkeiten finden Sie unter: http://docs.formspree.io/files/privacy.pdf. Um uns ohne Drittanbieter zu kontaktieren, senden Sie eine E-Mail an jessicagebler22[at]gmail.com.
+Das Formular und die Pflicht-Checkbox werden auf unserer Website bereitgestellt. Formspree-Skripte werden nicht eingebunden. Erst beim bewussten Absenden und nach dem Ausfüllen der erforderlichen Angaben übermittelt Ihr Browser die Formulareingaben über HTTPS direkt an Formspree. Dabei erhält Formspree außerdem technische Verbindungsdaten, insbesondere Ihre IP-Adresse. Formspree verarbeitet die Anfrage und stellt sie uns zur Beantwortung bereit. Die Checkbox bestätigt, dass Sie den Hinweis zur Datenübermittlung und diese Datenschutzhinweise gelesen haben.
+
+Empfänger ist Formspree, Inc., ein Anbieter mit Sitz in den USA. Bei der Nutzung des Kontaktformulars können Ihre Angaben in den USA verarbeitet werden. Informationen zur Datenverarbeitung, zu eingesetzten Dienstleistern, zu internationalen Datenübermittlungen und zur Speicherdauer bei Formspree finden Sie in der [Datenschutzerklärung des Anbieters](https://formspree.io/legal/privacy-policy/).
+
+Dient Ihre Anfrage der Anbahnung oder Durchführung eines Vertrags, verarbeiten wir Ihre Daten auf Grundlage von Art. 6 Abs. 1 lit. b DSGVO. Bei allgemeinen Anfragen beruht die Verarbeitung auf unserem berechtigten Interesse an deren Bearbeitung und Beantwortung gemäß Art. 6 Abs. 1 lit. f DSGVO. Die Pflicht-Checkbox dient der Kenntnisnahme der Datenschutzhinweise und begründet keine zusätzliche Einwilligung in die Datenverarbeitung.
+
+Bei uns gespeicherte Anfragen werden gelöscht, sobald sie für die Bearbeitung und mögliche Rückfragen nicht mehr erforderlich sind, sofern keine gesetzlichen Aufbewahrungspflichten oder sonstigen rechtlichen Gründe einer Löschung entgegenstehen. Ihre im Abschnitt „Allgemeine Hinweise und Pflichtinformationen“ beschriebenen Rechte können Sie über die dort genannten Kontaktdaten geltend machen.
+
+Wenn Sie Formspree nicht nutzen möchten, können Sie uns alternativ telefonisch unter +49 (0) 151 433 53735 oder per E-Mail an tierheilpraxis-jessican[at]gmx.de kontaktieren. Bei der Kommunikation per E-Mail werden die Daten auch durch die beteiligten E-Mail-Anbieter verarbeitet.
 
 #### Teilen-Schaltflächen unter Blogbeiträgen
 
@@ -263,7 +248,7 @@ berechtigtes Interesse an einer Außendarstellung nach Art. 6 Abs. 1 S. 1 lit. f
 #### Datenschutzerklärung für WhatsApp Business
 
 ##### Nutzung von WhatsApp Business
-Sie können uns über den Nachrichtendienst WhatsApp der WhatsApp Ireland Limited, 4 Grand Canal Square, Grand Canal Harbour, Dublin 2, Irland, erreichen. Hierfür wird die sogenannte "Business-Version" von WhatsApp verwendet. Auf der Website selbst ist WhatsApp nicht eingebunden; es werden von dort aus keine Daten an WhatsApp übertragen.
+Sie können uns über den Nachrichtendienst WhatsApp der WhatsApp Ireland Limited, 4 Grand Canal Square, Grand Canal Harbour, Dublin 2, Irland, erreichen. Hierfür wird die sogenannte "Business-Version" von WhatsApp verwendet. Auf der Website selbst ist WhatsApp nicht eingebunden; beim bloßen Seitenaufruf werden keine Daten an WhatsApp übertragen. Die bewusst nutzbaren Teilen-Links sind im Abschnitt „Teilen-Schaltflächen unter Blogbeiträgen“ beschrieben.
 
 ##### Verarbeitung von personenbezogenen Daten
 Bei der Kontaktaufnahme über WhatsApp werden folgende Daten verarbeitet und gespeichert:
@@ -273,13 +258,13 @@ Bei der Kontaktaufnahme über WhatsApp werden folgende Daten verarbeitet und ges
 - Nachrichtenverlauf zwischen Nutzer und uns
 - Kundennummer und Rufnummer des Nutzers (falls zutreffend)
 
-Die personenbezogenen Daten werden gemäß Art. 6 Abs. 1 lit. b DSGVO (bei konkreten Geschäftsangelegenheiten) oder Art. 6 Abs. 1 lit. f DSGVO (bei allgemeinen Anfragen) verarbeitet und ausschließlich zur Beantwortung und Erledigung der Anfragen des Nutzers verwendet. Eine Weitergabe der Daten an Dritte findet nicht statt.
+Wir verarbeiten die personenbezogenen Daten gemäß Art. 6 Abs. 1 lit. b DSGVO (bei konkreten Geschäftsangelegenheiten) oder Art. 6 Abs. 1 lit. f DSGVO (bei allgemeinen Anfragen) zur Beantwortung und Erledigung Ihrer Anfrage. Bei der Nutzung des Dienstes verarbeitet auch WhatsApp personenbezogene Daten nach seinen Datenschutzbestimmungen.
 
 ##### Löschung von Daten
-Nutzer haben das Recht, der Verarbeitung ihrer Daten zu widersprechen und die Löschung ihrer Daten zu verlangen. Dazu genügt eine WhatsApp-Nachricht mit dem Text "Ich möchte den Chat-Verlauf löschen" oder "Ich möchte meine Daten löschen". Die Löschung wird innerhalb weniger Tage durchgeführt.
+Sie können über die oben genannten Kontaktdaten oder per WhatsApp die Löschung Ihrer bei uns gespeicherten Daten verlangen und, soweit die gesetzlichen Voraussetzungen vorliegen, der Verarbeitung widersprechen. Wir löschen Daten, sobald ihr Zweck entfällt, soweit keine gesetzlichen Aufbewahrungspflichten oder sonstigen rechtlichen Gründe entgegenstehen. Eine Löschung bei WhatsApp richtet sich zusätzlich nach den Möglichkeiten und Datenschutzbestimmungen des Anbieters.
 
 ##### Datenschutz und Datenspeicherung bei WhatsApp
-Bitte beachten Sie, dass bei der Nutzung von WhatsApp personenbezogene Daten auf Servern von WhatsApp Ireland Limited und möglicherweise auch auf Servern von WhatsApp Inc. (1601 Willow Road, 1601 Menlo Park, Menlo Park, Kalifornien, 94025) außerhalb der Europäischen Union verarbeitet werden können. Grundlage einer Übermittlung in die USA ist der Angemessenheitsbeschluss der Europäischen Kommission zum EU-U.S. Data Privacy Framework vom 10. Juli 2023.
+Bitte beachten Sie, dass bei der Nutzung von WhatsApp personenbezogene Daten auch außerhalb der Europäischen Union, insbesondere in den USA, verarbeitet werden können. Informationen zu den dabei eingesetzten Dienstleistern und zu internationalen Datenübermittlungen finden Sie in der Datenschutzrichtlinie von WhatsApp.
 
 Weitere Informationen zum Datenschutz bei WhatsApp finden Sie in der Datenschutzrichtlinie von WhatsApp: https://www.whatsapp.com/legal/#privacy-policy
 

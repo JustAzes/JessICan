@@ -75,7 +75,22 @@
           </div>
         </div>
          Ende Dateiupload -->
-        <br>
+        <p id="contact-privacy-notice">
+          Beim Absenden werden Ihr Name, Ihre E-Mail-Adresse, Ihre Nachricht und Ihre freiwilligen Angaben
+          zur Bearbeitung Ihrer Anfrage an den US-Dienst Formspree übermittelt.
+          Dabei können Daten in den USA verarbeitet werden. Formspree wird erst beim Absenden kontaktiert.
+          Alternativ erreichen Sie mich <a href="tel:+4915143353735">telefonisch</a>
+          oder <a href="mailto:tierheilpraxis-jessican@gmx.de">per E-Mail</a>.
+        </p>
+        <div class="contact-privacy">
+          <!-- Bewusst ohne name: Die Kenntnisnahme wird nur lokal geprüft und nicht mitgesendet. -->
+          <input type="checkbox" id="privacy-notice-read" required aria-describedby="contact-privacy-notice">
+          <label for="privacy-notice-read">
+            Ich habe den Hinweis zur Datenübermittlung an Formspree und die
+            <a href="{{ get_url(path='impressum/', trailing_slash=true) }}#kontaktformular-datenschutz">Datenschutzerklärung</a>
+            gelesen (Pflichtfeld).
+          </label>
+        </div>
         <div id="success"></div>
         <div class="form-group">
           <button type="submit" class="btn btn-primary" id="sendMessageButton">Absenden</button>

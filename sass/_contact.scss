@@ -58,3 +58,26 @@
 form .form-group:first-child .floating-label-form-group {
   border-top: 1px solid $gray-300;
 }
+
+.contact-privacy {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+
+  input {
+    flex: 0 0 auto;
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-top: 0.25rem;
+    accent-color: $primary;
+  }
+
+  label {
+    margin-bottom: 0;
+  }
+
+  a {
+    text-decoration: underline;
+  }
+}

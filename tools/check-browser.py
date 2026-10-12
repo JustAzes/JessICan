@@ -179,12 +179,70 @@ def check(root: Path, executable: str, live: bool = False,
             require(page.locator("#email").evaluate("field => field.validity.typeMismatch"),
                     "Malformed email incorrectly validates")
             page.locator("#email").fill("test@example.invalid")
+            privacy = page.get_by_role("checkbox", name="Ich habe den Hinweis")
+            require(privacy.is_visible() and not privacy.is_checked(),
+                    "Privacy acknowledgement must start visible and unchecked")
+            require(privacy.evaluate("field => field.required && field.validity.valueMissing"),
+                    "Privacy acknowledgement lost native required validation")
+            require(not form.evaluate("form => form.checkValidity()"),
+                    "Otherwise valid contact input must require acknowledgement")
+            page.locator("#sendMessageButton").click()
+            require(privacy.evaluate("field => document.activeElement === field"),
+                    "Browser did not focus missing acknowledgement on attempted submission")
+            require(not blocked, "Attempt without acknowledgement made a network request")
+            privacy.press("Space")
+            require(privacy.is_checked(), "Keyboard could not acknowledge privacy notice")
             require(form.evaluate("form => form.checkValidity()"),
-                    "Valid contact input fails native validation")
+                    "Valid contact input with acknowledgement fails native validation")
+            require(form.evaluate("form => !new FormData(form).has('privacy-notice-read')")
+                    and privacy.get_attribute("name") is None,
+                    "Local privacy acknowledgement must not be sent to Formspree")
+            page.locator('label[for="privacy-notice-read"]').click(position={"x": 10, "y": 10})
+            require(not privacy.is_checked() and not form.evaluate("form => form.checkValidity()"),
+                    "Visible label could not revoke acknowledgement")
             require(page.locator('#name').evaluate(
                 "field => field.closest('.floating-label-form-group').classList.contains('floating-label-form-group-with-value')"),
                     "Contact floating label did not react to input")
-            print("PASS contact prefill and required/email validation; form not submitted", flush=True)
+            page.get_by_role("link", name="Datenschutzerklärung", exact=True).click()
+            page.wait_for_load_state("networkidle")
+            require(page.url == ORIGIN + "/impressum/#kontaktformular-datenschutz"
+                    and page.locator("#kontaktformular-datenschutz").count() == 1,
+                    "Contact privacy link did not reach the local Formspree notice")
+            overflow("mobile privacy notice")
+            print("PASS contact prefill, required/email validation and local privacy acknowledgement; no POST sent",
+                  flush=True)
+
+            no_js_context = browser.new_context(viewport={"width": 390, "height": 844},
+                                                java_script_enabled=False, service_workers="block")
+            no_js_context.route("**/*", respond)
+            try:
+                no_js_page = no_js_context.new_page()
+                no_js_page.set_default_timeout(10_000)
+                if live:
+                    no_js_page.set_default_navigation_timeout(90_000)
+                response = no_js_page.goto(ORIGIN + "/contact/", wait_until="networkidle")
+                require(response is not None and response.status == 200,
+                        "Contact form without JavaScript failed to load")
+                no_js_page.locator("#name").fill("Umgebungstest")
+                no_js_page.locator("#email").fill("test@example.invalid")
+                no_js_page.locator("#message").fill("Browserprüfung ohne Versand.")
+                no_js_form = no_js_page.locator('form[name="contact"]')
+                require(not no_js_form.evaluate("form => form.checkValidity()"),
+                        "Missing acknowledgement must prevent validation without JavaScript")
+                # Keyboard actions also work when page JavaScript (including the
+                # animation frames used by click stability checks) is disabled.
+                no_js_page.locator("#sendMessageButton").focus()
+                no_js_page.keyboard.press("Enter")
+                require(no_js_page.locator("#privacy-notice-read").evaluate(
+                    "field => document.activeElement === field"),
+                        "Native acknowledgement must block attempted submission without JavaScript")
+                no_js_page.locator("#privacy-notice-read").press("Space")
+                require(no_js_form.evaluate("form => form.checkValidity()"),
+                        "Acknowledged contact form must validate without JavaScript")
+                require(not blocked, "Contact form without JavaScript sent a network request")
+            finally:
+                no_js_context.close()
+            print("PASS native privacy validation with JavaScript disabled; no POST sent", flush=True)
 
             for path, total in (("/quiz/", 19), ("/quiz/hund/", 20)):
                 load(path)
