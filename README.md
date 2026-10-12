@@ -87,9 +87,10 @@ python3 tools/verify-migration.py /pfad/zum/bisherigen-build .tools/site
 ```
 
 Für optionale Browserprüfungen werden Playwright, Pillow und Chromium benötigt.
-Die vorbereitete Cloud-Umgebung enthält diese Werkzeuge bereits. Die Tests laden
-die angegebenen lokalen Build-Dateien; Produktionsdienste werden nicht aufgerufen
-und Kontaktformulare nicht abgeschickt.
+Die vorbereitete Cloud-Umgebung enthält diese Werkzeuge bereits. Der Standardmodus
+lädt die angegebenen lokalen Build-Dateien. Die separat aufgeführten Live-Prüfungen
+laden echte Produktionsantworten über HTTPS. Kontaktformulare werden in beiden
+Modi nicht abgeschickt.
 
 ```bash
 python3 tools/check-browser.py .tools/site
