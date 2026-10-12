@@ -40,6 +40,13 @@ verwendbar. Der Build hat Leserechte; nur der Deployment-Job hat Schreibrechte.
 Externe Actions sind auf Commit-SHAs festgelegt und werden durch Dependabot
 regelmäßig auf Updates geprüft.
 
+Nach der Veröffentlichung prüft ein weiterer Actions-Job die echte
+Produktionsdomain über HTTPS. Er wartet auf die erwartete Ausgabe, vergleicht
+alle öffentlichen Dateien mit dem Build-Artefakt und prüft Navigation,
+Formularvalidierung und beide Quizze im Browser. Das Kontaktformular wird dabei
+nicht abgeschickt. JSON-Ergebnisse und Logs stehen als `live-verification`-
+Artefakt bereit, auch wenn eine Prüfung fehlschlägt.
+
 Netlify verwendet `bash tools/build-netlify.sh` und veröffentlicht `.tools/site`.
 Bei `CONTEXT=deploy-preview` verwendet das Skript `DEPLOY_PRIME_URL` als
 Basis-URL. Der Installer, die Version und die Prüfungen sind identisch mit dem
@@ -86,11 +93,16 @@ und Kontaktformulare nicht abgeschickt.
 
 ```bash
 python3 tools/check-browser.py .tools/site
+python3 tools/check-live-site.py --build .tools/site --all-files
+python3 tools/check-browser.py .tools/site --live --chromium /usr/bin/chromium
 python3 tools/verify-migration.py /pfad/zum/bisherigen-build .tools/site \
   --screenshots /tmp/jessican-layout-vergleich
 ```
 
 `check-browser.py` prüft Navigation, Formularverhalten und beide Quiz-Auswertungen.
+Mit `--live` verwendet es echte Produktionsantworten. Die Live-Prüfungen benötigen
+Netzzugang zur Produktionsdomain; GitHub Actions führt sie nach jedem erfolgreichen
+`main`-Deployment automatisch aus.
 Der Screenshot-Vergleich prüft Mobil-, Tablet- und Desktopbreite. Ein bloßer
 Build-Erfolg ersetzt diese Prüfung beim Wechsel der Zola- oder Bootstrap-Version
 nicht.

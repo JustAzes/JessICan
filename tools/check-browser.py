@@ -1,15 +1,19 @@
 #!/usr/bin/env python3
-"""Smoke-test a generated JessICan build in Chromium without network access.
+"""Smoke-test JessICan in Chromium, using a generated build or live HTTPS responses.
 
 Usage: python3 tools/check-browser.py BUILD_DIR [--chromium /usr/bin/chromium]
 Requires Playwright and Chromium. Every request is fulfilled from BUILD_DIR or
-blocked; the production website and form destination are never contacted.
+blocked by default. --live instead fetches production response bytes through
+the inherited proxy and CA trust. External requests and non-GET methods are
+always blocked, and the contact form is never submitted.
 """
 
 from __future__ import annotations
 
 import argparse
+import json
 import mimetypes
+import urllib.request
 from pathlib import Path
 from urllib.parse import unquote, urlencode, urlsplit
 
@@ -17,7 +21,16 @@ from urllib.parse import unquote, urlencode, urlsplit
 ORIGIN = "https://tierheilpraxis-jessican.de"
 
 
-def check(root: Path, executable: str) -> int:
+class SameOriginRedirect(urllib.request.HTTPRedirectHandler):
+    def redirect_request(self, req, fp, code, msg, headers, newurl):
+        url = urlsplit(newurl)
+        if f"{url.scheme}://{url.netloc}" != ORIGIN:
+            raise ValueError(f"Unexpected HTTPS redirect target: {newurl}")
+        return super().redirect_request(req, fp, code, msg, headers, newurl)
+
+
+def check(root: Path, executable: str, live: bool = False,
+          report: dict | None = None) -> int:
     from playwright.sync_api import sync_playwright
 
     root = root.resolve()
@@ -28,12 +41,20 @@ def check(root: Path, executable: str) -> int:
     errors: list[str] = []
     missing: set[str] = set()
     blocked: set[str] = set()
+    network: dict[str, dict] = {}
+    if report is not None:
+        report.update(mode="live" if live else "offline", origin=ORIGIN,
+                      form_submitted=False, tls_verification=live, checks=0,
+                      passed=False, network=network)
+    opener = urllib.request.build_opener(SameOriginRedirect()) if live else None
 
     def require(condition: bool, description: str) -> None:
         nonlocal count
         if not condition:
             raise ValueError(description)
         count += 1
+        if report is not None:
+            report['checks'] = count
 
     def respond(route) -> None:
         request = route.request
@@ -41,6 +62,25 @@ def check(root: Path, executable: str) -> int:
         if f"{url.scheme}://{url.netloc}" != ORIGIN or request.method != "GET":
             blocked.add(request.url)
             route.abort()
+            return
+        if live:
+            try:
+                # These are real production responses, never BUILD_DIR bytes.
+                # urllib preserves the environment's proxy and certificate trust.
+                headers = {"User-Agent": "JessICan-live-browser-validation/1.0",
+                           "Accept-Encoding": "identity", "Cache-Control": "no-cache"}
+                with opener.open(urllib.request.Request(request.url, headers=headers),
+                                 timeout=25) as response:
+                    data = response.read()
+                    network[request.url] = {"status": response.status, "bytes": len(data),
+                                            "final_url": response.url}
+                    route.fulfill(status=response.status, body=data,
+                                  content_type=response.headers.get("Content-Type")
+                                  or "application/octet-stream")
+            except Exception as error:
+                network[request.url] = {"error": f"{type(error).__name__}: {error}"}
+                missing.add(url.path)
+                route.abort()
             return
         file = (root / unquote(url.path).lstrip("/")).resolve()
         if not file.is_relative_to(root):
@@ -63,6 +103,8 @@ def check(root: Path, executable: str) -> int:
         context.route("**/*", respond)
         page = context.new_page()
         page.set_default_timeout(10_000)
+        if live:
+            page.set_default_navigation_timeout(90_000)
         page.on("pageerror", lambda error: errors.append(str(error)))
 
         def load(path: str) -> None:
@@ -182,7 +224,9 @@ def check(root: Path, executable: str) -> int:
             context.close()
             browser.close()
 
-    print(f"PASS {count} offline browser checks", flush=True)
+    if report is not None:
+        report['passed'] = True
+    print(f"PASS {count} {'live' if live else 'offline'} browser checks", flush=True)
     return count
 
 
@@ -190,10 +234,24 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("build_dir", type=Path)
     parser.add_argument("--chromium", default="/usr/bin/chromium")
+    parser.add_argument("--live", action="store_true", help="Fetch real HTTPS production responses")
+    parser.add_argument("--output", type=Path, help="Optional JSON validation report outside BUILD_DIR")
     args = parser.parse_args()
+    report = {"passed": False}
+    status = 0
+    output_allowed = not args.output or not args.output.resolve().is_relative_to(args.build_dir.resolve())
     try:
-        check(args.build_dir, args.chromium)
+        if not output_allowed:
+            raise ValueError("Validation output must stay outside the published build")
+        check(args.build_dir, args.chromium, args.live, report)
     except ImportError:
-        parser.exit(1, "FAIL optional browser checks require Playwright; install it in a separate virtual environment.\n")
+        report['error'] = "Optional browser checks require Playwright; install it in a separate virtual environment."
+        status = 1
     except Exception as error:
-        parser.exit(1, f"FAIL {error}\n")
+        report['error'] = f"{type(error).__name__}: {error}"
+        status = 1
+    if args.output and output_allowed:
+        args.output.parent.mkdir(parents=True, exist_ok=True)
+        args.output.write_text(json.dumps(report, indent=2) + '\n')
+    if status:
+        parser.exit(status, f"FAIL {report['error']}\n")
