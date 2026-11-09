@@ -11,7 +11,7 @@
     "audit": "node run-lighthouse.mjs"
   },
   "devDependencies": {
-    "chrome-launcher": "1.2.2",
+    "chrome-launcher": "1.2.3",
     "lighthouse": "13.5.0",
     "playwright": "1.64.0"
   }
